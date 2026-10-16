@@ -1,0 +1,30 @@
+name: Scansione interpelli
+on:
+  schedule:
+    - cron: "17 5-19/2 * * *"   # circa 7:17-21:17 ora italiana, ogni 2 ore
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r scraper/requirements.txt
+      - run: python scraper/scrape.py
+      - name: Salva i dati
+        run: |
+          git config user.name "interpellati-bot"
+          git config user.email "interpellati-bot@users.noreply.github.com"
+          git add data/interpelli.json data/ultima_scansione.txt
+          if git diff --cached --quiet; then echo "nessuna modifica"; exit 0; fi
+          git commit -m "dati: scansione $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin main
+          git push
