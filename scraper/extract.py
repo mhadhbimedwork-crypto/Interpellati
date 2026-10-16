@@ -19,11 +19,11 @@ MESE_RE = "|".join(MESI)
 # esplicitamente "ore" riferite alla cattedra/settimana.
 ORE_PATTERNS = [
     re.compile(r"cattedra\s+(?:orario\s+)?(?:esterna\s+|interna\s+)?(?:di\s+|da\s+|con\s+)?(\d{1,2})\s*(?:ore|h)\b", re.I),
-    re.compile(r"\b(\d{1,2})\s*(?:ore|h)\s*(?:settimanali|sett\.?|di\s+cattedra|di\s+insegnamento|di\s+lezione)\b", re.I),
+    re.compile(r"\b(\d{1,2}(?:[.,]\d{1,2})?)\s*(?:ore|h)\s*(?:settimanali|sett\.?|di\s+cattedra|di\s+insegnamento|di\s+lezione)\b", re.I),
     re.compile(r"\b(\d{1,2})\s*/\s*18\b"),
     re.compile(r"\b(\d{1,2})\s*(?:ore|h)\s*(?:su|/|su\s+un\s+totale\s+di)\s*18\b", re.I),
     re.compile(r"\bore\s+(?:settimanali|di\s+cattedra|di\s+insegnamento)\s*[:=\-–]?\s*(\d{1,2})\b", re.I),
-    re.compile(r"\b(?:n\.?|numero)\s*ore\s*(?:settimanali\s*)?[:=\-–]?\s*(\d{1,2})\b", re.I),
+    re.compile(r"\b(?:n\.?|numero)\s*ore\s*(?:settimanali\s*)?[:=\-–]?\s*(\d{1,2}(?:[.,]\d{1,2})?)\b", re.I),
     re.compile(r"\bC\.?O\.?E\.?\s*(?:di\s+)?(\d{1,2})\s*(?:ore|h)?\b", re.I),
     re.compile(r"\b(?:orario\s+)?(?:completo|intero)\s*\(?\s*18\s*ore\)?", re.I),
 ]
@@ -40,7 +40,8 @@ def find_ore(window: str) -> list[dict]:
     for rx in ORE_PATTERNS:
         for m in rx.finditer(window):
             try:
-                v = int(m.group(1)) if m.groups() else 18
+                v = float(m.group(1).replace(",", ".")) if m.groups() else 18.0
+                v = int(v) if v == int(v) else round(v, 2)
             except (ValueError, IndexError):
                 continue
             if 1 <= v <= 25:
@@ -53,6 +54,8 @@ def find_ore(window: str) -> list[dict]:
 # ---- durata ------------------------------------------------------------------
 DATE_NUM = r"(\d{1,2})[./-](\d{1,2})[./-](20\d\d|\d\d)"
 DATE_TXT = r"(\d{1,2})\s+(" + MESE_RE + r")\s+(20\d\d)"
+ISO_FINO = re.compile(r"\bfino\s+al\s+(20\d\d)-(\d\d)-(\d\d)\b", re.I)
+FINO_GIUGNO = re.compile(r"\bfino\s+al\s+(30\s+giugno|31\s+agosto)\b(?!\s+20\d\d)", re.I)
 FINO_AL = re.compile(r"\b(?:fino\s+(?:al|all[’']?)|sino\s+al|fino\s+a|entro\s+il\s+termine\s+del)\s+(?:il\s+)?(?:" + DATE_NUM + "|" + DATE_TXT + r")", re.I)
 DAL_AL = re.compile(r"\bdal\s+(?:" + DATE_NUM + "|" + DATE_TXT + r")\s+al\s+(?:" + DATE_NUM + "|" + DATE_TXT + r")", re.I)
 TERMINE_ATT = re.compile(r"fino\s+al\s+termine\s+delle\s+(?:attivit[aà]\s+didattiche|lezioni)", re.I)
@@ -93,6 +96,12 @@ def find_durata(window: str) -> list[dict]:
         d = _from_groups(m.groups())
         if d:
             out.append({"tipo": "fino_al", "al": d.isoformat(), "evidenza": _snip(window, m.start(), m.end())})
+    for m in ISO_FINO.finditer(window):
+        d = _mk(m.group(3), m.group(2), m.group(1))
+        if d:
+            out.append({"tipo": "fino_al", "al": d.isoformat(), "evidenza": _snip(window, m.start(), m.end())})
+    for m in FINO_GIUGNO.finditer(window):
+        out.append({"tipo": "termine_anno" if m.group(1).lower().startswith("31") else "termine_attivita", "evidenza": _snip(window, m.start(), m.end())})
     for m in TERMINE_ATT.finditer(window):
         out.append({"tipo": "termine_attivita", "evidenza": _snip(window, m.start(), m.end())})
     for m in TERMINE_ANNO.finditer(window):
@@ -104,25 +113,22 @@ def find_durata(window: str) -> list[dict]:
     return out
 
 
-def categoria(d: dict, oggi: date | None = None) -> str | None:
-    """breve (<30 gg) | media | annuale | indeterminata, da un dato di durata."""
-    oggi = oggi or date.today()
+def categoria(d: dict, pubblicato: date | None = None) -> str | None:
+    """breve (fino a 30 giorni) | intermedia | fino_a_fine_anno | indeterminata."""
     t = d.get("tipo")
+    base = date.fromisoformat(d["dal"]) if d.get("dal") else pubblicato
     if t == "giorni":
-        return "breve" if d["giorni"] < 30 else "media"
-    if t in ("periodo", "fino_al") and d.get("al"):
-        al = date.fromisoformat(d["al"])
-        if al.month in (8, 9) and al.day >= 30 or (al.month == 8):
-            return "annuale"
-        if al.month == 6 and al.day >= 28:
-            return "annuale_30_6"
-        base = date.fromisoformat(d["dal"]) if d.get("dal") else oggi
-        giorni = (al - base).days
-        return "breve" if giorni < 30 else "media"
-    if t == "termine_attivita":
-        return "annuale_30_6"
-    if t in ("termine_anno",):
-        return "annuale"
+        return "breve" if d["giorni"] <= 30 else "intermedia"
+    if t in ("termine_attivita", "termine_anno"):
+        return "fino_a_fine_anno"
     if t == "avente_diritto":
         return "indeterminata"
+    if t in ("periodo", "fino_al") and d.get("al"):
+        al = date.fromisoformat(d["al"])
+        if base is None:
+            return None
+        giorni = (al - base).days
+        if giorni <= 30:
+            return "breve"
+        return "fino_a_fine_anno" if al.month in (6, 7, 8) else "intermedia"
     return None
