@@ -1,7 +1,7 @@
 name: Scansione interpelli
 on:
   schedule:
-    - cron: "17 5-19/2 * * *"   # circa 7:17-21:17 ora italiana, ogni 2 ore
+    - cron: "*/30 4-20 * * *"   # ogni 30 minuti, circa 6:00-22:30 ora italiana
   workflow_dispatch:
 permissions:
   contents: write
@@ -11,20 +11,33 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install -r scraper/requirements.txt
-      - run: python scraper/scrape.py
+      - name: Scansione
+        env:
+          # Facoltativo: senza chiave il lettore AI resta spento.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+        run: python scraper/scrape.py
+      - name: Notifiche Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NOTIFY_CLASSI: ${{ vars.NOTIFY_CLASSI }}
+          NOTIFY_PROVINCE: ${{ vars.NOTIFY_PROVINCE }}
+        run: python scraper/notify.py
       - name: Salva i dati
         run: |
           git config user.name "interpellati-bot"
           git config user.email "interpellati-bot@users.noreply.github.com"
-          git add data/interpelli.json data/ultima_scansione.txt
+          git add data/interpelli.json data/notificati.json data/llm_cache.json 2>/dev/null || true
           if git diff --cached --quiet; then echo "nessuna modifica"; exit 0; fi
+          git add data/ultima_scansione.txt
           git commit -m "dati: scansione $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase origin main
           git push

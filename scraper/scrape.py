@@ -12,6 +12,7 @@ dati (se un campo non c'e' resta vuoto).
 from __future__ import annotations
 
 import hashlib
+import random
 import json
 import re
 import sys
@@ -27,6 +28,7 @@ from bs4 import BeautifulSoup
 from pypdf import PdfReader
 
 import extract as ex
+import llm
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "interpelli.json"
@@ -34,7 +36,8 @@ SOURCES = Path(__file__).resolve().parent / "sources.json"
 UA = "InterpellatiBot/1.0 (+https://github.com/mhadhbimedwork-crypto/Interpellati)"
 TZ = timezone(timedelta(hours=2))  # Europe/Rome (ora legale); per le date basta
 KEEP_DAYS = 60
-MAX_DETTAGLI = 250  # avvisi analizzati per esecuzione (rispetta 1 richiesta/s per host)
+MAX_DETTAGLI = 250
+LLM_BUDGET = [int(__import__('os').environ.get('MAX_LLM', '15'))]  # chiamate al modello per esecuzione  # avvisi analizzati per esecuzione (rispetta 1 richiesta/s per host)
 MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
         "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 
@@ -147,7 +150,7 @@ class Fetcher:
             log("  robots.txt non consente:", url)
             return None
         host = urlparse(url).netloc
-        wait = 1.0 - (time.time() - self.last.get(host, 0))
+        wait = random.uniform(1.0, 2.2) - (time.time() - self.last.get(host, 0))
         if wait > 0:
             time.sleep(wait)
         try:
@@ -350,32 +353,46 @@ def scan_office(f: Fetcher, src: dict, since: date) -> list[dict]:
 
 # ---------------------------------------------------------------- dettagli (ore, durata)
 
-def doc_text(f: "Fetcher", url: str) -> str | None:
-    """Testo di una pagina HTML o di un PDF (prime 8 pagine)."""
+def doc_fetch(f: "Fetcher", url: str) -> tuple[str | None, bytes | None]:
+    """Scarica una pagina HTML, un PDF, uno ZIP o un .p7m (in memoria, nulla resta su disco).
+    Restituisce (testo, contenuto_binario_se_non_HTML)."""
     if not f.allowed(url):
-        return None
+        return None, None
     host = urlparse(url).netloc
-    wait = 1.0 - (time.time() - f.last.get(host, 0))
+    wait = random.uniform(1.0, 2.2) - (time.time() - f.last.get(host, 0))
     if wait > 0:
         time.sleep(wait)
     try:
         r = f.s.get(url, timeout=30)
         f.last[host] = time.time()
         if r.status_code != 200:
-            return None
+            return None, None
         f.pages += 1
-        if "pdf" in r.headers.get("content-type", "") or url.lower().split("?")[0].endswith(".pdf") or r.content[:4] == b"%PDF":
-            try:
-                rd = PdfReader(io.BytesIO(r.content))
-                return " ".join((p.extract_text() or "") for p in rd.pages[:8])
-            except Exception:
-                return None
+        c = r.content
+        ctype = r.headers.get("content-type", "")
+        low = url.lower().split("?")[0]
+        if "pdf" in ctype or low.endswith((".pdf", ".zip", ".p7m")) or c[:4] == b"%PDF" or c[:2] == b"PK":
+            if len(c) > llm.MAX_BYTES * 2:
+                return None, None
+            pdfs = llm.pdfs_from(c, url)
+            texts = []
+            for p in pdfs:
+                try:
+                    rd = PdfReader(io.BytesIO(p))
+                    texts.append(" ".join((pg.extract_text() or "") for pg in rd.pages[:8]))
+                except Exception:
+                    pass
+            return " ".join(" ".join(texts).split()), c
         r.encoding = r.apparent_encoding or r.encoding
         soup = BeautifulSoup(r.text, "html.parser")
         body = soup.find("article") or soup.find("main") or soup
-        return " ".join(body.get_text(" ", strip=True).split())
+        return " ".join(body.get_text(" ", strip=True).split()), None
     except requests.RequestException:
-        return None
+        return None, None
+
+
+def doc_text(f: "Fetcher", url: str) -> str | None:
+    return doc_fetch(f, url)[0]
 
 
 def class_rx(c: str):
@@ -405,7 +422,26 @@ def dettaglia(f: "Fetcher", it: dict) -> list[dict]:
     """Legge l'avviso collegato. Restituisce gli item che lo sostituiscono: se la
     pagina e' un elenco, uno per ogni scuola; altrimenti l'item stesso arricchito."""
     it["letto"] = True
-    text = doc_text(f, it["link"]) if it.get("link") else None
+    text, raw = doc_fetch(f, it["link"]) if it.get("link") else (None, None)
+    if raw is not None and len(text or "") < 200:
+        # scansione senza testo, oppure ZIP/P7M: ripiego con modello multimodale (se configurato)
+        posti = [p for p in llm.leggi(raw, it["link"], LLM_BUDGET) if p.get("classe_di_concorso") in set(it["classi"])]
+        if len(posti) == 1:
+            p = posti[0]
+            it["lettoDa"] = "ai"
+            if "ore_settimanali" in p:
+                it["ore"] = p["ore_settimanali"]
+            if p.get("scadenza"):
+                it["scadenza"] = p["scadenza"][:10]
+                if len(p["scadenza"]) > 10:
+                    it["oraScadenza"] = p["scadenza"][11:]
+            if p.get("tipo_posto"):
+                it["tipoPosto"] = p["tipo_posto"]
+            if p.get("link_candidatura"):
+                it["candidatura"] = p["link_candidatura"]
+            if p.get("istituto") and it.get("scuola", "").startswith("Interpello "):
+                it["scuola"] = p["istituto"]
+        return [it]
     if not text:
         return [it]
     prov = it.get("_prov") or SIGLA.get(it.get("provincia"))
