@@ -117,7 +117,7 @@ async function copia(t: string) {
 
 function mailFor(it: Interpello, p: Record<string, string>) {
   const v = (k: string) => (p[k] || '').trim();
-  const nome = [v('nome'), v('cognome')].filter(Boolean).join(' ') || '[NOME COGNOME]';
+  const nome = [v('nome'), v('cognome')].filter(Boolean).join(' ');
   const classi = (it.classi || []).join(' / ');
   const descr = (it.classi || [])
     .map((c) =>
@@ -128,7 +128,7 @@ function mailFor(it: Interpello, p: Record<string, string>) {
           : c,
     )
     .join('; ');
-  const subject = 'Candidatura interpello ' + classi + ' – ' + (it.scuola || '') + ' – ' + nome;
+  const subject = ['Candidatura interpello ' + classi, it.scuola || '', nome].filter(Boolean).join(' – ');
   const righe = [
     'Gentile Dirigente Scolastico,',
     '',
@@ -136,17 +136,19 @@ function mailFor(it: Interpello, p: Record<string, string>) {
       (it.pubblicato ? ' pubblicato il ' + fmtDate(it.pubblicato) : '') +
       ' per la classe di concorso ' + descr +
       (it.ore ? ' (' + it.ore + ' ore settimanali)' : '') +
-      ', il sottoscritto ' + nome +
+      (nome ? ', il sottoscritto ' + nome : '') +
       (/italian/i.test(v('cittadinanza')) ? ', cittadino italiano' : '') +
-      (v('nascitaLuogo') || v('nascitaData') ? ', nato a ' + (v('nascitaLuogo') || '[LUOGO]') + ' il ' + (v('nascitaData') || '[DATA]') : '') +
+      (v('nascitaLuogo') && v('nascitaData') ? ', nato a ' + v('nascitaLuogo') + ' il ' + v('nascitaData') : '') +
       (v('cf') ? ', C.F. ' + v('cf') : '') +
-      ', comunica la propria disponibilità ad accettare la supplenza.',
+      (nome ? ', comunica la propria disponibilità ad accettare la supplenza.' : ', comunico la mia disponibilità ad accettare la supplenza.'),
     '',
-    'Titolo di accesso: ' + (v('titolo') || '[TITOLO]') +
-      (v('titoloIstituto') ? ', rilasciato da ' + v('titoloIstituto') : '') +
-      (v('titoloData') ? ' il ' + v('titoloData') : '') +
-      (v('titoloVoto') ? ', votazione ' + v('titoloVoto') : '') + '.' +
-      (v('riferimento') ? ' ' + v('riferimento') + '.' : ''),
+    v('titolo')
+      ? 'Titolo di accesso: ' + v('titolo') +
+        (v('titoloIstituto') ? ', rilasciato da ' + v('titoloIstituto') : '') +
+        (v('titoloData') ? ' il ' + v('titoloData') : '') +
+        (v('titoloVoto') ? ', votazione ' + v('titoloVoto') : '') + '.' +
+        (v('riferimento') ? ' ' + v('riferimento') + '.' : '')
+      : v('riferimento') ? v('riferimento') + '.' : '',
     v('graduatorie') ? 'Graduatorie: ' + v('graduatorie') + '.' : '',
     v('servizio') ? 'Servizio: ' + v('servizio') + '.' : '',
     '',
@@ -493,7 +495,7 @@ export default function App() {
       {tab === 'profilo' && (
         <ScrollView contentContainerStyle={s.list} keyboardShouldPersistTaps="handled">
           <Text style={s.muted}>
-            I dati che le scuole chiedono nei moduli Google o Microsoft. Tocca «Copia» e incolla nel modulo. Restano solo su questo telefono. Completa i campi vuoti dai documenti originali.
+            Facoltativo. Serve solo per la mail di candidatura già scritta e per copiare i dati nei moduli Google o Microsoft. Se la scuola ti manda il suo modulo, puoi lasciare tutto vuoto. I dati restano solo su questo telefono.
           </Text>
           {FIELDS.map(([k, l]) => (
             <View key={k} style={{ gap: 4 }}>
