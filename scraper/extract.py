@@ -132,3 +132,72 @@ def categoria(d: dict, pubblicato: date | None = None) -> str | None:
             return "breve"
         return "fino_a_fine_anno" if al.month in (6, 7, 8) else "intermedia"
     return None
+
+
+# ---- lettura riga per riga ---------------------------------------------------
+# Codice meccanografico di una scuola (es. VBIC82200R, CTIS01100B): 2 lettere
+# provincia + 2 lettere tipo + 5 cifre/lettere + 1 lettera, con almeno 3 cifre.
+MECC_RE = re.compile(r"(?<![A-Za-z0-9])([A-Z]{2}[A-Z]{2}[0-9A-Z]{5}[A-Z])(?![A-Za-z0-9])")
+
+
+def _unico(valori: list, chiave) -> object | None:
+    """Restituisce il valore solo se tutte le occorrenze concordano."""
+    distinti = {chiave(v) for v in valori}
+    return valori[0] if len(distinti) == 1 and valori else None
+
+
+def _scegli(window: str) -> dict:
+    """Ore e durata di una finestra: valori solo se univoci, altrimenti vuoti."""
+    ore = find_ore(window)
+    dur = [d for d in find_durata(window) if d["tipo"] != "giorni" or d.get("giorni")]
+    out: dict = {}
+    o = _unico(ore, lambda v: v["ore"])
+    if o:
+        out["ore"] = o["ore"]
+        out["oreEvidenza"] = o["evidenza"]
+    # durata: se ci sono piu' indicazioni diverse non scegliamo
+    d = _unico(dur, lambda v: (v["tipo"], v.get("al"), v.get("dal"), v.get("giorni")))
+    if d:
+        out["durata"] = {k: v for k, v in d.items() if k != "evidenza"}
+        out["durataEvidenza"] = d["evidenza"]
+    return out
+
+
+def righe(text: str, ha_classe) -> list[dict]:
+    """Se il testo e' un elenco (>=2 codici scuola) restituisce una riga per ogni
+    scuola che nomina la classe cercata; altrimenti [] (il chiamante usa finestre).
+    ha_classe(segmento) -> lista di classi trovate nel segmento."""
+    text = " ".join(text.split())
+    ms = [m for m in MECC_RE.finditer(text) if sum(c.isdigit() for c in m.group(1)) >= 3]
+    if len(ms) < 2:
+        return []
+    out = []
+    for i, m in enumerate(ms):
+        fine = ms[i + 1].start() if i + 1 < len(ms) else len(text)
+        seg = text[m.start():fine]
+        classi = ha_classe(seg)
+        if not classi:
+            continue
+        r = {"mecc": m.group(1), "classi": classi, "testo": seg[:260]}
+        r.update(_scegli(seg))
+        out.append(r)
+    return out
+
+
+def finestra(text: str, classe_rx, pad_prima: int = 120, pad_dopo: int = 320) -> dict:
+    """Avviso singolo: usa le finestre attorno alla classe; vuoto se i valori divergono."""
+    text = " ".join(text.split())
+    ore, dur = [], []
+    for m in classe_rx.finditer(text):
+        w = text[max(0, m.start() - pad_prima): m.end() + pad_dopo]
+        ore += find_ore(w)
+        dur += find_durata(w)
+    out: dict = {}
+    o = _unico(ore, lambda v: v["ore"])
+    if o:
+        out["ore"] = o["ore"]; out["oreEvidenza"] = o["evidenza"]
+    d = _unico(dur, lambda v: (v["tipo"], v.get("al"), v.get("dal"), v.get("giorni")))
+    if d:
+        out["durata"] = {k: v for k, v in d.items() if k != "evidenza"}
+        out["durataEvidenza"] = d["evidenza"]
+    return out

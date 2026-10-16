@@ -21,8 +21,12 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
+import io
 import requests
 from bs4 import BeautifulSoup
+from pypdf import PdfReader
+
+import extract as ex
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "interpelli.json"
@@ -30,6 +34,7 @@ SOURCES = Path(__file__).resolve().parent / "sources.json"
 UA = "InterpellatiBot/1.0 (+https://github.com/mhadhbimedwork-crypto/Interpellati)"
 TZ = timezone(timedelta(hours=2))  # Europe/Rome (ora legale); per le date basta
 KEEP_DAYS = 60
+MAX_DETTAGLI = 120  # avvisi analizzati per esecuzione (rispetta 1 richiesta/s per host)
 MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
         "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 
@@ -342,6 +347,89 @@ def scan_office(f: Fetcher, src: dict, since: date) -> list[dict]:
     return out
 
 
+
+# ---------------------------------------------------------------- dettagli (ore, durata)
+
+def doc_text(f: "Fetcher", url: str) -> str | None:
+    """Testo di una pagina HTML o di un PDF (prime 8 pagine)."""
+    if not f.allowed(url):
+        return None
+    host = urlparse(url).netloc
+    wait = 1.0 - (time.time() - f.last.get(host, 0))
+    if wait > 0:
+        time.sleep(wait)
+    try:
+        r = f.s.get(url, timeout=30)
+        f.last[host] = time.time()
+        if r.status_code != 200:
+            return None
+        f.pages += 1
+        if "pdf" in r.headers.get("content-type", "") or url.lower().split("?")[0].endswith(".pdf") or r.content[:4] == b"%PDF":
+            try:
+                rd = PdfReader(io.BytesIO(r.content))
+                return " ".join((p.extract_text() or "") for p in rd.pages[:8])
+            except Exception:
+                return None
+        r.encoding = r.apparent_encoding or r.encoding
+        soup = BeautifulSoup(r.text, "html.parser")
+        body = soup.find("article") or soup.find("main") or soup
+        return " ".join(body.get_text(" ", strip=True).split())
+    except requests.RequestException:
+        return None
+
+
+def class_rx(c: str):
+    if re.match(r"[AB]\d{3}$", c):
+        return re.compile(r"(?<![A-Za-z0-9])" + c[0] + r"[-\s]?0?" + c[1:] + r"(?![A-Za-z0-9])", re.I)
+    return re.compile(re.escape(c), re.I)
+
+
+def apply_detail(it: dict, d: dict):
+    """Copia ore/durata trovate nell'item, con evidenza e categoria."""
+    if "ore" in d:
+        it["ore"] = d["ore"]
+        it["oreEvidenza"] = d["oreEvidenza"][:200]
+    if "durata" in d:
+        it["durata"] = d["durata"]
+        it["durataEvidenza"] = d["durataEvidenza"][:200]
+        try:
+            pub = date.fromisoformat(it["pubblicato"]) if it.get("pubblicato") else None
+            cat = ex.categoria(d["durata"], pub)
+            if cat:
+                it["durataCat"] = cat
+        except ValueError:
+            pass
+
+
+def dettaglia(f: "Fetcher", it: dict) -> list[dict]:
+    """Legge l'avviso collegato. Restituisce gli item che lo sostituiscono: se la
+    pagina e' un elenco, uno per ogni scuola; altrimenti l'item stesso arricchito."""
+    it["letto"] = True
+    text = doc_text(f, it["link"]) if it.get("link") else None
+    if not text:
+        return [it]
+    prov = it.get("_prov") or SIGLA.get(it.get("provincia"))
+    mie = set(it["classi"])
+    rows = ex.righe(text, lambda seg: [c for c in classes_in(seg, True) if c in mie])
+    if rows:
+        out = []
+        for r in rows:
+            n = dict(it)
+            n["classi"] = r["classi"]
+            n["codiceScuola"] = r["mecc"]
+            m = re.match(r"([A-Z0-9]{10})\s+(.{3,90}?)(?=\s+(?:[A-Z]{1,3}\d{2,3}|AAAA|[A-Z]{4}\b)|\s+Spezzone|\s+Cattedra|$)", r["testo"])
+            n["scuola"] = (m.group(2) if m else r["mecc"]).strip()
+            n["id"] = make_id(prov, n["classi"][0], r["mecc"], it["pubblicato"], it["link"] + r["mecc"] + str(len(out)))
+            n.pop("ore", None); n.pop("durata", None)
+            apply_detail(n, r)
+            n["letto"] = True
+            out.append(n)
+        return out
+    d = ex.finestra(text, class_rx(it["classi"][0]))
+    apply_detail(it, d)
+    return [it]
+
+
 def enrich(f: Fetcher, it: dict):
     """Apre la pagina dell'avviso per scadenza, ore, email (solo se presenti)."""
     if not it.get("link") or it["link"].lower().endswith(".pdf"):
@@ -357,9 +445,6 @@ def enrich(f: Fetcher, it: dict):
         it["scadenza"] = dl
         if hh:
             it["oraScadenza"] = hh
-    m = re.search(r"\b(\d{1,2})\s*ore\s*(settimanali|sett)", text, re.I) or re.search(r"\bper\s+(\d{1,2})\s+ore\b", text, re.I)
-    if m:
-        it["ore"] = int(m[1])
     m = re.search(r"([a-z]{4}\d{5}[a-z0-9]@(?:pec\.)?istruzione\.it)", text, re.I)
     if m and re.search(r"invia|trasmett|indirizzo", text, re.I):
         it["email"] = m[1].lower()
@@ -386,6 +471,7 @@ def main() -> int:
 
     now = datetime.now(TZ).isoformat(timespec="seconds")
     added = []
+    dettagli_letti = 0
     for it in found:
         key = (it["link"], tuple(it["classi"]), it["pubblicato"])
         if key in known_links:
@@ -394,12 +480,33 @@ def main() -> int:
         it["id"] = make_id(prov, it["classi"][0], it.get("scuola", ""), it["pubblicato"], it["link"])
         if it["id"] in items:
             continue
-        if not it["link"].startswith("https://www.mim.gov.it/web/") and "ambito" not in it.get("scuola", ""):
+        it["_prov"] = prov
+        budget = MAX_DETTAGLI - dettagli_letti
+        if budget > 0:
+            dettagli_letti += 1
+            res = dettaglia(f, it)
+        else:
+            res = [it]
+        if len(res) == 1 and res[0] is it and not it["link"].startswith("https://www.mim.gov.it/web/") and "ambito" not in it.get("scuola", ""):
             enrich(f, it)
-        it["trovato"] = now
-        items[it["id"]] = {k: v for k, v in it.items() if v not in (None, "", [])}
+        for r in res:
+            r.pop("_prov", None)
+            r["trovato"] = now
+            items[r["id"]] = {k: v for k, v in r.items() if v not in (None, "", [])}
+            added.append(r)
         known_links.add(key)
-        added.append(it)
+
+    # recupero: legge gli avvisi gia' in archivio che non sono ancora stati analizzati
+    arretrati = [i for i in items.values() if not i.get("letto") and i.get("link")]
+    arretrati.sort(key=lambda i: i.get("pubblicato") or "", reverse=True)
+    for it in arretrati[:max(0, MAX_DETTAGLI - dettagli_letti)]:
+        dettagli_letti += 1
+        it = dict(it)
+        res = dettaglia(f, it)
+        items.pop(it["id"], None)
+        for r in res:
+            items[r["id"]] = {k: v for k, v in r.items() if v not in (None, "", [])}
+    log(f"Avvisi analizzati per ore/durata: {dettagli_letti}")
 
     cutoff = (today - timedelta(days=KEEP_DAYS)).isoformat()
     keep = [i for i in items.values() if (i.get("pubblicato") or "9999") >= cutoff]
