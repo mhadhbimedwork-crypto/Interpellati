@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: apk
   cancel-in-progress: true
@@ -43,13 +44,18 @@ jobs:
           cp android/app/build/outputs/apk/release/app-release.apk ../Interpellati.apk
           cd ..
           NOTE="Ultima versione compilata automaticamente dal commit ${GITHUB_SHA::7}. Scarica Interpellati.apk dal telefono e installalo."
-          if gh release view apk >/dev/null 2>&1; then
-            gh release upload apk Interpellati.apk --clobber
-            gh release edit apk --notes "$NOTE"
-          else
-            gh release create apk Interpellati.apk --title "Interpellati – app Android" --notes "$NOTE"
-          fi
+          # La release e il tag vengono ricreati sul commit corrente: cosi' il tag non punta a vecchi commit.
+          gh release delete apk -y --cleanup-tag || true
+          gh release create apk Interpellati.apk --title "Interpellati – app Android" --notes "$NOTE" --target "$GITHUB_SHA"
       - uses: actions/upload-artifact@v4
         with:
           name: Interpellati-apk
           path: Interpellati.apk
+      - name: Elimina gli artefatti delle vecchie esecuzioni
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/actions/artifacts?per_page=100" --paginate \
+            --jq '.artifacts[] | select(.workflow_run.id != ${{ github.run_id }}) | .id' | while read -r id; do
+            gh api -X DELETE "repos/${{ github.repository }}/actions/artifacts/$id" || true
+          done
