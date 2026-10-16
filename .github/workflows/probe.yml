@@ -2,7 +2,7 @@ name: Prova lettura avvisi
 on:
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -16,7 +16,15 @@ jobs:
           cache-dependency-path: scraper/requirements.txt
       - run: pip install -r scraper/requirements.txt
       - run: python scraper/probe.py | tee probe.log
-      - uses: actions/upload-artifact@v4
-        with:
-          name: probe-log
-          path: probe.log
+      - name: Pubblica il rapporto su un ramo a parte
+        run: |
+          git config user.name "interpellati-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git checkout --orphan probe-report
+          git rm -rf -q --cached . >/dev/null 2>&1 || true
+          mkdir -p /tmp/rep && cp probe.log /tmp/rep/probe.log
+          git clean -fdxq
+          cp /tmp/rep/probe.log probe.log
+          git add probe.log
+          git commit -q -m "rapporto di prova"
+          git push -f origin probe-report
