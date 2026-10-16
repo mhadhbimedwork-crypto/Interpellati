@@ -34,7 +34,7 @@ SOURCES = Path(__file__).resolve().parent / "sources.json"
 UA = "InterpellatiBot/1.0 (+https://github.com/mhadhbimedwork-crypto/Interpellati)"
 TZ = timezone(timedelta(hours=2))  # Europe/Rome (ora legale); per le date basta
 KEEP_DAYS = 60
-MAX_DETTAGLI = 120  # avvisi analizzati per esecuzione (rispetta 1 richiesta/s per host)
+MAX_DETTAGLI = 250  # avvisi analizzati per esecuzione (rispetta 1 richiesta/s per host)
 MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
         "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 
@@ -417,8 +417,7 @@ def dettaglia(f: "Fetcher", it: dict) -> list[dict]:
             n = dict(it)
             n["classi"] = r["classi"]
             n["codiceScuola"] = r["mecc"]
-            m = re.match(r"([A-Z0-9]{10})\s+(.{3,90}?)(?=\s+(?:[A-Z]{1,3}\d{2,3}|AAAA|[A-Z]{4}\b)|\s+Spezzone|\s+Cattedra|$)", r["testo"])
-            n["scuola"] = (m.group(2) if m else r["mecc"]).strip()
+            n["scuola"] = r["scuola"] or r["mecc"]
             n["id"] = make_id(prov, n["classi"][0], r["mecc"], it["pubblicato"], it["link"] + r["mecc"] + str(len(out)))
             n.pop("ore", None); n.pop("durata", None)
             apply_detail(n, r)

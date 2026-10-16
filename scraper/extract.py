@@ -60,7 +60,7 @@ FINO_AL = re.compile(r"\b(?:fino\s+(?:al|all[’']?)|sino\s+al|fino\s+a|entro\s+
 DAL_AL = re.compile(r"\bdal\s+(?:" + DATE_NUM + "|" + DATE_TXT + r")\s+al\s+(?:" + DATE_NUM + "|" + DATE_TXT + r")", re.I)
 TERMINE_ATT = re.compile(r"fino\s+al\s+termine\s+delle\s+(?:attivit[aà]\s+didattiche|lezioni)", re.I)
 TERMINE_ANNO = re.compile(r"fino\s+al\s+termine\s+dell[’']?\s*anno\s+scolastico", re.I)
-AVENTE = re.compile(r"fino\s+(?:al\s+rientro|all[’']?\s*(?:eventuale\s+)?rientro|alla\s+(?:eventuale\s+)?(?:nomina|presa\s+di\s+servizio)|a\s+nomina|al\s+ritorno)|avente\s+diritto|titolare\s+(?:assente|in\s+congedo)", re.I)
+AVENTE = re.compile(r"fino\s+(?:al\s+rientro|all[’']?\s*(?:eventuale\s+)?rientro|alla\s+(?:eventuale\s+)?(?:nomina|presa\s+di\s+servizio)|a\s+nomina|al\s+ritorno)|avente\s+(?:diritto|titolo)|titolare\s+(?:assente|in\s+congedo)", re.I)
 GIORNI = re.compile(r"\bper\s+(?:n\.?\s*)?(\d{1,3})\s*(?:giorni|gg)\b", re.I)
 
 
@@ -163,10 +163,14 @@ def _scegli(window: str) -> dict:
     return out
 
 
+POSTO_RE = re.compile(r"(?<![A-Za-z0-9])((?:[A-Z]{1,2}\d{3})|AAAA|EEEE|ADEE|ADAA|ADMM|ADSS|[A-Z]{2}\d{2})\s+[-–]\s+(?=[A-Za-z])")
+
+
 def righe(text: str, ha_classe) -> list[dict]:
     """Se il testo e' un elenco (>=2 codici scuola) restituisce una riga per ogni
-    scuola che nomina la classe cercata; altrimenti [] (il chiamante usa finestre).
-    ha_classe(segmento) -> lista di classi trovate nel segmento."""
+    POSTO (scuola + classe) che nomina la classe cercata; altrimenti [].
+    Una scuola puo' avere piu' posti: ore e durata si leggono solo dal testo del
+    singolo posto, mai da quello del vicino.  ha_classe(testo) -> classi trovate."""
     text = " ".join(text.split())
     ms = [m for m in MECC_RE.finditer(text) if sum(c.isdigit() for c in m.group(1)) >= 3]
     if len(ms) < 2:
@@ -174,13 +178,20 @@ def righe(text: str, ha_classe) -> list[dict]:
     out = []
     for i, m in enumerate(ms):
         fine = ms[i + 1].start() if i + 1 < len(ms) else len(text)
-        seg = text[m.start():fine]
-        classi = ha_classe(seg)
-        if not classi:
+        seg = text[m.end():fine]
+        posti = list(POSTO_RE.finditer(seg))
+        if not posti:
             continue
-        r = {"mecc": m.group(1), "classi": classi, "testo": seg[:260]}
-        r.update(_scegli(seg))
-        out.append(r)
+        nome = seg[:posti[0].start()].strip(" -–,")
+        for j, p in enumerate(posti):
+            fp = posti[j + 1].start() if j + 1 < len(posti) else len(seg)
+            post = seg[p.start():fp]
+            classi = ha_classe(post[:90])
+            if not classi:
+                continue
+            r = {"mecc": m.group(1), "scuola": nome[:90], "classi": classi, "testo": post[:260]}
+            r.update(_scegli(post))
+            out.append(r)
     return out
 
 
