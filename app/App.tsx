@@ -322,12 +322,12 @@ export default function App() {
     <View style={[s.root, { paddingTop: topPad }]}>
       <ExpoStatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       <View style={s.header}>
-        <Text style={s.h1}>Interpellati</Text>
+        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v1.1</Text></Text>
         <Text style={s.who} numberOfLines={1}>
           {(prefs.classi.length ? prefs.classi.join(' · ') : 'Tutte le classi') + ' — ' + (prefs.regioni.length ? prefs.regioni.length + ' regioni' : 'tutta Italia')}
         </Text>
       </View>
-      <View style={s.tabs}>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={s.tabsScroll} contentContainerStyle={s.tabs}>
         {([
           ['interpelli', 'Interpelli', open.length],
           ['abilitazione', 'Abilitazione', abil ? abil.voci.length : null],
@@ -342,7 +342,7 @@ export default function App() {
             </Text>
           </Pressable>
         ))}
-      </View>
+      </ScrollView>
 
       {tab === 'interpelli' && (
         <FlatList
@@ -729,7 +729,8 @@ function makeStyles(c: Pal) {
     header: { paddingHorizontal: 16, paddingTop: 8, flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between' },
     h1: { fontSize: 26, fontWeight: '800', color: c.ink },
     who: { color: c.muted, fontSize: 13 },
-    tabs: { flexDirection: 'row', borderBottomWidth: 1, borderColor: c.line, paddingHorizontal: 8, marginTop: 6 },
+    tabsScroll: { flexGrow: 0, borderBottomWidth: 1, borderColor: c.line, marginTop: 6 },
+    tabs: { flexDirection: 'row', paddingHorizontal: 8 },
     tab: { paddingVertical: 10, paddingHorizontal: 10, borderBottomWidth: 3, borderColor: 'transparent' },
     tabOn: { borderColor: c.accent },
     tabText: { color: c.muted, fontWeight: '700' },
