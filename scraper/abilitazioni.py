@@ -29,7 +29,7 @@ SCARTA = ("tutor", "riconoscimenti", "piani di studio", "piano di studio", "cors
           "calendario", "orari", "esito", "esiti", "ammessi", "sospensione")
 
 
-def trova(html: str, base: str, cfg: dict) -> list[dict]:
+def trova(html: str, base: str, cfg: dict, dedicata: bool = False) -> list[dict]:
     soup = BeautifulSoup(html, "html.parser")
     pagina = " ".join(soup.get_text(" ", strip=True).split()).lower()
     pagina_itp = any(k in pagina for k in cfg["itp"])
@@ -40,7 +40,7 @@ def trova(html: str, base: str, cfg: dict) -> list[dict]:
         ctx = scrape.block_of(a)
         hay = (testo + " " + href + " " + ctx[:300]).lower()
         mio = (testo + " " + href).lower()
-        if not any(k in mio for k in cfg["parole"]) or href in visti or not href.startswith("http"):
+        if (not dedicata and not any(k in mio for k in cfg["parole"])) or href in visti or not href.startswith("http"):
             continue
         if len(testo) < 15 or not any(k in mio for k in UTILE) or any(k in mio for k in SCARTA) or not ANNO_RE.search(mio):
             continue
@@ -70,7 +70,7 @@ def main() -> int:
         if not html:
             scrape.log(f"  [abilitazioni] non letta: {src['nome']}")
             continue
-        for v in trova(html, src["url"], cfg):
+        for v in trova(html, src["url"], cfg, src.get("dedicata", False)):
             vid = "ab-" + hashlib.sha1(v["link"].encode()).hexdigest()[:10]
             if vid in voci:
                 voci[vid]["ultimaVolta"] = ora
