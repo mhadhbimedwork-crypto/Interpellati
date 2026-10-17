@@ -31,6 +31,9 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
       - run: npm ci
       - run: npx tsc --noEmit
+      - name: versionCode sempre crescente (cosi' ogni APK si installa sopra il vecchio)
+        run: |
+          node -e "const f='app.json',j=JSON.parse(require('fs').readFileSync(f,'utf8'));j.expo.android.versionCode=100+Number(process.env.GITHUB_RUN_NUMBER);require('fs').writeFileSync(f,JSON.stringify(j,null,2));console.log('versionCode',j.expo.android.versionCode)"
       - run: npx expo prebuild --platform android --no-install
         env:
           CI: "1"
