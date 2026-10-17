@@ -356,6 +356,14 @@ def scan_office(f: Fetcher, src: dict, since: date) -> list[dict]:
 def doc_fetch(f: "Fetcher", url: str) -> tuple[str | None, bytes | None]:
     """Scarica una pagina HTML, un PDF, uno ZIP o un .p7m (in memoria, nulla resta su disco).
     Restituisce (testo, contenuto_binario_se_non_HTML)."""
+    cache = f.__dict__.setdefault("doc_cache", {})
+    if url in cache:
+        return cache[url]
+    cache[url] = _doc_fetch(f, url)
+    return cache[url]
+
+
+def _doc_fetch(f: "Fetcher", url: str) -> tuple[str | None, bytes | None]:
     if not f.allowed(url):
         return None, None
     host = urlparse(url).netloc
@@ -454,7 +462,8 @@ def dettaglia(f: "Fetcher", it: dict) -> list[dict]:
             n["classi"] = r["classi"]
             n["codiceScuola"] = r["mecc"]
             n["scuola"] = r["scuola"] or r["mecc"]
-            n["id"] = make_id(prov, n["classi"][0], r["mecc"], it["pubblicato"], it["link"] + r["mecc"] + str(len(out)))
+            firma = hashlib.sha1((it["link"] + r["mecc"] + r["testo"][:200]).encode()).hexdigest()[:8]
+            n["id"] = f"{(PROVINCE.get(prov, ('xx',))[0] if prov else 'xx').lower()}-{n['classi'][0].lower()}-{slug(r['mecc'], 12)}-{firma}"
             n.pop("ore", None); n.pop("durata", None)
             apply_detail(n, r)
             n["letto"] = True
@@ -487,6 +496,17 @@ def enrich(f: Fetcher, it: dict):
         m = re.search(r"\b(?:I\.?I\.?S\.?S?|IIS|ITIS|ITI|IPSIA|ISIS|IS|ITT|ITTS|IPS|Istituto)[^,;:]{2,80}", text)
         if m and it["scuola"].startswith("Interpello "):
             pass  # l'aggregatore non dice la scuola: la lasciamo generica piuttosto che indovinarla
+
+
+def put(items: dict, r: dict):
+    """Inserisce l'avviso; se esiste gia' (stesso id) tiene la data di pubblicazione piu' antica."""
+    new = {k: v for k, v in r.items() if v not in (None, "", [])}
+    old = items.get(new["id"])
+    if old and old.get("pubblicato") and new.get("pubblicato") and old["pubblicato"] < new["pubblicato"]:
+        new["pubblicato"] = old["pubblicato"]
+    if old and old.get("trovato"):
+        new["trovato"] = old["trovato"]
+    items[new["id"]] = new
 
 
 def main() -> int:
@@ -527,8 +547,9 @@ def main() -> int:
         for r in res:
             r.pop("_prov", None)
             r["trovato"] = now
-            items[r["id"]] = {k: v for k, v in r.items() if v not in (None, "", [])}
-            added.append(r)
+            if r["id"] not in items:
+                added.append(r)
+            put(items, r)
         known_links.add(key)
 
     # recupero: legge gli avvisi gia' in archivio che non sono ancora stati analizzati
@@ -540,7 +561,8 @@ def main() -> int:
         res = dettaglia(f, it)
         items.pop(it["id"], None)
         for r in res:
-            items[r["id"]] = {k: v for k, v in r.items() if v not in (None, "", [])}
+            r.setdefault("trovato", it.get("trovato"))
+            put(items, r)
     log(f"Avvisi analizzati per ore/durata: {dettagli_letti}")
 
     cutoff = (today - timedelta(days=KEEP_DAYS)).isoformat()
