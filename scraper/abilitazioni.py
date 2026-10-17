@@ -62,7 +62,8 @@ def trova(html: str, base: str, cfg: dict, dedicata: bool = False) -> list[dict]
 def main() -> int:
     cfg = json.loads(SRC.read_text("utf-8"))
     vecchio = json.loads(OUT.read_text("utf-8")) if OUT.exists() else {"voci": []}
-    voci = {v["id"]: v for v in vecchio.get("voci", [])}
+    prima = {v["id"]: v for v in vecchio.get("voci", [])}
+    voci = {}
     f = scrape.Fetcher()
     ora = datetime.now(scrape.TZ).isoformat(timespec="seconds")
     nuovi = []
@@ -74,7 +75,9 @@ def main() -> int:
         for v in trova(html, src["url"], cfg, src.get("dedicata", False)):
             vid = "ab-" + hashlib.sha1(v["link"].encode()).hexdigest()[:10]
             if vid in voci:
-                voci[vid]["ultimaVolta"] = ora
+                continue
+            if vid in prima:
+                voci[vid] = {**prima[vid], **v, "fonte": src["nome"], "ultimaVolta": ora}
                 continue
             voci[vid] = {"id": vid, **v, "fonte": src["nome"], "visto": ora, "ultimaVolta": ora}
             nuovi.append(vid)
