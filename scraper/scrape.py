@@ -28,6 +28,7 @@ from bs4 import BeautifulSoup
 from pypdf import PdfReader
 
 import extract as ex
+import geo
 import llm
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -568,6 +569,7 @@ def main() -> int:
     cutoff = (today - timedelta(days=KEEP_DAYS)).isoformat()
     keep = [i for i in items.values() if (i.get("pubblicato") or "9999") >= cutoff]
     keep.sort(key=lambda i: i.get("pubblicato") or "", reverse=True)
+    geo.applica(keep)  # coordinate dalla cache (nessuna rete); le nuove scuole le risolve geo.py
     out = {"aggiornato": now, "fonti": f.pages, "nuovi": [i["id"] for i in added], "interpelli": keep}
     DATA.parent.mkdir(parents=True, exist_ok=True)
     DATA.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", "utf-8")
