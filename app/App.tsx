@@ -45,6 +45,7 @@ import {
   takeNew,
   notifyNew,
 } from './src/feed';
+import { conCoordinate, MappaInterpelli } from './src/MapView';
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -57,7 +58,7 @@ Notifications.setNotificationHandler({
 
 type Stato = '' | 'inviata' | 'convocato' | 'scartata';
 type Cand = { stato: Stato; inviataIl?: string; note?: string };
-type Tab = 'interpelli' | 'abilitazione' | 'candidature' | 'preferenze' | 'profilo';
+type Tab = 'interpelli' | 'mappa' | 'abilitazione' | 'candidature' | 'preferenze' | 'profilo';
 
 const CLASSI_COMUNI: [string, string][] = [
   ['B015', 'ITP elettrica'], ['B017', 'ITP meccanica'], ['B012', 'ITP chimica'], ['B016', 'ITP informatica'],
@@ -193,6 +194,10 @@ export default function App() {
   const [bg, setBg] = useState<boolean | null>(null);
   const [abil, setAbil] = useState<AbilFeed | null>(null);
   const [soloItp, setSoloItp] = useState(false);
+  const [selIds, setSelIds] = useState<string[] | null>(null);
+  const [visIds, setVisIds] = useState<string[]>([]);
+  const [visN, setVisN] = useState(0);
+  const [soloPrecisi, setSoloPrecisi] = useState(false);
 
   const refresh = useCallback(async () => {
     setLoading(true);
@@ -315,6 +320,17 @@ export default function App() {
       });
   }, [base, fClasse, fVista, fRegione, q, cand, fOre, fDurata, conND]);
 
+  const mapItems = useMemo(
+    () => rows.filter((i) => conCoordinate(i) && (!soloPrecisi || i.geo !== 'p')),
+    [rows, soloPrecisi],
+  );
+  const perId = useMemo(() => new Map(items.map((i) => [i.id, i])), [items]);
+  const selItems = useMemo(
+    () => (selIds || []).map((id) => perId.get(id)).filter((x): x is Interpello => !!x),
+    [selIds, perId],
+  );
+  const onSelectMappa = useCallback((ids: string[]) => setSelIds(ids), []);
+  const onViewMappa = useCallback((ids: string[], n: number) => { setVisIds(ids); setVisN(n); }, []);
   const inviate = Object.values(cand).filter((x) => x.stato === 'inviata' || x.stato === 'convocato').length;
   const topPad = Platform.OS === 'android' ? (StatusBar.currentHeight || 24) : 44;
 
@@ -330,6 +346,7 @@ export default function App() {
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={s.tabsScroll} contentContainerStyle={s.tabs}>
         {([
           ['interpelli', 'Interpelli', open.length],
+          ['mappa', 'Mappa', null],
           ['abilitazione', 'Abilitazione', abil ? abil.voci.length : null],
           ['candidature', 'Candidature', inviate],
           ['preferenze', 'Preferenze', null],
@@ -410,6 +427,56 @@ export default function App() {
             />
           )}
         />
+      )}
+
+      {tab === 'mappa' && (
+        <View style={{ flex: 1 }}>
+          <View style={{ paddingHorizontal: 16, paddingTop: 8, gap: 6 }}>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }}>
+              {[['mie', 'Le mie preferenze', soloMie], ['tutto', 'Tutta Italia', !soloMie]].map(([k, l, on]) => (
+                <Pressable key={k as string} onPress={() => { setSoloMie(k === 'mie'); setFClasse('tutte'); setSelIds(null); }} style={[s.chip, on && s.chipOn]}>
+                  <Text style={[s.chipText, on && s.chipTextOn]}>{l as string}</Text>
+                </Pressable>
+              ))}
+              {([['aperti', 'Aperti'], ['nonrisposti', 'Senza risposta'], ['tutti', 'Anche scaduti']] as [typeof fVista, string][]).map(([k, l]) => (
+                <Pressable key={k} onPress={() => { setFVista(k); setSelIds(null); }} style={[s.chip, fVista === k && s.chipOn]}>
+                  <Text style={[s.chipText, fVista === k && s.chipTextOn]}>{l}</Text>
+                </Pressable>
+              ))}
+              <Pressable onPress={() => setSoloPrecisi(!soloPrecisi)} style={[s.chip, soloPrecisi && s.chipOn]}>
+                <Text style={[s.chipText, soloPrecisi && s.chipTextOn]}>Solo posizione precisa</Text>
+              </Pressable>
+            </ScrollView>
+            <Text style={s.small}>
+              {mapItems.length} avvisi sulla mappa su {rows.length}
+              {rows.length - rows.filter(conCoordinate).length > 0 ? ' · ' + (rows.length - rows.filter(conCoordinate).length) + ' senza posizione' : ''}
+              {' · classe, ore e durata si scelgono nella scheda Interpelli'}
+            </Text>
+          </View>
+          <View style={{ flex: 1, marginTop: 6 }}>
+            <MappaInterpelli items={mapItems} dark={scheme === 'dark'} fitKey={`${soloMie}|${fClasse}|${fVista}|${fRegione}|${soloPrecisi}`} onSelect={onSelectMappa} onView={onViewMappa} muted={c.muted} />
+          </View>
+          {selIds ? (
+            <View style={{ maxHeight: '55%', borderTopWidth: 1, borderColor: c.line, backgroundColor: c.bg }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 16, paddingVertical: 8 }}>
+                <Text style={s.title}>{selItems.length} {selItems.length === 1 ? 'avviso' : 'avvisi'} in questo punto</Text>
+                <Pressable onPress={() => setSelIds(null)} style={s.chip}><Text style={s.chipText}>Chiudi</Text></Pressable>
+              </View>
+              <ScrollView contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24, gap: 10 }}>
+                {selItems.map((item) => (
+                  <Card key={item.id} it={item} s={s} c={c} cand={cand[item.id]} expanded={openId === item.id}
+                    onToggle={() => setOpenId(openId === item.id ? null : item.id)} profilo={profilo} saveCand={saveCand} />
+                ))}
+              </ScrollView>
+            </View>
+          ) : (
+            <Pressable onPress={() => setSelIds(visIds)} disabled={!visIds.length} style={{ padding: 12, alignItems: 'center', borderTopWidth: 1, borderColor: c.line, backgroundColor: c.bg }}>
+              <Text style={[s.chipText, { color: c.accent, fontWeight: '800' }]}>
+                {visN ? `Elenco di questa zona (${visN}${visN > visIds.length ? ', i primi ' + visIds.length : ''})` : 'Sposta la mappa per vedere gli avvisi'}
+              </Text>
+            </Pressable>
+          )}
+        </View>
       )}
 
       {tab === 'abilitazione' && (
@@ -651,6 +718,13 @@ function Card({
       </View>
       <Text style={s.title}>{it.scuola || 'Interpello'}</Text>
       {place ? <Text style={s.muted}>{place}</Text> : null}
+      {it.geo ? (
+        <Text style={s.small}>
+          {it.geo === 'i' ? 'Posizione: ' + (it.indirizzo || 'indirizzo della scuola')
+            : it.geo === 'c' ? 'Posizione: centro del comune (indirizzo non trovato)'
+              : 'Posizione indicativa (capoluogo): l\'avviso non indica la scuola'}
+        </Text>
+      ) : null}
       <Text style={s.muted}>
         {[d ? 'Scadenza ' + fmtDate(d) + (it.oraScadenza ? ' ore ' + it.oraScadenza : '') : '', it.ore ? it.ore + ' ore/sett.' : '', it.periodo || '', it.pubblicato ? 'Pubblicato ' + fmtDate(it.pubblicato) : '']
           .filter(Boolean)

@@ -32,6 +32,11 @@ export type Interpello = {
   tipoPosto?: string;
   candidatura?: string;
   codiceScuola?: string;
+  lat?: number;
+  lon?: number;
+  /** i = indirizzo della scuola · c = centro del comune · p = capoluogo di provincia */
+  geo?: 'i' | 'c' | 'p';
+  indirizzo?: string;
   lettoDa?: string;
 };
 export type Feed = { aggiornato?: string; fonti?: number; interpelli: Interpello[] };
