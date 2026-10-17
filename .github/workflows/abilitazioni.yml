@@ -1,0 +1,37 @@
+name: Percorsi abilitanti
+on:
+  schedule:
+    - cron: "20 5,11,17 * * *"   # tre volte al giorno
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+jobs:
+  abilitazioni:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r scraper/requirements.txt
+      - run: python scraper/abilitazioni.py
+      - name: Notifiche Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NOTIFY_CLASSI: ${{ vars.NOTIFY_CLASSI }}
+          NOTIFY_PROVINCE: ${{ vars.NOTIFY_PROVINCE }}
+        run: python scraper/notify.py
+      - name: Salva i dati
+        run: |
+          git config user.name "interpellati-bot"
+          git config user.email "interpellati-bot@users.noreply.github.com"
+          git add -A data ':!data/ultima_scansione.txt'
+          if git diff --cached --quiet; then echo "nessuna modifica"; exit 0; fi
+          git commit -m "dati: abilitazioni $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin main
+          git push

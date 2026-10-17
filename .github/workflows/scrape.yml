@@ -24,9 +24,6 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}
         run: python scraper/scrape.py
-      - name: Percorsi abilitanti
-        continue-on-error: true
-        run: python scraper/abilitazioni.py
       - name: Notifiche Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

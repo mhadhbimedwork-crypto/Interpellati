@@ -19,6 +19,14 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "abilitazioni.json"
 SRC = Path(__file__).resolve().parent / "abilitazioni_sources.json"
 MAX_VOCI = 200
+# Solo avvisi dell'anno accademico in corso: il titolo o il link contengono 2026 / 26-27 ...
+ANNO_RE = re.compile(r"2026|26[-_/ ]?27|a\.?a\.? ?26", re.I)
+# Parole che indicano un bando/avviso utile a chi vuole iscriversi
+UTILE = ("bando", "avviso", "iscrizion", "apertura", "riapertura", "proroga", "domand", "immatricolaz", "ammission", "selezione")
+# Rumore: documenti interni, elenchi, tutor, cookie, menu
+SCARTA = ("tutor", "riconoscimenti", "piani di studio", "piano di studio", "corsisti", "elenco", "graduatoria", "graduatorie",
+          "autocertificazione", "guida", "cookie", "carta del docente", "contenuto principale", "listen", "tabella a", "modello", "faq",
+          "calendario", "orari", "esito", "esiti", "ammessi", "sospensione")
 
 
 def trova(html: str, base: str, cfg: dict) -> list[dict]:
@@ -31,8 +39,15 @@ def trova(html: str, base: str, cfg: dict) -> list[dict]:
         href = urljoin(base, a["href"])
         ctx = scrape.block_of(a)
         hay = (testo + " " + href + " " + ctx[:300]).lower()
-        if not any(k in hay for k in cfg["parole"]) or href in visti or not href.startswith("http"):
+        mio = (testo + " " + href).lower()
+        if not any(k in mio for k in cfg["parole"]) or href in visti or not href.startswith("http"):
             continue
+        if len(testo) < 15 or not any(k in mio for k in UTILE) or any(k in mio for k in SCARTA) or not ANNO_RE.search(mio):
+            continue
+        testo_norm = re.sub(r"\W+", " ", testo.lower()).strip()
+        if testo_norm in visti:
+            continue
+        visti.add(testo_norm)
         visti.add(href)
         out.append({
             "titolo": (testo or ctx)[:160] or href,
