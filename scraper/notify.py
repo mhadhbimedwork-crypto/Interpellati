@@ -90,7 +90,7 @@ def main(post=requests.post) -> int:
                  json={"chat_id": chat, "text": msg_abil(v), "disable_web_page_preview": True}, timeout=20)
         if r.status_code == 200:
             gia.add(v["id"])
-    SENT.write_text(json.dumps(sorted(gia)[-3000:]) + "\n", "utf-8")
+    SENT.write_text(json.dumps(sorted(gia)) + "\n", "utf-8")  # nessun taglio: un avviso gia' notificato non torna mai
     print(f"Notifiche inviate: {len(da_inviare[:20])}")
     return 0
 

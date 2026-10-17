@@ -44,6 +44,8 @@ import {
   registerBackground,
   takeNew,
   notifyNew,
+  loadMemCache,
+  memStats,
 } from './src/feed';
 import { conCoordinate, MappaInterpelli } from './src/MapView';
 
@@ -222,6 +224,7 @@ export default function App() {
 
   useEffect(() => {
     (async () => {
+      await loadMemCache();
       const cached = await loadCachedFeed();
       if (cached) setFeed(cached);
       const ca = await loadCachedAbil();
@@ -338,7 +341,7 @@ export default function App() {
     <View style={[s.root, { paddingTop: topPad }]}>
       <ExpoStatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       <View style={s.header}>
-        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v1.2.1</Text></Text>
+        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v1.3.0</Text></Text>
         <Text style={s.who} numberOfLines={1}>
           {(prefs.classi.length ? prefs.classi.join(' · ') : 'Tutte le classi') + ' — ' + (prefs.regioni.length ? prefs.regioni.length + ' regioni' : 'tutta Italia')}
         </Text>
@@ -511,6 +514,9 @@ export default function App() {
 
       {tab === 'candidature' && (
         <ScrollView contentContainerStyle={s.list}>
+          <Text style={s.small}>
+            Memoria dell'app: {memStats().proposti} avvisi proposti, {memStats().notificati} notificati come nuovi · candidature inviate: {Object.values(cand).filter((x) => x.stato === 'inviata').length}, convocazioni: {Object.values(cand).filter((x) => x.stato === 'convocato').length}. La notifica arriva solo per avvisi mai visti prima.
+          </Text>
           {Object.entries(cand).filter(([, x]) => x.stato).length === 0 ? (
             <View style={s.empty}>
               <Text style={s.emptyTitle}>Nessuna candidatura registrata</Text>

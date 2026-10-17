@@ -130,16 +130,75 @@ export async function fetchAbil(): Promise<AbilFeed> {
   return d;
 }
 
-/** Nuovi bandi di abilitazione mai visti (la prima volta non notifica: segna tutto come visto). */
-export async function takeNewAbil(d: AbilFeed): Promise<Abilitazione[]> {
-  let seen: string[] = [];
+/* ---------- MEMORIA (v2): cosa l'app ti ha proposto e notificato ----------
+ * Una voce per ogni avviso mai visto: v = prima volta proposto, n = quando e' stata inviata la notifica.
+ * Nessun limite di lunghezza (il vecchio elenco si tagliava a 2000 voci e, col feed da 4000+ avvisi,
+ * dimenticava gli avvisi aperti: per questo arrivavano sempre le stesse notifiche). */
+export type Mem = Record<string, { v: string; n?: string }>;
+const K_MEM = 'memoria.v2';
+export const memCache: Mem = {};
+let lock: Promise<unknown> = Promise.resolve();
+function serial<T>(fn: () => Promise<T>): Promise<T> {
+  const r = lock.then(fn, fn);
+  lock = r.catch(() => {});
+  return r;
+}
+async function loadMem(): Promise<Mem | null> {
   try {
-    seen = JSON.parse((await AsyncStorage.getItem(K_ABIL_SEEN)) || '[]');
-  } catch {}
-  const first = seen.length === 0;
-  const fresh = d.voci.filter((v) => !seen.includes(v.id));
-  await AsyncStorage.setItem(K_ABIL_SEEN, JSON.stringify(Array.from(new Set([...seen, ...d.voci.map((v) => v.id)])).slice(-1000)));
-  return first ? [] : fresh;
+    const s = await AsyncStorage.getItem(K_MEM);
+    return s ? (JSON.parse(s) as Mem) : null;
+  } catch {
+    return null;
+  }
+}
+async function saveMem(m: Mem, ids: Set<string>) {
+  const lim = Date.now() - 180 * 86400000;
+  for (const k of Object.keys(m)) if (k[0] !== '~' && !ids.has(k) && new Date(m[k].v).getTime() < lim) delete m[k];
+  Object.keys(memCache).forEach((k) => delete memCache[k]);
+  Object.assign(memCache, m);
+  await AsyncStorage.setItem(K_MEM, JSON.stringify(m));
+}
+export async function loadMemCache() {
+  const m = await loadMem();
+  if (m) Object.assign(memCache, m);
+}
+export function memStats(): { proposti: number; notificati: number } {
+  const v = Object.entries(memCache).filter(([k]) => k[0] !== '~' && k.startsWith('i:')).map(([, x]) => x);
+  return { proposti: v.length, notificati: v.filter((x) => x.n).length };
+}
+/** Restituisce gli avvisi davvero nuovi (mai visti prima) e li ricorda. Una sola esecuzione alla volta. */
+function takeNewMem<T extends { id: string }>(all: T[], want: (x: T) => boolean, prefix: string): Promise<T[]> {
+  return serial(async () => {
+    const now = new Date().toISOString();
+    let m = await loadMem();
+    if (!m) m = {};
+    const marker = '~' + prefix;
+    const primo = !m[marker]; // primo avvio di questo elenco nella memoria v2: segna tutto come gia' proposto, senza notificare
+    if (primo) {
+      m[marker] = { v: now };
+      // eredita il vecchio elenco "visti" (anche se tagliato) per non notificare di nuovo cose note
+      try {
+        for (const id of JSON.parse((await AsyncStorage.getItem(prefix === 'i:' ? K_SEEN : K_ABIL_SEEN)) || '[]')) m[prefix + id] = { v: now };
+      } catch {}
+    }
+    const fresh: T[] = [];
+    for (const x of all) {
+      const key = prefix + x.id;
+      if (m[key]) continue;
+      m[key] = { v: now };
+      if (!primo && want(x)) {
+        m[key].n = now;
+        fresh.push(x);
+      }
+    }
+    await saveMem(m, new Set(all.map((x) => prefix + x.id)));
+    return fresh;
+  });
+}
+
+/** Nuovi bandi di abilitazione mai visti. */
+export async function takeNewAbil(d: AbilFeed): Promise<Abilitazione[]> {
+  return takeNewMem(d.voci, () => true, 'a:');
 }
 
 export async function notifyAbil(items: Abilitazione[]) {
@@ -151,18 +210,10 @@ export async function notifyAbil(items: Abilitazione[]) {
   }
 }
 
-/** Returns the open interpelli never notified before, and marks them seen. */
+/** Interpelli aperti che corrispondono alle tue preferenze e che non ti sono mai stati proposti prima. */
 export async function takeNew(feed: Feed, prefs?: Prefs): Promise<Interpello[]> {
   const p = prefs || (await loadPrefs());
-  let seen: string[] = [];
-  try {
-    seen = JSON.parse((await AsyncStorage.getItem(K_SEEN)) || '[]');
-  } catch {}
-  const first = seen.length === 0;
-  const fresh = feed.interpelli.filter((i) => isOpen(i) && !seen.includes(i.id) && matchPrefs(i, p));
-  const all = Array.from(new Set([...seen, ...feed.interpelli.map((i) => i.id)])).slice(-2000);
-  await AsyncStorage.setItem(K_SEEN, JSON.stringify(all));
-  return first ? [] : fresh;
+  return takeNewMem(feed.interpelli, (i) => isOpen(i) && matchPrefs(i, p), 'i:');
 }
 
 export async function notifyNew(items: Interpello[]) {
