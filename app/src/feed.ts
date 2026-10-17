@@ -4,7 +4,7 @@ import * as Notifications from 'expo-notifications';
 import * as TaskManager from 'expo-task-manager';
 
 export const FEED_URL =
-  'https://raw.githubusercontent.com/mhadhbimedwork-crypto/Interpellati/main/data/interpelli.json';
+  'https://raw.githubusercontent.com/mhadhbimedwork-crypto/Interpellati/main/data/feed.json';
 export const TASK = 'interpellati-controllo';
 
 export type Interpello = {
@@ -25,6 +25,14 @@ export type Interpello = {
   note?: string;
   trovato?: string;
   stato?: string;
+  durata?: { tipo: string; dal?: string; al?: string; giorni?: number };
+  durataCat?: 'breve' | 'intermedia' | 'fino_a_fine_anno' | 'indeterminata';
+  oreEvidenza?: string;
+  durataEvidenza?: string;
+  tipoPosto?: string;
+  candidatura?: string;
+  codiceScuola?: string;
+  lettoDa?: string;
 };
 export type Feed = { aggiornato?: string; fonti?: number; interpelli: Interpello[] };
 

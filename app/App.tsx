@@ -181,6 +181,9 @@ export default function App() {
   const [fVista, setFVista] = useState<'aperti' | 'tutti' | 'nonrisposti'>('aperti');
   const [fRegione, setFRegione] = useState('');
   const [q, setQ] = useState('');
+  const [fOre, setFOre] = useState<'tutte' | 'poche' | 'medie' | 'piene'>('tutte');
+  const [fDurata, setFDurata] = useState<'tutte' | 'breve' | 'intermedia' | 'fino_a_fine_anno'>('tutte');
+  const [conND, setConND] = useState(true);
   const [openId, setOpenId] = useState<string | null>(null);
   const [bg, setBg] = useState<boolean | null>(null);
 
@@ -272,6 +275,14 @@ export default function App() {
       .filter((it) => {
         if (fClasse !== 'tutte' && !(it.classi || []).includes(fClasse)) return false;
         if (fRegione && it.regione !== fRegione) return false;
+        if (fOre !== 'tutte') {
+          if (it.ore == null) { if (!conND) return false; }
+          else if (fOre === 'poche' ? it.ore > 9 : fOre === 'medie' ? it.ore < 10 || it.ore > 17 : it.ore < 18) return false;
+        }
+        if (fDurata !== 'tutte') {
+          if (!it.durataCat) { if (!conND) return false; }
+          else if (it.durataCat !== fDurata) return false;
+        }
         if (qq && !((it.scuola || '') + ' ' + (it.comune || '') + ' ' + (it.provincia || '')).toLowerCase().includes(qq)) return false;
         if (fVista === 'aperti') return isOpen(it);
         if (fVista === 'nonrisposti') return isOpen(it) && !(cand[it.id] && cand[it.id].stato);
@@ -287,7 +298,7 @@ export default function App() {
         }
         return pb - pa;
       });
-  }, [base, fClasse, fVista, fRegione, q, cand]);
+  }, [base, fClasse, fVista, fRegione, q, cand, fOre, fDurata, conND]);
 
   const inviate = Object.values(cand).filter((x) => x.stato === 'inviata' || x.stato === 'convocato').length;
   const topPad = Platform.OS === 'android' ? (StatusBar.currentHeight || 24) : 44;
@@ -350,6 +361,11 @@ export default function App() {
                   </Pressable>
                 ))}
               </ScrollView>
+              <Chips s={s} value={fOre} set={(v) => setFOre(v as any)} opts={[['tutte', 'Ore: tutte'], ['poche', 'Fino a 9 ore'], ['medie', '10–17 ore'], ['piene', '18 ore']]} />
+              <Chips s={s} value={fDurata} set={(v) => setFDurata(v as any)} opts={[['tutte', 'Durata: tutte'], ['breve', 'Breve (≤30 gg)'], ['intermedia', 'Intermedia'], ['fino_a_fine_anno', 'Fino a fine anno']]} />
+              {fOre !== 'tutte' || fDurata !== 'tutte' ? (
+                <Chips s={s} value={conND ? 'si' : 'no'} set={(v) => setConND(v === 'si')} opts={[['si', 'Includi «non rilevato»'], ['no', 'Solo con dato certo']]} />
+              ) : null}
               <TextInput value={q} onChangeText={setQ} placeholder="Cerca scuola, comune o provincia" placeholderTextColor={c.muted} style={s.input} />
             </View>
           }
@@ -541,6 +557,17 @@ function Chips<T extends string>({ s, value, set, opts }: { s: any; value: T; se
   );
 }
 
+function durataLabel(it: Interpello): string {
+  const d = it.durata;
+  if (!d) return '';
+  const al = d.al ? fmtDate(d.al) : '';
+  if (d.tipo === 'giorni' && d.giorni) return d.giorni + ' giorni';
+  if (al) return 'fino al ' + al;
+  if (it.durataCat === 'fino_a_fine_anno') return 'fino a fine anno';
+  if (it.durataCat === 'indeterminata') return 'fino a rientro titolare';
+  return '';
+}
+
 function Card({
   it, s, c, cand, expanded, onToggle, profilo, saveCand,
 }: {
@@ -566,6 +593,9 @@ function Card({
           <Text key={x} style={[s.pill, { backgroundColor: c.accentSoft, color: c.accent }]}>{x}</Text>
         ))}
         {op && isNew(it) ? <Text style={[s.pill, { backgroundColor: c.okSoft, color: c.ok }]}>Nuovo</Text> : null}
+        {it.ore ? <Text style={[s.pill, { backgroundColor: c.bg, color: c.ink }]}>{it.ore} h/sett.</Text> : null}
+        {durataLabel(it) ? <Text style={[s.pill, { backgroundColor: c.bg, color: c.ink }]}>{durataLabel(it)}</Text> : null}
+        {it.tipoPosto === 'sostegno' ? <Text style={[s.pill, { backgroundColor: c.bg, color: c.ink }]}>Sostegno</Text> : null}
         <Text style={[s.pill, { backgroundColor: badge[1], color: badge[2] }]}>{badge[0]}</Text>
         {cand?.stato ? (
           <Text style={[s.pill, { backgroundColor: c.okSoft, color: c.ok }]}>
@@ -582,7 +612,18 @@ function Card({
       </Text>
       {it.note ? <Text style={s.body}>{it.note}</Text> : null}
       {it.email ? <Text style={s.body} selectable>Invio a: {it.email}</Text> : null}
+      {expanded && (it.oreEvidenza || it.durataEvidenza) ? (
+        <Text style={s.small}>
+          {it.lettoDa === 'ai' ? 'Letto con intelligenza artificiale, da verificare sull\'avviso. ' : 'Letto dall\'avviso: '}
+          {[it.oreEvidenza, it.durataEvidenza].filter(Boolean).map((x) => '«…' + x + '…»').join(' ')}
+        </Text>
+      ) : null}
       <View style={s.actions}>
+        {it.candidatura && /^https?:/.test(it.candidatura) ? (
+          <Pressable onPress={() => Linking.openURL(it.candidatura!)} style={s.btn}>
+            <Text style={s.btnText}>Modulo di candidatura</Text>
+          </Pressable>
+        ) : null}
         {it.link ? (
           <Pressable onPress={() => Linking.openURL(it.link!)} style={[s.btn, s.btnPrimary]}>
             <Text style={[s.btnText, { color: c.accentInk }]}>Apri l'avviso ufficiale</Text>

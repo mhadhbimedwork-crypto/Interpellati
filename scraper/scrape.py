@@ -549,6 +549,19 @@ def main() -> int:
     out = {"aggiornato": now, "fonti": f.pages, "nuovi": [i["id"] for i in added], "interpelli": keep}
     DATA.parent.mkdir(parents=True, exist_ok=True)
     DATA.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", "utf-8")
+    # feed leggero per l'app: solo avvisi recenti e non scaduti, senza testi di servizio
+    FEED = ROOT / "data" / "feed.json"
+    limite_pub = (today - timedelta(days=21)).isoformat()
+    ieri = (today - timedelta(days=1)).isoformat()
+    leggero = []
+    for i in keep:
+        if (i.get("pubblicato") or "") < limite_pub:
+            continue
+        if i.get("scadenza") and i["scadenza"] < ieri:
+            continue
+        leggero.append({k: v for k, v in i.items() if k not in ("letto", "trovato")})
+    FEED.write_text(json.dumps({"aggiornato": now, "fonti": f.pages, "interpelli": leggero}, ensure_ascii=False, separators=(",", ":")) + "\n", "utf-8")
+    log(f"Feed app: {len(leggero)} avvisi")
     log(f"Pagine lette: {f.pages} · trovati {len(found)} · nuovi {len(added)} · totale {len(keep)}")
     for i in added:
         log("  NUOVO", i["classi"], i.get("provincia"), i.get("scuola"), i["link"])
