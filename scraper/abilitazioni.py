@@ -22,7 +22,7 @@ MAX_VOCI = 200
 # Solo avvisi dell'anno accademico in corso: il titolo o il link contengono 2026 / 26-27 ...
 ANNO_RE = re.compile(r"2026|26[-_/ ]?27|a\.?a\.? ?26", re.I)
 # Parole che indicano un bando/avviso utile a chi vuole iscriversi
-UTILE = ("bando", "avviso", "iscrizion", "apertura", "riapertura", "proroga", "domand", "immatricolaz", "ammission", "selezione")
+UTILE = ("offerta formativa", "classi di concorso attivate", "bando", "avviso", "iscrizion", "apertura", "riapertura", "proroga", "domand", "immatricolaz", "ammission", "selezione")
 # Rumore: documenti interni, elenchi, tutor, cookie, menu
 SCARTA = ("tutor", "riconoscimenti", "piani di studio", "piano di studio", "corsisti", "elenco", "graduatoria", "graduatorie",
           "autocertificazione", "guida", "cookie", "carta del docente", "contenuto principale", "listen", "tabella a", "modello", "faq",
