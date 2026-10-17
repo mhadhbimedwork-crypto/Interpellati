@@ -9,5 +9,6 @@ rep('/*LEAFLET_CSS*/', lf('leaflet.css'));
 rep('/*CLUSTER_CSS*/', lf('MarkerCluster.css') + lf('MarkerCluster.Default.css'));
 rep('/*LEAFLET_JS*/', lf('leaflet.js').replace(/<\/script/gi, '<\\/script'));
 rep('/*CLUSTER_JS*/', lf('leaflet.markercluster.js').replace(/<\/script/gi, '<\\/script'));
+rep('/*ITALIA*/', lf('italia.json'));
 fs.writeFileSync(path.join(root, 'src', 'mapHtml.ts'), '// GENERATO da scripts/build-map.js: non modificare a mano.\nexport const MAP_HTML = ' + JSON.stringify(t) + ';\n');
 console.log('mapHtml.ts', (t.length / 1024).toFixed(0) + ' KB');

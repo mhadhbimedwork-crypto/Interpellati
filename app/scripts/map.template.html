@@ -4,8 +4,10 @@
 <style>
 /*LEAFLET_CSS*/
 /*CLUSTER_CSS*/
-html,body,#m{height:100%;margin:0;padding:0;background:#e9edf1}
-body.dark,body.dark #m{background:#14181d}
+html,body,#m{height:100%;margin:0;padding:0;background:#cfe3f1}
+body.dark,body.dark #m{background:#27394a}
+#msg{position:absolute;left:50%;top:44px;transform:translateX(-50%);z-index:900;background:rgba(255,255,255,.95);color:#222;border-radius:8px;padding:5px 10px;font:12px -apple-system,Roboto,sans-serif;box-shadow:0 1px 4px rgba(0,0,0,.3);display:none;text-align:center;max-width:80%}
+body.dark #msg{background:rgba(24,28,34,.95);color:#e6e9ee}
 .leaflet-container{font:13px -apple-system,Roboto,sans-serif}
 .dot{width:16px;height:16px;border-radius:50%;box-sizing:border-box;border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)}
 .dot.o{background:#1f9d55}.dot.s{background:#e08a00}.dot.x{background:#8a94a0}
@@ -26,22 +28,36 @@ body.dark #cnt{background:rgba(24,28,34,.92);color:#e6e9ee}
 <body>
 <div id="m"></div>
 <div id="cnt">0</div>
+<div id="msg">Mappa stradale non disponibile (serve internet): confini delle province sempre visibili.</div>
 <div id="leg"><i style="background:#1f9d55"></i>aperto <i style="background:#e08a00;margin-left:6px"></i>scade entro 48 h<br><i style="border:2px solid #555;background:#fff"></i>posizione precisa &nbsp;<i style="border:2px dashed #555"></i>solo provincia</div>
 <script>/*LEAFLET_JS*/</script>
 <script>/*CLUSTER_JS*/</script>
+<script>var ITALIA=/*ITALIA*/;</script>
 <script>
 (function(){
 var COL={o:'#1f9d55',s:'#e08a00',x:'#8a94a0'};
 function post(o){var s=JSON.stringify(o);if(window.ReactNativeWebView)window.ReactNativeWebView.postMessage(s);else if(window.__out)window.__out(o);}
 var map=L.map('m',{zoomControl:true,attributionControl:true,zoomSnap:0.5,minZoom:4,maxZoom:18}).setView([42.2,12.6],6);
 map.attributionControl.setPrefix(false);
-var dark=false,tiles=null;
+var dark=false,tiles=null,base=null,okTiles=0,errTiles=0,usaOsm=false;
+function drawBase(){
+  if(base)map.removeLayer(base);
+  base=L.layerGroup();
+  var st={color:dark?'#8fa3b5':'#7a8a99',weight:0.6,fillColor:dark?'#3b4a58':'#f4f1e8',fillOpacity:1,interactive:false,smoothFactor:1};
+  ITALIA.forEach(function(r){L.polygon(r,st).addTo(base);});
+  base.addTo(map);base.eachLayer(function(l){if(l.bringToBack)l.bringToBack();});
+}
 function setTiles(){
   if(tiles)map.removeLayer(tiles);
-  tiles=L.tileLayer('https://{s}.basemaps.cartocdn.com/'+(dark?'dark_all':'light_all')+'/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19,attribution:'© OpenStreetMap, © CARTO'}).addTo(map);
+  var url=usaOsm?'https://tile.openstreetmap.org/{z}/{x}/{y}.png':'https://{s}.basemaps.cartocdn.com/'+(dark?'dark_all':'light_all')+'/{z}/{x}/{y}{r}.png';
+  tiles=L.tileLayer(url,{subdomains:'abcd',maxZoom:19,attribution:'© OpenStreetMap'+(usaOsm?'':', © CARTO'),crossOrigin:false});
+  tiles.on('tileload',function(){okTiles++;document.getElementById('msg').style.display='none';if(base&&map.hasLayer(base))map.removeLayer(base);});
+  tiles.on('tileerror',function(){errTiles++;if(errTiles===6&&!okTiles&&!usaOsm){usaOsm=true;setTiles();}});
+  tiles.addTo(map);
 }
-window.setTheme=function(d){dark=!!d;document.body.className=dark?'dark':'';setTiles();};
-setTiles();
+setTimeout(function(){if(!okTiles){document.getElementById('msg').style.display='block';if(base&&!map.hasLayer(base))base.addTo(map);}},6000);
+window.setTheme=function(d){dark=!!d;document.body.className=dark?'dark':'';drawBase();okTiles=0;setTiles();};
+drawBase();setTiles();
 
 function donut(o,s,x){
   var t=o+s+x,r=17,c=2*Math.PI*r,off=0,seg='';

@@ -68,9 +68,12 @@ export function MappaInterpelli({
         onMessage={onMessage}
         javaScriptEnabled
         domStorageEnabled={false}
+        mixedContentMode="always"
+        androidLayerType="hardware"
+        cacheEnabled
         setSupportMultipleWindows={false}
         overScrollMode="never"
-        style={{ flex: 1, backgroundColor: 'transparent' }}
+        style={{ flex: 1, backgroundColor: dark ? '#27394a' : '#cfe3f1' }}
       />
       {!ready ? (
         <View style={st.over} pointerEvents="none">
