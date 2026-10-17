@@ -53,6 +53,23 @@ def seleziona(store: dict, classi: set[str], prov: set[str], gia: set[str], oggi
     return out
 
 
+ABIL = ROOT / "data" / "abilitazioni.json"
+
+
+def abilitazioni_nuove(gia: set[str]) -> list[dict]:
+    try:
+        d = json.loads(ABIL.read_text("utf-8"))
+    except (OSError, ValueError):
+        return []
+    nuovi = set(d.get("nuovi", []))
+    return [v for v in d.get("voci", []) if v["id"] in nuovi and v["id"] not in gia]
+
+
+def msg_abil(v: dict) -> str:
+    tag = "ITP" if v.get("itp") else "da verificare se riguarda gli ITP"
+    return f"Percorso abilitante ({v.get('fonte')}): {v.get('titolo')}\n[{tag}] Controlla requisiti e scadenza.\n{v.get('link')}"
+
+
 def main(post=requests.post) -> int:
     tok, chat = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
     if not tok or not chat:
@@ -68,6 +85,11 @@ def main(post=requests.post) -> int:
             gia.add(i["id"])
         else:
             print("Telegram: errore", r.status_code)  # il token non viene mai stampato
+    for v in abilitazioni_nuove(gia)[:10]:
+        r = post(f"https://api.telegram.org/bot{tok}/sendMessage",
+                 json={"chat_id": chat, "text": msg_abil(v), "disable_web_page_preview": True}, timeout=20)
+        if r.status_code == 200:
+            gia.add(v["id"])
     SENT.write_text(json.dumps(sorted(gia)[-3000:]) + "\n", "utf-8")
     print(f"Notifiche inviate: {len(da_inviare[:20])}")
     return 0

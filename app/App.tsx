@@ -29,6 +29,11 @@ import {
   savePrefs,
   daysLeft,
   fetchFeed,
+  fetchAbil,
+  loadCachedAbil,
+  takeNewAbil,
+  notifyAbil,
+  type AbilFeed,
   Feed,
   fmtDate,
   Interpello,
@@ -52,7 +57,7 @@ Notifications.setNotificationHandler({
 
 type Stato = '' | 'inviata' | 'convocato' | 'scartata';
 type Cand = { stato: Stato; inviataIl?: string; note?: string };
-type Tab = 'interpelli' | 'candidature' | 'preferenze' | 'profilo';
+type Tab = 'interpelli' | 'abilitazione' | 'candidature' | 'preferenze' | 'profilo';
 
 const CLASSI_COMUNI: [string, string][] = [
   ['B015', 'ITP elettrica'], ['B017', 'ITP meccanica'], ['B012', 'ITP chimica'], ['B016', 'ITP informatica'],
@@ -186,6 +191,8 @@ export default function App() {
   const [conND, setConND] = useState(true);
   const [openId, setOpenId] = useState<string | null>(null);
   const [bg, setBg] = useState<boolean | null>(null);
+  const [abil, setAbil] = useState<AbilFeed | null>(null);
+  const [soloItp, setSoloItp] = useState(false);
 
   const refresh = useCallback(async () => {
     setLoading(true);
@@ -195,6 +202,12 @@ export default function App() {
       setError('');
       const fresh = await takeNew(f, await loadPrefs());
       if (fresh.length) await notifyNew(fresh);
+      try {
+        const ab = await fetchAbil();
+        setAbil(ab);
+        const nuovi = await takeNewAbil(ab);
+        if (nuovi.length) await notifyAbil(nuovi);
+      } catch {}
     } catch (e: any) {
       setError(e?.message || 'Connessione assente');
     } finally {
@@ -206,6 +219,8 @@ export default function App() {
     (async () => {
       const cached = await loadCachedFeed();
       if (cached) setFeed(cached);
+      const ca = await loadCachedAbil();
+      if (ca) setAbil(ca);
       try {
         const cs = await AsyncStorage.getItem('cand');
         if (cs) setCand(JSON.parse(cs));
@@ -315,6 +330,7 @@ export default function App() {
       <View style={s.tabs}>
         {([
           ['interpelli', 'Interpelli', open.length],
+          ['abilitazione', 'Abilitazione', abil ? abil.voci.length : null],
           ['candidature', 'Candidature', inviate],
           ['preferenze', 'Preferenze', null],
           ['profilo', 'Profilo', null],
@@ -394,6 +410,36 @@ export default function App() {
             />
           )}
         />
+      )}
+
+      {tab === 'abilitazione' && (
+        <ScrollView contentContainerStyle={s.list} refreshControl={<RefreshControl refreshing={loading} onRefresh={refresh} />}>
+          <Text style={s.body}>
+            Bandi e avvisi dei percorsi abilitanti (30, 36, 60 crediti) trovati sulle pagine ufficiali di Ministero e università. L'app non verifica se hai i requisiti: apri il link e controlla titolo di accesso, scadenza e se riguarda gli ITP (B015, B017).
+          </Text>
+          <Chips s={s} value={soloItp ? 'itp' : 'tutti'} set={(v) => setSoloItp(v === 'itp')} opts={[['tutti', 'Tutti'], ['itp', 'Solo se citano ITP / B015 / B017']]} />
+          {(abil?.voci || []).filter((v) => !soloItp || v.itp).length === 0 ? (
+            <View style={s.empty}>
+              <Text style={s.emptyTitle}>{abil ? 'Nessun bando trovato con questo filtro' : 'Ancora nessun dato'}</Text>
+              <Text style={s.muted}>L'elenco si aggiorna da solo; trascina giù per ricaricare.</Text>
+            </View>
+          ) : (
+            (abil?.voci || []).filter((v) => !soloItp || v.itp).map((v) => (
+              <View key={v.id} style={s.card}>
+                <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6 }}>
+                  {v.itp ? <Text style={[s.pill, { backgroundColor: c.okSoft, color: c.ok }]}>Cita ITP</Text> : <Text style={[s.pill, { backgroundColor: c.warnSoft, color: c.warn }]}>Da verificare</Text>}
+                </View>
+                <Text style={s.title}>{v.titolo}</Text>
+                <Text style={s.muted}>{v.fonte}{v.visto ? ' · trovato ' + fmtDate(v.visto) : ''}</Text>
+                <View style={s.actions}>
+                  <Pressable onPress={() => Linking.openURL(v.link)} style={[s.btn, s.btnPrimary]}>
+                    <Text style={[s.btnText, { color: c.accentInk }]}>Apri la pagina ufficiale</Text>
+                  </Pressable>
+                </View>
+              </View>
+            ))
+          )}
+        </ScrollView>
       )}
 
       {tab === 'candidature' && (

@@ -36,6 +36,13 @@ export type Interpello = {
 };
 export type Feed = { aggiornato?: string; fonti?: number; interpelli: Interpello[] };
 
+export const ABIL_URL =
+  'https://raw.githubusercontent.com/mhadhbimedwork-crypto/Interpellati/main/data/abilitazioni.json';
+export type Abilitazione = { id: string; titolo: string; link: string; fonte: string; itp?: boolean; paginaItp?: boolean; visto?: string };
+export type AbilFeed = { aggiornato?: string; voci: Abilitazione[] };
+const K_ABIL = 'abil.cache';
+const K_ABIL_SEEN = 'abil.seen';
+
 const K_FEED = 'feed.cache';
 const K_SEEN = 'feed.seen';
 const K_PREFS = 'prefs';
@@ -100,6 +107,45 @@ export async function fetchFeed(): Promise<Feed> {
   return feed;
 }
 
+export async function loadCachedAbil(): Promise<AbilFeed | null> {
+  try {
+    const s = await AsyncStorage.getItem(K_ABIL);
+    return s ? (JSON.parse(s) as AbilFeed) : null;
+  } catch {
+    return null;
+  }
+}
+
+export async function fetchAbil(): Promise<AbilFeed> {
+  const res = await fetch(ABIL_URL + '?t=' + Date.now(), { headers: { 'Cache-Control': 'no-cache' } });
+  if (!res.ok) throw new Error('Elenco abilitazioni non raggiungibile (' + res.status + ')');
+  const d = (await res.json()) as AbilFeed;
+  if (!d || !Array.isArray(d.voci)) throw new Error('Dati non validi');
+  await AsyncStorage.setItem(K_ABIL, JSON.stringify(d));
+  return d;
+}
+
+/** Nuovi bandi di abilitazione mai visti (la prima volta non notifica: segna tutto come visto). */
+export async function takeNewAbil(d: AbilFeed): Promise<Abilitazione[]> {
+  let seen: string[] = [];
+  try {
+    seen = JSON.parse((await AsyncStorage.getItem(K_ABIL_SEEN)) || '[]');
+  } catch {}
+  const first = seen.length === 0;
+  const fresh = d.voci.filter((v) => !seen.includes(v.id));
+  await AsyncStorage.setItem(K_ABIL_SEEN, JSON.stringify(Array.from(new Set([...seen, ...d.voci.map((v) => v.id)])).slice(-1000)));
+  return first ? [] : fresh;
+}
+
+export async function notifyAbil(items: Abilitazione[]) {
+  for (const v of items.slice(0, 3)) {
+    await Notifications.scheduleNotificationAsync({
+      content: { title: 'Bando abilitazione' + (v.itp ? ' (ITP)' : ''), body: v.titolo.slice(0, 120) + ' — ' + v.fonte, data: { id: v.id } },
+      trigger: null,
+    });
+  }
+}
+
 /** Returns the open interpelli never notified before, and marks them seen. */
 export async function takeNew(feed: Feed, prefs?: Prefs): Promise<Interpello[]> {
   const p = prefs || (await loadPrefs());
@@ -140,6 +186,10 @@ TaskManager.defineTask(TASK, async () => {
     const feed = await fetchFeed();
     const fresh = await takeNew(feed);
     if (fresh.length) await notifyNew(fresh);
+    try {
+      const nuoviAb = await takeNewAbil(await fetchAbil());
+      if (nuoviAb.length) await notifyAbil(nuoviAb);
+    } catch {}
     return BackgroundTask.BackgroundTaskResult.Success;
   } catch {
     return BackgroundTask.BackgroundTaskResult.Failed;
