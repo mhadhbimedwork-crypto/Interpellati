@@ -341,7 +341,7 @@ export default function App() {
     <View style={[s.root, { paddingTop: topPad }]}>
       <ExpoStatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       <View style={s.header}>
-        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v1.3.1</Text></Text>
+        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v1.3.2</Text></Text>
         <Text style={s.who} numberOfLines={1}>
           {(prefs.classi.length ? prefs.classi.join(' · ') : 'Tutte le classi') + ' — ' + (prefs.regioni.length ? prefs.regioni.length + ' regioni' : 'tutta Italia')}
         </Text>

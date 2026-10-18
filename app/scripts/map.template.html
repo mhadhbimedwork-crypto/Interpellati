@@ -8,6 +8,8 @@ html,body,#m{height:100%;margin:0;padding:0;background:#cfe3f1}
 body.dark,body.dark #m{background:#27394a}
 #msg{position:absolute;left:50%;top:44px;transform:translateX(-50%);z-index:900;background:rgba(255,255,255,.95);color:#222;border-radius:8px;padding:5px 10px;font:12px -apple-system,Roboto,sans-serif;box-shadow:0 1px 4px rgba(0,0,0,.3);display:none;text-align:center;max-width:80%}
 body.dark #msg{background:rgba(24,28,34,.95);color:#e6e9ee}
+.leaflet-control-layers-toggle{background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linejoin='round'%3E%3Cpath d='M12 3 2 8l10 5 10-5z'/%3E%3Cpath d='m2 12 10 5 10-5'/%3E%3Cpath d='m2 16 10 5 10-5'/%3E%3C/svg%3E")!important;background-size:22px 22px!important;width:36px!important;height:36px!important}
+.leaflet-control-layers{font-size:14px}.leaflet-control-layers label{padding:4px 2px}
 .leaflet-container{font:13px -apple-system,Roboto,sans-serif}
 .dot{width:16px;height:16px;border-radius:50%;box-sizing:border-box;border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)}
 .dot.o{background:#1f9d55}.dot.s{background:#e08a00}.dot.x{background:#8a94a0}
@@ -28,7 +30,7 @@ body.dark #cnt{background:rgba(24,28,34,.92);color:#e6e9ee}
 <body>
 <div id="m"></div>
 <div id="cnt">0</div>
-<div id="msg">Mappa stradale non disponibile (serve internet): confini delle province sempre visibili.</div>
+<div id="msg">Mappa stradale non caricata (serve internet). Puoi cambiare mappa con il pulsante in alto a sinistra: i confini delle province sono sempre visibili.</div>
 <div id="leg"><i style="background:#1f9d55"></i>aperto <i style="background:#e08a00;margin-left:6px"></i>scade entro 48 h<br><i style="border:2px solid #555;background:#fff"></i>posizione precisa &nbsp;<i style="border:2px dashed #555"></i>solo provincia</div>
 <script>/*LEAFLET_JS*/</script>
 <script>/*CLUSTER_JS*/</script>
@@ -40,25 +42,33 @@ var COL={o:'#1f9d55',s:'#e08a00',x:'#8a94a0'};
 function post(o){var s=JSON.stringify(o);if(window.ReactNativeWebView)window.ReactNativeWebView.postMessage(s);else if(window.__out)window.__out(o);}
 var map=L.map('m',{zoomControl:true,attributionControl:true,zoomSnap:0.5,minZoom:4,maxZoom:18}).setView([42.2,12.6],6);
 map.attributionControl.setPrefix(false);
-var dark=false,tiles=null,base=null,okTiles=0,errTiles=0,usaOsm=false;
-function drawBase(){
-  if(base)map.removeLayer(base);
-  base=L.layerGroup();
-  var st={color:dark?'#8fa3b5':'#7a8a99',weight:0.6,fillColor:dark?'#3b4a58':'#f4f1e8',fillOpacity:1,interactive:false,smoothFactor:1};
-  ITALIA.forEach(function(r){L.polygon(r,st).addTo(base);});
-  base.addTo(map);base.eachLayer(function(l){if(l.bringToBack)l.bringToBack();});
+var dark=false,manual=false,okTiles=0,errTiles=0,cur=null,L2={};
+var stFill={color:'#7a8a99',weight:0.6,fillColor:'#f4f1e8',fillOpacity:1,interactive:false,smoothFactor:1};
+var offline=L.layerGroup(ITALIA.map(function(r){return L.polygon(r,stFill);}));
+// contorni delle province sempre visibili sopra qualsiasi mappa
+var contorni=L.layerGroup(ITALIA.map(function(r){return L.polygon(r,{color:'#5b6b7a',weight:0.7,opacity:0.75,fill:false,interactive:false,smoothFactor:1.2});})).addTo(map);
+function tl(url,o){o=o||{};o.maxZoom=19;o.crossOrigin=false;return L.tileLayer(url,o);}
+var ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/';
+L2['Strade']=tl(ESRI+'World_Street_Map/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles © Esri'});
+L2['Scura']=tl(ESRI+'Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxNativeZoom:16,attribution:'Tiles © Esri'});
+L2['OpenStreetMap']=tl('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'});
+L2['Solo province (offline)']=offline;
+var order=['Strade','Scura','OpenStreetMap','Solo province (offline)'];
+var ctl=L.control.layers(L2,null,{position:'topleft',collapsed:true}).addTo(map);
+function msg(on){document.getElementById('msg').style.display=on?'block':'none';}
+function use(name,byUser){
+  if(cur&&map.hasLayer(L2[cur]))map.removeLayer(L2[cur]);
+  cur=name;okTiles=0;errTiles=0;L2[name].addTo(map);if(L2[name].bringToBack)L2[name].bringToBack();msg(false);
+  if(L2[name].on&&L2[name]._url){
+    L2[name].off('tileload tileerror');
+    L2[name].on('tileload',function(){okTiles++;msg(false);});
+    L2[name].on('tileerror',function(){errTiles++;if(!byUser&&!manual&&errTiles>=6&&!okTiles){var i=order.indexOf(name);use(order[Math.min(i+1,order.length-1)],false);msg(true);}});
+  }
 }
-function setTiles(){
-  if(tiles)map.removeLayer(tiles);
-  var url=usaOsm?'https://tile.openstreetmap.org/{z}/{x}/{y}.png':'https://{s}.basemaps.cartocdn.com/'+(dark?'dark_all':'light_all')+'/{z}/{x}/{y}{r}.png';
-  tiles=L.tileLayer(url,{subdomains:'abcd',maxZoom:19,attribution:'© OpenStreetMap'+(usaOsm?'':', © CARTO'),crossOrigin:false});
-  tiles.on('tileload',function(){okTiles++;document.getElementById('msg').style.display='none';if(base&&map.hasLayer(base))map.removeLayer(base);});
-  tiles.on('tileerror',function(){errTiles++;if(errTiles===6&&!okTiles&&!usaOsm){usaOsm=true;setTiles();}});
-  tiles.addTo(map);
-}
-setTimeout(function(){if(!okTiles){document.getElementById('msg').style.display='block';if(base&&!map.hasLayer(base))base.addTo(map);}},6000);
-window.setTheme=function(d){dark=!!d;document.body.className=dark?'dark':'';drawBase();okTiles=0;setTiles();};
-drawBase();setTiles();
+map.on('baselayerchange',function(e){var n=e.name;if(n!==cur){manual=true;cur=n;okTiles=0;errTiles=0;}});
+window.setTheme=function(d){d=!!d;if(d===dark&&cur)return;dark=d;document.body.className=dark?'dark':'';if(!manual)use(dark?'Scura':'Strade',false);};
+window.setTheme(false);
+setTimeout(function(){if(!okTiles&&cur!=='Solo province (offline)')msg(true);},7000);
 
 function donut(o,s,x){
   var t=o+s+x,r=17,c=2*Math.PI*r,off=0,seg='';
