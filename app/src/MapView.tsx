@@ -26,6 +26,8 @@ export function MappaInterpelli({
   const ref = useRef<WebView>(null);
   const [ready, setReady] = useState(false);
   const [late, setLate] = useState(false);
+  const [errore, setErrore] = useState('');
+  const [chiave, setChiave] = useState(0);
   const ultimoFit = useRef('');
 
   const punti = useMemo<Pt[]>(
@@ -53,6 +55,7 @@ export function MappaInterpelli({
       const m = JSON.parse(e.nativeEvent.data);
       if (m.type === 'ready') setReady(true);
       else if (m.type === 'select') onSelect(m.ids || []);
+      else if (m.type === 'err') setErrore(String(m.m || 'errore'));
       else if (m.type === 'view') onView(m.ids || [], m.n || 0);
     } catch {
       /* messaggio non valido: ignoro */
@@ -62,7 +65,11 @@ export function MappaInterpelli({
   return (
     <View style={st.box}>
       <WebView
+        key={chiave}
         ref={ref}
+        onError={(e) => setErrore('WebView: ' + (e.nativeEvent?.description || 'errore'))}
+        onRenderProcessGone={() => { setReady(false); setErrore('La mappa si è fermata: riprovo'); setChiave((k) => k + 1); }}
+        onContentProcessDidTerminate={() => setChiave((k) => k + 1)}
         originWhitelist={['*']}
         source={{ html: MAP_HTML, baseUrl: 'https://interpellati.local/' }}
         onMessage={onMessage}
@@ -75,10 +82,13 @@ export function MappaInterpelli({
         overScrollMode="never"
         style={{ flex: 1, backgroundColor: dark ? '#27394a' : '#cfe3f1' }}
       />
+      {ready && errore ? (
+        <View style={st.err} pointerEvents="none"><Text style={{ color: '#fff', fontSize: 11 }}>{errore}</Text></View>
+      ) : null}
       {!ready ? (
         <View style={st.over} pointerEvents="none">
           <ActivityIndicator />
-          {late ? <Text style={{ color: muted, marginTop: 8 }}>La mappa si sta caricando…</Text> : null}
+          {late ? <Text style={{ color: muted, marginTop: 8 }}>La mappa si sta caricando…{errore ? ' ' + errore : ''}</Text> : null}
         </View>
       ) : null}
     </View>
@@ -87,5 +97,6 @@ export function MappaInterpelli({
 
 const st = StyleSheet.create({
   box: { flex: 1, overflow: 'hidden' },
+  err: { position: 'absolute', left: 8, right: 8, top: 8, backgroundColor: 'rgba(160,30,30,.9)', borderRadius: 6, padding: 6 },
   over: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' },
 });

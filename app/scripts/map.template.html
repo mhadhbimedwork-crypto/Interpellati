@@ -34,6 +34,7 @@ body.dark #cnt{background:rgba(24,28,34,.92);color:#e6e9ee}
 <script>/*CLUSTER_JS*/</script>
 <script>var ITALIA=/*ITALIA*/;</script>
 <script>
+window.onerror=function(m,s,l){try{if(window.ReactNativeWebView)window.ReactNativeWebView.postMessage(JSON.stringify({type:'err',m:String(m)+' @'+l}));}catch(e){}};
 (function(){
 var COL={o:'#1f9d55',s:'#e08a00',x:'#8a94a0'};
 function post(o){var s=JSON.stringify(o);if(window.ReactNativeWebView)window.ReactNativeWebView.postMessage(s);else if(window.__out)window.__out(o);}
@@ -68,13 +69,13 @@ function donut(o,s,x){
   });
   return '<div class="cl"><svg width="46" height="46" viewBox="0 0 46 46"><circle cx="23" cy="23" r="20" fill="'+(dark?'#14181d':'#fff')+'" opacity=".92"/>'+seg+'</svg><b>'+t+'</b></div>';
 }
-var group=L.markerClusterGroup({maxClusterRadius:52,showCoverageOnHover:false,spiderfyOnMaxZoom:true,zoomToBoundsOnClick:false,
+var group=L.markerClusterGroup({chunkedLoading:true,chunkInterval:80,chunkDelay:20,removeOutsideVisibleBounds:true,animate:false,maxClusterRadius:60,showCoverageOnHover:false,spiderfyOnMaxZoom:true,zoomToBoundsOnClick:false,
   iconCreateFunction:function(cl){
     var o=0,s=0,x=0;cl.getAllChildMarkers().forEach(function(m){var k=m.options.st;if(k==='s')s++;else if(k==='x')x++;else o++;});
     return L.divIcon({html:donut(o,s,x),className:'',iconSize:[46,46]});
   }});
 map.addLayer(group);
-var byId={},selected=null;
+var byId={},selected=null,loadGen=0;
 group.on('clusterclick',function(e){
   var cl=e.layer,b=cl.getBounds(),ch=cl.getAllChildMarkers();
   if(b.getNorthEast().distanceTo(b.getSouthWest())<8){post({type:'select',ids:ch.slice(0,80).map(function(m){return m.options.id;})});}
@@ -89,15 +90,18 @@ function view(){
 map.on('moveend',view);
 window.setData=function(arr,fit){
   group.clearLayers();byId={};
-  var pts=[];
+  var pts=[],ms=[];
   arr.forEach(function(d){
     var ic=L.divIcon({className:'',html:'<div class="dot '+d.st+' '+d.g+'"></div>',iconSize:[18,18]});
     var m=L.marker([d.lat,d.lon],{icon:ic,id:d.id,st:d.st,keyboard:false});
     m.on('click',function(){post({type:'select',ids:[d.id]});});
-    byId[d.id]=m;group.addLayer(m);pts.push([d.lat,d.lon]);
+    byId[d.id]=m;ms.push(m);pts.push([d.lat,d.lon]);
   });
   if(fit&&pts.length){map.fitBounds(pts,{padding:[30,30],maxZoom:11,animate:false});}
-  view();
+  var gen=++loadGen;
+  group.addLayers(ms);
+  // con il caricamento a blocchi i marker arrivano un po' alla volta: aggiorno il conteggio alla fine
+  var tries=0;(function wait(){if(gen!==loadGen)return;if(group.getLayers().length>=ms.length||++tries>200){view();}else setTimeout(wait,100);})();
 };
 window.focusId=function(id){var m=byId[id];if(!m)return;map.setView(m.getLatLng(),Math.max(map.getZoom(),15),{animate:true});};
 post({type:'ready'});
