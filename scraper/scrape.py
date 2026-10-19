@@ -129,6 +129,7 @@ class Fetcher:
         self.robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
         self.last: dict[str, float] = {}
         self.pages = 0
+        self.errs: dict[str, str] = {}
 
     def allowed(self, url: str) -> bool:
         host = urlparse(url).scheme + "://" + urlparse(url).netloc
@@ -158,12 +159,14 @@ class Fetcher:
             r = self.s.get(url, timeout=25)
             self.last[host] = time.time()
             if r.status_code != 200:
+                self.errs[url] = f"HTTP {r.status_code}"
                 log(f"  HTTP {r.status_code}: {url}")
                 return None
             r.encoding = r.apparent_encoding or r.encoding
             self.pages += 1
             return r.text
         except requests.RequestException as e:
+            self.errs[url] = type(e).__name__
             log("  errore:", url, type(e).__name__)
             return None
 
@@ -324,7 +327,7 @@ def scan_office(f: Fetcher, src: dict, since: date) -> list[dict]:
     return scan_html(f, src, since, html)
 
 
-def scan_html(f: Fetcher, src: dict, since: date, html: str) -> list[dict]:
+def scan_html(f: Fetcher, src: dict, since: date, html: str, undated: bool = False) -> list[dict]:
     soup = BeautifulSoup(html, "html.parser")
     out = []
     seen = set()
@@ -342,10 +345,12 @@ def scan_html(f: Fetcher, src: dict, since: date, html: str) -> list[dict]:
         seen.add(href)
         d = find_date(href) or find_date(txt) or find_date(ctx)
         log(f"  [{src['nome']}] {cls} data={d} :: {txt[:120]} :: {href}")
-        if not d or d < since or d > date.today() + timedelta(days=1):
+        if d and (d < since or d > date.today() + timedelta(days=1)):
+            continue
+        if not d and not (undated and not href.lower().split("?")[0].endswith((".pdf", ".doc", ".docx"))):
             continue
         item = {
-            "classi": cls, "scuola": (txt or ctx)[:140], "pubblicato": d.isoformat(), "link": href,
+            "classi": cls, "scuola": (txt or ctx)[:140], "pubblicato": d.isoformat() if d else "", "link": href,
             "fonte": src["nome"], "_prov": prov or find_province(hay),
         }
         p = item["_prov"]
@@ -530,6 +535,7 @@ def main() -> int:
         found += scan_office(f, src, since)
     try:
         import sicilia
+        sicilia.KNOWN = {i.get('link') for i in items.values()}
         found += sicilia.scansiona_sicilia(sys.modules[__name__], f, since)
     except Exception as e:  # la Sicilia non deve mai bloccare il resto della scansione
         log("  Sicilia: errore", type(e).__name__, str(e)[:120])

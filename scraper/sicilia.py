@@ -30,6 +30,7 @@ PREFISSI = ("AG", "CL", "CT", "EN", "ME", "PA", "RG", "SR", "TP")
 SOTTO_RE = re.compile(r"interpell|supplenz|messa\s+a\s+disposizione|\bmad\b|albo|bandi|avvis|graduatori|reclutament|personale", re.I)
 MAX_SOTTO = 4
 THREADS = 12
+KNOWN: set[str] = set()  # link gia' in archivio: non vanno riletti per scoprirne la data
 MAX_PER_RUN = 220  # scuole per esecuzione: giro completo della Sicilia in poche ore, senza martellare i siti
 
 
@@ -37,9 +38,17 @@ def _sito(v: str) -> str | None:
     v = (v or "").strip()
     if not v or v.upper().startswith(("NON", "N.D", "ND", "-")) or " " in v or "." not in v:
         return None
+    v = re.sub(r"^(https?)[:;]?/{1,3}", r"\1://", v, flags=re.I)
     if not v.lower().startswith("http"):
         v = "https://" + v
-    return v.rstrip("/") + "/"
+    v = v.replace("http://http", "http://").replace("https://http", "http")
+    m = re.match(r"(https?://[^/]+)(/.*)?$", v, re.I)
+    if not m:
+        return None
+    path = m.group(2) or "/"
+    if re.search(r"/(index|home)\.(php|html?|aspx?)$", path, re.I):
+        path = "/"
+    return m.group(1).lower() + path.rstrip("/") + "/"
 
 
 def scarica_elenco(log) -> dict:
@@ -108,6 +117,32 @@ def _stesso_sito(a: str, b: str) -> bool:
     return ha == hb
 
 
+def data_pagina(S, f, url: str):
+    """Data di pubblicazione di un avviso senza data nel titolo: metadati della pagina (article:published_time, <time>)."""
+    html = f.get(url)
+    if not html:
+        return None
+    soup = BeautifulSoup(html, "html.parser")
+    cand = []
+    for m in soup.find_all("meta", attrs={"property": re.compile("published_time|date", re.I)}):
+        cand.append(m.get("content") or "")
+    for t in soup.find_all("time"):
+        cand.append(t.get("datetime") or t.get_text(" ", strip=True))
+    body = soup.find("article") or soup.find("main") or soup
+    cand.append(" ".join(body.get_text(" ", strip=True).split())[:400])
+    for c in cand:
+        m = re.match(r"(\d{4})-(\d{2})-(\d{2})", c.strip())
+        try:
+            if m:
+                return date(int(m[1]), int(m[2]), int(m[3]))
+        except ValueError:
+            pass
+        d = S.find_date(c)
+        if d:
+            return d
+    return None
+
+
 def scansiona_scuola(S, f, cod: str, sc: dict, since: date) -> tuple[list[dict], dict]:
     sito = sc["sito"]
     rep = {"sito": sito, "ok": False, "pagine": 0, "trovati": 0}
@@ -117,7 +152,16 @@ def scansiona_scuola(S, f, cod: str, sc: dict, since: date) -> tuple[list[dict],
     prima = f.pages
     html = f.get(sito)
     if not html:
-        rep["err"] = "home non raggiungibile"
+        # varianti: senza/con www, poi http
+        host = urlparse(sito).netloc.lower()
+        alt = host[4:] if host.startswith("www.") else "www." + host
+        for cand in (sito.replace(urlparse(sito).netloc, alt), "http://" + host + "/"):
+            html = f.get(cand)
+            if html:
+                sito = cand
+                break
+    if not html:
+        rep["err"] = f.errs.get(rep["sito"], "non raggiungibile")
         return out, rep
     rep["ok"] = True
     sigla = cod[:2]
@@ -138,11 +182,18 @@ def scansiona_scuola(S, f, cod: str, sc: dict, since: date) -> tuple[list[dict],
     for url in pagine:
         src = {"nome": f"Sito scuola {sc['nome'][:40]}", "provincia": prov, "url": url}
         try:
-            trovati = S.scan_office(f, src, since) if url != sito else S.scan_html(f, src, since, html)
+            trovati = S.scan_html(f, src, since, html if url == sito else (f.get(url) or ""), undated=True)
         except Exception as e:  # una scuola con HTML strano non deve fermare le altre
             rep["err"] = type(e).__name__
             continue
         for it in trovati:
+            if not it.get("pubblicato"):
+                if it["link"] in KNOWN:
+                    continue
+                d = data_pagina(S, f, it["link"])
+                if not d or d < since:
+                    continue
+                it["pubblicato"] = d.isoformat()
             it["codiceScuola"] = cod
             it["fonte"] = "Sito scuola"
             if sc.get("comune"):
