@@ -89,8 +89,8 @@ def main() -> int:
 
     # indirizzi di studio per scuola (dataset alunni/classi per indirizzo)
     ind: dict[str, set[str]] = defaultdict(set)
-    for nome in ("ALUCORSOINDIRIZZO", "ALUCORSOINDIRIZZOSTAT"):
-        anno, rows = scarica(nome, ["20252620250901", "20242520240901", "20232420230901"])
+    for nome in ("ALUCORSOINDCLASTA",):
+        anno, rows = scarica(nome, ["20242520250831", "20232420240831", "20252620260831"])
         if rows:
             log("  colonne indirizzi:", ",".join(rows[0].keys()))
             for r in rows:
