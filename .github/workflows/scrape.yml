@@ -1,7 +1,8 @@
 name: Scansione interpelli
 on:
   schedule:
-    - cron: "*/30 4-20 * * *"   # ogni 30 minuti, circa 6:00-22:30 ora italiana
+    - cron: "7,37 4-20 * * *"   # ogni 30 minuti (minuti dispari: GitHub salta meno), circa 6:00-22:30 ora italiana
+    - cron: "22,52 4-20 * * *"  # secondo giro sfalsato: GitHub scarta spesso le esecuzioni pianificate
   workflow_dispatch:
 permissions:
   contents: write
