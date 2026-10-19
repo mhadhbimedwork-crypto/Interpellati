@@ -101,6 +101,9 @@ def main() -> int:
             log(f"  scuole con indirizzi noti: {len(ind)}")
             break
 
+    log("Tipologie II grado:", dict(Counter(col(r, "DESCRIZIONETIPOLOGIAGRADOISTRUZIONESCUOLA") for r in righe if re.search(r"II|SUPERIORE|TECNIC|PROFESS|LICE|MAGISTR|ARTIST", col(r, "DESCRIZIONETIPOLOGIAGRADOISTRUZIONESCUOLA"), re.I))))
+    log("Caratteristiche:", dict(Counter(col(r, "DESCRIZIONECARATTERISTICASCUOLA") for r in righe).most_common(15)))
+
     # interpelli B015/B017 gia' visti dallo scraper
     avvisi: dict[str, list[dict]] = defaultdict(list)
     try:
