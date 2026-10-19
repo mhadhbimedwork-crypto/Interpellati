@@ -103,6 +103,8 @@ def carica_elenco(log) -> dict:
         try:
             d = json.loads(ELENCO.read_text("utf-8"))
             if d.get("scuole") and (time.time() - d.get("ts", 0)) < 30 * 86400:
+                for v in d["scuole"].values():
+                    v["sito"] = _sito(v.get("sito") or "")  # ri-normalizza (correzioni successive)
                 return d["scuole"]
         except ValueError:
             pass
