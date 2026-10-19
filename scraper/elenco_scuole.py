@@ -62,6 +62,7 @@ def col(row: dict, *chiavi: str) -> str:
 
 B015 = re.compile(r"elettronic|elettrotecnic|elettric|automazion|telecomunicazion|manutenzione e assistenza|industria e artigianato|energia|domotic|impianti", re.I)
 B017 = re.compile(r"meccanic|meccatronic|energia|manutenzione e assistenza|industria e artigianato|produzioni industriali|trasporti e logistica|costruzione del mezzo|conduzione del mezzo|mezzi di trasporto", re.I)
+NOME_TEC2 = re.compile(r"tecnic|professional|industri|ipsia|ipia|\bitis?\b|\bitt\b|meccan|elettr|tecnolog|artigian|manutenz|energ", re.I)
 TECPRO = re.compile(r"tecnic|professional", re.I)
 NOME_TEC = re.compile(r"\b(ITIS|ITI|IPSIA|IPIA|ITT|ITE|IIS|ISIS|IS|I\.?T\.?I\.?S?\.?|I\.?P\.?S\.?I\.?A\.?|TECNIC|PROFESSIONAL|INDUSTRIAL|ARTIGIANAT)\b", re.I)
 
@@ -89,7 +90,7 @@ def main() -> int:
 
     # indirizzi di studio per scuola (dataset alunni/classi per indirizzo)
     ind: dict[str, set[str]] = defaultdict(set)
-    for nome in ("ALUCORSOINDCLASTA",):
+    for nome in ():
         anno, rows = scarica(nome, ["20242520250831", "20232420240831", "20252620260831"])
         if rows:
             log("  colonne indirizzi:", ",".join(rows[0].keys()))
@@ -114,6 +115,8 @@ def main() -> int:
         pass
 
     # una riga per scuola con indirizzi tecnico-professionali (secondaria II grado)
+    con_industriale = {col(r, "CODICEISTITUTORIFERIMENTO").upper() for r in righe
+                       if "INDUSTRIALE" in col(r, "DESCRIZIONETIPOLOGIAGRADOISTRUZIONESCUOLA").upper()}
     out = []
     for r in righe:
         cod = col(r, "CODICESCUOLA").upper()
@@ -127,17 +130,27 @@ def main() -> int:
         if B017.search(testo_ind):
             cl.append("B017")
         da_verificare = False
+        motivo = ""
         if not cl:
-            sec2 = re.search(r"II\s*GRADO|SECONDARIA\s+DI\s+II|TECNIC|PROFESSIONAL|SUPERIORE", tip, re.I)
-            if (sec2 and TECPRO.search(tip + " " + nome)) or (sec2 and NOME_TEC.search(nome)):
-                cl, da_verificare = ["B015?", "B017?"], True
+            T = tip.upper()
+            if "INDUSTRIALE" in T:
+                cl, motivo = ["B015", "B017"], "Istituto tecnico industriale"
+            elif "TECNICO ECONOMICO E TECNOLOGICO" in T or "NAUTICO" in T or "AERONAUTICO" in T:
+                cl, da_verificare, motivo = ["B015?", "B017?"], True, tip.title()
+            elif "SUPERIORE" in T:
+                if rif in con_industriale:
+                    cl, motivo = ["B015", "B017"], "Istituto superiore con sede tecnico industriale"
+                elif NOME_TEC2.search(nome + " " + col(r, "DENOMINAZIONEISTITUTORIFERIMENTO")):
+                    cl, da_verificare, motivo = ["B015?", "B017?"], True, "Istituto superiore, nome tecnico/professionale"
         if not cl:
             continue
+        if not motivo:
+            motivo = "Indirizzi di studio"
         av = avvisi.get(cod, []) + avvisi.get(rif, [])
         out.append({
             "Regione": col(r, "REGIONE").title(), "Provincia": col(r, "PROVINCIA").title(),
             "Comune": col(r, "DESCRIZIONECOMUNE").title(), "Scuola": nome, "Codice": cod,
-            "Tipologia": tip.title(), "Classi": "/".join(cl), "Verifica": "da verificare" if da_verificare else "indirizzi confermati",
+            "Tipologia": tip.title(), "Classi": "/".join(cl), "Verifica": "da verificare" if da_verificare else "probabile", "Motivo": motivo,
             "Indirizzi di studio": testo_ind[:600], "Indirizzo": col(r, "INDIRIZZOSCUOLA"), "CAP": col(r, "CAPSCUOLA"),
             "Email": col(r, "INDIRIZZOEMAILSCUOLA").lower(), "PEC": col(r, "INDIRIZZOPECSCUOLA").lower(),
             "Sito": sito(col(r, "SITOWEBSCUOLA")), "Istituto di riferimento": col(r, "DENOMINAZIONEISTITUTORIFERIMENTO"),
@@ -146,13 +159,13 @@ def main() -> int:
             "Link ultimo": next((a["link"] for a in sorted(av, key=lambda a: a.get("pubblicato", ""), reverse=True)), ""),
         })
     out.sort(key=lambda x: (x["Regione"], x["Provincia"], x["Comune"], x["Scuola"]))
-    log(f"Scuole in elenco: {len(out)} (confermate da indirizzi: {sum(1 for x in out if x['Verifica'].startswith('ind'))})")
+    log(f"Scuole in elenco: {len(out)} (probabili: {sum(1 for x in out if x['Verifica']=='probabile')})")
     log("Per regione:", dict(Counter(x["Regione"] for x in out)))
 
-    cols = ["Regione", "Provincia", "Comune", "Scuola", "Codice", "Classi", "Verifica", "Tipologia", "Indirizzi di studio",
+    cols = ["Regione", "Provincia", "Comune", "Scuola", "Codice", "Classi", "Verifica", "Motivo", "Tipologia",
             "Indirizzo", "CAP", "Email", "PEC", "Sito", "Istituto di riferimento",
             "Interpelli B015/B017 visti", "Ultimo interpello", "Link ultimo"]
-    larg = [16, 14, 18, 38, 12, 11, 18, 22, 50, 30, 7, 30, 30, 34, 30, 12, 12, 40]
+    larg = [16, 14, 18, 38, 12, 11, 14, 34, 22, 30, 7, 30, 30, 34, 30, 12, 12, 40]
     testa = PatternFill("solid", fgColor="1F4E78")
 
     def foglio(ws, rows):
@@ -184,10 +197,10 @@ def main() -> int:
     ws.title = "Riepilogo"
     ws.append(["Elenco scuole per classi di concorso B015 / B017"])
     ws["A1"].font = Font(bold=True, size=14)
-    ws.append(["Fonte: open data MIM (anagrafica scuole statali + indirizzi di studio). 'indirizzi confermati' = la scuola ha un indirizzo elettrico/elettronico/meccanico; 'da verificare' = istituto tecnico/professionale senza dato sugli indirizzi."])
+    ws.append(["Fonte: open data MIM (anagrafica scuole statali + indirizzi di studio). 'probabile' = istituto tecnico industriale (o istituto superiore con sede tecnico industriale); 'da verificare' = istituto con nome o tipologia tecnico/professionale ma senza conferma sugli indirizzi (il MIM non pubblica gli indirizzi per scuola)."])
     ws.append(["Le classi indicano dove i laboratori sono plausibili: la reale disponibilita' di cattedre/ore si vede solo negli interpelli e nelle MAD."])
     ws.append([])
-    ws.append(["Regione", "Scuole", "di cui confermate", "Province", "Comuni", "Con interpelli B015/B017 visti"])
+    ws.append(["Regione", "Scuole", "di cui probabili", "Province", "Comuni", "Con interpelli B015/B017 visti"])
     for c in ws[5]:
         c.font = Font(bold=True, color="FFFFFF")
         c.fill = testa
@@ -196,9 +209,9 @@ def main() -> int:
         per[x["Regione"]].append(x)
     for reg in sorted(per):
         v = per[reg]
-        ws.append([reg, len(v), sum(1 for x in v if x["Verifica"].startswith("ind")), len({x["Provincia"] for x in v}),
+        ws.append([reg, len(v), sum(1 for x in v if x["Verifica"]=="probabile"), len({x["Provincia"] for x in v}),
                    len({x["Comune"] for x in v}), sum(1 for x in v if x["Interpelli B015/B017 visti"])])
-    ws.append(["TOTALE", len(out), sum(1 for x in out if x["Verifica"].startswith("ind")), "", "", sum(1 for x in out if x["Interpelli B015/B017 visti"])])
+    ws.append(["TOTALE", len(out), sum(1 for x in out if x["Verifica"]=="probabile"), "", "", sum(1 for x in out if x["Interpelli B015/B017 visti"])])
     for c in ws[ws.max_row]:
         c.font = Font(bold=True)
     for i, w in enumerate([22, 10, 18, 10, 10, 28], 1):
