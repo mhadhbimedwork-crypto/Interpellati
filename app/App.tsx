@@ -341,7 +341,7 @@ export default function App() {
     <View style={[s.root, { paddingTop: topPad }]}>
       <ExpoStatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       <View style={s.header}>
-        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v1.3.2</Text></Text>
+        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v1.4.0</Text></Text>
         <Text style={s.who} numberOfLines={1}>
           {(prefs.classi.length ? prefs.classi.join(' · ') : 'Tutte le classi') + ' — ' + (prefs.regioni.length ? prefs.regioni.length + ' regioni' : 'tutta Italia')}
         </Text>
@@ -383,6 +383,7 @@ export default function App() {
                   : feed?.aggiornato
                     ? 'Dati aggiornati ' + new Date(feed.aggiornato).toLocaleString('it-IT')
                     : loading ? 'Carico gli interpelli…' : ''}
+                {feed?.sicilia ? '\nSicilia: ' + feed.sicilia.letti + ' siti scolastici letti su ' + feed.sicilia.conSito + ' (' + feed.sicilia.istituti + ' istituti) + ' + feed.sicilia.uffici + ' uffici' : ''}
                 {bg === false ? ' · controllo in background non disponibile su questo telefono' : ''}
               </Text>
               <Chips s={s} value={soloMie ? 'mie' : 'tutto'} set={(v) => { setSoloMie(v === 'mie'); setFClasse('tutte'); }} opts={[['mie', 'Le mie preferenze'], ['tutto', 'Tutte le classi e regioni']]} />

@@ -599,7 +599,14 @@ def main() -> int:
         if i.get("scadenza") and i["scadenza"] < ieri:
             continue
         leggero.append({k: v for k, v in i.items() if k not in ("letto", "trovato")})
-    FEED.write_text(json.dumps({"aggiornato": now, "fonti": f.pages, "interpelli": leggero}, ensure_ascii=False, separators=(",", ":")) + "\n", "utf-8")
+    sic = None
+    try:
+        rs = json.loads((ROOT / "data" / "sicilia_report.json").read_text("utf-8"))
+        sic = {"istituti": rs["istituti_sicilia"], "conSito": rs["con_sito"], "letti": rs["siti_letti_ok"],
+               "errori": rs["siti_con_errore"], "uffici": sum(1 for u in sources["uffici"] if "sicilia" in u["url"] or "Caltanissetta" in u["nome"])}
+    except (OSError, ValueError, KeyError):
+        pass
+    FEED.write_text(json.dumps({"aggiornato": now, "fonti": f.pages, "sicilia": sic, "interpelli": leggero}, ensure_ascii=False, separators=(",", ":")) + "\n", "utf-8")
     log(f"Feed app: {len(leggero)} avvisi")
     log(f"Pagine lette: {f.pages} · trovati {len(found)} · nuovi {len(added)} · totale {len(keep)}")
     for i in added:

@@ -39,7 +39,7 @@ export type Interpello = {
   indirizzo?: string;
   lettoDa?: string;
 };
-export type Feed = { aggiornato?: string; fonti?: number; interpelli: Interpello[] };
+export type Feed = { aggiornato?: string; fonti?: number; sicilia?: { istituti: number; conSito: number; letti: number; errori: number; uffici: number } | null; interpelli: Interpello[] };
 
 export const ABIL_URL =
   'https://raw.githubusercontent.com/mhadhbimedwork-crypto/Interpellati/main/data/abilitazioni.json';

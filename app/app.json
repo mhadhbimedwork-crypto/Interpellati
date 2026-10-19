@@ -2,7 +2,7 @@
   "expo": {
     "name": "Interpellati",
     "slug": "interpellati",
-    "version": "1.3.2",
+    "version": "1.4.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -15,10 +15,19 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "permissions": ["POST_NOTIFICATIONS", "RECEIVE_BOOT_COMPLETED"]
+      "permissions": [
+        "POST_NOTIFICATIONS",
+        "RECEIVE_BOOT_COMPLETED"
+      ]
     },
     "plugins": [
-      ["expo-notifications", { "color": "#1f5f8b", "defaultChannel": "default" }],
+      [
+        "expo-notifications",
+        {
+          "color": "#1f5f8b",
+          "defaultChannel": "default"
+        }
+      ],
       "expo-background-task"
     ]
   }
