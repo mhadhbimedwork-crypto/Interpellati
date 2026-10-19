@@ -6,3 +6,7 @@ app/dist/
 *.apk
 __pycache__/
 .DS_Store
+# Skipper — machine-local artifacts (hook scratch + derived index), never commit
+.claude/.skipper-*
+.skipper/*
+!.skipper/receipts/

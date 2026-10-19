@@ -321,6 +321,10 @@ def scan_office(f: Fetcher, src: dict, since: date) -> list[dict]:
     html = f.get(src["url"])
     if not html:
         return []
+    return scan_html(f, src, since, html)
+
+
+def scan_html(f: Fetcher, src: dict, since: date, html: str) -> list[dict]:
     soup = BeautifulSoup(html, "html.parser")
     out = []
     seen = set()
@@ -524,6 +528,11 @@ def main() -> int:
         found += scan_aggregator_day(f, today - timedelta(days=back))
     for src in sources["uffici"]:
         found += scan_office(f, src, since)
+    try:
+        import sicilia
+        found += sicilia.scansiona_sicilia(sys.modules[__name__], f, since)
+    except Exception as e:  # la Sicilia non deve mai bloccare il resto della scansione
+        log("  Sicilia: errore", type(e).__name__, str(e)[:120])
 
     now = datetime.now(TZ).isoformat(timespec="seconds")
     added = []
