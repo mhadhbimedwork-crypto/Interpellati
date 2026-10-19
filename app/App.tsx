@@ -381,7 +381,10 @@ export default function App() {
                 {error
                   ? 'Offline: ' + error + (feed ? ' · mostro gli ultimi dati salvati' : '')
                   : feed?.aggiornato
-                    ? 'Dati aggiornati ' + new Date(feed.aggiornato).toLocaleString('it-IT')
+                    ? 'Dati aggiornati ' + new Date(feed.aggiornato).toLocaleString('it-IT') +
+                      (Date.now() - new Date(feed.aggiornato).getTime() > 90 * 60 * 1000 && new Date().getHours() >= 7 && new Date().getHours() < 22
+                        ? ' ⚠ scansione in ritardo (oltre 90 min)'
+                        : '')
                     : loading ? 'Carico gli interpelli…' : ''}
                 {feed?.sicilia ? '\nSicilia: ' + feed.sicilia.letti + ' siti scolastici letti su ' + feed.sicilia.conSito + ' (' + feed.sicilia.istituti + ' istituti) + ' + feed.sicilia.uffici + ' uffici' : ''}
                 {bg === false ? ' · controllo in background non disponibile su questo telefono' : ''}
