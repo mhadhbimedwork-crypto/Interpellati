@@ -112,16 +112,22 @@ def main() -> int:
         cache_date = json.loads(dp.read_text("utf-8"))
     except (OSError, ValueError):
         cache_date = {}
-    budget_date = [200]
+    budget_date = [450]
     def lavoro(o):
         try:
             grezzi = uno(f, o, since)
+            per_ufficio = 30  # date lette per ufficio e per giro: nessun sito monopolizza il tempo
             for i in grezzi:
-                if forma_ok(i) and not i.get("pubblicato") and budget_date[0] > 0:
+                if not forma_ok(i) or i.get("pubblicato"):
+                    continue
+                if i["link"] not in cache_date:
+                    if per_ufficio <= 0 or budget_date[0] <= 0:
+                        continue
+                    per_ufficio -= 1
                     budget_date[0] -= 1
-                    dd = data_pagina(f, i["link"], cache_date)
-                    if dd and dd >= since.isoformat():
-                        i["pubblicato"] = dd
+                dd = data_pagina(f, i["link"], cache_date)
+                if dd and dd >= since.isoformat():
+                    i["pubblicato"] = dd
             r = [i for i in grezzi if valido(i)]
             stato[o["url"]] = {"grezzi": len(grezzi), "scartati": [i["link"][:110] for i in grezzi if not valido(i)][:4]}
             return o, r, None
