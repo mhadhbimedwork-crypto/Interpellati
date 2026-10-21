@@ -98,7 +98,26 @@ def scarica_elenco(log) -> dict:
     return scuole
 
 
+CORRETTI = ROOT / "data" / "sicilia_siti_corretti.json"
+
+
+def _applica_correzioni(sc: dict) -> dict:
+    """Siti recuperati da diagnosi_siti.py (dominio cambiato, www/http, .edu.it): hanno la precedenza sull'anagrafica."""
+    try:
+        fix = json.loads(CORRETTI.read_text("utf-8"))
+    except (OSError, ValueError):
+        return sc
+    for cod, url in fix.items():
+        if cod in sc and url:
+            sc[cod]["sito"] = _sito(url)
+    return sc
+
+
 def carica_elenco(log) -> dict:
+    return _applica_correzioni(_carica_elenco(log))
+
+
+def _carica_elenco(log) -> dict:
     if ELENCO.exists():
         try:
             d = json.loads(ELENCO.read_text("utf-8"))

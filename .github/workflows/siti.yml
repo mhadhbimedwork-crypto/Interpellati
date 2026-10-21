@@ -1,0 +1,35 @@
+name: Recupero siti scuole
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: siti
+jobs:
+  diagnosi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scraper/requirements.txt
+      - run: pip install -r scraper/requirements.txt
+      - run: python scraper/diagnosi_siti.py | tee diagnosi.log
+      - name: Salva
+        run: |
+          git config user.name "interpellati-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/sicilia_siti_corretti.json data/sicilia_diagnosi.json
+          git diff --cached --quiet && exit 0
+          git commit -m "dati: recupero siti scuole $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs origin main || { git rebase --abort; git fetch origin main; git reset --soft origin/main; git commit -qm "dati: recupero siti (ricomposto)" || true; }
+            git push && exit 0
+            sleep $((i*5))
+          done
+          exit 1
