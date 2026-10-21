@@ -2,7 +2,7 @@
 """Legge a turni gli uffici scolastici (USR/UST/ATP) di tutta Italia: homepage + pagine 'interpelli' collegate.
 Uso: python scraper/uffici.py <k> <n>  (turno k di n, in parallelo). Avvisi in data/scuole/uffici<k>_trovati.json"""
 from __future__ import annotations
-import json, sys, time
+import json, re, sys, time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -24,6 +24,19 @@ def pagine_interpelli(f, url: str, html: str) -> list[str]:
             if u not in out and u != url:
                 out.append(u)
     return out[:6]
+
+
+PAG_RX = re.compile(r"/(category|tag|argomento|argomenti|page|categoria|archivio|mese)(/|$)|[?&](cat|page|paged)=", re.I)
+
+
+def valido(it: dict) -> bool:
+    """Scarta indici, categorie e voci di menu: serve una data e un link a un avviso vero (documento o articolo)."""
+    if not it.get("pubblicato") or not it.get("link") or not it.get("classi"):
+        return False
+    path = it["link"].lower().split("#")[0]
+    if path.endswith((".pdf", ".doc", ".docx", ".odt")):
+        return True
+    return not PAG_RX.search(path) and len(path.rstrip("/").split("/")) > 4
 
 
 def uno(f, off: dict, since: date) -> list[dict]:
@@ -58,16 +71,25 @@ def main() -> int:
     since = date.today() - timedelta(days=10)
     t0 = time.time()
     trovati = []
+    stato = {}
+    def lavoro(o):
+        try:
+            r = [i for i in uno(f, o, since) if valido(i)]
+            return o, r, None
+        except Exception as e:  # noqa: BLE001
+            return o, [], type(e).__name__
     with ThreadPoolExecutor(10) as ex:
-        for r in ex.map(lambda o: uno(f, o, since), uff):
+        for o, r, err in ex.map(lavoro, uff):
             trovati += r
+            stato[o["url"]] = {"provincia": o.get("provincia"), "avvisi": len(r), "errore": err or f.errs.get(o["url"])}
     tp = D / "scuole" / f"uffici{k}_trovati.json"
     try:
         vecchi = json.loads(tp.read_text("utf-8"))
     except (OSError, ValueError):
         vecchi = []
     limite = (date.today() - timedelta(days=4)).isoformat()
-    per = {(i["link"], tuple(i["classi"])): i for i in vecchi if (i.get("_visto") or "") >= limite}
+    per = {(i["link"], tuple(i["classi"])): i for i in vecchi if (i.get("_visto") or "") >= limite and valido(i)}
+    (D / "scuole" / f"uffici{k}_stato.json").write_text(json.dumps(stato, ensure_ascii=False, indent=0) + "\n", "utf-8")
     ora = datetime.now().isoformat(timespec="seconds")
     for it in trovati:
         it["_visto"] = ora
