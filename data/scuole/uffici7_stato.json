@@ -6,13 +6,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://brescia.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Brescia",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://monza.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -26,6 +19,13 @@
 "provincia": "Perugia",
 "avvisi": 0,
 "errore": "HTTP 404"
+},
+"https://brescia.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Brescia",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://belluno.istruzioneveneto.gov.it/": {
 "grezzi": 1,
@@ -41,18 +41,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://me.usr.sicilia.it/": {
-"grezzi": 13,
-"scartati": [
-"https://me.usr.sicilia.it/i-c-n14-san-francesco-di-paola-interpello-nazionale-per-n01-supplenza-su-classe-di-c",
-"https://me.usr.sicilia.it/i-i-s-e-medi-barcellona-pozzo-di-gotto-avviso-di-interpello-nazionale-per-il-conferi",
-"https://me.usr.sicilia.it/istituto-comprensivo-n-3-patti-annullamento-in-autotutela-interpello-nazionale-prot-",
-"https://me.usr.sicilia.it/istituto-comprensivo-n-3-patti-interpello-nazionale-per-n-1-supplenza-su-classe-di-c"
-],
-"provincia": "Messina",
-"avvisi": 0,
-"errore": null
-},
 "https://varese.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -60,27 +48,21 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://fc.istruzioneer.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Forlì-Cesena",
-"avvisi": 0,
-"errore": null
-},
 "https://pc.istruzioneer.gov.it/": {
 "grezzi": 4,
-"scartati": [
-"https://ic1piacenza.edu.it/interpello-su-posto-di-tedesco-scuola-secondaria-di-primo-grado/"
-],
+"scartati": [],
 "provincia": "Piacenza",
-"avvisi": 3,
+"avvisi": 4,
 "errore": null
 },
-"https://www.csateramo.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Teramo",
-"avvisi": 0,
+"https://me.usr.sicilia.it/": {
+"grezzi": 13,
+"scartati": [
+"https://me.usr.sicilia.it/personale-docente-gae-decreto-rettifica-punteggio-totaro-patrizia/",
+"https://me.usr.sicilia.it/i-i-s-e-medi-barcellona-pozzo-di-gotto-avviso-di-interpello-nazionale-per-il-conferi"
+],
+"provincia": "Messina",
+"avvisi": 11,
 "errore": null
 },
 "http://www.usppesarourbino.it/category/interpelli/": {
@@ -95,16 +77,23 @@
 "avvisi": 1,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/interpelli/": {
-"grezzi": 24,
+"https://www.csateramo.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Teramo",
+"avvisi": 0,
+"errore": null
+},
+"https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
+"grezzi": 15,
 "scartati": [
-"https://cl-en.usr.sicilia.it/interpello-nazionale-per-supplenza-su-classe-di-concorso-a042-scienze-e-tecnologi",
-"https://cl-en.usr.sicilia.it/interpello-per-il-conferimento-di-una-supplenza-classe-di-concorso-ah56-i-c-f-pug",
-"https://cl-en.usr.sicilia.it/interpello-per-il-conferimento-di-una-supplenza-classe-di-concorso-ac56-i-c-don-l",
-"https://cl-en.usr.sicilia.it/interpello-per-il-conferimento-di-una-supplenza-classe-di-concorso-ab56/"
+"https://www.portaleargo.it/albopretorio/online/#/SC23359/atti/4707054",
+"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015",
+"https://www.portaleargo.it/albopretorio/online/#/SC22392/atti/4701043",
+"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1216&id_categoria_tmp=&ricerca=&ordinamento="
 ],
-"provincia": null,
-"avvisi": 1,
+"provincia": "Ravenna",
+"avvisi": 5,
 "errore": null
 },
 "https://www.istruzione.calabria.it/": {
@@ -114,23 +103,18 @@
 "avvisi": 0,
 "errore": null
 },
+"https://fc.istruzioneer.gov.it/": {
+"grezzi": 5,
+"scartati": [],
+"provincia": "Forlì-Cesena",
+"avvisi": 5,
+"errore": null
+},
 "https://www.istruzionegenova.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Genova",
 "avvisi": 0,
-"errore": null
-},
-"https://sr.usr.sicilia.it/": {
-"grezzi": 24,
-"scartati": [
-"mailto:?subject=Condiviso&body=Interpello Nazionale ai sensi dell’art. 14 c. 22 O.M. 27/2026. Avviso finalizza",
-"https://twitter.com/home?status=Interpello Nazionale ai sensi dell’art. 14 c. 22 O.M. 27/2026. Avviso finalizz",
-"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/gps/",
-"https://sr.usr.sicilia.it/category/news/"
-],
-"provincia": "Siracusa",
-"avvisi": 2,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/": {
@@ -140,14 +124,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
-"grezzi": 15,
-"scartati": [
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1216&id_categoria_tmp=&ricerca=&ordinamento=",
-"https://www.icconselice.edu.it/albo-online"
-],
-"provincia": "Ravenna",
-"avvisi": 13,
+"https://www.istruzionesavona.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Savona",
+"avvisi": 0,
 "errore": null
 },
 "https://treviso.istruzioneveneto.gov.it/": {
@@ -164,11 +145,13 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionesavona.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Savona",
-"avvisi": 0,
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 9,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 8,
 "errore": null
 },
 "https://www.regione.vda.it/": {
@@ -185,6 +168,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
 "https://www.ustli.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -192,19 +182,55 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 9,
+"https://cl-en.usr.sicilia.it/interpelli/": {
+"grezzi": 24,
 "scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+"https://cl-en.usr.sicilia.it/interpello-nazionale-per-supplenza-su-classe-di-concorso-a042-scienze-e-tecnologi",
+"https://cl-en.usr.sicilia.it/decreto-suddivisione-posti-di-sostegno-seconda-deroga-provincia-di-caltanissetta/",
+"mailto:?subject=Condiviso&body=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnolo",
+"https://twitter.com/home?status=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnol"
 ],
-"provincia": "Rovigo",
-"avvisi": 8,
+"provincia": null,
+"avvisi": 13,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
+"https://sr.usr.sicilia.it/": {
+"grezzi": 24,
+"scartati": [
+"mailto:?subject=Condiviso&body=Interpello Nazionale ai sensi dell’art. 14 c. 22 O.M. 27/2026. Avviso finalizza",
+"https://twitter.com/home?status=Interpello Nazionale ai sensi dell’art. 14 c. 22 O.M. 27/2026. Avviso finalizz",
+"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/gps/",
+"https://sr.usr.sicilia.it/category/news/"
+],
+"provincia": "Siracusa",
+"avvisi": 1,
+"errore": null
+},
+"https://www.istruzionematera.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Vicenza",
+"provincia": "Matera",
+"avvisi": 0,
+"errore": null
+},
+"https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Prato",
+"avvisi": 0,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 15,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 15,
+"errore": null
+},
+"https://www.uspascolipiceno.it/wordpress/interpelli/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Fermo",
 "avvisi": 0,
 "errore": null
 },
@@ -232,20 +258,6 @@
 "avvisi": 7,
 "errore": null
 },
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Prato",
-"avvisi": 0,
-"errore": null
-},
 "https://www.ust.fi.it/mese/interpelli/": {
 "grezzi": 40,
 "scartati": [
@@ -255,21 +267,7 @@
 "https://www.ust.fi.it/mese/interpelli/interpelli-infanzia/"
 ],
 "provincia": "Firenze",
-"avvisi": 1,
-"errore": null
-},
-"https://www.usptaranto.it/": {
-"grezzi": 15,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 15,
-"errore": null
-},
-"https://www.uspascolipiceno.it/wordpress/interpelli/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Fermo",
-"avvisi": 0,
+"avvisi": 2,
 "errore": null
 }
 }
