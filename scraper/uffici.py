@@ -29,14 +29,49 @@ def pagine_interpelli(f, url: str, html: str) -> list[str]:
 PAG_RX = re.compile(r"/(category|tag|argomento|argomenti|page|categoria|archivio|mese)(/|$)|[?&](cat|page|paged)=", re.I)
 
 
-def valido(it: dict) -> bool:
-    """Scarta indici, categorie e voci di menu: serve una data e un link a un avviso vero (documento o articolo)."""
-    if not it.get("pubblicato") or not it.get("link") or not it.get("classi"):
+FILE_EXT = (".pdf", ".doc", ".docx", ".odt", ".zip", ".rtf", ".xls", ".xlsx")
+
+
+def forma_ok(it: dict) -> bool:
+    """Link che sembra un avviso vero: un documento, oppure un articolo con titolo lungo (non indici, categorie, menu)."""
+    if not it.get("link") or not it.get("classi"):
         return False
-    path = it["link"].lower().split("#")[0]
-    if path.endswith((".pdf", ".doc", ".docx", ".odt")):
+    path = it["link"].lower().split("#")[0].split("?")[0]
+    if path.endswith(FILE_EXT):
         return True
-    return not PAG_RX.search(path) and len(path.rstrip("/").split("/")) > 4
+    if PAG_RX.search(path):
+        return False
+    slug = path.rstrip("/").split("/")[-1]
+    return len(slug) >= 18 and ("interpell" in slug or "supplenz" in slug or "disponibil" in slug or bool(S.CODE_RE.search(slug.upper())))
+
+
+def valido(it: dict) -> bool:
+    return bool(it.get("pubblicato")) and forma_ok(it)
+
+
+def data_pagina(f, link: str, cache: dict) -> str:
+    """Data di pubblicazione letta dalla pagina dell'articolo (meta, tag time, testo); ricordata per non rileggere."""
+    if link in cache:
+        return cache[link]
+    d = ""
+    if not link.lower().split("?")[0].endswith(FILE_EXT):
+        html = f.get(link)
+        if html:
+            soup = BeautifulSoup(html, "html.parser")
+            cand = []
+            for m in soup.find_all("meta"):
+                if (m.get("property") or m.get("name") or "").lower() in ("article:published_time", "og:updated_time", "date", "datepublished"):
+                    cand.append(m.get("content") or "")
+            for t in soup.find_all("time"):
+                cand.append(t.get("datetime") or t.get_text(" ", strip=True))
+            cand.append(soup.get_text(" ", strip=True)[:800])
+            for c in cand:
+                x = S.find_date(c) or (S.parseiso(c) if hasattr(S, "parseiso") else None)
+                if x:
+                    d = x.isoformat()
+                    break
+    cache[link] = d
+    return d
 
 
 def uno(f, off: dict, since: date) -> list[dict]:
@@ -72,9 +107,21 @@ def main() -> int:
     t0 = time.time()
     trovati = []
     stato = {}
+    dp = D / "scuole" / f"uffici{k}_date.json"
+    try:
+        cache_date = json.loads(dp.read_text("utf-8"))
+    except (OSError, ValueError):
+        cache_date = {}
+    budget_date = [150]
     def lavoro(o):
         try:
             grezzi = uno(f, o, since)
+            for i in grezzi:
+                if forma_ok(i) and not i.get("pubblicato") and budget_date[0] > 0:
+                    budget_date[0] -= 1
+                    dd = data_pagina(f, i["link"], cache_date)
+                    if dd and dd >= since.isoformat():
+                        i["pubblicato"] = dd
             r = [i for i in grezzi if valido(i)]
             stato[o["url"]] = {"grezzi": len(grezzi), "scartati": [i["link"][:110] for i in grezzi if not valido(i)][:4]}
             return o, r, None
@@ -84,6 +131,7 @@ def main() -> int:
         for o, r, err in ex.map(lavoro, uff):
             trovati += r
             stato.setdefault(o["url"], {}).update({"provincia": o.get("provincia"), "avvisi": len(r), "errore": err or f.errs.get(o["url"])})
+    dp.write_text(json.dumps(dict(list(cache_date.items())[-3000:]), ensure_ascii=False, indent=0) + "\n", "utf-8")
     tp = D / "scuole" / f"uffici{k}_trovati.json"
     try:
         vecchi = json.loads(tp.read_text("utf-8"))
