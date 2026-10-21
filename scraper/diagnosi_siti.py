@@ -32,7 +32,7 @@ def dns_locale(host: str) -> bool:
     try:
         socket.getaddrinfo(host, 443)
         return True
-    except OSError:
+    except Exception:  # anche UnicodeError per nomi di dominio malformati
         return False
 
 
@@ -130,6 +130,13 @@ def prova(s: requests.Session, url: str) -> tuple[bool, str]:
 
 
 def diagnostica(item):
+    try:
+        return _diagnostica(item)
+    except Exception as e:  # una scuola con indirizzo strano non deve fermare le altre
+        return item[0], {"sito": item[1].get("sito"), "err": item[1].get("err"), "motivo": "indirizzo non valido: " + type(e).__name__, "tentativi": []}
+
+
+def _diagnostica(item):
     codice, info = item
     s = requests.Session()
     s.headers["User-Agent"] = UA
@@ -163,6 +170,13 @@ def diagnostica(item):
 
 
 def _rapida(item):
+    try:
+        return _rapida_(item)
+    except Exception:
+        return diagnostica(item)
+
+
+def _rapida_(item):
     """Prima verifica di una scuola mai letta: il sito dichiarato risponde come sito scolastico?"""
     codice, info = item
     s = requests.Session()

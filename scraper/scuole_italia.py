@@ -55,8 +55,13 @@ def main() -> int:
     mappa_fatta = d / f"{area}_mappa.txt"
     oggi = date.today().isoformat()
     if not mappa_fatta.exists() or mappa_fatta.read_text().strip() != oggi:
-        diagnosi_siti.esegui(sicilia.REPORT, sicilia.ELENCO, sicilia.CORRETTI, d / f"{area}_diagnosi.json", tutte=True)
-        mappa_fatta.write_text(oggi + "\n")
+        try:
+            diagnosi_siti.esegui(sicilia.REPORT, sicilia.ELENCO, sicilia.CORRETTI, d / f"{area}_diagnosi.json", tutte=True)
+            mappa_fatta.write_text(oggi + "\n")
+        except Exception as e:
+            import traceback
+            (d / f"{area}_errore.txt").write_text(traceback.format_exc(), "utf-8")
+            S.log(f"{nome}: mappatura interrotta ({type(e).__name__}), passo alla lettura degli avvisi")
         elenco = sicilia.carica_elenco(S.log)  # rilegge con i siti corretti
 
     # 2. lettura degli avvisi a rotazione, nel tempo che resta
@@ -88,4 +93,13 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except Exception:
+        import traceback
+        err = traceback.format_exc()
+        print(err)
+        a = sys.argv[1] if len(sys.argv) > 1 else "area"
+        (DATI / "scuole").mkdir(parents=True, exist_ok=True)
+        (DATI / "scuole" / f"{a}_errore.txt").write_text(datetime.now().isoformat() + "\n" + err, "utf-8")
+        sys.exit(1)
