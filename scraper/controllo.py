@@ -81,7 +81,7 @@ def main() -> int:
     st = [x for x in st if x["data"] != oggi] + [voce]
     p.write_text(json.dumps(st[-90:], ensure_ascii=False, indent=1) + "\n", "utf-8")
     (D / "controllo_buchi.txt").write_text(
-        f"{oggi}: {voce}\n\nAVVISI CHE MANCANO:\n" + "\n".join(f"- {b['classi']} {b['provincia']} {b['link']}\n    {b['testo']}" for b in buchi) + "\n", "utf-8")
+        f"{oggi}: {voce}\n\nAVVISI CHE MANCANO:\n" + "\n".join(f"- {b['classi']} {b['provincia']} {b['link']}\n    {b['testo']}" for b in buchi) + "\n\nDIAGNOSTICA:\n" + "\n".join(S.REPORT[-60:]) + "\n" + str(f.errs) + "\n", "utf-8")
     print(voce)
     print("\n".join(S.REPORT[-40:]))
     print(f.errs)
