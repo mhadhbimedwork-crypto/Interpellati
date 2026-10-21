@@ -24,6 +24,8 @@ export type Interpello = {
   fonte?: string;
   note?: string;
   trovato?: string;
+  /** ora di pubblicazione dichiarata dal sito (HH:MM), solo quando disponibile */
+  oraPub?: string;
   stato?: string;
   durata?: { tipo: string; dal?: string; al?: string; giorni?: number };
   durataCat?: 'breve' | 'intermedia' | 'fino_a_fine_anno' | 'indeterminata';
@@ -293,4 +295,34 @@ export function fmtDate(s?: string | Date | null): string {
   const d = s instanceof Date ? s : parseDate(s || undefined);
   if (!d) return '';
   return d.getDate() + ' ' + MESI[d.getMonth()] + ' ' + d.getFullYear();
+}
+
+const pad2 = (n: number) => String(n).padStart(2, '0');
+/** "oggi alle 09:11" / "ieri alle 21:40" / "19 ott alle 07:05" */
+export function fmtRilevato(it: Interpello, now: Date = new Date()): string {
+  if (!it.trovato) return '';
+  const d = new Date(it.trovato);
+  if (isNaN(d.getTime())) return '';
+  const hm = pad2(d.getHours()) + ':' + pad2(d.getMinutes());
+  const g0 = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+  const g1 = new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+  const diff = Math.round((g0 - g1) / 86400000);
+  const giorno = diff === 0 ? 'oggi' : diff === 1 ? 'ieri' : d.getDate() + ' ' + MESI[d.getMonth()];
+  return giorno + ' alle ' + hm;
+}
+/** "12 min fa", "3 ore fa", "2 giorni fa" */
+export function fmtFa(it: Interpello, now: Date = new Date()): string {
+  if (!it.trovato) return '';
+  const m = Math.round((now.getTime() - new Date(it.trovato).getTime()) / 60000);
+  if (isNaN(m) || m < 0) return '';
+  if (m < 2) return 'ora';
+  if (m < 60) return m + ' min fa';
+  if (m < 1440) return Math.floor(m / 60) + (m < 120 ? ' ora fa' : ' ore fa');
+  const g = Math.floor(m / 1440);
+  return g + (g === 1 ? ' giorno fa' : ' giorni fa');
+}
+/** "21 ott 2026" + " ore 10:15" se il sito dichiara l'ora */
+export function fmtPubblicato(it: Interpello): string {
+  if (!it.pubblicato) return '';
+  return fmtDate(it.pubblicato) + (it.oraPub ? ' ore ' + it.oraPub : '');
 }

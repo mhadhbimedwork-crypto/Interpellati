@@ -36,6 +36,9 @@ import {
   type AbilFeed,
   Feed,
   fmtDate,
+  fmtFa,
+  fmtPubblicato,
+  fmtRilevato,
   Interpello,
   isNew,
   isOpen,
@@ -141,7 +144,7 @@ function mailFor(it: Interpello, p: Record<string, string>) {
     'Gentile Dirigente Scolastico,',
     '',
     "in riferimento all'interpello" +
-      (it.pubblicato ? ' pubblicato il ' + fmtDate(it.pubblicato) : '') +
+      (it.pubblicato ? ' pubblicato il ' + fmtPubblicato(it) : '') +
       ' per la classe di concorso ' + descr +
       (it.ore ? ' (' + it.ore + ' ore settimanali)' : '') +
       (nome ? ', il sottoscritto ' + nome : '') +
@@ -187,6 +190,7 @@ export default function App() {
   const [soloMie, setSoloMie] = useState(true);
   const [nuovaClasse, setNuovaClasse] = useState('');
   const [fVista, setFVista] = useState<'aperti' | 'tutti' | 'nonrisposti'>('aperti');
+  const [fOrdine, setFOrdine] = useState<'scadenza' | 'recenti'>('scadenza');
   const [fRegione, setFRegione] = useState('');
   const [q, setQ] = useState('');
   const [fOre, setFOre] = useState<'tutte' | 'poche' | 'medie' | 'piene'>('tutte');
@@ -312,6 +316,11 @@ export default function App() {
         return true;
       })
       .sort((a, b) => {
+        if (fOrdine === 'recenti') {
+          const ta = a.trovato ? new Date(a.trovato).getTime() : 0, tb = b.trovato ? new Date(b.trovato).getTime() : 0;
+          if (ta !== tb) return tb - ta;
+          return (parseDate(b.pubblicato)?.getTime() || 0) - (parseDate(a.pubblicato)?.getTime() || 0);
+        }
         const oa = isOpen(a), ob = isOpen(b);
         if (oa !== ob) return oa ? -1 : 1;
         const pa = parseDate(a.pubblicato)?.getTime() || 0, pb = parseDate(b.pubblicato)?.getTime() || 0;
@@ -321,7 +330,7 @@ export default function App() {
         }
         return pb - pa;
       });
-  }, [base, fClasse, fVista, fRegione, q, cand, fOre, fDurata, conND]);
+  }, [base, fClasse, fVista, fRegione, q, cand, fOre, fDurata, conND, fOrdine]);
 
   const mapItems = useMemo(
     () => rows.filter((i) => conCoordinate(i) && (!soloPrecisi || i.geo !== 'p')),
@@ -341,7 +350,7 @@ export default function App() {
     <View style={[s.root, { paddingTop: topPad }]}>
       <ExpoStatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       <View style={s.header}>
-        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v1.4.0</Text></Text>
+        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v1.5.0</Text></Text>
         <Text style={s.who} numberOfLines={1}>
           {(prefs.classi.length ? prefs.classi.join(' · ') : 'Tutte le classi') + ' — ' + (prefs.regioni.length ? prefs.regioni.length + ' regioni' : 'tutta Italia')}
         </Text>
@@ -391,6 +400,7 @@ export default function App() {
                 <Chips s={s} value={fClasse} set={setFClasse} opts={[['tutte', 'Tutte le mie'], ...prefs.classi.map((c) => [c, c] as [string, string])]} />
               ) : null}
               <Chips s={s} value={fVista} set={setFVista} opts={[['aperti', 'Aperti'], ['nonrisposti', 'Senza risposta'], ['tutti', 'Anche scaduti']]} />
+              <Chips s={s} value={fOrdine} set={setFOrdine} opts={[['scadenza', 'Per scadenza'], ['recenti', 'Più recenti (rilevati)']]} />
               <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }}>
                 {[['', 'Tutta Italia'], ...regioni.map((r) => [r, r])].map(([v, l]) => (
                   <Pressable key={v || 'all'} onPress={() => setFRegione(v)} style={[s.chip, fRegione === v && s.chipOn]}>
@@ -733,10 +743,13 @@ function Card({
         </Text>
       ) : null}
       <Text style={s.muted}>
-        {[d ? 'Scadenza ' + fmtDate(d) + (it.oraScadenza ? ' ore ' + it.oraScadenza : '') : '', it.ore ? it.ore + ' ore/sett.' : '', it.periodo || '', it.pubblicato ? 'Pubblicato ' + fmtDate(it.pubblicato) : '']
+        {[d ? 'Scadenza ' + fmtDate(d) + (it.oraScadenza ? ' ore ' + it.oraScadenza : '') : '', it.ore ? it.ore + ' ore/sett.' : '', it.periodo || '', it.pubblicato ? 'Pubblicato ' + fmtPubblicato(it) : '']
           .filter(Boolean)
           .join(' · ')}
       </Text>
+      {it.trovato ? (
+        <Text style={s.small}>Rilevato dall'app {fmtRilevato(it)} ({fmtFa(it)})</Text>
+      ) : null}
       {it.note ? <Text style={s.body}>{it.note}</Text> : null}
       {it.email ? <Text style={s.body} selectable>Invio a: {it.email}</Text> : null}
       {expanded && (it.oreEvidenza || it.durataEvidenza) ? (

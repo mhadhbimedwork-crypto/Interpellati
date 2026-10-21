@@ -516,6 +516,8 @@ def put(items: dict, r: dict):
         new["pubblicato"] = old["pubblicato"]
     if old and old.get("trovato"):
         new["trovato"] = old["trovato"]
+    if old and old.get("oraPub") and not new.get("oraPub"):
+        new["oraPub"] = old["oraPub"]
     items[new["id"]] = new
 
 
@@ -598,7 +600,10 @@ def main() -> int:
             continue
         if i.get("scadenza") and i["scadenza"] < ieri:
             continue
-        leggero.append({k: v for k, v in i.items() if k not in ("letto", "trovato")})
+        r = {k: v for k, v in i.items() if k not in ("letto", "trovato")}
+        if i.get("trovato"):
+            r["trovato"] = i["trovato"][:19]  # ora in cui l'app ha rilevato l'avviso (Europe/Rome)
+        leggero.append(r)
     sic = None
     try:
         rs = json.loads((ROOT / "data" / "sicilia_report.json").read_text("utf-8"))

@@ -119,6 +119,26 @@ def _stesso_sito(a: str, b: str) -> bool:
     return ha == hb
 
 
+def _ora_locale(c: str):
+    """'2026-10-21T08:15:00+00:00' -> '10:15' (Europe/Rome). Senza ora o 00:00 esatto: None."""
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    if not re.match(r"\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}", c):
+        return None
+    try:
+        dt = datetime.fromisoformat(c.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo:
+        dt = dt.astimezone(ZoneInfo("Europe/Rome"))
+    if dt.hour == 0 and dt.minute == 0:
+        return None
+    return dt.strftime("%H:%M")
+
+
+ORA_PUB: dict = {}  # url -> "HH:MM" se la pagina dichiara l'ora di pubblicazione
+
+
 def data_pagina(S, f, url: str):
     """Data di pubblicazione di un avviso senza data nel titolo: metadati della pagina (article:published_time, <time>)."""
     html = f.get(url)
@@ -136,6 +156,9 @@ def data_pagina(S, f, url: str):
         m = re.match(r"(\d{4})-(\d{2})-(\d{2})", c.strip())
         try:
             if m:
+                ora = _ora_locale(c.strip())
+                if ora:
+                    ORA_PUB[url] = ora
                 return date(int(m[1]), int(m[2]), int(m[3]))
         except ValueError:
             pass
@@ -196,6 +219,8 @@ def scansiona_scuola(S, f, cod: str, sc: dict, since: date) -> tuple[list[dict],
                 if not d or d < since:
                     continue
                 it["pubblicato"] = d.isoformat()
+                if it["link"] in ORA_PUB:
+                    it["oraPub"] = ORA_PUB[it["link"]]
             it["codiceScuola"] = cod
             it["fonte"] = "Sito scuola"
             if sc.get("comune"):
