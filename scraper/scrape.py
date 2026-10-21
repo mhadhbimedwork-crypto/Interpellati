@@ -207,6 +207,11 @@ class Fetcher:
             log("  robots.txt non consente:", url)
             return None
         host = urlparse(url).netloc
+        lock = self.__dict__.setdefault("_locks", {}).setdefault(host, __import__("threading").Lock())
+        with lock:  # una richiesta alla volta per sito, anche con tanti thread: non martelliamo nessuno
+            return self._get(url, host)
+
+    def _get(self, url: str, host: str) -> str | None:
         wait = random.uniform(1.0, 2.2) - (time.time() - self.last.get(host, 0))
         if wait > 0:
             time.sleep(wait)
@@ -658,7 +663,20 @@ def main() -> int:
 
     now = datetime.now(TZ).isoformat(timespec="seconds")
     added = []
-    dettagli_letti = 0
+    from concurrent.futures import ThreadPoolExecutor
+
+    def lavora(it: dict) -> list[dict]:
+        """Lettura dell'avviso (ore, durata, scuola): rete in parallelo, 12 avvisi alla volta."""
+        try:
+            res = dettaglia(f, it)
+            if len(res) == 1 and res[0] is it and not it["link"].startswith("https://www.mim.gov.it/web/") and "ambito" not in it.get("scuola", ""):
+                enrich(f, it)
+            return res
+        except Exception as e:  # noqa: BLE001
+            log("  dettaglio non letto:", it.get("link", "")[:90], type(e).__name__)
+            return [it]
+
+    nuovi = []
     for it in found:
         key = (it["link"], tuple(it["classi"]), it["pubblicato"])
         if key in known_links:
@@ -668,29 +686,29 @@ def main() -> int:
         if it["id"] in items:
             continue
         it["_prov"] = prov
-        budget = MAX_DETTAGLI - dettagli_letti
-        if budget > 0:
-            dettagli_letti += 1
-            res = dettaglia(f, it)
-        else:
-            res = [it]
-        if len(res) == 1 and res[0] is it and not it["link"].startswith("https://www.mim.gov.it/web/") and "ambito" not in it.get("scuola", ""):
-            enrich(f, it)
+        known_links.add(key)
+        nuovi.append(it)
+    da_leggere = nuovi[:MAX_DETTAGLI]
+    dettagli_letti = len(da_leggere)
+    with ThreadPoolExecutor(12) as ex:
+        letti = list(ex.map(lavora, da_leggere))
+    risultati = letti + [[it] for it in nuovi[MAX_DETTAGLI:]]
+    for res in risultati:
         for r in res:
             r.pop("_prov", None)
             r["trovato"] = now
             if r["id"] not in items:
                 added.append(r)
             put(items, r)
-        known_links.add(key)
 
     # recupero: legge gli avvisi gia' in archivio che non sono ancora stati analizzati
     arretrati = [i for i in items.values() if not i.get("letto") and i.get("link")]
     arretrati.sort(key=lambda i: i.get("pubblicato") or "", reverse=True)
-    for it in arretrati[:max(0, MAX_DETTAGLI - dettagli_letti)]:
-        dettagli_letti += 1
-        it = dict(it)
-        res = dettaglia(f, it)
+    arretrati = [dict(i) for i in arretrati[:max(0, MAX_DETTAGLI - dettagli_letti)]]
+    dettagli_letti += len(arretrati)
+    with ThreadPoolExecutor(12) as ex:
+        riletti = list(ex.map(lavora, arretrati))
+    for it, res in zip(arretrati, riletti):
         items.pop(it["id"], None)
         for r in res:
             r.setdefault("trovato", it.get("trovato"))
