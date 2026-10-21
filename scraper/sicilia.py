@@ -265,6 +265,15 @@ def scansiona_sicilia(S, f, since: date, budget_s: int = 540) -> list[dict]:
         stato = {}
     cur = int(stato.get("cursore", 0)) % max(1, len(codici))
     ordine = (codici[cur:] + codici[:cur])[:MAX_PER_RUN]
+    # priorita': scuole che avevano dato errore e ora hanno un indirizzo corretto (recupero siti)
+    try:
+        prec = json.loads(REPORT.read_text("utf-8")).get("scuole", {})
+    except (OSError, ValueError):
+        prec = {}
+    recuperi = [c for c in codici if c in prec and not prec[c].get("ok") and not _stesso_sito(prec[c].get("sito") or "", scuole[c]["sito"])]
+    if recuperi:
+        log(f"  Sicilia: {len(recuperi)} siti con indirizzo corretto da rileggere subito")
+        ordine = recuperi[:200] + [c for c in ordine if c not in set(recuperi[:200])]
     t0 = time.time()
     report: dict[str, dict] = {}
     trovati: list[dict] = []
