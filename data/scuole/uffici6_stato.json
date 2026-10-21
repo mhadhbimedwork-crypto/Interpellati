@@ -1,10 +1,10 @@
 {
-"https://atptorino.com/": {
+"https://mantova.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Torino",
+"provincia": "Mantova",
 "avvisi": 0,
-"errore": null
+"errore": "SSLError"
 },
 "https://lnx.csalatina.it/jclub/": {
 "grezzi": 0,
@@ -13,12 +13,26 @@
 "avvisi": 0,
 "errore": null
 },
-"https://mantova.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"https://pavia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Mantova",
+"provincia": "Pavia",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://atptorino.com/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
+},
+"https://rn.istruzioneer.gov.it/category/personale-docente/interpelli_docenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Rimini",
+"avvisi": 0,
+"errore": "HTTP 404"
 },
 "https://istruzione.umbria.it/": {
 "grezzi": 2,
@@ -30,26 +44,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://pavia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pavia",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Sondrio",
 "avvisi": 0,
 "errore": "SSLError"
-},
-"https://rn.istruzioneer.gov.it/category/personale-docente/interpelli_docenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Rimini",
-"avvisi": 0,
-"errore": "HTTP 404"
 },
 "http://www.usppesarourbino.it/": {
 "grezzi": 8,
@@ -84,11 +84,56 @@
 "avvisi": 0,
 "errore": null
 },
+"https://ra.istruzioneer.gov.it/": {
+"grezzi": 15,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/#/SC23359/atti/4707054",
+"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015",
+"https://www.portaleargo.it/albopretorio/online/#/SC22392/atti/4701043",
+"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1216&id_categoria_tmp=&ricerca=&ordinamento="
+],
+"provincia": "Ravenna",
+"avvisi": 5,
+"errore": null
+},
+"https://mo.istruzioneer.gov.it/category/interpelli-personale-docente-2024-25/": {
+"grezzi": 7,
+"scartati": [],
+"provincia": "Modena",
+"avvisi": 7,
+"errore": null
+},
 "https://verona.istruzioneveneto.gov.it/index.php/interpelli-2026-2027/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Verona",
 "avvisi": 0,
+"errore": null
+},
+"https://www.istruzionelaspezia.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "La Spezia",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
+},
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
+"grezzi": 45,
+"scartati": [
+"mailto:?subject=Condiviso&body=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Con",
+"https://twitter.com/home?status=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Co",
+"https://ag.usr.sicilia.it/interpello-nazionale-per-il-conferimento-di-supplenza-per-linsegnamento-di-conversaz",
+"mailto:?subject=Condiviso&body=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Con"
+],
+"provincia": "Agrigento",
+"avvisi": 30,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
@@ -103,87 +148,6 @@
 "avvisi": 14,
 "errore": null
 },
-"https://ra.istruzioneer.gov.it/": {
-"grezzi": 15,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/#/SC23359/atti/4707054",
-"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015",
-"https://www.portaleargo.it/albopretorio/online/#/SC22392/atti/4701043",
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1216&id_categoria_tmp=&ricerca=&ordinamento="
-],
-"provincia": "Ravenna",
-"avvisi": 5,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionelaspezia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "La Spezia",
-"avvisi": 0,
-"errore": null
-},
-"https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
-"grezzi": 5,
-"scartati": [
-"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-posto-ADAA-presso-VESPUCCI-–-CAPUANA-–-PIRANDELLO.zip",
-"https://ct.usr.sicilia.it/wp-content/uploads/timbro_ERRATA-CORRIGE-Interpello-ADEE-primaria-sostegno-n.-2-post",
-"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-copertura-posto-ADAA-IC-A.-MALERBA.zip",
-"https://ct.usr.sicilia.it/wp-content/uploads/AVVISOINTERPELLO-PER-LA-COPERTURA-DI-N.1-POSTO-CLASSE-DI-CONCORSO"
-],
-"provincia": "Catania",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionerovigo.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Rovigo",
-"avvisi": 0,
-"errore": null
-},
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
-"grezzi": 37,
-"scartati": [
-"mailto:?subject=Condiviso&body=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Con",
-"https://twitter.com/home?status=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Co",
-"https://ag.usr.sicilia.it/interpello-nazionale-per-il-conferimento-di-supplenza-per-linsegnamento-di-conversaz",
-"mailto:?subject=Condiviso&body=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Con"
-],
-"provincia": "Agrigento",
-"avvisi": 23,
-"errore": null
-},
-"https://treviso.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Treviso",
-"avvisi": 0,
-"errore": null
-},
-"https://mo.istruzioneer.gov.it/category/interpelli-personale-docente-2024-25/": {
-"grezzi": 4,
-"scartati": [
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-secondaria-secondo-grado/"
-],
-"provincia": "Modena",
-"avvisi": 2,
-"errore": null
-},
-"https://www.ufficioscolasticogrosseto.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Grosseto",
-"avvisi": 0,
-"errore": null
-},
 "https://bo.istruzioneer.gov.it/tag/interpello/": {
 "grezzi": 10,
 "scartati": [
@@ -196,15 +160,43 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.mim.gov.it/web/cagliari/": {
-"grezzi": 13,
+"https://www.istruzionerovigo.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Rovigo",
+"avvisi": 0,
+"errore": null
+},
+"https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
+"grezzi": 6,
 "scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-region",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-regionale-per-il-",
-"whatsapp://send?text=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-regionale-per-il-conferime",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-regionale-per"
+"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-posto-ADAA-presso-VESPUCCI-–-CAPUANA-–-PIRANDELLO.zip",
+"https://ct.usr.sicilia.it/wp-content/uploads/timbro_ERRATA-CORRIGE-Interpello-ADEE-primaria-sostegno-n.-2-post",
+"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-copertura-posto-ADAA-IC-A.-MALERBA.zip",
+"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-per-la-copertura-di-N.-1-posto-Sostegno-Scuola-Primari"
 ],
-"provincia": "Cagliari",
+"provincia": "Catania",
+"avvisi": 0,
+"errore": null
+},
+"https://treviso.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Treviso",
+"avvisi": 0,
+"errore": null
+},
+"https://www.ufficioscolasticogrosseto.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Grosseto",
+"avvisi": 0,
+"errore": null
+},
+"https://www.regione.vda.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Aosta",
 "avvisi": 0,
 "errore": null
 },
@@ -220,31 +212,17 @@
 "avvisi": 1,
 "errore": null
 },
-"https://www.regione.vda.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Aosta",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionebat.it/": {
-"grezzi": 68,
+"https://www.mim.gov.it/web/cagliari/": {
+"grezzi": 13,
 "scartati": [
-"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
-"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
-"https://www.scuolapetronellitrani.edu.it/interpelli/",
-"https://www.icjannuzzimonsdidonna.edu.it"
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-region",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-regionale-per-il-",
+"whatsapp://send?text=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-regionale-per-il-conferime",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-regionale-per"
 ],
-"provincia": "Barletta-Andria-Trani",
-"avvisi": 7,
-"errore": null
-},
-"https://www.ustli.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Livorno",
+"provincia": "Cagliari",
 "avvisi": 0,
-"errore": "HTTP 403"
+"errore": null
 },
 "https://www.usplatina.it/wp/": {
 "grezzi": 0,
@@ -253,17 +231,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ustlucca.it/": {
-"grezzi": 15,
-"scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/category/avvisi/",
-"https://ustlucca.it/category/circolari-e-decreti/",
-"https://ustlucca.it/category/comunicati/"
-],
-"provincia": "Lucca",
-"avvisi": 5,
-"errore": null
+"https://www.ustli.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Livorno",
+"avvisi": 0,
+"errore": "HTTP 403"
 },
 "https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
 "grezzi": 4,
@@ -279,18 +252,23 @@
 "avvisi": 0,
 "errore": null
 },
+"https://ustlucca.it/": {
+"grezzi": 21,
+"scartati": [
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/category/avvisi/",
+"https://ustlucca.it/category/circolari-e-decreti/",
+"https://ustlucca.it/category/comunicati/"
+],
+"provincia": "Lucca",
+"avvisi": 5,
+"errore": null
+},
 "https://www.usptaranto.it/": {
 "grezzi": 15,
 "scartati": [],
 "provincia": "Taranto",
 "avvisi": 15,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Prato",
-"avvisi": 0,
 "errore": null
 },
 "https://www.mim.gov.it/web/mantova/interpelli-ricerca-supplenti/": {
@@ -300,15 +278,44 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.uspascolipiceno.it/wordpress/interpelli/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Fermo",
+"https://www.istruzionebat.it/": {
+"grezzi": 83,
+"scartati": [
+"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
+"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
+"https://www.scuolapetronellitrani.edu.it/interpelli/",
+"https://www.icjannuzzimonsdidonna.edu.it"
+],
+"provincia": "Barletta-Andria-Trani",
+"avvisi": 7,
+"errore": null
+},
+"https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
+"grezzi": 8,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-adee-sostegno",
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-adee-sostegno",
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-adee-sostegno",
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-adee-sostegno"
+],
+"provincia": "Prato",
 "avvisi": 0,
 "errore": null
 },
+"https://www.uspascolipiceno.it/wordpress/interpelli/": {
+"grezzi": 9,
+"scartati": [
+"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
+"https://www.uspascolipiceno.it/wordpress/interpello-istituto-comprensivo-interprovinciale-dei-sibillini-classe",
+"https://www.uspascolipiceno.it/wordpress/avviso-di-interpello-per-incarico-t-d-docente-scuola-secondaria-i-gra",
+"https://www.uspascolipiceno.it/wordpress/ii-interpello-cl-concorso-ai55-percussioni-liceo-scientifico-statale-"
+],
+"provincia": "Fermo",
+"avvisi": 4,
+"errore": null
+},
 "https://www.ust.fi.it/mese/interpelli/": {
-"grezzi": 40,
+"grezzi": 56,
 "scartati": [
 "https://www.ust.fi.it/mese/interpelli/",
 "https://www.ust.fi.it/mese/interpelli/interpelli-ii-grado/",
