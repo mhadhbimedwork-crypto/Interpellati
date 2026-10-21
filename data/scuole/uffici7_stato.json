@@ -6,19 +6,19 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://monza.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Monza e Brianza",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Perugia",
 "avvisi": 0,
 "errore": "HTTP 404"
+},
+"https://monza.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Monza e Brianza",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://brescia.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -41,6 +41,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 6,
+"scartati": [],
+"provincia": "Piacenza",
+"avvisi": 6,
+"errore": null
+},
 "https://varese.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -48,21 +55,14 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://pc.istruzioneer.gov.it/": {
-"grezzi": 4,
-"scartati": [],
-"provincia": "Piacenza",
-"avvisi": 4,
-"errore": null
-},
 "https://me.usr.sicilia.it/": {
-"grezzi": 13,
+"grezzi": 22,
 "scartati": [
 "https://me.usr.sicilia.it/personale-docente-gae-decreto-rettifica-punteggio-totaro-patrizia/",
 "https://me.usr.sicilia.it/i-i-s-e-medi-barcellona-pozzo-di-gotto-avviso-di-interpello-nazionale-per-il-conferi"
 ],
 "provincia": "Messina",
-"avvisi": 11,
+"avvisi": 20,
 "errore": null
 },
 "https://www.csateramo.it/": {
@@ -72,30 +72,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vibo Valentia",
-"avvisi": 0,
-"errore": null
-},
 "https://fc.istruzioneer.gov.it/": {
-"grezzi": 5,
+"grezzi": 7,
 "scartati": [],
 "provincia": "Forlì-Cesena",
-"avvisi": 5,
-"errore": null
-},
-"https://cl-en.usr.sicilia.it/interpelli/": {
-"grezzi": 24,
-"scartati": [
-"https://cl-en.usr.sicilia.it/interpello-nazionale-per-supplenza-su-classe-di-concorso-a042-scienze-e-tecnologi",
-"https://cl-en.usr.sicilia.it/decreto-suddivisione-posti-di-sostegno-seconda-deroga-provincia-di-caltanissetta/",
-"mailto:?subject=Condiviso&body=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnolo",
-"https://twitter.com/home?status=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnol"
-],
-"provincia": null,
-"avvisi": 13,
+"avvisi": 7,
 "errore": null
 },
 "http://www.usppesarourbino.it/category/interpelli/": {
@@ -110,11 +91,49 @@
 "avvisi": 1,
 "errore": null
 },
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vibo Valentia",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionegenova.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Genova",
 "avvisi": 0,
+"errore": null
+},
+"https://treviso.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Treviso",
+"avvisi": 0,
+"errore": null
+},
+"https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
+"grezzi": 15,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/#/SC23359/atti/4707054",
+"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015",
+"https://www.portaleargo.it/albopretorio/online/#/SC22392/atti/4701043",
+"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1216&id_categoria_tmp=&ricerca=&ordinamento="
+],
+"provincia": "Ravenna",
+"avvisi": 5,
+"errore": null
+},
+"https://cl-en.usr.sicilia.it/interpelli/": {
+"grezzi": 24,
+"scartati": [
+"https://cl-en.usr.sicilia.it/interpello-nazionale-per-supplenza-su-classe-di-concorso-a042-scienze-e-tecnologi",
+"https://cl-en.usr.sicilia.it/decreto-suddivisione-posti-di-sostegno-seconda-deroga-provincia-di-caltanissetta/",
+"mailto:?subject=Condiviso&body=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnolo",
+"https://twitter.com/home?status=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnol"
+],
+"provincia": null,
+"avvisi": 13,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/": {
@@ -131,27 +150,8 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
-"grezzi": 15,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/#/SC23359/atti/4707054",
-"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015",
-"https://www.portaleargo.it/albopretorio/online/#/SC22392/atti/4701043",
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1216&id_categoria_tmp=&ricerca=&ordinamento="
-],
-"provincia": "Ravenna",
-"avvisi": 5,
-"errore": null
-},
-"https://treviso.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Treviso",
-"avvisi": 0,
-"errore": null
-},
 "https://sr.usr.sicilia.it/": {
-"grezzi": 24,
+"grezzi": 27,
 "scartati": [
 "mailto:?subject=Condiviso&body=Interpello Nazionale ai sensi dell’art. 14 c. 22 O.M. 27/2026. Avviso finalizza",
 "https://twitter.com/home?status=Interpello Nazionale ai sensi dell’art. 14 c. 22 O.M. 27/2026. Avviso finalizz",
@@ -162,58 +162,11 @@
 "avvisi": 1,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 9,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 8,
-"errore": null
-},
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/": {
-"grezzi": 92,
-"scartati": [
-"https://www.atpromaistruzione.it/atp/category/news1/",
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/tag/a040/",
-"https://www.atpromaistruzione.it/atp/tag/a042/"
-],
-"provincia": "Roma",
-"avvisi": 0,
-"errore": null
-},
-"https://www.regione.vda.it/istruzione/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Aosta",
-"avvisi": 0,
-"errore": null
-},
 "https://vicenza.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Vicenza",
 "avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/milano/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionebat.it/category/interpello/": {
-"grezzi": 68,
-"scartati": [
-"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
-"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
-"https://www.scuolapetronellitrani.edu.it/interpelli/",
-"https://www.icjannuzzimonsdidonna.edu.it"
-],
-"provincia": "Barletta-Andria-Trani",
-"avvisi": 7,
 "errore": null
 },
 "https://www.mim.gov.it/web/campobasso/": {
@@ -225,6 +178,41 @@
 "https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-supplen"
 ],
 "provincia": "Campobasso",
+"avvisi": 0,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 15,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 14,
+"errore": null
+},
+"https://www.regione.vda.it/istruzione/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Aosta",
+"avvisi": 0,
+"errore": null
+},
+"https://www.mim.gov.it/web/milano/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
+"avvisi": 0,
+"errore": null
+},
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/": {
+"grezzi": 92,
+"scartati": [
+"https://www.atpromaistruzione.it/atp/category/news1/",
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
+"https://www.atpromaistruzione.it/atp/tag/a040/",
+"https://www.atpromaistruzione.it/atp/tag/a042/"
+],
+"provincia": "Roma",
 "avvisi": 0,
 "errore": null
 },
@@ -244,41 +232,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usp-rieti.it/": {
-"grezzi": 7,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 7,
-"errore": null
-},
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Grosseto",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usplecce.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecce",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usptaranto.it/": {
-"grezzi": 15,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 15,
-"errore": null
-},
 "https://www.mim.gov.it/web/isernia/interpelli/": {
 "grezzi": 12,
 "scartati": [
@@ -291,24 +244,79 @@
 "avvisi": 1,
 "errore": null
 },
-"https://www.ustli.it/usp_livorno/index.php/docenti/interpelli": {
-"grezzi": 1,
+"https://www.usp-rieti.it/": {
+"grezzi": 10,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 10,
+"errore": null
+},
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni": {
+"grezzi": 16,
+"scartati": [],
+"provincia": "Grosseto",
+"avvisi": 16,
+"errore": null
+},
+"https://www.istruzionebat.it/category/interpello/": {
+"grezzi": 83,
 "scartati": [
+"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
+"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
+"https://www.scuolapetronellitrani.edu.it/interpelli/",
+"https://www.icjannuzzimonsdidonna.edu.it"
+],
+"provincia": "Barletta-Andria-Trani",
+"avvisi": 7,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 15,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 15,
+"errore": null
+},
+"https://www.uspbari.it/": {
+"grezzi": 26,
+"scartati": [
+"https://www.uspbari.it/usp/author/mi20142",
+"https://www.uspbari.it/usp/category/reclutamento",
+"https://www.uspbari.it/usp/tag/istruzione-primaria",
+"https://www.uspbari.it/usp/author/mi19228"
+],
+"provincia": "Bari",
+"avvisi": 0,
+"errore": null
+},
+"https://www.usplecce.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecce",
+"avvisi": 0,
+"errore": null
+},
+"https://www.ustli.it/usp_livorno/index.php/docenti/interpelli": {
+"grezzi": 4,
+"scartati": [
+"https://www.ustli.it/usp_livorno/index.php/docenti/organici-e-disponibilita/infanzia/2843-organico-di-diritto-",
+"https://www.ustli.it/usp_livorno/index.php/docenti/organici-e-disponibilita/primaria/2844-organico-di-diritto-",
+"https://www.ustli.it/usp_livorno/index.php/docenti/organici-e-disponibilita/secondaria-di-ii-grado/2846-organi",
 "https://www.ustli.it/usp_livorno/index.php/docenti/organici-e-disponibilita/secondaria-di-ii-grado/1980-avviso"
 ],
 "provincia": "Livorno",
 "avvisi": 0,
 "errore": null
 },
-"https://www.uspbari.it/": {
-"grezzi": 24,
+"https://www.istruzionematera.it/": {
+"grezzi": 8,
 "scartati": [
-"https://www.uspbari.it/usp/author/mi19228",
-"https://www.uspbari.it/usp/category/reclutamento",
-"https://www.uspbari.it/usp/tag/interpello",
-"https://www.uspbari.it/usp/author/mi20142"
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce"
 ],
-"provincia": "Bari",
+"provincia": "Matera",
 "avvisi": 0,
 "errore": null
 }
