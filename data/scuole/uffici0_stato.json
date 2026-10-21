@@ -6,19 +6,19 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Terni",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://brescia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Brescia",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Terni",
+"avvisi": 0,
+"errore": "HTTP 404"
 },
 "https://como.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -77,6 +77,16 @@
 "avvisi": 16,
 "errore": null
 },
+"https://me.usr.sicilia.it/": {
+"grezzi": 13,
+"scartati": [
+"https://me.usr.sicilia.it/personale-docente-gae-decreto-rettifica-punteggio-totaro-patrizia/",
+"https://me.usr.sicilia.it/i-i-s-e-medi-barcellona-pozzo-di-gotto-avviso-di-interpello-nazionale-per-il-conferi"
+],
+"provincia": "Messina",
+"avvisi": 11,
+"errore": null
+},
 "https://pc.istruzioneer.gov.it/": {
 "grezzi": 4,
 "scartati": [],
@@ -89,16 +99,6 @@
 "scartati": [],
 "provincia": "Vicenza",
 "avvisi": 0,
-"errore": null
-},
-"https://me.usr.sicilia.it/": {
-"grezzi": 13,
-"scartati": [
-"https://me.usr.sicilia.it/personale-docente-gae-decreto-rettifica-punteggio-totaro-patrizia/",
-"https://me.usr.sicilia.it/i-i-s-e-medi-barcellona-pozzo-di-gotto-avviso-di-interpello-nazionale-per-il-conferi"
-],
-"provincia": "Messina",
-"avvisi": 11,
 "errore": null
 },
 "https://fc.istruzioneer.gov.it/": {
@@ -120,13 +120,6 @@
 "avvisi": 1,
 "errore": null
 },
-"http://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
-"errore": null
-},
 "https://rovigo.istruzioneveneto.gov.it/": {
 "grezzi": 9,
 "scartati": [
@@ -136,15 +129,10 @@
 "avvisi": 8,
 "errore": null
 },
-"https://www.csateramo.it/wpusp/archive/category/news": {
-"grezzi": 23,
-"scartati": [
-"https://www.csateramo.it/wpusp/archive/tag/assistenti-amministrativi",
-"https://www.csateramo.it/wpusp/archive/tag/assistenti-tecnici",
-"https://www.csateramo.it/wpusp/archive/tag/collaboratori-scolastici",
-"https://www.csateramo.it/wpusp/archive/interpello-nazionale-per-supplenza-cl-c-a027-matematica-e-fisica-3"
-],
-"provincia": "Teramo",
+"http://www.uspss.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
 "avvisi": 0,
 "errore": null
 },
@@ -160,10 +148,36 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.csateramo.it/wpusp/archive/category/news": {
+"grezzi": 23,
+"scartati": [
+"https://www.csateramo.it/wpusp/archive/tag/assistenti-amministrativi",
+"https://www.csateramo.it/wpusp/archive/tag/assistenti-tecnici",
+"https://www.csateramo.it/wpusp/archive/tag/collaboratori-scolastici",
+"https://www.csateramo.it/wpusp/archive/interpello-nazionale-per-supplenza-cl-c-a027-matematica-e-fisica-3"
+],
+"provincia": "Teramo",
+"avvisi": 0,
+"errore": null
+},
 "https://vicenza.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
+"https://www.regione.vda.it/istruzione/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Aosta",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionematera.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Matera",
 "avvisi": 0,
 "errore": null
 },
@@ -174,10 +188,10 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.regione.vda.it/istruzione/": {
+"https://www.ustcremona.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Aosta",
+"provincia": "Cremona",
 "avvisi": 0,
 "errore": null
 },
@@ -193,17 +207,10 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.ustcremona.it/": {
+"https://www.istruzionesavona.gov.it/pagine/interpelli-sv---as-2024-2025": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
+"provincia": "Savona",
 "avvisi": 0,
 "errore": null
 },
@@ -231,37 +238,11 @@
 "avvisi": 1,
 "errore": null
 },
-"https://www.istruzionesavona.gov.it/pagine/interpelli-sv---as-2024-2025": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Savona",
-"avvisi": 0,
-"errore": null
-},
 "https://www.usp-rieti.it/": {
 "grezzi": 7,
 "scartati": [],
 "provincia": "Rieti",
 "avvisi": 7,
-"errore": null
-},
-"https://www.uspbari.it/": {
-"grezzi": 24,
-"scartati": [
-"https://www.uspbari.it/usp/author/mi19228",
-"https://www.uspbari.it/usp/category/reclutamento",
-"https://www.uspbari.it/usp/tag/interpello",
-"https://www.uspbari.it/usp/author/mi20142"
-],
-"provincia": "Bari",
-"avvisi": 0,
-"errore": null
-},
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Grosseto",
-"avvisi": 0,
 "errore": null
 },
 "https://www.usptaranto.it/": {
@@ -275,6 +256,25 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecce",
+"avvisi": 0,
+"errore": null
+},
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Grosseto",
+"avvisi": 0,
+"errore": null
+},
+"https://www.uspbari.it/": {
+"grezzi": 24,
+"scartati": [
+"https://www.uspbari.it/usp/author/mi19228",
+"https://www.uspbari.it/usp/category/reclutamento",
+"https://www.uspbari.it/usp/tag/interpello",
+"https://www.uspbari.it/usp/author/mi20142"
+],
+"provincia": "Bari",
 "avvisi": 0,
 "errore": null
 },
