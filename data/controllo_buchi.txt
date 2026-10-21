@@ -4,5 +4,12 @@ AVVISI CHE MANCANO:
 
 
 DIAGNOSTICA:
-  HTTP 403: https://www.orizzontescuola.it/tag/interpelli/
-{'https://www.orizzontescuola.it/tag/interpelli/': 'HTTP 403'}
+prova https://www.orizzontescuola.it/feed/: HTTP 200 19953
+  uso https://www.orizzontescuola.it/feed/
+prova https://www.orizzontescuola.it/tag/interpelli/feed/: HTTP 200 1552418
+prova https://www.orizzontescuola.it/?s=interpelli: HTTP 200 48514
+prova https://www.tecnicadellascuola.it/tag/interpelli: HTTP 404 169890
+prova https://www.tecnicadellascuola.it/feed: HTTP 200 48023
+prova https://www.skuola.net/news/scuola/interpelli.html: HTTP 404 200019
+prova https://www.orizzontescuola.it/tag/interpelli/: HTTP 200 1433145
+{}
