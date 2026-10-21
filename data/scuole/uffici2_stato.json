@@ -6,13 +6,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://bergamo.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -24,6 +17,13 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Milano",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -60,6 +60,18 @@
 "avvisi": 2,
 "errore": null
 },
+"https://cl-en.usr.sicilia.it/": {
+"grezzi": 32,
+"scartati": [
+"mailto:?subject=Condiviso&body=Interpello per il conferimento di una supplenza – Classe di concorso AH56 – I.C",
+"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso AH56 – I.",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
+"https://cl-en.usr.sicilia.it/category/news/"
+],
+"provincia": "Enna",
+"avvisi": 13,
+"errore": null
+},
 "https://win.istruzioneverona.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -79,18 +91,6 @@
 "avvisi": 0,
 "errore": null
 },
-"http://www.ustlucca.it/": {
-"grezzi": 15,
-"scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/category/avvisi/",
-"https://ustlucca.it/category/circolari-e-decreti/",
-"https://ustlucca.it/category/comunicati/"
-],
-"provincia": "Lucca",
-"avvisi": 5,
-"errore": null
-},
 "https://t.me/s/usr_sicilia": {
 "grezzi": 29,
 "scartati": [
@@ -103,6 +103,18 @@
 "avvisi": 5,
 "errore": null
 },
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 8,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/95fe5ca0-bdf3-425e-88b3-c7e5f77acf2d/candidatura",
+"https://gecodoc-argoweb.eu-south-1.portaleargo.it/AWP/SM28284/58aa3ea6a01cb98166f4f5b32dcc45d315504a30b53472be",
+"https://web.spaggiari.eu/sdg2/Interpelli/PRCN0001/a6c85f14-fbfb-4870-ac7c-13c772298934",
+"https://nuvola.madisoft.it/interpelli/PRIC819001/docenti"
+],
+"provincia": "Parma",
+"avvisi": 1,
+"errore": null
+},
 "https://venezia.istruzioneveneto.gov.it/": {
 "grezzi": 1,
 "scartati": [
@@ -112,28 +124,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 2,
-"scartati": [
-"https://gecodoc-argoweb.eu-south-1.portaleargo.it/AWP/SM28284/58aa3ea6a01cb98166f4f5b32dcc45d315504a30b53472be",
-"https://web.spaggiari.eu/sdg2/Interpelli/PRCN0001/a6c85f14-fbfb-4870-ac7c-13c772298934"
-],
-"provincia": "Parma",
-"avvisi": 0,
-"errore": null
-},
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 23,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/a041/"
-],
-"provincia": "Ferrara",
-"avvisi": 13,
-"errore": null
-},
 "https://www.istruzioneimperia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -141,23 +131,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/": {
-"grezzi": 32,
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 25,
 "scartati": [
-"mailto:?subject=Condiviso&body=Interpello per il conferimento di una supplenza – Classe di concorso AH56 – I.C",
-"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso AH56 – I.",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
-"https://cl-en.usr.sicilia.it/category/news/"
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/interpelli-postocomune-sostegno-infanzia-primaria/",
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/a041/"
 ],
-"provincia": "Enna",
+"provincia": "Ferrara",
 "avvisi": 13,
-"errore": null
-},
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 16,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 16,
 "errore": null
 },
 "https://www.istruzionepiacenza.it/": {
@@ -167,8 +150,15 @@
 "avvisi": 0,
 "errore": null
 },
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 23,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 23,
+"errore": null
+},
 "https://re.istruzioneer.gov.it/category/docenti/": {
-"grezzi": 51,
+"grezzi": 53,
 "scartati": [
 "https://re.istruzioneer.gov.it/category/docenti/",
 "https://re.istruzioneer.gov.it/category/docenti/interpello/",
@@ -176,19 +166,7 @@
 "https://re.istruzioneer.gov.it/category/docenti/"
 ],
 "provincia": "Reggio Emilia",
-"avvisi": 37,
-"errore": null
-},
-"https://www.istruzionebrindisi.it/category/interpelli/": {
-"grezzi": 28,
-"scartati": [
-"https://www.istruzionebrindisi.it/category/interpelli/",
-"https://www.istruzionebrindisi.it/interpello-nazionale-per-supplenza-su-classe-di-concorso-a044-scienze-e-tecn",
-"https://www.istruzionebrindisi.it/category/interpelli/",
-"https://www.istruzionebrindisi.it/interpello-cdc-a041-scienze-e-tecnologie-informatiche-1-cattedra-18-sino-al-"
-],
-"provincia": "Brindisi",
-"avvisi": 6,
+"avvisi": 39,
 "errore": null
 },
 "https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
@@ -204,9 +182,21 @@
 "errore": null
 },
 "https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
-"grezzi": 0,
-"scartati": [],
+"grezzi": 2,
+"scartati": [
+"https://www.istruzionepiemonte.it/novara/category/personale-docente/",
+"https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/"
+],
 "provincia": "Novara",
+"avvisi": 0,
+"errore": null
+},
+"https://www.mim.gov.it/web/bergamo/": {
+"grezzi": 1,
+"scartati": [
+"https://www.mim.gov.it/documents/9081047/10244555/Disponibilita%27+posti+comuni+e+sostegno+I+grado-21.pdf/9bda"
+],
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": null
 },
@@ -217,6 +207,18 @@
 "avvisi": 0,
 "errore": null
 },
+"http://www.ustlucca.it/": {
+"grezzi": 21,
+"scartati": [
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/category/avvisi/",
+"https://ustlucca.it/category/circolari-e-decreti/",
+"https://ustlucca.it/category/comunicati/"
+],
+"provincia": "Lucca",
+"avvisi": 5,
+"errore": null
+},
 "https://www.uspbenevento.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -224,30 +226,16 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
-"https://www.mim.gov.it/web/bergamo/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.uat-caserta.it/": {
-"grezzi": 7,
-"scartati": [],
-"provincia": "Caserta",
-"avvisi": 7,
-"errore": null
-},
-"https://www.istruzione-ancona.it/": {
-"grezzi": 33,
+"https://www.istruzionebrindisi.it/category/interpelli/": {
+"grezzi": 37,
 "scartati": [
-"https://www.istruzione-ancona.it/author/veroli/",
-"https://www.istruzione-ancona.it/interpello-per-conferimento-supplenza-breve-scuola-infanzia-posto-sostegno-ad",
-"https://www.istruzione-ancona.it/author/veroli/",
-"https://www.istruzione-ancona.it/interpello-per-conferimento-di-supplenza-breve-cdc-adaa-scuola-infanzia-posto"
+"https://www.istruzionebrindisi.it/category/interpelli/",
+"https://www.istruzionebrindisi.it/interpello-nazionale-per-supplenza-su-classe-di-concorso-a044-scienze-e-tecn",
+"https://www.istruzionebrindisi.it/category/interpelli/",
+"https://www.istruzionebrindisi.it/interpello-cdc-a041-scienze-e-tecnologie-informatiche-1-cattedra-18-sino-al-"
 ],
-"provincia": "Ancona",
-"avvisi": 14,
+"provincia": "Brindisi",
+"avvisi": 13,
 "errore": null
 },
 "https://www.mim.gov.it/web/como/interpelli-ricerca-supplenti/": {
@@ -262,38 +250,21 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.uat-caserta.it/": {
+"grezzi": 7,
+"scartati": [],
+"provincia": "Caserta",
+"avvisi": 7,
+"errore": null
+},
 "https://www.uspsi.it/": {
-"grezzi": 27,
+"grezzi": 37,
 "scartati": [
 "https://www.uspsi.it/2026/10/",
 "https://www.uspsi.it/2026/10/"
 ],
 "provincia": "Siena",
-"avvisi": 25,
-"errore": null
-},
-"https://www.mim.gov.it/web/nuoro/interpelli/": {
-"grezzi": 127,
-"scartati": [
-"https://www.mim.gov.it/web/nuoro/-/interpello-nazionale-individuazione-docente-in-possesso-di-idoneo-titolo-di",
-"https://www.mim.gov.it/web/nuoro/-/interpello-per-supplenza-breve-classe-di-concorso-as12-discipline-letterari",
-"https://www.mim.gov.it/web/nuoro/-/2-interpello-per-incarico-supplenza-classe-di-concorso-am2a-francese-nella-",
-"https://www.mim.gov.it/web/nuoro/-/interpello-provinciale-urgente-per-l-assegnazione-supplenza-breve-per-n-100"
-],
-"provincia": "Nuoro",
-"avvisi": 2,
-"errore": null
-},
-"https://www.mim.gov.it/web/varese/interpelli-ricerca-supplenti/": {
-"grezzi": 406,
-"scartati": [
-"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-sostegno-primaria-adee-per-supplenze-inferiori",
-"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-comune-primaria-eeee-per-supplenze-inferiori-a",
-"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-comune-infanzia-aaaa-per-supplenze-inferiori-a",
-"https://www.mim.gov.it/web/varese/-/vaic87700a_-_interpello_posto_sostegno_infanzia_adaa_per_supplenze_inferio"
-],
-"provincia": "Varese",
-"avvisi": 10,
+"avvisi": 35,
 "errore": null
 },
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
@@ -306,30 +277,6 @@
 ],
 "provincia": "Palermo",
 "avvisi": 18,
-"errore": null
-},
-"https://www.uspascolipiceno.it/": {
-"grezzi": 8,
-"scartati": [
-"https://www.uspascolipiceno.it/wordpress/interpello-istituto-comprensivo-interprovinciale-dei-sibillini-classe",
-"https://www.uspascolipiceno.it/wordpress/ii-interpello-cl-concorso-ai55-percussioni-liceo-scientifico-statale-",
-"https://www.uspascolipiceno.it/wordpress/interpello-supplenza-breve-cl-concorso-a042-istituto-tecnico-tecnolog",
-"https://www.uspascolipiceno.it/wordpress/avviso-interpello-c-d-c-be02-conversazione-in-lingua-straniera-russo-"
-],
-"provincia": "Ascoli Piceno",
-"avvisi": 0,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/": {
-"grezzi": 710,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/generale/",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/interpelli-docenti/",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-bonaccorso-da-montemagno-per-supplenza-scuo"
-],
-"provincia": "Pistoia",
-"avvisi": 0,
 "errore": null
 },
 "https://www.ustlecce.it/": {
@@ -345,5 +292,65 @@
 "provincia": "Firenze",
 "avvisi": 0,
 "errore": "ConnectTimeout"
+},
+"https://www.istruzione-ancona.it/": {
+"grezzi": 51,
+"scartati": [
+"https://www.istruzione-ancona.it/interpello-per-il-conferimento-di-una-supplenza-posto-sostegno-scuola-primari",
+"https://www.istruzione-ancona.it/author/stefania/",
+"https://www.istruzione-ancona.it/interpello-per-il-conferimento-di-una-supplenza-per-la-classe-di-concorso-sos",
+"https://www.istruzione-ancona.it/author/veroli/"
+],
+"provincia": "Ancona",
+"avvisi": 20,
+"errore": null
+},
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/": {
+"grezzi": 819,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/generale/",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/interpelli-docenti/",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-bonaccorso-da-montemagno-per-supplenza-scuo"
+],
+"provincia": "Pistoia",
+"avvisi": 0,
+"errore": null
+},
+"https://www.mim.gov.it/web/varese/interpelli-ricerca-supplenti/": {
+"grezzi": 478,
+"scartati": [
+"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-sostegno-primaria-adee-per-supplenze-inferiori",
+"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-comune-primaria-eeee-per-supplenze-inferiori-a",
+"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-comune-infanzia-aaaa-per-supplenze-inferiori-a",
+"https://www.mim.gov.it/web/varese/-/vaic87700a_-_interpello_posto_sostegno_infanzia_adaa_per_supplenze_inferio"
+],
+"provincia": "Varese",
+"avvisi": 12,
+"errore": null
+},
+"https://www.mim.gov.it/web/nuoro/interpelli/": {
+"grezzi": 133,
+"scartati": [
+"https://www.mim.gov.it/web/nuoro/-/interpello-nazionale-individuazione-docente-in-possesso-di-idoneo-titolo-di",
+"https://www.mim.gov.it/web/nuoro/-/interpello-per-supplenza-breve-classe-di-concorso-as12-discipline-letterari",
+"https://www.mim.gov.it/web/nuoro/-/2-interpello-per-incarico-supplenza-classe-di-concorso-am2a-francese-nella-",
+"https://www.mim.gov.it/web/nuoro/-/interpello-provinciale-urgente-per-l-assegnazione-supplenza-breve-per-n-100"
+],
+"provincia": "Nuoro",
+"avvisi": 2,
+"errore": null
+},
+"https://www.uspascolipiceno.it/": {
+"grezzi": 21,
+"scartati": [
+"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
+"https://www.uspascolipiceno.it/wordpress/category/interpelli/",
+"https://www.uspascolipiceno.it/wordpress/interpello-istituto-comprensivo-interprovinciale-dei-sibillini-classe",
+"https://www.uspascolipiceno.it/wordpress/ii-interpello-cl-concorso-ai55-percussioni-liceo-scientifico-statale-"
+],
+"provincia": "Ascoli Piceno",
+"avvisi": 4,
+"errore": null
 }
 }
