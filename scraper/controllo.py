@@ -83,6 +83,8 @@ def main() -> int:
     (D / "controllo_buchi.txt").write_text(
         f"{oggi}: {voce}\n\nAVVISI CHE MANCANO:\n" + "\n".join(f"- {b['classi']} {b['provincia']} {b['link']}\n    {b['testo']}" for b in buchi) + "\n", "utf-8")
     print(voce)
+    print("\n".join(S.REPORT[-40:]))
+    print(f.errs)
     return 0
 
 
