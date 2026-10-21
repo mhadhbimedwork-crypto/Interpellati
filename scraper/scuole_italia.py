@@ -41,8 +41,8 @@ def main() -> int:
         return 2
     nome, sigle = AREE[area]
     sicilia.configura(area, tuple(sigle.split()), nome)
-    sicilia.MAX_PER_RUN = int(os.environ.get("SCUOLE_PER_ESECUZIONE", "450"))
-    sicilia.THREADS = 16
+    sicilia.MAX_PER_RUN = int(os.environ.get("SCUOLE_PER_ESECUZIONE", "900"))
+    sicilia.THREADS = 32
     budget = int(os.environ.get("BUDGET_S", "1500"))
     t0 = time.time()
 

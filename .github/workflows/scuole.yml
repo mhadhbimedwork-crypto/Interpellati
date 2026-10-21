@@ -2,7 +2,7 @@ name: Scuole d'Italia
 on:
   workflow_dispatch:
   schedule:
-    - cron: "41 * * * *"
+    - cron: "11,41 * * * *"
 permissions:
   contents: write
 concurrency:
