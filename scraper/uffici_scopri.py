@@ -32,6 +32,8 @@ def candidati(prov: str, sigla: str, reg: str) -> list[str]:
          f"www.ufficioscolastico{p}.it", f"www.ufficioscolasticoprovinciale.{p}.it", f"www.ust.{p}.it", f"www.istruzione{p}.it",
          f"{p}.istruzione.it", f"www.uspu{p}.it", f"www.usr{sg}.it", f"www.usp-{p}.it", f"www.ust-{p}.it", f"{sg}.istruzione.it",
          f"www.atp{sg}.it", f"www.ust{sg}.it", f"www.usp{sg}.it"]
+    c += [f"www.mim.gov.it/web/{p}/interpelli-ricerca-supplenti", f"www.mim.gov.it/web/{p}/interpelli", f"www.mim.gov.it/web/{p}",
+          f"www.mim.gov.it/web/{sg}/interpelli-ricerca-supplenti"]
     return c
 
 
@@ -45,7 +47,7 @@ def prova(args):
         if r.status_code != 200 or len(r.text) < 1500:
             continue
         t = r.text.lower()
-        if slug(prov)[:6] in slug(t[:60000]) and re.search(r"ufficio scolastico|ambito territoriale|ust |atp |usp |provveditorato|interpell", t):
+        if slug(prov)[:6] in slug(t[:60000]) and re.search(r"ufficio scolastico|ambito territoriale|ust |atp |usp |provveditorato|interpell|ricerca supplenti", t):
             return {"nome": f"Ufficio scolastico {prov}", "provincia": prov, "regione": S.PROVINCE[prov][1], "url": r.url}
     return None
 
@@ -63,7 +65,6 @@ def sonda_lombardia() -> None:
 
 
 def main() -> int:
-    sonda_lombardia()
     lavori = [(p, h) for p, (sg, rg) in S.PROVINCE.items() for h in candidati(p, sg, rg)]
     trovati: dict[str, dict] = {}
     with ThreadPoolExecutor(48) as ex:
