@@ -146,6 +146,7 @@ def main() -> int:
         per[(it["link"], tuple(it["classi"]))] = it
     tp.parent.mkdir(parents=True, exist_ok=True)
     tp.write_text(json.dumps(list(per.values()), ensure_ascii=False, indent=0) + "\n", "utf-8")
+    (D / "scuole" / f"uffici{k}_log.txt").write_text("\n".join(l for l in S.REPORT if "catena" in l or "robots" in l or "HTTP" in l)[:20000] + "\n", "utf-8")
     print(f"turno {k}/{n}: uffici {len(uff)} · avvisi {len(trovati)} · in attesa {len(per)} · {int(time.time()-t0)}s")
     return 0
 
