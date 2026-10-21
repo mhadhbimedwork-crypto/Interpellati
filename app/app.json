@@ -2,7 +2,7 @@
   "expo": {
     "name": "Interpellati",
     "slug": "interpellati",
-    "version": "1.5.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -17,7 +17,14 @@
       },
       "permissions": [
         "POST_NOTIFICATIONS",
-        "RECEIVE_BOOT_COMPLETED"
+        "RECEIVE_BOOT_COMPLETED",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "blockedPermissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_BACKGROUND_LOCATION",
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR"
       ]
     },
     "plugins": [
@@ -28,7 +35,19 @@
           "defaultChannel": "default"
         }
       ],
-      "expo-background-task"
-    ]
+      "expo-background-task",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Serve solo se scegli «Usa la mia posizione» per calcolare la distanza dalle scuole. La posizione resta sul telefono.",
+          "isAndroidBackgroundLocationEnabled": false,
+          "isAndroidForegroundServiceEnabled": false
+        }
+      ]
+    ],
+    "scheme": "interpellati",
+    "extra": {
+      "serverUrl": ""
+    }
   }
 }

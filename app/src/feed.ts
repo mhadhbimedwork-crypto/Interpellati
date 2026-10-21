@@ -2,6 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as BackgroundTask from 'expo-background-task';
 import * as Notifications from 'expo-notifications';
 import * as TaskManager from 'expo-task-manager';
+import { feedServer, modalitaServer, registrato } from './server';
 
 export const FEED_URL =
   'https://raw.githubusercontent.com/mhadhbimedwork-crypto/Interpellati/main/data/feed.json';
@@ -41,7 +42,7 @@ export type Interpello = {
   indirizzo?: string;
   lettoDa?: string;
 };
-export type Feed = { aggiornato?: string; fonti?: number; sicilia?: { istituti: number; conSito: number; letti: number; errori: number; uffici: number } | null; interpelli: Interpello[] };
+export type Feed = { aggiornato?: string; stato?: string; fonti?: number; sicilia?: { istituti: number; conSito: number; letti: number; errori: number; uffici: number } | null; interpelli: Interpello[] };
 
 export const ABIL_URL =
   'https://raw.githubusercontent.com/mhadhbimedwork-crypto/Interpellati/main/data/abilitazioni.json';
@@ -106,6 +107,18 @@ export async function loadCachedFeed(): Promise<Feed | null> {
 }
 
 export async function fetchFeed(): Promise<Feed> {
+  // Con il server attivo i dati arrivano filtrati per questo telefono (richiesta firmata con la sua chiave)
+  if (modalitaServer() && (await registrato())) {
+    const d = await feedServer();
+    if (d === null) {
+      const c = await loadCachedFeed();
+      if (c) return c;
+      throw new Error('Nessun dato salvato');
+    }
+    const f: Feed = { aggiornato: d.aggiornato, interpelli: d.interpelli, stato: d.stato } as Feed;
+    await AsyncStorage.setItem(K_FEED, JSON.stringify(f));
+    return f;
+  }
   const res = await fetch(FEED_URL + '?t=' + Date.now(), { headers: { 'Cache-Control': 'no-cache' } });
   if (!res.ok) throw new Error('Server dati non raggiungibile (' + res.status + ')');
   const feed = (await res.json()) as Feed;
