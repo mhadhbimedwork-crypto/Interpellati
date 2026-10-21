@@ -149,6 +149,11 @@ class Fetcher:
             with socket.create_connection((host, 443), timeout=15) as sk, ctx.wrap_socket(sk, server_hostname=host) as ss:
                 der = ss.getpeercert(True)
             cert = x509.load_der_x509_certificate(der)
+            try:
+                san = cert.extensions.get_extension_for_class(x509.SubjectAlternativeName).value.get_values_for_type(x509.DNSName)
+            except Exception:  # noqa: BLE001
+                san = []
+            log(f"  certificato {host}: emittente={cert.issuer.rfc4514_string()[:90]} soggetto={cert.subject.rfc4514_string()[:60]} san={san[:4]} scade={cert.not_valid_after_utc.date()}")
             extra = b""
             for _ in range(3):
                 aia = cert.extensions.get_extension_for_class(x509.AuthorityInformationAccess).value
