@@ -44,5 +44,10 @@ jobs:
           if git diff --cached --quiet; then echo "nessuna modifica"; exit 0; fi
           git add data/ultima_scansione.txt
           git commit -m "dati: scansione $(date -u +%Y-%m-%dT%H:%MZ)"
-          git pull --rebase origin main
-          git push
+          # un altro workflow (abilitazioni, elenco) puo' aver scritto nel frattempo: in conflitto vincono i dati di questa scansione
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs origin main || { git rebase --abort; git fetch origin main; git reset --soft origin/main; git commit -qm "dati: scansione (ricomposta)" || true; }
+            git push && exit 0
+            sleep $((i*5))
+          done
+          exit 1
