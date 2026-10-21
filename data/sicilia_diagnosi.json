@@ -84,9 +84,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.cangiamila.edu.it/",
   "sito": "https://www.camgiamila.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.cangiamila.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "AGIC84400N": {
   "dns_pubblico": "no",
@@ -120,24 +126,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 500",
-  "motivo": "risponde ma con errore: HTTP 500",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icgtomasidilampedusa.edu.it/",
   "sito": "https://www.icdarrigotomasi.edu.it/",
   "tentativi": [
    [
-    "https://www.icdarrigotomasi.edu.it/",
-    "HTTP 500"
-   ],
-   [
-    "http://www.icdarrigotomasi.edu.it/",
-    "HTTP 500"
-   ],
-   [
-    "https://icdarrigotomasi.edu.it/",
-    "HTTP 500"
-   ],
-   [
-    "http://icdarrigotomasi.edu.it/",
-    "HTTP 500"
+    "https://www.icgtomasidilampedusa.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -145,9 +140,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icandreacamilleri.edu.it/",
   "sito": "https://www.icbersagliereurso.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icandreacamilleri.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "AGIC86100B": {
   "dns_pubblico": "no",
@@ -223,11 +224,11 @@
   "dns_runner": false,
   "err": "ConnectionError",
   "motivo": "recuperato",
-  "nuovo": "https://www.iissarena.edu.it/",
+  "nuovo": "https://www.fermilicata.edu.it/",
   "sito": "https://www.iissarena.gov.it/",
   "tentativi": [
    [
-    "https://www.iissarena.edu.it/",
+    "https://www.fermilicata.it/",
     "OK"
    ]
   ]
@@ -250,9 +251,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iiss-pirandello-bivona.edu.it/",
   "sito": "https://liceobivona.altervista.org/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iiss-pirandello-bivona.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "AGIS021005": {
   "dns_pubblico": "no",
@@ -302,7 +309,24 @@
   "err": "ConnectionError",
   "motivo": "dominio inesistente (sito dismesso o cambiato)",
   "sito": "https://comprensivovallelungavillalba.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.comprensivovallelungamarianopoli.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://www.comprensivovallelungamarianopoli.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://comprensivovallelungamarianopoli.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://comprensivovallelungamarianopoli.edu.it/",
+    "HTTP 403"
+   ]
+  ]
  },
  "CLIC807003": {
   "dns_pubblico": "no",
@@ -400,6 +424,22 @@
   "motivo": "risponde ma con errore: HTTP 403",
   "sito": "https://www.icscaponnettocl.edu.it/",
   "tentativi": [
+   [
+    "https://www.icscaponnettosciascia.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://www.icscaponnettosciascia.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://icscaponnettosciascia.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://icscaponnettosciascia.edu.it/",
+    "HTTP 403"
+   ],
    [
     "https://www.icscaponnettocl.edu.it/",
     "HTTP 403"
@@ -568,7 +608,24 @@
   "err": "ConnectionError",
   "motivo": "dominio inesistente (sito dismesso o cambiato)",
   "sito": "https://istitutocomprensivoromagnoli.edu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icsbalsamo.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://www.icsbalsamo.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://icsbalsamo.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://icsbalsamo.edu.it/",
+    "HTTP 403"
+   ]
+  ]
  },
  "CLIS002004": {
   "dns_pubblico": "si",
@@ -621,7 +678,7 @@
   "sito": "https://www.issrusso.gov.it/",
   "tentativi": [
    [
-    "https://www.issrusso.edu.it/",
+    "https://www.iissrusso.edu.it/",
     "OK"
    ]
   ]
@@ -763,9 +820,26 @@
   "dns_pubblico": "vuoto",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "nessuna variante risolve",
+  "motivo": "risponde ma con errore: HTTP 403",
   "sito": "https://www.hodierna.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.rapisardidavinci.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://www.rapisardidavinci.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://rapisardidavinci.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://rapisardidavinci.edu.it/",
+    "HTTP 403"
+   ]
+  ]
  },
  "CTIC80800X": {
   "dns_pubblico": "no",
@@ -866,9 +940,15 @@
   "dns_pubblico": "vuoto",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "nessuna variante risolve",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icmottasantanastasia.edu.it/",
   "sito": "https://www.icsdannunziomotta.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icmottasantanastasia.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "CTIC83900G": {
   "dns_pubblico": "no",
@@ -888,32 +968,27 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icmarconiscuola.edu.it/",
   "sito": "https://www.marconiscuola.edu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icmarconiscuola.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "CTIC84500V": {
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "SSLError",
-  "motivo": "risponde ma con errore: HTTP 404",
+  "motivo": "recuperato",
+  "nuovo": "https://www.donmilanipaterno.edu.it/",
   "sito": "https://www.paternodonmilani.it/",
   "tentativi": [
    [
-    "https://www.paternodonmilani.it/",
-    "HTTP 404"
-   ],
-   [
-    "http://www.paternodonmilani.it/",
-    "HTTP 404"
-   ],
-   [
-    "https://paternodonmilani.it/",
-    "HTTP 404"
-   ],
-   [
-    "http://paternodonmilani.it/",
-    "HTTP 404"
+    "https://www.donmilanipaterno.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -921,9 +996,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsaviosangregorio.edu.it/",
   "sito": "https://www.icsaviosangregorio.info/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icsaviosangregorio.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "CTIC85300T": {
   "dns_pubblico": "no",
@@ -946,6 +1027,22 @@
   "motivo": "dominio inesistente (sito dismesso o cambiato)",
   "sito": "https://www.icvizzini.it/",
   "tentativi": [
+   [
+    "https://www.iosvizzini.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.iosvizzini.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://iosvizzini.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://iosvizzini.edu.it/",
+    "pagina non scolastica"
+   ],
    [
     "https://www.icvizzini.edu.it/",
     "pagina non scolastica"
@@ -984,7 +1081,24 @@
   "err": "ConnectionError",
   "motivo": "dominio inesistente (sito dismesso o cambiato)",
   "sito": "https://www.omnicomprensivopestalozzi.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iopestalozzi.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://www.iopestalozzi.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://iopestalozzi.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://iopestalozzi.edu.it/",
+    "HTTP 403"
+   ]
+  ]
  },
  "CTIC864008": {
   "dns_pubblico": "no",
@@ -992,7 +1106,24 @@
   "err": "ConnectionError",
   "motivo": "dominio inesistente (sito dismesso o cambiato)",
   "sito": "https://www.icdusmetcatania.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icdusmetdoria.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.icdusmetdoria.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://icdusmetdoria.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://icdusmetdoria.edu.it/",
+    "pagina non scolastica"
+   ]
+  ]
  },
  "CTIC86700Q": {
   "dns_pubblico": "no",
@@ -1037,9 +1168,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icspitagora.edu.it/",
   "sito": "https://www.icspitagora.com/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icspitagora.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "CTIC886005": {
   "dns_pubblico": "no",
@@ -1126,40 +1263,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "SSLError",
-  "motivo": "risponde ma con errore: pagina non scolastica",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsdiazmanzoni.edu.it/",
   "sito": "https://www.scuoladiazcatania.it/",
   "tentativi": [
    [
-    "https://www.scuoladiazcatania.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.scuoladiazcatania.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://scuoladiazcatania.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://scuoladiazcatania.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://www.scuoladiazcatania.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.scuoladiazcatania.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://scuoladiazcatania.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://scuoladiazcatania.edu.it/",
-    "pagina non scolastica"
+    "https://www.icsdiazmanzoni.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -1251,9 +1361,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icvespuccict.edu.it/",
   "sito": "https://www.icvespucci.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icvespuccict.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "CTIC8AK00G": {
   "dns_pubblico": "no",
@@ -1273,9 +1389,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icvergariposto.edu.it/",
   "sito": "https://wwwicvergariposto.edu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icvergariposto.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "CTIC8AN003": {
   "dns_pubblico": "no",
@@ -1323,9 +1445,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icgalileiacireale.edu.it/",
   "sito": "https://www.icgalilei-acireale.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icgalileiacireale.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "CTIC8AZ00A": {
   "dns_pubblico": "no",
@@ -1345,9 +1473,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://scuolaninomartoglio.edu.it/",
   "sito": "https://www.scuolaninomartoglio.udu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.scuolaninomartoglio.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "CTIC8BP009": {
   "dns_pubblico": "no",
@@ -1370,11 +1504,11 @@
   "dns_runner": false,
   "err": "ConnectionError",
   "motivo": "recuperato",
-  "nuovo": "https://fermieredia.edu.it/",
+  "nuovo": "https://www.iisamari.edu.it/",
   "sito": "https://www.fermieredia.it/",
   "tentativi": [
    [
-    "https://www.fermieredia.edu.it/",
+    "https://www.iisamari.edu.it/",
     "OK"
    ]
   ]
@@ -1383,9 +1517,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iiscucuzzaeuclide.edu.it/",
   "sito": "https://www.isiscucuzza.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iiscucuzzaeuclide.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "CTIS01100X": {
   "dns_pubblico": "no",
@@ -1462,7 +1602,7 @@
   "dns_runner": false,
   "err": "ConnectionError",
   "motivo": "recuperato",
-  "nuovo": "https://www.gulliepennisi.it/",
+  "nuovo": "http://www.gulliepennisi.it/",
   "sito": "https://www.gulliepennisi.gov.it/",
   "tentativi": [
    [
@@ -1483,6 +1623,10 @@
    ],
    [
     "https://www.gulliepennisi.it/",
+    "HTTP 500"
+   ],
+   [
+    "http://www.gulliepennisi.it/",
     "OK"
    ]
   ]
@@ -1523,24 +1667,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "ConnectTimeout",
-  "motivo": "il server non risponde (spento o blocca l'estero)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.alberghierogiarre.edu.it/",
   "sito": "https://www.ipssarfalconegiarre.it/",
   "tentativi": [
    [
-    "https://www.ipssarfalconegiarre.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://www.ipssarfalconegiarre.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "https://ipssarfalconegiarre.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://ipssarfalconegiarre.it/",
-    "ConnectTimeout"
+    "https://www.alberghierogiarre.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -1620,24 +1753,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 404",
-  "motivo": "risponde ma con errore: HTTP 404",
+  "motivo": "recuperato",
+  "nuovo": "https://www.itarchimede.com/",
   "sito": "https://www.itisarchimede.com/index.php?option=com_content&view=article&id=479&Itemid=250/",
   "tentativi": [
    [
-    "https://www.itisarchimede.com/",
-    "HTTP 404"
-   ],
-   [
-    "http://www.itisarchimede.com/",
-    "HTTP 404"
-   ],
-   [
-    "https://itisarchimede.com/",
-    "HTTP 404"
-   ],
-   [
-    "http://itisarchimede.com/",
-    "HTTP 404"
+    "https://www.itarchimede.it/",
+    "OK"
    ]
   ]
  },
@@ -1671,13 +1793,33 @@
    ]
   ]
  },
+ "CTVC01000N": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "senza sito MIM",
+  "motivo": "recuperato",
+  "nuovo": "https://convittonazionalemariocutelli.edu.it/",
+  "sito": "https://convittonazionalemariocutelli.edu.it/",
+  "tentativi": [
+   [
+    "https://www.convittonazionalemariocutelli.edu.it/",
+    "OK"
+   ]
+  ]
+ },
  "ENIC81500A": {
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsantachiaraenna.edu.it/",
   "sito": "https://www.santachiaraenna.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icsantachiaraenna.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "ENIC81900N": {
   "dns_pubblico": "no",
@@ -1747,40 +1889,41 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.comprensivofalconecascino.edu.it/",
   "sito": "https://enic82600r@pec.istruzione.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.comprensivofalconecascino.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "ENIC82700L": {
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iccarminenicosia.edu.it/",
   "sito": "https://enic82600r@pec.istruzione.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iccarminenicosia.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "ENIS00700G": {
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.majoranacascino.edu.it/",
   "sito": "https://www.itispiazza.gov.it/",
   "tentativi": [
    [
-    "https://www.itispiazza.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.itispiazza.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://itispiazza.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://itispiazza.it/",
-    "pagina non scolastica"
+    "https://www.majoranacascino.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -1788,9 +1931,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://iiscolajannifarinato.edu.it/",
   "sito": "https://www.iisnapoleonecolajannienna.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iiscolajannienna.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "ENIS02100T": {
   "dns_pubblico": "no",
@@ -1810,9 +1959,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.istitutocomprensivotusa.edu.it/",
   "sito": "https://www.istitutocomprensivoditusa.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.istitutocomprensivotusa.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "MEIC819005": {
   "dns_pubblico": "no",
@@ -1846,24 +2001,27 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icbgenovese.edu.it/",
   "sito": "https://www.icbgenovese.udu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icbgenovese.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "MEIC83200G": {
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 530",
-  "motivo": "risponde ma con errore: HTTP 530",
+  "motivo": "recuperato",
+  "nuovo": "https://icroccalumeragiudicelivatino.edu.it/",
   "sito": "https://www.icroccalumera.it/",
   "tentativi": [
    [
-    "https://www.icroccalumera.it/",
-    "HTTP 530"
-   ],
-   [
-    "http://www.icroccalumera.it/",
-    "HTTP 530"
+    "https://www.icroccalumeragiudicelivatino.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -1871,33 +2029,57 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icstefanodarrigo.edu.it/",
   "sito": "https://www.icaliterme.edu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icstefanodarrigo.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "MEIC83800E": {
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iccastellumberto.edu.it/",
   "sito": "https://iccastellumberto.com.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iccastellumberto.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "MEIC83900A": {
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icbrolo.edu.it/",
   "sito": "https://www.i.c.brolo.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icbrolo.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "MEIC842006": {
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icpacedelmela.edu.it/",
   "sito": "https://www.comprensivopacedelmela.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icpacedelmela.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "MEIC847009": {
   "dns_pubblico": "no",
@@ -1959,9 +2141,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iclucianimessina.edu.it/",
   "sito": "https://www.iclucianimessinaq.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iclucianimessina.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "MEIC864003": {
   "dns_pubblico": "no",
@@ -2093,9 +2281,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icmazzinigallo.edu.it/",
   "sito": "https://www.mazzinigallo.edu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icmazzinigallo.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "MEIC8AA00E": {
   "dns_pubblico": "no",
@@ -2129,9 +2323,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ictremestierime.edu.it/",
   "sito": "https://www.icditremestieri.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.ictremestierime.it/",
+    "OK"
+   ]
+  ]
  },
  "MEIC8AD002": {
   "dns_pubblico": "no",
@@ -2193,9 +2393,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iisantonellomessina.edu.it/",
   "sito": "https://www.isminutoli.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iisantonellomessina.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "MEIS03200Q": {
   "dns_pubblico": "no",
@@ -2216,11 +2422,11 @@
   "dns_runner": false,
   "err": "ConnectionError",
   "motivo": "recuperato",
-  "nuovo": "https://www.icsgagliano.edu.it/",
+  "nuovo": "https://www.icaltavillamilicia.edu.it/",
   "sito": "http://icsgagliano.gov.it/",
   "tentativi": [
    [
-    "https://www.icsgagliano.edu.it/",
+    "https://www.icaltavillamilicia.edu.it/",
     "OK"
    ]
   ]
@@ -2229,9 +2435,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsperezcalcutta.edu.it/",
   "sito": "https://www.icsperezmadreteresadicalcutta.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icsperezcalcutta.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIC817007": {
   "dns_pubblico": "no",
@@ -2304,24 +2516,13 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icstaiello.edu.it/",
   "sito": "https://www.ictaiello.edu.it/",
   "tentativi": [
    [
-    "https://www.ictaiello.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://www.ictaiello.it/",
-    "HTTP 404"
-   ],
-   [
-    "https://ictaiello.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://ictaiello.it/",
-    "HTTP 404"
+    "https://www.icstaiello.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -2357,9 +2558,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iccasteldaccia.edu.it/",
   "sito": "https://www.istitutocomprensivocasteldaccia.com/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iccasteldaccia.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIC846007": {
   "dns_pubblico": "no",
@@ -2379,9 +2586,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsferracavallo.edu.it/",
   "sito": "https://www.ics-sferracavallo.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icsferracavallo.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIC84900P": {
   "dns_pubblico": "no",
@@ -2531,9 +2744,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsgiovannifalcone.edu.it/",
   "sito": "https://www.icgiovannifalcone.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icsgiovannifalcone.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIC87700V": {
   "dns_pubblico": "no",
@@ -2621,36 +2840,45 @@
    ]
   ]
  },
+ "PAIC892001": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "senza sito MIM",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icmattarellabonagia.edu.it/",
+  "sito": "https://www.icmattarellabonagia.edu.it/",
+  "tentativi": [
+   [
+    "https://www.icmattarellabonagia.edu.it/",
+    "OK"
+   ]
+  ]
+ },
  "PAIC89300R": {
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsmarconipalermo.edu.it/",
   "sito": "http://www.scuolamediamarconipa.edu.it/index.php/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icsmarconipalermo.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIC8A1008": {
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsluigicapuana.edu.it/",
   "sito": "https://www.scuolaluigicapuana.gov.it/",
   "tentativi": [
    [
-    "https://www.scuolaluigicapuana.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.scuolaluigicapuana.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://scuolaluigicapuana.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://scuolaluigicapuana.edu.it/",
-    "pagina non scolastica"
+    "https://www.icsluigicapuana.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -2659,27 +2887,11 @@
   "dns_runner": true,
   "err": "non raggiungibile",
   "motivo": "recuperato",
-  "nuovo": "https://www.icsboccone.edu.it/",
+  "nuovo": "https://www.icboccone.edu.it/",
   "sito": "https://www.icsboccone.it/",
   "tentativi": [
    [
-    "https://www.icsboccone.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.icsboccone.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://icsboccone.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://icsboccone.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://www.icsboccone.edu.it/",
+    "https://www.icboccone.edu.it/",
     "OK"
    ]
   ]
@@ -2688,17 +2900,29 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.istcompbiagiosicilianodegaspericapaci.edu.it/",
   "sito": "https://www.icbiagiosiciliano.edu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.istcompbiagiosicilianodegaspericapaci.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIC8A500G": {
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icrosariolivatino.edu.it/",
   "sito": "https://www.icficarazzi.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icrosariolivatino.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIC8A900V": {
   "dns_pubblico": "no",
@@ -2760,9 +2984,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsuditoresetticarraro.it/",
   "sito": "https://www.icuditore-setticarraro.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icsuditoresetticarraro.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIC8AR00V": {
   "dns_pubblico": "no",
@@ -2846,9 +3076,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.istitutosuperiorebisacquino.edu.it/",
   "sito": "https://iisemanuelebasile.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.istitutosuperiorebisacquino.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIS018007": {
   "dns_pubblico": "si",
@@ -2879,17 +3115,29 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iissferrara.edu.it/",
   "sito": "https://www.iissfrancescoferrara.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iissferrara.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIS027002": {
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://iissvolta.edu.it/",
   "sito": "https://www.itivolta.pa.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iissvolta.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIS034005": {
   "dns_pubblico": "no",
@@ -2923,32 +3171,27 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ipssarpaoloborsellino.edu.it/",
   "sito": "http://www.ipssarborsellino.com/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.ipssarpaoloborsellino.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "PARH02000A": {
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "ConnectTimeout",
-  "motivo": "il server non risponde (spento o blocca l'estero)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ipsseoapiazza.it/",
   "sito": "https://www.ipssarpiazza.it/",
   "tentativi": [
    [
-    "https://www.ipssarpiazza.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://www.ipssarpiazza.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "https://ipssarpiazza.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://ipssarpiazza.it/",
-    "ConnectTimeout"
+    "https://www.ipsseoapiazza.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -2956,9 +3199,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.itetmarcopolo.edu.it/",
   "sito": "https://www.ittmarcopolo.org/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.itetmarcopolo.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "RGIC802008": {
   "dns_pubblico": "si",
@@ -3003,9 +3252,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.istitutocomprensivovittorini.it/",
   "sito": "https://www.comprensivovittorini.eu/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.istitutocomprensivovittorini.it/",
+    "OK"
+   ]
+  ]
  },
  "RGIC82000T": {
   "dns_pubblico": "no",
@@ -3025,9 +3280,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.crispivetri.edu.it/",
   "sito": "https://www.fcrispivetri.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.crispivetri.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "RGIC829008": {
   "dns_pubblico": "no",
@@ -3047,9 +3308,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.palazzellovannanto.edu.it/",
   "sito": "https://wwwistitutocomprensivovannanto.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.palazzellovannanto.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "RGIC83400Q": {
   "dns_pubblico": "no",
@@ -3069,9 +3336,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.scuolagiacomoalbogiovannixxiii.edu.it/",
   "sito": "https://www.scuolacaruano.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.scuolagiacomoalbogiovannixxiii.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "RGIS00200C": {
   "dns_pubblico": "no",
@@ -3133,9 +3406,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.vicoumbertogagliardi.edu.it/",
   "sito": "https://www.vicoumbertogaglierdi.edu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.vicoumbertogagliardi.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "RGRH020005": {
   "dns_pubblico": "si",
@@ -3155,9 +3434,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icvergamartoglio.edu.it/",
   "sito": "https://www.icmartogliosr.edu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icvergamartoglio.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "SRIC807008": {
   "dns_pubblico": "no",
@@ -3177,9 +3462,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.istitutocomprensivogiaraca.edu.it/",
   "sito": "https://www.decimogiaraca.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.istitutocomprensivogiaraca.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "SRIC816003": {
   "dns_pubblico": "no",
@@ -3199,17 +3490,29 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icvittorinisolarino.edu.it/",
   "sito": "https://www.icvittorini.edu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icvittorinisolarino.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "SRIC829005": {
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.vittorini.edu.it/",
   "sito": "https://icvittorinisr.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.vittorini.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "SRIC837004": {
   "dns_pubblico": "no",
@@ -3285,9 +3588,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icmessina.edu.it/",
   "sito": "https://www.icmessinapalazzolo.edu/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icmessina.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "SRIC86200R": {
   "dns_pubblico": "no",
@@ -3307,9 +3616,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.polivalentepalazzolo.edu.it/",
   "sito": "https://www.palazzolopolivalente.com/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.polivalentepalazzolo.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "SRIS009004": {
   "dns_pubblico": "no",
@@ -3344,11 +3659,11 @@
   "dns_runner": false,
   "err": "ConnectionError",
   "motivo": "recuperato",
-  "nuovo": "https://www.istitutoraelinoto.edu.it/",
+  "nuovo": "https://www.iissgagini.edu.it/",
   "sito": "http://www.istitutoraelinoto.gov.it/",
   "tentativi": [
    [
-    "https://www.istitutoraelinoto.edu.it/",
+    "https://www.iissgagini.edu.it/",
     "OK"
    ]
   ]
@@ -3362,7 +3677,7 @@
   "sito": "https://www.liceovittorinigorgia.gov.it/",
   "tentativi": [
    [
-    "https://www.liceovittorinigorgia.edu.it/",
+    "https://www.gorgiavittorinimoncada.edu.it/",
     "OK"
    ]
   ]
@@ -3372,11 +3687,11 @@
   "dns_runner": false,
   "err": "ConnectionError",
   "motivo": "recuperato",
-  "nuovo": "https://www.istitutoraelinoto.edu.it/",
+  "nuovo": "https://www.istitutoeinaudi.edu.it/",
   "sito": "http://www.istitutoraelinoto.gov.it/",
   "tentativi": [
    [
-    "https://www.istitutoraelinoto.edu.it/",
+    "https://www.istitutoeinaudi.edu.it/",
     "OK"
    ]
   ]
@@ -3385,9 +3700,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceofloridia.edu.it/",
   "sito": "https://www.liceodavincifloridia.gov.it/liceodavinci/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.liceofloridia.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "TPEE099009": {
   "dns_pubblico": "no",
@@ -3415,9 +3736,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://iccapuanapardo.edu.it/",
   "sito": "https://www.terzocircolocastelvetrano.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.iccapuanapardo.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "TPIC81600V": {
   "dns_pubblico": "no",
@@ -3451,9 +3778,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icpellegrinomarsala.edu.it/",
   "sito": "https://www.scuolapellegrino.gov.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icpellegrinomarsala.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "TPIC82100A": {
   "dns_pubblico": "no",
@@ -3550,24 +3883,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 503",
-  "motivo": "risponde ma con errore: HTTP 503",
+  "motivo": "recuperato",
+  "nuovo": "https://www.isdavincitorre.edu.it/",
   "sito": "https://www.isdavincitorre.eu/",
   "tentativi": [
    [
-    "https://www.isdavincitorre.eu/",
-    "HTTP 503"
-   ],
-   [
-    "http://www.isdavincitorre.eu/",
-    "HTTP 503"
-   ],
-   [
-    "https://isdavincitorre.eu/",
-    "HTTP 503"
-   ],
-   [
-    "http://isdavincitorre.eu/",
-    "HTTP 503"
+    "https://www.isdavincitorre.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -3575,16 +3897,13 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ferrignoaccardititone.edu.it/",
   "sito": "http://www.sciascia-erice.gov.it/",
   "tentativi": [
    [
-    "https://www.sciascia-erice.it/",
-    "ConnectionError"
-   ],
-   [
-    "http://www.sciascia-erice.it/",
-    "HTTP 403"
+    "https://www.ferrignoaccardititone.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -3592,9 +3911,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://liceofardellaximenes.edu.it/",
   "sito": "https://liceofardella.edu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.liceofardellaximenes.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "TPIS031005": {
   "dns_pubblico": "si",
