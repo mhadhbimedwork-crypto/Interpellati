@@ -112,7 +112,7 @@ def main() -> int:
         cache_date = json.loads(dp.read_text("utf-8"))
     except (OSError, ValueError):
         cache_date = {}
-    budget_date = [150]
+    budget_date = [200]
     def lavoro(o):
         try:
             grezzi = uno(f, o, since)
