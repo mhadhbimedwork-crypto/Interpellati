@@ -630,6 +630,14 @@ def put(items: dict, r: dict):
 def main() -> int:
     store = json.loads(DATA.read_text("utf-8")) if DATA.exists() else {"interpelli": []}
     items = {i["id"]: i for i in store.get("interpelli", [])}
+    for i in items.values():
+        # l'UST di Foggia ripubblica interpelli nazionali di scuole di altre province: senza prova, non sono di Foggia
+        if (i.get("fonte") or "").startswith("UST Foggia") and i.get("provincia") == "FG" and not i.get("codiceScuola") \
+                and "nazional" in (i.get("scuola") or "").lower() and "foggia" not in (i.get("scuola") or "").lower() \
+                and not (i.get("lat") and i.get("geo") == "scuola"):
+            for k in ("provincia", "regione", "lat", "lon", "geo"):
+                i.pop(k, None)
+            i["provincia"] = None
     known_links = {(i.get("link"), tuple(i.get("classi", [])), i.get("pubblicato")) for i in items.values()}
     sources = json.loads(SOURCES.read_text("utf-8"))
     f = Fetcher()
