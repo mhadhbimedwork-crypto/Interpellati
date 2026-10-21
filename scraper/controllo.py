@@ -14,9 +14,24 @@ D = S.ROOT / "data"
 TAG = "https://www.orizzontescuola.it/tag/interpelli/"
 
 
+PROVE = ["https://www.orizzontescuola.it/feed/", "https://www.orizzontescuola.it/tag/interpelli/feed/",
+         "https://www.orizzontescuola.it/?s=interpelli", "https://www.tecnicadellascuola.it/tag/interpelli",
+         "https://www.tecnicadellascuola.it/feed", "https://www.skuola.net/news/scuola/interpelli.html",
+         "https://www.orizzontescuola.it/tag/interpelli/"]
+
+
 def articoli(f) -> list[tuple[str, str]]:
-    html = f.get(TAG)
-    out = []
+    import requests
+    html, out = None, []
+    for u in PROVE:
+        try:
+            r = requests.get(u, timeout=25, headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36", "Accept-Language": "it-IT,it;q=0.9"})
+            S.log(f"prova {u}: HTTP {r.status_code} {len(r.text)}")
+            if r.status_code == 200 and len(r.text) > 2000 and not html:
+                html = r.text
+                S.log(f"  uso {u}")
+        except requests.RequestException as e:
+            S.log(f"prova {u}: {type(e).__name__}")
     if html:
         for a in BeautifulSoup(html, "html.parser").find_all("a", href=True):
             t = a.get_text(" ", strip=True)
