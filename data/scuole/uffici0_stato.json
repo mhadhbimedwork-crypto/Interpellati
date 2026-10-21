@@ -6,13 +6,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://como.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Como",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
 "scartati": [],
@@ -20,17 +13,24 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Monza e Brianza",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://brescia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Brescia",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://como.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Como",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Monza e Brianza",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -68,23 +68,23 @@
 "errore": "SSLError"
 },
 "https://re.istruzioneer.gov.it/": {
-"grezzi": 18,
+"grezzi": 19,
 "scartati": [
 "https://re.istruzioneer.gov.it/category/docenti/",
 "https://re.istruzioneer.gov.it/category/docenti/interpello/"
 ],
 "provincia": "Reggio Emilia",
-"avvisi": 16,
+"avvisi": 17,
 "errore": null
 },
 "https://me.usr.sicilia.it/": {
-"grezzi": 13,
+"grezzi": 22,
 "scartati": [
 "https://me.usr.sicilia.it/personale-docente-gae-decreto-rettifica-punteggio-totaro-patrizia/",
 "https://me.usr.sicilia.it/i-i-s-e-medi-barcellona-pozzo-di-gotto-avviso-di-interpello-nazionale-per-il-conferi"
 ],
 "provincia": "Messina",
-"avvisi": 11,
+"avvisi": 20,
 "errore": null
 },
 "http://www.istruzionevicenza.it/wordpress/": {
@@ -95,21 +95,21 @@
 "errore": null
 },
 "https://pc.istruzioneer.gov.it/": {
-"grezzi": 4,
+"grezzi": 6,
 "scartati": [],
 "provincia": "Piacenza",
-"avvisi": 4,
+"avvisi": 6,
 "errore": null
 },
 "https://fc.istruzioneer.gov.it/": {
-"grezzi": 5,
+"grezzi": 7,
 "scartati": [],
 "provincia": "Forlì-Cesena",
-"avvisi": 5,
+"avvisi": 7,
 "errore": null
 },
 "https://sr.usr.sicilia.it/": {
-"grezzi": 24,
+"grezzi": 27,
 "scartati": [
 "mailto:?subject=Condiviso&body=Interpello Nazionale ai sensi dell’art. 14 c. 22 O.M. 27/2026. Avviso finalizza",
 "https://twitter.com/home?status=Interpello Nazionale ai sensi dell’art. 14 c. 22 O.M. 27/2026. Avviso finalizz",
@@ -120,26 +120,19 @@
 "avvisi": 1,
 "errore": null
 },
-"http://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
-"errore": null
-},
 "https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 9,
+"grezzi": 15,
 "scartati": [
 "https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
 ],
 "provincia": "Rovigo",
-"avvisi": 8,
+"avvisi": 14,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
+"http://www.uspss.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Vicenza",
+"provincia": "Sassari",
 "avvisi": 0,
 "errore": null
 },
@@ -156,7 +149,7 @@
 "errore": null
 },
 "https://www.csateramo.it/wpusp/archive/category/news": {
-"grezzi": 23,
+"grezzi": 35,
 "scartati": [
 "https://www.csateramo.it/wpusp/archive/tag/assistenti-amministrativi",
 "https://www.csateramo.it/wpusp/archive/tag/assistenti-tecnici",
@@ -164,6 +157,13 @@
 "https://www.csateramo.it/wpusp/archive/interpello-nazionale-per-supplenza-cl-c-a027-matematica-e-fisica-3"
 ],
 "provincia": "Teramo",
+"avvisi": 0,
+"errore": null
+},
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
 "avvisi": 0,
 "errore": null
 },
@@ -188,41 +188,10 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.istruzionebrindisi.it/": {
-"grezzi": 17,
-"scartati": [
-"https://www.istruzionebrindisi.it/interpello-cdc-a042-scienze-e-tecnologie-meccaniche-8-ore-dal-27-10-2026-al-",
-"https://www.istruzionebrindisi.it/category/interpelli/",
-"https://www.istruzionebrindisi.it/interpello-nazionale-cdc-a040-scienze-e-tecnologie-elettriche-ed-elettronich",
-"https://www.istruzionebrindisi.it/interpello-nazionale-per-supplenza-su-classe-di-concorso-a042-scienze-e-tecn"
-],
-"provincia": "Brindisi",
-"avvisi": 3,
-"errore": null
-},
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionesavona.gov.it/pagine/interpelli-sv---as-2024-2025": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Savona",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
-"grezzi": 6,
-"scartati": [
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
-],
-"provincia": "Biella",
 "avvisi": 0,
 "errore": null
 },
@@ -248,6 +217,18 @@
 "avvisi": 1,
 "errore": null
 },
+"https://www.istruzionebrindisi.it/": {
+"grezzi": 24,
+"scartati": [
+"https://www.istruzionebrindisi.it/interpello-cdc-a042-scienze-e-tecnologie-meccaniche-8-ore-dal-27-10-2026-al-",
+"https://www.istruzionebrindisi.it/category/interpelli/",
+"https://www.istruzionebrindisi.it/interpello-nazionale-cdc-a040-scienze-e-tecnologie-elettriche-ed-elettronich",
+"https://www.istruzionebrindisi.it/interpello-per-selezione-personale-docente-scuola-primaria-posto-di-sostegno"
+],
+"provincia": "Brindisi",
+"avvisi": 6,
+"errore": null
+},
 "https://www.usppesarourbino.it/": {
 "grezzi": 8,
 "scartati": [
@@ -260,11 +241,16 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.usp-rieti.it/": {
-"grezzi": 7,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 7,
+"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
+"grezzi": 11,
+"scartati": [
+"https://www.istruzionepiemonte.it/biella/interpello-nazionale-ai-sensi-dellart-14-c-22-o-m-27-2026-avviso-fina",
+"https://www.istruzionepiemonte.it/biella/interpello-nazionale-ai-sensi-dellart-14-c-22-o-m-27-2026-avviso-fina",
+"https://www.istruzionepiemonte.it/biella/interpello-nazionale-ai-sensi-dellart-14-c-22-o-m-27-2026-avviso-fina",
+"https://www.istruzionepiemonte.it/biella/interpello-nazionale-ai-sensi-dellart-14-c-22-o-m-27-2026-avviso-fina"
+],
+"provincia": "Biella",
+"avvisi": 0,
 "errore": null
 },
 "https://www.mim.gov.it/web/sondrio/interpelli-ricerca-supplenti/": {
@@ -276,26 +262,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.ustfoggia.it/": {
-"grezzi": 60,
-"scartati": [
-"https://www.ustfoggia.it/category/albo-pretorio/",
-"https://www.ustfoggia.it/category/news/",
-"https://www.ustfoggia.it/ultime-novita-ust-foggia/",
-"https://www.ustfoggia.it/category/senza-categoria/"
-],
-"provincia": "Foggia",
-"avvisi": 56,
-"errore": null
-},
-"https://www.ustms.it/": {
-"grezzi": 3,
-"scartati": [
-"https://www.ustms.it/nomine-docenti-a-tempo-determinato-da-gps-bollettino-del-21-10-2026/",
-"mailto:?subject=Condiviso&body=Disponibilità per 5° turno di nomina – GPS Personale docente%0D%0ADISPONIBILITA"
-],
-"provincia": "Massa-Carrara",
-"avvisi": 1,
+"https://www.usp-rieti.it/": {
+"grezzi": 10,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 10,
 "errore": null
 },
 "https://www.usr.sicilia.it/": {
@@ -311,12 +282,12 @@
 "errore": null
 },
 "https://www.uspbari.it/": {
-"grezzi": 24,
+"grezzi": 26,
 "scartati": [
-"https://www.uspbari.it/usp/author/mi19228",
+"https://www.uspbari.it/usp/author/mi20142",
 "https://www.uspbari.it/usp/category/reclutamento",
-"https://www.uspbari.it/usp/tag/interpello",
-"https://www.uspbari.it/usp/author/mi20142"
+"https://www.uspbari.it/usp/tag/istruzione-primaria",
+"https://www.uspbari.it/usp/author/mi19228"
 ],
 "provincia": "Bari",
 "avvisi": 0,
@@ -329,13 +300,47 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.ustfoggia.it/": {
+"grezzi": 63,
+"scartati": [
+"https://www.ustfoggia.it/category/albo-pretorio/",
+"https://www.ustfoggia.it/category/news/",
+"https://www.ustfoggia.it/ultime-novita-ust-foggia/",
+"https://www.ustfoggia.it/category/senza-categoria/"
+],
+"provincia": "Foggia",
+"avvisi": 59,
+"errore": null
+},
+"https://www.ustms.it/": {
+"grezzi": 3,
+"scartati": [
+"https://www.ustms.it/nomine-docenti-a-tempo-determinato-da-gps-bollettino-del-21-10-2026/",
+"mailto:?subject=Condiviso&body=Disponibilità per 5° turno di nomina – GPS Personale docente%0D%0ADISPONIBILITA"
+],
+"provincia": "Massa-Carrara",
+"avvisi": 1,
+"errore": null
+},
+"https://www.istruzionematera.it/": {
+"grezzi": 8,
+"scartati": [
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce"
+],
+"provincia": "Matera",
+"avvisi": 0,
+"errore": null
+},
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
-"grezzi": 697,
+"grezzi": 804,
 "scartati": [
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-bonaccorso-da-montemagno-per-supplenza-scuo",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-preventivo-ics-bonaccorso-da-montemagno-per-sup",
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-raffaello-per-supplenza-breve-scuola-infanz",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-raffaello-per-supplenza-breve-scuola-infanz",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-spezzone-6-ore-al-30-06-c-d-c-a040-istituto-sis"
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-raffaello-per-supplenza-breve-scuola-infanz"
 ],
 "provincia": "Pistoia",
 "avvisi": 0,
