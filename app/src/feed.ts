@@ -35,6 +35,8 @@ export type Interpello = {
   tipoPosto?: string;
   candidatura?: string;
   codiceScuola?: string;
+  /** true = avviso oscurato dal server (utente non ancora verificato): niente scuola, link o coordinate */
+  bloccato?: boolean;
   lat?: number;
   lon?: number;
   /** i = indirizzo della scuola · c = centro del comune · p = capoluogo di provincia */
@@ -43,7 +45,7 @@ export type Interpello = {
   lettoDa?: string;
 };
 export type Copertura = { istituti: number; conSito: number; letti: number; percentuale: number; uffici?: number; perRegione: Record<string, { istituti: number; conSito: number; letti: number; percentuale: number }> };
-export type Feed = { aggiornato?: string; stato?: string; fonti?: number; copertura?: Copertura | null; sicilia?: { istituti: number; conSito: number; letti: number; errori: number; uffici: number } | null; interpelli: Interpello[] };
+export type Feed = { aggiornato?: string; stato?: string; fonti?: number; copertura?: Copertura | null; sicilia?: { istituti: number; conSito: number; letti: number; errori: number; uffici: number } | null; riepilogo?: { totale: number; per_classe: Record<string, number>; per_regione: Record<string, number>; per_provincia: Record<string, number> }; interpelli: Interpello[] };
 
 export const ABIL_URL =
   'https://raw.githubusercontent.com/mhadhbimedwork-crypto/Interpellati/main/data/abilitazioni.json';
@@ -116,7 +118,7 @@ export async function fetchFeed(): Promise<Feed> {
       if (c) return c;
       throw new Error('Nessun dato salvato');
     }
-    const f: Feed = { aggiornato: d.aggiornato, interpelli: d.interpelli, stato: d.stato } as Feed;
+    const f: Feed = { aggiornato: d.aggiornato, interpelli: d.interpelli, stato: d.stato, riepilogo: d.riepilogo } as Feed;
     await AsyncStorage.setItem(K_FEED, JSON.stringify(f));
     return f;
   }
@@ -229,7 +231,7 @@ export async function notifyAbil(items: Abilitazione[]) {
 /** Interpelli aperti che corrispondono alle tue preferenze e che non ti sono mai stati proposti prima. */
 export async function takeNew(feed: Feed, prefs?: Prefs): Promise<Interpello[]> {
   const p = prefs || (await loadPrefs());
-  return takeNewMem(feed.interpelli, (i) => isOpen(i) && matchPrefs(i, p), 'i:');
+  return takeNewMem(feed.interpelli, (i) => !i.bloccato && isOpen(i) && matchPrefs(i, p), 'i:');
 }
 
 export async function notifyNew(items: Interpello[]) {

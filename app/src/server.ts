@@ -18,7 +18,9 @@ export type Contatti = {
 };
 export type StatoServer = {
   dispositivo: string;
-  stato: 'attivo' | 'attesa' | 'sospeso' | 'revocato' | 'scaduto' | 'spento' | 'gruppo_sospeso';
+  stato: 'attivo' | 'prova' | 'limitato' | 'attesa' | 'sospeso' | 'revocato' | 'scaduto' | 'spento' | 'gruppo_sospeso';
+  /** classi dichiarate dall'utente (non verificate): valgono solo durante la prova */
+  classi_dichiarate?: string[]; prova_fino?: string | null; giorni_rimasti?: number | null; verificato?: boolean;
   classi: string[]; regioni: string[]; concorsi: boolean; piano: string; scadenza: string | null;
   gruppo: string | null; richiesta_aperta: boolean;
   contatti: Contatti; messaggio: string; versione_minima: string;
@@ -124,7 +126,8 @@ export async function statoSalvato(): Promise<StatoServer | null> {
 }
 
 /** Feed filtrato dal server per le classi/regioni abilitate. null = nessuna novita' (304). */
-export async function feedServer(): Promise<{ aggiornato: string; interpelli: any[]; stato: string } | null> {
+export type Riepilogo = { totale: number; per_classe: Record<string, number>; per_regione: Record<string, number>; per_provincia: Record<string, number> };
+export async function feedServer(): Promise<{ aggiornato: string; interpelli: any[]; stato: string; riepilogo?: Riepilogo } | null> {
   const tag = (await AsyncStorage.getItem(K_ETAG)) || '';
   const res = await chiama('GET', '/v1/feed', undefined, tag ? { 'if-none-match': tag } : undefined);
   if (res.status === 304) return null;
@@ -136,6 +139,9 @@ export async function feedServer(): Promise<{ aggiornato: string; interpelli: an
 
 export const inviaRichiesta = async (classi: string[], regioni: string[], messaggio: string, concorsi = false) =>
   json(await chiama('POST', '/v1/richiesta', { classi, regioni, messaggio, concorsi }));
+/** Modulo di verifica: solo i dati necessari. Mai codice fiscale, documenti o numero di tessera. */
+export type ModuloVerifica = { classi: string[]; come: 'gps' | 'titolo' | 'servizio'; provincia: string; descrizione: string; email: string; consenso: boolean };
+export const inviaVerifica = async (m: ModuloVerifica) => json(await chiama('POST', '/v1/richiesta', m));
 export const usaCodice = async (codice: string) => json(await chiama('POST', '/v1/codice', { codice }));
 export const segnala = async (tipo: 'mancante' | 'errore', link: string, testo: string, interpello_id?: string) =>
   json(await chiama('POST', '/v1/segnala', { tipo, link, testo, interpello_id: interpello_id || null }));

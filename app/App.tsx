@@ -52,7 +52,7 @@ import {
 } from './src/feed';
 import { conCoordinate, MappaInterpelli } from './src/MapView';
 import {
-  inviaRichiesta, leggiStato, modalitaServer, registra, registrato, segnala, statoSalvato, usaCodice, versioneVecchia,
+  inviaRichiesta, inviaVerifica, leggiStato, modalitaServer, registra, registrato, segnala, statoSalvato, usaCodice, versioneVecchia,
   type StatoServer,
 } from './src/server';
 import {
@@ -71,7 +71,7 @@ Notifications.setNotificationHandler({
 
 type Stato = '' | 'inviata' | 'convocato' | 'scartata';
 type Cand = { stato: Stato; inviataIl?: string; note?: string };
-type Tab = 'interpelli' | 'mappa' | 'abilitazione' | 'candidature' | 'preferenze' | 'profilo' | 'aiuto';
+type Tab = 'interpelli' | 'mappa' | 'abilitazione' | 'candidature' | 'preferenze' | 'profilo' | 'verifica' | 'aiuto';
 
 const CLASSI_COMUNI: [string, string][] = [
   ['B015', 'ITP elettrica'], ['B017', 'ITP meccanica'], ['B012', 'ITP chimica'], ['B016', 'ITP informatica'],
@@ -392,7 +392,9 @@ export default function App() {
   const inviate = Object.values(cand).filter((x) => x.stato === 'inviata' || x.stato === 'convocato').length;
   const topPad = Platform.OS === 'android' ? (StatusBar.currentHeight || 24) : 44;
 
-  const bloccato = modalitaServer() && (srvReg === false || (srv && srv.stato !== 'attivo'));
+  const inProva = modalitaServer() && srv?.stato === 'prova';
+  const limitato = modalitaServer() && srv?.stato === 'limitato';
+  const bloccato = modalitaServer() && (srvReg === false || (srv && !['attivo', 'prova', 'limitato'].includes(srv.stato)));
   if (modalitaServer() && srvReg === null) {
     return (
       <View style={[s.root, { paddingTop: topPad, justifyContent: 'center' }]}>
@@ -405,7 +407,7 @@ export default function App() {
       <View style={[s.root, { paddingTop: topPad }]}>
         <ExpoStatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
         <Accesso s={s} c={c} srv={srv} registrato={!!srvReg} codiceIniziale={codiceLink} errore={error}
-          onFatto={async () => { await aggiornaServer(); refresh(); }} />
+          onFatto={async () => { setPrefs(await loadPrefs()); await aggiornaServer(); refresh(); }} />
       </View>
     );
   }
@@ -417,8 +419,20 @@ export default function App() {
       {srv && versioneVecchia(srv.versione_minima) ? (
         <Text style={[s.body, { backgroundColor: c.warnSoft, color: c.warn, padding: 10 }]}>È disponibile una nuova versione dell'app: aggiornala dal link del tuo sindacato o dai contatti in «Aiuto e contatti».</Text>
       ) : null}
+      {inProva && srv ? (
+        <Pressable onPress={() => setTab('verifica')} style={{ backgroundColor: c.accentSoft, padding: 10 }}>
+          <Text style={[s.body, { color: c.accent }]}>
+            Prova gratuita: {srv.giorni_rimasti ?? 0} {srv.giorni_rimasti === 1 ? 'giorno rimasto' : 'giorni rimasti'}. Verifica il tuo profilo per continuare a vedere scuole e avvisi. Tocca qui.
+          </Text>
+        </Pressable>
+      ) : null}
+      {limitato ? (
+        <Pressable onPress={() => setTab('verifica')} style={{ backgroundColor: c.warnSoft, padding: 10 }}>
+          <Text style={[s.body, { color: c.warn }]}>La prova gratuita è finita: vedi i numeri, ma scuole e avvisi restano oscurati finché non verifichi il profilo. Tocca qui.</Text>
+        </Pressable>
+      ) : null}
       <View style={s.header}>
-        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v2.0.0</Text></Text>
+        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v2.1.0</Text></Text>
         <Text style={s.who} numberOfLines={1}>
           {(prefs.classi.length ? prefs.classi.join(' · ') : 'Tutte le classi') + ' — ' + (prefs.regioni.length ? prefs.regioni.length + ' regioni' : 'tutta Italia')}
         </Text>
@@ -431,6 +445,7 @@ export default function App() {
           ['candidature', 'Candidature', inviate],
           ['preferenze', 'Preferenze', null],
           ['profilo', 'Profilo', null],
+          ...((modalitaServer() && srv && !srv.verificato ? [['verifica', 'Verifica', null]] : []) as [Tab, string, number | null][]),
           ['aiuto', 'Aiuto e contatti', null],
         ] as [Tab, string, number | null][]).map(([k, l, n]) => (
           <Pressable key={k} onPress={() => setTab(k)} style={[s.tab, tab === k && s.tabOn]} accessibilityRole="tab" accessibilityState={{ selected: tab === k }}>
@@ -442,7 +457,11 @@ export default function App() {
         ))}
       </ScrollView>
 
-      {tab === 'interpelli' && (
+      {limitato && (tab === 'interpelli' || tab === 'mappa') ? (
+        <LimitatoBox s={s} c={c} feed={feed} modo={tab} classiUtente={srv?.classi_dichiarate || []} onVerifica={() => setTab('verifica')} />
+      ) : null}
+      {tab === 'verifica' && srv ? <VerificaBox s={s} c={c} srv={srv} onFatto={aggiornaServer} /> : null}
+      {tab === 'interpelli' && !limitato && (
         <FlatList
           data={rows}
           keyExtractor={(i) => i.id}
@@ -520,7 +539,7 @@ export default function App() {
         />
       )}
 
-      {tab === 'mappa' && (
+      {tab === 'mappa' && !limitato && (
         <View style={{ flex: 1 }}>
           <View style={{ paddingHorizontal: 16, paddingTop: 8, gap: 6 }}>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }}>
@@ -811,10 +830,18 @@ function ContattiBox({ s, c, srv }: { s: any; c: Pal; srv: StatoServer | null })
   );
 }
 
+const GUIDA: [string, string][] = [
+  ['Gli interpelli, appena escono', "Interpellati legge i siti delle scuole e ti avvisa quando c'è un interpello per le tue classi di concorso, spesso prima che altri se ne accorgano."],
+  ['Solo cose reali', "Dopo la prova gratuita, scuole e avvisi si aprono solo a chi è verificato: così consigli, alloggi e aiuti vengono da persone vere con la classe che dichiarano."],
+  ['I tuoi dati restano tuoi', "Nessun account. L'app funziona solo su questo telefono. Per la verifica chiediamo solo l'essenziale, senza documenti, e i dettagli si cancellano dopo 30 giorni."],
+  ['Non resti solo', "Se ti chiamano lontano da casa, l'app ti indica il gruppo d'aiuto di quella provincia, per informazioni e alloggio."],
+];
+
 function Accesso({ s, c, srv, registrato, codiceIniziale, errore, onFatto }: {
   s: any; c: Pal; srv: StatoServer | null; registrato: boolean; codiceIniziale: string; errore: string; onFatto: () => void;
 }) {
-  const [passo, setPasso] = useState<'codice' | 'classi'>('codice');
+  const [passo, setPasso] = useState<'guida' | 'codice' | 'classi'>(codiceIniziale ? 'codice' : 'guida');
+  const [pag, setPag] = useState(0);
   const [codice, setCodice] = useState(codiceIniziale);
   const [classi, setClassi] = useState<string[]>([]);
   const [altra, setAltra] = useState('');
@@ -828,7 +855,10 @@ function Accesso({ s, c, srv, registrato, codiceIniziale, errore, onFatto }: {
     setBusy(true); setErr('');
     try {
       if (registrato && conCodice) await usaCodice(codice.trim());
-      else await registra({ codice: conCodice ? codice.trim() : undefined, classi, provincia: prov.trim().toUpperCase() || undefined, messaggio: msg.trim() });
+      else {
+        await registra({ codice: conCodice ? codice.trim() : undefined, classi, provincia: prov.trim().toUpperCase() || undefined, messaggio: msg.trim() });
+        if (!conCodice) await savePrefs({ ...(await loadPrefs()), classi });
+      }
       onFatto();
     } catch (e: any) {
       setErr(e?.message || 'Errore');
@@ -874,26 +904,36 @@ function Accesso({ s, c, srv, registrato, codiceIniziale, errore, onFatto }: {
   return (
     <ScrollView contentContainerStyle={[s.list, { paddingTop: 24 }]} keyboardShouldPersistTaps="handled">
       <Text style={s.h1}>Benvenuto in Interpellati</Text>
-      <Text style={s.body}>Gli interpelli e le supplenze delle scuole, appena escono. Nessun account e nessun dato personale: l'app funziona solo su questo telefono.</Text>
       {errore ? <Text style={[s.small, { color: c.crit }]}>{errore}</Text> : null}
-      {passo === 'codice' ? (
+      {passo === 'guida' ? (
         <View style={s.card}>
-          <Text style={s.title}>1 · Hai un codice del tuo sindacato?</Text>
+          <Text style={s.title}>{GUIDA[pag][0]}</Text>
+          <Text style={s.body}>{GUIDA[pag][1]}</Text>
+          <Text style={s.small}>{pag + 1} di {GUIDA.length}</Text>
+          <Pressable style={[s.btn, s.btnPrimary]} onPress={() => (pag < GUIDA.length - 1 ? setPag(pag + 1) : setPasso('classi'))}>
+            <Text style={[s.btnText, { color: c.accentInk }]}>{pag < GUIDA.length - 1 ? 'Avanti' : 'Inizia'}</Text>
+          </Pressable>
+          {pag > 0 ? <Pressable style={s.btn} onPress={() => setPag(pag - 1)}><Text style={s.btnText}>Indietro</Text></Pressable> : null}
+          <Pressable style={s.btn} onPress={() => setPasso('codice')}><Text style={s.btnText}>Ho un codice del mio gruppo</Text></Pressable>
+        </View>
+      ) : passo === 'codice' ? (
+        <View style={s.card}>
+          <Text style={s.title}>Hai un codice del tuo gruppo?</Text>
           <TextInput value={codice} onChangeText={setCodice} autoCapitalize="characters" placeholder="XXXX-XXXX-XXXX" placeholderTextColor={c.muted} style={s.input} />
           <Pressable disabled={busy || codice.trim().length < 4} style={[s.btn, s.btnPrimary]} onPress={() => invia(true)}>
             <Text style={[s.btnText, { color: c.accentInk }]}>{busy ? 'Attivazione…' : 'Entra con il codice'}</Text>
           </Pressable>
-          <Pressable style={s.btn} onPress={() => setPasso('classi')}><Text style={s.btnText}>Non ho un codice: chiedi l'accesso</Text></Pressable>
+          <Pressable style={s.btn} onPress={() => setPasso('classi')}><Text style={s.btnText}>Non ho un codice: provo gratis 7 giorni</Text></Pressable>
           {err ? <Text style={[s.small, { color: c.crit }]}>{err}</Text> : null}
         </View>
       ) : (
         <View style={s.card}>
-          <Text style={s.title}>2 · Quali classi di concorso ti interessano?</Text>
+          <Text style={s.title}>Quali classi di concorso hai? (massimo 5)</Text>
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
             {CLASSI_COMUNI.map(([cl, nome]) => {
               const on = classi.includes(cl);
               return (
-                <Pressable key={cl} onPress={() => setClassi(on ? classi.filter((x) => x !== cl) : [...classi, cl])} style={[s.chip, on && s.chipOn]}>
+                <Pressable key={cl} onPress={() => setClassi(on ? classi.filter((x) => x !== cl) : classi.length < 5 ? [...classi, cl] : classi)} style={[s.chip, on && s.chipOn]}>
                   <Text style={[s.chipText, on && s.chipTextOn]}>{cl} · {nome}</Text>
                 </Pressable>
               );
@@ -906,17 +946,177 @@ function Accesso({ s, c, srv, registrato, codiceIniziale, errore, onFatto }: {
           </View>
           <View style={{ flexDirection: 'row', gap: 8 }}>
             <TextInput value={altra} onChangeText={setAltra} autoCapitalize="characters" placeholder="Altra classe (es. A046)" placeholderTextColor={c.muted} style={[s.input, { flex: 1 }]} />
-            <Pressable style={s.btn} onPress={() => { const x = normClasse(altra); if (x.length >= 2 && !classi.includes(x)) setClassi([...classi, x]); setAltra(''); }}><Text style={s.btnText}>Aggiungi</Text></Pressable>
+            <Pressable style={s.btn} onPress={() => { const x = normClasse(altra); if (x.length >= 2 && !classi.includes(x) && classi.length < 5) setClassi([...classi, x]); setAltra(''); }}><Text style={s.btnText}>Aggiungi</Text></Pressable>
           </View>
-          <TextInput value={prov} onChangeText={setProv} autoCapitalize="characters" maxLength={2} placeholder="Provincia (facoltativa, es. EN)" placeholderTextColor={c.muted} style={s.input} />
-          <TextInput value={msg} onChangeText={setMsg} multiline placeholder="Messaggio per l'amministratore (facoltativo). Se vuoi essere ricontattato, scrivi qui come." placeholderTextColor={c.muted} style={s.input} />
-          <Pressable disabled={busy || !classi.length} style={[s.btn, s.btnPrimary]} onPress={() => invia(false)}>
-            <Text style={[s.btnText, { color: c.accentInk }]}>{busy ? 'Invio…' : 'Chiedi l’accesso'}</Text>
+          <Text style={s.title}>Da quale provincia vieni?</Text>
+          <TextInput value={prov} onChangeText={setProv} autoCapitalize="characters" maxLength={2} placeholder="Sigla provincia (es. CT)" placeholderTextColor={c.muted} style={s.input} />
+          <Text style={s.small}>Ti serve a trovare il gruppo d’aiuto dove ti chiamano. Nessun dato personale.</Text>
+          <Pressable disabled={busy || !classi.length || prov.trim().length !== 2} style={[s.btn, s.btnPrimary, (busy || !classi.length || prov.trim().length !== 2) && { opacity: 0.4 }]} onPress={() => invia(false)}>
+            <Text style={[s.btnText, { color: c.accentInk }]}>{busy ? 'Avvio…' : 'Inizia la prova gratuita di 7 giorni'}</Text>
           </Pressable>
-          <Pressable style={s.btn} onPress={() => setPasso('codice')}><Text style={s.btnText}>Indietro</Text></Pressable>
+          <Pressable style={s.btn} onPress={() => setPasso('guida')}><Text style={s.btnText}>Indietro</Text></Pressable>
           {err ? <Text style={[s.small, { color: c.crit }]}>{err}</Text> : null}
         </View>
       )}
+    </ScrollView>
+  );
+}
+
+/** Dopo la prova: numeri totali e avvisi oscurati. Il server non invia scuola, link ne' indirizzo: qui si disegnano solo segnaposto. */
+function LimitatoBox({ s, c, feed, modo, classiUtente, onVerifica }: {
+  s: any; c: Pal; feed: Feed | null; modo: 'interpelli' | 'mappa'; classiUtente: string[]; onVerifica: () => void;
+}) {
+  const r = feed?.riepilogo;
+  const barra = (w: number) => ({ height: 10, width: `${w}%` as `${number}%`, borderRadius: 5, backgroundColor: c.muted, opacity: 0.25 });
+  const perClasse = Object.entries(r?.per_classe || {}).sort((a, b) => b[1] - a[1]);
+  const mie = perClasse.filter(([k]) => classiUtente.includes(k));
+  const altre = perClasse.filter(([k]) => !classiUtente.includes(k)).slice(0, 14);
+  const perReg = Object.entries(r?.per_regione || {}).sort((a, b) => b[1] - a[1]);
+  const perProv = Object.entries(r?.per_provincia || {}).sort((a, b) => b[1] - a[1]).slice(0, 20);
+  const max = Math.max(1, ...perReg.map(([, n]) => n));
+  const esempi = (feed?.interpelli || []).slice(0, 6);
+  return (
+    <ScrollView contentContainerStyle={s.list}>
+      <View style={s.card}>
+        <Text style={[s.h1, { fontSize: 38 }]}>{r?.totale ?? '—'}</Text>
+        <Text style={s.body}>interpelli aperti in tutta Italia, per tutte le classi di concorso.</Text>
+        <Text style={s.muted}>Scuola, avviso e link si aprono con la verifica del profilo.</Text>
+        <Pressable style={[s.btn, s.btnPrimary]} onPress={onVerifica}><Text style={[s.btnText, { color: c.accentInk }]}>Sblocca con la verifica</Text></Pressable>
+      </View>
+      {modo === 'interpelli' ? (
+        <>
+          {mie.length ? (
+            <View style={s.card}>
+              <Text style={s.title}>Per le tue classi</Text>
+              <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+                {mie.map(([k, n]) => <View key={k} style={[s.chip, s.chipOn]}><Text style={[s.chipText, s.chipTextOn]}>{k} · {n}</Text></View>)}
+              </View>
+            </View>
+          ) : null}
+          <View style={s.card}>
+            <Text style={s.title}>Tutte le classi</Text>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+              {altre.map(([k, n]) => <View key={k} style={s.chip}><Text style={s.chipText}>{k} · {n}</Text></View>)}
+            </View>
+          </View>
+          {esempi.map((it) => (
+            <View key={it.id} style={[s.card, { opacity: 0.9 }]}>
+              <Text style={s.title}>{(it.classi || []).join(' · ')}{it.provincia ? '  ·  ' + it.provincia : ''}</Text>
+              <View style={barra(70)} /><View style={barra(45)} />
+              <Text style={s.small}>{it.scadenza ? 'Scade ' + fmtDate(it.scadenza) : 'Scadenza non indicata'}  ·  🔒 oscurato</Text>
+            </View>
+          ))}
+        </>
+      ) : (
+        <>
+          <View style={s.card}>
+            <Text style={s.title}>Interpelli per regione</Text>
+            {perReg.map(([k, n]) => (
+              <View key={k} style={{ gap: 3, marginTop: 6 }}>
+                <Text style={s.body}>{k} · {n}</Text>
+                <View style={{ height: 8, width: `${Math.max(4, Math.round((n / max) * 100))}%` as `${number}%`, borderRadius: 4, backgroundColor: c.accent }} />
+              </View>
+            ))}
+          </View>
+          <View style={s.card}>
+            <Text style={s.title}>Province con più interpelli</Text>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+              {perProv.map(([k, n]) => <View key={k} style={s.chip}><Text style={s.chipText}>{k} · {n}</Text></View>)}
+            </View>
+            <Text style={s.small}>La mappa con le scuole si sblocca con la verifica.</Text>
+          </View>
+        </>
+      )}
+    </ScrollView>
+  );
+}
+
+/** Verifica del profilo: chiediamo solo cio' che serve e non conserviamo documenti. */
+function VerificaBox({ s, c, srv, onFatto }: { s: any; c: Pal; srv: StatoServer; onFatto: () => void }) {
+  const [classi, setClassi] = useState<string[]>(srv.classi_dichiarate || []);
+  const [altra, setAltra] = useState('');
+  const [come, setCome] = useState<'gps' | 'titolo' | 'servizio'>('gps');
+  const [prov, setProv] = useState('');
+  const [descr, setDescr] = useState('');
+  const [email, setEmail] = useState('');
+  const [ok, setOk] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState('');
+  const COME: [typeof come, string, string][] = [
+    ['gps', 'Sono nelle GPS', 'es. prima fascia, provincia di Enna'],
+    ['titolo', 'Ho il titolo', 'es. laurea o diploma ITS, e l’ateneo o l’istituto'],
+    ['servizio', 'Ho già lavorato', 'es. supplenza come ITP B015 nel 2025/26'],
+  ];
+  if (srv.verificato) {
+    return (
+      <ScrollView contentContainerStyle={s.list}>
+        <View style={s.card}>
+          <Text style={s.title}>Profilo verificato ✔</Text>
+          <Text style={s.body}>Classi verificate: {srv.classi.includes('*') ? 'tutte' : srv.classi.join(', ') || '—'}.</Text>
+          <Text style={s.muted}>Per aggiungere un’altra classe, torna qui e invia una nuova richiesta.</Text>
+        </View>
+      </ScrollView>
+    );
+  }
+  const invia = async () => {
+    setBusy(true); setErr('');
+    try {
+      await inviaVerifica({ classi, come, provincia: prov.trim().toUpperCase(), descrizione: descr.trim(), email: email.trim(), consenso: ok });
+      toast('Richiesta inviata');
+      onFatto();
+    } catch (e: any) {
+      setErr(e?.message || 'Errore');
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <ScrollView contentContainerStyle={s.list} keyboardShouldPersistTaps="handled">
+      <View style={s.card}>
+        <Text style={s.title}>Verifica il tuo profilo</Text>
+        <Text style={s.body}>Serve a tenere l’app affidabile: chi dà consigli su alloggi e aiuto è una persona reale con la classe di concorso che dichiara. Dopo la verifica si aprono scuole, avvisi e mappa per le tue classi.</Text>
+        <Text style={s.muted}>Ti chiediamo solo le quattro cose qui sotto. Non chiediamo codice fiscale, documento d’identità, tessera sindacale né allegati. I dettagli si cancellano 30 giorni dopo la decisione: resta solo l’esito.</Text>
+        {srv.richiesta_aperta ? <Text style={[s.body, { color: c.accent }]}>Hai già una richiesta in corso: ti rispondiamo appena possibile.</Text> : null}
+      </View>
+      <View style={s.card}>
+        <Text style={s.title}>1 · Per quali classi? (massimo 5)</Text>
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+          {classi.map((x) => (
+            <Pressable key={x} onPress={() => setClassi(classi.filter((y) => y !== x))} style={[s.chip, s.chipOn]}><Text style={[s.chipText, s.chipTextOn]}>{x}  ✕</Text></Pressable>
+          ))}
+        </View>
+        <View style={{ flexDirection: 'row', gap: 8 }}>
+          <TextInput value={altra} onChangeText={setAltra} autoCapitalize="characters" placeholder="Aggiungi classe (es. B015)" placeholderTextColor={c.muted} style={[s.input, { flex: 1 }]} />
+          <Pressable style={s.btn} onPress={() => { const x = normClasse(altra); if (x.length >= 2 && !classi.includes(x) && classi.length < 5) setClassi([...classi, x]); setAltra(''); }}><Text style={s.btnText}>Aggiungi</Text></Pressable>
+        </View>
+        <Text style={s.small}>Puoi verificare una classe oggi e le altre dopo.</Text>
+      </View>
+      <View style={s.card}>
+        <Text style={s.title}>2 · Come puoi dimostrarlo?</Text>
+        {COME.map(([k, l, es]) => (
+          <Pressable key={k} onPress={() => setCome(k)} style={[s.chip, come === k && s.chipOn, { alignSelf: 'stretch' }]}>
+            <Text style={[s.chipText, come === k && s.chipTextOn]}>{l}</Text>
+            <Text style={[s.small, come === k && { color: c.accentInk }]}>{es}</Text>
+          </Pressable>
+        ))}
+        <TextInput value={descr} onChangeText={setDescr} multiline maxLength={300} placeholder="Scrivi in una riga i dettagli (senza documenti né codice fiscale)" placeholderTextColor={c.muted} style={s.input} />
+        <TextInput value={prov} onChangeText={setProv} autoCapitalize="characters" maxLength={2} placeholder="Provincia (es. EN)" placeholderTextColor={c.muted} style={s.input} />
+      </View>
+      <View style={s.card}>
+        <Text style={s.title}>3 · Email per risponderti</Text>
+        <TextInput value={email} onChangeText={setEmail} autoCapitalize="none" keyboardType="email-address" placeholder="nome@esempio.it" placeholderTextColor={c.muted} style={s.input} />
+        <Text style={s.small}>Non è pubblica: la vede solo l’amministratore, che la usa per risponderti.</Text>
+      </View>
+      <View style={s.card}>
+        <Pressable onPress={() => setOk(!ok)} style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
+          <Text style={[s.title, { fontSize: 22 }]}>{ok ? '☑' : '☐'}</Text>
+          <Text style={[s.body, { flex: 1 }]}>Acconsento a trattare questi dati solo per verificare il mio profilo, e so che si cancellano dopo 30 giorni.</Text>
+        </Pressable>
+        <Pressable disabled={busy || !ok || !classi.length || !descr.trim() || !email.includes('@')} style={[s.btn, s.btnPrimary, (busy || !ok || !classi.length || !descr.trim() || !email.includes('@')) && { opacity: 0.4 }]} onPress={invia}>
+          <Text style={[s.btnText, { color: c.accentInk }]}>{busy ? 'Invio…' : 'Invia la richiesta'}</Text>
+        </Pressable>
+        {err ? <Text style={[s.small, { color: c.crit }]}>{err}</Text> : null}
+      </View>
     </ScrollView>
   );
 }
