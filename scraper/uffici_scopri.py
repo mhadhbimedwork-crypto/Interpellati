@@ -32,6 +32,13 @@ def candidati(prov: str, sigla: str, reg: str) -> list[str]:
          f"www.ufficioscolastico{p}.it", f"www.ufficioscolasticoprovinciale.{p}.it", f"www.ust.{p}.it", f"www.istruzione{p}.it",
          f"{p}.istruzione.it", f"www.uspu{p}.it", f"www.usr{sg}.it", f"www.usp-{p}.it", f"www.ust-{p}.it", f"{sg}.istruzione.it",
          f"www.atp{sg}.it", f"www.ust{sg}.it", f"www.usp{sg}.it"]
+    h = re.sub(r"[^a-z]+", "-", unicodedata.normalize("NFD", prov.lower()).encode("ascii", "ignore").decode()).strip("-")
+    primo = h.split("-")[0]
+    for q in {h, primo, h.replace("-e-", "-")}:
+        c += [f"www.mim.gov.it/web/{q}/interpelli-ricerca-supplenti", f"www.mim.gov.it/web/{q}/interpelli", f"www.mim.gov.it/web/{q}"]
+    for q in {h, primo, p}:
+        c += [f"www.istruzionepiemonte.it/{q}/interpelli-supplenze", f"www.istruzionepiemonte.it/{q}/interpelli-supplenze-personale-docente",
+              f"www.istruzionepiemonte.it/{q}/", f"www.istruzionepiemonte.it/{q}/tag/interpelli-supplenze"]
     c += [f"www.mim.gov.it/web/{p}/interpelli-ricerca-supplenti", f"www.mim.gov.it/web/{p}/interpelli", f"www.mim.gov.it/web/{p}",
           f"www.mim.gov.it/web/{sg}/interpelli-ricerca-supplenti"]
     return c
