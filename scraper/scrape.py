@@ -131,12 +131,57 @@ class Fetcher:
         self.pages = 0
         self.errs: dict[str, str] = {}
 
+    def _bundle(self, host: str) -> str | None:
+        """Server con catena di certificati incompleta (manca l'intermedio): scarica l'intermedio dall'indirizzo AIA
+        indicato nel certificato stesso e lo aggiunge ai certificati radice. La verifica resta attiva."""
+        cache = self.__dict__.setdefault("_bundles", {})
+        if host in cache:
+            return cache[host]
+        cache[host] = None
+        try:
+            import socket, ssl, tempfile
+            import certifi
+            from cryptography import x509
+            from cryptography.hazmat.primitives import serialization
+            ctx = ssl.create_default_context()
+            ctx.check_hostname = False
+            ctx.verify_mode = ssl.CERT_NONE
+            with socket.create_connection((host, 443), timeout=15) as sk, ctx.wrap_socket(sk, server_hostname=host) as ss:
+                der = ss.getpeercert(True)
+            cert = x509.load_der_x509_certificate(der)
+            extra = b""
+            for _ in range(3):
+                aia = cert.extensions.get_extension_for_class(x509.AuthorityInformationAccess).value
+                url = next((d.access_location.value for d in aia if d.access_method.dotted_string == "1.3.6.1.5.5.7.48.2"), None)
+                if not url:
+                    break
+                raw = requests.get(url, timeout=15).content
+                try:
+                    cert = x509.load_der_x509_certificate(raw)
+                except ValueError:
+                    cert = x509.load_pem_x509_certificate(raw)
+                extra += cert.public_bytes(serialization.Encoding.PEM)
+            if extra:
+                fp = tempfile.NamedTemporaryFile("wb", suffix=".pem", delete=False)
+                fp.write(open(certifi.where(), "rb").read() + b"\n" + extra)
+                fp.close()
+                cache[host] = fp.name
+        except Exception as e:  # noqa: BLE001
+            log("  catena certificati non completabile:", host, type(e).__name__)
+        return cache[host]
+
     def allowed(self, url: str) -> bool:
         host = urlparse(url).scheme + "://" + urlparse(url).netloc
         if host not in self.robots:
             rp = urllib.robotparser.RobotFileParser()
             try:
-                r = self.s.get(host + "/robots.txt", timeout=15)
+                try:
+                    r = self.s.get(host + "/robots.txt", timeout=15)
+                except requests.exceptions.SSLError:
+                    b = self._bundle(urlparse(host).netloc)
+                    if not b:
+                        raise
+                    r = self.s.get(host + "/robots.txt", timeout=15, verify=b)
                 if r.status_code == 200:
                     rp.parse(r.text.splitlines())
                     self.robots[host] = rp
@@ -156,7 +201,13 @@ class Fetcher:
         if wait > 0:
             time.sleep(wait)
         try:
-            r = self.s.get(url, timeout=25)
+            try:
+                r = self.s.get(url, timeout=25)
+            except requests.exceptions.SSLError:
+                b = self._bundle(host)
+                if not b:
+                    raise
+                r = self.s.get(url, timeout=25, verify=b)
             self.last[host] = time.time()
             if r.status_code != 200:
                 self.errs[url] = f"HTTP {r.status_code}"
