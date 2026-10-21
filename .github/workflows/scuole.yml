@@ -1,0 +1,43 @@
+name: Scuole d'Italia
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 * * * *"
+permissions:
+  contents: write
+concurrency:
+  group: scuole
+jobs:
+  area:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        area: [nordovest, nordest, centro, sud, sud2, sardegna]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scraper/requirements.txt
+      - run: pip install -r scraper/requirements.txt
+      - name: Scuole ${{ matrix.area }}
+        env:
+          BUDGET_S: "1500"
+        run: python scraper/scuole_italia.py ${{ matrix.area }}
+      - name: Salva
+        run: |
+          git config user.name "interpellati-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/scuole/${{ matrix.area }}_* 
+          git diff --cached --quiet && exit 0
+          git commit -q -m "dati: scuole ${{ matrix.area }} $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3 4 5 6 7 8; do
+            git pull -q --rebase -X theirs origin main || { git rebase --abort; git fetch -q origin main; git reset --soft origin/main; git commit -qm "dati: scuole ${{ matrix.area }} (ricomposto)" || true; }
+            git push -q && exit 0
+            sleep $((i*7))
+          done
+          exit 1

@@ -162,33 +162,77 @@ def diagnostica(item):
     return codice, d
 
 
-def main() -> int:
+def _rapida(item):
+    """Prima verifica di una scuola mai letta: il sito dichiarato risponde come sito scolastico?"""
+    codice, info = item
+    s = requests.Session()
+    s.headers["User-Agent"] = UA
+    sito = info["sito"]
+    host = urlparse(sito).netloc
+    alt = host[4:] if host.startswith("www.") else "www." + host
+    for u in (sito, sito.replace(host, alt, 1)):
+        ok, esito = prova(s, u)
+        if ok:
+            m = re.match(r"(https?://[^/]+)", esito)
+            return codice, {"sito": (m.group(1).lower() + "/") if m else u, "ok": True, "verificato": "raggiungibile"}
+    return diagnostica(item)
+
+
+def esegui(report: Path, elenco_p: Path, fix_p: Path, diag_p: Path, tutte: bool = False, ipa: bool = True) -> dict:
+    """tutte=True: verifica anche le scuole mai lette (prima mappatura di un'area)."""
     requests.packages.urllib3.disable_warnings()  # verify=False solo come ultima prova sui certificati scaduti
-    carica_ipa()
-    rep = json.loads(REPORT.read_text("utf-8"))["scuole"]
-    bad = {c: v for c, v in rep.items() if not v.get("ok") and v.get("sito")}
-    # anche le scuole senza sito nell'anagrafica MIM, se l'Indice PA ne dichiara uno
+    if ipa and not IPA:
+        carica_ipa()
     try:
-        elenco = json.loads(ELENCO.read_text("utf-8"))["scuole"]
+        dati_rep = json.loads(report.read_text("utf-8"))
+    except (OSError, ValueError):
+        dati_rep = {"scuole": {}}
+    rep = dati_rep.get("scuole", {})
+    try:
+        elenco = json.loads(elenco_p.read_text("utf-8"))["scuole"]
     except (OSError, ValueError, KeyError):
         elenco = {}
+    bad = {c: v for c, v in rep.items() if not v.get("ok") and v.get("sito")}
+    nuove = {}
+    if tutte:
+        nuove = {c: {"sito": v["sito"]} for c, v in elenco.items() if v.get("sito") and c not in rep}
+    # scuole senza sito nell'anagrafica MIM, se l'Indice PA ne dichiara uno
     for c, v in elenco.items():
         if not v.get("sito") and c.upper() in IPA and c not in bad:
             bad[c] = {"sito": "https://" + urlparse(IPA[c.upper()] if "://" in IPA[c.upper()] else "https://" + IPA[c.upper()]).netloc + "/", "err": "senza sito MIM"}
-    print(f"Scuole con errore: {len(bad)}")
-    with ThreadPoolExecutor(16) as ex:
+    print(f"Scuole con errore: {len(bad)} · scuole da verificare per la prima volta: {len(nuove)}")
+    with ThreadPoolExecutor(24) as ex:
         ris = dict(ex.map(diagnostica, bad.items()))
-    fix = json.loads(OUT_FIX.read_text("utf-8")) if OUT_FIX.exists() else {}
-    for c, d in ris.items():
+        prime = dict(ex.map(_rapida, nuove.items()))
+    fix = json.loads(fix_p.read_text("utf-8")) if fix_p.exists() else {}
+    for c, d in list(ris.items()) + [(c, d) for c, d in prime.items() if "motivo" in d]:
         if d.get("nuovo") and d["nuovo"].rstrip("/") != d["sito"].rstrip("/"):
             fix[c] = d["nuovo"]
-    OUT_FIX.write_text(json.dumps(fix, ensure_ascii=False, indent=1, sort_keys=True) + "\n", "utf-8")
-    OUT_DIAG.write_text(json.dumps(ris, ensure_ascii=False, indent=1, sort_keys=True) + "\n", "utf-8")
+    # la prima mappatura entra nel report: sito raggiungibile o no (la lettura degli avvisi lo aggiorna poi)
+    for c, d in prime.items():
+        nome = (elenco.get(c) or {}).get("nome", "")
+        if d.get("ok"):
+            rep[c] = {"sito": d["sito"], "ok": True, "pagine": 1, "trovati": 0, "nome": nome, "verificato": "raggiungibile"}
+        elif d.get("nuovo"):
+            rep[c] = {"sito": d["nuovo"], "ok": True, "pagine": 1, "trovati": 0, "nome": nome, "verificato": "recuperato"}
+        else:
+            rep[c] = {"sito": d["sito"], "ok": False, "err": d.get("motivo"), "nome": nome}
+    if prime:
+        ok = sum(1 for v in rep.values() if v.get("ok"))
+        dati_rep.update({"scuole": rep, "siti_letti_ok": ok, "siti_con_errore": len(rep) - ok})
+        report.write_text(json.dumps(dati_rep, ensure_ascii=False, separators=(",", ":")) + "\n", "utf-8")
+    fix_p.write_text(json.dumps(fix, ensure_ascii=False, indent=1, sort_keys=True) + "\n", "utf-8")
+    tutto = {**ris, **{c: d for c, d in prime.items() if "motivo" in d}}
+    diag_p.write_text(json.dumps(tutto, ensure_ascii=False, indent=1, sort_keys=True) + "\n", "utf-8")
     from collections import Counter
-    for k, n in Counter(d["motivo"] for d in ris.values()).most_common():
-        print(f"{n:4d}  {k}")
-    print(f"Nuovi indirizzi trovati: {sum(1 for d in ris.values() if d.get('nuovo'))} (corretti salvati: {len(fix)})")
-    print("DNS runner vs pubblico:", Counter((d['dns_runner'], d['dns_pubblico']) for d in ris.values()).most_common())
+    for k, n in Counter(d["motivo"] for d in tutto.values()).most_common():
+        print(f"{n:5d}  {k}")
+    print(f"Raggiungibili al primo controllo: {sum(1 for d in prime.values() if d.get('ok'))} · nuovi indirizzi: {sum(1 for d in tutto.values() if d.get('nuovo'))} (corretti salvati: {len(fix)})")
+    return {"errori": len(bad), "nuove": len(nuove), "corretti": len(fix)}
+
+
+def main() -> int:
+    esegui(REPORT, ELENCO, OUT_FIX, OUT_DIAG)
     return 0
 
 

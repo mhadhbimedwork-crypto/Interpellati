@@ -27,6 +27,7 @@ ELENCO = ROOT / "data" / "sicilia_scuole.json"
 STATO = ROOT / "data" / "sicilia_stato.json"
 REPORT = ROOT / "data" / "sicilia_report.json"
 PREFISSI = ("AG", "CL", "CT", "EN", "ME", "PA", "RG", "SR", "TP")
+NOME_AREA = "Sicilia"
 SOTTO_RE = re.compile(r"interpell|supplenz|messa\s+a\s+disposizione|\bmad\b|albo|bandi|avvis|graduatori|reclutament|personale", re.I)
 MAX_SOTTO = 4
 THREADS = 12
@@ -94,11 +95,21 @@ def scarica_elenco(log) -> dict:
                 e["sito"] = sito
             if cod != rif:
                 e["sedi"].append(cod)
-    log(f"  scuole siciliane (istituti): {len(scuole)} · con sito: {sum(1 for v in scuole.values() if v['sito'])}")
+    log(f"  {NOME_AREA} – istituti: {len(scuole)} · con sito: {sum(1 for v in scuole.values() if v['sito'])}")
     return scuole
 
 
 CORRETTI = ROOT / "data" / "sicilia_siti_corretti.json"
+
+
+def configura(area: str, prefissi: tuple[str, ...], nome: str) -> None:
+    """Stesso motore per qualsiasi gruppo di province: file separati in data/scuole/<area>_*.json."""
+    global ELENCO, STATO, REPORT, CORRETTI, PREFISSI, NOME_AREA
+    d = ROOT / "data" / "scuole"
+    d.mkdir(parents=True, exist_ok=True)
+    ELENCO, STATO, REPORT, CORRETTI = (d / f"{area}_elenco.json", d / f"{area}_stato.json",
+                                       d / f"{area}_report.json", d / f"{area}_corretti.json")
+    PREFISSI, NOME_AREA = tuple(prefissi), nome
 
 
 def _applica_correzioni(sc: dict) -> dict:
@@ -256,7 +267,7 @@ def scansiona_sicilia(S, f, since: date, budget_s: int = 540) -> list[dict]:
     log = S.log
     scuole = carica_elenco(log)
     if not scuole:
-        log("  Sicilia: elenco scuole non disponibile")
+        log(f"  {NOME_AREA}: elenco scuole non disponibile")
         return []
     codici = sorted(c for c, v in scuole.items() if v["sito"])
     try:
@@ -272,7 +283,7 @@ def scansiona_sicilia(S, f, since: date, budget_s: int = 540) -> list[dict]:
         prec = {}
     recuperi = [c for c in codici if c in prec and not prec[c].get("ok") and not _stesso_sito(prec[c].get("sito") or "", scuole[c]["sito"])]
     if recuperi:
-        log(f"  Sicilia: {len(recuperi)} siti con indirizzo corretto da rileggere subito")
+        log(f"  {NOME_AREA}: {len(recuperi)} siti con indirizzo corretto da rileggere subito")
         ordine = recuperi[:200] + [c for c in ordine if c not in set(recuperi[:200])]
     t0 = time.time()
     report: dict[str, dict] = {}
@@ -299,9 +310,9 @@ def scansiona_sicilia(S, f, since: date, budget_s: int = 540) -> list[dict]:
     ok = sum(1 for v in vecchio.values() if v.get("ok"))
     REPORT.write_text(json.dumps({
         "aggiornato": datetime.now().isoformat(timespec="seconds"),
-        "istituti_sicilia": len(scuole), "con_sito": len(codici),
+        "area": NOME_AREA, "istituti": len(scuole), "istituti_sicilia": len(scuole), "con_sito": len(codici),
         "siti_letti_ok": ok, "siti_con_errore": len(vecchio) - ok,
         "avvisi_trovati_ultimo_giro": len(trovati), "scuole_lette_ultimo_giro": fatte,
         "scuole": vecchio}, ensure_ascii=False, separators=(",", ":")) + "\n", "utf-8")
-    log(f"  Sicilia: {fatte}/{len(codici)} siti scolastici letti ({ok} ok) · avvisi trovati {len(trovati)} · {int(time.time()-t0)}s")
+    log(f"  {NOME_AREA}: {fatte}/{len(codici)} siti scolastici letti ({ok} ok) · avvisi trovati {len(trovati)} · {int(time.time()-t0)}s")
     return trovati

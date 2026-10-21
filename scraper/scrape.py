@@ -508,6 +508,36 @@ def enrich(f: Fetcher, it: dict):
             pass  # l'aggregatore non dice la scuola: la lasciamo generica piuttosto che indovinarla
 
 
+def copertura_scuole() -> dict:
+    """Quante scuole statali leggiamo davvero, per regione: Sicilia + aree nazionali (data/scuole/*_report.json)."""
+    reg_di = {v[0]: v[1] for v in PROVINCE.values()}
+    per: dict[str, dict] = {}
+    reports = [ROOT / "data" / "sicilia_report.json"] + sorted((ROOT / "data" / "scuole").glob("*_report.json"))
+    elenchi = [ROOT / "data" / "sicilia_scuole.json"] + [p.with_name(p.name.replace("_report", "_elenco")) for p in reports[1:]]
+    for rp, ep in zip(reports, elenchi):
+        try:
+            sc = json.loads(rp.read_text("utf-8")).get("scuole", {})
+        except (OSError, ValueError):
+            sc = {}
+        try:
+            el = json.loads(ep.read_text("utf-8")).get("scuole", {})
+        except (OSError, ValueError):
+            el = {}
+        for cod in set(el) | set(sc):
+            r = reg_di.get(cod[:2]) or "Altro"
+            x = per.setdefault(r, {"istituti": 0, "conSito": 0, "letti": 0})
+            x["istituti"] += 1
+            if (el.get(cod) or {}).get("sito") or (sc.get(cod) or {}).get("sito"):
+                x["conSito"] += 1
+            if (sc.get(cod) or {}).get("ok"):
+                x["letti"] += 1
+    tot = {k: sum(v[k] for v in per.values()) for k in ("istituti", "conSito", "letti")}
+    tot["percentuale"] = round(100 * tot["letti"] / tot["istituti"], 1) if tot["istituti"] else 0
+    for v in per.values():
+        v["percentuale"] = round(100 * v["letti"] / v["istituti"], 1) if v["istituti"] else 0
+    return {**tot, "perRegione": dict(sorted(per.items())), "uffici": sum(1 for _ in json.loads(SOURCES.read_text("utf-8"))["uffici"])}
+
+
 def put(items: dict, r: dict):
     """Inserisce l'avviso; se esiste gia' (stesso id) tiene la data di pubblicazione piu' antica."""
     new = {k: v for k, v in r.items() if v not in (None, "", [])}
@@ -541,6 +571,16 @@ def main() -> int:
         found += sicilia.scansiona_sicilia(sys.modules[__name__], f, since)
     except Exception as e:  # la Sicilia non deve mai bloccare il resto della scansione
         log("  Sicilia: errore", type(e).__name__, str(e)[:120])
+    # avvisi trovati dalla scansione nazionale scuola per scuola (workflow "Scuole d'Italia")
+    for tp in sorted((ROOT / "data" / "scuole").glob("*_trovati.json")):
+        try:
+            extra = [i for i in json.loads(tp.read_text("utf-8")) if i.get("link") and i.get("classi")]
+        except (OSError, ValueError):
+            continue
+        for i in extra:
+            i.pop("_visto", None)
+        found += extra
+        log(f"  {tp.stem}: {len(extra)} avvisi dalle scuole")
 
     now = datetime.now(TZ).isoformat(timespec="seconds")
     added = []
@@ -604,6 +644,7 @@ def main() -> int:
         if i.get("trovato"):
             r["trovato"] = i["trovato"][:19]  # ora in cui l'app ha rilevato l'avviso (Europe/Rome)
         leggero.append(r)
+    copertura = copertura_scuole()
     sic = None
     try:
         rs = json.loads((ROOT / "data" / "sicilia_report.json").read_text("utf-8"))
@@ -611,7 +652,7 @@ def main() -> int:
                "errori": rs["siti_con_errore"], "uffici": sum(1 for u in sources["uffici"] if "sicilia" in u["url"] or "Caltanissetta" in u["nome"])}
     except (OSError, ValueError, KeyError):
         pass
-    FEED.write_text(json.dumps({"aggiornato": now, "fonti": f.pages, "sicilia": sic, "interpelli": leggero}, ensure_ascii=False, separators=(",", ":")) + "\n", "utf-8")
+    FEED.write_text(json.dumps({"aggiornato": now, "fonti": f.pages, "sicilia": sic, "copertura": copertura, "interpelli": leggero}, ensure_ascii=False, separators=(",", ":")) + "\n", "utf-8")
     log(f"Feed app: {len(leggero)} avvisi")
     log(f"Pagine lette: {f.pages} · trovati {len(found)} · nuovi {len(added)} · totale {len(keep)}")
     for i in added:
