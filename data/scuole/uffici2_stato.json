@@ -6,10 +6,10 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://cremona.istruzionelombardia.gov.it/": {
+"https://milano.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Cremona",
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -20,17 +20,17 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://milano.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://cremona.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cremona",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -67,6 +67,15 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
+"https://venezia.istruzioneveneto.gov.it/": {
+"grezzi": 1,
+"scartati": [
+"https://twitter.com/home?status=Interpelli: profilo infermiere e A.T. area AR01 - https://venezia.istruzioneve"
+],
+"provincia": "Venezia",
+"avvisi": 0,
+"errore": null
+},
 "http://www.ustlucca.it/": {
 "grezzi": 15,
 "scartati": [
@@ -77,6 +86,16 @@
 ],
 "provincia": "Lucca",
 "avvisi": 5,
+"errore": null
+},
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 2,
+"scartati": [
+"https://gecodoc-argoweb.eu-south-1.portaleargo.it/AWP/SM28284/58aa3ea6a01cb98166f4f5b32dcc45d315504a30b53472be",
+"https://web.spaggiari.eu/sdg2/Interpelli/PRCN0001/a6c85f14-fbfb-4870-ac7c-13c772298934"
+],
+"provincia": "Parma",
+"avvisi": 0,
 "errore": null
 },
 "https://atpisernia.it/": {
@@ -91,25 +110,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://t.me/s/usr_sicilia": {
-"grezzi": 29,
-"scartati": [
-"https://usr.sicilia.it/?p=36368",
-"https://usr.sicilia.it/?p=36376",
-"https://usr.sicilia.it/?p=36411",
-"https://usr.sicilia.it/?p=36420"
-],
-"provincia": null,
-"avvisi": 5,
-"errore": null
-},
-"https://venezia.istruzioneveneto.gov.it/": {
-"grezzi": 1,
-"scartati": [
-"https://twitter.com/home?status=Interpelli: profilo infermiere e A.T. area AR01 - https://venezia.istruzioneve"
-],
-"provincia": "Venezia",
-"avvisi": 0,
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 16,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 16,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/": {
@@ -124,21 +129,11 @@
 "avvisi": 13,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 2,
-"scartati": [
-"https://gecodoc-argoweb.eu-south-1.portaleargo.it/AWP/SM28284/58aa3ea6a01cb98166f4f5b32dcc45d315504a30b53472be",
-"https://web.spaggiari.eu/sdg2/Interpelli/PRCN0001/a6c85f14-fbfb-4870-ac7c-13c772298934"
-],
-"provincia": "Parma",
-"avvisi": 0,
-"errore": null
-},
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 16,
+"https://www.istruzioneimperia.gov.it/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Padova",
-"avvisi": 16,
+"provincia": "Imperia",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiacenza.it/": {
@@ -148,12 +143,31 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzioneimperia.gov.it/": {
+"https://www.toscana-istruzione.it/atpisa/category/news/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Imperia",
+"provincia": "Pisa",
 "avvisi": 0,
+"errore": "HTTP 404"
+},
+"https://t.me/s/usr_sicilia": {
+"grezzi": 29,
+"scartati": [
+"https://usr.sicilia.it/?p=36368",
+"https://usr.sicilia.it/?p=36376",
+"https://usr.sicilia.it/?p=36411",
+"https://usr.sicilia.it/?p=36420"
+],
+"provincia": null,
+"avvisi": 5,
 "errore": null
+},
+"https://www.usp-rieti.it/it/302-docenti/interpelli-supplenze-altre-province.html": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 0,
+"errore": "HTTP 404"
 },
 "https://re.istruzioneer.gov.it/category/docenti/": {
 "grezzi": 51,
@@ -167,12 +181,12 @@
 "avvisi": 37,
 "errore": null
 },
-"https://www.toscana-istruzione.it/atpisa/category/news/": {
+"https://www.usppotenza.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Pisa",
+"provincia": "Potenza",
 "avvisi": 0,
-"errore": "HTTP 404"
+"errore": null
 },
 "https://fe.istruzioneer.gov.it/": {
 "grezzi": 23,
@@ -184,20 +198,6 @@
 ],
 "provincia": "Ferrara",
 "avvisi": 13,
-"errore": null
-},
-"https://www.usp-rieti.it/it/302-docenti/interpelli-supplenze-altre-province.html": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
-"https://www.usppotenza.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Potenza",
-"avvisi": 0,
 "errore": null
 },
 "https://www.mim.gov.it/web/isernia": {
@@ -255,18 +255,6 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
-"grezzi": 20,
-"scartati": [
-"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-adaa-n-1-di-2525-ore-settimanali-ist",
-"https://www.uspbari.it/usp/author/mi19228",
-"https://www.uspbari.it/usp/category/reclutamento",
-"https://www.uspbari.it/usp/tag/interpello"
-],
-"provincia": "Bari",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
 "grezzi": 0,
 "scartati": [],
@@ -296,6 +284,18 @@
 ],
 "provincia": "Ancona",
 "avvisi": 14,
+"errore": null
+},
+"https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
+"grezzi": 20,
+"scartati": [
+"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-adaa-n-1-di-2525-ore-settimanali-ist",
+"https://www.uspbari.it/usp/author/mi19228",
+"https://www.uspbari.it/usp/category/reclutamento",
+"https://www.uspbari.it/usp/tag/interpello"
+],
+"provincia": "Bari",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
