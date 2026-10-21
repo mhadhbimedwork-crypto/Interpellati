@@ -26,7 +26,8 @@ def pagine_interpelli(f, url: str, html: str) -> list[str]:
     return out[:6]
 
 
-PAG_RX = re.compile(r"/(category|tag|argomento|argomenti|page|categoria|archivio|mese)(/|$)|[?&](cat|page|paged)=", re.I)
+SOCIAL = ("facebook.", "twitter.", "x.com", "whatsapp", "linkedin.", "t.me", "telegram.", "pinterest.", "instagram.", "youtube.", "youtu.be")
+PAG_RX = re.compile(r"/(category|tag|author|argomento|argomenti|page|categoria|archivio|mese)(/|$)|[?&](cat|page|paged)=", re.I)
 
 
 FILE_EXT = (".pdf", ".doc", ".docx", ".odt", ".zip", ".rtf", ".xls", ".xlsx")
@@ -36,7 +37,10 @@ def forma_ok(it: dict) -> bool:
     """Link che sembra un avviso vero: un documento, oppure un articolo con titolo lungo (non indici, categorie, menu)."""
     if not it.get("link") or not it.get("classi"):
         return False
-    path = it["link"].lower().split("#")[0].split("?")[0]
+    lk = it["link"].lower()
+    if not lk.startswith(("http://", "https://")) or any(h in lk.split("/")[2] for h in SOCIAL):
+        return False
+    path = lk.split("#")[0].split("?")[0]
     if path.endswith(FILE_EXT):
         return True
     if PAG_RX.search(path):
@@ -51,11 +55,22 @@ def valido(it: dict) -> bool:
 
 def data_pagina(f, link: str, cache: dict) -> str:
     """Data di pubblicazione letta dalla pagina dell'articolo (meta, tag time, testo); ricordata per non rileggere."""
-    if link in cache:
+    if cache.get(link):
         return cache[link]
     d = ""
+    m = re.search(r"/(20\d\d)/(\d{1,2})/(\d{1,2})/", link)
+    if m:
+        try:
+            d = date(int(m.group(1)), int(m.group(2)), int(m.group(3))).isoformat()
+        except ValueError:
+            d = ""
+    if d:
+        cache[link] = d
+        return d
     if not link.lower().split("?")[0].endswith(FILE_EXT):
         html = f.get(link)
+        if not html:
+            return ""  # pagina non raggiunta: riprova al prossimo giro, non memorizzare il fallimento
         if html:
             soup = BeautifulSoup(html, "html.parser")
             cand = []
@@ -64,7 +79,10 @@ def data_pagina(f, link: str, cache: dict) -> str:
                     cand.append(m.get("content") or "")
             for t in soup.find_all("time"):
                 cand.append(t.get("datetime") or t.get_text(" ", strip=True))
-            cand.append(soup.get_text(" ", strip=True)[:800])
+            testo = soup.get_text(" ", strip=True)
+            cand.append(testo[:800])
+            for mm in re.finditer(r"(?:pubblicat\w*|data)[^0-9]{0,25}(\d{1,2}[/.\-]\d{1,2}[/.\-]\d{2,4}|\d{1,2}\s+[a-zà]+\s+\d{4})", testo[:6000], re.I):
+                cand.append(mm.group(1))
             for c in cand:
                 x = S.find_date(c) or (S.parseiso(c) if hasattr(S, "parseiso") else None)
                 if x:
@@ -113,6 +131,13 @@ def main() -> int:
     except (OSError, ValueError):
         cache_date = {}
     budget_date = [450]
+    vp = D / "scuole" / f"uffici{k}_visti.json"
+    try:
+        visti_prima = json.loads(vp.read_text("utf-8"))
+        base_esiste = True
+    except (OSError, ValueError):
+        visti_prima, base_esiste = {}, False
+    oggi = date.today().isoformat()
     def lavoro(o):
         try:
             grezzi = uno(f, o, since)
@@ -128,6 +153,15 @@ def main() -> int:
                 dd = data_pagina(f, i["link"], cache_date)
                 if dd and dd >= since.isoformat():
                     i["pubblicato"] = dd
+            for i in grezzi:
+                # senza data leggibile: vale la data in cui il link compare per la prima volta (dopo il primo giro di riferimento)
+                if forma_ok(i) and not i.get("pubblicato"):
+                    v = visti_prima.get(i["link"])
+                    if v is None:
+                        visti_prima[i["link"]] = oggi if base_esiste else "base"
+                        v = visti_prima[i["link"]]
+                    if v != "base" and v >= since.isoformat():
+                        i["pubblicato"] = v
             r = [i for i in grezzi if valido(i)]
             stato[o["url"]] = {"grezzi": len(grezzi), "scartati": [i["link"][:110] for i in grezzi if not valido(i)][:4]}
             return o, r, None
@@ -137,6 +171,7 @@ def main() -> int:
         for o, r, err in ex.map(lavoro, uff):
             trovati += r
             stato.setdefault(o["url"], {}).update({"provincia": o.get("provincia"), "avvisi": len(r), "errore": err or f.errs.get(o["url"])})
+    vp.write_text(json.dumps(dict(list(visti_prima.items())[-6000:]), ensure_ascii=False, indent=0) + "\n", "utf-8")
     dp.write_text(json.dumps(dict(list(cache_date.items())[-3000:]), ensure_ascii=False, indent=0) + "\n", "utf-8")
     tp = D / "scuole" / f"uffici{k}_trovati.json"
     try:
