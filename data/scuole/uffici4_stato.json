@@ -30,6 +30,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://bo.istruzioneer.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bologna",
+"avvisi": 0,
+"errore": null
+},
 "https://sondrio.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -37,10 +44,20 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://bo.istruzioneer.gov.it/": {
+"https://mo.istruzioneer.gov.it/": {
+"grezzi": 12,
+"scartati": [
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-secondaria-secondo-grado/"
+],
+"provincia": "Modena",
+"avvisi": 10,
+"errore": null
+},
+"https://venezia.istruzioneveneto.gov.it/argomenti/personale/docenti/interpelli/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bologna",
+"provincia": "Venezia",
 "avvisi": 0,
 "errore": null
 },
@@ -56,25 +73,6 @@
 "avvisi": 7,
 "errore": null
 },
-"https://venezia.istruzioneveneto.gov.it/argomenti/personale/docenti/interpelli/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Venezia",
-"avvisi": 0,
-"errore": null
-},
-"https://mo.istruzioneer.gov.it/": {
-"grezzi": 18,
-"scartati": [
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-secondaria-secondo-grado/"
-],
-"provincia": "Modena",
-"avvisi": 14,
-"errore": null
-},
 "https://win.istruzioneverona.it/uspvr/index.php/interpelli-docenti/": {
 "grezzi": 0,
 "scartati": [],
@@ -86,6 +84,25 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Nuoro",
+"avvisi": 0,
+"errore": null
+},
+"https://cl-en.usr.sicilia.it/interpelli-nazionali/": {
+"grezzi": 24,
+"scartati": [
+"https://cl-en.usr.sicilia.it/decreto-suddivisione-posti-di-sostegno-seconda-deroga-provincia-di-caltanissetta/",
+"mailto:?subject=Condiviso&body=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnolo",
+"https://twitter.com/home?status=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnol",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/"
+],
+"provincia": null,
+"avvisi": 18,
+"errore": null
+},
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Catanzaro",
 "avvisi": 0,
 "errore": null
 },
@@ -113,30 +130,6 @@
 "avvisi": 5,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/interpelli-nazionali/": {
-"grezzi": 24,
-"scartati": [
-"https://cl-en.usr.sicilia.it/decreto-suddivisione-posti-di-sostegno-seconda-deroga-provincia-di-caltanissetta/",
-"mailto:?subject=Condiviso&body=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnolo",
-"https://twitter.com/home?status=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnol",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/"
-],
-"provincia": null,
-"avvisi": 18,
-"errore": null
-},
-"https://ct.usr.sicilia.it/": {
-"grezzi": 6,
-"scartati": [
-"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-posto-ADAA-presso-VESPUCCI-–-CAPUANA-–-PIRANDELLO.zip",
-"https://ct.usr.sicilia.it/wp-content/uploads/timbro_ERRATA-CORRIGE-Interpello-ADEE-primaria-sostegno-n.-2-post",
-"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-copertura-posto-ADAA-IC-A.-MALERBA.zip",
-"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-per-la-copertura-di-N.-1-posto-Sostegno-Scuola-Primari"
-],
-"provincia": "Catania",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionelaspezia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -148,13 +141,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Cuneo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/le-nostre-scuole/asti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Asti",
 "avvisi": 0,
 "errore": null
 },
@@ -170,11 +156,35 @@
 "avvisi": 0,
 "errore": null
 },
+"https://ct.usr.sicilia.it/": {
+"grezzi": 6,
+"scartati": [
+"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-posto-ADAA-presso-VESPUCCI-–-CAPUANA-–-PIRANDELLO.zip",
+"https://ct.usr.sicilia.it/wp-content/uploads/timbro_ERRATA-CORRIGE-Interpello-ADEE-primaria-sostegno-n.-2-post",
+"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-copertura-posto-ADAA-IC-A.-MALERBA.zip",
+"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-per-la-copertura-di-N.-1-posto-Sostegno-Scuola-Primari"
+],
+"provincia": "Catania",
+"avvisi": 0,
+"errore": null
+},
 "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Gorizia",
 "avvisi": 0,
+"errore": null
+},
+"https://www.istruzioneatprc.it/": {
+"grezzi": 7,
+"scartati": [
+"https://www.trasparenzascuole.it/Public/APDPublicV2.aspx?CF=92034530805",
+"https://iisfermibagnara.edu.it/albo-online-axios/",
+"https://web.spaggiari.eu/sdg2/Documenti/RCII0012/4pdrfj6h5g",
+"https://www.portaleargo.it/albopretorio/online/#/SG18641/atti/4693902"
+],
+"provincia": "Reggio Calabria",
+"avvisi": 3,
 "errore": null
 },
 "https://tp.usr.sicilia.it/personale-scuola/interpelli/": {
@@ -188,6 +198,20 @@
 "provincia": "Trapani",
 "avvisi": 23,
 "errore": null
+},
+"https://www.istruzionepiemonte.it/le-nostre-scuole/asti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Asti",
+"avvisi": 0,
+"errore": null
+},
+"https://www.orizzontescuola.it/tag/interpelli/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
+"errore": "HTTP 403"
 },
 "https://www.istruzionepiemonte.it/palermo-chiama-italia-23-maggio-2019/": {
 "grezzi": 0,
@@ -203,18 +227,25 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.orizzontescuola.it/tag/interpelli/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
-"errore": "HTTP 403"
-},
 "https://www.uat-caserta.it/category/segnalazioni-dalle-scuole/": {
 "grezzi": 7,
 "scartati": [],
 "provincia": "Caserta",
 "avvisi": 7,
+"errore": null
+},
+"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Benevento",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
+"https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/": {
+"grezzi": 12,
+"scartati": [],
+"provincia": "Pistoia",
+"avvisi": 12,
 "errore": null
 },
 "http://www.uspmc.sinp.net/documenti-uspmc-cms/?cat-documenti-uspmc=reclutamento-pd": {
@@ -236,33 +267,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Benevento",
-"avvisi": 0,
-"errore": "HTTP 403"
-},
 "https://www.mim.gov.it/web/lodi/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lodi",
 "avvisi": 0,
 "errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
-"https://www.istruzioneatprc.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Reggio Calabria",
-"avvisi": 0,
-"errore": "ConnectTimeout"
 },
 "https://www.uspsi.it/": {
 "grezzi": 37,
@@ -274,11 +284,15 @@
 "avvisi": 35,
 "errore": null
 },
-"https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
+"https://www.istruzionepiemonte.it/vercelli/": {
+"grezzi": 21,
+"scartati": [
+"https://www.istruzionepiemonte.it/vercelli/category/docenti/",
+"https://www.istruzionepiemonte.it/vercelli/tag/interpelli-nazionali/",
+"https://www.istruzionepiemonte.it/vercelli/interpello-adee-lingua-inglese-fino-al-03-12-2026/"
+],
+"provincia": "Vercelli",
+"avvisi": 18,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/": {
@@ -317,29 +331,18 @@
 "avvisi": 6,
 "errore": null
 },
+"https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
+"errore": null
+},
 "https://www.ustlecce.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecce",
 "avvisi": 0,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/": {
-"grezzi": 12,
-"scartati": [],
-"provincia": "Pistoia",
-"avvisi": 12,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/vercelli/": {
-"grezzi": 21,
-"scartati": [
-"https://www.istruzionepiemonte.it/vercelli/category/docenti/",
-"https://www.istruzionepiemonte.it/vercelli/tag/interpelli-nazionali/",
-"https://www.istruzionepiemonte.it/vercelli/interpello-adee-lingua-inglese-fino-al-03-12-2026/"
-],
-"provincia": "Vercelli",
-"avvisi": 18,
 "errore": null
 },
 "https://www.mim.gov.it/web/cremona/": {
