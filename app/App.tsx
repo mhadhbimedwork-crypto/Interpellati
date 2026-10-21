@@ -461,9 +461,10 @@ export default function App() {
                   : feed?.aggiornato
                     ? 'Dati aggiornati ' + new Date(feed.aggiornato).toLocaleString('it-IT')
                     : loading ? 'Carico gli interpelli…' : ''}
-                {feed?.sicilia ? '\nSicilia: ' + feed.sicilia.letti + ' siti scolastici letti su ' + feed.sicilia.conSito + ' (' + feed.sicilia.istituti + ' istituti) + ' + feed.sicilia.uffici + ' uffici' : ''}
+                {!feed?.copertura && feed?.sicilia ? '\nSicilia: ' + feed.sicilia.letti + ' siti scolastici letti su ' + feed.sicilia.conSito + ' (' + feed.sicilia.istituti + ' istituti) + ' + feed.sicilia.uffici + ' uffici' : ''}
                 {bg === false ? ' · controllo in background non disponibile su questo telefono' : ''}
               </Text>
+              {feed?.copertura ? <CoperturaBox s={s} c={c} cop={feed.copertura} /> : null}
               <Chips s={s} value={soloMie ? 'mie' : 'tutto'} set={(v) => { setSoloMie(v === 'mie'); setFClasse('tutte'); }} opts={[['mie', 'Le mie preferenze'], ['tutto', 'Tutte le classi e regioni']]} />
               {soloMie && prefs.classi.length > 1 ? (
                 <Chips s={s} value={fClasse} set={setFClasse} opts={[['tutte', 'Tutte le mie'], ...prefs.classi.map((c) => [c, c] as [string, string])]} />
@@ -969,7 +970,8 @@ function Aiuto({ s, c, srv, feed, codiceIniziale, onCambio }: {
           }
         }}><Text style={[s.btnText, { color: c.accentInk }]}>Invia segnalazione</Text></Pressable>
       </View>
-      {feed?.sicilia ? (
+      {feed?.copertura ? <CoperturaBox s={s} c={c} cop={feed.copertura} aperta /> : null}
+      {!feed?.copertura && feed?.sicilia ? (
         <View style={s.card}>
           <Text style={s.title}>Copertura della ricerca</Text>
           <Text style={s.body}>Sicilia: {feed.sicilia.letti} siti scolastici letti su {feed.sicilia.conSito} ({Math.round((feed.sicilia.letti / Math.max(1, feed.sicilia.conSito)) * 100)}%), più {feed.sicilia.uffici} uffici scolastici. In tutta Italia: uffici scolastici provinciali e regionali e aggregatori nazionali.</Text>
@@ -985,6 +987,32 @@ function Aiuto({ s, c, srv, feed, codiceIniziale, onCambio }: {
       ) : null}
       <Text style={s.small}>Interpellati non raccoglie dati personali. Profilo, documenti e candidature restano solo su questo telefono.</Text>
     </ScrollView>
+  );
+}
+
+function CoperturaBox({ s, c, cop, aperta = false }: { s: any; c: Pal; cop: NonNullable<Feed['copertura']>; aperta?: boolean }) {
+  const [vedi, setVedi] = useState(aperta);
+  const reg = Object.entries(cop.perRegione || {}).sort((a, b) => b[1].percentuale - a[1].percentuale);
+  return (
+    <Pressable onPress={() => setVedi(!vedi)} style={[s.card, { gap: 4 }]} accessibilityRole="button">
+      <Text style={s.label}>COPERTURA DELLA RICERCA</Text>
+      <Text style={s.title}>{cop.letti.toLocaleString('it-IT')} scuole controllate su {cop.istituti.toLocaleString('it-IT')} · {String(cop.percentuale).replace('.', ',')}%</Text>
+      <View style={{ height: 8, borderRadius: 4, backgroundColor: c.line, overflow: 'hidden' }}>
+        <View style={{ width: `${Math.min(100, cop.percentuale)}%` as `${number}%`, height: 8, backgroundColor: c.ok }} />
+      </View>
+      <Text style={s.small}>
+        Siti delle scuole statali letti uno per uno{cop.uffici ? ', più ' + cop.uffici + ' uffici scolastici e gli aggregatori nazionali' : ''}. {vedi ? 'Tocca per chiudere.' : 'Tocca per il dettaglio per regione.'}
+      </Text>
+      {vedi ? reg.map(([r, v]) => (
+        <View key={r} style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+          <Text style={[s.body, { width: 120 }]} numberOfLines={1}>{r}</Text>
+          <View style={{ flex: 1, height: 6, borderRadius: 3, backgroundColor: c.line, overflow: 'hidden' }}>
+            <View style={{ width: `${Math.min(100, v.percentuale)}%` as `${number}%`, height: 6, backgroundColor: v.percentuale >= 80 ? c.ok : v.percentuale >= 50 ? c.warn : c.crit }} />
+          </View>
+          <Text style={[s.small, { width: 92, textAlign: 'right' }]}>{v.letti}/{v.istituti} · {Math.round(v.percentuale)}%</Text>
+        </View>
+      )) : null}
+    </Pressable>
   );
 }
 
