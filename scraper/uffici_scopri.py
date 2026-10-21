@@ -50,7 +50,20 @@ def prova(args):
     return None
 
 
+def sonda_lombardia() -> None:
+    for p in ("bergamo", "milano", "brescia", "como", "varese", "pavia"):
+        for h in (f"{p}.istruzione.lombardia.gov.it", f"{p}.usr.istruzione.lombardia.gov.it", f"www.istruzione.lombardia.gov.it/{p}",
+                  f"usr.istruzione.lombardia.gov.it", f"www.ust{p}.it", f"ust{p}.it", f"{p}.istruzionelombardia.it", f"www.istruzione{p}.it",
+                  f"www.lombardia.istruzione.it/{p}", f"istruzione.lombardia.gov.it/{p}", f"{p}.lombardia.istruzione.it"):
+            try:
+                r = requests.get("https://" + h + "/", timeout=8, headers={"User-Agent": S.UA})
+                print("SONDA", h, r.status_code, r.url, len(r.text), re.findall(r"<title>(.*?)</title>", r.text[:5000], re.S)[:1])
+            except requests.RequestException as e:
+                print("SONDA", h, type(e).__name__)
+
+
 def main() -> int:
+    sonda_lombardia()
     lavori = [(p, h) for p, (sg, rg) in S.PROVINCE.items() for h in candidati(p, sg, rg)]
     trovati: dict[str, dict] = {}
     with ThreadPoolExecutor(48) as ex:
