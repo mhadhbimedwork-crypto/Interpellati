@@ -14,31 +14,43 @@ D = S.ROOT / "data"
 TAG = "https://www.orizzontescuola.it/tag/interpelli/"
 
 
-PROVE = ["https://www.orizzontescuola.it/feed/", "https://www.orizzontescuola.it/tag/interpelli/feed/",
-         "https://www.orizzontescuola.it/?s=interpelli", "https://www.tecnicadellascuola.it/tag/interpelli",
-         "https://www.tecnicadellascuola.it/feed", "https://www.skuola.net/news/scuola/interpelli.html",
-         "https://www.orizzontescuola.it/tag/interpelli/"]
+FEED = "https://www.orizzontescuola.it/tag/interpelli/feed/"
 
 
-def articoli(f) -> list[tuple[str, str]]:
+def voci_feed(blocco_html: str, base: str) -> list[dict]:
+    soup = BeautifulSoup(blocco_html, "html.parser")
+    out = []
+    for blk in soup.find_all(["li", "tr", "p"]):
+        text = " ".join(blk.get_text(" ", strip=True).split())
+        cls = S.classes_in(text, True)
+        links = [urljoin(base, a["href"]) for a in blk.find_all("a", href=True) if "orizzontescuola.it" not in a["href"]]
+        if not cls or not links:
+            continue
+        prov = S.find_province(text) or S.find_province(links[0].replace("_", " ").replace("/", " ").replace("-", " "))
+        out.append({"classi": cls, "provincia": prov, "link": links[0], "testo": text[:160]})
+    return out
+
+
+def riferimento_feed() -> list[dict]:
+    """Legge il feed RSS pubblico (pensato per le macchine) con il nostro User-Agent dichiarato."""
     import requests
-    html, out = None, []
-    for u in PROVE:
-        try:
-            r = requests.get(u, timeout=25, headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36", "Accept-Language": "it-IT,it;q=0.9"})
-            S.log(f"prova {u}: HTTP {r.status_code} {len(r.text)}")
-            if r.status_code == 200 and len(r.text) > 2000 and not html:
-                html = r.text
-                S.log(f"  uso {u}")
-        except requests.RequestException as e:
-            S.log(f"prova {u}: {type(e).__name__}")
-    if html:
-        for a in BeautifulSoup(html, "html.parser").find_all("a", href=True):
-            t = a.get_text(" ", strip=True)
-            h = urljoin(TAG, a["href"])
-            if "orizzontescuola.it" in h and re.search(r"interpell", t + h, re.I) and "/tag/" not in h and (t, h) not in out:
-                out.append((t, h))
-    return out[:12]
+    r = requests.get(FEED, timeout=30, headers={"User-Agent": S.UA})
+    S.log(f"feed {FEED}: HTTP {r.status_code} {len(r.text)}")
+    if r.status_code != 200:
+        return []
+    soup = BeautifulSoup(r.text, "xml")
+    oggi = datetime.now(S.TZ).date()
+    out = []
+    for item in soup.find_all("item")[:10]:
+        titolo = item.find("title").get_text(" ", strip=True) if item.find("title") else ""
+        cont = item.find("content:encoded") or item.find("description")
+        d = S.find_date(titolo)
+        if d and (oggi - d).days > 3:
+            continue
+        v = voci_feed(cont.get_text() if cont else "", FEED)
+        S.log(f"  {titolo[:70]} -> {len(v)} voci")
+        out += v
+    return out
 
 
 def riferimento(f, url: str) -> list[dict]:
@@ -69,11 +81,7 @@ def main() -> int:
     link_n = {norm(i["link"]) for i in store if i.get("link")}
     cp = {(c, S.PROVINCE[p][0] if p in S.PROVINCE else None) for i in store for c in i.get("classi", []) for p in [None]}
     cp = {(c, i.get("provincia")) for i in store for c in i.get("classi", [])}
-    ref = []
-    for t, u in articoli(f)[:6]:
-        r = riferimento(f, u)
-        S.log(f"articolo {t[:70]} -> {len(r)} voci")
-        ref += r
+    ref = riferimento_feed()
     tot = len(ref)
     esatti, per_cp, buchi = 0, 0, []
     for r in ref:
