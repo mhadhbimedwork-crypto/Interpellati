@@ -41,10 +41,14 @@ def uno(f, off: dict, since: date) -> list[dict]:
 
 def main() -> int:
     k, n = int(sys.argv[1]), int(sys.argv[2])
-    uff = json.loads((D / "uffici_ipa.json").read_text("utf-8"))
+    uff = []
     fissi = json.loads(S.SOURCES.read_text("utf-8"))["uffici"]
     try:
         uff += json.loads((D / "uffici_scoperti.json").read_text("utf-8"))
+    except (OSError, ValueError):
+        pass
+    try:
+        uff += json.loads((D / "uffici_elenco.json").read_text("utf-8"))
     except (OSError, ValueError):
         pass
     visti = {u["url"] for u in uff}
@@ -54,7 +58,7 @@ def main() -> int:
     since = date.today() - timedelta(days=10)
     t0 = time.time()
     trovati = []
-    with ThreadPoolExecutor(8) as ex:
+    with ThreadPoolExecutor(10) as ex:
         for r in ex.map(lambda o: uno(f, o, since), uff):
             trovati += r
     tp = D / "scuole" / f"uffici{k}_trovati.json"
