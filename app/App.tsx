@@ -472,6 +472,7 @@ export default function App() {
             <View style={{ gap: 10 }}>
               <View style={s.stats}>
                 <Stat s={s} n={open.length} l="aperti" />
+                <Stat s={s} n={open.filter((i) => !!i.scadenza).length} l="con scadenza" />
                 <Stat s={s} n={base.filter(isNew).length} l="nuovi 24h" />
                 <Stat s={s} n={open.filter((i) => { const d = daysLeft(parseDate(i.scadenza)); return d !== null && d <= 1; }).length} l="scadono 48h" />
               </View>
