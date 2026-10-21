@@ -20,17 +20,20 @@
 "avvisi": 0,
 "errore": null
 },
+"https://istruzione.umbria.it/": {
+"grezzi": 2,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PGIC86500N/docenti",
+"https://istitutocomprensivoperugia1.edu.it/servizio/modulistica-per-interpello-docenti-ex-mad/"
+],
+"provincia": "Terni",
+"avvisi": 0,
+"errore": null
+},
 "https://pavia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Pavia",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sondrio",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -40,6 +43,13 @@
 "provincia": "Rimini",
 "avvisi": 0,
 "errore": "HTTP 404"
+},
+"https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sondrio",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "http://www.usppesarourbino.it/": {
 "grezzi": 8,
@@ -51,16 +61,6 @@
 ],
 "provincia": "Pesaro e Urbino",
 "avvisi": 2,
-"errore": null
-},
-"https://istruzione.umbria.it/": {
-"grezzi": 2,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PGIC86500N/docenti",
-"https://istitutocomprensivoperugia1.edu.it/servizio/modulistica-per-interpello-docenti-ex-mad/"
-],
-"provincia": "Terni",
-"avvisi": 0,
 "errore": null
 },
 "https://www.atpromaistruzione.it/": {
@@ -84,18 +84,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
-"grezzi": 5,
-"scartati": [
-"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-posto-ADAA-presso-VESPUCCI-–-CAPUANA-–-PIRANDELLO.zip",
-"https://ct.usr.sicilia.it/wp-content/uploads/timbro_ERRATA-CORRIGE-Interpello-ADEE-primaria-sostegno-n.-2-post",
-"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-copertura-posto-ADAA-IC-A.-MALERBA.zip",
-"https://ct.usr.sicilia.it/wp-content/uploads/AVVISOINTERPELLO-PER-LA-COPERTURA-DI-N.1-POSTO-CLASSE-DI-CONCORSO"
-],
-"provincia": "Catania",
-"avvisi": 0,
-"errore": null
-},
 "https://verona.istruzioneveneto.gov.it/index.php/interpelli-2026-2027/": {
 "grezzi": 0,
 "scartati": [],
@@ -115,6 +103,18 @@
 "avvisi": 5,
 "errore": null
 },
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
+"grezzi": 37,
+"scartati": [
+"mailto:?subject=Condiviso&body=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Con",
+"https://twitter.com/home?status=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Co",
+"https://ag.usr.sicilia.it/interpello-nazionale-per-il-conferimento-di-supplenza-per-linsegnamento-di-conversaz",
+"mailto:?subject=Condiviso&body=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Con"
+],
+"provincia": "Agrigento",
+"avvisi": 23,
+"errore": null
+},
 "https://www.istruzionelaspezia.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -122,10 +122,15 @@
 "avvisi": 0,
 "errore": null
 },
-"https://treviso.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Treviso",
+"https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
+"grezzi": 5,
+"scartati": [
+"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-posto-ADAA-presso-VESPUCCI-–-CAPUANA-–-PIRANDELLO.zip",
+"https://ct.usr.sicilia.it/wp-content/uploads/timbro_ERRATA-CORRIGE-Interpello-ADEE-primaria-sostegno-n.-2-post",
+"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-copertura-posto-ADAA-IC-A.-MALERBA.zip",
+"https://ct.usr.sicilia.it/wp-content/uploads/AVVISOINTERPELLO-PER-LA-COPERTURA-DI-N.1-POSTO-CLASSE-DI-CONCORSO"
+],
+"provincia": "Catania",
 "avvisi": 0,
 "errore": null
 },
@@ -133,20 +138,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Torino",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionerovigo.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Rovigo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bolzano",
 "avvisi": 0,
 "errore": null
 },
@@ -160,37 +151,11 @@
 "avvisi": 2,
 "errore": null
 },
-"https://bo.istruzioneer.gov.it/tag/interpello/": {
-"grezzi": 10,
-"scartati": [
-"https://bo.istruzioneer.gov.it/",
-"https://bo.istruzioneer.gov.it/category/infanzia/",
-"https://bo.istruzioneer.gov.it/",
-"https://bo.istruzioneer.gov.it/category/contratti-a-tempo-determinato/"
-],
-"provincia": "Bologna",
+"https://www.istruzionerovigo.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Rovigo",
 "avvisi": 0,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.prato.it/": {
-"grezzi": 1,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.prato.it/Mese/novita/"
-],
-"provincia": "Prato",
-"avvisi": 0,
-"errore": null
-},
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
-"grezzi": 37,
-"scartati": [
-"mailto:?subject=Condiviso&body=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Con",
-"https://twitter.com/home?status=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Co",
-"https://ag.usr.sicilia.it/interpello-nazionale-per-il-conferimento-di-supplenza-per-linsegnamento-di-conversaz",
-"mailto:?subject=Condiviso&body=Interpello nazionale per il conferimento di supplenza per l’insegnamento di Con"
-],
-"provincia": "Agrigento",
-"avvisi": 23,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
@@ -205,18 +170,18 @@
 "avvisi": 14,
 "errore": null
 },
-"https://www.uspcampobasso.it/": {
+"https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Campobasso",
+"provincia": "Bolzano",
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
-"grezzi": 4,
+"https://treviso.istruzioneveneto.gov.it/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Pescara",
-"avvisi": 4,
+"provincia": "Treviso",
+"avvisi": 0,
 "errore": null
 },
 "https://ustlucca.it/": {
@@ -231,24 +196,24 @@
 "avvisi": 5,
 "errore": null
 },
-"https://www.uspascolipiceno.it/wordpress/interpelli/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Ascoli Piceno",
+"https://www.ufficioscolasticoprovinciale.prato.it/": {
+"grezzi": 1,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.prato.it/Mese/novita/"
+],
+"provincia": "Prato",
 "avvisi": 0,
 "errore": null
 },
-"https://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pordenone",
+"https://bo.istruzioneer.gov.it/tag/interpello/": {
+"grezzi": 10,
+"scartati": [
+"https://bo.istruzioneer.gov.it/",
+"https://bo.istruzioneer.gov.it/category/infanzia/",
+"https://bo.istruzioneer.gov.it/",
+"https://bo.istruzioneer.gov.it/category/contratti-a-tempo-determinato/"
+],
+"provincia": "Bologna",
 "avvisi": 0,
 "errore": null
 },
@@ -264,6 +229,13 @@
 "avvisi": 7,
 "errore": null
 },
+"https://www.uspcampobasso.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Campobasso",
+"avvisi": 0,
+"errore": null
+},
 "https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
 "grezzi": 16,
 "scartati": [
@@ -273,6 +245,20 @@
 "https://www.uat-napoli.it/interpello-finalizzato-al-reclutamento-di-n-1-docente-specializzato-sul-sostegno-scu"
 ],
 "provincia": "Napoli",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
+"grezzi": 4,
+"scartati": [],
+"provincia": "Pescara",
+"avvisi": 4,
+"errore": null
+},
+"https://www.uspss.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
 "avvisi": 0,
 "errore": null
 },
@@ -286,6 +272,20 @@
 ],
 "provincia": "Lecce",
 "avvisi": 3,
+"errore": null
+},
+"https://www.uspascolipiceno.it/wordpress/interpelli/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Ascoli Piceno",
+"avvisi": 0,
+"errore": null
+},
+"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pordenone",
+"avvisi": 0,
 "errore": null
 }
 }
