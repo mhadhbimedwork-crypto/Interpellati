@@ -20,6 +20,7 @@ export type StatoServer = {
   dispositivo: string;
   stato: 'attivo' | 'prova' | 'limitato' | 'attesa' | 'sospeso' | 'revocato' | 'scaduto' | 'spento' | 'gruppo_sospeso';
   /** classi dichiarate dall'utente (non verificate): valgono solo durante la prova */
+  codice_invito?: string; inviti_verificati?: number; max_classi_prova?: number;
   classi_dichiarate?: string[]; prova_fino?: string | null; giorni_rimasti?: number | null; verificato?: boolean;
   classi: string[]; regioni: string[]; concorsi: boolean; piano: string; scadenza: string | null;
   gruppo: string | null; richiesta_aperta: boolean;
@@ -101,10 +102,12 @@ export async function registrato(): Promise<boolean> {
   return (await AsyncStorage.getItem(K_REG)) === idDispositivo();
 }
 
-export async function registra(p: { codice?: string; classi: string[]; regioni?: string[]; provincia?: string; messaggio?: string }) {
+export const LINK_APP: string = (Constants.expoConfig?.extra as any)?.linkApp || 'https://github.com/mhadhbimedwork-crypto/Interpellati/releases/tag/apk';
+
+export async function registra(p: { codice?: string; classi: string[]; regioni?: string[]; provincia?: string; messaggio?: string; invito?: string }) {
   const d = await json(await chiama('POST', '/v1/registra', {
     chiave_pubblica: chiavePubblica(), codice: p.codice || null, classi: p.classi, regioni: p.regioni || [],
-    provincia: p.provincia || null, messaggio: p.messaggio || '', piattaforma: 'android', versione: VERSIONE,
+    provincia: p.provincia || null, messaggio: p.messaggio || '', invito: (p.invito || '').trim().toUpperCase() || null, piattaforma: 'android', versione: VERSIONE,
   }));
   await AsyncStorage.setItem(K_REG, d.dispositivo);
   return d as { dispositivo: string; stato: string };
@@ -155,3 +158,5 @@ export function versioneVecchia(minima: string): boolean {
   }
   return false;
 }
+
+export const aggiornaProfilo = async (classi: string[], provincia?: string) => json(await chiama('POST', '/v1/profilo', { classi, provincia: provincia || null }));

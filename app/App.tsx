@@ -10,6 +10,7 @@ import {
   Platform,
   Pressable,
   RefreshControl,
+  Share,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -52,7 +53,7 @@ import {
 } from './src/feed';
 import { conCoordinate, MappaInterpelli } from './src/MapView';
 import {
-  inviaRichiesta, inviaVerifica, leggiStato, modalitaServer, registra, registrato, segnala, statoSalvato, usaCodice, versioneVecchia,
+  inviaRichiesta, inviaVerifica, LINK_APP, leggiStato, modalitaServer, registra, registrato, segnala, statoSalvato, usaCodice, versioneVecchia,
   type StatoServer,
 } from './src/server';
 import {
@@ -847,6 +848,7 @@ function Accesso({ s, c, srv, registrato, codiceIniziale, errore, onFatto }: {
   const [altra, setAltra] = useState('');
   const [msg, setMsg] = useState('');
   const [prov, setProv] = useState('');
+  const [invito, setInvito] = useState('');
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
   useEffect(() => { if (codiceIniziale) setCodice(codiceIniziale); }, [codiceIniziale]);
@@ -856,7 +858,7 @@ function Accesso({ s, c, srv, registrato, codiceIniziale, errore, onFatto }: {
     try {
       if (registrato && conCodice) await usaCodice(codice.trim());
       else {
-        await registra({ codice: conCodice ? codice.trim() : undefined, classi, provincia: prov.trim().toUpperCase() || undefined, messaggio: msg.trim() });
+        await registra({ codice: conCodice ? codice.trim() : undefined, classi, provincia: prov.trim().toUpperCase() || undefined, messaggio: msg.trim(), invito });
         if (!conCodice) await savePrefs({ ...(await loadPrefs()), classi });
       }
       onFatto();
@@ -951,6 +953,7 @@ function Accesso({ s, c, srv, registrato, codiceIniziale, errore, onFatto }: {
           <Text style={s.title}>Da quale provincia vieni?</Text>
           <TextInput value={prov} onChangeText={setProv} autoCapitalize="characters" maxLength={2} placeholder="Sigla provincia (es. CT)" placeholderTextColor={c.muted} style={s.input} />
           <Text style={s.small}>Ti serve a trovare il gruppo d’aiuto dove ti chiamano. Nessun dato personale.</Text>
+          <TextInput value={invito} onChangeText={setInvito} autoCapitalize="characters" maxLength={12} placeholder="Codice invito di un collega (facoltativo)" placeholderTextColor={c.muted} style={s.input} />
           <Pressable disabled={busy || !classi.length || prov.trim().length !== 2} style={[s.btn, s.btnPrimary, (busy || !classi.length || prov.trim().length !== 2) && { opacity: 0.4 }]} onPress={() => invia(false)}>
             <Text style={[s.btnText, { color: c.accentInk }]}>{busy ? 'Avvio…' : 'Inizia la prova gratuita di 7 giorni'}</Text>
           </Pressable>
@@ -1121,6 +1124,23 @@ function VerificaBox({ s, c, srv, onFatto }: { s: any; c: Pal; srv: StatoServer;
   );
 }
 
+function InvitaBox({ s, c, srv }: { s: any; c: Pal; srv: StatoServer | null }) {
+  if (!srv?.codice_invito) return null;
+  const n = srv.inviti_verificati || 0;
+  const testo = `Uso Interpellati per trovare gli interpelli e le supplenze di tutta Italia, gratis. Scaricala qui: ${LINK_APP}\nAl primo avvio scrivi il mio codice invito ${srv.codice_invito}: quando verifichi le tue classi ci guadagniamo entrambi.`;
+  return (
+    <View style={s.card}>
+      <Text style={s.title}>Invita un collega</Text>
+      <Text style={s.body}>Per ogni collega che completa la verifica ricevi 7 giorni di prova in più e una classe in più da seguire. Hai portato {n} {n === 1 ? 'collega verificato' : 'colleghi verificati'} (massimo 8).</Text>
+      <Text style={[s.title, { letterSpacing: 2 }]} selectable>{srv.codice_invito}</Text>
+      <Pressable style={[s.btn, s.btnPrimary]} onPress={() => { Share.share({ message: testo }).catch(() => copia(testo)); }}>
+        <Text style={[s.btnText, { color: c.accentInk }]}>Condividi l'app</Text>
+      </Pressable>
+      <Text style={s.small}>Il premio arriva solo quando il collega completa la verifica, non per la sola installazione.</Text>
+    </View>
+  );
+}
+
 function Aiuto({ s, c, srv, feed, codiceIniziale, onCambio }: {
   s: any; c: Pal; srv: StatoServer | null; feed: Feed | null; codiceIniziale: string; onCambio: () => void;
 }) {
@@ -1137,6 +1157,7 @@ function Aiuto({ s, c, srv, feed, codiceIniziale, onCambio }: {
         <Text style={s.muted}>Per attivare nuove classi o regioni, segnalare un problema o proporre un'idea.</Text>
         <ContattiBox s={s} c={c} srv={srv} />
       </View>
+      {server ? <InvitaBox s={s} c={c} srv={srv} /> : null}
       {server ? (
         <View style={s.card}>
           <Text style={s.title}>Il tuo accesso</Text>
