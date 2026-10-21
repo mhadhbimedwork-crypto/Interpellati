@@ -63,6 +63,11 @@ ATA_RE = {
 NOMI = {
     "B015": re.compile(r"laborator\w*\s+di\s+scienze\s+e\s+tecnologie\s+elettriche", re.I),
     "B017": re.compile(r"laborator\w*\s+di\s+scienze\s+e\s+tecnologie\s+meccaniche", re.I),
+    # sostegno scritto per esteso (senza codice ADxx)
+    "ADAA": re.compile(r"sostegno\W+(?:\w+\W+){0,3}infanzia|infanzia\W+(?:\w+\W+){0,3}sostegno", re.I),
+    "ADEE": re.compile(r"sostegno\W+(?:\w+\W+){0,3}primaria|primaria\W+(?:\w+\W+){0,3}sostegno", re.I),
+    "ADMM": re.compile(r"sostegno\W+(?:\w+\W+){0,4}(?:i|primo)\s+grado|(?:i|primo)\s+grado\W+(?:\w+\W+){0,3}sostegno", re.I),
+    "ADSS": re.compile(r"sostegno\W+(?:\w+\W+){0,4}(?:ii|secondo)\s+grado|(?:ii|secondo)\s+grado\W+(?:\w+\W+){0,3}sostegno", re.I),
 }
 INTERPELLO_RE = re.compile(r"interpell|supplenz|disponibilit", re.I)
 
