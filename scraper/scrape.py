@@ -232,6 +232,15 @@ class Fetcher:
             return None
 
 
+def provincia_scuola(text: str) -> str | None:
+    """Provincia della scuola dal testo dell'avviso: sigla tra parentesi '(TA)' oppure nome. Serve per gli avvisi
+    nazionali girati da un altro ufficio (es. l'UST di Foggia pubblica anche interpelli di Taranto o Livorno)."""
+    for m in re.finditer(r"\(([A-Z]{2})\)", text):
+        if m[1] in SIGLA:
+            return SIGLA[m[1]]
+    return find_province(text)
+
+
 def find_province(text: str) -> str | None:
     low = text.lower()
     best = None
@@ -412,7 +421,8 @@ def scan_html(f: Fetcher, src: dict, since: date, html: str, undated: bool = Fal
             continue
         item = {
             "classi": cls, "scuola": (txt or ctx)[:140], "pubblicato": d.isoformat() if d else "", "link": href,
-            "fonte": src["nome"], "_prov": prov or find_province(hay),
+            "fonte": src["nome"],
+            "_prov": provincia_scuola(txt + " " + (ctx if len(ctx) < 300 else "") + " " + urlparse(href).path.replace("-", " ").replace("_", " ").replace("/", " ")) or prov or find_province(hay),
         }
         p = item["_prov"]
         if p:
