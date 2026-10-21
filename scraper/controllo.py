@@ -63,7 +63,7 @@ def riferimento(f, url: str) -> list[dict]:
     for blk in main.find_all(["li", "tr", "p"]):
         text = " ".join(blk.get_text(" ", strip=True).split())
         cls = S.classes_in(text, True)
-        links = [urljoin(url, a["href"]) for a in blk.find_all("a", href=True) if "orizzontescuola.it" not in a["href"]]
+        links = [urljoin(url, a["href"]) for a in blk.find_all("a", href=True) if "orizzontescuola.it" not in a["href"] and "scuolainterpelli.it" not in a["href"]]
         if not cls or not links:
             continue
         prov = S.find_province(text) or S.find_province(links[0].replace("_", " ").replace("/", " ").replace("-", " "))
@@ -81,7 +81,18 @@ def main() -> int:
     link_n = {norm(i["link"]) for i in store if i.get("link")}
     cp = {(c, S.PROVINCE[p][0] if p in S.PROVINCE else None) for i in store for c in i.get("classi", []) for p in [None]}
     cp = {(c, i.get("provincia")) for i in store for c in i.get("classi", [])}
-    ref = riferimento_feed()
+    ref = []
+    try:
+        ref = riferimento_feed()  # Orizzonte Scuola blocca i bot dichiarati: se risponde 403 si passa oltre, senza aggirare il blocco
+    except Exception as e:  # noqa: BLE001
+        S.log("feed Orizzonte Scuola non disponibile:", type(e).__name__)
+    if not ref:
+        for back in range(3):
+            d = datetime.now(S.TZ).date() - timedelta(days=back)
+            url = f"https://www.scuolainterpelli.it/interpelli-scuola-{d.day}-{S.MESI[d.month - 1]}-{d.year}/"
+            v = riferimento(f, url)
+            S.log(f"riferimento scuolainterpelli {d}: {len(v)} voci")
+            ref += v
     tot = len(ref)
     esatti, per_cp, buchi = 0, 0, []
     for r in ref:
