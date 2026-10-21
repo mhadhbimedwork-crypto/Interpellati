@@ -1,11 +1,4 @@
 {
-"http://www.ustcremona.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": null
-},
 "https://lnx.uspistruzione.fr.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -13,12 +6,12 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"http://www.ustcremona.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Como",
+"provincia": "Cremona",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": null
 },
 "https://lecco.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -27,12 +20,12 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://belluno.istruzioneveneto.gov.it/category/news/area-amministrativa/interpelli/": {
-"grezzi": 1,
+"https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Belluno",
-"avvisi": 1,
-"errore": null
+"provincia": "Como",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://atcampobasso.it/argomento/servizi/servizi-al-personale-scolastico/interpelli-nazionali/": {
 "grezzi": 11,
@@ -46,12 +39,29 @@
 "avvisi": 0,
 "errore": null
 },
+"https://belluno.istruzioneveneto.gov.it/category/news/area-amministrativa/interpelli/": {
+"grezzi": 1,
+"scartati": [],
+"provincia": "Belluno",
+"avvisi": 1,
+"errore": null
+},
 "https://uat-salerno.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Salerno",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://re.istruzioneer.gov.it/": {
+"grezzi": 19,
+"scartati": [
+"https://re.istruzioneer.gov.it/category/docenti/",
+"https://re.istruzioneer.gov.it/category/docenti/interpello/"
+],
+"provincia": "Reggio Emilia",
+"avvisi": 17,
+"errore": null
 },
 "https://sr.usr.sicilia.it/tag/interpelli/": {
 "grezzi": 2,
@@ -61,28 +71,6 @@
 ],
 "provincia": "Siracusa",
 "avvisi": 0,
-"errore": null
-},
-"https://re.istruzioneer.gov.it/": {
-"grezzi": 18,
-"scartati": [
-"https://re.istruzioneer.gov.it/category/docenti/",
-"https://re.istruzioneer.gov.it/category/docenti/interpello/"
-],
-"provincia": "Reggio Emilia",
-"avvisi": 16,
-"errore": null
-},
-"http://www.provveditoratostudiviterbo.it/": {
-"grezzi": 85,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/#/SG20731/atti/4694269",
-"https://www.portaleargo.it/albopretorio/online/#/SG20731/atti/4660230",
-"https://www.portaleargo.it/albopretorio/online/#/SG28690/atti/4648611",
-"https://www.portaleargo.it/albopretorio/online/#/SG20731/atti/4654949"
-],
-"provincia": "Viterbo",
-"avvisi": 2,
 "errore": null
 },
 "https://www.atpsassari.it/": {
@@ -109,7 +97,7 @@
 "errore": null
 },
 "https://pc.istruzioneer.gov.it/interpelli/": {
-"grezzi": 8,
+"grezzi": 10,
 "scartati": [
 "https://www.polovolta.edu.it/pvw2/app/default/tools.php?act=viewFile&id=2996",
 "https://www.polovolta.edu.it/pvw2/app/default/tools.php?act=downloadFile&id=2996",
@@ -117,7 +105,7 @@
 "https://www.polovolta.edu.it/pvw2/app/default/tools.php?act=downloadFile&id=2995"
 ],
 "provincia": "Piacenza",
-"avvisi": 4,
+"avvisi": 6,
 "errore": null
 },
 "https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
@@ -140,7 +128,7 @@
 "errore": null
 },
 "https://me.usr.sicilia.it/personale-scuola/interpelli/": {
-"grezzi": 33,
+"grezzi": 45,
 "scartati": [
 "mailto:?subject=Condiviso&body=I.C. N°14 SAN FRANCESCO DI PAOLA – Interpello Nazionale per n°01 Supplenza su c",
 "https://twitter.com/home?status=I.C. N°14 SAN FRANCESCO DI PAOLA – Interpello Nazionale per n°01 Supplenza su ",
@@ -148,7 +136,28 @@
 "https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-nazionali/"
 ],
 "provincia": "Messina",
-"avvisi": 12,
+"avvisi": 22,
+"errore": null
+},
+"https://venezia.istruzioneveneto.gov.it/": {
+"grezzi": 1,
+"scartati": [
+"https://twitter.com/home?status=Interpelli: profilo infermiere e A.T. area AR01 - https://venezia.istruzioneve"
+],
+"provincia": "Venezia",
+"avvisi": 0,
+"errore": null
+},
+"http://www.provveditoratostudiviterbo.it/": {
+"grezzi": 99,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/#/SC26442/atti",
+"https://www.portaleargo.it/albopretorio/online/#/SC26974/atti/4709439",
+"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/",
+"https://www.portaleargo.it/albopretorio/online/#/SG20731/atti/4694269"
+],
+"provincia": "Viterbo",
+"avvisi": 2,
 "errore": null
 },
 "https://www.istruzionesavona.it/": {
@@ -165,6 +174,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/": {
+"grezzi": 13,
+"scartati": [],
+"provincia": "Rovigo",
+"avvisi": 13,
+"errore": null
+},
 "https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
 "grezzi": 2,
 "scartati": [
@@ -175,15 +191,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://venezia.istruzioneveneto.gov.it/": {
-"grezzi": 1,
-"scartati": [
-"https://twitter.com/home?status=Interpelli: profilo infermiere e A.T. area AR01 - https://venezia.istruzioneve"
-],
-"provincia": "Venezia",
-"avvisi": 0,
-"errore": null
-},
 "https://www.toscana-istruzione.it/atpisa/category/news/": {
 "grezzi": 0,
 "scartati": [],
@@ -191,12 +198,12 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://www.mim.gov.it/web/como/": {
+"https://www.usp-rieti.it/it/302-docenti/interpelli-supplenze-altre-province.html": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Como",
+"provincia": "Rieti",
 "avvisi": 0,
-"errore": null
+"errore": "HTTP 404"
 },
 "https://www.mim.gov.it/web/nuoro/": {
 "grezzi": 5,
@@ -210,20 +217,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/": {
-"grezzi": 6,
-"scartati": [],
-"provincia": "Rovigo",
-"avvisi": 6,
-"errore": null
-},
-"https://www.usp-rieti.it/it/302-docenti/interpelli-supplenze-altre-province.html": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://www.usppotenza.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -231,16 +224,28 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionebrindisi.it/": {
-"grezzi": 17,
+"https://www.mim.gov.it/web/como/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Como",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
+"grezzi": 9,
 "scartati": [
-"https://www.istruzionebrindisi.it/interpello-cdc-a042-scienze-e-tecnologie-meccaniche-8-ore-dal-27-10-2026-al-",
-"https://www.istruzionebrindisi.it/category/interpelli/",
-"https://www.istruzionebrindisi.it/interpello-nazionale-cdc-a040-scienze-e-tecnologie-elettriche-ed-elettronich",
-"https://www.istruzionebrindisi.it/interpello-nazionale-per-supplenza-su-classe-di-concorso-a042-scienze-e-tecn"
+"https://www.istruzione.calabria.it/cosenza/ic-castrolibero-interpello-posto-di-sostegno-scuola-primaria-24-ore",
+"https://www.istruzione.calabria.it/cosenza/aoouspcs15732-20261020/"
 ],
-"provincia": "Brindisi",
-"avvisi": 3,
+"provincia": "Cosenza",
+"avvisi": 7,
+"errore": null
+},
+"https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
 "errore": null
 },
 "https://www.vivoscuola.it/": {
@@ -248,15 +253,6 @@
 "scartati": [],
 "provincia": "Trento",
 "avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
-"grezzi": 7,
-"scartati": [
-"https://www.istruzione.calabria.it/cosenza/aoouspcs15732-20261020/"
-],
-"provincia": "Cosenza",
-"avvisi": 6,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
@@ -271,18 +267,16 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionematera.it/category/interpelli/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
+"https://www.istruzionebrindisi.it/": {
+"grezzi": 24,
+"scartati": [
+"https://www.istruzionebrindisi.it/interpello-cdc-a042-scienze-e-tecnologie-meccaniche-8-ore-dal-27-10-2026-al-",
+"https://www.istruzionebrindisi.it/category/interpelli/",
+"https://www.istruzionebrindisi.it/interpello-nazionale-cdc-a040-scienze-e-tecnologie-elettriche-ed-elettronich",
+"https://www.istruzionebrindisi.it/interpello-per-selezione-personale-docente-scuola-primaria-posto-di-sostegno"
+],
+"provincia": "Brindisi",
+"avvisi": 6,
 "errore": null
 },
 "https://www.usr.sicilia.it/": {
@@ -297,20 +291,8 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.ustfoggia.it/": {
-"grezzi": 60,
-"scartati": [
-"https://www.ustfoggia.it/category/albo-pretorio/",
-"https://www.ustfoggia.it/category/news/",
-"https://www.ustfoggia.it/ultime-novita-ust-foggia/",
-"https://www.ustfoggia.it/category/senza-categoria/"
-],
-"provincia": "Foggia",
-"avvisi": 56,
-"errore": null
-},
 "https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
-"grezzi": 20,
+"grezzi": 21,
 "scartati": [
 "https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-adaa-n-1-di-2525-ore-settimanali-ist",
 "https://www.uspbari.it/usp/author/mi19228",
@@ -321,20 +303,32 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.ustfoggia.it/": {
+"grezzi": 63,
+"scartati": [
+"https://www.ustfoggia.it/category/albo-pretorio/",
+"https://www.ustfoggia.it/category/news/",
+"https://www.ustfoggia.it/ultime-novita-ust-foggia/",
+"https://www.ustfoggia.it/category/senza-categoria/"
+],
+"provincia": "Foggia",
+"avvisi": 59,
+"errore": null
+},
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
-"grezzi": 697,
+"grezzi": 804,
 "scartati": [
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-bonaccorso-da-montemagno-per-supplenza-scuo",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-preventivo-ics-bonaccorso-da-montemagno-per-sup",
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-raffaello-per-supplenza-breve-scuola-infanz",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-raffaello-per-supplenza-breve-scuola-infanz",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-spezzone-6-ore-al-30-06-c-d-c-a040-istituto-sis"
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-raffaello-per-supplenza-breve-scuola-infanz"
 ],
 "provincia": "Pistoia",
 "avvisi": 0,
 "errore": null
 },
 "https://www.mim.gov.it/web/varese/": {
-"grezzi": 123,
+"grezzi": 148,
 "scartati": [
 "https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-sostegno-primaria-adee-per-supplenze-inferiori",
 "https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-comune-primaria-eeee-per-supplenze-inferiori-a",
@@ -342,7 +336,19 @@
 "https://www.mim.gov.it/web/varese/-/vaic87700a_-_interpello_posto_sostegno_infanzia_adaa_per_supplenze_inferio"
 ],
 "provincia": "Varese",
-"avvisi": 5,
+"avvisi": 6,
+"errore": null
+},
+"https://www.istruzionematera.it/category/interpelli/": {
+"grezzi": 12,
+"scartati": [
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce"
+],
+"provincia": "Matera",
+"avvisi": 0,
 "errore": null
 }
 }
