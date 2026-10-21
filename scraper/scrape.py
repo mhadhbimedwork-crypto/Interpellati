@@ -577,6 +577,9 @@ def main() -> int:
             extra = [i for i in json.loads(tp.read_text("utf-8")) if i.get("link") and i.get("classi")]
         except (OSError, ValueError):
             continue
+        if tp.stem.startswith("uffici"):
+            import uffici
+            extra = [i for i in extra if uffici.valido(i)]
         for i in extra:
             i.pop("_visto", None)
         found += extra
