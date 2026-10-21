@@ -74,14 +74,16 @@ def main() -> int:
     stato = {}
     def lavoro(o):
         try:
-            r = [i for i in uno(f, o, since) if valido(i)]
+            grezzi = uno(f, o, since)
+            r = [i for i in grezzi if valido(i)]
+            stato[o["url"]] = {"grezzi": len(grezzi), "scartati": [i["link"][:110] for i in grezzi if not valido(i)][:4]}
             return o, r, None
         except Exception as e:  # noqa: BLE001
             return o, [], type(e).__name__
     with ThreadPoolExecutor(10) as ex:
         for o, r, err in ex.map(lavoro, uff):
             trovati += r
-            stato[o["url"]] = {"provincia": o.get("provincia"), "avvisi": len(r), "errore": err or f.errs.get(o["url"])}
+            stato.setdefault(o["url"], {}).update({"provincia": o.get("provincia"), "avvisi": len(r), "errore": err or f.errs.get(o["url"])})
     tp = D / "scuole" / f"uffici{k}_trovati.json"
     try:
         vecchi = json.loads(tp.read_text("utf-8"))
