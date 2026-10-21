@@ -52,6 +52,34 @@ def dns_doh(s: requests.Session, host: str) -> str:
     return "?"
 
 
+IPA_XLSX = "https://indicepa.gov.it/ipa-dati/dataset/5baa3eb8-266e-455a-8de8-b1f434c279b2/resource/d09adf99-dc10-4349-8c53-27b1e5aa97b6/download/enti.xlsx"
+IPA: dict[str, str] = {}  # codice meccanografico -> sito istituzionale dichiarato all'Indice PA
+
+
+def carica_ipa() -> None:
+    """Indice dei domicili digitali della PA (fonte ufficiale AgID): ogni scuola dichiara il proprio sito."""
+    import io
+    from openpyxl import load_workbook
+    try:
+        r = requests.get(IPA_XLSX, timeout=120, headers={"User-Agent": UA})
+        r.raise_for_status()
+        wb = load_workbook(io.BytesIO(r.content), read_only=True)
+        ws = wb.active
+        righe = ws.iter_rows(values_only=True)
+        testa = [str(x or "") for x in next(righe)]
+        i_m, i_s = testa.index("Codice_MIUR"), testa.index("Sito_istituzionale")
+        for row in righe:
+            m, sito = (row[i_m] or ""), (row[i_s] or "")
+            if m and sito:
+                for cod in str(m).replace(";", ",").split(","):
+                    cod = cod.strip().upper()
+                    if len(cod) == 10:
+                        IPA[cod] = str(sito).strip()
+    except Exception as e:  # noqa: BLE001
+        print("Indice PA non disponibile:", type(e).__name__, str(e)[:120])
+    print(f"Indice PA: {len(IPA)} scuole con sito istituzionale")
+
+
 def candidati(sito: str, codice: str) -> list[str]:
     host = urlparse(sito).netloc.lower()
     base = host[4:] if host.startswith("www.") else host
@@ -66,6 +94,11 @@ def candidati(sito: str, codice: str) -> list[str]:
         if d not in domini:
             domini.append(d)
     domini += [codice.lower() + ".edu.it", codice.lower() + ".gov.it"]
+    ipa = IPA.get(codice.upper())
+    if ipa:
+        h = urlparse(ipa if "://" in ipa else "https://" + ipa).netloc.lower().removeprefix("www.")
+        if h and h not in domini:
+            domini.insert(0, h)  # il sito dichiarato all'Indice PA e' il piu' affidabile
     out = []
     for d in domini:
         for pre in ("www.", ""):
@@ -131,8 +164,17 @@ def diagnostica(item):
 
 def main() -> int:
     requests.packages.urllib3.disable_warnings()  # verify=False solo come ultima prova sui certificati scaduti
+    carica_ipa()
     rep = json.loads(REPORT.read_text("utf-8"))["scuole"]
     bad = {c: v for c, v in rep.items() if not v.get("ok") and v.get("sito")}
+    # anche le scuole senza sito nell'anagrafica MIM, se l'Indice PA ne dichiara uno
+    try:
+        elenco = json.loads(ELENCO.read_text("utf-8"))["scuole"]
+    except (OSError, ValueError, KeyError):
+        elenco = {}
+    for c, v in elenco.items():
+        if not v.get("sito") and c.upper() in IPA and c not in bad:
+            bad[c] = {"sito": "https://" + urlparse(IPA[c.upper()] if "://" in IPA[c.upper()] else "https://" + IPA[c.upper()]).netloc + "/", "err": "senza sito MIM"}
     print(f"Scuole con errore: {len(bad)}")
     with ThreadPoolExecutor(16) as ex:
         ris = dict(ex.map(diagnostica, bad.items()))
