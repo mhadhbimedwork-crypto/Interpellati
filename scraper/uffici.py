@@ -43,6 +43,10 @@ def main() -> int:
     k, n = int(sys.argv[1]), int(sys.argv[2])
     uff = json.loads((D / "uffici_ipa.json").read_text("utf-8"))
     fissi = json.loads(S.SOURCES.read_text("utf-8"))["uffici"]
+    try:
+        uff += json.loads((D / "uffici_scoperti.json").read_text("utf-8"))
+    except (OSError, ValueError):
+        pass
     visti = {u["url"] for u in uff}
     uff += [u for u in fissi if u["url"] not in visti]
     uff = [u for i, u in enumerate(sorted(uff, key=lambda x: x["url"])) if i % n == k]

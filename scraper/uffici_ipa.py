@@ -10,8 +10,8 @@ import scrape as S  # noqa: E402
 from diagnosi_siti import IPA_XLSX  # noqa: E402
 
 OUT = S.ROOT / "data" / "uffici_ipa.json"
-RX = re.compile(r"ambito territoriale|ufficio scolastico|ufficio\s+\w*\s*ambito|ufficio.*provinciale|\bATP\b|\bUST\b|\bUSP\b|\bUSR\b|centro servizi amministrativi|\bCSA\b|provveditorato", re.I)
-NO = re.compile(r"istituto|liceo|scuola|convitto|circolo didattico|direzione didattica|conservatorio|accademia|universit", re.I)
+RX = re.compile(r"ufficio scolastico|\bUSR\b|\bATP\b|\bUST\b|\bCSA\b", re.I)
+NO = re.compile(r"caccia|ottimale|consorzio|rifiuti|idric|istituto|liceo|scuola|convitto|circolo didattico|direzione didattica|conservatorio|accademia|universit", re.I)
 
 
 def main() -> int:
