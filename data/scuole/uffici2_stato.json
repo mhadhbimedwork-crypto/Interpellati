@@ -13,13 +13,6 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://bergamo.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
@@ -31,6 +24,13 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Cremona",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://bergamo.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -67,37 +67,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://venezia.istruzioneveneto.gov.it/": {
-"grezzi": 1,
-"scartati": [
-"https://twitter.com/home?status=Interpelli: profilo infermiere e A.T. area AR01 - https://venezia.istruzioneve"
-],
-"provincia": "Venezia",
-"avvisi": 0,
-"errore": null
-},
-"http://www.ustlucca.it/": {
-"grezzi": 15,
-"scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/category/avvisi/",
-"https://ustlucca.it/category/circolari-e-decreti/",
-"https://ustlucca.it/category/comunicati/"
-],
-"provincia": "Lucca",
-"avvisi": 5,
-"errore": null
-},
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 2,
-"scartati": [
-"https://gecodoc-argoweb.eu-south-1.portaleargo.it/AWP/SM28284/58aa3ea6a01cb98166f4f5b32dcc45d315504a30b53472be",
-"https://web.spaggiari.eu/sdg2/Interpelli/PRCN0001/a6c85f14-fbfb-4870-ac7c-13c772298934"
-],
-"provincia": "Parma",
-"avvisi": 0,
-"errore": null
-},
 "https://atpisernia.it/": {
 "grezzi": 19,
 "scartati": [
@@ -110,11 +79,23 @@
 "avvisi": 0,
 "errore": null
 },
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 16,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 16,
+"https://venezia.istruzioneveneto.gov.it/": {
+"grezzi": 1,
+"scartati": [
+"https://twitter.com/home?status=Interpelli: profilo infermiere e A.T. area AR01 - https://venezia.istruzioneve"
+],
+"provincia": "Venezia",
+"avvisi": 0,
+"errore": null
+},
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 2,
+"scartati": [
+"https://gecodoc-argoweb.eu-south-1.portaleargo.it/AWP/SM28284/58aa3ea6a01cb98166f4f5b32dcc45d315504a30b53472be",
+"https://web.spaggiari.eu/sdg2/Interpelli/PRCN0001/a6c85f14-fbfb-4870-ac7c-13c772298934"
+],
+"provincia": "Parma",
+"avvisi": 0,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/": {
@@ -136,6 +117,37 @@
 "avvisi": 0,
 "errore": null
 },
+"http://www.ustlucca.it/": {
+"grezzi": 15,
+"scartati": [
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/category/avvisi/",
+"https://ustlucca.it/category/circolari-e-decreti/",
+"https://ustlucca.it/category/comunicati/"
+],
+"provincia": "Lucca",
+"avvisi": 5,
+"errore": null
+},
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 16,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 16,
+"errore": null
+},
+"https://t.me/s/usr_sicilia": {
+"grezzi": 29,
+"scartati": [
+"https://usr.sicilia.it/?p=36368",
+"https://usr.sicilia.it/?p=36376",
+"https://usr.sicilia.it/?p=36411",
+"https://usr.sicilia.it/?p=36420"
+],
+"provincia": null,
+"avvisi": 5,
+"errore": null
+},
 "https://www.istruzionepiacenza.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -150,16 +162,16 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://t.me/s/usr_sicilia": {
-"grezzi": 29,
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 23,
 "scartati": [
-"https://usr.sicilia.it/?p=36368",
-"https://usr.sicilia.it/?p=36376",
-"https://usr.sicilia.it/?p=36411",
-"https://usr.sicilia.it/?p=36420"
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/a041/"
 ],
-"provincia": null,
-"avvisi": 5,
+"provincia": "Ferrara",
+"avvisi": 13,
 "errore": null
 },
 "https://www.usp-rieti.it/it/302-docenti/interpelli-supplenze-altre-province.html": {
@@ -188,18 +200,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 23,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/a041/"
-],
-"provincia": "Ferrara",
-"avvisi": 13,
-"errore": null
-},
 "https://www.mim.gov.it/web/isernia": {
 "grezzi": 10,
 "scartati": [
@@ -219,18 +219,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
-"grezzi": 21,
-"scartati": [
-"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/",
-"https://www.istruzione.calabria.it/crotone/category/notizie/",
-"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/",
-"https://www.istruzione.calabria.it/crotone/category/notizie/"
-],
-"provincia": "Crotone",
-"avvisi": 8,
-"errore": null
-},
 "https://www.istruzionebrindisi.it/category/interpelli/": {
 "grezzi": 28,
 "scartati": [
@@ -241,6 +229,18 @@
 ],
 "provincia": "Brindisi",
 "avvisi": 6,
+"errore": null
+},
+"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
+"grezzi": 21,
+"scartati": [
+"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/",
+"https://www.istruzione.calabria.it/crotone/category/notizie/",
+"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/",
+"https://www.istruzione.calabria.it/crotone/category/notizie/"
+],
+"provincia": "Crotone",
+"avvisi": 8,
 "errore": null
 },
 "https://www.usr.sicilia.it/": {
@@ -259,6 +259,18 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Novara",
+"avvisi": 0,
+"errore": null
+},
+"https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
+"grezzi": 20,
+"scartati": [
+"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-adaa-n-1-di-2525-ore-settimanali-ist",
+"https://www.uspbari.it/usp/author/mi19228",
+"https://www.uspbari.it/usp/category/reclutamento",
+"https://www.uspbari.it/usp/tag/interpello"
+],
+"provincia": "Bari",
 "avvisi": 0,
 "errore": null
 },
@@ -284,18 +296,6 @@
 ],
 "provincia": "Ancona",
 "avvisi": 14,
-"errore": null
-},
-"https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
-"grezzi": 20,
-"scartati": [
-"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-adaa-n-1-di-2525-ore-settimanali-ist",
-"https://www.uspbari.it/usp/author/mi19228",
-"https://www.uspbari.it/usp/category/reclutamento",
-"https://www.uspbari.it/usp/tag/interpello"
-],
-"provincia": "Bari",
-"avvisi": 0,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
