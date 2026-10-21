@@ -6,17 +6,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://lodi.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lodi",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://milano.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Milano",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -27,10 +27,10 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"https://lodi.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bergamo",
+"provincia": "Lodi",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -65,18 +65,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 23,
-"scartati": [
-"mailto:?subject=Condiviso&body=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnolo",
-"https://twitter.com/home?status=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnol",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
-],
-"provincia": "Caltanissetta",
-"avvisi": 13,
-"errore": null
-},
 "https://rg.usr.sicilia.it/": {
 "grezzi": 9,
 "scartati": [
@@ -87,18 +75,6 @@
 ],
 "provincia": "Ragusa",
 "avvisi": 2,
-"errore": null
-},
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 8,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/95fe5ca0-bdf3-425e-88b3-c7e5f77acf2d/candidatura",
-"https://gecodoc-argoweb.eu-south-1.portaleargo.it/AWP/SM28284/58aa3ea6a01cb98166f4f5b32dcc45d315504a30b53472be",
-"https://web.spaggiari.eu/sdg2/Interpelli/PRCN0001/a6c85f14-fbfb-4870-ac7c-13c772298934",
-"https://nuvola.madisoft.it/interpelli/PRIC819001/docenti"
-],
-"provincia": "Parma",
-"avvisi": 1,
 "errore": null
 },
 "http://www.ustlucca.it/": {
@@ -113,25 +89,16 @@
 "avvisi": 5,
 "errore": null
 },
-"https://padova.istruzioneveneto.gov.it/": {
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
 "grezzi": 23,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 23,
-"errore": null
-},
-"https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzioneimperia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Imperia",
-"avvisi": 0,
+"scartati": [
+"mailto:?subject=Condiviso&body=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnolo",
+"https://twitter.com/home?status=Interpello nazionale per supplenza su classe di concorso A042-Scienze e tecnol",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
+],
+"provincia": "Caltanissetta",
+"avvisi": 13,
 "errore": null
 },
 "https://tp.usr.sicilia.it/": {
@@ -146,6 +113,25 @@
 "avvisi": 12,
 "errore": null
 },
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 8,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/95fe5ca0-bdf3-425e-88b3-c7e5f77acf2d/candidatura",
+"https://gecodoc-argoweb.eu-south-1.portaleargo.it/AWP/SM28284/58aa3ea6a01cb98166f4f5b32dcc45d315504a30b53472be",
+"https://web.spaggiari.eu/sdg2/Interpelli/PRCN0001/a6c85f14-fbfb-4870-ac7c-13c772298934",
+"https://nuvola.madisoft.it/interpelli/PRIC819001/docenti"
+],
+"provincia": "Parma",
+"avvisi": 1,
+"errore": null
+},
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 23,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 23,
+"errore": null
+},
 "https://uspistruzione.fr.it/wp2/": {
 "grezzi": 14,
 "scartati": [
@@ -158,6 +144,13 @@
 "avvisi": 10,
 "errore": null
 },
+"https://www.istruzioneimperia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Imperia",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionepiacenza.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -165,12 +158,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://venezia.istruzioneveneto.gov.it/": {
-"grezzi": 1,
-"scartati": [
-"https://twitter.com/home?status=Interpelli: profilo infermiere e A.T. area AR01 - https://venezia.istruzioneve"
-],
-"provincia": "Venezia",
+"https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/latina-didaxis-xxxvi-2023-composizione-nominale-e-giochi-di-parole-nella-cultura-latina/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Latina",
 "avvisi": 0,
 "errore": null
 },
@@ -193,10 +191,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/latina-didaxis-xxxvi-2023-composizione-nominale-e-giochi-di-parole-nella-cultura-latina/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Latina",
+"https://venezia.istruzioneveneto.gov.it/": {
+"grezzi": 1,
+"scartati": [
+"https://twitter.com/home?status=Interpelli: profilo infermiere e A.T. area AR01 - https://venezia.istruzioneve"
+],
+"provincia": "Venezia",
 "avvisi": 0,
 "errore": null
 },
@@ -245,30 +245,6 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
-"grezzi": 2,
-"scartati": [
-"https://www.istruzionepiemonte.it/novara/category/personale-docente/",
-"https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/"
-],
-"provincia": "Novara",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usppotenza.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Potenza",
-"avvisi": 0,
-"errore": null
-},
-"https://www.csa.fi.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Firenze",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
 "https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
 "grezzi": 11,
 "scartati": [
@@ -281,17 +257,41 @@
 "avvisi": 5,
 "errore": null
 },
-"https://www.vivoscuola.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Trento",
-"avvisi": 0,
-"errore": null
-},
 "https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecco",
+"avvisi": 0,
+"errore": null
+},
+"https://www.usppotenza.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Potenza",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
+"grezzi": 2,
+"scartati": [
+"https://www.istruzionepiemonte.it/novara/category/personale-docente/",
+"https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/"
+],
+"provincia": "Novara",
+"avvisi": 0,
+"errore": null
+},
+"https://www.csa.fi.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Firenze",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
+"https://www.vivoscuola.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Trento",
 "avvisi": 0,
 "errore": null
 },
@@ -367,18 +367,6 @@
 "avvisi": 20,
 "errore": null
 },
-"https://www.mim.gov.it/web/varese/": {
-"grezzi": 148,
-"scartati": [
-"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-sostegno-primaria-adee-per-supplenze-inferiori",
-"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-comune-primaria-eeee-per-supplenze-inferiori-a",
-"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-comune-infanzia-aaaa-per-supplenze-inferiori-a",
-"https://www.mim.gov.it/web/varese/-/vaic87700a_-_interpello_posto_sostegno_infanzia_adaa_per_supplenze_inferio"
-],
-"provincia": "Varese",
-"avvisi": 6,
-"errore": null
-},
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
 "grezzi": 804,
 "scartati": [
@@ -389,6 +377,18 @@
 ],
 "provincia": "Pistoia",
 "avvisi": 24,
+"errore": null
+},
+"https://www.mim.gov.it/web/varese/": {
+"grezzi": 148,
+"scartati": [
+"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-sostegno-primaria-adee-per-supplenze-inferiori",
+"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-comune-primaria-eeee-per-supplenze-inferiori-a",
+"https://www.mim.gov.it/web/varese/-/vaic87700a-interpello-posto-comune-infanzia-aaaa-per-supplenze-inferiori-a",
+"https://www.mim.gov.it/web/varese/-/vaic87700a_-_interpello_posto_sostegno_infanzia_adaa_per_supplenze_inferio"
+],
+"provincia": "Varese",
+"avvisi": 6,
 "errore": null
 }
 }
