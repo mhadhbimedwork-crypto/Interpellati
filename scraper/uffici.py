@@ -40,6 +40,8 @@ def forma_ok(it: dict) -> bool:
     if not it.get("link") or not it.get("classi"):
         return False
     lk = it["link"].lower()
+    if "interpelloweb.it/interpelli-supplenze/download/" in lk:
+        return True
     if not lk.startswith(("http://", "https://")) or any(h in lk.split("/")[2] for h in SOCIAL):
         return False
     path = lk.split("#")[0].split("?")[0]
@@ -149,10 +151,52 @@ def da_rss(xml: str, src: dict, since: date) -> list[dict]:
     return out
 
 
+CODICI_IW = {"00EE": "EEEE", "00AA": "AAAA"}
+
+
+def da_interpelloweb(html: str, src: dict, since: date) -> list[dict]:
+    """InterpelloWeb (piattaforma usata dalle scuole): una riga per avviso con data, scuola, provincia,
+    classe e scadenza dichiarate."""
+    out = []
+    tab = BeautifulSoup(html, "html.parser").find("table", class_="cgweb-datatable")
+    for tr in (tab.find_all("tr") if tab else []):
+        st = tr.find("strong")
+        a = tr.find("a", href=True)
+        if not st or not a:
+            continue
+        testa = st.get_text(" ", strip=True)
+        corpo = tr.get_text(" ", strip=True)
+        m = re.match(r"(\d{2})-(\d{2})-(20\d\d)\s*-\s*(.+?)\s*\(([^)]+)\)", testa)
+        if not m:
+            continue
+        d = date(int(m[3]), int(m[2]), int(m[1]))
+        if d < since:
+            continue
+        cls = [CODICI_IW.get(c, c) for c in re.findall(r"\b(00EE|00AA|[A-B][A-Z0-9]\d{2}|AD[A-Z]{2}|A[MS]\d[A-Z])\b", testa)]
+        cls = list(dict.fromkeys(cls)) or S.classes_in(testa + " " + corpo, True)
+        if not cls:
+            continue
+        nome_prov = m[5].strip().title()
+        p = nome_prov if nome_prov in S.PROVINCE else S.find_province(nome_prov)
+        item = {"classi": cls, "scuola": m[4][:140], "pubblicato": d.isoformat(), "link": urljoin(src["url"], a["href"]),
+                "fonte": "InterpelloWeb", "_prov": p}
+        sc = re.search(r"entro\s+(?:il\s+)?(\d{2})-(\d{2})-(20\d\d)(?:\s+alle\s+ore\s+(\d{1,2}[:.]\d{2}))?", corpo, re.I)
+        if sc:
+            item["scadenza"] = f"{sc[3]}-{sc[2]}-{sc[1]}"
+            if sc[4]:
+                item["oraScadenza"] = sc[4].replace(".", ":")
+        if p:
+            item["provincia"], item["regione"] = S.PROVINCE[p]
+        out.append(item)
+    return out
+
+
 def uno(f, off: dict, since: date) -> list[dict]:
     html = f.get(off["url"])
     if not html:
         return []
+    if "interpelloweb.it" in off["url"]:
+        return da_interpelloweb(html, off, since)
     if html.lstrip()[:200].lower().startswith("<?xml") or "<rss" in html[:400].lower() or "<feed" in html[:400].lower():
         src = {"nome": off["nome"], "url": off["url"], "_prov": off.get("provincia")}
         return da_rss(html, src, since)

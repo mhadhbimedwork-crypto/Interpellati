@@ -411,6 +411,9 @@ def scan_office(f: Fetcher, src: dict, since: date) -> list[dict]:
     if html.lstrip()[:200].lower().startswith("<?xml") or "<rss" in html[:400].lower():
         import uffici  # feed RSS ufficiale: date certe
         return uffici.da_rss(html, {"nome": src["nome"], "url": src["url"], "_prov": src.get("provincia")}, since)
+    if "interpelloweb.it" in src["url"]:
+        import uffici
+        return uffici.da_interpelloweb(html, src, since)
     return scan_html(f, src, since, html)
 
 
