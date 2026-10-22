@@ -408,6 +408,9 @@ def scan_office(f: Fetcher, src: dict, since: date) -> list[dict]:
     html = f.get(src["url"])
     if not html:
         return []
+    if html.lstrip()[:200].lower().startswith("<?xml") or "<rss" in html[:400].lower():
+        import uffici  # feed RSS ufficiale: date certe
+        return uffici.da_rss(html, {"nome": src["nome"], "url": src["url"], "_prov": src.get("provincia")}, since)
     return scan_html(f, src, since, html)
 
 
@@ -418,7 +421,9 @@ def scan_html(f: Fetcher, src: dict, since: date, html: str, undated: bool = Fal
     prov = src.get("provincia")
     for a in soup.find_all("a", href=True):
         txt = " ".join(a.get_text(" ", strip=True).split())
-        href = urljoin(src["url"], a["href"])
+        href = urljoin(src["url"], a["href"]).split("#")[0]
+        if not href.startswith(("http://", "https://")) or re.search(r"[?&](tmpl|print|format)=|/wp-(admin|login)|/feed/?$|/comments?/", href, re.I):
+            continue
         ctx = block_of(a)
         hay = txt + " " + href + " " + ctx
         cls = classes_in(txt + " " + href, True) or (classes_in(ctx, True) if len(ctx) < 300 else [])

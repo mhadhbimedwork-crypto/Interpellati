@@ -46,6 +46,8 @@ def forma_ok(it: dict) -> bool:
     if PAG_RX.search(path):
         return False
     slug = path.rstrip("/").split("/")[-1]
+    if "/interpell" in path and len(slug) >= 18:
+        return True
     return len(slug) >= 18 and ("interpell" in slug or "supplenz" in slug or "disponibil" in slug or bool(S.CODE_RE.search(slug.upper())))
 
 
@@ -67,6 +69,10 @@ def data_pagina(f, link: str, cache: dict) -> str:
     if d:
         cache[link] = d
         return d
+    up = re.search(r"/uploads/(20\d\d)/(\d\d)/", link)
+    if up and (int(up[1]), int(up[2])) < ((date.today() - timedelta(days=10)).year, (date.today() - timedelta(days=10)).month):
+        cache[link] = f"{up[1]}-{up[2]}-01"  # allegato caricato in un mese passato: non e' nuovo
+        return cache[link]
     if not link.lower().split("?")[0].endswith(FILE_EXT):
         html = f.get(link)
         if not html:
@@ -104,12 +110,50 @@ def data_pagina(f, link: str, cache: dict) -> str:
     return d
 
 
+def da_rss(xml: str, src: dict, since: date) -> list[dict]:
+    """Feed RSS/Atom ufficiale del sito: titolo, link e data di pubblicazione certa per ogni avviso."""
+    from email.utils import parsedate_to_datetime
+    try:
+        soup = BeautifulSoup(xml, "xml")
+    except Exception:  # noqa: BLE001  (lxml assente)
+        soup = BeautifulSoup(xml, "html.parser")
+    out = []
+    for it in soup.find_all(["item", "entry"]):
+        tit = (it.find("title").get_text(" ", strip=True) if it.find("title") else "")
+        ln = it.find("link")
+        link = (ln.get("href") or ln.get_text(strip=True)) if ln else ""
+        desc = " ".join(x.get_text(" ", strip=True) for x in it.find_all(["description", "summary", "category"]))[:600]
+        pub = it.find(["pubDate", "pubdate", "published", "updated"])
+        d = None
+        if pub:
+            t = pub.get_text(strip=True)
+            try:
+                d = parsedate_to_datetime(t).date()
+            except (TypeError, ValueError):
+                d = S.find_date(t) or (date.fromisoformat(t[:10]) if re.match(r"20\d\d-\d\d-\d\d", t) else None)
+        cls = S.classes_in(tit + " " + link, True) or S.classes_in(desc, True)
+        if not link or not cls or not S.INTERPELLO_RE.search(tit + " " + desc + " " + link):
+            continue
+        if not d or d < since or d > date.today() + timedelta(days=1):
+            continue
+        p = S.provincia_scuola(tit + " " + desc) or (None if "nazional" in tit.lower() else src.get("_prov"))
+        item = {"classi": cls, "scuola": tit[:140], "pubblicato": d.isoformat(), "link": link, "fonte": src["nome"], "_prov": p}
+        if p:
+            item["provincia"], item["regione"] = S.PROVINCE[p]
+        out.append(item)
+    return out
+
+
 def uno(f, off: dict, since: date) -> list[dict]:
     html = f.get(off["url"])
     if not html:
         return []
+    if html.lstrip()[:200].lower().startswith("<?xml") or "<rss" in html[:400].lower() or "<feed" in html[:400].lower():
+        src = {"nome": off["nome"], "url": off["url"], "_prov": off.get("provincia")}
+        return da_rss(html, src, since)
     src = {"nome": off["nome"], "url": off["url"], "provincia": off.get("provincia")}
-    res = S.scan_html(f, src, since, html)
+    # anche la pagina dell'ufficio stessa puo' elencare avvisi senza data: la data si legge dopo dall'avviso
+    res = S.scan_html(f, src, since, html, undated=True)
     for u in pagine_interpelli(f, off["url"], html):
         h2 = f.get(u)
         if h2:
