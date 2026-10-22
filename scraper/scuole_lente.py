@@ -20,6 +20,9 @@ D = ROOT / "data" / "scuole"
 
 def main() -> int:
     t0 = time.time()
+    sh = (sys.argv[1] if len(sys.argv) > 1 else "0/1").split("/")
+    i_sh, n_sh = int(sh[0]), int(sh[1])
+    pre = "lente" if n_sh == 1 else f"lente{i_sh}"
     budget = int(os.environ.get("BUDGET_S", "2100"))
     try:
         lenti = json.loads((ROOT / "data" / "ip_lenti.json").read_text("utf-8"))["scuole"]
@@ -38,10 +41,10 @@ def main() -> int:
         elenco.update({c: v for c, v in sc.items() if c in lenti})
     except (OSError, ValueError):
         pass
-    codici = sorted(c for c, v in elenco.items() if v.get("sito"))
+    codici = sorted(c for c, v in elenco.items() if v.get("sito") and sum(map(ord, c)) % n_sh == i_sh)
     prio = [c for c in codici if c in b or any(x in b for x in elenco[c].get("sedi", []))]
     resto = [c for c in codici if c not in set(prio)]
-    st_p, rep_p, tr_p = D / "lente_stato.json", D / "lente_report.json", D / "lente_trovati.json"
+    st_p, rep_p, tr_p = D / f"{pre}_stato.json", D / f"{pre}_report.json", D / f"{pre}_trovati.json"
     try:
         cur = int(json.loads(st_p.read_text("utf-8")).get("cursore", 0)) % max(1, len(resto))
     except (OSError, ValueError):
@@ -52,7 +55,7 @@ def main() -> int:
         sicilia.KNOWN = {i.get("link") for i in store.get("interpelli", [])}
     except (OSError, ValueError):
         sicilia.KNOWN = set()
-    sicilia.MAX_SOTTO = 4
+    sicilia.MAX_SOTTO = 2
     f = S.Fetcher()
     since = date.today() - timedelta(days=10)
     try:

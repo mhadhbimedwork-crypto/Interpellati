@@ -5,12 +5,41 @@ on:
     - cron: "25 * * * *"
 permissions:
   contents: write
-concurrency:
-  group: scuole-lente
 jobs:
+  ip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    concurrency:
+      group: scuole-lente-ip
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Server condivisi con limite osservato (solo DNS)
+        run: python scraper/ip_lenti.py
+      - name: Salva
+        run: |
+          git config user.name "interpellati-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/ip_lenti.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "dati: server condivisi con limite di richieste"
+          for i in 1 2 3 4 5 6; do
+            git pull -q --rebase -X theirs origin main && git push -q && exit 0
+            sleep $((i*5))
+          done
+          exit 1
   l:
+    needs: ip
     runs-on: ubuntu-latest
     timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5]
+    concurrency:
+      group: scuole-lente-${{ matrix.shard }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -19,20 +48,17 @@ jobs:
           cache: pip
           cache-dependency-path: scraper/requirements.txt
       - run: pip install -r scraper/requirements.txt
-      - name: Server condivisi (solo DNS)
-        run: python scraper/ip_lenti.py
-        continue-on-error: true
       - name: Lettura a ritmo adattivo
         env:
           BUDGET_S: "2100"
-        run: python scraper/scuole_lente.py
+        run: python scraper/scuole_lente.py ${{ matrix.shard }}/6
         continue-on-error: true
       - name: Salva
         if: always()
         run: |
           git config user.name "interpellati-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/ip_lenti.json data/scuole/lente_*
+          git add data/scuole/lente${{ matrix.shard }}_*
           git diff --cached --quiet && exit 0
           git commit -q -m "dati: scuole su server condivisi $(date -u +%Y-%m-%dT%H:%MZ)"
           for i in 1 2 3 4 5 6 7 8; do

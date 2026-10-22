@@ -36,8 +36,16 @@ def main() -> int:
             return cod, ""
     with ThreadPoolExecutor(64) as ex:
         ip = dict(ex.map(ris, siti.items()))
-    n = Counter(v for v in ip.values() if v)
-    lenti = {k: c for k, c in n.items() if c >= 25}
+    n = Counter(v for v in ip.values() if v and v != "0.0.0.0")
+    # solo gli IP dove e' stato osservato davvero un limite (509/429) nella diagnosi dei siti in errore
+    limitati = set()
+    try:
+        for r in json.loads((ROOT / "data" / "diagnosi_errori.json").read_text("utf-8"))["scuole"].values():
+            if any(t.get("st") in (509, 429) for t in r["t"]):
+                limitati.add(r["ip"])
+    except (OSError, ValueError, KeyError):
+        pass
+    lenti = {k: c for k, c in n.items() if c >= 10 and k in limitati}
     out = {"ips": lenti, "scuole": {c: v for c, v in ip.items() if v in lenti}}
     (ROOT / "data" / "ip_lenti.json").write_text(json.dumps(out, ensure_ascii=False, indent=0) + "\n", "utf-8")
     print("IP condivisi:", lenti, "· scuole interessate:", len(out["scuole"]))
