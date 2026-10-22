@@ -6,7 +6,7 @@ import json, re, sys, time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 from bs4 import BeautifulSoup
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import scrape as S  # noqa: E402
@@ -20,10 +20,12 @@ def pagine_interpelli(f, url: str, html: str) -> list[str]:
     for a in soup.find_all("a", href=True):
         t = (a.get_text(" ", strip=True) + " " + a["href"]).lower()
         if any(k in t for k in ("interpell", "supplenz", "disponibilit", "convocazion")) and not a["href"].lower().split("?")[0].endswith((".pdf", ".doc", ".docx", ".zip")):
-            u = urljoin(url, a["href"])
-            if u not in out and u != url:
+            u = urljoin(url, a["href"]).split("#")[0]
+            if u not in out and u != url and u.startswith(("http://", "https://")):
                 out.append(u)
-    return out[:6]
+    # prima gli articoli (data nell'indirizzo o titolo lungo), poi categorie e menu
+    out.sort(key=lambda u: (0 if re.search(r"/20\d\d/\d\d/", u) else 1 if len(u.rstrip("/").split("/")[-1]) >= 25 else 2))
+    return out[:10]
 
 
 SOCIAL = ("facebook.", "twitter.", "x.com", "whatsapp", "linkedin.", "t.me", "telegram.", "pinterest.", "instagram.", "youtube.", "youtu.be")

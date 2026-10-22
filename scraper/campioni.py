@@ -13,20 +13,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import scrape as S  # noqa: E402
 
 URLS = [
-    "https://www.mim.gov.it/web/sassari/-/interpello-per-n-1-posto-h-25-adaa-sostegno-scuola-infanzia-i-c-alghero-n-3",
-    "https://www.mim.gov.it/web/nuoro/interpelli/",
-    "https://www.mim.gov.it/web/sassari/",
-    "https://www.ufficioscolasticoprovinciale.prato.it/interpello-del-19-10-2026-conferimento-posti-scuola-infanzia-ic-nord/",
-    "https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/",
-    "https://www.ustli.it/usp_livorno/index.php/docenti/interpelli",
-    "https://www.atpromaistruzione.it/atp/tag/interpelli/",
-    "https://interpelloweb.it/robots.txt",
+    "https://interpelloweb.it/wp-sitemap.xml",
+    "https://interpelloweb.it/interpelli-supplenze/",
     "https://interpelloweb.it/interpelli-supplenze/istituto/boss000vd8/",
-    "https://interpelloweb.it/",
-    "https://web.spaggiari.eu/robots.txt",
-    "https://web.spaggiari.eu/sdg2/Interpelli/PNII0006/a113be96-5939-453b-96d8-ff223847c636",
-    "https://www.istruzionepotenza.it/",
-    "https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
+    "https://www.atpromaistruzione.it/atp/2026/10/interpelli-per-la-selezione-del-personale-docente-aaaa-adaa-adee-",
+    "https://www.istruzionepotenza.it/interpello-nazionale-conferimento-supplenza-temporanea-del-personale-docente-classe-di-concorso-a040-scuola-secondaria-di-ii-grado/",
+    "http://uat-salerno.it/",
+    "https://www.csateramo.it/wpusp/archive/category/news",
 ]
 
 
@@ -42,6 +35,9 @@ def main() -> int:
                 out[u] = {"errore": type(e).__name__}
             continue
         html = f.get(u)
+        if html and ("<urlset" in html[:500] or "<sitemapindex" in html[:500]):
+            out[u] = {"sitemap": html[:6000]}
+            continue
         if not html:
             out[u] = {"errore": f.errs.get(u) or "nessuna risposta / robots"}
             continue

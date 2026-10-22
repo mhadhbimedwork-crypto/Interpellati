@@ -7,7 +7,7 @@ permissions:
   contents: write
 concurrency:
   group: uffici
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   scopri:
     runs-on: ubuntu-latest
