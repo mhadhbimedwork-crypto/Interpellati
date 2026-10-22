@@ -49,7 +49,14 @@ jobs:
           NOTE="Ultima versione compilata automaticamente dal commit ${GITHUB_SHA::7}. Scarica Interpellati.apk dal telefono e installalo."
           # La release e il tag vengono ricreati sul commit corrente: cosi' il tag non punta a vecchi commit.
           gh release delete apk -y --cleanup-tag || true
-          gh release create apk Interpellati.apk --title "Interpellati – app Android" --notes "$NOTE" --target "$GITHUB_SHA"
+          sleep 8
+          for i in 1 2 3 4; do
+            gh release create apk Interpellati.apk --title "Interpellati – app Android" --notes "$NOTE" --target "$GITHUB_SHA" && exit 0
+            echo "nuovo tentativo $i"; sleep 15
+            # se la release esiste gia' (creata a meta'), basta caricare il file
+            gh release view apk >/dev/null 2>&1 && gh release upload apk Interpellati.apk --clobber && exit 0
+          done
+          exit 1
       - uses: actions/upload-artifact@v4
         with:
           name: Interpellati-apk
