@@ -6,17 +6,17 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://milano.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Milano",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -27,10 +27,10 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bergamo",
+"provincia": "Cremona",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -42,10 +42,13 @@
 "errore": "HTTP 404"
 },
 "https://re.istruzioneer.gov.it/": {
-"grezzi": 9,
-"scartati": [],
+"grezzi": 23,
+"scartati": [
+"https://re.istruzioneer.gov.it/category/docenti/",
+"https://re.istruzioneer.gov.it/category/docenti/interpello/"
+],
 "provincia": "Reggio Emilia",
-"avvisi": 9,
+"avvisi": 21,
 "errore": null
 },
 "https://varese.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti-2/": {
@@ -79,18 +82,6 @@
 "avvisi": 5,
 "errore": null
 },
-"https://tp.usr.sicilia.it/": {
-"grezzi": 24,
-"scartati": [
-"https://twitter.com/home?status=Avviso di Interpello nazionale classe di concorso A043 – Polo Statale Piersant",
-"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
-"https://tp.usr.sicilia.it/category/news/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Ftp.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%"
-],
-"provincia": "Trapani",
-"avvisi": 20,
-"errore": null
-},
 "https://uspistruzione.fr.it/wp2/": {
 "grezzi": 26,
 "scartati": [
@@ -103,46 +94,16 @@
 "avvisi": 21,
 "errore": null
 },
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 39,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 39,
-"errore": null
-},
-"https://www.istruzionegenova.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
-"errore": null
-},
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 65,
+"https://tp.usr.sicilia.it/": {
+"grezzi": 24,
 "scartati": [
-"https://twitter.com/home?status=Interpello per incarico di supplenza su Classe di Concorso AI55 – Percussioni ",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Fcl-en.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadm"
+"https://twitter.com/home?status=Avviso di Interpello nazionale classe di concorso A043 – Polo Statale Piersant",
+"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
+"https://tp.usr.sicilia.it/category/news/",
+"https://docs.google.com/viewer?url=https%3A%2F%2Ftp.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%"
 ],
-"provincia": "Caltanissetta",
-"avvisi": 29,
-"errore": null
-},
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 27,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 26,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vercelli",
-"avvisi": 0,
+"provincia": "Trapani",
+"avvisi": 20,
 "errore": null
 },
 "https://fe.istruzioneer.gov.it/": {
@@ -154,13 +115,50 @@
 "https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
 ],
 "provincia": "Ferrara",
-"avvisi": 22,
+"avvisi": 23,
+"errore": null
+},
+"https://www.istruzionegenova.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Genova",
+"avvisi": 0,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 27,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 26,
+"errore": null
+},
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 39,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 39,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vercelli",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Napoli",
+"avvisi": 0,
+"errore": null
+},
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
 "avvisi": 0,
 "errore": null
 },
@@ -176,11 +174,16 @@
 "avvisi": 8,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
+"grezzi": 66,
+"scartati": [
+"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso BA02 – I.",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
+"https://cl-en.usr.sicilia.it/category/news/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
+],
+"provincia": "Caltanissetta",
+"avvisi": 32,
 "errore": null
 },
 "https://www.istruzionerovigo.it/": {
@@ -190,16 +193,15 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionebat.it/category/interpello/": {
-"grezzi": 55,
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
+"grezzi": 7,
 "scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
-"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
-"https://www.scuolapetronellitrani.edu.it/interpelli/"
+"https://www.istruzione.calabria.it/catanzaro/category/nca/",
+"https://www.istruzione.calabria.it/catanzaro/category/reclutamento/",
+"https://www.istruzione.calabria.it/catanzaro/personale-docente-interpello-classe-di-concorso-an55-violoncello-"
 ],
-"provincia": "Barletta-Andria-Trani",
-"avvisi": 1,
+"provincia": "Catanzaro",
+"avvisi": 4,
 "errore": null
 },
 "https://www.atpromaistruzione.it/atp/tag/interpelli/": {
@@ -212,6 +214,18 @@
 ],
 "provincia": "Roma",
 "avvisi": 15,
+"errore": null
+},
+"https://www.istruzionebat.it/category/interpello/": {
+"grezzi": 55,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
+"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
+"https://www.scuolapetronellitrani.edu.it/interpelli/"
+],
+"provincia": "Barletta-Andria-Trani",
+"avvisi": 1,
 "errore": null
 },
 "https://www.istruzionematera.it/": {
@@ -233,16 +247,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 7,
-"scartati": [
-"https://www.istruzione.calabria.it/catanzaro/category/nca/",
-"https://www.istruzione.calabria.it/catanzaro/category/reclutamento/",
-"https://www.istruzione.calabria.it/catanzaro/personale-docente-interpello-classe-di-concorso-an55-violoncello-"
-],
-"provincia": "Catanzaro",
-"avvisi": 4,
-"errore": null
+"http://www.uspmc.sinp.net/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
 },
 "https://www.regione.vda.it/": {
 "grezzi": 0,
@@ -251,30 +261,16 @@
 "avvisi": 0,
 "errore": null
 },
-"http://www.uspmc.sinp.net/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
-"https://www.uspcampobasso.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Campobasso",
-"avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/isernia/": {
-"grezzi": 8,
+"https://www.mim.gov.it/web/cagliari/": {
+"grezzi": 17,
 "scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-naziona",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-nazionale-per-il-r",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-nazionale-per-",
-"https://www.mim.gov.it/web/isernia/"
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-la",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-la-supplenza-",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-la-supple",
+"https://www.mim.gov.it/web/cagliari/"
 ],
-"provincia": "Isernia",
-"avvisi": 2,
+"provincia": "Cagliari",
+"avvisi": 6,
 "errore": null
 },
 "https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
@@ -289,6 +285,13 @@
 "scartati": [],
 "provincia": "Foggia",
 "avvisi": 8,
+"errore": null
+},
+"https://www.uspcampobasso.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Campobasso",
+"avvisi": 0,
 "errore": null
 },
 "https://www.vivoscuola.it/": {
@@ -317,16 +320,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
-"grezzi": 37,
+"https://www.mim.gov.it/web/isernia/": {
+"grezzi": 12,
 "scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-conferiment",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-conferi",
+"https://www.mim.gov.it/web/isernia/"
 ],
-"provincia": "Cuneo",
-"avvisi": 25,
+"provincia": "Isernia",
+"avvisi": 3,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
@@ -341,30 +344,6 @@
 "avvisi": 7,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/torino/": {
-"grezzi": 48,
-"scartati": [
-"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a018/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a061/"
-],
-"provincia": "Torino",
-"avvisi": 19,
-"errore": null
-},
-"https://www.mim.gov.it/web/cagliari/": {
-"grezzi": 17,
-"scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-la",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-la-supplenza-",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-la-supple",
-"https://www.mim.gov.it/web/cagliari/"
-],
-"provincia": "Cagliari",
-"avvisi": 6,
-"errore": null
-},
 "https://www.mim.gov.it/web/sassari/": {
 "grezzi": 0,
 "scartati": [],
@@ -377,6 +356,30 @@
 "scartati": [],
 "provincia": "Mantova",
 "avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/torino/": {
+"grezzi": 48,
+"scartati": [
+"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a018/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a061/"
+],
+"provincia": "Torino",
+"avvisi": 19,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
+"grezzi": 37,
+"scartati": [
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
+],
+"provincia": "Cuneo",
+"avvisi": 25,
 "errore": null
 }
 }
