@@ -20,7 +20,7 @@ import time
 import urllib.robotparser
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
+from urllib.parse import unquote, urljoin, urlparse
 
 import io
 import requests
@@ -433,6 +433,77 @@ def scan_aggregator_day(f: Fetcher, d: date) -> list[dict]:
     return out
 
 
+NAV_RX = re.compile(r"^\s*(vai\b|pagina\s+(successiva|precedente)|cookie|accedi|menu|stampa|contenuto|ricerca|riquadro|pi[eè]\s+di|"
+                    r"stile|risorse|accesso|home\b|leggi|scarica|continua|apri|dettagli|link|clicca|qui\b|allegat|download|\d+\s*$)", re.I)
+
+
+def anno_scolastico_corrente(oggi: date | None = None) -> int:
+    oggi = oggi or date.today()
+    return oggi.year if oggi.month >= 9 else oggi.year - 1
+
+
+def vecchio(it: dict, oggi: date | None = None) -> bool:
+    """Avviso di un anno scolastico passato, riconoscibile dal titolo o dall'indirizzo: supplenza che finisce
+    prima di oggi ('fino al 10/06/2026'), oppure anno scolastico gia' chiuso ('a.s. 2025/26')."""
+    oggi = oggi or date.today()
+    t = ((it.get("scuola") or "") + " " + unquote(it.get("link") or "")).lower()
+    t = re.sub(r"[_]+", " ", t)
+    asc = anno_scolastico_corrente(oggi)
+    inizio = date(asc, 9, 1)
+    tt = t.replace("-", " ").replace("  ", " ")
+
+    def date_dopo(rx):
+        out = []
+        for m in re.finditer(rx + r"\s*(\d{1,2})[\s./]+(\d{1,2})[\s./]+(\d{2,4})", tt):
+            y = int(m[3]); y = y + 2000 if y < 100 else y
+            try:
+                out.append(date(y, int(m[2]), int(m[1])))
+            except ValueError:
+                pass
+        return out
+    fine = date_dopo(r"(?:fino\s*(?:al|a)|\bal)")
+    avvio = date_dopo(r"\bdal")
+    # supplenza finita prima dell'inizio di quest'anno scolastico (salvo un 'dal' di quest'anno: errore di battitura)
+    if fine and max(fine) < inizio and not (avvio and max(avvio) >= inizio):
+        return True
+    anni = [int(m[1]) for m in re.finditer(r"(?<!\d)(20\d\d)\s*[/-]\s*(?:20)?(\d\d)(?!\d)", t) if int(m[2]) == (int(m[1]) + 1) % 100]
+    if anni and max(anni) < asc:
+        return True
+    return False
+
+
+def pulisci_link(lista: list[dict]) -> list[dict]:
+    """Un solo avviso per indirizzo e classi: via ancore (#...) e versioni di stampa; come titolo il testo
+    piu' descrittivo, mai voci di menu ('Vai ai contenuti', 'Pagina successiva')."""
+    gruppi: dict = {}
+    for i in lista:
+        l = (i.get("link") or "").split("#")[0]
+        if not l or re.search(r"[?&](tmpl|print|format)=", l, re.I):
+            continue
+        i["link"] = l
+        gruppi.setdefault((l, tuple(i.get("classi", [])), i.get("pubblicato")), []).append(i)
+    out = []
+    for (l, _, _), g in gruppi.items():
+        buoni = [i for i in g if not NAV_RX.match(i.get("scuola") or "") and len(i.get("scuola") or "") >= 8]
+        # stesso indirizzo ma scuole diverse (es. pagina d'ambito con piu' righe): restano tutte, una per scuola
+        per_scuola: dict = {}
+        for i in buoni:
+            k = re.sub(r"[^a-z0-9]", "", (i.get("scuola") or "").lower())
+            if k in per_scuola:  # stessa scuola, classe e giorno: piu' posti segnalati, si contano
+                per_scuola[k]["segnalazioni"] = per_scuola[k].get("segnalazioni", 1) + i.get("segnalazioni", 1)
+            else:
+                per_scuola[k] = i
+        if per_scuola:
+            out += list(per_scuola.values())
+            continue
+        it = g[0]
+        slug = urlparse(l).path.rstrip("/").split("/")[-1]
+        slug = re.sub(r"\.(pdf|docx?|zip|odt|html?)$", "", slug, flags=re.I)
+        it["scuola"] = re.sub(r"[-_]+", " ", slug)[:140].strip().capitalize() or it.get("scuola", "")
+        out.append(it)
+    return out
+
+
 def scan_office(f: Fetcher, src: dict, since: date) -> list[dict]:
     html = f.get(src["url"])
     if not html:
@@ -709,6 +780,15 @@ def main() -> int:
     for i in items.values():
         if (i.get("pubblicato") or "") > (datetime.now(TZ).date() + timedelta(days=1)).isoformat():
             i["pubblicato"] = (i.get("trovato") or datetime.now(TZ).isoformat())[:10]
+    prima = len(items)
+    items = {i["id"]: i for i in pulisci_link(list(items.values()))}
+    if prima != len(items):
+        log(f"  archivio: {prima - len(items)} doppioni (ancore, menu) uniti")
+    vecchi = [k for k, i in items.items() if vecchio(i)]
+    for k in vecchi:
+        items.pop(k)
+    if vecchi:
+        log(f"  archivio: tolti {len(vecchi)} avvisi di anni scolastici passati")
     known_links = {(i.get("link"), tuple(i.get("classi", [])), i.get("pubblicato")) for i in items.values()}
     sources = json.loads(SOURCES.read_text("utf-8"))
     f = Fetcher()
@@ -735,6 +815,7 @@ def main() -> int:
         if tp.stem.startswith("uffici"):
             import uffici
             extra = [i for i in extra if uffici.valido(i)]
+        extra = pulisci_link(extra)
         for i in extra:
             i.pop("_visto", None)
         found += extra
@@ -756,6 +837,7 @@ def main() -> int:
             return [it]
 
     nuovi = []
+    found = [it for it in found if not vecchio(it)]
     for it in found:
         key = (it["link"], tuple(it["classi"]), it["pubblicato"])
         if key in known_links:
@@ -825,7 +907,7 @@ def main() -> int:
             chiave = (i.get("provincia"), tuple(i.get("classi", [])), re.sub(r"[^a-z0-9]", "", (i.get("scuola") or "").lower()))
             if chiave in portale:  # keep è ordinato dal più recente: la prima voce resta, le altre si contano
                 p = portale[chiave]
-                p["segnalazioni"] = p.get("segnalazioni", 1) + 1
+                p["segnalazioni"] = p.get("segnalazioni", 1) + i.get("segnalazioni", 1)
                 p["primaSegnalazione"] = i.get("pubblicato")
                 continue
             portale[chiave] = r

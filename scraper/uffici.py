@@ -56,7 +56,7 @@ def forma_ok(it: dict) -> bool:
 
 
 def valido(it: dict) -> bool:
-    return bool(it.get("pubblicato")) and forma_ok(it)
+    return bool(it.get("pubblicato")) and forma_ok(it) and not S.vecchio(it)
 
 
 def data_pagina(f, link: str, cache: dict) -> str:
