@@ -73,19 +73,31 @@ def data_pagina(f, link: str, cache: dict) -> str:
             return ""  # pagina non raggiunta: riprova al prossimo giro, non memorizzare il fallimento
         if html:
             soup = BeautifulSoup(html, "html.parser")
+            testo = soup.get_text(" ", strip=True)
             cand = []
+            # 1) date dichiarate con un'etichetta (Pubblicato il, Data:, Ultimo aggiornamento)
+            for mm in re.finditer(r"(?:pubblicat\w*|aggiornament\w*|\bdata\b)[^0-9]{0,30}(\d{1,2}[/.\-]\d{1,2}[/.\-]\d{2,4}|\d{1,2}\s+[a-zà]+\s+\d{4})", testo[:8000], re.I):
+                cand.append(mm.group(1))
+            # 2) metadati e tag <time>
             for m in soup.find_all("meta"):
-                if (m.get("property") or m.get("name") or "").lower() in ("article:published_time", "og:updated_time", "date", "datepublished"):
+                if (m.get("property") or m.get("name") or m.get("itemprop") or "").lower() in (
+                        "article:published_time", "article:modified_time", "og:updated_time", "date", "datepublished", "dc.date"):
                     cand.append(m.get("content") or "")
             for t in soup.find_all("time"):
                 cand.append(t.get("datetime") or t.get_text(" ", strip=True))
-            testo = soup.get_text(" ", strip=True)
+            # 3) inizio della pagina
             cand.append(testo[:800])
-            for mm in re.finditer(r"(?:pubblicat\w*|data)[^0-9]{0,25}(\d{1,2}[/.\-]\d{1,2}[/.\-]\d{2,4}|\d{1,2}\s+[a-zà]+\s+\d{4})", testo[:6000], re.I):
-                cand.append(mm.group(1))
+            oggi = date.today()
             for c in cand:
-                x = S.find_date(c) or (S.parseiso(c) if hasattr(S, "parseiso") else None)
-                if x:
+                x = None
+                iso = re.match(r"\s*(20\d\d)-(\d\d)-(\d\d)", c or "")
+                if iso:
+                    try:
+                        x = date(int(iso[1]), int(iso[2]), int(iso[3]))
+                    except ValueError:
+                        x = None
+                x = x or S.find_date(c)
+                if x and x <= oggi + timedelta(days=1):
                     d = x.isoformat()
                     break
     cache[link] = d

@@ -68,6 +68,12 @@ NOMI = {
     "ADEE": re.compile(r"sostegno\W+(?:\w+\W+){0,3}primaria|primaria\W+(?:\w+\W+){0,3}sostegno", re.I),
     "ADMM": re.compile(r"sostegno\W+(?:\w+\W+){0,4}(?:i|primo)\s+grado|(?:i|primo)\s+grado\W+(?:\w+\W+){0,3}sostegno", re.I),
     "ADSS": re.compile(r"sostegno\W+(?:\w+\W+){0,4}(?:ii|secondo)\s+grado|(?:ii|secondo)\s+grado\W+(?:\w+\W+){0,3}sostegno", re.I),
+    "EEEM": re.compile(r"educazione\s+motoria", re.I),
+}
+# posto comune infanzia/primaria scritto per esteso: vale solo se non e' gia' sostegno dello stesso grado
+NOMI_COMUNE = {
+    "AAAA": ("ADAA", re.compile(r"posto\s+comune\W+(?:\w+\W+){0,4}infanzia|infanzia\W+(?:\w+\W+){0,3}posto\s+comune|docent\w*\W+(?:\w+\W+){0,2}(?:scuola\s+)?(?:dell\W\s*)?infanzia", re.I)),
+    "EEEE": ("ADEE", re.compile(r"posto\s+comune\W+(?:\w+\W+){0,4}primaria|primaria\W+(?:\w+\W+){0,3}posto\s+comune|docent\w*\W+(?:\w+\W+){0,2}(?:scuola\s+)?primaria", re.I)),
 }
 INTERPELLO_RE = re.compile(r"interpell|supplenz|disponibilit", re.I)
 
@@ -277,6 +283,9 @@ def classes_in(text: str, ata: bool = False) -> list[str]:
             out.append(c)
     for c, rx in NOMI.items():
         if c not in out and rx.search(text):
+            out.append(c)
+    for c, (sost, rx) in NOMI_COMUNE.items():
+        if c not in out and sost not in out and rx.search(text):
             out.append(c)
     if ata:
         for c, rx in ATA_RE.items():
