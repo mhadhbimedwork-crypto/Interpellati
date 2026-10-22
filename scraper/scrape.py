@@ -684,6 +684,31 @@ def main() -> int:
             for k in ("provincia", "regione", "lat", "lon", "geo"):
                 i.pop(k, None)
             i["provincia"] = None
+    # avvisi degli uffici datati solo con la "prima comparsa" ma poi riconosciuti come link di riferimento
+    # (gia' presenti sul sito prima): non sono nuovi, si tolgono. Le date lette dalle pagine restano.
+    visti_rif, date_lette = set(), {}
+    for vp in (ROOT / "data" / "scuole").glob("uffici*_visti.json"):
+        try:
+            visti_rif |= {l for l, v in json.loads(vp.read_text("utf-8")).items() if v == "base"}
+        except (OSError, ValueError):
+            pass
+    for dp in (ROOT / "data" / "scuole").glob("uffici*_date.json"):
+        try:
+            date_lette.update({l: v for l, v in json.loads(dp.read_text("utf-8")).items() if v})
+        except (OSError, ValueError):
+            pass
+    tolti = [k for k, i in items.items() if i.get("link") in visti_rif and not date_lette.get(i["link"])
+             and (i.get("dataDa") == "comparsa" or i.get("pubblicato") == "2026-10-22")
+             and i.get("dataDa") != "rss" and not re.search(r"/20\d\d/\d{1,2}/\d{1,2}/", i.get("link") or "")
+             and (i.get("fonte") or "").startswith(("Ufficio scolastico", "UST", "USR", "Ambito"))]
+    for k in tolti:
+        items.pop(k)
+    if tolti:
+        log(f"  tolti {len(tolti)} avvisi d'ufficio senza data propria gia' presenti prima")
+    # data di pubblicazione nel futuro (scambiata con la fine della supplenza): vale il giorno del rilevamento
+    for i in items.values():
+        if (i.get("pubblicato") or "") > (datetime.now(TZ).date() + timedelta(days=1)).isoformat():
+            i["pubblicato"] = (i.get("trovato") or datetime.now(TZ).isoformat())[:10]
     known_links = {(i.get("link"), tuple(i.get("classi", [])), i.get("pubblicato")) for i in items.values()}
     sources = json.loads(SOURCES.read_text("utf-8"))
     f = Fetcher()

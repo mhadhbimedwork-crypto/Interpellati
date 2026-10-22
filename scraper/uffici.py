@@ -61,7 +61,7 @@ def valido(it: dict) -> bool:
 
 def data_pagina(f, link: str, cache: dict) -> str:
     """Data di pubblicazione letta dalla pagina dell'articolo (meta, tag time, testo); ricordata per non rileggere."""
-    if cache.get(link):
+    if link in cache:  # data gia' letta, oppure pagina letta che non ne dichiara nessuna
         return cache[link]
     d = ""
     m = re.search(r"/(20\d\d)/(\d{1,2})/(\d{1,2})/", link)
@@ -144,7 +144,7 @@ def da_rss(xml: str, src: dict, since: date) -> list[dict]:
         if not d or d < since or d > date.today() + timedelta(days=1):
             continue
         p = S.provincia_scuola(tit + " " + desc) or (None if "nazional" in tit.lower() else src.get("_prov"))
-        item = {"classi": cls, "scuola": tit[:140], "pubblicato": d.isoformat(), "link": link, "fonte": src["nome"], "_prov": p}
+        item = {"classi": cls, "scuola": tit[:140], "pubblicato": d.isoformat(), "link": link, "fonte": src["nome"], "_prov": p, "dataDa": "rss"}
         if p:
             item["provincia"], item["regione"] = S.PROVINCE[p]
         out.append(item)
@@ -252,31 +252,45 @@ def main() -> int:
         base_esiste = True
     except (OSError, ValueError):
         visti_prima, base_esiste = {}, False
+    uffici_noti = set(visti_prima.pop("__uffici__", "").split("\n")) - {""}
     oggi = date.today().isoformat()
     def lavoro(o):
         try:
             grezzi = uno(f, o, since)
             per_ufficio = 30  # date lette per ufficio e per giro: nessun sito monopolizza il tempo
+            provati = set()  # link di cui si e' letta la pagina (o che sono file): la data manca davvero
             for i in grezzi:
                 if not forma_ok(i) or i.get("pubblicato"):
                     continue
                 if i["link"] not in cache_date:
                     if per_ufficio <= 0 or budget_date[0] <= 0:
-                        continue
+                        continue  # nessun tentativo in questo giro: si riprova al prossimo, senza ripieghi
                     per_ufficio -= 1
                     budget_date[0] -= 1
                 dd = data_pagina(f, i["link"], cache_date)
-                if dd and dd >= since.isoformat():
-                    i["pubblicato"] = dd
+                if dd:
+                    i["_dp"] = dd
+                    if dd >= since.isoformat():
+                        i["pubblicato"] = dd
+                elif i["link"] in cache_date or i["link"].lower().split("?")[0].endswith(FILE_EXT):
+                    provati.add(i["link"])
+            # senza data leggibile: vale la data in cui il link compare per la prima volta. Mai per la prima
+            # lettura di un ufficio, ne' quando un ufficio mostra tutto insieme molti link mai visti (cambio di sito,
+            # pagina nuova): in quei casi i link diventano "di riferimento" e non vengono annunciati come nuovi.
+            nuovi_link = [i["link"] for i in grezzi if forma_ok(i) and i["link"] not in visti_prima]
+            ufficio_noto = o["url"] in uffici_noti
+            massa = len(set(nuovi_link)) > 8
+            for l in nuovi_link:
+                visti_prima[l] = oggi if (base_esiste and ufficio_noto and not massa) else "base"
+            uffici_noti.add(o["url"])
             for i in grezzi:
-                # senza data leggibile: vale la data in cui il link compare per la prima volta (dopo il primo giro di riferimento)
-                if forma_ok(i) and not i.get("pubblicato"):
-                    v = visti_prima.get(i["link"])
-                    if v is None:
-                        visti_prima[i["link"]] = oggi if base_esiste else "base"
-                        v = visti_prima[i["link"]]
+                if forma_ok(i) and not i.get("pubblicato") and not i.get("_dp") and i["link"] in provati:
+                    v = visti_prima.get(i["link"], "base")
                     if v != "base" and v >= since.isoformat():
                         i["pubblicato"] = v
+                        i["dataDa"] = "comparsa"  # data = giorno in cui il link e' comparso sul sito
+            for i in grezzi:
+                i.pop("_dp", None)
             r = [i for i in grezzi if valido(i)]
             stato[o["url"]] = {"grezzi": len(grezzi), "scartati": [i["link"][:110] for i in grezzi if not valido(i)][:4]}
             return o, r, None
@@ -286,7 +300,9 @@ def main() -> int:
         for o, r, err in ex.map(lavoro, uff):
             trovati += r
             stato.setdefault(o["url"], {}).update({"provincia": o.get("provincia"), "avvisi": len(r), "errore": err or f.errs.get(o["url"])})
-    vp.write_text(json.dumps(dict(list(visti_prima.items())[-6000:]), ensure_ascii=False, indent=0) + "\n", "utf-8")
+    visti_prima = dict(list(visti_prima.items())[-40000:])
+    visti_prima["__uffici__"] = "\n".join(sorted(uffici_noti))
+    vp.write_text(json.dumps(visti_prima, ensure_ascii=False, indent=0) + "\n", "utf-8")
     dp.write_text(json.dumps(dict(list(cache_date.items())[-3000:]), ensure_ascii=False, indent=0) + "\n", "utf-8")
     tp = D / "scuole" / f"uffici{k}_trovati.json"
     try:
