@@ -13,13 +13,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import scrape as S  # noqa: E402
 
 URLS = [
-    "https://interpelloweb.it/wp-sitemap.xml",
     "https://interpelloweb.it/interpelli-supplenze/",
-    "https://interpelloweb.it/interpelli-supplenze/istituto/boss000vd8/",
-    "https://www.atpromaistruzione.it/atp/2026/10/interpelli-per-la-selezione-del-personale-docente-aaaa-adaa-adee-",
-    "https://www.istruzionepotenza.it/interpello-nazionale-conferimento-supplenza-temporanea-del-personale-docente-classe-di-concorso-a040-scuola-secondaria-di-ii-grado/",
-    "http://uat-salerno.it/",
-    "https://www.csateramo.it/wpusp/archive/category/news",
+    "https://interpelloweb.it/wp-sitemap-posts-page-1.xml",
 ]
 
 
@@ -54,7 +49,7 @@ def main() -> int:
             if len(t) > 25:
                 links.append([t[:110], urljoin(u, a["href"])[:200]])
         testo = soup.get_text(" ", strip=True)
-        out[u] = {"meta": meta, "time": tempi, "classi_data": date_cls, "testo": testo[:3500], "link": links[:60],
+        out[u] = {"html": html[:60000] if "interpelloweb" in u else "", "meta": meta, "time": tempi, "classi_data": date_cls, "testo": testo[:3500], "link": links[:60],
                   "codici_nel_testo": sorted(set(S.CODE_RE.findall(testo)))[:40]}
         print(u, "ok", len(testo), flush=True)
     (ROOT / "data" / "campioni.json").write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", "utf-8")
