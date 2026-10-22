@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import random
-import glob, json
+import glob, json, socket
 import re
 import sys
 import time
@@ -132,6 +132,66 @@ def log(*a):
     print(line, flush=True)
 
 
+class RitmoIP:
+    """Intervallo minimo adattivo tra due richieste allo stesso indirizzo IP (tutti i thread). Parte da 0 per i siti isolati;
+    per gli IP condivisi da molte scuole (data/ip_lenti.json) parte da 4 s, raddoppia a ogni 509/429 e rilassa dopo 25 successi."""
+    import threading as _t
+    _lock = _t.Lock()
+    _ip: dict = {}
+    _int: dict = {}
+    _ult: dict = {}
+    _ok: dict = {}
+    _lenti: set | None = None
+
+    @classmethod
+    def lenti(cls) -> set:
+        if cls._lenti is None:
+            try:
+                cls._lenti = set(json.loads((ROOT / "data" / "ip_lenti.json").read_text("utf-8")).get("ips", {}))
+            except (OSError, ValueError):
+                cls._lenti = set()
+        return cls._lenti
+
+    @classmethod
+    def ip(cls, host: str) -> str:
+        h = host.split(":")[0]
+        if h not in cls._ip:
+            try:
+                cls._ip[h] = socket.gethostbyname(h)
+            except OSError:
+                cls._ip[h] = ""
+        return cls._ip[h]
+
+    @classmethod
+    def attendi(cls, ip: str) -> None:
+        if not ip or ip not in cls.lenti():
+            return
+        with cls._lock:
+            iv = cls._int.get(ip, 4.0)
+            t = max(0.0, cls._ult.get(ip, 0) + iv - time.time())
+            cls._ult[ip] = time.time() + t
+        if t:
+            time.sleep(t)
+
+    @classmethod
+    def esito(cls, ip: str, st: int) -> None:
+        if not ip or ip not in cls.lenti():
+            return
+        with cls._lock:
+            if st in (509, 429):
+                cls._int[ip] = min(40.0, cls._int.get(ip, 4.0) * 2)
+                cls._ok[ip] = 0
+            else:
+                cls._ok[ip] = cls._ok.get(ip, 0) + 1
+                if cls._ok[ip] >= 25:
+                    cls._int[ip] = max(2.0, cls._int.get(ip, 4.0) * 0.9)
+                    cls._ok[ip] = 0
+
+    @classmethod
+    def pausa(cls, ip: str) -> float:
+        return min(60.0, 15.0 + cls._int.get(ip, 4.0))
+
+
 class Fetcher:
     def __init__(self):
         self.s = requests.Session()
@@ -186,10 +246,25 @@ class Fetcher:
             log("  catena certificati non completabile:", host, type(e).__name__)
         return cache[host]
 
+    def _richiesta(self, url: str, host: str):
+        """GET con ritmo adattivo per indirizzo IP: molti siti scolastici condividono lo stesso server e il gestore
+        risponde 509/429 se riceve troppe richieste ravvicinate. Si rallenta (mai si aggira il limite) e si riprova una volta."""
+        ip = RitmoIP.ip(host)
+        for tentativo in range(2):
+            RitmoIP.attendi(ip)
+            r = self.s.get(url, timeout=25)
+            RitmoIP.esito(ip, r.status_code)
+            if r.status_code in (509, 429) and tentativo == 0:
+                time.sleep(RitmoIP.pausa(ip))
+                continue
+            return r
+        return r
+
     def allowed(self, url: str) -> bool:
         host = urlparse(url).scheme + "://" + urlparse(url).netloc
         if host not in self.robots:
             rp = urllib.robotparser.RobotFileParser()
+            RitmoIP.attendi(RitmoIP.ip(urlparse(host).netloc))
             try:
                 try:
                     r = self.s.get(host + "/robots.txt", timeout=15)
@@ -223,7 +298,7 @@ class Fetcher:
             time.sleep(wait)
         try:
             try:
-                r = self.s.get(url, timeout=25)
+                r = self._richiesta(url, host)
             except requests.exceptions.SSLError:
                 b = self._bundle(host)
                 if not b:
@@ -702,28 +777,33 @@ def enrich(f: Fetcher, it: dict):
 
 
 def copertura_scuole() -> dict:
-    """Quante scuole statali leggiamo davvero, per regione: Sicilia + aree nazionali (data/scuole/*_report.json)."""
+    """Quante scuole statali leggiamo davvero, per regione: Sicilia + aree nazionali (data/scuole/*_report.json).
+    Ogni scuola e' contata una volta sola, anche se compare in piu' file (area, ricerca B015/B017, siti lenti)."""
     reg_di = {v[0]: v[1] for v in PROVINCE.values()}
+    sito: dict[str, bool] = {}
+    letta: dict[str, bool] = {}
+    d = ROOT / "data" / "scuole"
+    for ep in [ROOT / "data" / "sicilia_scuole.json"] + sorted(d.glob("*_elenco.json")):
+        try:
+            for cod, v in json.loads(ep.read_text("utf-8")).get("scuole", {}).items():
+                sito[cod] = sito.get(cod, False) or bool(v.get("sito"))
+                letta.setdefault(cod, False)
+        except (OSError, ValueError):
+            pass
+    for rp in [ROOT / "data" / "sicilia_report.json"] + sorted(d.glob("*_report.json")):
+        try:
+            for cod, v in json.loads(rp.read_text("utf-8")).get("scuole", {}).items():
+                sito[cod] = sito.get(cod, False) or bool(v.get("sito"))
+                letta[cod] = letta.get(cod, False) or bool(v.get("ok"))
+        except (OSError, ValueError):
+            pass
     per: dict[str, dict] = {}
-    reports = [ROOT / "data" / "sicilia_report.json"] + sorted((ROOT / "data" / "scuole").glob("*_report.json"))
-    elenchi = [ROOT / "data" / "sicilia_scuole.json"] + [p.with_name(p.name.replace("_report", "_elenco")) for p in reports[1:]]
-    for rp, ep in zip(reports, elenchi):
-        try:
-            sc = json.loads(rp.read_text("utf-8")).get("scuole", {})
-        except (OSError, ValueError):
-            sc = {}
-        try:
-            el = json.loads(ep.read_text("utf-8")).get("scuole", {})
-        except (OSError, ValueError):
-            el = {}
-        for cod in set(el) | set(sc):
-            r = reg_di.get(cod[:2]) or "Altro"
-            x = per.setdefault(r, {"istituti": 0, "conSito": 0, "letti": 0})
-            x["istituti"] += 1
-            if (el.get(cod) or {}).get("sito") or (sc.get(cod) or {}).get("sito"):
-                x["conSito"] += 1
-            if (sc.get(cod) or {}).get("ok"):
-                x["letti"] += 1
+    for cod in letta:
+        r = reg_di.get(cod[:2]) or "Altro"
+        x = per.setdefault(r, {"istituti": 0, "conSito": 0, "letti": 0})
+        x["istituti"] += 1
+        x["conSito"] += 1 if sito.get(cod) else 0
+        x["letti"] += 1 if letta[cod] else 0
     tot = {k: sum(v[k] for v in per.values()) for k in ("istituti", "conSito", "letti")}
     tot["percentuale"] = round(100 * tot["letti"] / tot["istituti"], 1) if tot["istituti"] else 0
     for v in per.values():

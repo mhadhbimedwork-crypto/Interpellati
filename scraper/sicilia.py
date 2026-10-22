@@ -31,6 +31,7 @@ NOME_AREA = "Sicilia"
 SOTTO_RE = re.compile(r"interpell|supplenz|messa\s+a\s+disposizione|\bmad\b|albo|bandi|avvis|graduatori|reclutament|personale", re.I)
 MAX_SOTTO = 4
 THREADS = 12
+LENTE: set[str] = set()  # scuole su server condivisi che limitano le richieste: le legge scuole_lente.py
 KNOWN: set[str] = set()  # link gia' in archivio: non vanno riletti per scoprirne la data
 MAX_PER_RUN = 220  # scuole per esecuzione: giro completo della Sicilia in poche ore, senza martellare i siti
 
@@ -269,7 +270,13 @@ def scansiona_sicilia(S, f, since: date, budget_s: int = 540) -> list[dict]:
     if not scuole:
         log(f"  {NOME_AREA}: elenco scuole non disponibile")
         return []
-    codici = sorted(c for c, v in scuole.items() if v["sito"])
+    global LENTE
+    if not LENTE:
+        try:
+            LENTE = set(json.loads((ROOT / "data" / "ip_lenti.json").read_text("utf-8")).get("scuole", {}))
+        except (OSError, ValueError):
+            LENTE = set()
+    codici = sorted(c for c, v in scuole.items() if v["sito"] and c not in LENTE)
     try:
         stato = json.loads(STATO.read_text("utf-8"))
     except (OSError, ValueError):
