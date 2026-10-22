@@ -110,6 +110,9 @@ def data_pagina(f, link: str, cache: dict) -> str:
     return d
 
 
+FEED_LETTI: set = set()  # un feed per sito per giro, anche se piu' pagine dello stesso ufficio lo dichiarano
+
+
 def da_rss(xml: str, src: dict, since: date) -> list[dict]:
     """Feed RSS/Atom ufficiale del sito: titolo, link e data di pubblicazione certa per ogni avviso."""
     from email.utils import parsedate_to_datetime
@@ -154,6 +157,16 @@ def uno(f, off: dict, since: date) -> list[dict]:
     src = {"nome": off["nome"], "url": off["url"], "provincia": off.get("provincia")}
     # anche la pagina dell'ufficio stessa puo' elencare avvisi senza data: la data si legge dopo dall'avviso
     res = S.scan_html(f, src, since, html, undated=True)
+    # feed RSS dichiarato dal sito (<link rel="alternate" type="application/rss+xml">): date certe per ogni articolo
+    m = re.search(r"<link[^>]+type=[\"']application/(?:rss|atom)\+xml[\"'][^>]*>", html, re.I)
+    if m:
+        h = re.search(r"href=[\"']([^\"']+)", m.group(0))
+        if h and "comments" not in h.group(1):
+            fu = urljoin(off["url"], h.group(1))
+            xml = None if fu in FEED_LETTI else f.get(fu)
+            FEED_LETTI.add(fu)
+            if xml and ("<rss" in xml[:500].lower() or "<feed" in xml[:500].lower() or xml.lstrip().startswith("<?xml")):
+                res += da_rss(xml, {"nome": off["nome"], "url": fu, "_prov": off.get("provincia")}, since)
     for u in pagine_interpelli(f, off["url"], html):
         h2 = f.get(u)
         if h2:
