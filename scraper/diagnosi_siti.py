@@ -124,6 +124,8 @@ def prova(s: requests.Session, url: str) -> tuple[bool, str]:
     if "html" not in r.headers.get("content-type", "html"):
         return False, "non HTML"
     testo = r.text[:200000]
+    if "a breve on line" in testo[:3000].lower() or "inpubblicazione" in testo[:3000].lower():
+        return False, "sito non ancora pubblicato"
     if len(testo) < 500 or not SCUOLA_RE.search(testo):
         return False, "pagina non scolastica"
     return True, r.url
