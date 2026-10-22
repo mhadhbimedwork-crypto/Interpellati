@@ -1,3 +1,4 @@
+import Constants from 'expo-constants';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Clipboard from 'expo-clipboard';
 import * as Notifications from 'expo-notifications';
@@ -1153,6 +1154,13 @@ function Aiuto({ s, c, srv, feed, codiceIniziale, onCambio }: {
   const server = modalitaServer() && !!srv;
   return (
     <ScrollView contentContainerStyle={s.list} keyboardShouldPersistTaps="handled">
+      <View style={s.card}>
+        <Text style={s.title}>Versione dell'app</Text>
+        <Text style={s.muted}>Installata: {Constants.expoConfig?.version || ''} (build {String((Constants.expoConfig as any)?.android?.versionCode ?? '')}). Per aggiornare scarica l'ultima versione e aprila: si installa sopra questa senza perdere i tuoi dati.</Text>
+        <Pressable style={[s.btn, s.btnPrimary]} onPress={() => Linking.openURL('https://github.com/mhadhbimedwork-crypto/Interpellati/releases/download/apk/Interpellati.apk').catch(() => copia('https://github.com/mhadhbimedwork-crypto/Interpellati/releases/download/apk/Interpellati.apk'))}>
+          <Text style={[s.btnText, { color: c.accentInk }]}>Scarica l'ultima versione</Text>
+        </Pressable>
+      </View>
       <View style={s.card}>
         <Text style={s.title}>Contatta l'amministratore</Text>
         <Text style={s.muted}>Per attivare nuove classi o regioni, segnalare un problema o proporre un'idea.</Text>
