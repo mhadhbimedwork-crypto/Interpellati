@@ -4,6 +4,8 @@ on:
     inputs:
       solo_campioni:
         default: 'no'
+      prova:
+        default: ''
 permissions:
   contents: write
 jobs:
@@ -15,14 +17,18 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12", cache: pip, cache-dependency-path: scraper/requirements.txt }
       - run: pip install -r scraper/requirements.txt
+      - run: python scraper/prova_ufficio.py ${{ inputs.prova }}
+        if: ${{ inputs.prova != '' }}
+        continue-on-error: true
       - run: python scraper/campioni.py
+        if: ${{ inputs.prova == '' }}
         continue-on-error: true
       - run: python scraper/diagnosi.py | tee diagnosi.log
-        if: ${{ inputs.solo_campioni != 'si' }}
+        if: ${{ inputs.solo_campioni != 'si' && inputs.prova == '' }}
       - name: Salva
         run: |
           git config user.name "interpellati-bot"
           git config user.email "bot@users.noreply.github.com"
-          for x in data/diagnosi_uffici.json data/campioni.json; do [ -f $x ] && git add $x; done
+          for x in data/diagnosi_uffici.json data/campioni.json data/prova_ufficio.json; do [ -f $x ] && git add $x; done
           git commit -q -m "dati: diagnosi uffici" || exit 0
           for i in 1 2 3 4 5; do git pull -q --rebase -X theirs origin main && git push -q && exit 0; sleep 7; done
