@@ -61,8 +61,8 @@ ATA_RE = {
 }
 # Nomi estesi usati da alcuni uffici al posto del codice
 NOMI = {
-    "B015": re.compile(r"laborator\w*\s+di\s+scienze\s+e\s+tecnologie\s+elettriche", re.I),
-    "B017": re.compile(r"laborator\w*\s+di\s+scienze\s+e\s+tecnologie\s+meccaniche", re.I),
+    "B015": re.compile(r"laborator\w*\s+(?:di\s+)?scienze\s+e\s+tecnologie\s+elettr", re.I),
+    "B017": re.compile(r"laborator\w*\s+(?:di\s+)?scienze\s+e\s+tecnologie\s+meccanic", re.I),
     # sostegno scritto per esteso (senza codice ADxx)
     "ADAA": re.compile(r"sostegno\W+(?:\w+\W+){0,3}infanzia|infanzia\W+(?:\w+\W+){0,3}sostegno", re.I),
     "ADEE": re.compile(r"sostegno\W+(?:\w+\W+){0,3}primaria|primaria\W+(?:\w+\W+){0,3}sostegno", re.I),
