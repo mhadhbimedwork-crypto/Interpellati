@@ -47,7 +47,7 @@ MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
 # per non scambiare parole normali per classi.
 CODE_RE = re.compile(
     r"(?<![A-Za-z0-9])("
-    r"A[-\s]?0?\d{2}|B[-\s]?0?\d{2}|A[A-Z]\d{2}|B[A-Z]\d{2}|A[MS]\d[A-Z]|ADEE|ADMM|ADSS|ADAA|ADSC|EEEE|AAAA|PPPP"
+    r"A[-\s]?0?\d{2}|B[-\s]?0?\d{2}|A[A-Z]\d{2}|B[A-Z]\d{2}|A[MS]\d[A-Z]|ADEE|ADMM|ADSS|ADAA|ADSC|EEEE|EEEM|AAAA|PPPP"
     r")(?![A-Za-z0-9])"
 )
 # Profili ATA (collaboratore scolastico, assistente amministrativo/tecnico, ecc.)
