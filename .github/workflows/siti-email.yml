@@ -23,7 +23,7 @@ jobs:
         run: |
           git config user.name "interpellati-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/scuole/*_corretti.json data/sicilia_siti_corretti.json
+          git add data/siti_email_report.json data/scuole/*_corretti.json data/sicilia_siti_corretti.json
           git diff --cached --quiet && exit 0
           git commit -q -m "dati: siti recuperati dal dominio email"
           for i in 1 2 3 4 5 6; do

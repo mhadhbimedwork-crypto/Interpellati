@@ -83,6 +83,7 @@ def main() -> int:
     with ThreadPoolExecutor(24) as ex:
         ris = [r for r in ex.map(prova, da_provare) if r[1]]
     print("siti recuperati dal dominio email:", len(ris))
+    (ROOT / "data" / "siti_email_report.json").write_text(json.dumps({"con_dominio_email": len(mail), "in_errore_con_dominio": len(da_provare), "recuperati": len(ris), "esempi": ris[:15]}, ensure_ascii=False, indent=1) + "\n", "utf-8")
     per_area: dict[str, dict] = {}
     for c, u in ris:
         a = area_di(c)
