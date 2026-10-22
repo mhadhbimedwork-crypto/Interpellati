@@ -1326,6 +1326,12 @@ function Card({
         <Text style={s.small}>Rilevato dall'app {fmtRilevato(it)} ({fmtFa(it)})</Text>
       ) : null}
       {it.note ? <Text style={s.body}>{it.note}</Text> : null}
+      {it.segnalazioni && it.segnalazioni > 1 ? (
+        <Text style={s.small}>
+          {it.segnalazioni} posti segnalati dal portale regionale per questa scuola e classe
+          {it.primaSegnalazione ? ` (dal ${it.primaSegnalazione.split('-').reverse().join('/')})` : ''}
+        </Text>
+      ) : null}
       {it.email ? <Text style={s.body} selectable>Invio a: {it.email}</Text> : null}
       {expanded && (it.oreEvidenza || it.durataEvidenza) ? (
         <Text style={s.small}>

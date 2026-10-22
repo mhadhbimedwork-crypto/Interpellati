@@ -24,6 +24,9 @@ export type Interpello = {
   link?: string;
   fonte?: string;
   note?: string;
+  /** Piemonte: quante righe del portale regionale per la stessa scuola e classe */
+  segnalazioni?: number;
+  primaSegnalazione?: string;
   trovato?: string;
   /** ora di pubblicazione dichiarata dal sito (HH:MM), solo quando disponibile */
   oraPub?: string;

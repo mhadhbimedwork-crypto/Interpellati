@@ -735,6 +735,11 @@ def main() -> int:
     limite_pub = (today - timedelta(days=21)).isoformat()
     ieri = (today - timedelta(days=1)).isoformat()
     leggero = []
+    # Piemonte: il portale regionale ripete la stessa scuola e classe in molte righe (un posto per riga).
+    # Nel feed una sola voce per scuola+classe, con il numero di segnalazioni; dopo 10 giorni senza
+    # nuove segnalazioni la voce esce (gli interpelli del portale scadono in pochi giorni).
+    limite_portale = (today - timedelta(days=10)).isoformat()
+    portale = {}
     for i in keep:
         if (i.get("pubblicato") or "") < limite_pub:
             continue
@@ -743,6 +748,16 @@ def main() -> int:
         r = {k: v for k, v in i.items() if k not in ("letto", "trovato")}
         if i.get("trovato"):
             r["trovato"] = i["trovato"][:19]  # ora in cui l'app ha rilevato l'avviso (Europe/Rome)
+        if "servizi.istruzionepiemonte.it" in (i.get("link") or "") and not i.get("scadenza"):
+            if (i.get("pubblicato") or "") < limite_portale:
+                continue
+            chiave = (i.get("provincia"), tuple(i.get("classi", [])), re.sub(r"[^a-z0-9]", "", (i.get("scuola") or "").lower()))
+            if chiave in portale:  # keep è ordinato dal più recente: la prima voce resta, le altre si contano
+                p = portale[chiave]
+                p["segnalazioni"] = p.get("segnalazioni", 1) + 1
+                p["primaSegnalazione"] = i.get("pubblicato")
+                continue
+            portale[chiave] = r
         leggero.append(r)
     copertura = copertura_scuole()
     sic = None
