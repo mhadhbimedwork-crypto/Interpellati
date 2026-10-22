@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import random
-import json
+import glob, json
 import re
 import sys
 import time
@@ -249,7 +249,36 @@ def provincia_scuola(text: str) -> str | None:
     for m in re.finditer(r"\(([A-Z]{2})\)", text):
         if m[1] in SIGLA:
             return SIGLA[m[1]]
-    return find_province(text)
+    return find_province(text) or provincia_da_comune(text)
+
+
+_COMUNI: dict | None = None
+# comuni che sono anche parole comuni negli avvisi
+COMUNI_GENERICI = {"canale", "castello", "marina", "fontana", "chiesa", "colonna", "palazzo", "tribunale", "salute",
+                   "carità", "carita", "vittoria", "concordia", "speranza", "mercato", "stazione", "frazione", "lavoro",
+                   "pietra", "lettere", "musica", "scienze", "storia", "cultura", "lingua", "inglese", "francese"}
+
+
+def provincia_da_comune(text: str) -> str | None:
+    """Ultimo ripiego: il nome di un comune sede di scuola (dall'elenco nazionale delle scuole), se appartiene
+    a una sola provincia. Solo nomi di almeno 6 lettere, per non scambiare parole comuni per paesi."""
+    global _COMUNI
+    if _COMUNI is None:
+        tmp: dict[str, set] = {}
+        for fp in glob.glob(str(ROOT / "data" / "scuole" / "*_elenco.json")):
+            try:
+                for mecc, v in json.loads(Path(fp).read_text("utf-8")).get("scuole", {}).items():
+                    c = (v.get("comune") or "").strip().lower()
+                    if len(c) >= 6 and mecc[:2] in SIGLA and c not in COMUNI_GENERICI:
+                        tmp.setdefault(c, set()).add(mecc[:2])
+            except (OSError, ValueError, AttributeError):
+                continue
+        _COMUNI = {c: SIGLA[next(iter(v))] for c, v in tmp.items() if len(v) == 1}
+    low = text.lower()
+    for c, p in _COMUNI.items():
+        if c in low and re.search(r"(?<![a-zà])" + re.escape(c) + r"(?![a-zà])", low):
+            return p
+    return None
 
 
 def find_province(text: str) -> str | None:
