@@ -20,17 +20,17 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cremona",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -42,13 +42,13 @@
 "errore": "HTTP 404"
 },
 "https://re.istruzioneer.gov.it/": {
-"grezzi": 30,
+"grezzi": 29,
 "scartati": [
 "https://re.istruzioneer.gov.it/category/docenti/",
 "https://re.istruzioneer.gov.it/category/docenti/interpello/"
 ],
 "provincia": "Reggio Emilia",
-"avvisi": 28,
+"avvisi": 27,
 "errore": null
 },
 "https://varese.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti-2/": {
@@ -70,18 +70,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 13,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PRIC82300L/docenti/a49aee76-a870-4fd9-bdac-c4df54ac5205/candidatura",
-"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/1c4feab0-23d9-4e5f-8a5f-32523e78bd8b/candidatura",
-"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/1d54b9ee-e545-41f5-a5cb-ece66cd7a810/candidatura",
-"https://nuvola.madisoft.it/interpelli/PRIC82300L/docenti"
-],
-"provincia": "Parma",
-"avvisi": 6,
-"errore": null
-},
 "https://uspistruzione.fr.it/wp2/": {
 "grezzi": 25,
 "scartati": [
@@ -94,25 +82,16 @@
 "avvisi": 20,
 "errore": null
 },
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 43,
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 13,
 "scartati": [
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/",
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/"
+"https://nuvola.madisoft.it/interpelli/PRIC82300L/docenti/a49aee76-a870-4fd9-bdac-c4df54ac5205/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/1c4feab0-23d9-4e5f-8a5f-32523e78bd8b/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/1d54b9ee-e545-41f5-a5cb-ece66cd7a810/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC82300L/docenti"
 ],
-"provincia": "Ferrara",
-"avvisi": 19,
-"errore": null
-},
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 25,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 24,
+"provincia": "Parma",
+"avvisi": 6,
 "errore": null
 },
 "https://padova.istruzioneveneto.gov.it/": {
@@ -120,32 +99,6 @@
 "scartati": [],
 "provincia": "Padova",
 "avvisi": 32,
-"errore": null
-},
-"https://www.istruzionegenova.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
-"errore": null
-},
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 56,
-"scartati": [
-"https://twitter.com/home?status=PROCEDURA DI INTERPELLO PER SELEZIONE PERSONALE DOCENTE CdC A042 SCIENZE E TEC",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Fcl-en.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadm"
-],
-"provincia": "Caltanissetta",
-"avvisi": 29,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vercelli",
-"avvisi": 0,
 "errore": null
 },
 "https://tp.usr.sicilia.it/": {
@@ -160,17 +113,71 @@
 "avvisi": 29,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 40,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+],
+"provincia": "Ferrara",
+"avvisi": 18,
+"errore": null
+},
+"https://www.istruzionegenova.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Vicenza",
+"provincia": "Genova",
 "avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vercelli",
+"avvisi": 0,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 25,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 24,
+"errore": null
+},
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
+"grezzi": 56,
+"scartati": [
+"https://twitter.com/home?status=PROCEDURA DI INTERPELLO PER SELEZIONE PERSONALE DOCENTE CdC A042 SCIENZE E TEC",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
+"https://docs.google.com/viewer?url=https%3A%2F%2Fcl-en.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadm"
+],
+"provincia": "Caltanissetta",
+"avvisi": 29,
+"errore": null
+},
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
+"grezzi": 1,
+"scartati": [],
+"provincia": "Catanzaro",
+"avvisi": 1,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Napoli",
+"avvisi": 0,
+"errore": null
+},
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
 "avvisi": 0,
 "errore": null
 },
@@ -182,13 +189,6 @@
 ],
 "provincia": "Matera",
 "avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 1,
 "errore": null
 },
 "https://www.istruzionerovigo.it/": {
@@ -215,8 +215,8 @@
 "scartati": [
 "https://www.atpromaistruzione.it/atp/tag/interpelli/",
 "https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/category/reclutamento/",
-"https://www.atpromaistruzione.it/atp/tag/adee/"
+"https://www.atpromaistruzione.it/atp/tag/a042/",
+"https://www.atpromaistruzione.it/atp/tag/aaaa/"
 ],
 "provincia": "Roma",
 "avvisi": 15,
@@ -229,12 +229,12 @@
 "avvisi": 0,
 "errore": null
 },
-"http://www.uspmc.sinp.net/": {
+"https://www.regione.vda.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Macerata",
+"provincia": "Aosta",
 "avvisi": 0,
-"errore": "ConnectTimeout"
+"errore": null
 },
 "https://www.istruzionebat.it/category/interpello/": {
 "grezzi": 55,
@@ -248,18 +248,23 @@
 "avvisi": 1,
 "errore": null
 },
-"https://www.regione.vda.it/": {
+"http://www.uspmc.sinp.net/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Aosta",
+"provincia": "Macerata",
 "avvisi": 0,
-"errore": null
+"errore": "ConnectTimeout"
 },
-"https://www.uspcampobasso.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Campobasso",
-"avvisi": 0,
+"https://www.mim.gov.it/web/cagliari/": {
+"grezzi": 13,
+"scartati": [
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-su",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenze-cdc",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenze",
+"https://www.mim.gov.it/web/cagliari/"
+],
+"provincia": "Cagliari",
+"avvisi": 4,
 "errore": null
 },
 "https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
@@ -268,6 +273,13 @@
 "provincia": null,
 "avvisi": 0,
 "errore": "HTTP 404"
+},
+"https://www.uspcampobasso.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Campobasso",
+"avvisi": 0,
+"errore": null
 },
 "https://www.ustfoggia.it/feed/": {
 "grezzi": 5,
@@ -283,18 +295,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
-"grezzi": 13,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-eeee-posto-co",
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-adee-sostegno",
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-aaaa-posto-comune-infanzia-supplenza-breve-fino-a",
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-conferimento-supplenza-in-qualita-di-docente-"
-],
-"provincia": "Prato",
-"avvisi": 3,
-"errore": null
-},
 "https://www.mim.gov.it/web/isernia/": {
 "grezzi": 12,
 "scartati": [
@@ -307,23 +307,23 @@
 "avvisi": 3,
 "errore": null
 },
+"https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
+"grezzi": 13,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-eeee-posto-co",
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-adee-sostegno",
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-aaaa-posto-comune-infanzia-supplenza-breve-fino-a",
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-conferimento-supplenza-in-qualita-di-docente-"
+],
+"provincia": "Prato",
+"avvisi": 3,
+"errore": null
+},
 "https://www.uspss.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Sassari",
 "avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/cagliari/": {
-"grezzi": 13,
-"scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-su",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenze-cdc",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenze",
-"https://www.mim.gov.it/web/cagliari/"
-],
-"provincia": "Cagliari",
-"avvisi": 4,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
