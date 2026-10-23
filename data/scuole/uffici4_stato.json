@@ -6,17 +6,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://lodi.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lodi",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://milano.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Milano",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://lodi.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lodi",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -28,10 +28,15 @@
 "errore": null
 },
 "https://pr.istruzioneer.gov.it/": {
-"grezzi": 0,
-"scartati": [],
+"grezzi": 13,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PRIC82300L/docenti/a49aee76-a870-4fd9-bdac-c4df54ac5205/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/1c4feab0-23d9-4e5f-8a5f-32523e78bd8b/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/1d54b9ee-e545-41f5-a5cb-ece66cd7a810/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC82300L/docenti"
+],
 "provincia": "Parma",
-"avvisi": 0,
+"avvisi": 6,
 "errore": null
 },
 "https://ct.usr.sicilia.it/": {
@@ -44,6 +49,18 @@
 ],
 "provincia": "Catania",
 "avvisi": 4,
+"errore": null
+},
+"https://ag.usr.sicilia.it/": {
+"grezzi": 52,
+"scartati": [
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/scuola-primaria/",
+"https://ag.usr.sicilia.it/nterpello-per-selezione-personale-ai-sensi-dellart-14-comma-22-o-m-27-2026-cl-conc-a",
+"https://ag.usr.sicilia.it/",
+"https://ag.usr.sicilia.it/4-avviso-di-convocazione-in-presenza-del-personale-a-t-a-di-1a-fascia-dei-collaborat"
+],
+"provincia": "Agrigento",
+"avvisi": 38,
 "errore": null
 },
 "https://padova.istruzioneveneto.gov.it/": {
@@ -65,20 +82,15 @@
 "avvisi": 29,
 "errore": null
 },
-"https://ag.usr.sicilia.it/": {
-"grezzi": 52,
-"scartati": [
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/scuola-primaria/",
-"https://ag.usr.sicilia.it/nterpello-per-selezione-personale-ai-sensi-dellart-14-comma-22-o-m-27-2026-cl-conc-a",
-"https://ag.usr.sicilia.it/",
-"https://ag.usr.sicilia.it/4-avviso-di-convocazione-in-presenza-del-personale-a-t-a-di-1a-fascia-dei-collaborat"
-],
-"provincia": "Agrigento",
-"avvisi": 38,
+"https://www.atpsassari.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
+"avvisi": 0,
 "errore": null
 },
 "https://fe.istruzioneer.gov.it/category/assunzioni-e-concorsi/interpelli_docenti/": {
-"grezzi": 54,
+"grezzi": 53,
 "scartati": [
 "https://fe.istruzioneer.gov.it/tag/interpelli-postocomune-sostegno-infanzia-primaria/",
 "https://fe.istruzioneer.gov.it/tag/a041/",
@@ -86,7 +98,7 @@
 "https://fe.istruzioneer.gov.it/"
 ],
 "provincia": "Ferrara",
-"avvisi": 18,
+"avvisi": 17,
 "errore": null
 },
 "https://www.hotels-ferrara.com/it/b19703/": {
@@ -96,15 +108,8 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.atpsassari.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
-"errore": null
-},
 "https://re.istruzioneer.gov.it/category/docenti/": {
-"grezzi": 53,
+"grezzi": 57,
 "scartati": [
 "https://re.istruzioneer.gov.it/category/docenti/",
 "https://re.istruzioneer.gov.it/category/docenti/interpello/",
@@ -112,7 +117,24 @@
 "https://re.istruzioneer.gov.it/category/docenti/"
 ],
 "provincia": "Reggio Emilia",
-"avvisi": 30,
+"avvisi": 36,
+"errore": null
+},
+"https://venezia.istruzioneveneto.gov.it/": {
+"grezzi": 2,
+"scartati": [
+"https://venezia.istruzioneveneto.gov.it/20261020_34544/",
+"https://venezia.istruzioneveneto.gov.it/20261015_34534/"
+],
+"provincia": "Venezia",
+"avvisi": 0,
+"errore": null
+},
+"https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
+"avvisi": 0,
 "errore": null
 },
 "https://atpisernia.it/category/interpelli": {
@@ -134,44 +156,10 @@
 "avvisi": 28,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
-"https://venezia.istruzioneveneto.gov.it/": {
-"grezzi": 2,
-"scartati": [
-"https://venezia.istruzioneveneto.gov.it/20261020_34544/",
-"https://venezia.istruzioneveneto.gov.it/20261015_34534/"
-],
-"provincia": "Venezia",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Arezzo",
-"avvisi": 0,
-"errore": null
-},
-"http://www.uspmc.sinp.net/documenti-uspmc-cms/?cat-documenti-uspmc=reclutamento-pd": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
-"https://www.istruzionematera.it/": {
-"grezzi": 2,
-"scartati": [
-"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
-"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce"
-],
-"provincia": "Matera",
 "avvisi": 0,
 "errore": null
 },
@@ -191,6 +179,23 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Savona",
+"avvisi": 0,
+"errore": null
+},
+"http://www.uspmc.sinp.net/documenti-uspmc-cms/?cat-documenti-uspmc=reclutamento-pd": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
+"https://www.istruzionematera.it/": {
+"grezzi": 2,
+"scartati": [
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce"
+],
+"provincia": "Matera",
 "avvisi": 0,
 "errore": null
 },
@@ -226,6 +231,13 @@
 "avvisi": 29,
 "errore": null
 },
+"https://www.regione.vda.it/istruzione/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Aosta",
+"avvisi": 0,
+"errore": null
+},
 "https://www.mim.gov.it/web/campobasso/": {
 "grezzi": 3,
 "scartati": [
@@ -234,13 +246,6 @@
 "https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i"
 ],
 "provincia": "Campobasso",
-"avvisi": 0,
-"errore": null
-},
-"https://www.regione.vda.it/istruzione/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Aosta",
 "avvisi": 0,
 "errore": null
 },
@@ -258,25 +263,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.mim.gov.it/web/sondrio/": {
-"grezzi": 1,
-"scartati": [
-"https://www.mim.gov.it/web/sondrio/-/interpello-i-c-martino-anzi-di-bormio-adee"
-],
-"provincia": "Sondrio",
-"avvisi": 0,
-"errore": null
-},
 "https://www.usplatina.it/wp/": {
-"grezzi": 9,
-"scartati": [
-"https://www.usplatina.it/wp/category/albo/",
-"https://www.usplatina.it/wp/category/reclutamento/interpelli/",
-"https://www.usplatina.it/wp/category/personale-docente/",
-"https://www.usplatina.it/wp/category/albo/"
-],
+"grezzi": 1,
+"scartati": [],
 "provincia": "Latina",
-"avvisi": 3,
+"avvisi": 1,
 "errore": null
 },
 "https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni": {
@@ -289,6 +280,15 @@
 ],
 "provincia": "Grosseto",
 "avvisi": 20,
+"errore": null
+},
+"https://www.mim.gov.it/web/sondrio/": {
+"grezzi": 1,
+"scartati": [
+"https://www.mim.gov.it/web/sondrio/-/interpello-i-c-martino-anzi-di-bormio-adee"
+],
+"provincia": "Sondrio",
+"avvisi": 0,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
@@ -315,16 +315,30 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
-"grezzi": 23,
+"https://www.usrfvg.gov.it/feed/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
+"grezzi": 33,
 "scartati": [
-"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
-"https://www.istruzionepiemonte.it/torino/category/docenti/",
-"https://www.istruzionepiemonte.it/torino/tag/incarico-interpello/",
-"https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
 ],
-"provincia": "Torino",
-"avvisi": 15,
+"provincia": "Cuneo",
+"avvisi": 27,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 19,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 19,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/novara/": {
@@ -339,16 +353,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
-"grezzi": 33,
+"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
+"grezzi": 23,
 "scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
+"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
+"https://www.istruzionepiemonte.it/torino/category/docenti/",
+"https://www.istruzionepiemonte.it/torino/tag/incarico-interpello/",
+"https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
 ],
-"provincia": "Cuneo",
-"avvisi": 27,
+"provincia": "Torino",
+"avvisi": 15,
 "errore": null
 },
 "https://www.ustlecce.it/": {
@@ -373,20 +387,6 @@
 ],
 "provincia": "Genova",
 "avvisi": 1,
-"errore": null
-},
-"https://www.usrfvg.gov.it/feed/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
-"errore": null
-},
-"https://www.usptaranto.it/": {
-"grezzi": 18,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 18,
 "errore": null
 }
 }
