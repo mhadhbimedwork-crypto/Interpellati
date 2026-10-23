@@ -6,24 +6,17 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"https://como.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Perugia",
+"provincia": "Como",
 "avvisi": 0,
-"errore": "HTTP 404"
+"errore": "SSLError"
 },
 "https://brescia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Brescia",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://como.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Como",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -34,6 +27,13 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Perugia",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
 "https://rn.istruzioneer.gov.it/category/personale-docente/interpelli_docenti/": {
 "grezzi": 0,
 "scartati": [],
@@ -42,15 +42,13 @@
 "errore": "HTTP 404"
 },
 "https://atcampobasso.it/": {
-"grezzi": 10,
+"grezzi": 2,
 "scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-supplenza-f",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-supplen",
-"https://atcampobasso.it/"
+"https://www.mim.gov.it/web/campobasso/-/interpello-per-supplenza-fino-al-termine-delle-lezioni-per-classe-di-c",
+"https://www.mim.gov.it/web/campobasso/-/interpello-per-supplenza-fino-al-termine-delle-lezioni-per-classe-di-c"
 ],
 "provincia": "Campobasso",
-"avvisi": 2,
+"avvisi": 0,
 "errore": null
 },
 "https://treviso.istruzioneveneto.gov.it/tag/interpelli-istituti-scolastici/": {
@@ -65,39 +63,6 @@
 "scartati": [],
 "provincia": "Belluno",
 "avvisi": 1,
-"errore": null
-},
-"https://pc.istruzioneer.gov.it/": {
-"grezzi": 7,
-"scartati": [],
-"provincia": "Piacenza",
-"avvisi": 7,
-"errore": null
-},
-"https://www.csanuoro.it/wp2019/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Nuoro",
-"avvisi": 0,
-"errore": null
-},
-"https://fc.istruzioneer.gov.it/": {
-"grezzi": 13,
-"scartati": [],
-"provincia": "Forlì-Cesena",
-"avvisi": 13,
-"errore": null
-},
-"https://ra.istruzioneer.gov.it/": {
-"grezzi": 15,
-"scartati": [
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1222",
-"https://www.icbassi.edu.it/albo-online?categoria=10004&cerca=&storico=&aoo=",
-"https://www.portaleargo.it/albopretorio/online/",
-"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015"
-],
-"provincia": "Ravenna",
-"avvisi": 7,
 "errore": null
 },
 "https://me.usr.sicilia.it/": {
@@ -117,24 +82,36 @@
 "avvisi": 0,
 "errore": null
 },
-"http://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
+"https://ra.istruzioneer.gov.it/": {
+"grezzi": 10,
+"scartati": [
+"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1222",
+"https://www.icbassi.edu.it/albo-online?categoria=10004&cerca=&storico=&aoo=",
+"https://www.portaleargo.it/albopretorio/online/",
+"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015"
+],
+"provincia": "Ravenna",
+"avvisi": 3,
 "errore": null
 },
-"https://www.istruzionelaspezia.gov.it/": {
-"grezzi": 0,
+"https://fc.istruzioneer.gov.it/": {
+"grezzi": 12,
 "scartati": [],
-"provincia": "La Spezia",
-"avvisi": 0,
+"provincia": "Forlì-Cesena",
+"avvisi": 12,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/": {
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 7,
+"scartati": [],
+"provincia": "Piacenza",
+"avvisi": 7,
+"errore": null
+},
+"https://www.csanuoro.it/wp2019/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Cuneo",
+"provincia": "Nuoro",
 "avvisi": 0,
 "errore": null
 },
@@ -145,10 +122,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/": {
+"https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Cosenza",
+"provincia": "Cuneo",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionelaspezia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "La Spezia",
 "avvisi": 0,
 "errore": null
 },
@@ -158,6 +142,32 @@
 "https://verona.istruzioneveneto.gov.it/index.php/2026/10/16/avviso-nomine-a-s-2026-27-assunzioni-in-ruolo-del-"
 ],
 "provincia": "Verona",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cosenza",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzioneatprc.it/": {
+"grezzi": 6,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.trasparenzascuole.it/Public/APDPublicV2.aspx?CF=92034530805",
+"https://iisfermibagnara.edu.it/albo-online-axios/",
+"https://web.spaggiari.eu/sdg2/Documenti/RCII0012/4pdrfj6h5g"
+],
+"provincia": "Reggio Calabria",
+"avvisi": 2,
+"errore": null
+},
+"http://www.uspss.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
 "avvisi": 0,
 "errore": null
 },
@@ -175,25 +185,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzioneatprc.it/": {
-"grezzi": 7,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.trasparenzascuole.it/Public/APDPublicV2.aspx?CF=92034530805",
-"https://iisfermibagnara.edu.it/albo-online-axios/",
-"https://web.spaggiari.eu/sdg2/Documenti/RCII0012/4pdrfj6h5g"
-],
-"provincia": "Reggio Calabria",
-"avvisi": 3,
-"errore": null
-},
-"https://www.orizzontescuola.it/tag/interpelli/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
-"errore": "HTTP 403"
-},
 "https://sr.usr.sicilia.it/": {
 "grezzi": 40,
 "scartati": [
@@ -206,8 +197,15 @@
 "avvisi": 16,
 "errore": null
 },
+"https://www.orizzontescuola.it/tag/interpelli/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
+"errore": "HTTP 403"
+},
 "https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
-"grezzi": 30,
+"grezzi": 28,
 "scartati": [
 "https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2158-avviso-di-interpello-aric81100b-c-d-c-eeee",
 "https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2156-avviso-di-interpello-aric81300e-c-d-c-adee",
@@ -215,22 +213,8 @@
 "https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2154-avviso-di-interpello-aric81100b-cdc-eeee-a"
 ],
 "provincia": "Arezzo",
-"avvisi": 14,
+"avvisi": 12,
 "errore": null
-},
-"https://www.uat-caserta.it/category/segnalazioni-dalle-scuole/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": "Caserta",
-"avvisi": 1,
-"errore": null
-},
-"https://www.uspbenevento.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Benevento",
-"avvisi": 0,
-"errore": "HTTP 403"
 },
 "https://www.istruzionechietipescara.it/": {
 "grezzi": 23,
@@ -244,16 +228,25 @@
 "avvisi": 11,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/vercelli/": {
-"grezzi": 20,
-"scartati": [
-"https://www.istruzionepiemonte.it/vercelli/interpello-per-individuazione-reclutamento-personale-docente-scuola",
-"https://www.istruzionepiemonte.it/vercelli/category/docenti/",
-"https://www.istruzionepiemonte.it/vercelli/tag/interpelli-nazionali/",
-"https://www.istruzionepiemonte.it/vercelli/interpello-adee-lingua-inglese-fino-al-03-12-2026/"
-],
-"provincia": "Vercelli",
-"avvisi": 16,
+"https://www.uspbenevento.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Benevento",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
+"https://www.uat-caserta.it/category/segnalazioni-dalle-scuole/": {
+"grezzi": 1,
+"scartati": [],
+"provincia": "Caserta",
+"avvisi": 1,
+"errore": null
+},
+"https://www.mim.gov.it/web/lodi/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lodi",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ustcremona.it/": {
@@ -270,25 +263,6 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
-"https://www.uspascolipiceno.it/": {
-"grezzi": 27,
-"scartati": [
-"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
-"https://www.uspascolipiceno.it/wordpress/category/interpelli/",
-"https://www.uspascolipiceno.it/wordpress/ii-interpello-cl-concorso-ai55-percussioni-liceo-scientifico-statale-",
-"https://www.uspascolipiceno.it/wordpress/interpello-supplenza-breve-cl-concorso-a042-istituto-tecnico-tecnolog"
-],
-"provincia": "Ascoli Piceno",
-"avvisi": 13,
-"errore": null
-},
-"https://www.mim.gov.it/web/lodi/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lodi",
-"avvisi": 0,
-"errore": null
-},
 "https://www.mim.gov.it/web/oristano/": {
 "grezzi": 12,
 "scartati": [
@@ -301,16 +275,16 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/": {
-"grezzi": 44,
+"https://www.istruzionepiemonte.it/vercelli/": {
+"grezzi": 16,
 "scartati": [
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
+"https://www.istruzionepiemonte.it/vercelli/interpello-per-individuazione-reclutamento-personale-docente-scuola",
+"https://www.istruzionepiemonte.it/vercelli/category/docenti/",
+"https://www.istruzionepiemonte.it/vercelli/tag/interpelli-nazionali/",
+"https://www.istruzionepiemonte.it/vercelli/interpello-adee-lingua-inglese-fino-al-03-12-2026/"
 ],
-"provincia": "Biella",
-"avvisi": 28,
+"provincia": "Vercelli",
+"avvisi": 12,
 "errore": null
 },
 "https://www.uspsi.it/": {
@@ -323,8 +297,32 @@
 "avvisi": 59,
 "errore": null
 },
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/": {
+"grezzi": 43,
+"scartati": [
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
+],
+"provincia": "Biella",
+"avvisi": 29,
+"errore": null
+},
+"https://www.uspascolipiceno.it/": {
+"grezzi": 28,
+"scartati": [
+"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
+"https://www.uspascolipiceno.it/wordpress/category/interpelli/",
+"https://www.uspascolipiceno.it/wordpress/ii-interpello-cl-concorso-ai55-percussioni-liceo-scientifico-statale-",
+"https://www.uspascolipiceno.it/wordpress/interpello-supplenza-breve-cl-concorso-a042-istituto-tecnico-tecnolog"
+],
+"provincia": "Ascoli Piceno",
+"avvisi": 16,
+"errore": null
+},
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
-"grezzi": 76,
+"grezzi": 75,
 "scartati": [
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
@@ -332,7 +330,7 @@
 "https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
 ],
 "provincia": "Palermo",
-"avvisi": 42,
+"avvisi": 41,
 "errore": null
 },
 "https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
@@ -340,18 +338,6 @@
 "scartati": [],
 "provincia": "Bergamo",
 "avvisi": 0,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/": {
-"grezzi": 862,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-i-p-s-b-de-franceschi-a-pacinotti-cl-conc-a044-",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-icsrita-levi-montalcini-per-supplenza-breve-scu",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-di-san-marcello-per-supplenza-breve-scuola-",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-preventivo-ics-martin-luther-king-per-supplenze"
-],
-"provincia": "Pistoia",
-"avvisi": 35,
 "errore": null
 },
 "https://www.mim.gov.it/web/cremona/": {
@@ -364,6 +350,18 @@
 ],
 "provincia": "Cremona",
 "avvisi": 0,
+"errore": null
+},
+"https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/": {
+"grezzi": 862,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-i-p-s-b-de-franceschi-a-pacinotticl-conc-a042-s",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-berni-ferrucci-dal-14-10-2026-al-27-10-2026",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-liceo-scientifico-c-salutati-cl-conc-a027-matem",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-classe-di-concorso-eeee-scuola-primaria-posto-c"
+],
+"provincia": "Pistoia",
+"avvisi": 31,
 "errore": null
 }
 }
