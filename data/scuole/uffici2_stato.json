@@ -1,29 +1,8 @@
 {
-"https://lnx.uspistruzione.fr.it/wp2/category/interpello-nazionale": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Frosinone",
-"avvisi": 0,
-"errore": "ConnectionError"
-},
 "https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Bergamo",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://milano.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -34,14 +13,35 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://lnx.uspistruzione.fr.it/wp2/category/interpello-nazionale": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Frosinone",
+"avvisi": 0,
+"errore": "ConnectionError"
+},
+"https://milano.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://re.istruzioneer.gov.it/": {
-"grezzi": 29,
+"grezzi": 28,
 "scartati": [
 "https://re.istruzioneer.gov.it/category/docenti/",
 "https://re.istruzioneer.gov.it/category/docenti/interpello/"
 ],
 "provincia": "Reggio Emilia",
-"avvisi": 27,
+"avvisi": 26,
 "errore": null
 },
 "https://atpisernia.it/": {
@@ -87,10 +87,74 @@
 "avvisi": 17,
 "errore": null
 },
+"https://tp.usr.sicilia.it/": {
+"grezzi": 41,
+"scartati": [
+"https://twitter.com/home?status=Interpello regionale per una supplenza a tempo determinato fino al 10/06/2027 ",
+"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
+"https://tp.usr.sicilia.it/category/news/",
+"https://twitter.com/home?status=Interpello per il conferimento di due supplenze annuali C.d.C. A043 – Mazara d"
+],
+"provincia": "Trapani",
+"avvisi": 29,
+"errore": null
+},
 "https://www.hotels-ferrara.com/it/b19703/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Ferrara",
+"avvisi": 0,
+"errore": null
+},
+"https://uspistruzione.fr.it/wp2/": {
+"grezzi": 25,
+"scartati": [
+"https://www.uspistruzione.fr.it/wp2/category/albo",
+"https://www.uspistruzione.fr.it/wp2/category/comunicazioni",
+"https://www.uspistruzione.fr.it/wp2/category/graduatorie",
+"https://www.uspistruzione.fr.it/wp2/category/graduatorie/interpello-nazionale"
+],
+"provincia": "Frosinone",
+"avvisi": 20,
+"errore": null
+},
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 42,
+"scartati": [
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/",
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/"
+],
+"provincia": "Ferrara",
+"avvisi": 18,
+"errore": null
+},
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
+"grezzi": 56,
+"scartati": [
+"https://twitter.com/home?status=PROCEDURA DI INTERPELLO PER SELEZIONE PERSONALE DOCENTE CdC A042 SCIENZE E TEC",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
+"https://docs.google.com/viewer?url=https%3A%2F%2Fcl-en.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadm"
+],
+"provincia": "Caltanissetta",
+"avvisi": 29,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 25,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 24,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Arezzo",
 "avvisi": 0,
 "errore": null
 },
@@ -113,70 +177,6 @@
 "avvisi": 2,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 25,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 24,
-"errore": null
-},
-"https://uspistruzione.fr.it/wp2/": {
-"grezzi": 25,
-"scartati": [
-"https://www.uspistruzione.fr.it/wp2/category/albo",
-"https://www.uspistruzione.fr.it/wp2/category/comunicazioni",
-"https://www.uspistruzione.fr.it/wp2/category/graduatorie",
-"https://www.uspistruzione.fr.it/wp2/category/graduatorie/interpello-nazionale"
-],
-"provincia": "Frosinone",
-"avvisi": 20,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Arezzo",
-"avvisi": 0,
-"errore": null
-},
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 44,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
-],
-"provincia": "Ferrara",
-"avvisi": 18,
-"errore": null
-},
-"https://tp.usr.sicilia.it/": {
-"grezzi": 41,
-"scartati": [
-"https://twitter.com/home?status=Interpello regionale per una supplenza a tempo determinato fino al 10/06/2027 ",
-"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
-"https://tp.usr.sicilia.it/category/news/",
-"https://twitter.com/home?status=Interpello per il conferimento di due supplenze annuali C.d.C. A043 – Mazara d"
-],
-"provincia": "Trapani",
-"avvisi": 29,
-"errore": null
-},
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 56,
-"scartati": [
-"https://twitter.com/home?status=PROCEDURA DI INTERPELLO PER SELEZIONE PERSONALE DOCENTE CdC A042 SCIENZE E TEC",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Fcl-en.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadm"
-],
-"provincia": "Caltanissetta",
-"avvisi": 29,
-"errore": null
-},
 "https://www.istruzionematera.it/": {
 "grezzi": 2,
 "scartati": [
@@ -194,59 +194,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
-"grezzi": 123,
-"scartati": [
-"https://www.atpromaistruzione.it/atp/tag/interpelli/",
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/tag/a042/",
-"https://www.atpromaistruzione.it/atp/tag/aaaa/"
-],
-"provincia": "Roma",
-"avvisi": 13,
-"errore": null
-},
 "https://www.istruzionesavona.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Savona",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
-"grezzi": 14,
-"scartati": [
-"https://www.istruzione.calabria.it/cosenza/ic-castrolibero-interpello-posto-di-sostegno-scuola-primaria-24-ore",
-"https://www.istruzione.calabria.it/cosenza/avviso-per-selezione-personale-docente-scuola-primaria-posto-comune",
-"https://www.istruzione.calabria.it/cosenza/ic-castrolibero-interpello-posto-di-sostegno-scuola-primaria-24-ore",
-"https://www.istruzione.calabria.it/cosenza/aoouspcs15732-20261020/"
-],
-"provincia": "Cosenza",
-"avvisi": 10,
-"errore": null
-},
-"https://www.regione.vda.it/istruzione/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Aosta",
-"avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/campobasso/": {
-"grezzi": 3,
-"scartati": [
-"https://www.mim.gov.it/web/campobasso/-/interpello-per-supplenza-fino-al-termine-delle-lezioni-per-classe-di-c",
-"https://www.mim.gov.it/web/campobasso/-/interpello-per-supplenza-fino-al-termine-delle-lezioni-per-classe-di-c",
-"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i"
-],
-"provincia": "Campobasso",
-"avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/milano/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
 "avvisi": 0,
 "errore": null
 },
@@ -261,11 +212,60 @@
 "avvisi": 29,
 "errore": null
 },
+"https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
+"grezzi": 14,
+"scartati": [
+"https://www.istruzione.calabria.it/cosenza/ic-castrolibero-interpello-posto-di-sostegno-scuola-primaria-24-ore",
+"https://www.istruzione.calabria.it/cosenza/avviso-per-selezione-personale-docente-scuola-primaria-posto-comune",
+"https://www.istruzione.calabria.it/cosenza/ic-castrolibero-interpello-posto-di-sostegno-scuola-primaria-24-ore",
+"https://www.istruzione.calabria.it/cosenza/aoouspcs15732-20261020/"
+],
+"provincia": "Cosenza",
+"avvisi": 10,
+"errore": null
+},
+"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
+"grezzi": 123,
+"scartati": [
+"https://www.atpromaistruzione.it/atp/tag/interpelli/",
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
+"https://www.atpromaistruzione.it/atp/tag/a042/",
+"https://www.atpromaistruzione.it/atp/tag/aaaa/"
+],
+"provincia": "Roma",
+"avvisi": 13,
+"errore": null
+},
+"https://www.mim.gov.it/web/campobasso/": {
+"grezzi": 3,
+"scartati": [
+"https://www.mim.gov.it/web/campobasso/-/interpello-per-supplenza-fino-al-termine-delle-lezioni-per-classe-di-c",
+"https://www.mim.gov.it/web/campobasso/-/interpello-per-supplenza-fino-al-termine-delle-lezioni-per-classe-di-c",
+"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i"
+],
+"provincia": "Campobasso",
+"avvisi": 0,
+"errore": null
+},
+"https://www.regione.vda.it/istruzione/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Aosta",
+"avvisi": 0,
+"errore": null
+},
 "https://www.usp-rieti.it/": {
 "grezzi": 18,
 "scartati": [],
 "provincia": "Rieti",
 "avvisi": 18,
+"errore": null
+},
+"https://www.mim.gov.it/web/milano/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
+"avvisi": 0,
 "errore": null
 },
 "https://www.usplatina.it/wp/": {
@@ -296,30 +296,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.mim.gov.it/web/isernia/interpelli/": {
-"grezzi": 21,
-"scartati": [
-"https://www.mim.gov.it/web/isernia/-/interpello-per-il-conferimento-di-n-2-supplenze-brevi-classe-di-concorso-",
-"https://www.mim.gov.it/web/isernia/-/interpello-per-supplenza-a-tempo-determinato-su-classe-di-concorso-ab56-s",
-"https://www.mim.gov.it/web/isernia/-/interpello-per-un-incarico-a-t-d-per-sostituzione-docente-scuola-secondar",
-"https://www.mim.gov.it/web/isernia/-/interpello-per-un-incarico-a-t-d-per-sostituzione-docente-scuola-secondar"
-],
-"provincia": "Isernia",
-"avvisi": 3,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/novara/": {
-"grezzi": 12,
-"scartati": [
-"https://www.istruzionepiemonte.it/novara/tag/a028/",
-"https://www.istruzionepiemonte.it/novara/tag/aa/",
-"https://www.istruzionepiemonte.it/novara/tag/at/",
-"https://www.istruzionepiemonte.it/novara/tag/b009/"
-],
-"provincia": "Novara",
-"avvisi": 0,
-"errore": null
-},
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
 "grezzi": 25,
 "scartati": [
@@ -332,11 +308,42 @@
 "avvisi": 11,
 "errore": null
 },
+"https://www.mim.gov.it/web/isernia/interpelli/": {
+"grezzi": 21,
+"scartati": [
+"https://www.mim.gov.it/web/isernia/-/interpello-per-il-conferimento-di-n-2-supplenze-brevi-classe-di-concorso-",
+"https://www.mim.gov.it/web/isernia/-/interpello-per-supplenza-a-tempo-determinato-su-classe-di-concorso-ab56-s",
+"https://www.mim.gov.it/web/isernia/-/interpello-per-un-incarico-a-t-d-per-sostituzione-docente-scuola-secondar",
+"https://www.mim.gov.it/web/isernia/-/interpello-per-un-incarico-a-t-d-per-sostituzione-docente-scuola-secondar"
+],
+"provincia": "Isernia",
+"avvisi": 3,
+"errore": null
+},
 "https://www.usrfvg.gov.it/feed/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": null,
 "avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
+"grezzi": 33,
+"scartati": [
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
+],
+"provincia": "Cuneo",
+"avvisi": 27,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 19,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 19,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
@@ -351,6 +358,18 @@
 "avvisi": 15,
 "errore": null
 },
+"https://www.istruzionepiemonte.it/novara/": {
+"grezzi": 12,
+"scartati": [
+"https://www.istruzionepiemonte.it/novara/tag/a028/",
+"https://www.istruzionepiemonte.it/novara/tag/aa/",
+"https://www.istruzionepiemonte.it/novara/tag/at/",
+"https://www.istruzionepiemonte.it/novara/tag/b009/"
+],
+"provincia": "Novara",
+"avvisi": 0,
+"errore": null
+},
 "https://www.ustlecce.it/": {
 "grezzi": 7,
 "scartati": [
@@ -361,25 +380,6 @@
 ],
 "provincia": "Lecce",
 "avvisi": 0,
-"errore": null
-},
-"https://www.usptaranto.it/": {
-"grezzi": 19,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 19,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
-"grezzi": 33,
-"scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
-],
-"provincia": "Cuneo",
-"avvisi": 27,
 "errore": null
 },
 "https://www.istruzionegenova.gov.it/pagine/interpelli---docenti": {
