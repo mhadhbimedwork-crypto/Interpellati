@@ -1,10 +1,24 @@
 {
+"https://lnx.uspistruzione.fr.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Frosinone",
+"avvisi": 0,
+"errore": "ConnectionError"
+},
 "http://www.ustcremona.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Cremona",
 "avvisi": 0,
 "errore": null
+},
+"https://bergamo.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://cremona.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -20,20 +34,6 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://bergamo.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://lnx.uspistruzione.fr.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Frosinone",
-"avvisi": 0,
-"errore": "ConnectionError"
-},
 "https://atcampobasso.it/argomento/servizi/servizi-al-personale-scolastico/interpelli-nazionali/": {
 "grezzi": 2,
 "scartati": [
@@ -42,6 +42,16 @@
 ],
 "provincia": "Campobasso",
 "avvisi": 0,
+"errore": null
+},
+"https://re.istruzioneer.gov.it/": {
+"grezzi": 29,
+"scartati": [
+"https://re.istruzioneer.gov.it/category/docenti/",
+"https://re.istruzioneer.gov.it/category/docenti/interpello/"
+],
+"provincia": "Reggio Emilia",
+"avvisi": 27,
 "errore": null
 },
 "https://uat-salerno.it/Documenti/CIRCOLARI/Interpelli-per-reclutamento-personale-docente": {
@@ -57,16 +67,6 @@
 "provincia": "Varese",
 "avvisi": 0,
 "errore": "SSLError"
-},
-"https://re.istruzioneer.gov.it/": {
-"grezzi": 29,
-"scartati": [
-"https://re.istruzioneer.gov.it/category/docenti/",
-"https://re.istruzioneer.gov.it/category/docenti/interpello/"
-],
-"provincia": "Reggio Emilia",
-"avvisi": 27,
-"errore": null
 },
 "https://pa.usr.sicilia.it/": {
 "grezzi": 1,
@@ -89,18 +89,6 @@
 "avvisi": 8,
 "errore": null
 },
-"http://www.provveditoratostudiviterbo.it/": {
-"grezzi": 31,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/",
-"https://liceosantarosavt.edu.it/index.php/ampliamento-offerta-formativa/avvisi-e-bandi",
-"https://www.trasparenzascuole.it/Public/APDPublic_ExtV2.aspx?CF=90056860563"
-],
-"provincia": "Viterbo",
-"avvisi": 2,
-"errore": null
-},
 "https://cl-en.usr.sicilia.it/": {
 "grezzi": 35,
 "scartati": [
@@ -111,6 +99,18 @@
 ],
 "provincia": "Enna",
 "avvisi": 27,
+"errore": null
+},
+"http://www.provveditoratostudiviterbo.it/": {
+"grezzi": 31,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/",
+"https://liceosantarosavt.edu.it/index.php/ampliamento-offerta-formativa/avvisi-e-bandi",
+"https://www.trasparenzascuole.it/Public/APDPublic_ExtV2.aspx?CF=90056860563"
+],
+"provincia": "Viterbo",
+"avvisi": 2,
 "errore": null
 },
 "https://www.istruzionegenova.gov.it/": {
@@ -132,13 +132,6 @@
 "avvisi": 46,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vercelli",
-"avvisi": 0,
-"errore": null
-},
 "https://fe.istruzioneer.gov.it/": {
 "grezzi": 44,
 "scartati": [
@@ -151,13 +144,11 @@
 "avvisi": 18,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 25,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 24,
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vercelli",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionematera.it/": {
@@ -170,6 +161,22 @@
 "avvisi": 0,
 "errore": null
 },
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 25,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 24,
+"errore": null
+},
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzione.calabria.it/catanzaro/category/nca/": {
 "grezzi": 1,
 "scartati": [],
@@ -177,10 +184,10 @@
 "avvisi": 1,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
+"https://www.istruzionerovigo.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Vicenza",
+"provincia": "Rovigo",
 "avvisi": 0,
 "errore": null
 },
@@ -191,11 +198,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionerovigo.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Rovigo",
-"avvisi": 0,
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/": {
+"grezzi": 127,
+"scartati": [
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
+"https://www.atpromaistruzione.it/atp/tag/a042/",
+"https://www.atpromaistruzione.it/atp/tag/aaaa/",
+"https://www.atpromaistruzione.it/atp/tag/adaa/"
+],
+"provincia": "Roma",
+"avvisi": 17,
 "errore": null
 },
 "https://www.csateramo.it/wpusp/archive/category/news": {
@@ -222,6 +234,20 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.ufficioscolasticogrosseto.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Grosseto",
+"avvisi": 0,
+"errore": null
+},
+"https://www.regione.vda.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Aosta",
+"avvisi": 0,
+"errore": null
+},
 "https://pc.istruzioneer.gov.it/interpelli/": {
 "grezzi": 20,
 "scartati": [
@@ -233,46 +259,6 @@
 "provincia": "Piacenza",
 "avvisi": 5,
 "errore": null
-},
-"https://www.ufficioscolasticogrosseto.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Grosseto",
-"avvisi": 0,
-"errore": null
-},
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/": {
-"grezzi": 127,
-"scartati": [
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/tag/a042/",
-"https://www.atpromaistruzione.it/atp/tag/aaaa/",
-"https://www.atpromaistruzione.it/atp/tag/adaa/"
-],
-"provincia": "Roma",
-"avvisi": 17,
-"errore": null
-},
-"https://www.regione.vda.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Aosta",
-"avvisi": 0,
-"errore": null
-},
-"https://www.uspcampobasso.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Campobasso",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
-"errore": "HTTP 404"
 },
 "https://www.mim.gov.it/web/cagliari/": {
 "grezzi": 13,
@@ -286,11 +272,25 @@
 "avvisi": 4,
 "errore": null
 },
+"https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
+"errore": "HTTP 404"
+},
 "https://www.ustfoggia.it/feed/": {
 "grezzi": 5,
 "scartati": [],
 "provincia": "Foggia",
 "avvisi": 5,
+"errore": null
+},
+"https://www.uspcampobasso.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Campobasso",
+"avvisi": 0,
 "errore": null
 },
 "https://www.vivoscuola.it/": {
@@ -309,18 +309,6 @@
 "https://www.mim.gov.it/web/isernia/"
 ],
 "provincia": "Isernia",
-"avvisi": 3,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
-"grezzi": 13,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-eeee-posto-co",
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-adee-sostegno",
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-aaaa-posto-comune-infanzia-supplenza-breve-fino-a",
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-conferimento-supplenza-in-qualita-di-docente-"
-],
-"provincia": "Prato",
 "avvisi": 3,
 "errore": null
 },
@@ -343,6 +331,13 @@
 "avvisi": 11,
 "errore": null
 },
+"https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Prato",
+"avvisi": 0,
+"errore": "ReadTimeout"
+},
 "https://www.mim.gov.it/web/sassari/": {
 "grezzi": 0,
 "scartati": [],
@@ -357,18 +352,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
-"grezzi": 33,
-"scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
-],
-"provincia": "Cuneo",
-"avvisi": 27,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/torino/": {
 "grezzi": 50,
 "scartati": [
@@ -379,6 +362,18 @@
 ],
 "provincia": "Torino",
 "avvisi": 21,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
+"grezzi": 33,
+"scartati": [
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
+],
+"provincia": "Cuneo",
+"avvisi": 27,
 "errore": null
 }
 }
