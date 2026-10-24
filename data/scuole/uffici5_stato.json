@@ -6,13 +6,6 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://pavia.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pavia",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://lnx.csalatina.it/": {
 "grezzi": 1,
 "scartati": [],
@@ -20,10 +13,22 @@
 "avvisi": 1,
 "errore": null
 },
-"http://www.uspms.it/": {
+"https://pavia.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Massa-Carrara",
+"provincia": "Pavia",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://istruzione.umbria.it/": {
+"grezzi": 5,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PGEE00200L/docenti",
+"https://nuvola.madisoft.it/interpelli/PGIC83700D/docenti",
+"https://nuvola.madisoft.it/interpelli/PGIC83700D/docenti/9c107e7d-11a1-40ea-801a-3526b4d04571/candidatura",
+"https://istitutocomprensivoperugia1.edu.it/servizio/modulistica-per-interpello-docenti-ex-mad/"
+],
+"provincia": "Perugia",
 "avvisi": 0,
 "errore": null
 },
@@ -33,6 +38,13 @@
 "provincia": "Parma",
 "avvisi": 0,
 "errore": "HTTP 404"
+},
+"http://www.uspms.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Massa-Carrara",
+"avvisi": 0,
+"errore": null
 },
 "https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
@@ -45,18 +57,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Torino",
-"avvisi": 0,
-"errore": null
-},
-"https://istruzione.umbria.it/": {
-"grezzi": 5,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PGEE00200L/docenti",
-"https://nuvola.madisoft.it/interpelli/PGIC83700D/docenti",
-"https://nuvola.madisoft.it/interpelli/PGIC83700D/docenti/9c107e7d-11a1-40ea-801a-3526b4d04571/candidatura",
-"https://istitutocomprensivoperugia1.edu.it/servizio/modulistica-per-interpello-docenti-ex-mad/"
-],
-"provincia": "Perugia",
 "avvisi": 0,
 "errore": null
 },
@@ -77,6 +77,16 @@
 "avvisi": 0,
 "errore": null
 },
+"https://rn.istruzioneer.gov.it/": {
+"grezzi": 9,
+"scartati": [
+"https://rn.istruzioneer.gov.it/2026/10/22/turno-viii-nomine-a-tempo-determinato-da-gae-gps-a-s-2026-27-persona",
+"https://rn.istruzioneer.gov.it/2026/10/19/turno-vii-nomine-a-tempo-determinato-da-gae-gps-a-s-2026-27-personal"
+],
+"provincia": "Rimini",
+"avvisi": 7,
+"errore": null
+},
 "https://www.csanuoro.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -84,16 +94,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://rn.istruzioneer.gov.it/": {
-"grezzi": 21,
-"scartati": [
-"https://rn.istruzioneer.gov.it/2026/10/22/turno-viii-nomine-a-tempo-determinato-da-gae-gps-a-s-2026-27-persona",
-"https://rn.istruzioneer.gov.it/2026/10/19/turno-vii-nomine-a-tempo-determinato-da-gae-gps-a-s-2026-27-personal",
-"https://rn.istruzioneer.gov.it/category/personale-docente/interpelli-docenti-2026-2027/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/primaria/"
-],
-"provincia": "Rimini",
-"avvisi": 14,
+"https://www.istruzione.umbria.it/feed/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
 "errore": null
 },
 "https://mo.istruzioneer.gov.it/": {
@@ -108,10 +113,10 @@
 "avvisi": 21,
 "errore": null
 },
-"https://www.istruzione.umbria.it/feed/": {
+"https://www.istruzione.calabria.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": null,
+"provincia": "Catanzaro",
 "avvisi": 0,
 "errore": null
 },
@@ -119,13 +124,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Biella",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
 "avvisi": 0,
 "errore": null
 },
@@ -143,18 +141,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
-"grezzi": 12,
-"scartati": [
-"https://ct.usr.sicilia.it/avviso-disponibilita-per-contratti-a-t-d-per-lanno-scolastico-2026-2027-su-posti-com",
-"https://ct.usr.sicilia.it/avviso-disponibilita-per-contratti-a-t-d-per-lanno-scolastico-2026-2027-su-posti-com",
-"https://ct.usr.sicilia.it/disponibilita-e-accantonamenti-prima-dei-movimenti-a-s-2026-2027/",
-"https://ct.usr.sicilia.it/personale-docente-scuola-infanzia-mobilita-a-s-2026-2027-movimenti/"
-],
-"provincia": "Catania",
-"avvisi": 2,
-"errore": null
-},
 "https://ag.usr.sicilia.it/": {
 "grezzi": 52,
 "scartati": [
@@ -165,6 +151,18 @@
 ],
 "provincia": "Agrigento",
 "avvisi": 38,
+"errore": null
+},
+"https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
+"grezzi": 12,
+"scartati": [
+"https://ct.usr.sicilia.it/avviso-disponibilita-per-contratti-a-t-d-per-lanno-scolastico-2026-2027-su-posti-com",
+"https://ct.usr.sicilia.it/avviso-disponibilita-per-contratti-a-t-d-per-lanno-scolastico-2026-2027-su-posti-com",
+"https://ct.usr.sicilia.it/disponibilita-e-accantonamenti-prima-dei-movimenti-a-s-2026-2027/",
+"https://ct.usr.sicilia.it/personale-docente-scuola-infanzia-mobilita-a-s-2026-2027-movimenti/"
+],
+"provincia": "Catania",
+"avvisi": 2,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
@@ -195,6 +193,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://treviso.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Treviso",
+"avvisi": 0,
+"errore": null
+},
 "https://bo.istruzioneer.gov.it/tag/interpello/": {
 "grezzi": 22,
 "scartati": [
@@ -205,13 +210,6 @@
 ],
 "provincia": "Bologna",
 "avvisi": 2,
-"errore": null
-},
-"https://treviso.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Treviso",
-"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionechietipescara.it/": {
@@ -233,11 +231,16 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://www.uat-caserta.it/": {
-"grezzi": 9,
-"scartati": [],
-"provincia": "Caserta",
-"avvisi": 9,
+"https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
+"grezzi": 34,
+"scartati": [
+"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-sostegno-scuola-primaria-adee-i-c-pa",
+"https://www.uspbari.it/usp/author/mi20142",
+"https://www.uspbari.it/usp/category/interpelli-della-provincia-di-bari",
+"https://www.uspbari.it/usp/tag/interpello"
+],
+"provincia": "Bari",
+"avvisi": 5,
 "errore": null
 },
 "https://www.usppotenza.it/": {
@@ -245,6 +248,13 @@
 "scartati": [],
 "provincia": "Potenza",
 "avvisi": 0,
+"errore": null
+},
+"https://www.uat-caserta.it/": {
+"grezzi": 9,
+"scartati": [],
+"provincia": "Caserta",
+"avvisi": 9,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/": {
@@ -256,18 +266,6 @@
 ],
 "provincia": "Pistoia",
 "avvisi": 28,
-"errore": null
-},
-"https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
-"grezzi": 34,
-"scartati": [
-"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-sostegno-scuola-primaria-adee-i-c-pa",
-"https://www.uspbari.it/usp/author/mi20142",
-"https://www.uspbari.it/usp/category/interpelli-della-provincia-di-bari",
-"https://www.uspbari.it/usp/tag/interpello"
-],
-"provincia": "Bari",
-"avvisi": 5,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
@@ -282,18 +280,6 @@
 "avvisi": 12,
 "errore": null
 },
-"https://www.usr.sicilia.it/": {
-"grezzi": 26,
-"scartati": [
-"https://www.usr.sicilia.it/scuola-in-sicilia-al-via-lanno-scolastico-con-docenti-e-personale-gia-in-servizio-c",
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/news/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
-],
-"provincia": "Ragusa",
-"avvisi": 14,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/": {
 "grezzi": 4,
 "scartati": [
@@ -304,6 +290,18 @@
 ],
 "provincia": "Novara",
 "avvisi": 0,
+"errore": null
+},
+"https://www.usr.sicilia.it/": {
+"grezzi": 26,
+"scartati": [
+"https://www.usr.sicilia.it/scuola-in-sicilia-al-via-lanno-scolastico-con-docenti-e-personale-gia-in-servizio-c",
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/news/",
+"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
+],
+"provincia": "Ragusa",
+"avvisi": 14,
 "errore": null
 },
 "https://www.ustlecce.it/index.php/personale-docente": {
