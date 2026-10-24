@@ -20,6 +20,13 @@
 "avvisi": 1,
 "errore": null
 },
+"http://www.uspms.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Massa-Carrara",
+"avvisi": 0,
+"errore": null
+},
 "https://pr.istruzioneer.gov.it/interpelli-2/": {
 "grezzi": 0,
 "scartati": [],
@@ -27,10 +34,17 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"http://www.uspms.it/": {
+"https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Massa-Carrara",
+"provincia": "Sondrio",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://atptorino.com/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
 "avvisi": 0,
 "errore": null
 },
@@ -45,20 +59,6 @@
 "provincia": "Perugia",
 "avvisi": 0,
 "errore": null
-},
-"https://atptorino.com/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
-"errore": null
-},
-"https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sondrio",
-"avvisi": 0,
-"errore": "SSLError"
 },
 "https://win.istruzioneverona.it/uspvr/index.php/interpelli-docenti/": {
 "grezzi": 0,
@@ -84,18 +84,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://mo.istruzioneer.gov.it/": {
-"grezzi": 26,
-"scartati": [
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
-],
-"provincia": "Modena",
-"avvisi": 21,
-"errore": null
-},
 "https://rn.istruzioneer.gov.it/": {
 "grezzi": 21,
 "scartati": [
@@ -106,6 +94,18 @@
 ],
 "provincia": "Rimini",
 "avvisi": 14,
+"errore": null
+},
+"https://mo.istruzioneer.gov.it/": {
+"grezzi": 26,
+"scartati": [
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
+],
+"provincia": "Modena",
+"avvisi": 21,
 "errore": null
 },
 "https://www.istruzione.umbria.it/feed/": {
@@ -167,13 +167,6 @@
 "avvisi": 38,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/trieste-e-la-memoria-un-viaggio-nella-citta/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Trieste",
-"avvisi": 0,
-"errore": null
-},
 "https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
 "grezzi": 49,
 "scartati": [
@@ -186,19 +179,19 @@
 "avvisi": 15,
 "errore": null
 },
+"https://www.istruzionepiemonte.it/trieste-e-la-memoria-un-viaggio-nella-citta/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Trieste",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzioneimperia.gov.it/pagine/interpelli---imperia": {
 "grezzi": 1,
 "scartati": [
 "https://www.comprensivotaggia.edu.it/albo-online"
 ],
 "provincia": "Imperia",
-"avvisi": 0,
-"errore": null
-},
-"https://treviso.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Treviso",
 "avvisi": 0,
 "errore": null
 },
@@ -212,6 +205,13 @@
 ],
 "provincia": "Bologna",
 "avvisi": 2,
+"errore": null
+},
+"https://treviso.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Treviso",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionechietipescara.it/": {
@@ -247,6 +247,17 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/": {
+"grezzi": 31,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/generale/",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/interpelli-docenti/"
+],
+"provincia": "Pistoia",
+"avvisi": 28,
+"errore": null
+},
 "https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
 "grezzi": 34,
 "scartati": [
@@ -257,17 +268,6 @@
 ],
 "provincia": "Bari",
 "avvisi": 5,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/": {
-"grezzi": 31,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/generale/",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/interpelli-docenti/"
-],
-"provincia": "Pistoia",
-"avvisi": 28,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
