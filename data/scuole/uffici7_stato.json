@@ -13,17 +13,24 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://monza.istruzionelombardia.gov.it/": {
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Monza e Brianza",
+"provincia": "Perugia",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": "HTTP 404"
 },
 "https://brescia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Brescia",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://monza.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Monza e Brianza",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -34,13 +41,6 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Perugia",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://treviso.istruzioneveneto.gov.it/tag/interpelli-istituti-scolastici/": {
 "grezzi": 0,
 "scartati": [],
@@ -48,17 +48,28 @@
 "avvisi": 0,
 "errore": null
 },
-"https://belluno.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Belluno",
-"avvisi": 0,
-"errore": null
-},
 "https://atavellino.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Avellino",
+"avvisi": 0,
+"errore": null
+},
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 9,
+"scartati": [
+"https://pc.istruzioneer.gov.it/2026/10/23/interpelli/",
+"https://docs.google.com/forms/d/e/1FAIpQLSc0TXPCJ8mL614npyELpJj40M2t3pnxzEwreZRLMBJGoF6LRQ/viewform",
+"https://docs.google.com/forms/d/e/1FAIpQLSfI0w2olKbrwX0rBI-JcJ_kTV3shTnQtIHJCIGoPnBAzciEeQ/viewform"
+],
+"provincia": "Piacenza",
+"avvisi": 6,
+"errore": null
+},
+"https://belluno.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Belluno",
 "avvisi": 0,
 "errore": null
 },
@@ -88,6 +99,30 @@
 "avvisi": 5,
 "errore": null
 },
+"https://me.usr.sicilia.it/": {
+"grezzi": 25,
+"scartati": [
+"https://me.usr.sicilia.it/personale-docente-decreto-di-parziale-rettifica-dei-posti-di-sostegno-in-organico-di",
+"https://me.usr.sicilia.it/personale-docente-gae-decreto-rettifica-punteggio-totaro-patrizia/"
+],
+"provincia": "Messina",
+"avvisi": 23,
+"errore": null
+},
+"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-udine/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Udine",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Novara",
+"avvisi": 0,
+"errore": null
+},
 "http://www.usppesarourbino.it/category/interpelli/": {
 "grezzi": 10,
 "scartati": [
@@ -100,23 +135,6 @@
 "avvisi": 3,
 "errore": null
 },
-"https://me.usr.sicilia.it/": {
-"grezzi": 25,
-"scartati": [
-"https://me.usr.sicilia.it/personale-docente-decreto-di-parziale-rettifica-dei-posti-di-sostegno-in-organico-di",
-"https://me.usr.sicilia.it/personale-docente-gae-decreto-rettifica-punteggio-totaro-patrizia/"
-],
-"provincia": "Messina",
-"avvisi": 23,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Crotone",
-"avvisi": 0,
-"errore": null
-},
 "https://verona.istruzioneveneto.gov.it/": {
 "grezzi": 1,
 "scartati": [
@@ -126,17 +144,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/": {
+"https://www.istruzione.calabria.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Novara",
-"avvisi": 0,
-"errore": null
-},
-"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-udine/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Udine",
+"provincia": "Crotone",
 "avvisi": 0,
 "errore": null
 },
@@ -157,17 +168,6 @@
 ],
 "provincia": "Siracusa",
 "avvisi": 16,
-"errore": null
-},
-"https://pc.istruzioneer.gov.it/": {
-"grezzi": 9,
-"scartati": [
-"https://pc.istruzioneer.gov.it/2026/10/23/interpelli/",
-"https://docs.google.com/forms/d/e/1FAIpQLSc0TXPCJ8mL614npyELpJj40M2t3pnxzEwreZRLMBJGoF6LRQ/viewform",
-"https://docs.google.com/forms/d/e/1FAIpQLSfI0w2olKbrwX0rBI-JcJ_kTV3shTnQtIHJCIGoPnBAzciEeQ/viewform"
-],
-"provincia": "Piacenza",
-"avvisi": 6,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/riminiwellness-per-la-scuola-ingresso-gratuito-e-incontro-con-massimiliano-rosolino/": {
@@ -222,6 +222,13 @@
 "avvisi": 3,
 "errore": null
 },
+"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Benevento",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
 "https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
 "grezzi": 21,
 "scartati": [
@@ -234,13 +241,6 @@
 "avvisi": 5,
 "errore": null
 },
-"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Benevento",
-"avvisi": 0,
-"errore": "HTTP 403"
-},
 "https://www.istruzionepiemonte.it/cuneo/": {
 "grezzi": 22,
 "scartati": [
@@ -250,52 +250,6 @@
 ],
 "provincia": "Cuneo",
 "avvisi": 19,
-"errore": null
-},
-"https://www.uspsi.it/": {
-"grezzi": 47,
-"scartati": [
-"https://www.uspsi.it/2026/10/",
-"https://www.uspsi.it/2026/10/"
-],
-"provincia": "Siena",
-"avvisi": 45,
-"errore": null
-},
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
-"grezzi": 72,
-"scartati": [
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/news/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
-],
-"provincia": "Ragusa",
-"avvisi": 38,
-"errore": null
-},
-"https://www.uspascolipiceno.it/": {
-"grezzi": 20,
-"scartati": [
-"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
-"https://www.uspascolipiceno.it/wordpress/category/disponibilita/",
-"https://www.uspascolipiceno.it/wordpress/category/disponibilita/disponibilita-supplenze/",
-"https://www.uspascolipiceno.it/wordpress/tag/disponibilita-supplenze/"
-],
-"provincia": "Fermo",
-"avvisi": 11,
-"errore": null
-},
-"https://www.istruzionelaspezia.gov.it/pagine/interpelli-1": {
-"grezzi": 22,
-"scartati": [
-"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
-"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-",
-"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
-"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-"
-],
-"provincia": "La Spezia",
-"avvisi": 0,
 "errore": null
 },
 "https://www.uat-napoli.it/": {
@@ -310,6 +264,35 @@
 "avvisi": 45,
 "errore": null
 },
+"https://www.mim.gov.it/web/brescia/": {
+"grezzi": 1,
+"scartati": [],
+"provincia": "Brescia",
+"avvisi": 1,
+"errore": null
+},
+"https://www.istruzionelaspezia.gov.it/pagine/interpelli-1": {
+"grezzi": 22,
+"scartati": [
+"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
+"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-",
+"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
+"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-"
+],
+"provincia": "La Spezia",
+"avvisi": 0,
+"errore": null
+},
+"https://www.uspsi.it/": {
+"grezzi": 47,
+"scartati": [
+"https://www.uspsi.it/2026/10/",
+"https://www.uspsi.it/2026/10/"
+],
+"provincia": "Siena",
+"avvisi": 45,
+"errore": null
+},
 "https://www.ustfoggia.it/": {
 "grezzi": 59,
 "scartati": [
@@ -320,18 +303,35 @@
 "avvisi": 57,
 "errore": null
 },
+"https://www.uspascolipiceno.it/": {
+"grezzi": 20,
+"scartati": [
+"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
+"https://www.uspascolipiceno.it/wordpress/category/disponibilita/",
+"https://www.uspascolipiceno.it/wordpress/category/disponibilita/disponibilita-supplenze/",
+"https://www.uspascolipiceno.it/wordpress/tag/disponibilita-supplenze/"
+],
+"provincia": "Fermo",
+"avvisi": 11,
+"errore": null
+},
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
+"grezzi": 72,
+"scartati": [
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/news/",
+"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
+],
+"provincia": "Ragusa",
+"avvisi": 38,
+"errore": null
+},
 "https://www.mim.gov.it/web/pavia/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Pavia",
 "avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/brescia/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": "Brescia",
-"avvisi": 1,
 "errore": null
 },
 "https://www.ustli.it/usp_livorno/index.php/docenti/interpelli": {
