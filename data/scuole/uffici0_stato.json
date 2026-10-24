@@ -6,19 +6,19 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Terni",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Como",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Terni",
+"avvisi": 0,
+"errore": "HTTP 404"
 },
 "https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
 "grezzi": 0,
@@ -54,6 +54,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://uat-salerno.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Salerno",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://sr.usr.sicilia.it/tag/interpelli/": {
 "grezzi": 4,
 "scartati": [
@@ -62,22 +69,6 @@
 "provincia": "Siracusa",
 "avvisi": 3,
 "errore": null
-},
-"https://pc.istruzioneer.gov.it/": {
-"grezzi": 1,
-"scartati": [
-"https://pc.istruzioneer.gov.it/2026/10/23/interpelli/"
-],
-"provincia": "Piacenza",
-"avvisi": 0,
-"errore": null
-},
-"https://uat-salerno.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Salerno",
-"avvisi": 0,
-"errore": "SSLError"
 },
 "https://www.atpromaistruzione.it/": {
 "grezzi": 0,
@@ -91,6 +82,17 @@
 "scartati": [],
 "provincia": "Teramo",
 "avvisi": 0,
+"errore": null
+},
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 9,
+"scartati": [
+"https://pc.istruzioneer.gov.it/2026/10/23/interpelli/",
+"https://docs.google.com/forms/d/e/1FAIpQLSc0TXPCJ8mL614npyELpJj40M2t3pnxzEwreZRLMBJGoF6LRQ/viewform",
+"https://docs.google.com/forms/d/e/1FAIpQLSfI0w2olKbrwX0rBI-JcJ_kTV3shTnQtIHJCIGoPnBAzciEeQ/viewform"
+],
+"provincia": "Piacenza",
+"avvisi": 6,
 "errore": null
 },
 "https://me.usr.sicilia.it/": {
@@ -143,13 +145,6 @@
 "avvisi": 0,
 "errore": null
 },
-"http://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -157,10 +152,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
+"http://www.uspss.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Roma",
+"provincia": "Sassari",
 "avvisi": 0,
 "errore": null
 },
@@ -183,6 +178,24 @@
 "avvisi": 20,
 "errore": null
 },
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-annuali-classe-di-concorso-a041-e-a058/": {
+"grezzi": 3,
+"scartati": [
+"https://www.istruzionepiemonte.it/cuneo/category/comunicazioni-alle-scuole/",
+"https://www.istruzionepiemonte.it/cuneo/tag/albo/",
+"https://www.istruzionepiemonte.it/cuneo/tag/avvisi/"
+],
+"provincia": "Cuneo",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Roma",
+"avvisi": 0,
+"errore": null
+},
 "https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
 "grezzi": 14,
 "scartati": [
@@ -195,14 +208,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-annuali-classe-di-concorso-a041-e-a058/": {
-"grezzi": 3,
-"scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/comunicazioni-alle-scuole/",
-"https://www.istruzionepiemonte.it/cuneo/tag/albo/",
-"https://www.istruzionepiemonte.it/cuneo/tag/avvisi/"
-],
-"provincia": "Cuneo",
+"https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bolzano",
 "avvisi": 0,
 "errore": null
 },
@@ -218,11 +227,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
-"grezzi": 0,
+"https://www.ufficioscolasticoprovinciale.prato.it/": {
+"grezzi": 3,
 "scartati": [],
-"provincia": "Bolzano",
-"avvisi": 0,
+"provincia": "Prato",
+"avvisi": 3,
 "errore": null
 },
 "https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
@@ -234,13 +243,6 @@
 "https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015"
 ],
 "provincia": "Ravenna",
-"avvisi": 3,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.prato.it/": {
-"grezzi": 3,
-"scartati": [],
-"provincia": "Prato",
 "avvisi": 3,
 "errore": null
 },
