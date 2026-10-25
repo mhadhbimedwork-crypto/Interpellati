@@ -1,11 +1,4 @@
 {
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Terni",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://lnx.csaoristano.it/category/reclutamento/": {
 "grezzi": 0,
 "scartati": [],
@@ -13,17 +6,24 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Monza e Brianza",
+"provincia": "Terni",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": "HTTP 404"
 },
 "https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Como",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Monza e Brianza",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -37,6 +37,13 @@
 "avvisi": 7,
 "errore": null
 },
+"https://belluno.istruzioneveneto.gov.it/category/news/area-amministrativa/interpelli/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Belluno",
+"avvisi": 0,
+"errore": null
+},
 "https://atcampobasso.it/": {
 "grezzi": 2,
 "scartati": [
@@ -47,12 +54,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://belluno.istruzioneveneto.gov.it/category/news/area-amministrativa/interpelli/": {
+"https://uat-salerno.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Belluno",
+"provincia": "Salerno",
 "avvisi": 0,
-"errore": null
+"errore": "SSLError"
 },
 "https://sr.usr.sicilia.it/tag/interpelli/": {
 "grezzi": 4,
@@ -63,12 +70,12 @@
 "avvisi": 3,
 "errore": null
 },
-"https://uat-salerno.it/": {
+"http://www.istruzionevicenza.it/wordpress/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Salerno",
+"provincia": "Vicenza",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": null
 },
 "https://www.atpromaistruzione.it/": {
 "grezzi": 0,
@@ -84,17 +91,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://pc.istruzioneer.gov.it/": {
-"grezzi": 9,
-"scartati": [
-"https://pc.istruzioneer.gov.it/2026/10/23/interpelli/",
-"https://docs.google.com/forms/d/e/1FAIpQLSc0TXPCJ8mL614npyELpJj40M2t3pnxzEwreZRLMBJGoF6LRQ/viewform",
-"https://docs.google.com/forms/d/e/1FAIpQLSfI0w2olKbrwX0rBI-JcJ_kTV3shTnQtIHJCIGoPnBAzciEeQ/viewform"
-],
-"provincia": "Piacenza",
-"avvisi": 6,
-"errore": null
-},
 "https://me.usr.sicilia.it/": {
 "grezzi": 21,
 "scartati": [
@@ -105,11 +101,15 @@
 "avvisi": 19,
 "errore": null
 },
-"http://www.istruzionevicenza.it/wordpress/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 9,
+"scartati": [
+"https://pc.istruzioneer.gov.it/2026/10/23/interpelli/",
+"https://docs.google.com/forms/d/e/1FAIpQLSc0TXPCJ8mL614npyELpJj40M2t3pnxzEwreZRLMBJGoF6LRQ/viewform",
+"https://docs.google.com/forms/d/e/1FAIpQLSfI0w2olKbrwX0rBI-JcJ_kTV3shTnQtIHJCIGoPnBAzciEeQ/viewform"
+],
+"provincia": "Piacenza",
+"avvisi": 6,
 "errore": null
 },
 "https://www.istruzionelaspezia.it/": {
@@ -145,18 +145,23 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vibo Valentia",
-"avvisi": 0,
-"errore": null
-},
 "http://www.uspss.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Sassari",
 "avvisi": 0,
+"errore": null
+},
+"https://ustlucca.it/": {
+"grezzi": 24,
+"scartati": [
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/secondo-interpello-nazionale-sulla-classe-di-concorso-a042-scienze-e-tecnologie-meccaniche"
+],
+"provincia": "Lucca",
+"avvisi": 19,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/matera-2019-percorsi-culturali-dalle-scuole-per-le-scuole/": {
@@ -171,18 +176,6 @@
 "scartati": [],
 "provincia": "Roma",
 "avvisi": 0,
-"errore": null
-},
-"https://ustlucca.it/": {
-"grezzi": 24,
-"scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/secondo-interpello-nazionale-sulla-classe-di-concorso-a042-scienze-e-tecnologie-meccaniche"
-],
-"provincia": "Lucca",
-"avvisi": 19,
 "errore": null
 },
 "https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
@@ -227,6 +220,18 @@
 "avvisi": 0,
 "errore": null
 },
+"https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
+"grezzi": 20,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1222",
+"https://www.icbassi.edu.it/albo-online?categoria=10004&cerca=&storico=&aoo=",
+"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015"
+],
+"provincia": "Ravenna",
+"avvisi": 3,
+"errore": null
+},
 "https://www.ufficioscolasticoprovinciale.prato.it/": {
 "grezzi": 3,
 "scartati": [],
@@ -241,23 +246,13 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
-"grezzi": 20,
+"https://www.uspsi.it/?cat=264": {
+"grezzi": 29,
 "scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1222",
-"https://www.icbassi.edu.it/albo-online?categoria=10004&cerca=&storico=&aoo=",
-"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015"
+"https://www.uspsi.it/2026/10/"
 ],
-"provincia": "Ravenna",
-"avvisi": 3,
-"errore": null
-},
-"https://www.usr.sicilia.it/feed/": {
-"grezzi": 2,
-"scartati": [],
-"provincia": null,
-"avvisi": 2,
+"provincia": "Siena",
+"avvisi": 28,
 "errore": null
 },
 "https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
@@ -272,13 +267,18 @@
 "avvisi": 5,
 "errore": null
 },
-"https://www.uspsi.it/?cat=264": {
-"grezzi": 29,
-"scartati": [
-"https://www.uspsi.it/2026/10/"
-],
-"provincia": "Siena",
-"avvisi": 28,
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vibo Valentia",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
+"https://www.usr.sicilia.it/feed/": {
+"grezzi": 2,
+"scartati": [],
+"provincia": null,
+"avvisi": 2,
 "errore": null
 },
 "https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
@@ -290,40 +290,6 @@
 ],
 "provincia": "Napoli",
 "avvisi": 41,
-"errore": null
-},
-"https://www.mim.gov.it/web/isernia": {
-"grezzi": 12,
-"scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-conferiment",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-conferi",
-"https://www.mim.gov.it/web/isernia"
-],
-"provincia": "Isernia",
-"avvisi": 3,
-"errore": null
-},
-"https://www.ustfoggia.it/": {
-"grezzi": 53,
-"scartati": [
-"https://www.ustfoggia.it/category/albo-pretorio/",
-"https://www.ustfoggia.it/category/news/"
-],
-"provincia": "Foggia",
-"avvisi": 51,
-"errore": null
-},
-"https://www.ustms.it/": {
-"grezzi": 35,
-"scartati": [
-"https://twitter.com/home?status=AVVISO preventivo per l’acquisizione di disponibilità al conferimento di suppl",
-"https://www.ustms.it/category/docenti/",
-"https://www.ustms.it/category/in-primo-piano/",
-"https://www.ustms.it/category/docenti/interpelli/"
-],
-"provincia": "Massa-Carrara",
-"avvisi": 17,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/": {
@@ -338,11 +304,45 @@
 "avvisi": 11,
 "errore": null
 },
+"https://www.mim.gov.it/web/isernia": {
+"grezzi": 12,
+"scartati": [
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-conferiment",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-conferi",
+"https://www.mim.gov.it/web/isernia"
+],
+"provincia": "Isernia",
+"avvisi": 3,
+"errore": null
+},
 "https://www.mim.gov.it/web/mantova/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Mantova",
 "avvisi": 0,
+"errore": null
+},
+"https://www.ustms.it/": {
+"grezzi": 35,
+"scartati": [
+"https://twitter.com/home?status=AVVISO preventivo per l’acquisizione di disponibilità al conferimento di suppl",
+"https://www.ustms.it/category/docenti/",
+"https://www.ustms.it/category/in-primo-piano/",
+"https://www.ustms.it/category/docenti/interpelli/"
+],
+"provincia": "Massa-Carrara",
+"avvisi": 17,
+"errore": null
+},
+"https://www.ustfoggia.it/": {
+"grezzi": 53,
+"scartati": [
+"https://www.ustfoggia.it/category/albo-pretorio/",
+"https://www.ustfoggia.it/category/news/"
+],
+"provincia": "Foggia",
+"avvisi": 51,
 "errore": null
 },
 "https://www.istruzionepotenza.it/": {
