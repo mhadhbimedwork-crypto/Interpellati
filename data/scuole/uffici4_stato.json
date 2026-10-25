@@ -1,17 +1,17 @@
 {
-"https://interpelloweb.it/interpelli-supplenze/": {
-"grezzi": 7,
-"scartati": [],
-"provincia": null,
-"avvisi": 7,
-"errore": null
-},
 "https://lodi.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lodi",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://interpelloweb.it/interpelli-supplenze/": {
+"grezzi": 7,
+"scartati": [],
+"provincia": null,
+"avvisi": 7,
+"errore": null
 },
 "https://pr.istruzioneer.gov.it/feed/": {
 "grezzi": 0,
@@ -35,13 +35,15 @@
 "errore": "SSLError"
 },
 "https://mo.istruzioneer.gov.it/": {
-"grezzi": 12,
+"grezzi": 26,
 "scartati": [
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
 "https://mo.istruzioneer.gov.it/",
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
 ],
 "provincia": "Modena",
-"avvisi": 10,
+"avvisi": 21,
 "errore": null
 },
 "https://uspistruzione.fr.it/wp2/feed/": {
@@ -49,32 +51,6 @@
 "scartati": [],
 "provincia": "Frosinone",
 "avvisi": 5,
-"errore": null
-},
-"https://ct.usr.sicilia.it/": {
-"grezzi": 25,
-"scartati": [
-"https://ct.usr.sicilia.it/",
-"https://ct.usr.sicilia.it/avviso-disponibilita-per-contratti-a-t-d-per-lanno-scolastico-2026-2027-su-posti-com",
-"https://ct.usr.sicilia.it/avviso-disponibilita-per-contratti-a-t-d-per-lanno-scolastico-2026-2027-su-posti-com",
-"https://twitter.com/home?status=AVVISO – Disponibilità per contratti a T.D. per l’anno scolastico 2026/2027 su"
-],
-"provincia": "Catania",
-"avvisi": 4,
-"errore": null
-},
-"https://win.istruzioneverona.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Verona",
-"avvisi": 0,
-"errore": "ConnectionError"
-},
-"https://www.csaimperia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Imperia",
-"avvisi": 0,
 "errore": null
 },
 "https://rg.usr.sicilia.it/": {
@@ -89,13 +65,30 @@
 "avvisi": 3,
 "errore": null
 },
-"https://lnx.csalaquila.it/wp/category/interpelli/": {
-"grezzi": 11,
+"https://win.istruzioneverona.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Verona",
+"avvisi": 0,
+"errore": "ConnectionError"
+},
+"https://ct.usr.sicilia.it/": {
+"grezzi": 25,
 "scartati": [
-"https://lnx.csalaquila.it/wp/category/interpelli/"
+"https://ct.usr.sicilia.it/",
+"https://ct.usr.sicilia.it/avviso-disponibilita-per-contratti-a-t-d-per-lanno-scolastico-2026-2027-su-posti-com",
+"https://ct.usr.sicilia.it/avviso-disponibilita-per-contratti-a-t-d-per-lanno-scolastico-2026-2027-su-posti-com",
+"https://twitter.com/home?status=AVVISO – Disponibilità per contratti a T.D. per l’anno scolastico 2026/2027 su"
 ],
-"provincia": "L'Aquila",
-"avvisi": 10,
+"provincia": "Catania",
+"avvisi": 4,
+"errore": null
+},
+"https://www.csaimperia.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Imperia",
+"avvisi": 0,
 "errore": null
 },
 "https://ag.usr.sicilia.it/": {
@@ -122,11 +115,13 @@
 "avvisi": 26,
 "errore": null
 },
-"https://www.istruzioneimperia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Imperia",
-"avvisi": 0,
+"https://lnx.csalaquila.it/wp/category/interpelli/": {
+"grezzi": 11,
+"scartati": [
+"https://lnx.csalaquila.it/wp/category/interpelli/"
+],
+"provincia": "L'Aquila",
+"avvisi": 10,
 "errore": null
 },
 "https://www.istruzionepiacenza.it/": {
@@ -136,20 +131,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/latina-didaxis-xxxvi-2023-composizione-nominale-e-giochi-di-parole-nella-cultura-latina/": {
-"grezzi": 0,
+"https://padova.istruzioneveneto.gov.it/category/interpelli-personale-docente/": {
+"grezzi": 35,
 "scartati": [],
-"provincia": "Latina",
-"avvisi": 0,
+"provincia": "Padova",
+"avvisi": 35,
 "errore": null
 },
-"https://venezia.istruzioneveneto.gov.it/": {
-"grezzi": 2,
-"scartati": [
-"https://venezia.istruzioneveneto.gov.it/20261020_34544/",
-"https://venezia.istruzioneveneto.gov.it/20261015_34534/"
-],
-"provincia": "Venezia",
+"https://www.istruzioneimperia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Imperia",
 "avvisi": 0,
 "errore": null
 },
@@ -165,18 +157,21 @@
 "avvisi": 0,
 "errore": null
 },
+"https://venezia.istruzioneveneto.gov.it/": {
+"grezzi": 2,
+"scartati": [
+"https://venezia.istruzioneveneto.gov.it/20261020_34544/",
+"https://venezia.istruzioneveneto.gov.it/20261015_34534/"
+],
+"provincia": "Venezia",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionesavona.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Savona",
 "avvisi": 0,
-"errore": null
-},
-"https://padova.istruzioneveneto.gov.it/category/interpelli-personale-docente/": {
-"grezzi": 35,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 35,
 "errore": null
 },
 "https://tp.usr.sicilia.it/personale-scuola/interpelli/": {
@@ -189,6 +184,13 @@
 ],
 "provincia": "Trapani",
 "avvisi": 42,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/latina-didaxis-xxxvi-2023-composizione-nominale-e-giochi-di-parole-nella-cultura-latina/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Latina",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzione.calabria.it/vibovalentia/": {
@@ -236,37 +238,6 @@
 "avvisi": 7,
 "errore": null
 },
-"https://www.istruzione-ancona.it/category/docenti/": {
-"grezzi": 71,
-"scartati": [
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
-"https://www.istruzione-ancona.it/author/stefania/",
-"https://www.istruzione-ancona.it/author/veroli/"
-],
-"provincia": "Ancona",
-"avvisi": 15,
-"errore": null
-},
-"https://www.mim.gov.it/web/como/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Como",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usppesarourbino.it/": {
-"grezzi": 11,
-"scartati": [
-"http://www.specificfeeds.com/widgets/emailSubscribeEncFeed/K090UDFWL3Q0ZVBma0ZnNGFpNS9FbTc2SHRYeDJYdDI2elVWVzV",
-"http://twitter.com/share",
-"https://www.usppesarourbino.it/wp-content/uploads/2026/10/Interpello-B007-LAB.-DI-OTTICA-18-ore-AL-31-10-2026.",
-"https://www.usppesarourbino.it/wp-content/uploads/2026/09/timbro_INTERPELLO_AI56-PERCUSSIONI.zip"
-],
-"provincia": "Pesaro e Urbino",
-"avvisi": 3,
-"errore": null
-},
 "https://www.mim.gov.it/web/nuoro/": {
 "grezzi": 7,
 "scartati": [
@@ -279,11 +250,11 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.ust.fi.it/feed/": {
-"grezzi": 10,
+"https://www.mim.gov.it/web/como/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Firenze",
-"avvisi": 10,
+"provincia": "Como",
+"avvisi": 0,
 "errore": null
 },
 "https://www.mim.gov.it/web/varese/": {
@@ -298,18 +269,6 @@
 "avvisi": 4,
 "errore": null
 },
-"https://www.usr.sicilia.it/": {
-"grezzi": 26,
-"scartati": [
-"https://www.usr.sicilia.it/scuola-in-sicilia-al-via-lanno-scolastico-con-docenti-e-personale-gia-in-servizio-c",
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/news/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
-],
-"provincia": "Palermo",
-"avvisi": 14,
-"errore": null
-},
 "https://www.uspbari.it/": {
 "grezzi": 37,
 "scartati": [
@@ -320,6 +279,37 @@
 ],
 "provincia": "Bari",
 "avvisi": 7,
+"errore": null
+},
+"https://www.ust.fi.it/feed/": {
+"grezzi": 10,
+"scartati": [],
+"provincia": "Firenze",
+"avvisi": 10,
+"errore": null
+},
+"https://www.usppesarourbino.it/": {
+"grezzi": 11,
+"scartati": [
+"http://www.specificfeeds.com/widgets/emailSubscribeEncFeed/K090UDFWL3Q0ZVBma0ZnNGFpNS9FbTc2SHRYeDJYdDI2elVWVzV",
+"http://twitter.com/share",
+"https://www.usppesarourbino.it/wp-content/uploads/2026/10/Interpello-B007-LAB.-DI-OTTICA-18-ore-AL-31-10-2026.",
+"https://www.usppesarourbino.it/wp-content/uploads/2026/09/timbro_INTERPELLO_AI56-PERCUSSIONI.zip"
+],
+"provincia": "Pesaro e Urbino",
+"avvisi": 3,
+"errore": null
+},
+"https://www.usr.sicilia.it/": {
+"grezzi": 26,
+"scartati": [
+"https://www.usr.sicilia.it/scuola-in-sicilia-al-via-lanno-scolastico-con-docenti-e-personale-gia-in-servizio-c",
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/news/",
+"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
+],
+"provincia": "Palermo",
+"avvisi": 14,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
@@ -344,6 +334,18 @@
 ],
 "provincia": "Novara",
 "avvisi": 0,
+"errore": null
+},
+"https://www.istruzione-ancona.it/category/docenti/": {
+"grezzi": 71,
+"scartati": [
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
+"https://www.istruzione-ancona.it/author/stefania/",
+"https://www.istruzione-ancona.it/author/veroli/"
+],
+"provincia": "Ancona",
+"avvisi": 15,
 "errore": null
 },
 "https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
