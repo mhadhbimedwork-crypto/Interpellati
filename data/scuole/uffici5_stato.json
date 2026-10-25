@@ -6,13 +6,6 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://lnx.csalatina.it/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": "Latina",
-"avvisi": 1,
-"errore": null
-},
 "https://pavia.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -20,11 +13,11 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://atptorino.com/": {
-"grezzi": 0,
+"https://lnx.csalatina.it/": {
+"grezzi": 1,
 "scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
+"provincia": "Latina",
+"avvisi": 1,
 "errore": null
 },
 "http://www.uspms.it/": {
@@ -41,13 +34,6 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sondrio",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://istruzione.umbria.it/": {
 "grezzi": 5,
 "scartati": [
@@ -60,12 +46,33 @@
 "avvisi": 0,
 "errore": null
 },
+"https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sondrio",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://atptorino.com/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
+},
 "https://win.istruzioneverona.it/uspvr/index.php/interpelli-docenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Verona",
 "avvisi": 0,
 "errore": "ConnectionError"
+},
+"https://www.csanuoro.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Nuoro",
+"avvisi": 0,
+"errore": null
 },
 "https://venezia.istruzioneveneto.gov.it/argomenti/personale/docenti/interpelli/": {
 "grezzi": 2,
@@ -77,30 +84,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.csanuoro.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Nuoro",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzione.umbria.it/feed/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": null,
 "avvisi": 0,
-"errore": null
-},
-"https://mo.istruzioneer.gov.it/": {
-"grezzi": 26,
-"scartati": [
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
-],
-"provincia": "Modena",
-"avvisi": 21,
 "errore": null
 },
 "https://rn.istruzioneer.gov.it/": {
@@ -115,11 +103,16 @@
 "avvisi": 14,
 "errore": null
 },
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 0,
+"https://mo.istruzioneer.gov.it/": {
+"grezzi": 26,
+"scartati": [
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
+],
+"provincia": "Modena",
+"avvisi": 21,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/": {
@@ -129,10 +122,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/le-nostre-scuole/alessandria/": {
+"https://www.istruzione.calabria.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Alessandria",
+"provincia": "Catanzaro",
 "avvisi": 0,
 "errore": null
 },
@@ -143,8 +136,15 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzionepiemonte.it/le-nostre-scuole/alessandria/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Alessandria",
+"avvisi": 0,
+"errore": null
+},
 "https://ag.usr.sicilia.it/": {
-"grezzi": 52,
+"grezzi": 49,
 "scartati": [
 "https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/scuola-primaria/",
 "https://ag.usr.sicilia.it/nterpello-per-selezione-personale-ai-sensi-dellart-14-comma-22-o-m-27-2026-cl-conc-a",
@@ -152,14 +152,19 @@
 "https://ag.usr.sicilia.it/4-avviso-di-convocazione-in-presenza-del-personale-a-t-a-di-1a-fascia-dei-collaborat"
 ],
 "provincia": "Agrigento",
-"avvisi": 38,
+"avvisi": 35,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/trieste-e-la-memoria-un-viaggio-nella-citta/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Trieste",
-"avvisi": 0,
+"https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
+"grezzi": 43,
+"scartati": [
+"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso BA02 – I.",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
+"https://cl-en.usr.sicilia.it/category/news/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
+],
+"provincia": null,
+"avvisi": 12,
 "errore": null
 },
 "https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
@@ -174,22 +179,10 @@
 "avvisi": 2,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
-"grezzi": 49,
-"scartati": [
-"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso BA02 – I.",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
-"https://cl-en.usr.sicilia.it/category/news/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
-],
-"provincia": null,
-"avvisi": 15,
-"errore": null
-},
-"https://treviso.istruzioneveneto.gov.it/": {
+"https://www.istruzionepiemonte.it/trieste-e-la-memoria-un-viaggio-nella-citta/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Treviso",
+"provincia": "Trieste",
 "avvisi": 0,
 "errore": null
 },
@@ -202,8 +195,15 @@
 "avvisi": 0,
 "errore": null
 },
+"https://treviso.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Treviso",
+"avvisi": 0,
+"errore": null
+},
 "https://bo.istruzioneer.gov.it/tag/interpello/": {
-"grezzi": 22,
+"grezzi": 20,
 "scartati": [
 "https://bo.istruzioneer.gov.it/",
 "https://bo.istruzioneer.gov.it/category/infanzia/",
@@ -233,20 +233,6 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://www.uat-caserta.it/": {
-"grezzi": 9,
-"scartati": [],
-"provincia": "Caserta",
-"avvisi": 9,
-"errore": null
-},
-"https://www.usppotenza.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Potenza",
-"avvisi": 0,
-"errore": null
-},
 "https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
 "grezzi": 34,
 "scartati": [
@@ -257,6 +243,20 @@
 ],
 "provincia": "Bari",
 "avvisi": 5,
+"errore": null
+},
+"https://www.usppotenza.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Potenza",
+"avvisi": 0,
+"errore": null
+},
+"https://www.uat-caserta.it/": {
+"grezzi": 8,
+"scartati": [],
+"provincia": "Caserta",
+"avvisi": 8,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/": {
@@ -307,7 +307,7 @@
 "errore": null
 },
 "https://www.ustlecce.it/index.php/personale-docente": {
-"grezzi": 43,
+"grezzi": 41,
 "scartati": [
 "https://www.ustlecce.it/index.php/interpelli/file/3872-interpello-nazionale-per-supplenza-su-classe-di-concors",
 "https://www.ustlecce.it/index.php/interpelli/file/3869-interpello-nazionale-per-supplenza-su-classe-di-concors",
@@ -315,7 +315,7 @@
 "https://www.ustlecce.it/index.php/interpelli/file/3866-interpello-per-due-supplenze-su-classe-di-concorso-bb02"
 ],
 "provincia": "Lecce",
-"avvisi": 9,
+"avvisi": 7,
 "errore": null
 },
 "https://www.ust.fi.it/mese/interpelli/": {
@@ -359,13 +359,13 @@
 "https://www.mim.gov.it/web/nuoro/interpelli/": {
 "grezzi": 281,
 "scartati": [
+"https://www.mim.gov.it/web/nuoro/-/interpello-preventivo-per-incarico-td-classe-di-concorso-a040-scienze-e-tec",
 "https://www.mim.gov.it/web/nuoro/-/interpello-finalizzato-ad-individuare-un-docente-per-l-insegnamento-sc-sec-",
 "https://www.mim.gov.it/web/nuoro/-/interpello-nazionale-per-supplenza-fino-al-termine-delle-attivita-didattich",
-"https://www.mim.gov.it/web/nuoro/-/interpello-finalizzato-ad-individuare-candidati-a-cui-assegnare-supplenze-s",
-"https://www.mim.gov.it/web/nuoro/-/interpello-per-supplenza-am2b-inglese-nella-scuola-secondaria-di-primo-grad"
+"https://www.mim.gov.it/web/nuoro/-/interpello-finalizzato-ad-individuare-candidati-a-cui-assegnare-supplenze-s"
 ],
 "provincia": "Nuoro",
-"avvisi": 34,
+"avvisi": 32,
 "errore": null
 },
 "https://www.mim.gov.it/web/varese/interpelli-ricerca-supplenti/": {
