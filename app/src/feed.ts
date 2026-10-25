@@ -33,6 +33,8 @@ export type Interpello = {
   stato?: string;
   durata?: { tipo: string; dal?: string; al?: string; giorni?: number };
   durataCat?: 'breve' | 'intermedia' | 'fino_a_fine_anno' | 'indeterminata';
+  /** 'interni' = ore aggiuntive riservate ai docenti già in servizio nella scuola */
+  riservato?: string;
   oreEvidenza?: string;
   durataEvidenza?: string;
   tipoPosto?: string;

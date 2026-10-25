@@ -1325,6 +1325,11 @@ function Card({
               : 'Posizione indicativa (capoluogo): l\'avviso non indica la scuola'}
         </Text>
       ) : null}
+      {it.riservato === 'interni' ? (
+        <Text style={[s.small, { color: c.warn, backgroundColor: c.warnSoft, padding: 8 }]}>
+          Riservato ai docenti già in servizio in questa scuola (ore aggiuntive). Se le ore restano scoperte la scuola nomina da graduatoria d'istituto: se sei in graduatoria o hai inviato la MAD, scrivi alla segreteria.
+        </Text>
+      ) : null}
       <Text style={s.muted}>
         {[d ? 'Scadenza ' + fmtDate(d) + (it.oraScadenza ? ' ore ' + it.oraScadenza : '') : '', it.ore ? it.ore + ' ore/sett.' : '', it.periodo || '', it.pubblicato ? 'Pubblicato ' + fmtPubblicato(it) : '']
           .filter(Boolean)

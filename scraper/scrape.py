@@ -435,17 +435,32 @@ def find_date(s: str) -> date | None:
     return None
 
 
+MESI_IT = {m: i + 1 for i, m in enumerate(["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto",
+                                           "settembre", "ottobre", "novembre", "dicembre"])}
+INTERNI_RX = re.compile(r"docenti\s+in\s+servizio|(?:ore|oltre)\s+(?:aggiuntiv\w+|eccedent\w+)|oltre\s+l.orario\s+d.obbligo|"
+                        r"completamento\s+(?:dell.)?orario|personale\s+(?:interno|in\s+servizio)", re.I)
+NON_INTERPELLO_RX = re.compile(r"\besclusion[ie]\b|graduatori[ae]\s+(?:provvisori|definitiv)|rettifica\s+(?:alle\s+)?graduatori|"
+                               r"elenco\s+(?:dei\s+)?docenti\s+esclus|esiti\s+(?:delle\s+)?(?:domande|istanze)", re.I)
+
+
 def find_deadline(text: str) -> tuple[str | None, str | None]:
-    """Cerca 'entro le ore 12:00 del 20/10/2026' e simili."""
+    """Cerca 'entro le ore 12:00 del 20/10/2026', 'entro le ore 12 del 28 ottobre 2026' e simili."""
     m = re.search(r"entro[^.\n]{0,60}?(\d{1,2})[./-](\d{1,2})[./-](20\d\d)", text, re.I)
-    if not m:
+    g = None
+    if m:
+        g = (m[1], m[2], m[3])
+    else:
+        m = re.search(r"entro[^.\n]{0,60}?(\d{1,2})\s+(" + "|".join(MESI_IT) + r")\s+(20\d\d)", text, re.I)
+        if m:
+            g = (m[1], str(MESI_IT[m[2].lower()]), m[3])
+    if not g:
         return None, None
     try:
-        d = date(int(m[3]), int(m[2]), int(m[1])).isoformat()
+        d = date(int(g[2]), int(g[1]), int(g[0])).isoformat()
     except ValueError:
         return None, None
-    h = re.search(r"ore\s*(\d{1,2})[:.](\d{2})", m[0], re.I)
-    return d, (f"{int(h[1]):02d}:{h[2]}" if h else None)
+    h = re.search(r"ore\s*(\d{1,2})(?:[:.](\d{2}))?", m[0], re.I)
+    return d, (f"{int(h[1]):02d}:{h[2] or '00'}" if h else None)
 
 
 def slug(s: str, n: int = 24) -> str:
@@ -767,6 +782,8 @@ def enrich(f: Fetcher, it: dict):
         it["scadenza"] = dl
         if hh:
             it["oraScadenza"] = hh
+    if INTERNI_RX.search(text[:3000]) and not re.search(r"graduatori[ae]\s+(?:di\s+)?(?:circolo|istituto)\s+(?:per|dei)\s+aspiranti|messa\s+a\s+disposizione", text[:1200], re.I):
+        it["riservato"] = "interni"
     m = re.search(r"([a-z]{4}\d{5}[a-z0-9]@(?:pec\.)?istruzione\.it)", text, re.I)
     if m and re.search(r"invia|trasmett|indirizzo", text, re.I):
         it["email"] = m[1].lower()
@@ -864,6 +881,11 @@ def main() -> int:
     items = {i["id"]: i for i in pulisci_link(list(items.values()))}
     if prima != len(items):
         log(f"  archivio: {prima - len(items)} doppioni (ancore, menu) uniti")
+    non_int = [k for k, i in items.items() if NON_INTERPELLO_RX.search(i.get("scuola") or "")]
+    for k in non_int:
+        items.pop(k)
+    if non_int:
+        log(f"  archivio: tolti {len(non_int)} avvisi che non sono interpelli (esclusioni, graduatorie)")
     vecchi = [k for k, i in items.items() if vecchio(i)]
     for k in vecchi:
         items.pop(k)
@@ -929,6 +951,17 @@ def main() -> int:
         it["_prov"] = prov
         known_links.add(key)
         nuovi.append(it)
+    # avvisi recenti gia' in archivio ma senza scadenza (o letti prima di questa regola): una rilettura, max 25 per giro
+    oggi_s = (datetime.now(TZ).date() - timedelta(days=7)).isoformat()
+    rileggere = [i for i in items.values() if not i.get("scadenza") and not i.get("rilettoIl") and (i.get("pubblicato") or "") >= oggi_s
+                 and (i.get("link") or "").startswith("http") and not i["link"].lower().endswith(".pdf")
+                 and "mim.gov.it/web/" not in i["link"] and "ambito" not in (i.get("scuola") or "")][:25]
+    for i in rileggere:
+        i["rilettoIl"] = datetime.now(TZ).date().isoformat()
+        try:
+            enrich(f, i)
+        except Exception as e:  # noqa: BLE001
+            log("  rilettura non riuscita:", i.get("link", "")[:80], type(e).__name__)
     da_leggere = nuovi[:MAX_DETTAGLI]
     dettagli_letti = len(da_leggere)
     with ThreadPoolExecutor(12) as ex:
