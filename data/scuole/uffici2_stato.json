@@ -6,6 +6,20 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://milano.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -17,20 +31,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Cremona",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -56,13 +56,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://varese.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti-2/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Varese",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://pr.istruzioneer.gov.it/": {
 "grezzi": 9,
 "scartati": [
@@ -75,6 +68,13 @@
 "avvisi": 3,
 "errore": null
 },
+"https://varese.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti-2/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Varese",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "http://www.ustlucca.it/": {
 "grezzi": 24,
 "scartati": [
@@ -85,6 +85,18 @@
 ],
 "provincia": "Lucca",
 "avvisi": 17,
+"errore": null
+},
+"https://tp.usr.sicilia.it/": {
+"grezzi": 41,
+"scartati": [
+"https://twitter.com/home?status=Interpello regionale per una supplenza a tempo determinato fino al 10/06/2027 ",
+"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
+"https://tp.usr.sicilia.it/category/news/",
+"https://twitter.com/home?status=Interpello per il conferimento di due supplenze annuali C.d.C. A043 – Mazara d"
+],
+"provincia": "Trapani",
+"avvisi": 29,
 "errore": null
 },
 "https://www.hotels-ferrara.com/it/b19703/": {
@@ -101,25 +113,16 @@
 "avvisi": 25,
 "errore": null
 },
-"https://tp.usr.sicilia.it/": {
-"grezzi": 41,
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 44,
 "scartati": [
-"https://twitter.com/home?status=Interpello regionale per una supplenza a tempo determinato fino al 10/06/2027 ",
-"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
-"https://tp.usr.sicilia.it/category/news/",
-"https://twitter.com/home?status=Interpello per il conferimento di due supplenze annuali C.d.C. A043 – Mazara d"
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
 ],
-"provincia": "Trapani",
-"avvisi": 29,
-"errore": null
-},
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 25,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 24,
+"provincia": "Ferrara",
+"avvisi": 18,
 "errore": null
 },
 "https://uspistruzione.fr.it/wp2/": {
@@ -146,23 +149,13 @@
 "avvisi": 27,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Arezzo",
-"avvisi": 0,
-"errore": null
-},
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 44,
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 25,
 "scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
 ],
-"provincia": "Ferrara",
-"avvisi": 18,
+"provincia": "Rovigo",
+"avvisi": 24,
 "errore": null
 },
 "http://www.provveditoratostudiviterbo.it/DOCENTI/interpelli/INTERPELLIDOC.htm": {
@@ -177,13 +170,10 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.istruzionematera.it/": {
-"grezzi": 2,
-"scartati": [
-"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
-"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce"
-],
-"provincia": "Matera",
+"https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Arezzo",
 "avvisi": 0,
 "errore": null
 },
@@ -201,6 +191,16 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzionematera.it/": {
+"grezzi": 2,
+"scartati": [
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce",
+"https://www.istruzionematera.it/i-c-bramante-torraca-interpello-per-individuazione-reclutamento-personale-doce"
+],
+"provincia": "Matera",
+"avvisi": 0,
+"errore": null
+},
 "https://www.atpromaistruzione.it/atp/tag/interpelli/": {
 "grezzi": 123,
 "scartati": [
@@ -211,6 +211,17 @@
 ],
 "provincia": "Roma",
 "avvisi": 13,
+"errore": null
+},
+"https://www.istruzionebrindisi.it/": {
+"grezzi": 32,
+"scartati": [
+"https://www.istruzionebrindisi.it/category/interpelli/",
+"https://www.istruzionebrindisi.it/category/pubblicazioni-allalbo-ufficio-viii/",
+"https://www.istruzionebrindisi.it/category/avvisi/"
+],
+"provincia": "Brindisi",
+"avvisi": 29,
 "errore": null
 },
 "https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
@@ -225,6 +236,13 @@
 "avvisi": 9,
 "errore": null
 },
+"https://www.regione.vda.it/istruzione/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Aosta",
+"avvisi": 0,
+"errore": null
+},
 "https://www.mim.gov.it/web/campobasso/": {
 "grezzi": 3,
 "scartati": [
@@ -236,21 +254,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionebrindisi.it/": {
-"grezzi": 32,
-"scartati": [
-"https://www.istruzionebrindisi.it/category/interpelli/",
-"https://www.istruzionebrindisi.it/category/pubblicazioni-allalbo-ufficio-viii/",
-"https://www.istruzionebrindisi.it/category/avvisi/"
-],
-"provincia": "Brindisi",
-"avvisi": 29,
-"errore": null
-},
-"https://www.regione.vda.it/istruzione/": {
+"https://www.mim.gov.it/web/milano/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Aosta",
+"provincia": "Milano",
 "avvisi": 0,
 "errore": null
 },
@@ -259,13 +266,6 @@
 "scartati": [],
 "provincia": "Rieti",
 "avvisi": 18,
-"errore": null
-},
-"https://www.mim.gov.it/web/milano/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
-"avvisi": 0,
 "errore": null
 },
 "https://www.usplatina.it/wp/": {
@@ -296,18 +296,6 @@
 "avvisi": 20,
 "errore": null
 },
-"https://www.uspascolipiceno.it/wordpress/interpelli/": {
-"grezzi": 25,
-"scartati": [
-"https://www.uspascolipiceno.it/wordpress/interpelli/",
-"https://www.uspascolipiceno.it/wordpress/ii-interpello-cl-concorso-ai55-percussioni-liceo-scientifico-statale-",
-"https://www.uspascolipiceno.it/wordpress/interpello-supplenza-breve-cl-concorso-a042-istituto-tecnico-tecnolog",
-"https://www.uspascolipiceno.it/wordpress/istituto-comprensivo-fracassetti-capodarco-avviso-di-interpello-per-s"
-],
-"provincia": "Fermo",
-"avvisi": 11,
-"errore": null
-},
 "https://www.mim.gov.it/web/isernia/interpelli/": {
 "grezzi": 21,
 "scartati": [
@@ -320,11 +308,16 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.usrfvg.gov.it/feed/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
+"https://www.uspascolipiceno.it/wordpress/interpelli/": {
+"grezzi": 25,
+"scartati": [
+"https://www.uspascolipiceno.it/wordpress/interpelli/",
+"https://www.uspascolipiceno.it/wordpress/ii-interpello-cl-concorso-ai55-percussioni-liceo-scientifico-statale-",
+"https://www.uspascolipiceno.it/wordpress/interpello-supplenza-breve-cl-concorso-a042-istituto-tecnico-tecnolog",
+"https://www.uspascolipiceno.it/wordpress/istituto-comprensivo-fracassetti-capodarco-avviso-di-interpello-per-s"
+],
+"provincia": "Fermo",
+"avvisi": 11,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
@@ -339,16 +332,11 @@
 "avvisi": 27,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
-"grezzi": 23,
-"scartati": [
-"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
-"https://www.istruzionepiemonte.it/torino/category/docenti/",
-"https://www.istruzionepiemonte.it/torino/tag/incarico-interpello/",
-"https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
-],
-"provincia": "Torino",
-"avvisi": 15,
+"https://www.usrfvg.gov.it/feed/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/novara/": {
@@ -373,6 +361,18 @@
 ],
 "provincia": "Lecce",
 "avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
+"grezzi": 23,
+"scartati": [
+"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
+"https://www.istruzionepiemonte.it/torino/category/docenti/",
+"https://www.istruzionepiemonte.it/torino/tag/incarico-interpello/",
+"https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
+],
+"provincia": "Torino",
+"avvisi": 15,
 "errore": null
 },
 "https://www.usptaranto.it/": {
