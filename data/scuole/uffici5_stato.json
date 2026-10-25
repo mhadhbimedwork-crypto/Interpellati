@@ -6,6 +6,13 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://pavia.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pavia",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://lnx.csalatina.it/": {
 "grezzi": 1,
 "scartati": [],
@@ -13,12 +20,19 @@
 "avvisi": 1,
 "errore": null
 },
-"https://pavia.istruzionelombardia.gov.it/": {
+"http://www.uspms.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Pavia",
+"provincia": "Massa-Carrara",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": null
+},
+"https://pr.istruzioneer.gov.it/interpelli-2/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Parma",
+"avvisi": 0,
+"errore": "HTTP 404"
 },
 "https://istruzione.umbria.it/": {
 "grezzi": 5,
@@ -32,26 +46,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/interpelli-2/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Parma",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Sondrio",
 "avvisi": 0,
 "errore": "SSLError"
-},
-"http://www.uspms.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Massa-Carrara",
-"avvisi": 0,
-"errore": null
 },
 "https://atptorino.com/": {
 "grezzi": 0,
@@ -84,15 +84,8 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.umbria.it/feed/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
-"errore": null
-},
 "https://mo.istruzioneer.gov.it/": {
-"grezzi": 26,
+"grezzi": 15,
 "scartati": [
 "https://mo.istruzioneer.gov.it/",
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
@@ -100,7 +93,7 @@
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
 ],
 "provincia": "Modena",
-"avvisi": 21,
+"avvisi": 11,
 "errore": null
 },
 "https://rn.istruzioneer.gov.it/": {
@@ -113,6 +106,13 @@
 ],
 "provincia": "Rimini",
 "avvisi": 14,
+"errore": null
+},
+"https://www.istruzione.umbria.it/feed/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/": {
@@ -143,16 +143,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ag.usr.sicilia.it/": {
-"grezzi": 49,
-"scartati": [
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/scuola-primaria/",
-"https://ag.usr.sicilia.it/nterpello-per-selezione-personale-ai-sensi-dellart-14-comma-22-o-m-27-2026-cl-conc-a",
-"https://ag.usr.sicilia.it/",
-"https://ag.usr.sicilia.it/4-avviso-di-convocazione-in-presenza-del-personale-a-t-a-di-1a-fascia-dei-collaborat"
-],
-"provincia": "Agrigento",
-"avvisi": 35,
+"https://www.istruzionepiemonte.it/trieste-e-la-memoria-un-viaggio-nella-citta/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Trieste",
+"avvisi": 0,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
@@ -167,6 +162,34 @@
 "avvisi": 12,
 "errore": null
 },
+"https://www.istruzioneimperia.gov.it/pagine/interpelli---imperia": {
+"grezzi": 1,
+"scartati": [
+"https://www.comprensivotaggia.edu.it/albo-online"
+],
+"provincia": "Imperia",
+"avvisi": 0,
+"errore": null
+},
+"https://ag.usr.sicilia.it/": {
+"grezzi": 49,
+"scartati": [
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/scuola-primaria/",
+"https://ag.usr.sicilia.it/nterpello-per-selezione-personale-ai-sensi-dellart-14-comma-22-o-m-27-2026-cl-conc-a",
+"https://ag.usr.sicilia.it/",
+"https://ag.usr.sicilia.it/4-avviso-di-convocazione-in-presenza-del-personale-a-t-a-di-1a-fascia-dei-collaborat"
+],
+"provincia": "Agrigento",
+"avvisi": 35,
+"errore": null
+},
+"https://treviso.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Treviso",
+"avvisi": 0,
+"errore": null
+},
 "https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
 "grezzi": 12,
 "scartati": [
@@ -177,29 +200,6 @@
 ],
 "provincia": "Catania",
 "avvisi": 2,
-"errore": null
-},
-"https://treviso.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Treviso",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/trieste-e-la-memoria-un-viaggio-nella-citta/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Trieste",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzioneimperia.gov.it/pagine/interpelli---imperia": {
-"grezzi": 1,
-"scartati": [
-"https://www.comprensivotaggia.edu.it/albo-online"
-],
-"provincia": "Imperia",
-"avvisi": 0,
 "errore": null
 },
 "https://bo.istruzioneer.gov.it/tag/interpello/": {
@@ -232,18 +232,6 @@
 "provincia": "Rieti",
 "avvisi": 0,
 "errore": "HTTP 404"
-},
-"https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
-"grezzi": 34,
-"scartati": [
-"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-sostegno-scuola-primaria-adee-i-c-pa",
-"https://www.uspbari.it/usp/author/mi20142",
-"https://www.uspbari.it/usp/category/interpelli-della-provincia-di-bari",
-"https://www.uspbari.it/usp/tag/interpello"
-],
-"provincia": "Bari",
-"avvisi": 5,
-"errore": null
 },
 "https://www.uat-caserta.it/": {
 "grezzi": 8,
@@ -282,16 +270,16 @@
 "avvisi": 12,
 "errore": null
 },
-"https://www.usr.sicilia.it/": {
-"grezzi": 26,
+"https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
+"grezzi": 34,
 "scartati": [
-"https://www.usr.sicilia.it/scuola-in-sicilia-al-via-lanno-scolastico-con-docenti-e-personale-gia-in-servizio-c",
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/news/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
+"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-sostegno-scuola-primaria-adee-i-c-pa",
+"https://www.uspbari.it/usp/author/mi20142",
+"https://www.uspbari.it/usp/category/interpelli-della-provincia-di-bari",
+"https://www.uspbari.it/usp/tag/interpello"
 ],
-"provincia": "Ragusa",
-"avvisi": 14,
+"provincia": "Bari",
+"avvisi": 5,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/": {
@@ -304,6 +292,18 @@
 ],
 "provincia": "Novara",
 "avvisi": 0,
+"errore": null
+},
+"https://www.usr.sicilia.it/": {
+"grezzi": 26,
+"scartati": [
+"https://www.usr.sicilia.it/scuola-in-sicilia-al-via-lanno-scolastico-con-docenti-e-personale-gia-in-servizio-c",
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/news/",
+"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
+],
+"provincia": "Ragusa",
+"avvisi": 14,
 "errore": null
 },
 "https://www.ustlecce.it/index.php/personale-docente": {
