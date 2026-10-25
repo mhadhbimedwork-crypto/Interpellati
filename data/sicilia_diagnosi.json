@@ -38,47 +38,6 @@
    ]
   ]
  },
- "AGIC86400V": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "HTTP 202",
-  "motivo": "risponde ma con errore: HTTP 403",
-  "sito": "https://icrosariolivatinoportoempedocle.it/",
-  "tentativi": [
-   [
-    "https://www.icrosariolivatinoportoempedocle.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://www.icrosariolivatinoportoempedocle.it/",
-    "HTTP 403"
-   ],
-   [
-    "https://icrosariolivatinoportoempedocle.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://icrosariolivatinoportoempedocle.it/",
-    "HTTP 403"
-   ],
-   [
-    "https://www.icrosariolivatinoportoempedocle.edu.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://www.icrosariolivatinoportoempedocle.edu.it/",
-    "HTTP 403"
-   ],
-   [
-    "https://icrosariolivatinoportoempedocle.edu.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://icrosariolivatinoportoempedocle.edu.it/",
-    "HTTP 403"
-   ]
-  ]
- },
  "AGIS00800P": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -675,10 +634,10 @@
  "CTIC881002": {
   "dns_pubblico": "si",
   "dns_runner": true,
-  "err": "HTTP 403",
+  "err": "non raggiungibile",
   "motivo": "recuperato",
   "nuovo": "https://www.musco.edu.it/",
-  "sito": "https://www.icmusco.it/",
+  "sito": "https://www.musco.edu.it/",
   "tentativi": [
    [
     "https://www.musco.edu.it/",
@@ -877,13 +836,27 @@
  "MEIC872002": {
   "dns_pubblico": "si",
   "dns_runner": true,
-  "err": "SSLError",
+  "err": "non raggiungibile",
   "motivo": "recuperato",
   "nuovo": "https://www.icevemerodamessina.edu.it/",
-  "sito": "https://www.evemeroscuole.it/",
+  "sito": "https://www.icevemerodamessina.edu.it/",
   "tentativi": [
    [
     "https://www.icevemerodamessina.edu.it/",
+    "OK"
+   ]
+  ]
+ },
+ "MEIC876009": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 403",
+  "motivo": "recuperato",
+  "nuovo": "https://ictorregrotta.edu.it/",
+  "sito": "https://ictorregrotta.edu.it/",
+  "tentativi": [
+   [
+    "https://www.ictorregrotta.edu.it/",
     "OK"
    ]
   ]
@@ -1061,8 +1034,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.principigrimaldi.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.principigrimaldi.edu.it/",
   "tentativi": [
    [
@@ -1075,7 +1047,11 @@
    ],
    [
     "https://principigrimaldi.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://principigrimaldi.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -1083,7 +1059,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icvittorinisolarino.edu.it/",
   "sito": "https://www.icvittorinisolarino.edu.it/",
   "tentativi": [
    [
@@ -1096,11 +1073,7 @@
    ],
    [
     "https://icvittorinisolarino.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icvittorinisolarino.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1179,19 +1152,19 @@
   "tentativi": [
    [
     "https://www.icdantealighierivalderice.edu.it/",
-    "HTTP 403"
+    "HTTP 202"
    ],
    [
     "http://www.icdantealighierivalderice.edu.it/",
-    "HTTP 403"
+    "HTTP 202"
    ],
    [
     "https://icdantealighierivalderice.edu.it/",
-    "HTTP 403"
+    "HTTP 202"
    ],
    [
     "http://icdantealighierivalderice.edu.it/",
-    "HTTP 403"
+    "HTTP 202"
    ]
   ]
  },
