@@ -6,17 +6,17 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://milano.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Milano",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -27,10 +27,10 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bergamo",
+"provincia": "Lecco",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -58,6 +58,18 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://uspistruzione.fr.it/wp2/": {
+"grezzi": 22,
+"scartati": [
+"https://www.uspistruzione.fr.it/wp2/category/albo",
+"https://www.uspistruzione.fr.it/wp2/category/comunicazioni",
+"https://www.uspistruzione.fr.it/wp2/category/graduatorie",
+"https://www.uspistruzione.fr.it/wp2/category/graduatorie/interpello-nazionale"
+],
+"provincia": "Frosinone",
+"avvisi": 17,
+"errore": null
+},
 "https://atpisernia.it/": {
 "grezzi": 23,
 "scartati": [
@@ -82,18 +94,6 @@
 "avvisi": 5,
 "errore": null
 },
-"https://uspistruzione.fr.it/wp2/": {
-"grezzi": 22,
-"scartati": [
-"https://www.uspistruzione.fr.it/wp2/category/albo",
-"https://www.uspistruzione.fr.it/wp2/category/comunicazioni",
-"https://www.uspistruzione.fr.it/wp2/category/graduatorie",
-"https://www.uspistruzione.fr.it/wp2/category/graduatorie/interpello-nazionale"
-],
-"provincia": "Frosinone",
-"avvisi": 17,
-"errore": null
-},
 "https://padova.istruzioneveneto.gov.it/": {
 "grezzi": 27,
 "scartati": [],
@@ -113,6 +113,13 @@
 "avvisi": 27,
 "errore": null
 },
+"https://www.istruzionegenova.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Genova",
+"avvisi": 0,
+"errore": null
+},
 "https://tp.usr.sicilia.it/": {
 "grezzi": 40,
 "scartati": [
@@ -125,32 +132,6 @@
 "avvisi": 28,
 "errore": null
 },
-"https://www.istruzionegenova.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vercelli",
-"avvisi": 0,
-"errore": null
-},
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 56,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
-],
-"provincia": "Ferrara",
-"avvisi": 26,
-"errore": null
-},
 "https://rovigo.istruzioneveneto.gov.it/": {
 "grezzi": 28,
 "scartati": [
@@ -158,6 +139,13 @@
 ],
 "provincia": "Rovigo",
 "avvisi": 27,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vercelli",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionesavona.gov.it/": {
@@ -171,6 +159,13 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Catanzaro",
 "avvisi": 0,
 "errore": null
 },
@@ -191,11 +186,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.usplatina.it/wp/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": "Latina",
-"avvisi": 1,
+"https://www.csateramo.it/wpusp/archive/category/news": {
+"grezzi": 89,
+"scartati": [
+"https://www.csateramo.it/wpusp/archive/interpello-per-incarico-di-supplenza-su-classe-di-concorso-ai55-percuss",
+"https://www.csateramo.it/wpusp/wp-content/uploads/2026/10/I__Trasmissione_Interpello_per_incarico_di_supplenza",
+"https://www.csateramo.it/wpusp/archive/interpello-nazionale-per-supplenza-cl-c-a027-matematica-e-fisica-3",
+"https://www.csateramo.it/wpusp/wp-content/uploads/2026/10/I__INTERPELLO_NAZIONALE_PER_SUPPLENZA_CL.C._A027_MAT"
+],
+"provincia": "Teramo",
+"avvisi": 21,
 "errore": null
 },
 "https://www.atpromaistruzione.it/atp/tag/interpelli/": {
@@ -210,12 +210,12 @@
 "avvisi": 14,
 "errore": null
 },
-"http://www.uspmc.sinp.net/": {
-"grezzi": 0,
+"https://www.usplatina.it/wp/": {
+"grezzi": 1,
 "scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
+"provincia": "Latina",
+"avvisi": 1,
+"errore": null
 },
 "https://www.istruzionebat.it/category/interpello/": {
 "grezzi": 54,
@@ -229,16 +229,23 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.csateramo.it/wpusp/archive/category/news": {
-"grezzi": 89,
+"http://www.uspmc.sinp.net/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 52,
 "scartati": [
-"https://www.csateramo.it/wpusp/archive/interpello-per-incarico-di-supplenza-su-classe-di-concorso-ai55-percuss",
-"https://www.csateramo.it/wpusp/wp-content/uploads/2026/10/I__Trasmissione_Interpello_per_incarico_di_supplenza",
-"https://www.csateramo.it/wpusp/archive/interpello-nazionale-per-supplenza-cl-c-a027-matematica-e-fisica-3",
-"https://www.csateramo.it/wpusp/wp-content/uploads/2026/10/I__INTERPELLO_NAZIONALE_PER_SUPPLENZA_CL.C._A027_MAT"
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
 ],
-"provincia": "Teramo",
-"avvisi": 21,
+"provincia": "Ferrara",
+"avvisi": 25,
 "errore": null
 },
 "https://www.usp-rieti.it/": {
@@ -246,25 +253,6 @@
 "scartati": [],
 "provincia": "Rieti",
 "avvisi": 17,
-"errore": null
-},
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 0,
-"errore": null
-},
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni": {
-"grezzi": 28,
-"scartati": [
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni"
-],
-"provincia": "Grosseto",
-"avvisi": 18,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
@@ -279,18 +267,23 @@
 "avvisi": 9,
 "errore": null
 },
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni": {
+"grezzi": 28,
+"scartati": [
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni"
+],
+"provincia": "Grosseto",
+"avvisi": 18,
+"errore": null
+},
 "https://www.usrfvg.gov.it/feed/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": null,
 "avvisi": 0,
-"errore": null
-},
-"https://www.usptaranto.it/": {
-"grezzi": 16,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 16,
 "errore": null
 },
 "https://www.ustlecce.it/": {
@@ -303,6 +296,13 @@
 ],
 "provincia": "Lecce",
 "avvisi": 0,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 16,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 16,
 "errore": null
 }
 }
