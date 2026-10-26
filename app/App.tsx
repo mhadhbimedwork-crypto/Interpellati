@@ -24,6 +24,8 @@ import {
 } from 'react-native';
 import {
   DEFAULT_PREFS,
+  haPrefs,
+  type Abilitazione,
   loadPrefs,
   matchPrefs,
   normClasse,
@@ -96,26 +98,59 @@ const FIELDS: [string, string][] = [
   ['telefono', 'Telefono'],
   ['email', 'Email'],
   ['pec', 'PEC'],
-  ['titolo', 'Titolo di accesso (come sul diploma)'],
-  ['titoloIstituto', 'Rilasciato da'],
-  ['titoloData', 'Data conseguimento'],
-  ['titoloVoto', 'Voto'],
-  ['riferimento', 'Riferimento normativo del titolo'],
-  ['classi', 'Classi di concorso'],
   ['diploma', 'Diploma di maturità'],
   ['certificazioni', 'Certificazioni principali'],
-  ['servizio', 'Servizio scolastico prestato'],
   ['graduatorie', 'Inserimento in graduatorie'],
   ['disponibilita', 'Disponibilità'],
 ];
 // Nessun dato personale nel codice: il profilo si compila una sola volta dalla scheda «Profilo»
-// e resta solo sul telefono (AsyncStorage).
+// e resta solo sul telefono (AsyncStorage). I dati del titolo sono PER CLASSE di concorso (chiavi «campo:CLASSE»).
 const PROFILO_BASE: Record<string, string> = {
-  riferimento:
-    "Titolo di accesso alle classi B-15 e B-17 ai sensi del D.I. 246/2023, Allegato 1 (figura nazionale 1.2.1 «Tecnico superiore per l'efficienza energetica degli impianti», EQF 5)",
-  classi: 'B015, B017',
-  disponibilita: 'Disponibilità a prendere servizio immediatamente, anche fuori regione.',
+  disponibilita: 'Disponibilità a prendere servizio immediatamente.',
 };
+const CAMPI_CLASSE: [string, string][] = [
+  ['titolo', 'Titolo di accesso / abilitazione (come sul diploma)'],
+  ['titoloIstituto', 'Rilasciato da'],
+  ['titoloData', 'Data conseguimento'],
+  ['titoloVoto', 'Voto'],
+  ['riferimento', 'Riferimento normativo del titolo'],
+  ['servizio', 'Servizio prestato in questa classe'],
+];
+// Vecchio testo che il profilo di alcune installazioni conteneva per tutte le classi: va solo alle classi che cita.
+const LEGACY_RIF = /titolo di accesso alle classi B-15 e B-17/i;
+function migraProfilo(p: Record<string, string>): Record<string, string> {
+  const out = { ...p };
+  const rif = out.riferimento || '';
+  if (LEGACY_RIF.test(rif)) {
+    for (const cl of ['B015', 'B017']) if (!out['riferimento:' + cl]) out['riferimento:' + cl] = rif;
+    delete out.riferimento;
+  }
+  if (/^\s*B015\s*,\s*B017\s*$/.test(out.classi || '')) delete out.classi;
+  return out;
+}
+/** Valore del profilo per la classe dell'interpello (con ripiego sul dato generale). */
+function vc(p: Record<string, string>, cl: string, k: string): string {
+  return ((cl && p[k + ':' + cl]) || p[k] || '').trim();
+}
+
+const STOP = new Set(['scuola', 'secondaria', 'grado', 'istituti', 'istituto', 'istruzione', 'negli', 'nella', 'delle', 'della', 'dello', 'degli', 'lingua', 'lingue', 'cultura', 'culture', 'discipline', 'scienze', 'tecnologie', 'tecniche', 'laboratori', 'laboratorio']);
+/** Parole utili per riconoscere se un bando di abilitazione riguarda una classe (dal nome ufficiale della classe) */
+function paroleClasse(cod: string): string[] {
+  const x = CLASSI_CATALOGO.find((y) => y.codice === cod);
+  if (!x) return [];
+  return x.nome.toLowerCase().split(/[^a-zàèéìòù]+/).filter((w) => w.length > 5 && !STOP.has(w));
+}
+function abilPerClassi(v: Abilitazione, classi: string[]): boolean {
+  if (!classi.length) return true;
+  const t = (v.titolo + ' ' + v.link).toLowerCase().replace(/[-\s]/g, '');
+  if ((v.classi || []).some((c) => classi.includes(c))) return true;
+  return classi.some((cl) => t.includes(cl.toLowerCase()) || t.includes(cl.toLowerCase().replace(/(\D)0*(\d+)/, '$1$2')) ||
+    paroleClasse(cl).some((w) => t.includes(w)));
+}
+function nomeClasse(c: string): string {
+  const x = CLASSI_CATALOGO.find((y) => y.codice === c || y.alias === c);
+  return x ? x.codice + ' – ' + x.nome : c;
+}
 
 const LIGHT = {
   bg: '#f3f5f4', surface: '#ffffff', ink: '#15211f', muted: '#5b6965', line: '#d7dedb',
@@ -137,19 +172,14 @@ async function copia(t: string) {
   toast('Copiato');
 }
 
-function mailFor(it: Interpello, p: Record<string, string>) {
+function mailFor(it: Interpello, p: Record<string, string>, mie: string[] = []) {
   const v = (k: string) => (p[k] || '').trim();
   const nome = [v('nome'), v('cognome')].filter(Boolean).join(' ');
+  // la classe della candidatura è quella dell'interpello (se ne ha più d'una, quella che segui tu)
+  const cl = (it.classi || []).find((c) => mie.includes(c)) || (it.classi || [])[0] || '';
+  const w = (k: string) => vc(p, cl, k);
   const classi = (it.classi || []).join(' / ');
-  const descr = (it.classi || [])
-    .map((c) =>
-      c === 'B015'
-        ? 'B015 – Laboratori di scienze e tecnologie elettriche ed elettroniche'
-        : c === 'B017'
-          ? 'B017 – Laboratori di scienze e tecnologie meccaniche'
-          : c,
-    )
-    .join('; ');
+  const descr = (it.classi || []).map(nomeClasse).join('; ');
   const subject = ['Candidatura interpello ' + classi, it.scuola || '', nome].filter(Boolean).join(' – ');
   const righe = [
     'Gentile Dirigente Scolastico,',
@@ -164,15 +194,15 @@ function mailFor(it: Interpello, p: Record<string, string>) {
       (v('cf') ? ', C.F. ' + v('cf') : '') +
       (nome ? ', comunica la propria disponibilità ad accettare la supplenza.' : ', comunico la mia disponibilità ad accettare la supplenza.'),
     '',
-    v('titolo')
-      ? 'Titolo di accesso: ' + v('titolo') +
-        (v('titoloIstituto') ? ', rilasciato da ' + v('titoloIstituto') : '') +
-        (v('titoloData') ? ' il ' + v('titoloData') : '') +
-        (v('titoloVoto') ? ', votazione ' + v('titoloVoto') : '') + '.' +
-        (v('riferimento') ? ' ' + v('riferimento') + '.' : '')
-      : v('riferimento') ? v('riferimento') + '.' : '',
+    w('titolo')
+      ? 'Titolo di accesso per ' + (cl || 'la classe') + ': ' + w('titolo') +
+        (w('titoloIstituto') ? ', rilasciato da ' + w('titoloIstituto') : '') +
+        (w('titoloData') ? ' il ' + w('titoloData') : '') +
+        (w('titoloVoto') ? ', votazione ' + w('titoloVoto') : '') + '.' +
+        (w('riferimento') ? ' ' + w('riferimento') + '.' : '')
+      : w('riferimento') ? w('riferimento') + '.' : '',
     v('graduatorie') ? 'Graduatorie: ' + v('graduatorie') + '.' : '',
-    v('servizio') ? 'Servizio: ' + v('servizio') + '.' : '',
+    w('servizio') ? 'Servizio: ' + w('servizio') + '.' : '',
     '',
     v('disponibilita') || 'Disponibilità a prendere servizio immediatamente.',
     '',
@@ -213,6 +243,8 @@ export default function App() {
   const [bg, setBg] = useState<boolean | null>(null);
   const [abil, setAbil] = useState<AbilFeed | null>(null);
   const [soloItp, setSoloItp] = useState(false);
+  const [soloMieAbil, setSoloMieAbil] = useState(true);
+  const [primoAvvio, setPrimoAvvio] = useState(false);
   const [selIds, setSelIds] = useState<string[] | null>(null);
   const [visIds, setVisIds] = useState<string[]>([]);
   const [visN, setVisN] = useState(0);
@@ -283,8 +315,9 @@ export default function App() {
         const cs = await AsyncStorage.getItem('cand');
         if (cs) setCand(JSON.parse(cs));
         setPrefs(await loadPrefs());
+        if (!(await haPrefs())) { setPrimoAvvio(true); setTab('preferenze'); }
         const ps = await AsyncStorage.getItem('profilo');
-        if (ps) setProfilo({ ...PROFILO_BASE, ...JSON.parse(ps) });
+        if (ps) setProfilo(migraProfilo({ ...PROFILO_BASE, ...JSON.parse(ps) }));
       } catch {}
       if (Platform.OS === 'android') {
         await Notifications.setNotificationChannelAsync('default', {
@@ -307,6 +340,7 @@ export default function App() {
       return next;
     });
   };
+  const abilLista = (abil?.voci || []).filter((v) => (!soloMieAbil || abilPerClassi(v, prefs.classi)) && (!soloItp || v.itp));
   const updatePrefs = (patch: Partial<Prefs>) => {
     setPrefs((prev) => {
       const next = { ...prev, ...patch };
@@ -541,6 +575,7 @@ export default function App() {
               saveCand={saveCand}
               casa={casa}
               docs={docs}
+              mie={prefs.classi}
             />
           )}
         />
@@ -582,7 +617,7 @@ export default function App() {
               <ScrollView contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 24, gap: 10 }}>
                 {selItems.map((item) => (
                   <Card key={item.id} it={item} s={s} c={c} cand={cand[item.id]} expanded={openId === item.id}
-                    onToggle={() => setOpenId(openId === item.id ? null : item.id)} profilo={profilo} saveCand={saveCand} casa={casa} docs={docs} />
+                    onToggle={() => setOpenId(openId === item.id ? null : item.id)} profilo={profilo} saveCand={saveCand} casa={casa} docs={docs} mie={prefs.classi} />
                 ))}
               </ScrollView>
             </View>
@@ -601,16 +636,19 @@ export default function App() {
       {tab === 'abilitazione' && (
         <ScrollView contentContainerStyle={s.list} refreshControl={<RefreshControl refreshing={loading} onRefresh={refresh} />}>
           <Text style={s.body}>
-            Bandi e avvisi dei percorsi abilitanti (30, 36, 60 crediti) trovati sulle pagine ufficiali di Ministero e università. L'app non verifica se hai i requisiti: apri il link e controlla titolo di accesso, scadenza e se riguarda gli ITP (B015, B017).
+            Bandi e avvisi dei percorsi abilitanti (30, 36, 60 crediti) trovati sulle pagine ufficiali di Ministero e università. L'app non verifica se hai i requisiti: apri il link e controlla titolo di accesso, scadenza e classe di concorso.
           </Text>
-          <Chips s={s} value={soloItp ? 'itp' : 'tutti'} set={(v) => setSoloItp(v === 'itp')} opts={[['tutti', 'Tutti'], ['itp', 'Solo se citano ITP / B015 / B017']]} />
-          {(abil?.voci || []).filter((v) => !soloItp || v.itp).length === 0 ? (
+          <Chips s={s} value={soloMieAbil ? 'mie' : 'tutti'} set={(v) => setSoloMieAbil(v === 'mie')} opts={[['mie', prefs.classi.length ? 'Per le mie classi (' + prefs.classi.join(', ') + ')' : 'Per le mie classi'], ['tutti', 'Tutti i bandi']]} />
+          {prefs.classi.some((x) => x.startsWith('B')) ? (
+            <Chips s={s} value={soloItp ? 'itp' : 'tutti'} set={(v) => setSoloItp(v === 'itp')} opts={[['tutti', 'Tutti'], ['itp', 'Solo se citano ITP / tecnico-pratici']]} />
+          ) : null}
+          {abilLista.length === 0 ? (
             <View style={s.empty}>
-              <Text style={s.emptyTitle}>{abil ? 'Nessun bando trovato con questo filtro' : 'Ancora nessun dato'}</Text>
-              <Text style={s.muted}>L'elenco si aggiorna da solo; trascina giù per ricaricare.</Text>
+              <Text style={s.emptyTitle}>{abil ? 'Nessun bando trovato per le tue classi' : 'Ancora nessun dato'}</Text>
+              <Text style={s.muted}>{soloMieAbil && (abil?.voci || []).length ? 'Ci sono ' + (abil?.voci || []).length + ' bandi in tutto: tocca «Tutti i bandi» per vederli. ' : ''}L'elenco si aggiorna da solo; trascina giù per ricaricare.</Text>
             </View>
           ) : (
-            (abil?.voci || []).filter((v) => !soloItp || v.itp).map((v) => (
+            abilLista.map((v) => (
               <View key={v.id} style={s.card}>
                 <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6 }}>
                   {v.itp ? <Text style={[s.pill, { backgroundColor: c.okSoft, color: c.ok }]}>Cita ITP</Text> : <Text style={[s.pill, { backgroundColor: c.warnSoft, color: c.warn }]}>Da verificare</Text>}
@@ -693,6 +731,12 @@ export default function App() {
               <Text style={s.btnText}>Aggiungi</Text>
             </Pressable>
           </View>
+          {primoAvvio && prefs.classi.length === 0 ? (
+            <View style={[s.card, { backgroundColor: c.accentSoft }]}>
+              <Text style={s.title}>Benvenuto! Scegli le tue classi di concorso</Text>
+              <Text style={s.body}>Cerca qui sotto la tua classe (codice o nome) oppure aprila dall'elenco A–Z e toccala per aggiungerla. L'app ti mostrerà e ti avviserà solo degli interpelli di quelle classi, e preparerà le candidature con i tuoi dati per ciascuna. Poi inserisci il tuo titolo nel Profilo.</Text>
+            </View>
+          ) : null}
           <Text style={s.label}>Cerca tra tutte le classi di concorso d'Italia ({CLASSI_CATALOGO.length})</Text>
           <TextInput
             value={cercaClasse}
@@ -815,6 +859,22 @@ export default function App() {
               <Text style={s.btnText}>Aggiungi documenti</Text>
             </Pressable>
           </View>
+          <View style={s.card}>
+            <Text style={s.title}>Titolo e abilitazione per ogni classe</Text>
+            <Text style={s.muted}>La candidatura usa i dati della classe dell'interpello: per A022 mette il titolo di A022, per B015 quello di B015. Le classi sono quelle che segui in Preferenze.</Text>
+            {prefs.classi.length === 0 ? <Text style={s.small}>Scegli prima le tue classi in Preferenze.</Text> : null}
+          </View>
+          {prefs.classi.map((cl) => (
+            <View key={cl} style={s.card}>
+              <Text style={s.title}>{nomeClasse(cl)}</Text>
+              {CAMPI_CLASSE.map(([k, l]) => (
+                <View key={k} style={{ gap: 4 }}>
+                  <Text style={s.label}>{l}</Text>
+                  <TextInput value={profilo[k + ':' + cl] || ''} onChangeText={(v) => saveProfilo(k + ':' + cl, v)} multiline={k === 'riferimento' || k === 'servizio'} style={s.input} placeholderTextColor={c.muted} />
+                </View>
+              ))}
+            </View>
+          ))}
           {FIELDS.map(([k, l]) => (
             <View key={k} style={{ gap: 4 }}>
               <Text style={s.label}>{l}</Text>
@@ -1399,11 +1459,11 @@ function durataLabel(it: Interpello): string {
 }
 
 function Card({
-  it, s, c, cand, expanded, onToggle, profilo, saveCand, casa, docs,
+  it, s, c, cand, expanded, onToggle, profilo, saveCand, casa, docs, mie,
 }: {
   it: Interpello; s: any; c: Pal; cand?: Cand; expanded: boolean; onToggle: () => void;
   profilo: Record<string, string>; saveCand: (id: string, p: Partial<Cand>) => void;
-  casa: Casa | null; docs: Documento[];
+  casa: Casa | null; docs: Documento[]; mie: string[];
 }) {
   const dist = km(casa, it);
   const op = isOpen(it);
@@ -1416,7 +1476,7 @@ function Card({
   else if (l <= 3) badge = ['Scade tra ' + l + ' giorni', c.warnSoft, c.warn];
   else badge = ['Aperto', c.okSoft, c.ok];
   const place = [it.comune, it.provincia ? '(' + it.provincia + ')' : '', it.regione ? '· ' + it.regione : ''].filter(Boolean).join(' ');
-  const m = expanded ? mailFor(it, profilo) : null;
+  const m = expanded ? mailFor(it, profilo, mie) : null;
 
   return (
     <View style={[s.card, !op && { opacity: 0.65 }, op && isNew(it) && { borderColor: c.accent }]}>
@@ -1515,7 +1575,7 @@ function Card({
             <Pressable onPress={() => copia(m.subject)} style={s.btn}><Text style={s.btnText}>Copia oggetto</Text></Pressable>
             <Pressable onPress={() => copia(m.body)} style={s.btn}><Text style={s.btnText}>Copia testo</Text></Pressable>
           </View>
-          {!profilo.titolo ? <Text style={s.small}>Completa il Profilo per riempire i campi tra parentesi quadre.</Text> : null}
+          {!vc(profilo, (it.classi || []).find((x) => mie.includes(x)) || (it.classi || [])[0] || '', 'titolo') ? <Text style={s.small}>Manca il titolo per la classe {(it.classi || []).join(' / ')}: aggiungilo nel Profilo, nella scheda di questa classe.</Text> : null}
           {!docs.length ? <Text style={s.small}>Aggiungi CV e documenti nel Profilo: verranno allegati da soli.</Text> : null}
           {it.scadenza ? (
             <View style={s.actions}>

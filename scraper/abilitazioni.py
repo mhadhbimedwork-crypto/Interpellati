@@ -30,6 +30,11 @@ SCARTA = ("tutor", "riconoscimenti", "piani di studio", "piano di studio", "cors
           "calendario", "orari", "decreto", "scorriment", "variazione", "allegato", "lezioni", "annull", "approvazione atti", "seconda edizione", "esito", "esiti", "ammessi", "sospensione")
 
 
+def _norm_classe(m: str) -> str:
+    m = re.sub(r"[-\s]", "", m).upper()
+    return m[0] + m[1:].zfill(3)
+
+
 def trova(html: str, base: str, cfg: dict, dedicata: bool = False) -> list[dict]:
     soup = BeautifulSoup(html, "html.parser")
     pagina = " ".join(soup.get_text(" ", strip=True).split()).lower()
@@ -50,7 +55,9 @@ def trova(html: str, base: str, cfg: dict, dedicata: bool = False) -> list[dict]
             continue
         visti.add(testo_norm)
         visti.add(href)
+        classi = sorted({_norm_classe(m) for m in re.findall(r"\b[ABab][- ]?0?\d{2}\b", hay)})
         out.append({
+            "classi": classi,
             "titolo": (testo or ctx)[:160] or href,
             "link": href,
             "itp": any(k in hay for k in cfg["itp"]),

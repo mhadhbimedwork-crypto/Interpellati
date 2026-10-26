@@ -54,7 +54,7 @@ export type Feed = { aggiornato?: string; stato?: string; fonti?: number; copert
 
 export const ABIL_URL =
   'https://raw.githubusercontent.com/mhadhbimedwork-crypto/Interpellati/main/data/abilitazioni.json';
-export type Abilitazione = { id: string; titolo: string; link: string; fonte: string; itp?: boolean; paginaItp?: boolean; visto?: string };
+export type Abilitazione = { id: string; titolo: string; link: string; fonte: string; classi?: string[]; itp?: boolean; paginaItp?: boolean; visto?: string };
 export type AbilFeed = { aggiornato?: string; voci: Abilitazione[] };
 const K_ABIL = 'abil.cache';
 const K_ABIL_SEEN = 'abil.seen';
@@ -65,7 +65,12 @@ const K_PREFS = 'prefs';
 
 /* ---------- preferenze: qualsiasi classe di concorso, qualsiasi regione ---------- */
 export type Prefs = { classi: string[]; regioni: string[] };
-export const DEFAULT_PREFS: Prefs = { classi: ['B015', 'B017'], regioni: [] }; // regioni vuote = tutta Italia
+export const DEFAULT_PREFS: Prefs = { classi: [], regioni: [] }; // nessuna classe preimpostata: al primo avvio ognuno sceglie le sue; regioni vuote = tutta Italia
+
+/** true se l'utente ha già scelto le sue preferenze su questo telefono */
+export async function haPrefs(): Promise<boolean> {
+  try { return !!(await AsyncStorage.getItem(K_PREFS)); } catch { return false; }
+}
 
 export const REGIONI = [
   'Abruzzo', 'Basilicata', 'Calabria', 'Campania', 'Emilia-Romagna', 'Friuli Venezia Giulia', 'Lazio',
