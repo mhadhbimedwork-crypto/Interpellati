@@ -958,6 +958,20 @@
    ]
   ]
  },
+ "PAIC87800P": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "SSLError",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsverdi.edu.it/",
+  "sito": "https://www.icsverdi.it/",
+  "tentativi": [
+   [
+    "https://www.icsverdi.it/",
+    "OK"
+   ]
+  ]
+ },
  "PAIC892001": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -1034,24 +1048,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.principigrimaldi.edu.it/",
   "sito": "https://www.principigrimaldi.edu.it/",
   "tentativi": [
    [
     "https://www.principigrimaldi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.principigrimaldi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://principigrimaldi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://principigrimaldi.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1059,8 +1062,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icvittorinisolarino.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icvittorinisolarino.edu.it/",
   "tentativi": [
    [
@@ -1073,7 +1075,11 @@
    ],
    [
     "https://icvittorinisolarino.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://icvittorinisolarino.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -1152,19 +1158,19 @@
   "tentativi": [
    [
     "https://www.icdantealighierivalderice.edu.it/",
-    "HTTP 202"
+    "HTTP 403"
    ],
    [
     "http://www.icdantealighierivalderice.edu.it/",
-    "HTTP 202"
+    "HTTP 403"
    ],
    [
     "https://icdantealighierivalderice.edu.it/",
-    "HTTP 202"
+    "HTTP 403"
    ],
    [
     "http://icdantealighierivalderice.edu.it/",
-    "HTTP 202"
+    "HTTP 403"
    ]
   ]
  },
