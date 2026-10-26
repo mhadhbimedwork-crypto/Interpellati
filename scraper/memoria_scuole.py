@@ -179,6 +179,11 @@ def main() -> int:
     ]
     PROG.write_text(json.dumps(prog, ensure_ascii=False, indent=0) + "\n", "utf-8")
 
+    # ---- elenco pubblico compatto per l'app (solo dati pubblici delle scuole)
+    sc = [[c, e["nome"], e["comune"], e["provincia"], e["regione"], e["stato"][0], e.get("sito") or "", e["motivo"], conta_int.get(c, 0), (ultimo_int.get(c) or {}).get("link", "")]
+          for c, e in sorted(m.items(), key=lambda x: (x[1]["regione"], x[1]["comune"], x[1]["nome"]))]
+    (ROOT / "data" / "scuole_stato.json").write_text(json.dumps({"aggiornato": mem["aggiornato"], "scuole": sc}, ensure_ascii=False, separators=(",", ":")) + "\n", "utf-8")
+
     # ---- Excel
     wb = Workbook()
     ws0 = wb.active

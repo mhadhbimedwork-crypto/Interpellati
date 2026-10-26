@@ -74,7 +74,7 @@ Notifications.setNotificationHandler({
 
 type Stato = '' | 'inviata' | 'convocato' | 'scartata';
 type Cand = { stato: Stato; inviataIl?: string; note?: string };
-type Tab = 'interpelli' | 'mappa' | 'abilitazione' | 'candidature' | 'preferenze' | 'profilo' | 'verifica' | 'aiuto';
+type Tab = 'interpelli' | 'mappa' | 'scuole' | 'abilitazione' | 'candidature' | 'preferenze' | 'profilo' | 'verifica' | 'aiuto';
 
 const CLASSI_COMUNI: [string, string][] = [
   ['B015', 'ITP elettrica'], ['B017', 'ITP meccanica'], ['B012', 'ITP chimica'], ['B016', 'ITP informatica'],
@@ -445,6 +445,7 @@ export default function App() {
         {([
           ['interpelli', 'Interpelli', open.length],
           ['mappa', 'Mappa', null],
+          ['scuole', 'Scuole', null],
           ['abilitazione', 'Abilitazione', abil ? abil.voci.length : null],
           ['candidature', 'Candidature', inviate],
           ['preferenze', 'Preferenze', null],
@@ -593,6 +594,8 @@ export default function App() {
           )}
         </View>
       )}
+
+      {tab === 'scuole' && <ScuoleTab s={s} c={c} />}
 
       {tab === 'abilitazione' && (
         <ScrollView contentContainerStyle={s.list} refreshControl={<RefreshControl refreshing={loading} onRefresh={refresh} />}>
@@ -1244,6 +1247,85 @@ function Aiuto({ s, c, srv, feed, codiceIniziale, onCambio }: {
         </View>
       ) : null}
       <Text style={s.small}>Interpellati non raccoglie dati personali. Profilo, documenti e candidature restano solo su questo telefono.</Text>
+    </ScrollView>
+  );
+}
+
+type ScuolaRiga = [string, string, string, string, string, string, string, string, number, string];
+const SCUOLE_URL = 'https://raw.githubusercontent.com/mhadhbimedwork-crypto/Interpellati/main/data/scuole_stato.json';
+const K_SCUOLE = 'scuole.cache';
+
+/** Elenco di tutte le scuole statali con lo stato della ricerca: verde = sito letto, arancione = in ricerca, rosso = non si trova. */
+function ScuoleTab({ s, c }: { s: any; c: Pal }) {
+  const [dati, setDati] = useState<ScuolaRiga[]>([]);
+  const [agg, setAgg] = useState('');
+  const [q, setQ] = useState('');
+  const [stato, setStato] = useState<'' | 'v' | 'a' | 'r'>('');
+  const [reg, setReg] = useState('');
+  const [max, setMax] = useState(40);
+  const [errore, setErrore] = useState('');
+  useEffect(() => {
+    (async () => {
+      try {
+        const cache = await AsyncStorage.getItem(K_SCUOLE);
+        if (cache) { const j = JSON.parse(cache); setDati(j.scuole); setAgg(j.aggiornato || ''); }
+      } catch {}
+      try {
+        const r = await fetch(SCUOLE_URL + '?t=' + Date.now());
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        const t = await r.text();
+        const j = JSON.parse(t);
+        setDati(j.scuole); setAgg(j.aggiornato || ''); setErrore('');
+        AsyncStorage.setItem(K_SCUOLE, t).catch(() => {});
+      } catch (e: any) { setErrore(String(e?.message || e)); }
+    })();
+  }, []);
+  const regioni = useMemo(() => Array.from(new Set(dati.map((d) => d[4]))).sort(), [dati]);
+  const tot = useMemo(() => ({ v: dati.filter((d) => d[5] === 'v').length, a: dati.filter((d) => d[5] === 'a').length, r: dati.filter((d) => d[5] === 'r').length }), [dati]);
+  const lista = useMemo(() => {
+    const t = q.trim().toLowerCase();
+    return dati.filter((d) => (!stato || d[5] === stato) && (!reg || d[4] === reg) && (!t || (d[0] + ' ' + d[1] + ' ' + d[2] + ' ' + d[3]).toLowerCase().includes(t)));
+  }, [dati, q, stato, reg]);
+  const col = (x: string) => (x === 'v' ? c.ok : x === 'a' ? c.warn : c.crit);
+  const soft = (x: string) => (x === 'v' ? c.okSoft : x === 'a' ? c.warnSoft : c.critSoft);
+  const nome = (x: string) => (x === 'v' ? 'Sito letto' : x === 'a' ? 'Ancora in ricerca' : 'Non si trova');
+  return (
+    <ScrollView contentContainerStyle={s.list} keyboardShouldPersistTaps="handled">
+      <Text style={s.body}>
+        Tutte le scuole statali italiane e come le sta cercando l'app: verde = sito letto, arancione = ancora in ricerca, rosso = non si trova. Cerca per nome, comune, provincia o codice.
+      </Text>
+      <TextInput style={s.input} value={q} onChangeText={(v) => { setQ(v); setMax(40); }} placeholder="Cerca scuola, comune, provincia, codice…" placeholderTextColor={c.muted} autoCapitalize="none" />
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+        {([['', 'Tutte ' + dati.length], ['v', 'Verdi ' + tot.v], ['a', 'Arancioni ' + tot.a], ['r', 'Rosse ' + tot.r]] as ['' | 'v' | 'a' | 'r', string][]).map(([k, l]) => (
+          <Pressable key={k} onPress={() => { setStato(k); setMax(40); }} style={[s.chip, stato === k && s.chipOn]}>
+            <Text style={[s.chipText, stato === k && s.chipTextOn]}>{l}</Text>
+          </Pressable>
+        ))}
+      </View>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }}>
+        {['', ...regioni].map((r) => (
+          <Pressable key={r || 'tutte'} onPress={() => { setReg(r); setMax(40); }} style={[s.chip, reg === r && s.chipOn]}>
+            <Text style={[s.chipText, reg === r && s.chipTextOn]}>{r || 'Tutta Italia'}</Text>
+          </Pressable>
+        ))}
+      </ScrollView>
+      {!dati.length ? <Text style={s.muted}>{errore ? 'Elenco non raggiungibile: ' + errore : 'Carico l\'elenco delle scuole…'}</Text> : <Text style={s.muted}>{lista.length.toLocaleString('it-IT')} scuole{agg ? ' · aggiornato ' + fmtDate(agg) : ''}</Text>}
+      {lista.slice(0, max).map((d) => (
+        <View key={d[0]} style={[s.card, { borderLeftWidth: 5, borderLeftColor: col(d[5]), gap: 3 }]}>
+          <Text style={s.title}>{d[1]}</Text>
+          <Text style={s.muted}>{d[2]} ({d[3]}) · {d[4]} · {d[0]}</Text>
+          <Text style={[s.pill, { backgroundColor: soft(d[5]), color: col(d[5]), alignSelf: 'flex-start' }]}>{nome(d[5])}</Text>
+          {d[5] !== 'v' ? <Text style={s.small}>{d[7]}</Text> : null}
+          {d[8] ? <Text style={s.small}>{d[8]} avvisi trovati in questa scuola</Text> : null}
+          <View style={s.actions}>
+            {d[6] ? <Pressable onPress={() => Linking.openURL(d[6]).catch(() => {})} style={s.btn}><Text style={s.btnText}>Apri il sito</Text></Pressable> : null}
+            {d[9] ? <Pressable onPress={() => Linking.openURL(d[9]).catch(() => {})} style={[s.btn, s.btnPrimary]}><Text style={[s.btnText, { color: c.accentInk }]}>Ultimo avviso</Text></Pressable> : null}
+          </View>
+        </View>
+      ))}
+      {lista.length > max ? (
+        <Pressable onPress={() => setMax(max + 60)} style={s.btn}><Text style={s.btnText}>Mostra altre ({lista.length - max})</Text></Pressable>
+      ) : null}
     </ScrollView>
   );
 }
