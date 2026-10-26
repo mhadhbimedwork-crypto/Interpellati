@@ -1,0 +1,154 @@
+{
+"storico": [
+{
+"data": "2026-10-26",
+"scuole": 7780,
+"verdi": 6038,
+"arancioni": 1065,
+"rossi": 677,
+"percentuale_verdi": 77.6,
+"per_regione": {
+"Abruzzo": {
+"verde": 166,
+"arancione": 22,
+"rosso": 22
+},
+"Basilicata": {
+"verde": 85,
+"arancione": 2,
+"rosso": 7
+},
+"Calabria": {
+"verde": 244,
+"arancione": 25,
+"rosso": 50
+},
+"Campania": {
+"verde": 778,
+"arancione": 38,
+"rosso": 55
+},
+"Emilia-Romagna": {
+"verde": 296,
+"arancione": 93,
+"rosso": 83
+},
+"Friuli Venezia Giulia": {
+"verde": 107,
+"arancione": 39,
+"rosso": 16
+},
+"Lazio": {
+"verde": 560,
+"arancione": 97,
+"rosso": 57
+},
+"Liguria": {
+"verde": 102,
+"arancione": 56,
+"rosso": 20
+},
+"Lombardia": {
+"verde": 880,
+"arancione": 156,
+"rosso": 94
+},
+"Marche": {
+"verde": 111,
+"arancione": 29,
+"rosso": 35
+},
+"Molise": {
+"verde": 56,
+"arancione": 0,
+"rosso": 4
+},
+"Piemonte": {
+"verde": 400,
+"arancione": 90,
+"rosso": 38
+},
+"Puglia": {
+"verde": 493,
+"arancione": 48,
+"rosso": 44
+},
+"Sardegna": {
+"verde": 200,
+"arancione": 23,
+"rosso": 18
+},
+"Sicilia": {
+"verde": 663,
+"arancione": 60,
+"rosso": 10
+},
+"Toscana": {
+"verde": 379,
+"arancione": 48,
+"rosso": 44
+},
+"Trentino-Alto Adige": {
+"verde": 67,
+"arancione": 6,
+"rosso": 4
+},
+"Umbria": {
+"verde": 91,
+"arancione": 38,
+"rosso": 22
+},
+"Valle d'Aosta": {
+"verde": 3,
+"arancione": 27,
+"rosso": 1
+},
+"Veneto": {
+"verde": 357,
+"arancione": 168,
+"rosso": 53
+}
+}
+}
+],
+"lezioni": [
+{
+"data": "2026-10-26",
+"tipo": "causa",
+"causa": "server condiviso che limita le richieste: lettura lenta in corso",
+"scuole": 951
+},
+{
+"data": "2026-10-26",
+"tipo": "causa",
+"causa": "dominio inesistente",
+"scuole": 439
+},
+{
+"data": "2026-10-26",
+"tipo": "causa",
+"causa": "il robots.txt del sito non consente il bot",
+"scuole": 129
+},
+{
+"data": "2026-10-26",
+"tipo": "causa",
+"causa": "errore recente",
+"scuole": 114
+},
+{
+"data": "2026-10-26",
+"tipo": "causa",
+"causa": "nessun sito indicato nell'anagrafica del Ministero",
+"scuole": 109
+}
+],
+"regole": [
+"HTTP 509/429 su server condivisi: leggere a ritmo adattivo per IP (scrape.RitmoIP), mai aggirare il limite",
+"Segnaposto «A breve on line»: non e' un sito letto, la scuola resta rossa e si ricontrolla",
+"Domini inesistenti: provare Indice PA, varianti www/http, .edu.it/.gov.it prima di dichiarare rosso",
+"robots.txt che vieta il bot: si rispetta; avvisi cercati su UST/USR e aggregatori",
+"Una scuola e' rossa dopo 7 giorni di errore consecutivi e viene ricontrollata ogni giorno",
+"Avvisi con 'docenti in servizio / ore aggiuntive' sono riservati agli interni: segnalati come tali"
+]
+}

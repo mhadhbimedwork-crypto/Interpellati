@@ -36,7 +36,7 @@ def host_job(arg):
         ip = socket.gethostbyname(host)
     except OSError:
         ip = ""
-    out = {"url": url, "ip": ip, "t": []}
+    out = {"url": url, "ip": ip, "t": [], "ts": __import__("datetime").date.today().isoformat()}
     if not f.allowed(url):
         out["t"].append({"st": "robots vieta"})
         return cod, out
@@ -57,11 +57,17 @@ def main() -> int:
         for cod, v in json.loads(fp.read_text("utf-8")).get("scuole", {}).items():
             if not v.get("ok") and v.get("sito"):
                 lavori.append((cod, v["sito"]))
+    try:
+        prec = json.loads((ROOT / "data" / "diagnosi_errori.json").read_text("utf-8")).get("scuole", {})
+    except (OSError, ValueError):
+        prec = {}
     random.shuffle(lavori)
+    lavori.sort(key=lambda x: (prec.get(x[0]) or {}).get("ts", ""))  # prima le piu' vecchie: ogni giorno un lotto diverso
     lavori = lavori[:int(__import__("os").environ.get("MAX", "1500"))]
     S.log(f"scuole in errore da riprovare: {len(lavori)}")
     with ThreadPoolExecutor(48) as ex:
-        ris = dict(ex.map(host_job, lavori))
+        nuovi = dict(ex.map(host_job, lavori))
+    ris = {**prec, **nuovi}  # la memoria dei controlli precedenti resta
     esiti = Counter()
     per_ip = defaultdict(list)
     for c, r in ris.items():
