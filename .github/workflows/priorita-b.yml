@@ -5,8 +5,10 @@ on:
     - cron: "3,18,33,48 4-21 * * *"
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: prioritab
+  cancel-in-progress: false
 jobs:
   b:
     runs-on: ubuntu-latest
@@ -38,3 +40,13 @@ jobs:
             sleep $((i*7))
           done
           exit 1
+      - name: Prossimo giro (le esecuzioni programmate di GitHub vengono spesso saltate)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          h=$(date -u +%H)
+          if [ "$h" -ge 4 ] && [ "$h" -le 21 ]; then
+            sleep 120
+            gh workflow run priorita-b.yml --ref main -R "$GITHUB_REPOSITORY" || true
+          fi
