@@ -201,6 +201,7 @@ export default function App() {
   const [soloMie, setSoloMie] = useState(true);
   const [nuovaClasse, setNuovaClasse] = useState('');
   const [cercaClasse, setCercaClasse] = useState('');
+  const [letteraClasse, setLetteraClasse] = useState('');
   const [fVista, setFVista] = useState<'aperti' | 'tutti' | 'nonrisposti'>('aperti');
   const [fOrdine, setFOrdine] = useState<'scadenza' | 'recenti' | 'vicini'>('scadenza');
   const [fRegione, setFRegione] = useState('');
@@ -695,18 +696,27 @@ export default function App() {
           <Text style={s.label}>Cerca tra tutte le classi di concorso d'Italia ({CLASSI_CATALOGO.length})</Text>
           <TextInput
             value={cercaClasse}
-            onChangeText={setCercaClasse}
+            onChangeText={(v) => { setCercaClasse(v); if (v.trim().length >= 2) setLetteraClasse(''); }}
             placeholder="Codice o nome (es. B015, elettriche, sostegno, inglese)"
             placeholderTextColor={c.muted}
             autoCapitalize="none"
             style={s.input}
           />
+          <Text style={s.label}>Elenco completo dalla A alla Z</Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }}>
+            {Array.from(new Set(CLASSI_CATALOGO.map((x) => x.codice[0]))).sort().map((L) => (
+              <Pressable key={L} onPress={() => { setCercaClasse(''); setLetteraClasse(letteraClasse === L ? '' : L); }} style={[s.chip, letteraClasse === L && s.chipOn]}>
+                <Text style={[s.chipText, letteraClasse === L && s.chipTextOn]}>{L} · {CLASSI_CATALOGO.filter((x) => x.codice[0] === L).length}</Text>
+              </Pressable>
+            ))}
+          </ScrollView>
+          <Text style={s.small}>Fonte: DPR 19/2016 e DM 259/2017 (Tabelle A e B), tabella ufficiale delle classi di concorso; sostegno, infanzia/primaria, religione e profili ATA dai relativi contratti. I codici delle scuole non presenti nel catalogo sono in «Codici visti negli avvisi».</Text>
           {(() => {
             const q = cercaClasse.toLowerCase().replace(/[-\s]/g, '');
-            const trovate = q.length < 2 ? [] : CLASSI_CATALOGO.filter((x) =>
+            const trovate = q.length < 2 ? (letteraClasse ? CLASSI_CATALOGO.filter((x) => x.codice[0] === letteraClasse) : []) : CLASSI_CATALOGO.filter((x) =>
               x.codice.toLowerCase().includes(q) || x.alias.toLowerCase().replace('-', '').includes(q) || x.nome.toLowerCase().replace(/[-\s]/g, '').includes(q) || x.gruppo.toLowerCase().replace(/[-\s]/g, '').includes(q));
             if (q.length >= 2 && !trovate.length) return <Text style={s.muted}>Nessuna classe trovata: puoi scrivere il codice nel campo «Aggiungi una classe» qui sopra.</Text>;
-            return trovate.slice(0, 40).map((x) => {
+            return trovate.slice(0, q.length < 2 ? 400 : 40).map((x) => {
               const on = prefs.classi.includes(x.codice);
               return (
                 <Pressable key={x.codice} onPress={() => updatePrefs({ classi: on ? prefs.classi.filter((y) => y !== x.codice) : [...prefs.classi, x.codice] })}

@@ -153,6 +153,22 @@ def costruisci() -> list[dict]:
         add(f"{k}02", f"Conversazione in lingua straniera – {v}", "Conversazione in lingua straniera")
     for c, n, g in FISSE:
         out.append({"codice": c, "alias": c, "nome": n, "gruppo": g})
+    # fonte ufficiale: tabella completa Tabella A + B (DPR 19/2016 come modificato dal DM 259/2017), vedi data/fonti_classi/tabella_orizzontescuola.txt
+    ufficiali = {}
+    try:
+        for riga in (ROOT / "data" / "fonti_classi" / "tabella_orizzontescuola.txt").read_text("utf-8").splitlines():
+            mm = re.match(r"([AB])-(\d\d) (.+)", riga.strip())
+            if mm:
+                ufficiali[f"{mm[1]}0{mm[2]}"] = re.sub(r"\s*\(Classe di concorso ad esaurimento\)", " (ad esaurimento)", mm[3]).replace(" – ", " - ")
+    except OSError:
+        pass
+    per_cod = {v["codice"]: v for v in out}
+    for cod, nome in ufficiali.items():
+        if cod in per_cod:
+            if per_cod[cod]["gruppo"].startswith(("Classi di concorso", "Insegnanti")):
+                per_cod[cod]["nome"] = nome
+        else:
+            out.append({"codice": cod, "alias": f"{cod[0]}-{cod[2:]}", "nome": nome, "gruppo": "Classi di concorso (Tabella A)" if cod[0] == "A" else "Insegnanti tecnico-pratici (Tabella B)"})
     # codici usati davvero dalle scuole negli avvisi ma assenti dal catalogo ufficiale (codici storici DM 39/98, varianti)
     noti = {v["codice"] for v in out} | {v["alias"] for v in out}
     try:
@@ -162,6 +178,7 @@ def costruisci() -> list[dict]:
     visti = sorted({c for it in arch for c in it.get("classi", []) if c and c not in noti})
     for c in visti:
         out.append({"codice": c, "alias": c, "nome": "Codice usato dalle scuole negli avvisi (non nel catalogo ufficiale: classe storica o variante)", "gruppo": "Codici visti negli avvisi"})
+    out.sort(key=lambda v: (v["codice"][0] if v["codice"][0].isalpha() else "~", v["codice"]))
     return out
 
 
