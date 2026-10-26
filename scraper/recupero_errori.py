@@ -63,6 +63,11 @@ def main() -> int:
         prec = {}
     random.shuffle(lavori)
     lavori.sort(key=lambda x: (prec.get(x[0]) or {}).get("ts", ""))  # prima le piu' vecchie: ogni giorno un lotto diverso
+    try:  # memoria/: ordine di priorita' (valore atteso per richiesta); in parita' resta l'ordine per anzianita'
+        pr = {c: i for i, (c, _) in enumerate(json.loads((ROOT / "data" / "priorita_lettura.json").read_text("utf-8"))["ordine"])}
+        lavori.sort(key=lambda x: pr.get(x[0], 10**6))
+    except (OSError, ValueError, KeyError):
+        pass
     lavori = lavori[:int(__import__("os").environ.get("MAX", "1500"))]
     S.log(f"scuole in errore da riprovare: {len(lavori)}")
     with ThreadPoolExecutor(48) as ex:
