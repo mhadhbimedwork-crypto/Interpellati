@@ -778,6 +778,22 @@ def enrich(f: Fetcher, it: dict):
     body = soup.find("article") or soup.find("main") or soup
     text = " ".join(body.get_text(" ", strip=True).split())
     dl, hh = find_deadline(text)
+    if not dl:
+        # il testo della circolare e' spesso solo nell'allegato (PDF o Word): si leggono al massimo 2 allegati della pagina
+        base = it["link"]
+        pdf = []
+        for a in body.find_all("a", href=True):
+            h = urljoin(base, a["href"])
+            if re.search(r"\.(pdf|docx?)(\?|$)", h, re.I) or "/wp-content/uploads/" in h or "/allegat" in h.lower():
+                if h not in pdf:
+                    pdf.append(h)
+        for h in pdf[:2]:
+            t2 = doc_text(f, h)
+            if t2:
+                text = text + " " + t2[:6000]
+                dl, hh = find_deadline(t2)
+                if dl:
+                    break
     if dl:
         it["scadenza"] = dl
         if hh:
@@ -955,7 +971,9 @@ def main() -> int:
     oggi_s = (datetime.now(TZ).date() - timedelta(days=7)).isoformat()
     rileggere = [i for i in items.values() if not i.get("scadenza") and not i.get("rilettoIl") and (i.get("pubblicato") or "") >= oggi_s
                  and (i.get("link") or "").startswith("http") and not i["link"].lower().endswith(".pdf")
-                 and "mim.gov.it/web/" not in i["link"] and "ambito" not in (i.get("scuola") or "")][:25]
+                 and "mim.gov.it/web/" not in i["link"] and "ambito" not in (i.get("scuola") or "")]
+    rileggere.sort(key=lambda i: 0 if set(i.get("classi", [])) & {"B015", "B017"} else 1)
+    rileggere = rileggere[:40]
     for i in rileggere:
         i["rilettoIl"] = datetime.now(TZ).date().isoformat()
         try:
