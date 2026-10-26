@@ -1,4 +1,5 @@
 import Constants from 'expo-constants';
+import { CLASSI_CATALOGO } from './src/classi';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Clipboard from 'expo-clipboard';
 import * as Notifications from 'expo-notifications';
@@ -199,6 +200,7 @@ export default function App() {
   const [fClasse, setFClasse] = useState('tutte');
   const [soloMie, setSoloMie] = useState(true);
   const [nuovaClasse, setNuovaClasse] = useState('');
+  const [cercaClasse, setCercaClasse] = useState('');
   const [fVista, setFVista] = useState<'aperti' | 'tutti' | 'nonrisposti'>('aperti');
   const [fOrdine, setFOrdine] = useState<'scadenza' | 'recenti' | 'vicini'>('scadenza');
   const [fRegione, setFRegione] = useState('');
@@ -434,7 +436,7 @@ export default function App() {
         </Pressable>
       ) : null}
       <View style={s.header}>
-        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}>v2.1.0</Text></Text>
+        <Text style={s.h1}>Interpellati <Text style={{ fontSize: 12, fontWeight: '600', color: c.muted }}> v{Constants.expoConfig?.version || ''}</Text></Text>
         <Text style={s.who} numberOfLines={1}>
           {(prefs.classi.length ? prefs.classi.join(' · ') : 'Tutte le classi') + ' — ' + (prefs.regioni.length ? prefs.regioni.length + ' regioni' : 'tutta Italia')}
         </Text>
@@ -687,6 +689,32 @@ export default function App() {
               <Text style={s.btnText}>Aggiungi</Text>
             </Pressable>
           </View>
+          <Text style={s.label}>Cerca tra tutte le classi di concorso d'Italia ({CLASSI_CATALOGO.length})</Text>
+          <TextInput
+            value={cercaClasse}
+            onChangeText={setCercaClasse}
+            placeholder="Codice o nome (es. B015, elettriche, sostegno, inglese)"
+            placeholderTextColor={c.muted}
+            autoCapitalize="none"
+            style={s.input}
+          />
+          {(() => {
+            const q = cercaClasse.toLowerCase().replace(/[-\s]/g, '');
+            const trovate = q.length < 2 ? [] : CLASSI_CATALOGO.filter((x) =>
+              x.codice.toLowerCase().includes(q) || x.alias.toLowerCase().replace('-', '').includes(q) || x.nome.toLowerCase().replace(/[-\s]/g, '').includes(q) || x.gruppo.toLowerCase().replace(/[-\s]/g, '').includes(q));
+            if (q.length >= 2 && !trovate.length) return <Text style={s.muted}>Nessuna classe trovata: puoi scrivere il codice nel campo «Aggiungi una classe» qui sopra.</Text>;
+            return trovate.slice(0, 40).map((x) => {
+              const on = prefs.classi.includes(x.codice);
+              return (
+                <Pressable key={x.codice} onPress={() => updatePrefs({ classi: on ? prefs.classi.filter((y) => y !== x.codice) : [...prefs.classi, x.codice] })}
+                  style={[s.chip, on && s.chipOn, { alignSelf: 'stretch' }]}>
+                  <Text style={[s.chipText, on && s.chipTextOn]}>{on ? '★ ' : '☆ '}{x.codice} ({x.alias}) · {x.nome}</Text>
+                  <Text style={[s.small, on && s.chipTextOn]}>{x.gruppo}</Text>
+                </Pressable>
+              );
+            });
+          })()}
+          {cercaClasse.trim().length >= 2 ? null : <Text style={s.muted}>Scrivi almeno 2 caratteri: cerco per codice, per nome o per tipo (sostegno, ATA, lingue, laboratori…).</Text>}
           <Text style={s.label}>Scelte rapide</Text>
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
             {CLASSI_COMUNI.map(([cl, nome]) => {
