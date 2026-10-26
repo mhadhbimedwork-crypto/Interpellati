@@ -153,6 +153,15 @@ def costruisci() -> list[dict]:
         add(f"{k}02", f"Conversazione in lingua straniera – {v}", "Conversazione in lingua straniera")
     for c, n, g in FISSE:
         out.append({"codice": c, "alias": c, "nome": n, "gruppo": g})
+    # codici usati davvero dalle scuole negli avvisi ma assenti dal catalogo ufficiale (codici storici DM 39/98, varianti)
+    noti = {v["codice"] for v in out} | {v["alias"] for v in out}
+    try:
+        arch = json.loads((ROOT / "data" / "interpelli.json").read_text("utf-8")).get("interpelli", [])
+    except (OSError, ValueError):
+        arch = []
+    visti = sorted({c for it in arch for c in it.get("classi", []) if c and c not in noti})
+    for c in visti:
+        out.append({"codice": c, "alias": c, "nome": "Codice usato dalle scuole negli avvisi (non nel catalogo ufficiale: classe storica o variante)", "gruppo": "Codici visti negli avvisi"})
     return out
 
 

@@ -184,77 +184,8 @@ def main() -> int:
           for c, e in sorted(m.items(), key=lambda x: (x[1]["regione"], x[1]["comune"], x[1]["nome"]))]
     (ROOT / "data" / "scuole_stato.json").write_text(json.dumps({"aggiornato": mem["aggiornato"], "scuole": sc}, ensure_ascii=False, separators=(",", ":")) + "\n", "utf-8")
 
-    # ---- Excel
-    wb = Workbook()
-    ws0 = wb.active
-    ws0.title = "Riepilogo"
-    testa = Font(bold=True, color="FFFFFF")
-    fill_testa = PatternFill("solid", fgColor="1F3864")
-    ws0["A1"] = "Interpellati – copertura delle scuole statali"
-    ws0["A1"].font = Font(bold=True, size=14)
-    ws0["A2"] = f"Aggiornato il {datetime.now().strftime('%d/%m/%Y %H:%M')} · verde = sito letto · arancione = ancora in ricerca · rosso = non si trova"
-    ws0.append([])
-    ws0.append(["Stato", "Scuole", "%"])
-    for c in ws0[4]:
-        c.font, c.fill = testa, fill_testa
-    for k, et in (("verde", "Verde – letta"), ("arancione", "Arancione – in ricerca"), ("rosso", "Rosso – non si trova")):
-        ws0.append([et, tot[k], round(100 * tot[k] / max(1, len(m)), 1)])
-        ws0.cell(ws0.max_row, 1).fill = PatternFill("solid", fgColor=COL[k])
-    ws0.append(["Totale", len(m), 100])
-    ws0.append([])
-    ws0.append(["Regione", "Verdi", "Arancioni", "Rossi", "Totale", "% verdi"])
-    for c in ws0[ws0.max_row]:
-        c.font, c.fill = testa, fill_testa
-    for r, c in sorted(per_reg.items(), key=lambda x: -x[1]["verde"] / max(1, sum(x[1].values()))):
-        n = sum(c.values())
-        ws0.append([r, c["verde"], c["arancione"], c["rosso"], n, round(100 * c["verde"] / n, 1)])
-        ws0.cell(ws0.max_row, 2).fill = PatternFill("solid", fgColor=CHIARO["verde"])
-        ws0.cell(ws0.max_row, 3).fill = PatternFill("solid", fgColor=CHIARO["arancione"])
-        ws0.cell(ws0.max_row, 4).fill = PatternFill("solid", fgColor=CHIARO["rosso"])
-    ws0.append([])
-    ws0.append(["Perche' non sono verdi", "Scuole"])
-    for c in ws0[ws0.max_row]:
-        c.font, c.fill = testa, fill_testa
-    for causa, n in cause.most_common():
-        ws0.append([causa, n])
-    ws0.append([])
-    ws0.append(["Storico", "Verdi", "Arancioni", "Rossi", "% verdi"])
-    for c in ws0[ws0.max_row]:
-        c.font, c.fill = testa, fill_testa
-    for r in prog["storico"][-60:][::-1]:
-        ws0.append([r["data"], r["verdi"], r["arancioni"], r["rossi"], r["percentuale_verdi"]])
-    ws0.column_dimensions["A"].width = 58
-    for col in "BCDEF":
-        ws0.column_dimensions[col].width = 13
-
-    def foglio(nome, righe, nuove=False):
-        ws = wb.create_sheet(nome)
-        cols = ["Regione", "Provincia", "Comune", "Scuola", "Codice", "Sito", "Stato", "Motivo", "Ultima lettura riuscita",
-                "Giorni in errore", "Interpelli trovati", "Ultimo interpello", "Nuova in elenco dal"]
-        ws.append(cols)
-        for c in ws[1]:
-            c.font, c.fill = testa, fill_testa
-            c.alignment = Alignment(wrap_text=True, vertical="center")
-        for cod, e in righe:
-            ui = ultimo_int.get(cod, {})
-            ws.append([e["regione"], e["provincia"], e["comune"], e["nome"], cod, e.get("sito") or "", e["stato"].upper(), e["motivo"],
-                       e.get("ultima_lettura", ""), len(e.get("giorni_errore", [])), conta_int.get(cod, 0),
-                       ui.get("link", ""), e.get("primo_visto", "")])
-            ws.cell(ws.max_row, 7).fill = PatternFill("solid", fgColor=COL[e["stato"]])
-            ws.cell(ws.max_row, 7).font = Font(bold=True)
-        for i, w in enumerate([16, 9, 20, 40, 13, 38, 12, 52, 14, 10, 10, 40, 14], 1):
-            ws.column_dimensions[get_column_letter(i)].width = w
-        ws.freeze_panes = "A2"
-        ws.auto_filter.ref = ws.dimensions
-        return ws
-    tutte = sorted(m.items(), key=lambda x: (x[1]["regione"], x[1]["provincia"], x[1]["comune"], x[1]["nome"]))
-    foglio("Tutte le scuole", tutte)
-    foglio("Da cercare (arancione)", [(c, e) for c, e in tutte if e["stato"] == "arancione"])
-    foglio("Non si trovano (rosso)", [(c, e) for c, e in tutte if e["stato"] == "rosso"])
-    novita = [(c, e) for c, e in tutte if e.get("primo_visto") == OGGI and len(prog["storico"]) > 1] + \
-             [(c, m[c]) for c, _, b, _ in nuove_verdi if c in m]
-    foglio("Novità di oggi", novita)
-    wb.save(XLSX)
+    import excel_master
+    excel_master.scrivi(mem, prog, XLSX)
     S.log(f"memoria: {len(m)} scuole · verdi {tot['verde']} · arancioni {tot['arancione']} · rossi {tot['rosso']} · recuperate oggi {len(nuove_verdi)}")
     return 0
 
