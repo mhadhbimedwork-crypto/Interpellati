@@ -6,13 +6,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://como.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Como",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
 "scartati": [],
@@ -24,6 +17,13 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Brescia",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://como.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Como",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -62,39 +62,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ra.istruzioneer.gov.it/": {
-"grezzi": 10,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1222",
-"https://www.icbassi.edu.it/albo-online?categoria=10004&cerca=&storico=&aoo=",
-"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015"
-],
-"provincia": "Ravenna",
-"avvisi": 6,
-"errore": null
-},
-"https://fc.istruzioneer.gov.it/": {
-"grezzi": 7,
-"scartati": [],
-"provincia": "Forlì-Cesena",
-"avvisi": 7,
-"errore": null
-},
-"https://www.csanuoro.it/wp2019/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Nuoro",
-"avvisi": 0,
-"errore": null
-},
-"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-udine/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Udine",
-"avvisi": 0,
-"errore": null
-},
 "http://www.istruzionevicenza.it/wordpress/": {
 "grezzi": 0,
 "scartati": [],
@@ -102,23 +69,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionelaspezia.gov.it/": {
+"https://www.csanuoro.it/wp2019/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "La Spezia",
+"provincia": "Nuoro",
 "avvisi": 0,
-"errore": null
-},
-"https://pc.istruzioneer.gov.it/": {
-"grezzi": 13,
-"scartati": [
-"https://pc.istruzioneer.gov.it/2026/10/23/interpelli/",
-"https://docs.google.com/forms/d/e/1FAIpQLSc0TXPCJ8mL614npyELpJj40M2t3pnxzEwreZRLMBJGoF6LRQ/viewform",
-"https://docs.google.com/forms/d/e/1FAIpQLSfI0w2olKbrwX0rBI-JcJ_kTV3shTnQtIHJCIGoPnBAzciEeQ/viewform",
-"https://nuvola.madisoft.it/interpelli/PCIC81700C/docenti"
-],
-"provincia": "Piacenza",
-"avvisi": 9,
 "errore": null
 },
 "https://me.usr.sicilia.it/": {
@@ -129,6 +84,48 @@
 ],
 "provincia": "Messina",
 "avvisi": 18,
+"errore": null
+},
+"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-udine/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Udine",
+"avvisi": 0,
+"errore": null
+},
+"https://sr.usr.sicilia.it/": {
+"grezzi": 30,
+"scartati": [
+"https://twitter.com/home?status=Interpello Nazionale ai sensi dell’art.14 c. 22 O.M. 27/2026 – avviso finalizz",
+"https://www.facebook.com/sharer/sharer.php?u=https://sr.usr.sicilia.ithttps://sr.usr.sicilia.it/interpello-naz",
+"https://www.linkedin.com/sharing/share-offsite/?url=https://sr.usr.sicilia.ithttps://sr.usr.sicilia.it/interpe",
+"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/gps/"
+],
+"provincia": "Siracusa",
+"avvisi": 11,
+"errore": null
+},
+"http://www.uspss.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
+"avvisi": 0,
+"errore": null
+},
+"https://verona.istruzioneveneto.gov.it/": {
+"grezzi": 1,
+"scartati": [
+"https://verona.istruzioneveneto.gov.it/index.php/2026/10/16/avviso-nomine-a-s-2026-27-assunzioni-in-ruolo-del-"
+],
+"provincia": "Verona",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionelaspezia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "La Spezia",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/": {
@@ -145,52 +142,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://verona.istruzioneveneto.gov.it/": {
-"grezzi": 1,
-"scartati": [
-"https://verona.istruzioneveneto.gov.it/index.php/2026/10/16/avviso-nomine-a-s-2026-27-assunzioni-in-ruolo-del-"
-],
-"provincia": "Verona",
-"avvisi": 0,
-"errore": null
-},
-"https://sr.usr.sicilia.it/": {
-"grezzi": 30,
-"scartati": [
-"https://twitter.com/home?status=Interpello Nazionale ai sensi dell’art.14 c. 22 O.M. 27/2026 – avviso finalizz",
-"https://www.facebook.com/sharer/sharer.php?u=https://sr.usr.sicilia.ithttps://sr.usr.sicilia.it/interpello-naz",
-"https://www.linkedin.com/sharing/share-offsite/?url=https://sr.usr.sicilia.ithttps://sr.usr.sicilia.it/interpe",
-"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/gps/"
-],
-"provincia": "Siracusa",
-"avvisi": 11,
-"errore": null
-},
-"https://www.istruzioneatprc.it/": {
-"grezzi": 7,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.trasparenzascuole.it/Public/APDPublicV2.aspx?CF=92034530805",
-"https://iisfermibagnara.edu.it/albo-online-axios/",
-"https://web.spaggiari.eu/sdg2/Documenti/RCII0012/4pdrfj6h5g"
-],
-"provincia": "Reggio Calabria",
-"avvisi": 3,
-"errore": null
-},
-"http://www.uspss.it/": {
+"https://www.istruzionepiemonte.it/vercelli/tag/interpelli-supplenze/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Sassari",
+"provincia": "Vercelli",
 "avvisi": 0,
-"errore": null
-},
-"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Benevento",
-"avvisi": 0,
-"errore": "HTTP 403"
+"errore": "HTTP 404"
 },
 "https://www.ufficioscolasticoprovinciale.prato.it/": {
 "grezzi": 5,
@@ -201,19 +158,38 @@
 "avvisi": 4,
 "errore": null
 },
-"https://www.istruzione.calabria.it/": {
+"https://fc.istruzioneer.gov.it/": {
+"grezzi": 6,
+"scartati": [],
+"provincia": "Forlì-Cesena",
+"avvisi": 6,
+"errore": null
+},
+"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Cosenza",
+"provincia": "Benevento",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
+"https://ra.istruzioneer.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Ravenna",
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/vercelli/tag/interpelli-supplenze/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vercelli",
-"avvisi": 0,
-"errore": "HTTP 404"
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 13,
+"scartati": [
+"https://pc.istruzioneer.gov.it/2026/10/23/interpelli/",
+"https://docs.google.com/forms/d/e/1FAIpQLSc0TXPCJ8mL614npyELpJj40M2t3pnxzEwreZRLMBJGoF6LRQ/viewform",
+"https://docs.google.com/forms/d/e/1FAIpQLSfI0w2olKbrwX0rBI-JcJ_kTV3shTnQtIHJCIGoPnBAzciEeQ/viewform",
+"https://nuvola.madisoft.it/interpelli/PCIC81700C/docenti"
+],
+"provincia": "Piacenza",
+"avvisi": 9,
+"errore": null
 },
 "https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
 "grezzi": 20,
@@ -239,28 +215,6 @@
 "avvisi": 5,
 "errore": null
 },
-"https://www.uspsi.it/": {
-"grezzi": 37,
-"scartati": [
-"https://www.uspsi.it/uspsiena/albo/",
-"https://www.uspsi.it/uspsiena/docenti/",
-"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
-"https://www.uspsi.it/uspsiena/news/"
-],
-"provincia": "Siena",
-"avvisi": 31,
-"errore": null
-},
-"https://www.ustfoggia.it/": {
-"grezzi": 51,
-"scartati": [
-"https://www.ustfoggia.it/category/albo-pretorio/",
-"https://www.ustfoggia.it/category/news/"
-],
-"provincia": "Foggia",
-"avvisi": 49,
-"errore": null
-},
 "https://www.uat-napoli.it/": {
 "grezzi": 52,
 "scartati": [
@@ -271,6 +225,18 @@
 ],
 "provincia": "Napoli",
 "avvisi": 44,
+"errore": null
+},
+"https://www.uspsi.it/": {
+"grezzi": 37,
+"scartati": [
+"https://www.uspsi.it/uspsiena/albo/",
+"https://www.uspsi.it/uspsiena/docenti/",
+"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
+"https://www.uspsi.it/uspsiena/news/"
+],
+"provincia": "Siena",
+"avvisi": 31,
 "errore": null
 },
 "https://www.uspascolipiceno.it/": {
@@ -285,6 +251,16 @@
 "avvisi": 8,
 "errore": null
 },
+"https://www.ustfoggia.it/": {
+"grezzi": 51,
+"scartati": [
+"https://www.ustfoggia.it/category/albo-pretorio/",
+"https://www.ustfoggia.it/category/news/"
+],
+"provincia": "Foggia",
+"avvisi": 49,
+"errore": null
+},
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
 "grezzi": 63,
 "scartati": [
@@ -296,6 +272,20 @@
 "provincia": "Ragusa",
 "avvisi": 32,
 "errore": null
+},
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cosenza",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
+"https://www.istruzioneatprc.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Reggio Calabria",
+"avvisi": 0,
+"errore": "ConnectTimeout"
 },
 "https://www.ustli.it/usp_livorno/index.php/docenti/interpelli": {
 "grezzi": 20,
