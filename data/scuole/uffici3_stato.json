@@ -1,18 +1,4 @@
 {
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://lnx.uspistruzione.fr.it/wp2/category/interpello-nazionale": {
 "grezzi": 0,
 "scartati": [],
@@ -20,10 +6,10 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://milano.istruzionelombardia.gov.it/": {
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Milano",
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -34,12 +20,36 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://milano.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "http://www.ustlucca.it/2024/11/21/interpello-per-supplenze-docenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lucca",
 "avvisi": 0,
 "errore": "HTTP 404"
+},
+"https://re.istruzioneer.gov.it/": {
+"grezzi": 29,
+"scartati": [
+"https://re.istruzioneer.gov.it/category/docenti/",
+"https://re.istruzioneer.gov.it/category/docenti/interpello/"
+],
+"provincia": "Reggio Emilia",
+"avvisi": 27,
+"errore": null
 },
 "https://atpisernia.it/": {
 "grezzi": 23,
@@ -60,6 +70,18 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 21,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PRIC80600V/docenti/c5f69c51-1f0e-4933-8f4a-dbd256a50650/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC80600V/docenti",
+"https://nuvola.madisoft.it/interpelli/PRIC83800A/docenti",
+"https://nuvola.madisoft.it/interpelli/PRIC819001/docenti"
+],
+"provincia": "Parma",
+"avvisi": 6,
+"errore": null
+},
 "https://padova.istruzioneveneto.gov.it/": {
 "grezzi": 27,
 "scartati": [],
@@ -79,6 +101,18 @@
 "avvisi": 19,
 "errore": null
 },
+"https://tp.usr.sicilia.it/": {
+"grezzi": 42,
+"scartati": [
+"https://twitter.com/home?status=Interpello Provinciale c.d.c. AT55- AD55 supplenza fino al termine delle attiv",
+"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
+"https://tp.usr.sicilia.it/category/news/",
+"https://tp.usr.sicilia.it/category/personale-scuola/personale-docente/"
+],
+"provincia": "Trapani",
+"avvisi": 24,
+"errore": null
+},
 "https://rovigo.istruzioneveneto.gov.it/": {
 "grezzi": 26,
 "scartati": [
@@ -86,6 +120,13 @@
 ],
 "provincia": "Rovigo",
 "avvisi": 25,
+"errore": null
+},
+"https://www.istruzionegenova.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Genova",
+"avvisi": 0,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
@@ -100,46 +141,6 @@
 "avvisi": 26,
 "errore": null
 },
-"https://tp.usr.sicilia.it/": {
-"grezzi": 42,
-"scartati": [
-"https://twitter.com/home?status=Interpello Provinciale c.d.c. AT55- AD55 supplenza fino al termine delle attiv",
-"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
-"https://tp.usr.sicilia.it/category/news/",
-"https://tp.usr.sicilia.it/category/personale-scuola/personale-docente/"
-],
-"provincia": "Trapani",
-"avvisi": 24,
-"errore": null
-},
-"https://www.istruzionegenova.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
-"errore": null
-},
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -147,23 +148,23 @@
 "avvisi": 0,
 "errore": null
 },
-"http://www.uspmc.sinp.net/": {
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 64,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+],
+"provincia": "Ferrara",
+"avvisi": 34,
+"errore": null
+},
+"https://www.istruzionematera.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Macerata",
+"provincia": "Matera",
 "avvisi": 0,
-"errore": "ConnectTimeout"
-},
-"https://www.csateramo.it/wpusp/archive/category/news": {
-"grezzi": 80,
-"scartati": [
-"https://www.csateramo.it/wpusp/archive/interpello-per-incarico-di-supplenza-su-classe-di-concorso-ai55-percuss",
-"https://www.csateramo.it/wpusp/wp-content/uploads/2026/10/I__Trasmissione_Interpello_per_incarico_di_supplenza",
-"https://www.csateramo.it/wpusp/archive/tag/assistenti-amministrativi",
-"https://www.csateramo.it/wpusp/archive/tag/assistenti-tecnici"
-],
-"provincia": "Teramo",
-"avvisi": 19,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
@@ -180,37 +181,30 @@
 "avvisi": 0,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/": {
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Parma",
-"avvisi": 0,
-"errore": "ReadTimeout"
-},
-"https://re.istruzioneer.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Reggio Emilia",
-"avvisi": 0,
-"errore": "ReadTimeout"
-},
-"https://www.istruzionebat.it/category/interpello/": {
-"grezzi": 54,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
-"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
-"https://www.scuolapetronellitrani.edu.it/interpelli/"
-],
-"provincia": "Barletta-Andria-Trani",
+"provincia": "Catanzaro",
 "avvisi": 0,
 "errore": null
 },
-"https://www.ufficioscolasticogrosseto.it/": {
+"https://vicenza.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Grosseto",
+"provincia": "Vicenza",
 "avvisi": 0,
+"errore": null
+},
+"https://www.csateramo.it/wpusp/archive/category/news": {
+"grezzi": 80,
+"scartati": [
+"https://www.csateramo.it/wpusp/archive/interpello-per-incarico-di-supplenza-su-classe-di-concorso-ai55-percuss",
+"https://www.csateramo.it/wpusp/wp-content/uploads/2026/10/I__Trasmissione_Interpello_per_incarico_di_supplenza",
+"https://www.csateramo.it/wpusp/archive/tag/assistenti-amministrativi",
+"https://www.csateramo.it/wpusp/archive/tag/assistenti-tecnici"
+],
+"provincia": "Teramo",
+"avvisi": 19,
 "errore": null
 },
 "https://www.atpromaistruzione.it/atp/tag/interpelli/": {
@@ -232,23 +226,37 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.ufficioscolasticogrosseto.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Grosseto",
+"avvisi": 0,
+"errore": null
+},
+"http://www.uspmc.sinp.net/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
+"https://www.istruzionebat.it/category/interpello/": {
+"grezzi": 54,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
+"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
+"https://www.scuolapetronellitrani.edu.it/interpelli/"
+],
+"provincia": "Barletta-Andria-Trani",
+"avvisi": 0,
+"errore": null
+},
 "https://www.uspcampobasso.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Campobasso",
 "avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/cagliari/": {
-"grezzi": 13,
-"scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Fiii-interpello-pe",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Fiii-interpello-per-la-selezi",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Fiii-interpello-per-la-se",
-"https://www.mim.gov.it/web/cagliari/"
-],
-"provincia": "Cagliari",
-"avvisi": 4,
 "errore": null
 },
 "https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
@@ -265,12 +273,19 @@
 "avvisi": 7,
 "errore": null
 },
-"https://fe.istruzioneer.gov.it/": {
+"https://www.vivoscuola.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Ferrara",
+"provincia": "Trento",
 "avvisi": 0,
-"errore": "ReadTimeout"
+"errore": null
+},
+"https://www.uspss.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
+"avvisi": 0,
+"errore": null
 },
 "https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
 "grezzi": 12,
@@ -296,23 +311,16 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.vivoscuola.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Trento",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
-"grezzi": 26,
+"https://www.mim.gov.it/web/cagliari/": {
+"grezzi": 14,
 "scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Favviso-di-interpe",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Favviso-di-interpello-per-il-",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Favviso-di-interpello-per",
+"https://www.mim.gov.it/web/cagliari/"
 ],
-"provincia": "Cuneo",
-"avvisi": 20,
+"provincia": "Cagliari",
+"avvisi": 4,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
@@ -339,11 +347,16 @@
 "avvisi": 24,
 "errore": null
 },
-"https://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
+"grezzi": 26,
+"scartati": [
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
+],
+"provincia": "Cuneo",
+"avvisi": 20,
 "errore": null
 },
 "https://www.mim.gov.it/web/sassari/": {
