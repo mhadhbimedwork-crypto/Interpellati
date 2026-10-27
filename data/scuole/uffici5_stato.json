@@ -6,6 +6,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://lodi.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lodi",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://interpelloweb.it/interpelli-supplenze/": {
 "grezzi": 14,
 "scartati": [],
@@ -13,10 +20,17 @@
 "avvisi": 14,
 "errore": null
 },
-"https://lodi.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"https://pr.istruzioneer.gov.it/feed/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Lodi",
+"provincia": "Parma",
+"avvisi": 0,
+"errore": null
+},
+"https://sondrio.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sondrio",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -27,12 +41,38 @@
 "avvisi": 0,
 "errore": null
 },
-"https://sondrio.istruzionelombardia.gov.it/": {
+"https://uspistruzione.fr.it/wp2/feed/": {
+"grezzi": 4,
+"scartati": [],
+"provincia": "Frosinone",
+"avvisi": 4,
+"errore": null
+},
+"https://bo.istruzioneer.gov.it/": {
+"grezzi": 3,
+"scartati": [],
+"provincia": "Bologna",
+"avvisi": 3,
+"errore": null
+},
+"https://win.istruzioneverona.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Sondrio",
+"provincia": "Verona",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": "ConnectionError"
+},
+"https://mo.istruzioneer.gov.it/": {
+"grezzi": 40,
+"scartati": [
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
+],
+"provincia": "Modena",
+"avvisi": 31,
+"errore": null
 },
 "https://rg.usr.sicilia.it/": {
 "grezzi": 19,
@@ -44,6 +84,16 @@
 ],
 "provincia": "Ragusa",
 "avvisi": 9,
+"errore": null
+},
+"https://venezia.istruzioneveneto.gov.it/": {
+"grezzi": 2,
+"scartati": [
+"https://venezia.istruzioneveneto.gov.it/20261027_34561/",
+"https://venezia.istruzioneveneto.gov.it/20261020_34544/"
+],
+"provincia": "Venezia",
+"avvisi": 0,
 "errore": null
 },
 "https://ct.usr.sicilia.it/": {
@@ -70,29 +120,6 @@
 "avvisi": 26,
 "errore": null
 },
-"https://uspistruzione.fr.it/wp2/feed/": {
-"grezzi": 4,
-"scartati": [],
-"provincia": "Frosinone",
-"avvisi": 4,
-"errore": null
-},
-"https://lnx.csalaquila.it/wp/category/interpelli/": {
-"grezzi": 10,
-"scartati": [
-"https://lnx.csalaquila.it/wp/category/interpelli/"
-],
-"provincia": "L'Aquila",
-"avvisi": 9,
-"errore": null
-},
-"https://win.istruzioneverona.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Verona",
-"avvisi": 0,
-"errore": "ConnectionError"
-},
 "https://cl-en.usr.sicilia.it/interpelli-nazionali/": {
 "grezzi": 52,
 "scartati": [
@@ -105,23 +132,13 @@
 "avvisi": 28,
 "errore": null
 },
-"https://padova.istruzioneveneto.gov.it/category/interpelli-personale-docente/": {
-"grezzi": 39,
+"https://lnx.csalaquila.it/wp/category/interpelli/": {
+"grezzi": 10,
 "scartati": [
-"https://padova.istruzioneveneto.gov.it/category/interpelli-personale-docente/"
+"https://lnx.csalaquila.it/wp/category/interpelli/"
 ],
-"provincia": "Padova",
-"avvisi": 38,
-"errore": null
-},
-"https://venezia.istruzioneveneto.gov.it/": {
-"grezzi": 2,
-"scartati": [
-"https://venezia.istruzioneveneto.gov.it/20261027_34561/",
-"https://venezia.istruzioneveneto.gov.it/20261020_34544/"
-],
-"provincia": "Venezia",
-"avvisi": 0,
+"provincia": "L'Aquila",
+"avvisi": 9,
 "errore": null
 },
 "https://www.istruzionegenova.it/": {
@@ -129,6 +146,15 @@
 "scartati": [],
 "provincia": "Genova",
 "avvisi": 0,
+"errore": null
+},
+"https://padova.istruzioneveneto.gov.it/category/interpelli-personale-docente/": {
+"grezzi": 39,
+"scartati": [
+"https://padova.istruzioneveneto.gov.it/category/interpelli-personale-docente/"
+],
+"provincia": "Padova",
+"avvisi": 38,
 "errore": null
 },
 "https://tp.usr.sicilia.it/personale-scuola/interpelli/": {
@@ -155,43 +181,15 @@
 "avvisi": 8,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/feed/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Parma",
-"avvisi": 0,
-"errore": "ReadTimeout"
-},
-"https://mo.istruzioneer.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Modena",
-"avvisi": 0,
-"errore": "ReadTimeout"
-},
-"https://bo.istruzioneer.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bologna",
-"avvisi": 0,
-"errore": "ReadTimeout"
-},
 "https://www.istruzionebrindisi.it/": {
-"grezzi": 31,
+"grezzi": 30,
 "scartati": [
 "https://www.istruzionebrindisi.it/category/interpelli/",
 "https://www.istruzionebrindisi.it/category/pubblicazioni-allalbo-ufficio-viii/",
 "https://www.istruzionebrindisi.it/category/avvisi/"
 ],
 "provincia": "Brindisi",
-"avvisi": 28,
-"errore": null
-},
-"https://www.mim.gov.it/web/lecco/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
+"avvisi": 27,
 "errore": null
 },
 "https://www.istruzionematera.it/category/interpelli/": {
@@ -206,6 +204,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.csa.fi.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Firenze",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
 "https://www.mim.gov.it/web/campobasso/interpelli/": {
 "grezzi": 2,
 "scartati": [
@@ -216,42 +221,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.csa.fi.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Firenze",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
 "https://www.toscana-istruzione.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Pisa",
 "avvisi": 0,
 "errore": "HTTP 403"
-},
-"https://www.istruzionesavona.gov.it/pagine/interpelli-sv---as-2024-2025": {
-"grezzi": 1,
-"scartati": [
-"https://web.spaggiari.eu/ber/app/default/gestione_mad.php?mod=MAD_03&target=sdg&sede_codice=SVII0004"
-],
-"provincia": "Savona",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usp-rieti.it/": {
-"grezzi": 17,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 17,
-"errore": null
-},
-"https://www.usplecce.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecce",
-"avvisi": 0,
-"errore": null
 },
 "https://www.istruzione-ancona.it/": {
 "grezzi": 68,
@@ -263,6 +238,36 @@
 ],
 "provincia": "Ancona",
 "avvisi": 22,
+"errore": null
+},
+"https://www.mim.gov.it/web/lecco/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionesavona.gov.it/pagine/interpelli-sv---as-2024-2025": {
+"grezzi": 1,
+"scartati": [
+"https://web.spaggiari.eu/ber/app/default/gestione_mad.php?mod=MAD_03&target=sdg&sede_codice=SVII0004"
+],
+"provincia": "Savona",
+"avvisi": 0,
+"errore": null
+},
+"https://www.usplecce.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecce",
+"avvisi": 0,
+"errore": null
+},
+"https://www.usp-rieti.it/": {
+"grezzi": 17,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 17,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/biella/": {
@@ -289,16 +294,30 @@
 "avvisi": 17,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/": {
-"grezzi": 38,
+"https://www.usptaranto.it/": {
+"grezzi": 14,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 14,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
+"grezzi": 49,
 "scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
+"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
+"https://www.istruzionepiemonte.it/torino/category/docenti/",
+"https://www.istruzionepiemonte.it/torino/tag/incarico-interpello/",
+"https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
 ],
-"provincia": "Cuneo",
-"avvisi": 28,
+"provincia": "Torino",
+"avvisi": 20,
+"errore": null
+},
+"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pordenone",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
@@ -313,16 +332,28 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
-"grezzi": 49,
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/": {
+"grezzi": 38,
 "scartati": [
-"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
-"https://www.istruzionepiemonte.it/torino/category/docenti/",
-"https://www.istruzionepiemonte.it/torino/tag/incarico-interpello/",
-"https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
 ],
-"provincia": "Torino",
-"avvisi": 20,
+"provincia": "Cuneo",
+"avvisi": 28,
+"errore": null
+},
+"https://www.ustlecce.it/": {
+"grezzi": 8,
+"scartati": [
+"https://www.ustlecce.it/index.php/interpelli?download=3883:interpello-nazionale-reperimento-personale-ata-prof",
+"https://www.ustlecce.it/index.php/interpelli?download=3881:interpello-preventivo-per-nomina-supplenza-breve-fi",
+"https://www.ustlecce.it/index.php/interpelli?download=3878:interpello-nazionale-per-supplenza-su-classe-di-con",
+"https://www.ustlecce.it/index.php/interpelli?download=3875:interpello-per-supplenza-su-classe-di-concorso-adee"
+],
+"provincia": "Lecce",
+"avvisi": 0,
 "errore": null
 },
 "https://www.mim.gov.it/web/milano/interpelli-ricerca-supplenti/": {
@@ -340,32 +371,6 @@
 ],
 "provincia": "Sondrio",
 "avvisi": 0,
-"errore": null
-},
-"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pordenone",
-"avvisi": 0,
-"errore": null
-},
-"https://www.ustlecce.it/": {
-"grezzi": 8,
-"scartati": [
-"https://www.ustlecce.it/index.php/interpelli?download=3883:interpello-nazionale-reperimento-personale-ata-prof",
-"https://www.ustlecce.it/index.php/interpelli?download=3881:interpello-preventivo-per-nomina-supplenza-breve-fi",
-"https://www.ustlecce.it/index.php/interpelli?download=3878:interpello-nazionale-per-supplenza-su-classe-di-con",
-"https://www.ustlecce.it/index.php/interpelli?download=3875:interpello-per-supplenza-su-classe-di-concorso-adee"
-],
-"provincia": "Lecce",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usptaranto.it/": {
-"grezzi": 14,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 14,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
