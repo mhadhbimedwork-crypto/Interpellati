@@ -6,12 +6,12 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://brescia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Brescia",
+"provincia": "Perugia",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": "HTTP 404"
 },
 "https://como.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -20,12 +20,12 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"https://brescia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Perugia",
+"provincia": "Brescia",
 "avvisi": 0,
-"errore": "HTTP 404"
+"errore": "SSLError"
 },
 "https://monza.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -64,16 +64,18 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ra.istruzioneer.gov.it/": {
+"https://fc.istruzioneer.gov.it/": {
 "grezzi": 10,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1222",
-"https://www.icbassi.edu.it/albo-online?categoria=10004&cerca=&storico=&aoo=",
-"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015"
-],
-"provincia": "Ravenna",
-"avvisi": 6,
+"scartati": [],
+"provincia": "Forlì-Cesena",
+"avvisi": 10,
+"errore": null
+},
+"http://www.istruzionevicenza.it/wordpress/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
+"avvisi": 0,
 "errore": null
 },
 "https://www.csanuoro.it/wp2019/": {
@@ -83,11 +85,14 @@
 "avvisi": 0,
 "errore": null
 },
-"https://fc.istruzioneer.gov.it/": {
-"grezzi": 10,
-"scartati": [],
-"provincia": "Forlì-Cesena",
-"avvisi": 10,
+"https://me.usr.sicilia.it/": {
+"grezzi": 20,
+"scartati": [
+"https://me.usr.sicilia.it/personale-docente-decreto-di-parziale-rettifica-dei-posti-di-sostegno-in-organico-di",
+"https://me.usr.sicilia.it/personale-docente-gae-decreto-rettifica-punteggio-totaro-patrizia/"
+],
+"provincia": "Messina",
+"avvisi": 18,
 "errore": null
 },
 "https://sr.usr.sicilia.it/": {
@@ -102,21 +107,28 @@
 "avvisi": 5,
 "errore": null
 },
-"http://www.istruzionevicenza.it/wordpress/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
+"https://ra.istruzioneer.gov.it/": {
+"grezzi": 10,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1222",
+"https://www.icbassi.edu.it/albo-online?categoria=10004&cerca=&storico=&aoo=",
+"https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015"
+],
+"provincia": "Ravenna",
+"avvisi": 6,
 "errore": null
 },
-"https://me.usr.sicilia.it/": {
-"grezzi": 20,
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 15,
 "scartati": [
-"https://me.usr.sicilia.it/personale-docente-decreto-di-parziale-rettifica-dei-posti-di-sostegno-in-organico-di",
-"https://me.usr.sicilia.it/personale-docente-gae-decreto-rettifica-punteggio-totaro-patrizia/"
+"https://pc.istruzioneer.gov.it/2026/10/23/interpelli/",
+"https://docs.google.com/forms/d/e/1FAIpQLSc0TXPCJ8mL614npyELpJj40M2t3pnxzEwreZRLMBJGoF6LRQ/viewform",
+"https://docs.google.com/forms/d/e/1FAIpQLSfI0w2olKbrwX0rBI-JcJ_kTV3shTnQtIHJCIGoPnBAzciEeQ/viewform",
+"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/53ff9adb-c1a7-4d8f-a19c-fc32c80a2af3/candidatura"
 ],
-"provincia": "Messina",
-"avvisi": 18,
+"provincia": "Piacenza",
+"avvisi": 9,
 "errore": null
 },
 "https://www.istruzionelaspezia.gov.it/": {
@@ -126,17 +138,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cuneo",
-"avvisi": 0,
-"errore": null
-},
 "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-udine/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Udine",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cuneo",
 "avvisi": 0,
 "errore": null
 },
@@ -159,18 +171,6 @@
 "avvisi": 4,
 "errore": null
 },
-"https://pc.istruzioneer.gov.it/": {
-"grezzi": 15,
-"scartati": [
-"https://pc.istruzioneer.gov.it/2026/10/23/interpelli/",
-"https://docs.google.com/forms/d/e/1FAIpQLSc0TXPCJ8mL614npyELpJj40M2t3pnxzEwreZRLMBJGoF6LRQ/viewform",
-"https://docs.google.com/forms/d/e/1FAIpQLSfI0w2olKbrwX0rBI-JcJ_kTV3shTnQtIHJCIGoPnBAzciEeQ/viewform",
-"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/53ff9adb-c1a7-4d8f-a19c-fc32c80a2af3/candidatura"
-],
-"provincia": "Piacenza",
-"avvisi": 9,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/le-nostre-scuole/asti/": {
 "grezzi": 0,
 "scartati": [],
@@ -178,17 +178,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://verona.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Verona",
-"avvisi": 0,
-"errore": null
-},
 "http://www.uspss.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Sassari",
+"avvisi": 0,
+"errore": null
+},
+"https://verona.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Verona",
 "avvisi": 0,
 "errore": null
 },
@@ -206,18 +206,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
-"grezzi": 18,
-"scartati": [
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2158-avviso-di-interpello-aric81100b-c-d-c-eeee",
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2156-avviso-di-interpello-aric81300e-c-d-c-adee",
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2155-avviso-di-interpello-aric842003-c-d-c-eeee",
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2154-avviso-di-interpello-aric81100b-cdc-eeee-a"
-],
-"provincia": "Arezzo",
-"avvisi": 4,
-"errore": null
-},
 "https://www.istruzionechietipescara.it/": {
 "grezzi": 6,
 "scartati": [
@@ -228,6 +216,18 @@
 ],
 "provincia": "Pescara",
 "avvisi": 2,
+"errore": null
+},
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
+"grezzi": 18,
+"scartati": [
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2158-avviso-di-interpello-aric81100b-c-d-c-eeee",
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2156-avviso-di-interpello-aric81300e-c-d-c-adee",
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2155-avviso-di-interpello-aric842003-c-d-c-eeee",
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2154-avviso-di-interpello-aric81100b-cdc-eeee-a"
+],
+"provincia": "Arezzo",
+"avvisi": 4,
 "errore": null
 },
 "https://www.uspbenevento.it/": {
@@ -265,6 +265,18 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
+"https://www.mim.gov.it/web/oristano/": {
+"grezzi": 12,
+"scartati": [
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Finterpello-per-su",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Finterpello-per-supplenza-bre",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Finterpello-per-supplenza",
+"https://www.mim.gov.it/web/oristano/"
+],
+"provincia": "Oristano",
+"avvisi": 3,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/vercelli/": {
 "grezzi": 22,
 "scartati": [
@@ -277,16 +289,16 @@
 "avvisi": 13,
 "errore": null
 },
-"https://www.mim.gov.it/web/oristano/": {
-"grezzi": 12,
+"https://www.uspsi.it/": {
+"grezzi": 62,
 "scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Finterpello-per-su",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Finterpello-per-supplenza-bre",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Finterpello-per-supplenza",
-"https://www.mim.gov.it/web/oristano/"
+"https://www.uspsi.it/uspsiena/albo/",
+"https://www.uspsi.it/uspsiena/docenti/",
+"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
+"https://www.uspsi.it/uspsiena/news/"
 ],
-"provincia": "Oristano",
-"avvisi": 3,
+"provincia": "Siena",
+"avvisi": 55,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/": {
@@ -325,25 +337,6 @@
 "avvisi": 12,
 "errore": null
 },
-"https://www.uspsi.it/": {
-"grezzi": 62,
-"scartati": [
-"https://www.uspsi.it/uspsiena/albo/",
-"https://www.uspsi.it/uspsiena/docenti/",
-"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
-"https://www.uspsi.it/uspsiena/news/"
-],
-"provincia": "Siena",
-"avvisi": 55,
-"errore": null
-},
-"https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
-"errore": null
-},
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
 "grezzi": 75,
 "scartati": [
@@ -354,6 +347,13 @@
 ],
 "provincia": "Palermo",
 "avvisi": 39,
+"errore": null
+},
+"https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/": {
