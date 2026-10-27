@@ -20,6 +20,27 @@
 "avvisi": 1,
 "errore": null
 },
+"https://atptorino.com/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
+},
+"https://pr.istruzioneer.gov.it/interpelli-2/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Parma",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
+"https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sondrio",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://istruzione.umbria.it/": {
 "grezzi": 17,
 "scartati": [
@@ -32,27 +53,6 @@
 "avvisi": 10,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/interpelli-2/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Parma",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
-"https://atptorino.com/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
-"errore": null
-},
-"https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sondrio",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://venezia.istruzioneveneto.gov.it/argomenti/personale/docenti/interpelli/": {
 "grezzi": 2,
 "scartati": [
@@ -62,6 +62,13 @@
 "provincia": "Venezia",
 "avvisi": 0,
 "errore": null
+},
+"https://win.istruzioneverona.it/uspvr/index.php/interpelli-docenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Verona",
+"avvisi": 0,
+"errore": "ConnectionError"
 },
 "http://www.usppesarourbino.it/": {
 "grezzi": 11,
@@ -75,13 +82,6 @@
 "avvisi": 3,
 "errore": null
 },
-"https://win.istruzioneverona.it/uspvr/index.php/interpelli-docenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Verona",
-"avvisi": 0,
-"errore": "ConnectionError"
-},
 "https://www.csaimperia.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -90,7 +90,7 @@
 "errore": null
 },
 "https://rn.istruzioneer.gov.it/": {
-"grezzi": 25,
+"grezzi": 17,
 "scartati": [
 "https://rn.istruzioneer.gov.it/category/personale-docente/interpelli-docenti-2026-2027/",
 "https://rn.istruzioneer.gov.it/category/personale-docente/",
@@ -98,19 +98,14 @@
 "https://rn.istruzioneer.gov.it/category/personale-docente/infanzia/"
 ],
 "provincia": "Rimini",
-"avvisi": 20,
+"avvisi": 12,
 "errore": null
 },
-"https://mo.istruzioneer.gov.it/": {
-"grezzi": 29,
-"scartati": [
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
-],
-"provincia": "Modena",
-"avvisi": 21,
+"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Gorizia",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzioneimperia.gov.it/": {
@@ -127,11 +122,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Gorizia",
-"avvisi": 0,
+"https://mo.istruzioneer.gov.it/": {
+"grezzi": 40,
+"scartati": [
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
+],
+"provincia": "Modena",
+"avvisi": 31,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/latina-didaxis-xxxvi-2023-composizione-nominale-e-giochi-di-parole-nella-cultura-latina/": {
@@ -139,18 +139,6 @@
 "scartati": [],
 "provincia": "Latina",
 "avvisi": 0,
-"errore": null
-},
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
-"grezzi": 73,
-"scartati": [
-"https://ag.usr.sicilia.it/4-avviso-di-convocazione-in-presenza-del-personale-a-t-a-di-1a-fascia-dei-collaborat",
-"https://twitter.com/home?status=Interpello per supplenza su classe di concorso AC55 – Strumento musicale nella",
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/",
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/nazionale/"
-],
-"provincia": "Agrigento",
-"avvisi": 32,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
@@ -165,13 +153,6 @@
 "avvisi": 9,
 "errore": null
 },
-"https://www.istruzionesavona.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Savona",
-"avvisi": 0,
-"errore": null
-},
 "https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
 "grezzi": 12,
 "scartati": [
@@ -184,6 +165,25 @@
 "avvisi": 2,
 "errore": null
 },
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
+"grezzi": 73,
+"scartati": [
+"https://ag.usr.sicilia.it/4-avviso-di-convocazione-in-presenza-del-personale-a-t-a-di-1a-fascia-dei-collaborat",
+"https://twitter.com/home?status=Interpello per supplenza su classe di concorso AC55 – Strumento musicale nella",
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/",
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/nazionale/"
+],
+"provincia": "Agrigento",
+"avvisi": 32,
+"errore": null
+},
+"https://www.istruzionesavona.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Savona",
+"avvisi": 0,
+"errore": null
+},
 "https://treviso.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -192,7 +192,7 @@
 "errore": null
 },
 "https://bo.istruzioneer.gov.it/tag/interpello/": {
-"grezzi": 23,
+"grezzi": 21,
 "scartati": [
 "https://bo.istruzioneer.gov.it/",
 "https://bo.istruzioneer.gov.it/category/infanzia/",
@@ -202,6 +202,25 @@
 "provincia": "Bologna",
 "avvisi": 3,
 "errore": null
+},
+"https://www.istruzione.calabria.it/vibovalentia/": {
+"grezzi": 8,
+"scartati": [
+"https://www.istruzione.calabria.it/vibovalentia/category/atti-di-notifica/",
+"https://www.istruzione.calabria.it/vibovalentia/category/ccn/",
+"https://www.istruzione.calabria.it/vibovalentia/category/us/doc/",
+"https://www.istruzione.calabria.it/vibovalentia/category/ccn/https-www-istruzione-calabria-it-vibovalentia-int"
+],
+"provincia": "Vibo Valentia",
+"avvisi": 0,
+"errore": null
+},
+"https://www.toscana-istruzione.it/atpisa/category/news/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 403"
 },
 "https://www.istruzionebrindisi.it/category/interpelli/": {
 "grezzi": 68,
@@ -215,18 +234,11 @@
 "avvisi": 45,
 "errore": null
 },
-"https://www.toscana-istruzione.it/atpisa/category/news/": {
-"grezzi": 0,
+"https://www.usp-rieti.it/feed/": {
+"grezzi": 7,
 "scartati": [],
-"provincia": "Pisa",
-"avvisi": 0,
-"errore": "HTTP 403"
-},
-"https://www.mim.gov.it/web/como/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Como",
-"avvisi": 0,
+"provincia": "Rieti",
+"avvisi": 7,
 "errore": null
 },
 "https://www.istruzione-ancona.it/category/docenti/": {
@@ -241,20 +253,6 @@
 "avvisi": 21,
 "errore": null
 },
-"https://www.usp-rieti.it/feed/": {
-"grezzi": 7,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 7,
-"errore": null
-},
-"https://www.istruzione.calabria.it/vibovalentia/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vibo Valentia",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
 "https://www.mim.gov.it/web/nuoro/": {
 "grezzi": 21,
 "scartati": [
@@ -265,25 +263,6 @@
 ],
 "provincia": "Nuoro",
 "avvisi": 8,
-"errore": null
-},
-"https://www.ust.fi.it/feed/": {
-"grezzi": 6,
-"scartati": [],
-"provincia": "Firenze",
-"avvisi": 6,
-"errore": null
-},
-"https://www.mim.gov.it/web/varese/": {
-"grezzi": 165,
-"scartati": [
-"https://www.mim.gov.it/web/varese/-/interpello-n-6-eeee-fino-al-27-03-2027",
-"https://www.mim.gov.it/web/varese/-/interpello-cdc-a027-matematica-e-fisica",
-"https://www.mim.gov.it/web/varese/-/interpello-ricerca-docente-scuola-primaria-adee-fino-al-30-06-12h",
-"https://www.mim.gov.it/web/varese/-/interpello-per-1-sb-posto-comune-sc-primaria-fino-al-05-02-2027"
-],
-"provincia": "Varese",
-"avvisi": 21,
 "errore": null
 },
 "https://www.usppesarourbino.it/": {
@@ -298,27 +277,17 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
-"grezzi": 31,
-"scartati": [
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
-],
-"provincia": "Biella",
-"avvisi": 20,
+"https://www.ust.fi.it/feed/": {
+"grezzi": 6,
+"scartati": [],
+"provincia": "Firenze",
+"avvisi": 6,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
-"grezzi": 4,
-"scartati": [
-"https://www.istruzionepiemonte.it/novara/noic83200b-interpello-preventivo-selezione-personale-docente-scuola-p",
-"https://www.istruzionepiemonte.it/novara/noic83200b-interpello-preventivo-selezione-personale-docente-scuola-p",
-"https://www.istruzionepiemonte.it/novara/category/personale-docente/",
-"https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/"
-],
-"provincia": "Novara",
+"https://www.mim.gov.it/web/como/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Como",
 "avvisi": 0,
 "errore": null
 },
@@ -346,11 +315,52 @@
 "avvisi": 27,
 "errore": null
 },
-"https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
+"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
+"grezzi": 31,
+"scartati": [
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
+],
+"provincia": "Biella",
+"avvisi": 20,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
+"grezzi": 4,
+"scartati": [
+"https://www.istruzionepiemonte.it/novara/noic83200b-interpello-preventivo-selezione-personale-docente-scuola-p",
+"https://www.istruzionepiemonte.it/novara/noic83200b-interpello-preventivo-selezione-personale-docente-scuola-p",
+"https://www.istruzionepiemonte.it/novara/category/personale-docente/",
+"https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/"
+],
+"provincia": "Novara",
 "avvisi": 0,
+"errore": null
+},
+"https://www.mim.gov.it/web/varese/": {
+"grezzi": 165,
+"scartati": [
+"https://www.mim.gov.it/web/varese/-/interpello-n-6-eeee-fino-al-27-03-2027",
+"https://www.mim.gov.it/web/varese/-/interpello-cdc-a027-matematica-e-fisica",
+"https://www.mim.gov.it/web/varese/-/interpello-ricerca-docente-scuola-primaria-adee-fino-al-30-06-12h",
+"https://www.mim.gov.it/web/varese/-/interpello-per-1-sb-posto-comune-sc-primaria-fino-al-05-02-2027"
+],
+"provincia": "Varese",
+"avvisi": 25,
+"errore": null
+},
+"https://www.ustlecce.it/index.php/interpelli": {
+"grezzi": 40,
+"scartati": [
+"https://www.ustlecce.it/index.php/interpelli/file/3874-interpello-nazionale-per-supplenza-su-classe-di-concors",
+"https://www.ustlecce.it/index.php/interpelli/file/3872-interpello-nazionale-per-supplenza-su-classe-di-concors",
+"https://www.ustlecce.it/index.php/interpelli/file/3869-interpello-nazionale-per-supplenza-su-classe-di-concors",
+"https://www.ustlecce.it/index.php/interpelli/file/3868-interpello-nazionale-per-supplenza-su-classe-di-concors"
+],
+"provincia": "Lecce",
+"avvisi": 14,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/": {
@@ -365,16 +375,11 @@
 "avvisi": 30,
 "errore": null
 },
-"https://www.ustlecce.it/index.php/interpelli": {
-"grezzi": 40,
-"scartati": [
-"https://www.ustlecce.it/index.php/interpelli/file/3874-interpello-nazionale-per-supplenza-su-classe-di-concors",
-"https://www.ustlecce.it/index.php/interpelli/file/3872-interpello-nazionale-per-supplenza-su-classe-di-concors",
-"https://www.ustlecce.it/index.php/interpelli/file/3869-interpello-nazionale-per-supplenza-su-classe-di-concors",
-"https://www.ustlecce.it/index.php/interpelli/file/3868-interpello-nazionale-per-supplenza-su-classe-di-concors"
-],
-"provincia": "Lecce",
-"avvisi": 14,
+"https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
