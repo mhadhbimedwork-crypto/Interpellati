@@ -6,19 +6,19 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://mantova.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Mantova",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://lnx.csalatina.it/jclub/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Latina",
 "avvisi": 0,
 "errore": null
+},
+"https://mantova.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Mantova",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://pavia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
 "grezzi": 0,
@@ -46,23 +46,18 @@
 "avvisi": 0,
 "errore": null
 },
-"https://rn.istruzioneer.gov.it/": {
-"grezzi": 23,
-"scartati": [
-"https://rn.istruzioneer.gov.it/category/personale-docente/interpelli-docenti-2026-2027/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/primaria/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/infanzia/"
-],
-"provincia": "Rimini",
-"avvisi": 18,
-"errore": null
-},
 "https://fc.istruzioneer.gov.it/": {
 "grezzi": 14,
 "scartati": [],
 "provincia": "Forlì-Cesena",
 "avvisi": 14,
+"errore": null
+},
+"https://belluno.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Belluno",
+"avvisi": 0,
 "errore": null
 },
 "https://ra.istruzioneer.gov.it/": {
@@ -74,6 +69,13 @@
 "https://web.spaggiari.eu/sdg2/AlboOnline/RAME0015"
 ],
 "provincia": "Ravenna",
+"avvisi": 10,
+"errore": null
+},
+"https://rn.istruzioneer.gov.it/": {
+"grezzi": 10,
+"scartati": [],
+"provincia": "Rimini",
 "avvisi": 10,
 "errore": null
 },
@@ -91,20 +93,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.umbria.it/feed/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 0,
-"errore": null
-},
 "http://www.usppesarourbino.it/category/interpelli/": {
 "grezzi": 8,
 "scartati": [
@@ -117,10 +105,10 @@
 "avvisi": 3,
 "errore": null
 },
-"https://belluno.istruzioneveneto.gov.it/": {
+"https://www.istruzione.umbria.it/feed/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Belluno",
+"provincia": null,
 "avvisi": 0,
 "errore": null
 },
@@ -134,6 +122,13 @@
 ],
 "provincia": "Siracusa",
 "avvisi": 7,
+"errore": null
+},
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Catanzaro",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/": {
@@ -150,37 +145,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://venezia.istruzioneveneto.gov.it/interpelli-supplenze/": {
-"grezzi": 2,
-"scartati": [
-"https://venezia.istruzioneveneto.gov.it/20261027_34561/",
-"https://venezia.istruzioneveneto.gov.it/20261020_34544/"
-],
-"provincia": "Venezia",
-"avvisi": 0,
-"errore": null
-},
-"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-trieste/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Trieste",
-"avvisi": 0,
-"errore": null
-},
-"https://treviso.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Treviso",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/trieste-e-la-memoria-un-viaggio-nella-citta/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Trieste",
-"avvisi": 0,
-"errore": null
-},
 "https://cl-en.usr.sicilia.it/interpelli/": {
 "grezzi": 70,
 "scartati": [
@@ -193,12 +157,20 @@
 "avvisi": 34,
 "errore": null
 },
-"https://www.istruzioneimperia.gov.it/pagine/interpelli---imperia": {
-"grezzi": 1,
+"https://venezia.istruzioneveneto.gov.it/interpelli-supplenze/": {
+"grezzi": 2,
 "scartati": [
-"https://www.comprensivotaggia.edu.it/albo-online"
+"https://venezia.istruzioneveneto.gov.it/20261027_34561/",
+"https://venezia.istruzioneveneto.gov.it/20261020_34544/"
 ],
-"provincia": "Imperia",
+"provincia": "Venezia",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/trieste-e-la-memoria-un-viaggio-nella-citta/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Trieste",
 "avvisi": 0,
 "errore": null
 },
@@ -212,6 +184,29 @@
 ],
 "provincia": "Modena",
 "avvisi": 9,
+"errore": null
+},
+"https://treviso.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Treviso",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzioneimperia.gov.it/pagine/interpelli---imperia": {
+"grezzi": 1,
+"scartati": [
+"https://www.comprensivotaggia.edu.it/albo-online"
+],
+"provincia": "Imperia",
+"avvisi": 0,
+"errore": null
+},
+"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-trieste/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Trieste",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionechietipescara.it/": {
@@ -270,18 +265,6 @@
 "avvisi": 27,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/": {
-"grezzi": 4,
-"scartati": [
-"https://www.istruzionepiemonte.it/novara/noic83200b-interpello-preventivo-selezione-personale-docente-scuola-p",
-"https://www.istruzionepiemonte.it/novara/noic83200b-interpello-preventivo-selezione-personale-docente-scuola-p",
-"https://www.istruzionepiemonte.it/novara/category/personale-docente/",
-"https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/"
-],
-"provincia": "Novara",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
 "grezzi": 23,
 "scartati": [
@@ -292,6 +275,18 @@
 ],
 "provincia": "Biella",
 "avvisi": 13,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/": {
+"grezzi": 4,
+"scartati": [
+"https://www.istruzionepiemonte.it/novara/noic83200b-interpello-preventivo-selezione-personale-docente-scuola-p",
+"https://www.istruzionepiemonte.it/novara/noic83200b-interpello-preventivo-selezione-personale-docente-scuola-p",
+"https://www.istruzionepiemonte.it/novara/category/personale-docente/",
+"https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/"
+],
+"provincia": "Novara",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ustlecce.it/index.php/personale-docente": {
