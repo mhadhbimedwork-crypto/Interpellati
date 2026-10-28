@@ -6,20 +6,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://milano.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -34,6 +20,20 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cremona",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "http://www.ustlucca.it/2024/11/21/interpello-per-supplenze-docenti/": {
 "grezzi": 0,
 "scartati": [],
@@ -42,10 +42,13 @@
 "errore": "HTTP 404"
 },
 "https://re.istruzioneer.gov.it/": {
-"grezzi": 10,
-"scartati": [],
+"grezzi": 31,
+"scartati": [
+"https://re.istruzioneer.gov.it/category/docenti/",
+"https://re.istruzioneer.gov.it/category/docenti/interpello/"
+],
 "provincia": "Reggio Emilia",
-"avvisi": 10,
+"avvisi": 29,
 "errore": null
 },
 "https://varese.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti-2/": {
@@ -65,6 +68,18 @@
 ],
 "provincia": "Parma",
 "avvisi": 8,
+"errore": null
+},
+"https://atpisernia.it/": {
+"grezzi": 23,
+"scartati": [
+"https://atpisernia.it/interpello-per-supplenza-breve-su-classe-di-concorso-a027-matematica-e-fisica",
+"https://atpisernia.it/category/albo",
+"https://atpisernia.it/category/procedure/interpelli",
+"https://atpisernia.it/category/personale-docente"
+],
+"provincia": "Isernia",
+"avvisi": 0,
 "errore": null
 },
 "https://uspistruzione.fr.it/wp2/": {
@@ -98,8 +113,15 @@
 "avvisi": 23,
 "errore": null
 },
+"https://www.istruzionegenova.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Genova",
+"avvisi": 0,
+"errore": null
+},
 "https://fe.istruzioneer.gov.it/": {
-"grezzi": 71,
+"grezzi": 66,
 "scartati": [
 "https://fe.istruzioneer.gov.it/tag/a041/",
 "https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
@@ -107,26 +129,16 @@
 "https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
 ],
 "provincia": "Ferrara",
-"avvisi": 45,
+"avvisi": 36,
 "errore": null
 },
-"https://atpisernia.it/": {
-"grezzi": 23,
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 28,
 "scartati": [
-"https://atpisernia.it/interpello-per-supplenza-breve-su-classe-di-concorso-a027-matematica-e-fisica",
-"https://atpisernia.it/category/albo",
-"https://atpisernia.it/category/procedure/interpelli",
-"https://atpisernia.it/category/personale-docente"
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
 ],
-"provincia": "Isernia",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionegenova.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
+"provincia": "Rovigo",
+"avvisi": 27,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
@@ -141,10 +153,24 @@
 "avvisi": 34,
 "errore": null
 },
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Catanzaro",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Vercelli",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionematera.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Matera",
 "avvisi": 0,
 "errore": null
 },
@@ -155,13 +181,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 28,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
+"https://www.istruzionerovigo.it/": {
+"grezzi": 0,
+"scartati": [],
 "provincia": "Rovigo",
-"avvisi": 27,
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
@@ -171,25 +195,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionerovigo.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Rovigo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
+"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
+"grezzi": 133,
+"scartati": [
+"https://www.atpromaistruzione.it/atp/tag/interpelli/",
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
+"https://www.atpromaistruzione.it/atp/tag/a040/",
+"https://www.atpromaistruzione.it/atp/tag/a041/"
+],
+"provincia": "Roma",
+"avvisi": 17,
 "errore": null
 },
 "https://www.csateramo.it/wpusp/archive/category/news": {
@@ -202,25 +217,6 @@
 ],
 "provincia": "Teramo",
 "avvisi": 24,
-"errore": null
-},
-"http://www.uspmc.sinp.net/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
-"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
-"grezzi": 132,
-"scartati": [
-"https://www.atpromaistruzione.it/atp/tag/interpelli/",
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/tag/a040/",
-"https://www.atpromaistruzione.it/atp/tag/a041/"
-],
-"provincia": "Roma",
-"avvisi": 17,
 "errore": null
 },
 "https://www.ufficioscolasticogrosseto.it/": {
@@ -236,6 +232,13 @@
 "provincia": "Aosta",
 "avvisi": 0,
 "errore": null
+},
+"http://www.uspmc.sinp.net/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
 },
 "https://www.istruzionebat.it/category/interpello/": {
 "grezzi": 54,
@@ -301,6 +304,25 @@
 "avvisi": 2,
 "errore": null
 },
+"https://www.uspss.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
+"avvisi": 0,
+"errore": null
+},
+"https://www.mim.gov.it/web/isernia/": {
+"grezzi": 21,
+"scartati": [
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-conferiment",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-conferi",
+"https://www.mim.gov.it/web/isernia/"
+],
+"provincia": "Isernia",
+"avvisi": 4,
+"errore": null
+},
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
 "grezzi": 26,
 "scartati": [
@@ -311,25 +333,6 @@
 ],
 "provincia": "Ascoli Piceno",
 "avvisi": 12,
-"errore": null
-},
-"https://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/torino/": {
-"grezzi": 69,
-"scartati": [
-"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a018/"
-],
-"provincia": "Torino",
-"avvisi": 32,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
@@ -344,6 +347,18 @@
 "avvisi": 18,
 "errore": null
 },
+"https://www.istruzionepiemonte.it/torino/": {
+"grezzi": 69,
+"scartati": [
+"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a018/"
+],
+"provincia": "Torino",
+"avvisi": 32,
+"errore": null
+},
 "https://www.mim.gov.it/web/sassari/": {
 "grezzi": 0,
 "scartati": [],
@@ -356,18 +371,6 @@
 "scartati": [],
 "provincia": "Mantova",
 "avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/isernia/": {
-"grezzi": 21,
-"scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-conferiment",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-il-conferi",
-"https://www.mim.gov.it/web/isernia/"
-],
-"provincia": "Isernia",
-"avvisi": 4,
 "errore": null
 }
 }
