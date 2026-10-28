@@ -27,6 +27,18 @@
 "avvisi": 0,
 "errore": null
 },
+"https://istruzione.umbria.it/": {
+"grezzi": 14,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PGIC83100E/docenti/b26901fa-fe0a-480a-a0f6-16d346613e07/candidatura",
+"https://nuvola.madisoft.it/interpelli/PGIC871001/docenti",
+"https://nuvola.madisoft.it/interpelli/PGIC869001/docenti/9f8c1b8f-e1f4-4a24-879d-5fde3818da51/candidatura",
+"https://nuvola.madisoft.it/interpelli/PGIC842001/docenti/8c27bd23-2120-46ca-add7-3b4526d574e8/candidatura"
+],
+"provincia": "Perugia",
+"avvisi": 7,
+"errore": null
+},
 "https://pr.istruzioneer.gov.it/interpelli-2/": {
 "grezzi": 0,
 "scartati": [],
@@ -34,34 +46,12 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://istruzione.umbria.it/": {
-"grezzi": 11,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PGIC83100E/docenti/b26901fa-fe0a-480a-a0f6-16d346613e07/candidatura",
-"https://nuvola.madisoft.it/interpelli/PGIC871001/docenti",
-"https://nuvola.madisoft.it/interpelli/PGIC842001/docenti/8c27bd23-2120-46ca-add7-3b4526d574e8/candidatura",
-"https://web.spaggiari.eu/sdg2/Interpelli/PGME0037"
-],
-"provincia": "Perugia",
-"avvisi": 5,
-"errore": null
-},
 "https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Sondrio",
 "avvisi": 0,
 "errore": "SSLError"
-},
-"https://venezia.istruzioneveneto.gov.it/argomenti/personale/docenti/interpelli/": {
-"grezzi": 2,
-"scartati": [
-"https://venezia.istruzioneveneto.gov.it/20261027_34561/",
-"https://venezia.istruzioneveneto.gov.it/20261020_34544/"
-],
-"provincia": "Venezia",
-"avvisi": 0,
-"errore": null
 },
 "http://www.usppesarourbino.it/": {
 "grezzi": 11,
@@ -81,6 +71,16 @@
 "provincia": "Verona",
 "avvisi": 0,
 "errore": "ConnectionError"
+},
+"https://venezia.istruzioneveneto.gov.it/argomenti/personale/docenti/interpelli/": {
+"grezzi": 2,
+"scartati": [
+"https://venezia.istruzioneveneto.gov.it/20261027_34561/",
+"https://venezia.istruzioneveneto.gov.it/20261020_34544/"
+],
+"provincia": "Venezia",
+"avvisi": 0,
+"errore": null
 },
 "https://www.csaimperia.it/": {
 "grezzi": 0,
@@ -122,41 +122,15 @@
 "avvisi": 0,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
-"grezzi": 38,
-"scartati": [
-"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso BA02 – I.",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
-"https://cl-en.usr.sicilia.it/category/news/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
-],
-"provincia": null,
-"avvisi": 8,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/latina-didaxis-xxxvi-2023-composizione-nominale-e-giochi-di-parole-nella-cultura-latina/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Latina",
-"avvisi": 0,
-"errore": null
-},
 "https://bo.istruzioneer.gov.it/tag/interpello/": {
-"grezzi": 19,
+"grezzi": 18,
 "scartati": [
 "https://bo.istruzioneer.gov.it/",
-"https://bo.istruzioneer.gov.it/category/contratti-a-tempo-determinato/",
+"https://bo.istruzioneer.gov.it/category/infanzia/",
 "https://bo.istruzioneer.gov.it/",
 "https://bo.istruzioneer.gov.it/category/contratti-a-tempo-determinato/"
 ],
 "provincia": "Bologna",
-"avvisi": 3,
-"errore": null
-},
-"https://treviso.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Treviso",
 "avvisi": 0,
 "errore": null
 },
@@ -172,39 +146,8 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.istruzionesavona.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Savona",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/vibovalentia/": {
-"grezzi": 8,
-"scartati": [
-"https://www.istruzione.calabria.it/vibovalentia/category/atti-di-notifica/",
-"https://www.istruzione.calabria.it/vibovalentia/category/ccn/",
-"https://www.istruzione.calabria.it/vibovalentia/category/us/doc/",
-"https://www.istruzione.calabria.it/vibovalentia/category/ccn/https-www-istruzione-calabria-it-vibovalentia-int"
-],
-"provincia": "Vibo Valentia",
-"avvisi": 0,
-"errore": null
-},
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
-"grezzi": 64,
-"scartati": [
-"https://twitter.com/home?status=Interpello Progetto Progressi Recuperiamo C.d.C.A040 Istituto Istruzione Super",
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/",
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/nazionale/",
-"https://twitter.com/home?status=Avviso di interpello per il conferimento di supplenza classe di concorso A042 "
-],
-"provincia": "Agrigento",
-"avvisi": 28,
-"errore": null
-},
 "https://mo.istruzioneer.gov.it/": {
-"grezzi": 35,
+"grezzi": 43,
 "scartati": [
 "https://mo.istruzioneer.gov.it/",
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
@@ -212,18 +155,56 @@
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
 ],
 "provincia": "Modena",
-"avvisi": 24,
+"avvisi": 34,
 "errore": null
 },
-"https://www.toscana-istruzione.it/atpisa/category/news/": {
+"https://treviso.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Pisa",
+"provincia": "Treviso",
 "avvisi": 0,
-"errore": "HTTP 403"
+"errore": null
+},
+"https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
+"grezzi": 39,
+"scartati": [
+"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso BA02 – I.",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
+"https://cl-en.usr.sicilia.it/category/news/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
+],
+"provincia": null,
+"avvisi": 9,
+"errore": null
+},
+"https://www.istruzionesavona.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Savona",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/latina-didaxis-xxxvi-2023-composizione-nominale-e-giochi-di-parole-nella-cultura-latina/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Latina",
+"avvisi": 0,
+"errore": null
+},
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
+"grezzi": 74,
+"scartati": [
+"https://twitter.com/home?status=Interpello per supplenza su Classe di Concorso A043 – SCIENZE E TECNOLOGIE NAU",
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/",
+"https://ag.usr.sicilia.it/category/eventi-manifestazioni/news/",
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/regionale/"
+],
+"provincia": "Agrigento",
+"avvisi": 30,
+"errore": null
 },
 "https://www.istruzionebrindisi.it/category/interpelli/": {
-"grezzi": 60,
+"grezzi": 57,
 "scartati": [
 "https://www.istruzionebrindisi.it/category/interpelli/",
 "https://www.istruzionebrindisi.it/category/pubblicazioni-allalbo-ufficio-viii/",
@@ -231,22 +212,48 @@
 "https://www.istruzionebrindisi.it/category/interpelli/"
 ],
 "provincia": "Brindisi",
-"avvisi": 40,
+"avvisi": 38,
+"errore": null
+},
+"https://www.toscana-istruzione.it/atpisa/category/news/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
+"https://www.istruzione-ancona.it/category/docenti/": {
+"grezzi": 70,
+"scartati": [
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
+"https://www.istruzione-ancona.it/author/veroli/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/"
+],
+"provincia": "Ancona",
+"avvisi": 22,
 "errore": null
 },
 "https://www.usp-rieti.it/feed/": {
-"grezzi": 7,
+"grezzi": 8,
 "scartati": [],
 "provincia": "Rieti",
-"avvisi": 7,
+"avvisi": 8,
 "errore": null
 },
-"https://www.istruzione-ancona.it/category/docenti/": {
+"https://www.istruzione.calabria.it/vibovalentia/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Ancona",
+"provincia": "Vibo Valentia",
 "avvisi": 0,
-"errore": "ReadTimeout"
+"errore": "ConnectTimeout"
+},
+"https://www.mim.gov.it/web/como/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Como",
+"avvisi": 0,
+"errore": null
 },
 "https://www.usppesarourbino.it/": {
 "grezzi": 11,
@@ -260,70 +267,39 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.mim.gov.it/web/varese/": {
-"grezzi": 165,
+"https://www.mim.gov.it/web/nuoro/": {
+"grezzi": 9,
 "scartati": [
-"https://www.mim.gov.it/web/varese/-/interpello-n-6-eeee-fino-al-27-03-2027",
-"https://www.mim.gov.it/web/varese/-/interpello-cdc-a027-matematica-e-fisica",
-"https://www.mim.gov.it/web/varese/-/interpello-ricerca-docente-scuola-primaria-adee-fino-al-30-06-12h",
-"https://www.mim.gov.it/web/varese/-/interpello-per-1-sb-posto-comune-sc-primaria-fino-al-05-02-2027"
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-finalizza",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-finalizzato-all-indi",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-finalizzato-all-",
+"https://www.mim.gov.it/web/nuoro/"
 ],
-"provincia": "Varese",
-"avvisi": 25,
+"provincia": "Nuoro",
+"avvisi": 2,
 "errore": null
 },
 "https://www.ust.fi.it/feed/": {
-"grezzi": 7,
+"grezzi": 8,
 "scartati": [],
 "provincia": "Firenze",
-"avvisi": 7,
-"errore": null
-},
-"https://www.mim.gov.it/web/como/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Como",
-"avvisi": 0,
+"avvisi": 8,
 "errore": null
 },
 "https://www.uspbari.it/": {
-"grezzi": 53,
+"grezzi": 54,
 "scartati": [
-"https://www.uspbari.it/usp/interpello-per-supplenza-docente-di-sostegno-scuola-primaria-eh-i-c-zingarelli-bari",
+"https://www.uspbari.it/usp/interpello-1-posto-sostegno-classe-di-concorso-adaa-2-cd-garibaldi-altamura.html",
 "https://www.uspbari.it/usp/author/mi20142",
 "https://www.uspbari.it/usp/category/interpelli-della-provincia-di-bari",
 "https://www.uspbari.it/usp/tag/interpello"
 ],
 "provincia": "Bari",
-"avvisi": 16,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
-"grezzi": 32,
-"scartati": [
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
-],
-"provincia": "Biella",
-"avvisi": 19,
-"errore": null
-},
-"https://www.mim.gov.it/web/nuoro/": {
-"grezzi": 21,
-"scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-nazionale",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-nazionale-per-supple",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-nazionale-per-su",
-"https://www.mim.gov.it/web/nuoro/"
-],
-"provincia": "Nuoro",
-"avvisi": 8,
+"avvisi": 15,
 "errore": null
 },
 "https://www.usr.sicilia.it/": {
-"grezzi": 42,
+"grezzi": 51,
 "scartati": [
 "https://www.usr.sicilia.it/scuola-in-sicilia-al-via-lanno-scolastico-con-docenti-e-personale-gia-in-servizio-c",
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
@@ -331,7 +307,7 @@
 "https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
 ],
 "provincia": "Palermo",
-"avvisi": 24,
+"avvisi": 29,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
@@ -343,6 +319,25 @@
 "https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/"
 ],
 "provincia": "Novara",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
+"grezzi": 23,
+"scartati": [
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
+],
+"provincia": "Biella",
+"avvisi": 13,
+"errore": null
+},
+"https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
 "avvisi": 0,
 "errore": null
 },
@@ -358,15 +353,8 @@
 "avvisi": 14,
 "errore": null
 },
-"https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/": {
-"grezzi": 79,
+"grezzi": 80,
 "scartati": [
 "https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
 "https://www.istruzionepiemonte.it/torino/category/docenti/",
@@ -374,11 +362,23 @@
 "https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
 ],
 "provincia": "Torino",
-"avvisi": 30,
+"avvisi": 39,
+"errore": null
+},
+"https://www.mim.gov.it/web/varese/": {
+"grezzi": 166,
+"scartati": [
+"https://www.mim.gov.it/web/varese/-/secondo-interpello-classe-di-concorso-a047-scienze-matematiche-applicate-c",
+"https://www.mim.gov.it/web/varese/-/i-c-manzoni-uboldo-interpello-per-1-sb-sostegno-sc-primaria-fino-al-31-01-",
+"https://www.mim.gov.it/web/varese/-/i-c-manzoni-uboldo-interpello-per-spezzone-sostegno-12-ore-sc-primaria-tad",
+"https://www.mim.gov.it/web/varese/-/interpello-per-l-individuazione-e-il-reclutamento-di-personale-docente-ai-"
+],
+"provincia": "Varese",
+"avvisi": 26,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
-"grezzi": 871,
+"grezzi": 873,
 "scartati": [
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-raffaello-per-supplenza-breve-scuola-primar",
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-spezzone-6-ore-al-30-06-c-d-c-a040-istituto-sis",
@@ -386,7 +386,7 @@
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-raffaello-per-supplenza-breve-scuola-primar"
 ],
 "provincia": "Pistoia",
-"avvisi": 33,
+"avvisi": 35,
 "errore": null
 }
 }
