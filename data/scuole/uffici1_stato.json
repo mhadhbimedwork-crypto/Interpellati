@@ -13,13 +13,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Como",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
 "scartati": [],
@@ -27,10 +20,10 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
+"https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Monza e Brianza",
+"provincia": "Como",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -41,12 +34,12 @@
 "avvisi": 8,
 "errore": null
 },
-"https://belluno.istruzioneveneto.gov.it/category/news/area-amministrativa/interpelli/": {
+"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Belluno",
+"provincia": "Monza e Brianza",
 "avvisi": 0,
-"errore": null
+"errore": "SSLError"
 },
 "https://uat-salerno.it/": {
 "grezzi": 0,
@@ -54,6 +47,13 @@
 "provincia": "Salerno",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://belluno.istruzioneveneto.gov.it/category/news/area-amministrativa/interpelli/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Belluno",
+"avvisi": 0,
+"errore": null
 },
 "https://atcampobasso.it/argomento/servizi/servizi-al-personale-scolastico/interpelli-nazionali/": {
 "grezzi": 10,
@@ -67,10 +67,24 @@
 "avvisi": 2,
 "errore": null
 },
+"https://ustlucca.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lucca",
+"avvisi": 0,
+"errore": null
+},
 "https://www.atpromaistruzione.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Roma",
+"avvisi": 0,
+"errore": null
+},
+"https://www.csanuoro.it/wp2019/interpelli-as-2024-2025": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Nuoro",
 "avvisi": 0,
 "errore": null
 },
@@ -83,11 +97,16 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.csanuoro.it/wp2019/interpelli-as-2024-2025": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Nuoro",
-"avvisi": 0,
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 17,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
+"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/53ff9adb-c1a7-4d8f-a19c-fc32c80a2af3/candidatura",
+"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/3b825e43-f33b-4745-aaf8-5fbdba1e05db/candidatura",
+"https://nuvola.madisoft.it/interpelli/PCIC81700C/docenti"
+],
+"provincia": "Piacenza",
+"avvisi": 13,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/": {
@@ -104,16 +123,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://pc.istruzioneer.gov.it/": {
-"grezzi": 17,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
-"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/53ff9adb-c1a7-4d8f-a19c-fc32c80a2af3/candidatura",
-"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/3b825e43-f33b-4745-aaf8-5fbdba1e05db/candidatura",
-"https://nuvola.madisoft.it/interpelli/PCIC81700C/docenti"
-],
-"provincia": "Piacenza",
-"avvisi": 13,
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Novara",
+"avvisi": 0,
 "errore": null
 },
 "https://me.usr.sicilia.it/": {
@@ -123,13 +137,6 @@
 ],
 "provincia": "Messina",
 "avvisi": 15,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Novara",
-"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/le-nostre-scuole/verbano-cusio-ossola/": {
@@ -172,20 +179,8 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://ustlucca.it/": {
-"grezzi": 40,
-"scartati": [
-"https://ustlucca.it/category/avvisi/",
-"https://ustlucca.it/category/comunicazioni/",
-"https://ustlucca.it/category/docenti/",
-"https://ustlucca.it/category/interpelli/"
-],
-"provincia": "Lucca",
-"avvisi": 24,
-"errore": null
-},
 "https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
-"grezzi": 21,
+"grezzi": 19,
 "scartati": [
 "https://fc.istruzioneer.gov.it/",
 "https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/",
@@ -202,6 +197,13 @@
 "provincia": "Rieti",
 "avvisi": 0,
 "errore": "HTTP 404"
+},
+"https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
+"grezzi": 10,
+"scartati": [],
+"provincia": "Chieti",
+"avvisi": 10,
+"errore": null
 },
 "https://www.istruzioneatprc.it/category/recl/int/": {
 "grezzi": 20,
@@ -233,20 +235,6 @@
 "avvisi": 19,
 "errore": null
 },
-"https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
-"grezzi": 10,
-"scartati": [],
-"provincia": "Chieti",
-"avvisi": 10,
-"errore": null
-},
-"https://www.uat-caserta.it/": {
-"grezzi": 6,
-"scartati": [],
-"provincia": "Caserta",
-"avvisi": 6,
-"errore": null
-},
 "https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
 "grezzi": 26,
 "scartati": [
@@ -259,16 +247,11 @@
 "avvisi": 11,
 "errore": null
 },
-"https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
-"grezzi": 43,
-"scartati": [
-"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-adaa-sostegno-scuola-infanzia-con-ti",
-"https://www.uspbari.it/usp/interpello-1-posto-sostegno-classe-di-concorso-adaa-2-cd-garibaldi-altamura.html",
-"https://www.uspbari.it/usp/author/mi20142",
-"https://www.uspbari.it/usp/category/interpelli-della-provincia-di-bari"
-],
-"provincia": "Bari",
-"avvisi": 5,
+"https://www.uat-caserta.it/": {
+"grezzi": 6,
+"scartati": [],
+"provincia": "Caserta",
+"avvisi": 6,
 "errore": null
 },
 "https://www.usr.sicilia.it/": {
@@ -281,6 +264,18 @@
 ],
 "provincia": "Ragusa",
 "avvisi": 24,
+"errore": null
+},
+"https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
+"grezzi": 43,
+"scartati": [
+"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-adaa-sostegno-scuola-infanzia-con-ti",
+"https://www.uspbari.it/usp/interpello-1-posto-sostegno-classe-di-concorso-adaa-2-cd-garibaldi-altamura.html",
+"https://www.uspbari.it/usp/author/mi20142",
+"https://www.uspbari.it/usp/category/interpelli-della-provincia-di-bari"
+],
+"provincia": "Bari",
+"avvisi": 5,
 "errore": null
 },
 "https://www.ustlecce.it/index.php/personale-docente": {
