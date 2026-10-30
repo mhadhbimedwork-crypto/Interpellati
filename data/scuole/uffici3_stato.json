@@ -6,6 +6,13 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
@@ -24,13 +31,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Milano",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -58,18 +58,6 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://atpisernia.it/": {
-"grezzi": 23,
-"scartati": [
-"https://atpisernia.it/interpello-per-supplenza-breve-su-classe-di-concorso-a027-matematica-e-fisica",
-"https://atpisernia.it/category/albo",
-"https://atpisernia.it/category/procedure/interpelli",
-"https://atpisernia.it/category/personale-docente"
-],
-"provincia": "Isernia",
-"avvisi": 0,
-"errore": null
-},
 "https://uspistruzione.fr.it/wp2/": {
 "grezzi": 21,
 "scartati": [
@@ -82,23 +70,16 @@
 "avvisi": 14,
 "errore": null
 },
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 46,
+"https://atpisernia.it/": {
+"grezzi": 23,
 "scartati": [
-"https://fe.istruzioneer.gov.it/2026/10/30/personale-a-t-a-reperimento-personale-ata-profilo-infermiere-fino-al",
-"https://fe.istruzioneer.gov.it/2026/10/30/personale-a-t-a-reperimento-personale-ata-profilo-infermiere-fino-al",
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/"
+"https://atpisernia.it/interpello-per-supplenza-breve-su-classe-di-concorso-a027-matematica-e-fisica",
+"https://atpisernia.it/category/albo",
+"https://atpisernia.it/category/procedure/interpelli",
+"https://atpisernia.it/category/personale-docente"
 ],
-"provincia": "Ferrara",
-"avvisi": 29,
-"errore": null
-},
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 32,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 32,
+"provincia": "Isernia",
+"avvisi": 0,
 "errore": null
 },
 "https://pr.istruzioneer.gov.it/": {
@@ -111,6 +92,25 @@
 ],
 "provincia": "Parma",
 "avvisi": 7,
+"errore": null
+},
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 47,
+"scartati": [
+"https://fe.istruzioneer.gov.it/2026/10/30/personale-a-t-a-reperimento-personale-ata-profilo-infermiere-fino-al",
+"https://fe.istruzioneer.gov.it/2026/10/30/personale-a-t-a-reperimento-personale-ata-profilo-infermiere-fino-al",
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/"
+],
+"provincia": "Ferrara",
+"avvisi": 30,
+"errore": null
+},
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 32,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 32,
 "errore": null
 },
 "https://www.istruzionegenova.gov.it/": {
@@ -132,6 +132,18 @@
 "avvisi": 23,
 "errore": null
 },
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
+"grezzi": 54,
+"scartati": [
+"https://twitter.com/home?status=INTERPELLO NAZIONALE CL.C. A044 SCIENZE E TECNOLOGIE TESSILI, DELL’ABBIGLIAMEN",
+"https://twitter.com/home?status=Interpello Nazionale Scuola dell’Infanzia 21 ore di sostegno dal 3/11/2026 al ",
+"https://www.facebook.com/sharer/sharer.php?u=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/interpel",
+"https://www.linkedin.com/sharing/share-offsite/?url=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/i"
+],
+"provincia": "Caltanissetta",
+"avvisi": 35,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -148,16 +160,11 @@
 "avvisi": 25,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 54,
-"scartati": [
-"https://twitter.com/home?status=INTERPELLO NAZIONALE CL.C. A044 SCIENZE E TECNOLOGIE TESSILI, DELL’ABBIGLIAMEN",
-"https://twitter.com/home?status=Interpello Nazionale Scuola dell’Infanzia 21 ore di sostegno dal 3/11/2026 al ",
-"https://www.facebook.com/sharer/sharer.php?u=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/interpel",
-"https://www.linkedin.com/sharing/share-offsite/?url=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/i"
-],
-"provincia": "Caltanissetta",
-"avvisi": 35,
+"https://www.istruzionematera.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Matera",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
@@ -167,10 +174,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionematera.it/": {
+"https://vicenza.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Matera",
+"provincia": "Vicenza",
 "avvisi": 0,
 "errore": null
 },
@@ -188,17 +195,27 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 0,
+"https://www.mim.gov.it/web/campobasso/": {
+"grezzi": 7,
+"scartati": [
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-supplen",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-sup",
+"https://www.mim.gov.it/web/campobasso/"
+],
+"provincia": "Campobasso",
+"avvisi": 2,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
+"https://www.istruzionebat.it/category/interpello/": {
+"grezzi": 56,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
+"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
+"https://www.scuolapetronellitrani.edu.it/interpelli/"
+],
+"provincia": "Barletta-Andria-Trani",
 "avvisi": 0,
 "errore": null
 },
@@ -214,12 +231,26 @@
 "avvisi": 25,
 "errore": null
 },
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Catanzaro",
+"avvisi": 0,
+"errore": null
+},
 "https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Benevento",
 "avvisi": 0,
 "errore": "HTTP 403"
+},
+"http://www.uspmc.sinp.net/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
 },
 "https://www.atpromaistruzione.it/atp/tag/interpelli/": {
 "grezzi": 130,
@@ -233,54 +264,11 @@
 "avvisi": 18,
 "errore": null
 },
-"https://www.istruzionebat.it/category/interpello/": {
-"grezzi": 56,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
-"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
-"https://www.scuolapetronellitrani.edu.it/interpelli/"
-],
-"provincia": "Barletta-Andria-Trani",
-"avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/campobasso/": {
-"grezzi": 7,
-"scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-supplen",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-sup",
-"https://www.mim.gov.it/web/campobasso/"
-],
-"provincia": "Campobasso",
-"avvisi": 2,
-"errore": null
-},
 "https://www.ufficioscolasticoprovinciale.prato.it/": {
 "grezzi": 1,
 "scartati": [],
 "provincia": "Prato",
 "avvisi": 1,
-"errore": null
-},
-"http://www.uspmc.sinp.net/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
-"https://www.uspsi.it/": {
-"grezzi": 26,
-"scartati": [
-"https://www.uspsi.it/uspsiena/albo/",
-"https://www.uspsi.it/uspsiena/docenti/",
-"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
-"https://www.uspsi.it/uspsiena/news/"
-],
-"provincia": "Siena",
-"avvisi": 20,
 "errore": null
 },
 "https://www.ustfoggia.it/": {
@@ -293,16 +281,16 @@
 "avvisi": 48,
 "errore": null
 },
-"https://www.uspascolipiceno.it/": {
-"grezzi": 21,
+"https://www.uspsi.it/": {
+"grezzi": 26,
 "scartati": [
-"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
-"https://www.uspascolipiceno.it/wordpress/category/disponibilita/",
-"https://www.uspascolipiceno.it/wordpress/category/disponibilita/disponibilita-supplenze/",
-"https://www.uspascolipiceno.it/wordpress/tag/disponibilita-supplenze/"
+"https://www.uspsi.it/uspsiena/albo/",
+"https://www.uspsi.it/uspsiena/docenti/",
+"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
+"https://www.uspsi.it/uspsiena/news/"
 ],
-"provincia": "Fermo",
-"avvisi": 12,
+"provincia": "Siena",
+"avvisi": 20,
 "errore": null
 },
 "https://www.uat-napoli.it/": {
@@ -317,16 +305,6 @@
 "avvisi": 41,
 "errore": null
 },
-"https://www.ustli.it/usp_livorno/index.php/docenti/interpelli": {
-"grezzi": 18,
-"scartati": [
-"https://www.ustli.it/usp_livorno/index.php/docenti/interpelli/3127-interpello-classe-di-concorso-a041-scienze-",
-"https://www.ustli.it/usp_livorno/index.php/docenti/interpelli/3126-interpello-cdc-a026-matematica-dal-19-10-20"
-],
-"provincia": "Livorno",
-"avvisi": 16,
-"errore": null
-},
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
 "grezzi": 92,
 "scartati": [
@@ -337,6 +315,28 @@
 ],
 "provincia": "Ragusa",
 "avvisi": 51,
+"errore": null
+},
+"https://www.uspascolipiceno.it/": {
+"grezzi": 21,
+"scartati": [
+"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
+"https://www.uspascolipiceno.it/wordpress/category/disponibilita/",
+"https://www.uspascolipiceno.it/wordpress/category/disponibilita/disponibilita-supplenze/",
+"https://www.uspascolipiceno.it/wordpress/tag/disponibilita-supplenze/"
+],
+"provincia": "Fermo",
+"avvisi": 12,
+"errore": null
+},
+"https://www.ustli.it/usp_livorno/index.php/docenti/interpelli": {
+"grezzi": 18,
+"scartati": [
+"https://www.ustli.it/usp_livorno/index.php/docenti/interpelli/3127-interpello-classe-di-concorso-a041-scienze-",
+"https://www.ustli.it/usp_livorno/index.php/docenti/interpelli/3126-interpello-cdc-a026-matematica-dal-19-10-20"
+],
+"provincia": "Livorno",
+"avvisi": 16,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
