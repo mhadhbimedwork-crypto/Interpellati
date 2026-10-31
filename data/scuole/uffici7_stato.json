@@ -6,6 +6,13 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
+"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Monza e Brianza",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
@@ -19,13 +26,6 @@
 "provincia": "Terni",
 "avvisi": 0,
 "errore": "HTTP 404"
-},
-"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Monza e Brianza",
-"avvisi": 0,
-"errore": "SSLError"
 },
 "https://rn.istruzioneer.gov.it/feed/": {
 "grezzi": 8,
@@ -57,6 +57,18 @@
 "avvisi": 2,
 "errore": null
 },
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 17,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
+"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/53ff9adb-c1a7-4d8f-a19c-fc32c80a2af3/candidatura",
+"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/3b825e43-f33b-4745-aaf8-5fbdba1e05db/candidatura",
+"https://nuvola.madisoft.it/interpelli/PCIC81700C/docenti"
+],
+"provincia": "Piacenza",
+"avvisi": 13,
+"errore": null
+},
 "https://www.atpromaistruzione.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -71,36 +83,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/": {
-"grezzi": 25,
-"scartati": [],
-"provincia": "Caltanissetta",
-"avvisi": 25,
-"errore": null
-},
-"https://pc.istruzioneer.gov.it/": {
-"grezzi": 17,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
-"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/53ff9adb-c1a7-4d8f-a19c-fc32c80a2af3/candidatura",
-"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/3b825e43-f33b-4745-aaf8-5fbdba1e05db/candidatura",
-"https://nuvola.madisoft.it/interpelli/PCIC81700C/docenti"
-],
-"provincia": "Piacenza",
-"avvisi": 13,
-"errore": null
-},
 "https://atavellino.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Avellino",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionelaspezia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "La Spezia",
 "avvisi": 0,
 "errore": null
 },
@@ -120,6 +106,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzionelaspezia.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "La Spezia",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -127,11 +120,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://verona.istruzioneveneto.gov.it/index.php/interpelli-2026-2027/": {
-"grezzi": 0,
+"https://cl-en.usr.sicilia.it/": {
+"grezzi": 25,
 "scartati": [],
-"provincia": "Verona",
-"avvisi": 0,
+"provincia": "Caltanissetta",
+"avvisi": 25,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/matera-2019-percorsi-culturali-dalle-scuole-per-le-scuole/": {
@@ -153,6 +146,13 @@
 "avvisi": 3,
 "errore": null
 },
+"https://verona.istruzioneveneto.gov.it/index.php/interpelli-2026-2027/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Verona",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
 "grezzi": 0,
 "scartati": [],
@@ -160,10 +160,22 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.regione.vda.it/": {
+"https://ustlucca.it/": {
+"grezzi": 40,
+"scartati": [
+"https://ustlucca.it/category/avvisi/",
+"https://ustlucca.it/category/comunicazioni/",
+"https://ustlucca.it/category/docenti/",
+"https://ustlucca.it/category/interpelli/"
+],
+"provincia": "Lucca",
+"avvisi": 23,
+"errore": null
+},
+"https://www.ufficioscolasticogrosseto.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Aosta",
+"provincia": "Grosseto",
 "avvisi": 0,
 "errore": null
 },
@@ -178,23 +190,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.ufficioscolasticogrosseto.it/": {
+"https://www.regione.vda.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Grosseto",
+"provincia": "Aosta",
 "avvisi": 0,
-"errore": null
-},
-"https://ustlucca.it/": {
-"grezzi": 40,
-"scartati": [
-"https://ustlucca.it/category/avvisi/",
-"https://ustlucca.it/category/comunicazioni/",
-"https://ustlucca.it/category/docenti/",
-"https://ustlucca.it/category/interpelli/"
-],
-"provincia": "Lucca",
-"avvisi": 23,
 "errore": null
 },
 "https://www.istruzionebat.it/": {
@@ -235,13 +235,6 @@
 "avvisi": 5,
 "errore": null
 },
-"https://www.uspcampobasso.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Campobasso",
-"avvisi": 0,
-"errore": null
-},
 "https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
 "grezzi": 25,
 "scartati": [
@@ -252,6 +245,13 @@
 ],
 "provincia": "Ravenna",
 "avvisi": 11,
+"errore": null
+},
+"https://www.uspcampobasso.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Campobasso",
+"avvisi": 0,
 "errore": null
 },
 "https://www.vivoscuola.it/": {
@@ -280,6 +280,13 @@
 "avvisi": 1,
 "errore": null
 },
+"https://www.uspss.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
+"avvisi": 0,
+"errore": null
+},
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
 "grezzi": 26,
 "scartati": [
@@ -290,13 +297,6 @@
 ],
 "provincia": "Ascoli Piceno",
 "avvisi": 12,
-"errore": null
-},
-"https://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepotenza.it/": {
