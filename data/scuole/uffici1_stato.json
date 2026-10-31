@@ -13,17 +13,17 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://milano.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://milano.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -47,10 +47,13 @@
 "errore": null
 },
 "https://re.istruzioneer.gov.it/": {
-"grezzi": 10,
-"scartati": [],
+"grezzi": 32,
+"scartati": [
+"https://re.istruzioneer.gov.it/category/docenti/",
+"https://re.istruzioneer.gov.it/category/docenti/interpello/"
+],
 "provincia": "Reggio Emilia",
-"avvisi": 10,
+"avvisi": 30,
 "errore": null
 },
 "https://varese.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti-2/": {
@@ -59,6 +62,18 @@
 "provincia": "Varese",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"http://www.provveditoratostudiviterbo.it/": {
+"grezzi": 31,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/",
+"https://liceosantarosavt.edu.it/index.php/ampliamento-offerta-formativa/avvisi-e-bandi",
+"https://www.trasparenzascuole.it/Public/APDPublic_ExtV2.aspx?CF=90056860563"
+],
+"provincia": "Viterbo",
+"avvisi": 2,
+"errore": null
 },
 "https://uspistruzione.fr.it/wp2/": {
 "grezzi": 21,
@@ -72,35 +87,11 @@
 "avvisi": 14,
 "errore": null
 },
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 58,
-"scartati": [
-"https://fe.istruzioneer.gov.it/2026/10/30/personale-a-t-a-reperimento-personale-ata-profilo-infermiere-fino-al",
-"https://fe.istruzioneer.gov.it/2026/10/30/personale-a-t-a-reperimento-personale-ata-profilo-infermiere-fino-al",
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/"
-],
-"provincia": "Ferrara",
-"avvisi": 37,
-"errore": null
-},
 "https://www.hotels-ferrara.com/it/b19703/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Ferrara",
 "avvisi": 0,
-"errore": null
-},
-"http://www.provveditoratostudiviterbo.it/": {
-"grezzi": 31,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/",
-"https://liceosantarosavt.edu.it/index.php/ampliamento-offerta-formativa/avvisi-e-bandi",
-"https://www.trasparenzascuole.it/Public/APDPublic_ExtV2.aspx?CF=90056860563"
-],
-"provincia": "Viterbo",
-"avvisi": 2,
 "errore": null
 },
 "https://pr.istruzioneer.gov.it/": {
@@ -122,6 +113,18 @@
 "avvisi": 30,
 "errore": null
 },
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 63,
+"scartati": [
+"https://fe.istruzioneer.gov.it/2026/10/30/personale-a-t-a-reperimento-personale-ata-profilo-infermiere-fino-al",
+"https://fe.istruzioneer.gov.it/2026/10/30/personale-a-t-a-reperimento-personale-ata-profilo-infermiere-fino-al",
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/"
+],
+"provincia": "Ferrara",
+"avvisi": 38,
+"errore": null
+},
 "https://tp.usr.sicilia.it/": {
 "grezzi": 44,
 "scartati": [
@@ -132,6 +135,20 @@
 ],
 "provincia": "Trapani",
 "avvisi": 23,
+"errore": null
+},
+"https://www.istruzionematera.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Matera",
+"avvisi": 0,
+"errore": "HTTP 500"
+},
+"https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Arezzo",
+"avvisi": 0,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
@@ -146,20 +163,6 @@
 "avvisi": 35,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Arezzo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
-"errore": null
-},
 "https://rovigo.istruzioneveneto.gov.it/": {
 "grezzi": 26,
 "scartati": [
@@ -169,17 +172,17 @@
 "avvisi": 25,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionesavona.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Savona",
+"avvisi": 0,
+"errore": null
+},
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
 "avvisi": 0,
 "errore": null
 },
@@ -220,18 +223,6 @@
 "avvisi": 16,
 "errore": null
 },
-"https://www.mim.gov.it/web/campobasso/": {
-"grezzi": 7,
-"scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-supplen",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-sup",
-"https://www.mim.gov.it/web/campobasso/"
-],
-"provincia": "Campobasso",
-"avvisi": 2,
-"errore": null
-},
 "https://www.istruzionebrindisi.it/": {
 "grezzi": 17,
 "scartati": [
@@ -249,6 +240,18 @@
 "scartati": [],
 "provincia": "Lecce",
 "avvisi": 0,
+"errore": null
+},
+"https://www.mim.gov.it/web/campobasso/": {
+"grezzi": 7,
+"scartati": [
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-supplen",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-sup",
+"https://www.mim.gov.it/web/campobasso/"
+],
+"provincia": "Campobasso",
+"avvisi": 2,
 "errore": null
 },
 "https://www.mim.gov.it/web/sassari/": {
@@ -291,18 +294,6 @@
 "avvisi": 11,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/novara/": {
-"grezzi": 12,
-"scartati": [
-"https://www.istruzionepiemonte.it/novara/tag/a028/",
-"https://www.istruzionepiemonte.it/novara/tag/aa/",
-"https://www.istruzionepiemonte.it/novara/tag/at/",
-"https://www.istruzionepiemonte.it/novara/tag/b009/"
-],
-"provincia": "Novara",
-"avvisi": 0,
-"errore": null
-},
 "https://www.ustlecce.it/": {
 "grezzi": 7,
 "scartati": [
@@ -312,6 +303,18 @@
 "https://www.ustlecce.it/index.php/interpelli?download=3875:interpello-per-supplenza-su-classe-di-concorso-adee"
 ],
 "provincia": "Lecce",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/novara/": {
+"grezzi": 12,
+"scartati": [
+"https://www.istruzionepiemonte.it/novara/tag/a028/",
+"https://www.istruzionepiemonte.it/novara/tag/aa/",
+"https://www.istruzionepiemonte.it/novara/tag/at/",
+"https://www.istruzionepiemonte.it/novara/tag/b009/"
+],
+"provincia": "Novara",
 "avvisi": 0,
 "errore": null
 },
