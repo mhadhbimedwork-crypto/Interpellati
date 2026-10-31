@@ -6,20 +6,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://milano.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -31,6 +17,20 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cremona",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -114,7 +114,7 @@
 "errore": null
 },
 "https://fe.istruzioneer.gov.it/": {
-"grezzi": 63,
+"grezzi": 60,
 "scartati": [
 "https://fe.istruzioneer.gov.it/2026/10/30/personale-a-t-a-reperimento-personale-ata-profilo-infermiere-fino-al",
 "https://fe.istruzioneer.gov.it/2026/10/30/personale-a-t-a-reperimento-personale-ata-profilo-infermiere-fino-al",
@@ -124,6 +124,13 @@
 "provincia": "Ferrara",
 "avvisi": 38,
 "errore": null
+},
+"https://www.istruzionematera.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Matera",
+"avvisi": 0,
+"errore": "HTTP 500"
 },
 "https://tp.usr.sicilia.it/": {
 "grezzi": 44,
@@ -136,13 +143,6 @@
 "provincia": "Trapani",
 "avvisi": 23,
 "errore": null
-},
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
-"errore": "HTTP 500"
 },
 "https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
 "grezzi": 0,
@@ -172,13 +172,6 @@
 "avvisi": 25,
 "errore": null
 },
-"https://www.istruzionesavona.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Savona",
-"avvisi": 0,
-"errore": null
-},
 "https://vicenza.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -193,21 +186,10 @@
 "avvisi": 0,
 "errore": "HTTP 522"
 },
-"https://www.toscana-istruzione.it/": {
+"https://www.istruzionesavona.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Pisa",
-"avvisi": 0,
-"errore": "HTTP 403"
-},
-"https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
-"grezzi": 3,
-"scartati": [
-"https://www.istruzione.calabria.it/cosenza/ic-castrolibero-interpello-posto-di-sostegno-scuola-primaria-24-ore",
-"https://www.istruzione.calabria.it/cosenza/avviso-per-selezione-personale-docente-scuola-primaria-posto-comune",
-"https://www.istruzione.calabria.it/cosenza/ic-castrolibero-interpello-posto-di-sostegno-scuola-primaria-24-ore"
-],
-"provincia": "Cosenza",
+"provincia": "Savona",
 "avvisi": 0,
 "errore": null
 },
@@ -223,6 +205,13 @@
 "avvisi": 16,
 "errore": null
 },
+"https://www.toscana-istruzione.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
 "https://www.istruzionebrindisi.it/": {
 "grezzi": 17,
 "scartati": [
@@ -233,13 +222,6 @@
 ],
 "provincia": "Brindisi",
 "avvisi": 12,
-"errore": null
-},
-"https://www.usplecce.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecce",
-"avvisi": 0,
 "errore": null
 },
 "https://www.mim.gov.it/web/campobasso/": {
@@ -254,10 +236,10 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.mim.gov.it/web/sassari/": {
+"https://www.usplecce.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Sassari",
+"provincia": "Lecce",
 "avvisi": 0,
 "errore": null
 },
@@ -267,6 +249,20 @@
 "provincia": "Rieti",
 "avvisi": 20,
 "errore": null
+},
+"https://www.mim.gov.it/web/sassari/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cosenza",
+"avvisi": 0,
+"errore": "ConnectTimeout"
 },
 "https://www.uspbari.it/": {
 "grezzi": 47,
@@ -285,13 +281,6 @@
 "scartati": [],
 "provincia": "Pordenone",
 "avvisi": 0,
-"errore": null
-},
-"https://www.usptaranto.it/": {
-"grezzi": 11,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 11,
 "errore": null
 },
 "https://www.ustlecce.it/": {
@@ -340,6 +329,13 @@
 ],
 "provincia": "Torino",
 "avvisi": 19,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 11,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 11,
 "errore": null
 },
 "https://www.istruzionegenova.gov.it/pagine/interpelli---docenti": {
