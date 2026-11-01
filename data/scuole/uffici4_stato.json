@@ -13,13 +13,6 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://pr.istruzioneer.gov.it/interpelli-2/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Parma",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://istruzione.umbria.it/": {
 "grezzi": 8,
 "scartati": [
@@ -32,12 +25,12 @@
 "avvisi": 2,
 "errore": null
 },
-"https://atptorino.com/": {
+"https://pr.istruzioneer.gov.it/interpelli-2/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Torino",
+"provincia": "Parma",
 "avvisi": 0,
-"errore": null
+"errore": "HTTP 404"
 },
 "https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
@@ -45,6 +38,13 @@
 "provincia": "Sondrio",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://atptorino.com/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
 },
 "https://lnx.csalatina.it/": {
 "grezzi": 10,
@@ -74,15 +74,8 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://www.csanuoro.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Nuoro",
-"avvisi": 0,
-"errore": null
-},
 "https://rn.istruzioneer.gov.it/": {
-"grezzi": 25,
+"grezzi": 23,
 "scartati": [
 "https://rn.istruzioneer.gov.it/category/personale-docente/interpelli-docenti-2026-2027/",
 "https://rn.istruzioneer.gov.it/category/personale-docente/",
@@ -90,11 +83,18 @@
 "https://rn.istruzioneer.gov.it/category/personale-docente/secondaria-secondo-grado/"
 ],
 "provincia": "Rimini",
-"avvisi": 20,
+"avvisi": 18,
+"errore": null
+},
+"https://www.csanuoro.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Nuoro",
+"avvisi": 0,
 "errore": null
 },
 "https://mo.istruzioneer.gov.it/": {
-"grezzi": 35,
+"grezzi": 30,
 "scartati": [
 "https://mo.istruzioneer.gov.it/",
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
@@ -102,14 +102,7 @@
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
 ],
 "provincia": "Modena",
-"avvisi": 28,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 0,
+"avvisi": 25,
 "errore": null
 },
 "https://www.istruzione.umbria.it/feed/": {
@@ -119,17 +112,17 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Catanzaro",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Cuneo",
-"avvisi": 0,
-"errore": null
-},
-"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Gorizia",
 "avvisi": 0,
 "errore": null
 },
@@ -145,6 +138,20 @@
 "avvisi": 29,
 "errore": null
 },
+"https://www.istruzioneimperia.gov.it/pagine/interpelli---imperia": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Imperia",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
+"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Gorizia",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/le-nostre-scuole/asti/": {
 "grezzi": 0,
 "scartati": [],
@@ -152,12 +159,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzioneimperia.gov.it/pagine/interpelli---imperia": {
+"https://www.istruzionepiemonte.it/palermo-chiama-italia-23-maggio-2019/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Imperia",
+"provincia": "Palermo",
 "avvisi": 0,
-"errore": "HTTP 404"
+"errore": null
 },
 "https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
 "grezzi": 11,
@@ -183,13 +190,6 @@
 "avvisi": 7,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/palermo-chiama-italia-23-maggio-2019/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Palermo",
-"avvisi": 0,
-"errore": null
-},
 "https://www.toscana-istruzione.it/atpisa/category/news/": {
 "grezzi": 0,
 "scartati": [],
@@ -204,6 +204,18 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
+"https://bo.istruzioneer.gov.it/tag/interpello/": {
+"grezzi": 20,
+"scartati": [
+"https://bo.istruzioneer.gov.it/",
+"https://bo.istruzioneer.gov.it/category/infanzia/",
+"https://bo.istruzioneer.gov.it/",
+"https://bo.istruzioneer.gov.it/category/contratti-a-tempo-determinato/"
+],
+"provincia": "Bologna",
+"avvisi": 2,
+"errore": null
+},
 "https://treviso.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -216,18 +228,6 @@
 "scartati": [],
 "provincia": "Potenza",
 "avvisi": 0,
-"errore": null
-},
-"https://bo.istruzioneer.gov.it/tag/interpello/": {
-"grezzi": 22,
-"scartati": [
-"https://bo.istruzioneer.gov.it/",
-"https://bo.istruzioneer.gov.it/category/infanzia/",
-"https://bo.istruzioneer.gov.it/",
-"https://bo.istruzioneer.gov.it/category/contratti-a-tempo-determinato/"
-],
-"provincia": "Bologna",
-"avvisi": 2,
 "errore": null
 },
 "https://www.istruzionechietipescara.it/": {
@@ -249,13 +249,6 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
-"http://www.uspmc.sinp.net/documenti-uspmc-cms/?cat-documenti-uspmc=reclutamento-pd": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
 "https://www.usr.sicilia.it/": {
 "grezzi": 41,
 "scartati": [
@@ -266,17 +259,6 @@
 ],
 "provincia": "Ragusa",
 "avvisi": 24,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/": {
-"grezzi": 32,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/generale/",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/interpelli-docenti/"
-],
-"provincia": "Pistoia",
-"avvisi": 29,
 "errore": null
 },
 "https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
@@ -291,23 +273,34 @@
 "avvisi": 8,
 "errore": null
 },
-"https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
+"http://www.uspmc.sinp.net/documenti-uspmc-cms/?cat-documenti-uspmc=reclutamento-pd": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bergamo",
+"provincia": "Macerata",
 "avvisi": 0,
+"errore": "ConnectTimeout"
+},
+"https://www.mim.gov.it/web/varese/": {
+"grezzi": 161,
+"scartati": [
+"https://www.mim.gov.it/web/varese/-/interpello-docente-ai56-6h-fino-al-30-06-2027-ic-crespi-busto-arsizio",
+"https://www.mim.gov.it/web/varese/-/interpello-suppl-breve-sostegno-scuola-primaria",
+"https://www.mim.gov.it/web/varese/-/interpello-1-posto-12h-fino-al-08-06-2027-cc-ag56-ic-crespi-busto-arsizio",
+"https://www.mim.gov.it/web/varese/-/interpello-a027-matematica-e-fisica--1"
+],
+"provincia": "Varese",
+"avvisi": 3,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/": {
-"grezzi": 44,
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/": {
+"grezzi": 32,
 "scartati": [
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/generale/",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/interpelli-docenti/"
 ],
-"provincia": "Biella",
-"avvisi": 32,
+"provincia": "Pistoia",
+"avvisi": 29,
 "errore": null
 },
 "https://www.ust.fi.it/mese/interpelli/": {
@@ -322,6 +315,13 @@
 "avvisi": 20,
 "errore": null
 },
+"https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/vercelli/": {
 "grezzi": 27,
 "scartati": [
@@ -334,16 +334,16 @@
 "avvisi": 18,
 "errore": null
 },
-"https://www.mim.gov.it/web/varese/": {
-"grezzi": 161,
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/": {
+"grezzi": 44,
 "scartati": [
-"https://www.mim.gov.it/web/varese/-/interpello-docente-ai56-6h-fino-al-30-06-2027-ic-crespi-busto-arsizio",
-"https://www.mim.gov.it/web/varese/-/interpello-suppl-breve-sostegno-scuola-primaria",
-"https://www.mim.gov.it/web/varese/-/interpello-1-posto-12h-fino-al-08-06-2027-cc-ag56-ic-crespi-busto-arsizio",
-"https://www.mim.gov.it/web/varese/-/interpello-a027-matematica-e-fisica--1"
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
 ],
-"provincia": "Varese",
-"avvisi": 3,
+"provincia": "Biella",
+"avvisi": 32,
 "errore": null
 }
 }
