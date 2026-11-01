@@ -6,6 +6,13 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
+"https://cremona.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cremona",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://bergamo.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -17,13 +24,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecco",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://cremona.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -40,19 +40,30 @@
 "errore": null
 },
 "https://re.istruzioneer.gov.it/": {
-"grezzi": 31,
-"scartati": [
-"https://re.istruzioneer.gov.it/category/docenti/",
-"https://re.istruzioneer.gov.it/category/docenti/interpello/"
-],
+"grezzi": 9,
+"scartati": [],
 "provincia": "Reggio Emilia",
-"avvisi": 29,
+"avvisi": 9,
 "errore": null
 },
-"https://uat-salerno.it/Documenti/CIRCOLARI/Interpelli-per-reclutamento-personale-docente": {
+"https://cl-en.usr.sicilia.it/": {
+"grezzi": 25,
+"scartati": [],
+"provincia": "Enna",
+"avvisi": 25,
+"errore": null
+},
+"http://www.istruzionevicenza.it/wordpress/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Salerno",
+"provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
+"https://varese.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Varese",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -65,26 +76,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/": {
-"grezzi": 25,
-"scartati": [],
-"provincia": "Enna",
-"avvisi": 25,
-"errore": null
-},
-"https://varese.istruzionelombardia.gov.it/": {
+"https://uat-salerno.it/Documenti/CIRCOLARI/Interpelli-per-reclutamento-personale-docente": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Varese",
+"provincia": "Salerno",
 "avvisi": 0,
 "errore": "SSLError"
-},
-"http://www.istruzionevicenza.it/wordpress/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
 },
 "http://www.uspss.it/": {
 "grezzi": 0,
@@ -105,12 +102,21 @@
 "avvisi": 38,
 "errore": null
 },
-"https://www.istruzionegenova.gov.it/": {
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 26,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 25,
+"errore": null
+},
+"https://www.istruzionematera.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Genova",
+"provincia": "Matera",
 "avvisi": 0,
-"errore": null
+"errore": "HTTP 500"
 },
 "https://me.usr.sicilia.it/personale-scuola/interpelli/": {
 "grezzi": 52,
@@ -124,33 +130,17 @@
 "avvisi": 18,
 "errore": null
 },
-"https://www.istruzionematera.it/": {
+"https://www.istruzionegenova.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Matera",
+"provincia": "Genova",
 "avvisi": 0,
-"errore": "HTTP 500"
-},
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 26,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 25,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Arezzo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
 "avvisi": 0,
 "errore": null
 },
@@ -166,6 +156,13 @@
 "avvisi": 19,
 "errore": null
 },
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
 "https://t.me/s/usr_sicilia": {
 "grezzi": 77,
 "scartati": [
@@ -178,13 +175,6 @@
 "avvisi": 28,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionesavona.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -192,22 +182,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bolzano",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionebat.it/category/interpello/": {
-"grezzi": 56,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
-"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
-"https://www.scuolapetronellitrani.edu.it/interpelli/"
-],
-"provincia": "Barletta-Andria-Trani",
+"provincia": "Catanzaro",
 "avvisi": 0,
 "errore": null
 },
@@ -223,6 +201,13 @@
 "avvisi": 16,
 "errore": null
 },
+"https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bolzano",
+"avvisi": 0,
+"errore": null
+},
 "https://pc.istruzioneer.gov.it/interpelli/": {
 "grezzi": 38,
 "scartati": [
@@ -233,6 +218,18 @@
 ],
 "provincia": "Piacenza",
 "avvisi": 16,
+"errore": null
+},
+"https://www.istruzionebat.it/category/interpello/": {
+"grezzi": 56,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
+"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
+"https://www.scuolapetronellitrani.edu.it/interpelli/"
+],
+"provincia": "Barletta-Andria-Trani",
+"avvisi": 0,
 "errore": null
 },
 "https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
@@ -268,11 +265,15 @@
 "avvisi": 1,
 "errore": null
 },
-"https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
+"https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
+"grezzi": 35,
+"scartati": [
+"https://www.uat-napoli.it/category/docenti/",
+"https://www.uat-napoli.it/tag/avvisi/",
+"https://www.uat-napoli.it/tag/interpelli-personale-docente/"
+],
+"provincia": "Napoli",
+"avvisi": 32,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
@@ -287,6 +288,13 @@
 "avvisi": 9,
 "errore": null
 },
+"https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": null
+},
 "https://www.ustlecce.it/": {
 "grezzi": 7,
 "scartati": [
@@ -297,17 +305,6 @@
 ],
 "provincia": "Lecce",
 "avvisi": 0,
-"errore": null
-},
-"https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
-"grezzi": 35,
-"scartati": [
-"https://www.uat-napoli.it/category/docenti/",
-"https://www.uat-napoli.it/tag/avvisi/",
-"https://www.uat-napoli.it/tag/interpelli-personale-docente/"
-],
-"provincia": "Napoli",
-"avvisi": 32,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/novara/": {
