@@ -6,20 +6,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Perugia",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
-"https://brescia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Brescia",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://monza.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -27,10 +13,24 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Perugia",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
 "https://como.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Como",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://brescia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Brescia",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -49,29 +49,10 @@
 "errore": null
 },
 "https://pc.istruzioneer.gov.it/": {
-"grezzi": 17,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
-"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/53ff9adb-c1a7-4d8f-a19c-fc32c80a2af3/candidatura",
-"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/3b825e43-f33b-4745-aaf8-5fbdba1e05db/candidatura",
-"https://nuvola.madisoft.it/interpelli/PCIC81700C/docenti"
-],
-"provincia": "Piacenza",
-"avvisi": 13,
-"errore": null
-},
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Arezzo",
+"provincia": "Piacenza",
 "avvisi": 0,
-"errore": "HTTP 500"
-},
-"https://fc.istruzioneer.gov.it/": {
-"grezzi": 11,
-"scartati": [],
-"provincia": "Forlì-Cesena",
-"avvisi": 11,
 "errore": null
 },
 "https://sr.usr.sicilia.it/": {
@@ -85,6 +66,13 @@
 "provincia": "Siracusa",
 "avvisi": 5,
 "errore": null
+},
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Arezzo",
+"avvisi": 0,
+"errore": "HTTP 500"
 },
 "https://www.csanuoro.it/wp2019/interpelli-as-2024-2025": {
 "grezzi": 0,
@@ -100,22 +88,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://me.usr.sicilia.it/": {
-"grezzi": 14,
-"scartati": [
-"https://me.usr.sicilia.it/personale-docente-decreto-di-parziale-rettifica-dei-posti-di-sostegno-in-organico-di"
-],
-"provincia": "Messina",
-"avvisi": 13,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Crotone",
-"avvisi": 0,
-"errore": null
-},
 "https://ra.istruzioneer.gov.it/": {
 "grezzi": 13,
 "scartati": [
@@ -126,11 +98,20 @@
 "avvisi": 11,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/": {
+"https://www.istruzione.calabria.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Torino",
+"provincia": "Crotone",
 "avvisi": 0,
+"errore": null
+},
+"https://me.usr.sicilia.it/": {
+"grezzi": 14,
+"scartati": [
+"https://me.usr.sicilia.it/personale-docente-decreto-di-parziale-rettifica-dei-posti-di-sostegno-in-organico-di"
+],
+"provincia": "Messina",
+"avvisi": 13,
 "errore": null
 },
 "http://www.usppesarourbino.it/": {
@@ -152,10 +133,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/matera-2019-percorsi-culturali-dalle-scuole-per-le-scuole/": {
+"https://fc.istruzioneer.gov.it/": {
+"grezzi": 12,
+"scartati": [],
+"provincia": "Forlì-Cesena",
+"avvisi": 12,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Matera",
+"provincia": "Roma",
 "avvisi": 0,
 "errore": null
 },
@@ -173,17 +161,24 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
-"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Roma",
-"avvisi": 0,
-"errore": null
-},
 "https://verona.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Verona",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/matera-2019-percorsi-culturali-dalle-scuole-per-le-scuole/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Matera",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
 "avvisi": 0,
 "errore": null
 },
@@ -231,13 +226,6 @@
 "avvisi": 10,
 "errore": null
 },
-"https://www.uat-caserta.it/category/segnalazioni-dalle-scuole/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Caserta",
-"avvisi": 0,
-"errore": null
-},
 "https://www.uspsi.it/": {
 "grezzi": 26,
 "scartati": [
@@ -250,14 +238,23 @@
 "avvisi": 20,
 "errore": null
 },
-"https://www.ustfoggia.it/": {
-"grezzi": 35,
+"https://www.uat-caserta.it/category/segnalazioni-dalle-scuole/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Caserta",
+"avvisi": 0,
+"errore": null
+},
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
+"grezzi": 92,
 "scartati": [
-"https://www.ustfoggia.it/category/albo-pretorio/",
-"https://www.ustfoggia.it/category/news/"
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/news/",
+"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
 ],
-"provincia": "Foggia",
-"avvisi": 33,
+"provincia": "Ragusa",
+"avvisi": 51,
 "errore": null
 },
 "https://www.uspascolipiceno.it/": {
@@ -272,6 +269,16 @@
 "avvisi": 11,
 "errore": null
 },
+"https://www.ustfoggia.it/": {
+"grezzi": 35,
+"scartati": [
+"https://www.ustfoggia.it/category/albo-pretorio/",
+"https://www.ustfoggia.it/category/news/"
+],
+"provincia": "Foggia",
+"avvisi": 33,
+"errore": null
+},
 "https://www.ustms.it/": {
 "grezzi": 44,
 "scartati": [
@@ -282,18 +289,6 @@
 ],
 "provincia": "Massa-Carrara",
 "avvisi": 24,
-"errore": null
-},
-"https://www.istruzionelaspezia.gov.it/pagine/interpelli-1": {
-"grezzi": 23,
-"scartati": [
-"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
-"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-",
-"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
-"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-"
-],
-"provincia": "La Spezia",
-"avvisi": 1,
 "errore": null
 },
 "https://www.mim.gov.it/web/brescia/interpelli-ricerca-supplenti/": {
@@ -308,16 +303,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
-"grezzi": 92,
+"https://www.istruzionelaspezia.gov.it/pagine/interpelli-1": {
+"grezzi": 23,
 "scartati": [
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/news/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
+"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
+"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-",
+"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
+"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-"
 ],
-"provincia": "Ragusa",
-"avvisi": 51,
+"provincia": "La Spezia",
+"avvisi": 1,
 "errore": null
 },
 "https://www.istruzionepotenza.it/": {
