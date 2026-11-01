@@ -6,13 +6,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://monza.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Monza e Brianza",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
 "scartati": [],
@@ -34,6 +27,13 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://monza.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Monza e Brianza",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://rn.istruzioneer.gov.it/category/personale-docente/interpelli_docenti/": {
 "grezzi": 0,
 "scartati": [],
@@ -48,10 +48,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://pc.istruzioneer.gov.it/": {
+"https://atavellino.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Piacenza",
+"provincia": "Avellino",
 "avvisi": 0,
 "errore": null
 },
@@ -67,41 +67,29 @@
 "avvisi": 5,
 "errore": null
 },
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
-"grezzi": 0,
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 17,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
+"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/53ff9adb-c1a7-4d8f-a19c-fc32c80a2af3/candidatura",
+"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/3b825e43-f33b-4745-aaf8-5fbdba1e05db/candidatura",
+"https://nuvola.madisoft.it/interpelli/PCIC81700C/docenti"
+],
+"provincia": "Piacenza",
+"avvisi": 13,
+"errore": null
+},
+"https://fc.istruzioneer.gov.it/": {
+"grezzi": 6,
 "scartati": [],
-"provincia": "Arezzo",
-"avvisi": 0,
-"errore": "HTTP 500"
+"provincia": "Forlì-Cesena",
+"avvisi": 6,
+"errore": null
 },
 "https://www.csanuoro.it/wp2019/interpelli-as-2024-2025": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Nuoro",
-"avvisi": 0,
-"errore": null
-},
-"https://atavellino.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Avellino",
-"avvisi": 0,
-"errore": null
-},
-"https://ra.istruzioneer.gov.it/": {
-"grezzi": 13,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1222"
-],
-"provincia": "Ravenna",
-"avvisi": 11,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Crotone",
 "avvisi": 0,
 "errore": null
 },
@@ -112,6 +100,16 @@
 ],
 "provincia": "Messina",
 "avvisi": 13,
+"errore": null
+},
+"https://ra.istruzioneer.gov.it/": {
+"grezzi": 13,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1222"
+],
+"provincia": "Ravenna",
+"avvisi": 11,
 "errore": null
 },
 "http://www.usppesarourbino.it/": {
@@ -133,17 +131,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://fc.istruzioneer.gov.it/": {
-"grezzi": 12,
-"scartati": [],
-"provincia": "Forlì-Cesena",
-"avvisi": 12,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
+"https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Roma",
+"provincia": "Torino",
 "avvisi": 0,
 "errore": null
 },
@@ -154,12 +145,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.orizzontescuola.it/tag/interpelli/": {
+"https://www.istruzionepiemonte.it/matera-2019-percorsi-culturali-dalle-scuole-per-le-scuole/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": null,
+"provincia": "Matera",
 "avvisi": 0,
-"errore": "HTTP 403"
+"errore": null
 },
 "https://verona.istruzioneveneto.gov.it/": {
 "grezzi": 0,
@@ -168,26 +159,19 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/matera-2019-percorsi-culturali-dalle-scuole-per-le-scuole/": {
+"https://www.orizzontescuola.it/tag/interpelli/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
-"errore": null
-},
-"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Benevento",
+"provincia": null,
 "avvisi": 0,
 "errore": "HTTP 403"
+},
+"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Roma",
+"avvisi": 0,
+"errore": null
 },
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-annuali-classe-di-concorso-a041-e-a058/": {
 "grezzi": 3,
@@ -206,6 +190,13 @@
 "provincia": "Prato",
 "avvisi": 1,
 "errore": null
+},
+"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Benevento",
+"avvisi": 0,
+"errore": "HTTP 403"
 },
 "https://www.istruzioneatprc.it/category/recl/int/": {
 "grezzi": 20,
@@ -226,6 +217,25 @@
 "avvisi": 10,
 "errore": null
 },
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
+"grezzi": 18,
+"scartati": [
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2158-avviso-di-interpello-aric81100b-c-d-c-eeee",
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2156-avviso-di-interpello-aric81300e-c-d-c-adee",
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2155-avviso-di-interpello-aric842003-c-d-c-eeee",
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2154-avviso-di-interpello-aric81100b-cdc-eeee-a"
+],
+"provincia": "Arezzo",
+"avvisi": 3,
+"errore": null
+},
+"https://www.uat-caserta.it/category/segnalazioni-dalle-scuole/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Caserta",
+"avvisi": 0,
+"errore": null
+},
 "https://www.uspsi.it/": {
 "grezzi": 26,
 "scartati": [
@@ -236,25 +246,6 @@
 ],
 "provincia": "Siena",
 "avvisi": 20,
-"errore": null
-},
-"https://www.uat-caserta.it/category/segnalazioni-dalle-scuole/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Caserta",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
-"grezzi": 92,
-"scartati": [
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/news/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
-],
-"provincia": "Ragusa",
-"avvisi": 51,
 "errore": null
 },
 "https://www.uspascolipiceno.it/": {
@@ -269,14 +260,23 @@
 "avvisi": 11,
 "errore": null
 },
-"https://www.ustfoggia.it/": {
-"grezzi": 35,
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Crotone",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
+"https://www.mim.gov.it/web/brescia/interpelli-ricerca-supplenti/": {
+"grezzi": 6,
 "scartati": [
-"https://www.ustfoggia.it/category/albo-pretorio/",
-"https://www.ustfoggia.it/category/news/"
+"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-pontevico-scuola-infanzia-posto-sostegno-12",
+"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-pontevico-scuola-infanzia-posto-sostegno-12",
+"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-marcheno-classe-di-concorso-a028",
+"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-gavardo-classe-di-concorso-posto-comune-scu"
 ],
-"provincia": "Foggia",
-"avvisi": 33,
+"provincia": "Brescia",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ustms.it/": {
@@ -291,18 +291,6 @@
 "avvisi": 24,
 "errore": null
 },
-"https://www.mim.gov.it/web/brescia/interpelli-ricerca-supplenti/": {
-"grezzi": 6,
-"scartati": [
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-pontevico-scuola-infanzia-posto-sostegno-12",
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-pontevico-scuola-infanzia-posto-sostegno-12",
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-marcheno-classe-di-concorso-a028",
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-gavardo-classe-di-concorso-posto-comune-scu"
-],
-"provincia": "Brescia",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionelaspezia.gov.it/pagine/interpelli-1": {
 "grezzi": 23,
 "scartati": [
@@ -313,6 +301,28 @@
 ],
 "provincia": "La Spezia",
 "avvisi": 1,
+"errore": null
+},
+"https://www.ustfoggia.it/": {
+"grezzi": 35,
+"scartati": [
+"https://www.ustfoggia.it/category/albo-pretorio/",
+"https://www.ustfoggia.it/category/news/"
+],
+"provincia": "Foggia",
+"avvisi": 33,
+"errore": null
+},
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
+"grezzi": 92,
+"scartati": [
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/news/",
+"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
+],
+"provincia": "Ragusa",
+"avvisi": 51,
 "errore": null
 },
 "https://www.istruzionepotenza.it/": {
