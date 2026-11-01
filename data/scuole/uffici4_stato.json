@@ -6,12 +6,26 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://atptorino.com/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
+},
 "https://pavia.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Pavia",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://pr.istruzioneer.gov.it/interpelli-2/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Parma",
+"avvisi": 0,
+"errore": "HTTP 404"
 },
 "https://istruzione.umbria.it/": {
 "grezzi": 8,
@@ -25,26 +39,12 @@
 "avvisi": 2,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/interpelli-2/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Parma",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Sondrio",
 "avvisi": 0,
 "errore": "SSLError"
-},
-"https://atptorino.com/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
-"errore": null
 },
 "https://lnx.csalatina.it/": {
 "grezzi": 10,
@@ -56,6 +56,18 @@
 ],
 "provincia": "Latina",
 "avvisi": 5,
+"errore": null
+},
+"https://rn.istruzioneer.gov.it/": {
+"grezzi": 23,
+"scartati": [
+"https://rn.istruzioneer.gov.it/category/personale-docente/interpelli-docenti-2026-2027/",
+"https://rn.istruzioneer.gov.it/category/personale-docente/",
+"https://rn.istruzioneer.gov.it/category/personale-docente/primaria/",
+"https://rn.istruzioneer.gov.it/category/personale-docente/secondaria-secondo-grado/"
+],
+"provincia": "Rimini",
+"avvisi": 18,
 "errore": null
 },
 "https://venezia.istruzioneveneto.gov.it/argomenti/personale/docenti/interpelli/": {
@@ -74,18 +86,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://rn.istruzioneer.gov.it/": {
-"grezzi": 23,
-"scartati": [
-"https://rn.istruzioneer.gov.it/category/personale-docente/interpelli-docenti-2026-2027/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/primaria/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/secondaria-secondo-grado/"
-],
-"provincia": "Rimini",
-"avvisi": 18,
-"errore": null
-},
 "https://www.csanuoro.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -93,8 +93,15 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzione.umbria.it/feed/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
+"errore": null
+},
 "https://mo.istruzioneer.gov.it/": {
-"grezzi": 30,
+"grezzi": 35,
 "scartati": [
 "https://mo.istruzioneer.gov.it/",
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
@@ -102,14 +109,7 @@
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
 ],
 "provincia": "Modena",
-"avvisi": 25,
-"errore": null
-},
-"https://www.istruzione.umbria.it/feed/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
+"avvisi": 28,
 "errore": null
 },
 "https://www.istruzione.calabria.it/": {
@@ -123,6 +123,13 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Cuneo",
+"avvisi": 0,
+"errore": null
+},
+"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Gorizia",
 "avvisi": 0,
 "errore": null
 },
@@ -145,24 +152,10 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Gorizia",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/le-nostre-scuole/asti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Asti",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/palermo-chiama-italia-23-maggio-2019/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Palermo",
 "avvisi": 0,
 "errore": null
 },
@@ -175,6 +168,13 @@
 "https://ct.usr.sicilia.it/disponibilita-e-accantonamenti-prima-dei-movimenti-a-s-2026-2027/"
 ],
 "provincia": "Catania",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/palermo-chiama-italia-23-maggio-2019/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Palermo",
 "avvisi": 0,
 "errore": null
 },
@@ -197,15 +197,8 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://www.usp-rieti.it/it/302-docenti/interpelli-supplenze-altre-province.html": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://bo.istruzioneer.gov.it/tag/interpello/": {
-"grezzi": 20,
+"grezzi": 18,
 "scartati": [
 "https://bo.istruzioneer.gov.it/",
 "https://bo.istruzioneer.gov.it/category/infanzia/",
@@ -215,6 +208,13 @@
 "provincia": "Bologna",
 "avvisi": 2,
 "errore": null
+},
+"https://www.usp-rieti.it/it/302-docenti/interpelli-supplenze-altre-province.html": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 0,
+"errore": "HTTP 404"
 },
 "https://treviso.istruzioneveneto.gov.it/": {
 "grezzi": 0,
@@ -249,17 +249,12 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
-"https://www.usr.sicilia.it/": {
-"grezzi": 41,
-"scartati": [
-"https://www.usr.sicilia.it/scuola-in-sicilia-al-via-lanno-scolastico-con-docenti-e-personale-gia-in-servizio-c",
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/news/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
-],
-"provincia": "Ragusa",
-"avvisi": 24,
-"errore": null
+"http://www.uspmc.sinp.net/documenti-uspmc-cms/?cat-documenti-uspmc=reclutamento-pd": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
 },
 "https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
 "grezzi": 43,
@@ -273,13 +268,6 @@
 "avvisi": 8,
 "errore": null
 },
-"http://www.uspmc.sinp.net/documenti-uspmc-cms/?cat-documenti-uspmc=reclutamento-pd": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
 "https://www.mim.gov.it/web/varese/": {
 "grezzi": 161,
 "scartati": [
@@ -292,15 +280,23 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/": {
-"grezzi": 32,
+"https://www.usr.sicilia.it/": {
+"grezzi": 41,
 "scartati": [
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/generale/",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/interpelli-docenti/"
+"https://www.usr.sicilia.it/scuola-in-sicilia-al-via-lanno-scolastico-con-docenti-e-personale-gia-in-servizio-c",
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/news/",
+"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
 ],
-"provincia": "Pistoia",
-"avvisi": 29,
+"provincia": "Ragusa",
+"avvisi": 24,
+"errore": null
+},
+"https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ust.fi.it/mese/interpelli/": {
@@ -315,11 +311,15 @@
 "avvisi": 20,
 "errore": null
 },
-"https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/": {
+"grezzi": 32,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/generale/",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/interpelli-docenti/"
+],
+"provincia": "Pistoia",
+"avvisi": 29,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/vercelli/": {
