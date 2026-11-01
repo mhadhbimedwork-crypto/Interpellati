@@ -13,6 +13,31 @@
    ]
   ]
  },
+ "AGIC82900G": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "ConnectTimeout",
+  "motivo": "il server non risponde (spento o blocca l'estero)",
+  "sito": "https://www.icrapisardi.edu.it/",
+  "tentativi": [
+   [
+    "https://www.icrapisardi.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://www.icrapisardi.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "https://icrapisardi.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://icrapisardi.edu.it/",
+    "ConnectTimeout"
+   ]
+  ]
+ },
  "AGIC833007": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -34,47 +59,6 @@
    ],
    [
     "http://istitutocomprensivoleopardi.edu.it/",
-    "HTTP 403"
-   ]
-  ]
- },
- "AGIC86400V": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "HTTP 202",
-  "motivo": "risponde ma con errore: HTTP 520",
-  "sito": "https://icrosariolivatinoportoempedocle.it/",
-  "tentativi": [
-   [
-    "https://www.icrosariolivatinoportoempedocle.it/",
-    "HTTP 520"
-   ],
-   [
-    "http://www.icrosariolivatinoportoempedocle.it/",
-    "HTTP 520"
-   ],
-   [
-    "https://icrosariolivatinoportoempedocle.it/",
-    "HTTP 520"
-   ],
-   [
-    "http://icrosariolivatinoportoempedocle.it/",
-    "HTTP 520"
-   ],
-   [
-    "https://www.icrosariolivatinoportoempedocle.edu.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://www.icrosariolivatinoportoempedocle.edu.it/",
-    "HTTP 403"
-   ],
-   [
-    "https://icrosariolivatinoportoempedocle.edu.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://icrosariolivatinoportoempedocle.edu.it/",
     "HTTP 403"
    ]
   ]
@@ -1246,7 +1230,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "senza sito MIM",
-  "motivo": "risponde ma con errore: pagina non scolastica",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icmattarellabonagia.it/",
   "sito": "https://www.icmattarellabonagia.edu.it/",
   "tentativi": [
    [
@@ -1267,19 +1252,7 @@
    ],
    [
     "https://www.icmattarellabonagia.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://www.icmattarellabonagia.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "https://icmattarellabonagia.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://icmattarellabonagia.it/",
-    "ConnectTimeout"
+    "OK"
    ]
   ]
  },
@@ -1400,7 +1373,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icvittorinisolarino.edu.it/",
   "sito": "https://www.icvittorinisolarino.edu.it/",
   "tentativi": [
    [
@@ -1413,11 +1387,7 @@
    ],
    [
     "https://icvittorinisolarino.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icvittorinisolarino.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1450,8 +1420,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.iissgagini.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.iissgagini.edu.it/",
   "tentativi": [
    [
@@ -1460,7 +1429,15 @@
    ],
    [
     "http://www.iissgagini.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://iissgagini.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://iissgagini.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -1545,31 +1522,6 @@
   "motivo": "dominio inesistente (sito dismesso o cambiato)",
   "sito": "https://www.scuolasturzo.gov.it/",
   "tentativi": []
- },
- "TPIC83700X": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "HTTP 202",
-  "motivo": "il server non risponde (spento o blocca l'estero)",
-  "sito": "https://icdantealighierivalderice.edu.it/",
-  "tentativi": [
-   [
-    "https://www.icdantealighierivalderice.edu.it/",
-    "ConnectionError"
-   ],
-   [
-    "http://www.icdantealighierivalderice.edu.it/",
-    "ConnectionError"
-   ],
-   [
-    "https://icdantealighierivalderice.edu.it/",
-    "ConnectionError"
-   ],
-   [
-    "http://icdantealighierivalderice.edu.it/",
-    "ConnectionError"
-   ]
-  ]
  },
  "TPIS031005": {
   "dns_pubblico": "si",
