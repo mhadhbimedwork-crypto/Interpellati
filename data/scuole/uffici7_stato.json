@@ -6,6 +6,13 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Terni",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
 "https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
@@ -20,18 +27,23 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Terni",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://rn.istruzioneer.gov.it/feed/": {
 "grezzi": 8,
 "scartati": [],
 "provincia": "Rimini",
 "avvisi": 8,
+"errore": null
+},
+"https://atcampobasso.it/": {
+"grezzi": 10,
+"scartati": [
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-supplen",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-sup",
+"https://atcampobasso.it/"
+],
+"provincia": "Campobasso",
+"avvisi": 2,
 "errore": null
 },
 "https://belluno.istruzioneveneto.gov.it/category/news/area-amministrativa/interpelli/": {
@@ -47,18 +59,6 @@
 "provincia": "Salerno",
 "avvisi": 0,
 "errore": "SSLError"
-},
-"https://atcampobasso.it/": {
-"grezzi": 10,
-"scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-supplen",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-sup",
-"https://atcampobasso.it/"
-],
-"provincia": "Campobasso",
-"avvisi": 2,
-"errore": null
 },
 "https://sr.usr.sicilia.it/tag/interpelli/": {
 "grezzi": 3,
@@ -95,13 +95,6 @@
 "avvisi": 13,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/": {
-"grezzi": 25,
-"scartati": [],
-"provincia": "Caltanissetta",
-"avvisi": 25,
-"errore": null
-},
 "https://me.usr.sicilia.it/": {
 "grezzi": 14,
 "scartati": [
@@ -109,6 +102,20 @@
 ],
 "provincia": "Messina",
 "avvisi": 13,
+"errore": null
+},
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vibo Valentia",
+"avvisi": 0,
+"errore": null
+},
+"https://cl-en.usr.sicilia.it/": {
+"grezzi": 25,
+"scartati": [],
+"provincia": "Caltanissetta",
+"avvisi": 25,
 "errore": null
 },
 "https://www.istruzionelaspezia.it/": {
@@ -122,13 +129,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Vercelli",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vibo Valentia",
 "avvisi": 0,
 "errore": null
 },
@@ -184,6 +184,13 @@
 "avvisi": 23,
 "errore": null
 },
+"https://www.ufficioscolasticoprovinciale.prato.it/": {
+"grezzi": 1,
+"scartati": [],
+"provincia": "Prato",
+"avvisi": 1,
+"errore": null
+},
 "https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
 "grezzi": 22,
 "scartati": [
@@ -196,13 +203,6 @@
 "avvisi": 6,
 "errore": null
 },
-"https://www.ufficioscolasticoprovinciale.prato.it/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": "Prato",
-"avvisi": 1,
-"errore": null
-},
 "https://www.istruzionebat.it/": {
 "grezzi": 113,
 "scartati": [
@@ -213,23 +213,6 @@
 ],
 "provincia": "Barletta-Andria-Trani",
 "avvisi": 1,
-"errore": null
-},
-"https://www.mim.gov.it/web/campobasso/interpelli/": {
-"grezzi": 4,
-"scartati": [
-"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i",
-"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i"
-],
-"provincia": "Campobasso",
-"avvisi": 2,
-"errore": null
-},
-"https://www.uspcagliari.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cagliari",
-"avvisi": 0,
 "errore": null
 },
 "https://www.usr.sicilia.it/feed/": {
@@ -246,11 +229,35 @@
 "avvisi": 5,
 "errore": null
 },
+"https://www.uspcagliari.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cagliari",
+"avvisi": 0,
+"errore": null
+},
+"https://www.mim.gov.it/web/campobasso/interpelli/": {
+"grezzi": 4,
+"scartati": [
+"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i",
+"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i"
+],
+"provincia": "Campobasso",
+"avvisi": 2,
+"errore": null
+},
 "https://www.vivoscuola.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Trento",
 "avvisi": 0,
+"errore": null
+},
+"https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
+"grezzi": 10,
+"scartati": [],
+"provincia": "Pescara",
+"avvisi": 10,
 "errore": null
 },
 "https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
@@ -265,13 +272,6 @@
 "avvisi": 11,
 "errore": null
 },
-"https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
-"grezzi": 10,
-"scartati": [],
-"provincia": "Pescara",
-"avvisi": 10,
-"errore": null
-},
 "https://www.uspsi.it/?cat=264": {
 "grezzi": 17,
 "scartati": [
@@ -282,30 +282,6 @@
 ],
 "provincia": "Siena",
 "avvisi": 11,
-"errore": null
-},
-"https://www.uspascolipiceno.it/wordpress/": {
-"grezzi": 20,
-"scartati": [
-"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
-"https://www.uspascolipiceno.it/wordpress/category/disponibilita/",
-"https://www.uspascolipiceno.it/wordpress/category/disponibilita/disponibilita-supplenze/",
-"https://www.uspascolipiceno.it/wordpress/tag/disponibilita-supplenze/"
-],
-"provincia": "Ascoli Piceno",
-"avvisi": 11,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/torino/": {
-"grezzi": 65,
-"scartati": [
-"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a018/"
-],
-"provincia": "Torino",
-"avvisi": 28,
 "errore": null
 },
 "https://www.uat-napoli.it/": {
@@ -320,6 +296,18 @@
 "avvisi": 41,
 "errore": null
 },
+"https://www.uspascolipiceno.it/wordpress/": {
+"grezzi": 20,
+"scartati": [
+"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
+"https://www.uspascolipiceno.it/wordpress/category/disponibilita/",
+"https://www.uspascolipiceno.it/wordpress/category/disponibilita/disponibilita-supplenze/",
+"https://www.uspascolipiceno.it/wordpress/tag/disponibilita-supplenze/"
+],
+"provincia": "Ascoli Piceno",
+"avvisi": 11,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
 "grezzi": 23,
 "scartati": [
@@ -330,6 +318,18 @@
 ],
 "provincia": "Cuneo",
 "avvisi": 16,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/torino/": {
+"grezzi": 65,
+"scartati": [
+"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a018/"
+],
+"provincia": "Torino",
+"avvisi": 28,
 "errore": null
 }
 }
