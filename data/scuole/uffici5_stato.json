@@ -1,4 +1,11 @@
 {
+"https://atptorino.com/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
+},
 "https://mantova.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -13,13 +20,6 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://lnx.csalatina.it/": {
-"grezzi": 2,
-"scartati": [],
-"provincia": "Latina",
-"avvisi": 2,
-"errore": null
-},
 "https://pr.istruzioneer.gov.it/interpelli-2/": {
 "grezzi": 0,
 "scartati": [],
@@ -27,11 +27,11 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"http://www.uspms.it/": {
-"grezzi": 0,
+"https://lnx.csalatina.it/": {
+"grezzi": 2,
 "scartati": [],
-"provincia": "Massa-Carrara",
-"avvisi": 0,
+"provincia": "Latina",
+"avvisi": 2,
 "errore": null
 },
 "https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
@@ -40,6 +40,13 @@
 "provincia": "Sondrio",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"http://www.uspms.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Massa-Carrara",
+"avvisi": 0,
+"errore": null
 },
 "https://istruzione.umbria.it/": {
 "grezzi": 6,
@@ -51,13 +58,6 @@
 ],
 "provincia": "Perugia",
 "avvisi": 2,
-"errore": null
-},
-"https://atptorino.com/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
 "errore": null
 },
 "https://win.istruzioneverona.it/uspvr/index.php/interpelli-docenti/": {
@@ -86,20 +86,25 @@
 "https://rn.istruzioneer.gov.it/": {
 "grezzi": 25,
 "scartati": [
+"https://rn.istruzioneer.gov.it/2026/11/02/turno-ix-nomine-a-tempo-determinato-da-gae-gps-a-s-2026-27-personale",
 "https://rn.istruzioneer.gov.it/category/personale-docente/interpelli-docenti-2026-2027/",
 "https://rn.istruzioneer.gov.it/category/personale-docente/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/primaria/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/secondaria-secondo-grado/"
+"https://rn.istruzioneer.gov.it/category/personale-docente/primaria/"
 ],
 "provincia": "Rimini",
-"avvisi": 20,
+"avvisi": 19,
 "errore": null
 },
-"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Gorizia",
-"avvisi": 0,
+"https://mo.istruzioneer.gov.it/": {
+"grezzi": 42,
+"scartati": [
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
+],
+"provincia": "Modena",
+"avvisi": 33,
 "errore": null
 },
 "https://www.istruzioneimperia.gov.it/": {
@@ -116,34 +121,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://mo.istruzioneer.gov.it/": {
-"grezzi": 42,
-"scartati": [
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
-],
-"provincia": "Modena",
-"avvisi": 33,
-"errore": null
-},
-"https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
-"grezzi": 35,
-"scartati": [
-"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso A044 – I.",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
-"https://cl-en.usr.sicilia.it/category/news/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
-],
-"provincia": null,
-"avvisi": 7,
-"errore": null
-},
-"https://treviso.istruzioneveneto.gov.it/": {
+"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Treviso",
+"provincia": "Gorizia",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/latina-didaxis-xxxvi-2023-composizione-nominale-e-giochi-di-parole-nella-cultura-latina/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Latina",
 "avvisi": 0,
 "errore": null
 },
@@ -159,6 +147,25 @@
 "avvisi": 0,
 "errore": null
 },
+"https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
+"grezzi": 34,
+"scartati": [
+"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso A044 – I.",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
+"https://cl-en.usr.sicilia.it/category/news/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
+],
+"provincia": null,
+"avvisi": 6,
+"errore": null
+},
+"https://treviso.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Treviso",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionesavona.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -166,15 +173,8 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/latina-didaxis-xxxvi-2023-composizione-nominale-e-giochi-di-parole-nella-cultura-latina/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Latina",
-"avvisi": 0,
-"errore": null
-},
 "https://bo.istruzioneer.gov.it/tag/interpello/": {
-"grezzi": 23,
+"grezzi": 21,
 "scartati": [
 "https://bo.istruzioneer.gov.it/",
 "https://bo.istruzioneer.gov.it/category/infanzia/",
@@ -197,23 +197,23 @@
 "avvisi": 0,
 "errore": null
 },
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
+"grezzi": 61,
+"scartati": [
+"https://ag.usr.sicilia.it/interpello-per-supplenza-su-classe-di-con-corso-as12-italiano-progetto-progressi-lin",
+"https://ag.usr.sicilia.it/interpello-per-supplenza-su-classe-di-con-corso-as12-italiano-progetto-progressi-lin",
+"https://twitter.com/home?status=Interpello per supplenza su classe di con-corso AS12 – ITALIANO (Progetto Prog",
+"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/"
+],
+"provincia": "Agrigento",
+"avvisi": 26,
+"errore": null
+},
 "https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Bolzano",
 "avvisi": 0,
-"errore": null
-},
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
-"grezzi": 72,
-"scartati": [
-"https://twitter.com/home?status=Interpello Nazionale – Supplenza al termine delle attività didattiche su class",
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/",
-"https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/nazionale/",
-"https://twitter.com/home?status=3° Interpello Nazionale per supplenza su classe di concorso BD02 – Conversazio"
-],
-"provincia": "Agrigento",
-"avvisi": 31,
 "errore": null
 },
 "https://www.istruzionebrindisi.it/category/interpelli/": {
@@ -229,10 +229,12 @@
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.prato.it/": {
-"grezzi": 2,
-"scartati": [],
+"grezzi": 8,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.prato.it/Mese/novita/"
+],
 "provincia": "Prato",
-"avvisi": 2,
+"avvisi": 7,
 "errore": null
 },
 "https://www.uspcagliari.it/": {
@@ -255,10 +257,10 @@
 "errore": null
 },
 "https://www.usr.sicilia.it/feed/": {
-"grezzi": 2,
+"grezzi": 4,
 "scartati": [],
 "provincia": null,
-"avvisi": 2,
+"avvisi": 4,
 "errore": null
 },
 "https://www.ustfoggia.it/feed/": {
@@ -275,16 +277,27 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.uspsi.it/?cat=264": {
-"grezzi": 22,
+"https://www.mim.gov.it/web/nuoro/": {
+"grezzi": 15,
 "scartati": [
-"https://www.uspsi.it/uspsiena/albo/",
-"https://www.uspsi.it/uspsiena/docenti/",
-"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
-"https://www.uspsi.it/uspsiena/news/"
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-nazionale",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-nazionale-per-supple",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-nazionale-per-su",
+"https://www.mim.gov.it/web/nuoro/"
 ],
-"provincia": "Siena",
-"avvisi": 15,
+"provincia": "Nuoro",
+"avvisi": 2,
+"errore": null
+},
+"https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
+"grezzi": 32,
+"scartati": [
+"https://www.uat-napoli.it/category/docenti/",
+"https://www.uat-napoli.it/tag/avvisi/",
+"https://www.uat-napoli.it/tag/interpelli-personale-docente/"
+],
+"provincia": "Napoli",
+"avvisi": 29,
 "errore": null
 },
 "https://www.mim.gov.it/web/como/": {
@@ -294,15 +307,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
-"grezzi": 35,
+"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
+"grezzi": 17,
 "scartati": [
-"https://www.uat-napoli.it/category/docenti/",
-"https://www.uat-napoli.it/tag/avvisi/",
-"https://www.uat-napoli.it/tag/interpelli-personale-docente/"
+"https://www.istruzionepiemonte.it/biella/1-interpello-per-supplenza-su-classe-di-con-corso-as12-italiano-proge",
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/biella/category/docenti/"
 ],
-"provincia": "Napoli",
-"avvisi": 32,
+"provincia": "Biella",
+"avvisi": 8,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/": {
@@ -317,16 +331,14 @@
 "avvisi": 11,
 "errore": null
 },
-"https://www.mim.gov.it/web/nuoro/": {
-"grezzi": 15,
+"https://www.uspsi.it/?cat=264": {
+"grezzi": 21,
 "scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-nazionale",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-nazionale-per-supple",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-nazionale-per-su",
-"https://www.mim.gov.it/web/nuoro/"
+"https://www.uspsi.it/2026/11/",
+"https://www.uspsi.it/2026/10/"
 ],
-"provincia": "Nuoro",
-"avvisi": 2,
+"provincia": "Siena",
+"avvisi": 19,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
@@ -348,28 +360,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
-"grezzi": 17,
-"scartati": [
-"https://www.istruzionepiemonte.it/biella/1-interpello-per-supplenza-su-classe-di-con-corso-as12-italiano-proge",
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/biella/category/docenti/"
-],
-"provincia": "Biella",
-"avvisi": 8,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/": {
-"grezzi": 68,
+"grezzi": 61,
 "scartati": [
 "https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
-"https://www.istruzionepiemonte.it/torino/category/docenti/",
+"https://www.istruzionepiemonte.it/torino/category/ata/",
 "https://www.istruzionepiemonte.it/torino/tag/incarico-interpello/",
 "https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
 ],
 "provincia": "Torino",
-"avvisi": 37,
+"avvisi": 27,
 "errore": null
 }
 }
