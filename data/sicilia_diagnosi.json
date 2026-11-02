@@ -1020,6 +1020,20 @@
    ]
   ]
  },
+ "MEIC876009": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 403",
+  "motivo": "recuperato",
+  "nuovo": "https://ictorregrotta.edu.it/",
+  "sito": "https://ictorregrotta.edu.it/",
+  "tentativi": [
+   [
+    "https://www.ictorregrotta.edu.it/",
+    "OK"
+   ]
+  ]
+ },
  "MEIC88600X": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -1373,8 +1387,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icvittorinisolarino.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icvittorinisolarino.edu.it/",
   "tentativi": [
    [
@@ -1387,7 +1400,11 @@
    ],
    [
     "https://icvittorinisolarino.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://icvittorinisolarino.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -1494,7 +1511,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.marionuccio.edu.it/",
   "sito": "https://www.marionuccio.edu.it/",
   "tentativi": [
    [
@@ -1511,7 +1529,7 @@
    ],
    [
     "http://marionuccio.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1522,6 +1540,31 @@
   "motivo": "dominio inesistente (sito dismesso o cambiato)",
   "sito": "https://www.scuolasturzo.gov.it/",
   "tentativi": []
+ },
+ "TPIC82600D": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "SSLError",
+  "motivo": "risponde ma con errore: pagina non scolastica",
+  "sito": "https://www.icgiuseppemontalto.edu.it/",
+  "tentativi": [
+   [
+    "https://www.icgiuseppemontalto.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.icgiuseppemontalto.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://icgiuseppemontalto.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://icgiuseppemontalto.edu.it/",
+    "pagina non scolastica"
+   ]
+  ]
  },
  "TPIS031005": {
   "dns_pubblico": "si",
@@ -1593,8 +1636,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceoruggierimarsala.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceoruggierimarsala.edu.it/",
   "tentativi": [
    [
@@ -1603,7 +1645,15 @@
    ],
    [
     "http://www.liceoruggierimarsala.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://liceoruggierimarsala.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://liceoruggierimarsala.edu.it/",
+    "HTTP 509"
    ]
   ]
  }
