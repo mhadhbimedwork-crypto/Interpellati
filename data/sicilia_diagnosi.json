@@ -656,6 +656,36 @@
    ]
   ]
  },
+ "CTIC880006": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "ReadTimeout",
+  "motivo": "recuperato",
+  "nuovo": "https://www.istitutocomprensivofeltre.it/",
+  "sito": "https://www.icfeltre.it/",
+  "tentativi": [
+   [
+    "https://www.icfeltre.it/",
+    "ReadTimeout"
+   ],
+   [
+    "http://www.icfeltre.it/",
+    "ReadTimeout"
+   ],
+   [
+    "https://icfeltre.it/",
+    "ReadTimeout"
+   ],
+   [
+    "http://icfeltre.it/",
+    "ReadTimeout"
+   ],
+   [
+    "https://www.icfeltre.edu.it/",
+    "OK"
+   ]
+  ]
+ },
  "CTIC881002": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -754,40 +784,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "ConnectTimeout",
-  "motivo": "il server non risponde (spento o blocca l'estero)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.majoranascordia.edu.it/",
   "sito": "https://www.majoranascordia.edu.it/",
   "tentativi": [
    [
     "https://www.majoranascordia.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://www.majoranascordia.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "https://majoranascordia.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://majoranascordia.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "https://www.majoranascordia.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://www.majoranascordia.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "https://majoranascordia.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://majoranascordia.it/",
-    "ConnectTimeout"
+    "OK"
    ]
   ]
  },
@@ -1020,20 +1023,6 @@
    ]
   ]
  },
- "MEIC876009": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "HTTP 403",
-  "motivo": "recuperato",
-  "nuovo": "https://ictorregrotta.edu.it/",
-  "sito": "https://ictorregrotta.edu.it/",
-  "tentativi": [
-   [
-    "https://www.ictorregrotta.edu.it/",
-    "OK"
-   ]
-  ]
- },
  "MEIC88600X": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -1138,47 +1127,6 @@
    [
     "http://icvillafratimezzojuso.edu.it/",
     "pagina non scolastica"
-   ]
-  ]
- },
- "PAIC83000N": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "SSLError",
-  "motivo": "risponde ma con errore: pagina non scolastica",
-  "sito": "https://www.icpetraliasoprana.edu.it/",
-  "tentativi": [
-   [
-    "https://www.icpetraliasoprana.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.icpetraliasoprana.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://icpetraliasoprana.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://icpetraliasoprana.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://www.icpetraliasoprana.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://www.icpetraliasoprana.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "https://icpetraliasoprana.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://icpetraliasoprana.it/",
-    "ConnectTimeout"
    ]
   ]
  },
@@ -1387,7 +1335,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icvittorinisolarino.edu.it/",
   "sito": "https://www.icvittorinisolarino.edu.it/",
   "tentativi": [
    [
@@ -1404,7 +1353,7 @@
    ],
    [
     "http://icvittorinisolarino.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1511,8 +1460,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.marionuccio.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.marionuccio.edu.it/",
   "tentativi": [
    [
@@ -1529,7 +1477,7 @@
    ],
    [
     "http://marionuccio.edu.it/",
-    "OK"
+    "HTTP 509"
    ]
   ]
  },
@@ -1636,7 +1584,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceoruggierimarsala.edu.it/",
   "sito": "https://www.liceoruggierimarsala.edu.it/",
   "tentativi": [
    [
@@ -1645,15 +1594,7 @@
    ],
    [
     "http://www.liceoruggierimarsala.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://liceoruggierimarsala.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://liceoruggierimarsala.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  }
