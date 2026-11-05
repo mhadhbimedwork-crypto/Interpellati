@@ -6,13 +6,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
 "grezzi": 0,
 "scartati": [],
@@ -20,10 +13,10 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://milano.istruzionelombardia.gov.it/": {
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Milano",
+"provincia": "Lecco",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -31,6 +24,13 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://milano.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -42,10 +42,13 @@
 "errore": "HTTP 404"
 },
 "https://re.istruzioneer.gov.it/": {
-"grezzi": 9,
-"scartati": [],
+"grezzi": 22,
+"scartati": [
+"https://re.istruzioneer.gov.it/category/docenti/",
+"https://re.istruzioneer.gov.it/category/docenti/interpello/"
+],
 "provincia": "Reggio Emilia",
-"avvisi": 9,
+"avvisi": 20,
 "errore": null
 },
 "https://varese.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti-2/": {
@@ -67,18 +70,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 22,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PRIC833007/docenti/86b09212-fe44-494f-a3d7-331f42e4f5bc/candidatura",
-"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/e017355c-ec41-4ab5-b41a-6624976db164/candidatura",
-"https://nuvola.madisoft.it/interpelli/PRIC83200B/docenti",
-"https://www.portaleargo.it/albopretorio/online/"
-],
-"provincia": "Parma",
-"avvisi": 6,
-"errore": null
-},
 "https://uspistruzione.fr.it/wp2/": {
 "grezzi": 21,
 "scartati": [
@@ -89,6 +80,18 @@
 ],
 "provincia": "Frosinone",
 "avvisi": 14,
+"errore": null
+},
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 22,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PRIC833007/docenti/86b09212-fe44-494f-a3d7-331f42e4f5bc/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/e017355c-ec41-4ab5-b41a-6624976db164/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC83200B/docenti",
+"https://www.portaleargo.it/albopretorio/online/"
+],
+"provincia": "Parma",
+"avvisi": 6,
 "errore": null
 },
 "https://padova.istruzioneveneto.gov.it/": {
@@ -110,13 +113,6 @@
 "avvisi": 23,
 "errore": null
 },
-"https://www.istruzionegenova.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
-"errore": null
-},
 "https://rovigo.istruzioneveneto.gov.it/": {
 "grezzi": 20,
 "scartati": [
@@ -124,6 +120,32 @@
 ],
 "provincia": "Rovigo",
 "avvisi": 19,
+"errore": null
+},
+"https://www.istruzionegenova.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Genova",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vercelli",
+"avvisi": 0,
+"errore": null
+},
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 105,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+],
+"provincia": "Ferrara",
+"avvisi": 71,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
@@ -138,17 +160,12 @@
 "avvisi": 27,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vercelli",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Napoli",
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 1,
+"scartati": [
+"https://vicenza.istruzioneveneto.gov.it/2026/11/02/avviso-assunzioni-in-ruolo-del-personale-docente-della-scuo"
+],
+"provincia": "Vicenza",
 "avvisi": 0,
 "errore": null
 },
@@ -159,24 +176,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 111,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
-],
-"provincia": "Ferrara",
-"avvisi": 73,
-"errore": null
-},
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 1,
-"scartati": [
-"https://vicenza.istruzioneveneto.gov.it/2026/11/02/avviso-assunzioni-in-ruolo-del-personale-docente-della-scuo"
-],
-"provincia": "Vicenza",
+"https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Napoli",
 "avvisi": 0,
 "errore": null
 },
@@ -185,18 +188,6 @@
 "scartati": [],
 "provincia": "Rovigo",
 "avvisi": 0,
-"errore": null
-},
-"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
-"grezzi": 124,
-"scartati": [
-"https://www.atpromaistruzione.it/atp/tag/interpelli/",
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/tag/a042/",
-"https://www.atpromaistruzione.it/atp/tag/aaaa/"
-],
-"provincia": "Roma",
-"avvisi": 16,
 "errore": null
 },
 "https://www.istruzione.calabria.it/catanzaro/category/nca/": {
@@ -213,12 +204,17 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
-"http://www.uspmc.sinp.net/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
+"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
+"grezzi": 124,
+"scartati": [
+"https://www.atpromaistruzione.it/atp/tag/interpelli/",
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
+"https://www.atpromaistruzione.it/atp/tag/a042/",
+"https://www.atpromaistruzione.it/atp/tag/aaaa/"
+],
+"provincia": "Roma",
+"avvisi": 16,
+"errore": null
 },
 "https://www.istruzionebat.it/category/interpello/": {
 "grezzi": 56,
@@ -232,6 +228,20 @@
 "avvisi": 0,
 "errore": null
 },
+"http://www.uspmc.sinp.net/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
+"https://www.uspbenevento.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Benevento",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
 "https://www.csateramo.it/wpusp/archive/category/news": {
 "grezzi": 37,
 "scartati": [
@@ -243,13 +253,6 @@
 "provincia": "Teramo",
 "avvisi": 18,
 "errore": null
-},
-"https://www.uspbenevento.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Benevento",
-"avvisi": 0,
-"errore": "HTTP 403"
 },
 "https://www.mim.gov.it/web/isernia/": {
 "grezzi": 16,
@@ -270,20 +273,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.uat-caserta.it/category/segnalazioni-dalle-scuole/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": "Caserta",
-"avvisi": 1,
-"errore": null
-},
-"https://www.ustli.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Livorno",
-"avvisi": 0,
-"errore": "HTTP 403"
-},
 "https://www.mim.gov.it/web/cagliari/": {
 "grezzi": 22,
 "scartati": [
@@ -296,28 +285,18 @@
 "avvisi": 6,
 "errore": null
 },
-"https://www.uspascolipiceno.it/": {
-"grezzi": 15,
-"scartati": [
-"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
-"https://www.uspascolipiceno.it/wordpress/category/disponibilita/",
-"https://www.uspascolipiceno.it/wordpress/category/disponibilita/disponibilita-supplenze/",
-"https://www.uspascolipiceno.it/wordpress/tag/disponibilita-supplenze/"
-],
-"provincia": "Ascoli Piceno",
-"avvisi": 6,
-"errore": null
+"https://www.ustli.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Livorno",
+"avvisi": 0,
+"errore": "HTTP 403"
 },
-"https://www.istruzionepiemonte.it/torino/": {
-"grezzi": 69,
-"scartati": [
-"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a018/"
-],
-"provincia": "Torino",
-"avvisi": 32,
+"https://www.uat-caserta.it/category/segnalazioni-dalle-scuole/": {
+"grezzi": 1,
+"scartati": [],
+"provincia": "Caserta",
+"avvisi": 1,
 "errore": null
 },
 "https://www.uspsi.it/": {
@@ -342,6 +321,30 @@
 ],
 "provincia": "Cuneo",
 "avvisi": 17,
+"errore": null
+},
+"https://www.uspascolipiceno.it/": {
+"grezzi": 15,
+"scartati": [
+"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
+"https://www.uspascolipiceno.it/wordpress/category/disponibilita/",
+"https://www.uspascolipiceno.it/wordpress/category/disponibilita/disponibilita-supplenze/",
+"https://www.uspascolipiceno.it/wordpress/tag/disponibilita-supplenze/"
+],
+"provincia": "Ascoli Piceno",
+"avvisi": 6,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/torino/": {
+"grezzi": 69,
+"scartati": [
+"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a018/"
+],
+"provincia": "Torino",
+"avvisi": 32,
 "errore": null
 },
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
