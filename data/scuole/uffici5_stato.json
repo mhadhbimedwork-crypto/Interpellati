@@ -14,23 +14,16 @@
 "errore": "SSLError"
 },
 "https://interpelloweb.it/interpelli-supplenze/": {
-"grezzi": 14,
+"grezzi": 15,
 "scartati": [],
 "provincia": null,
-"avvisi": 14,
+"avvisi": 15,
 "errore": null
 },
 "https://pr.istruzioneer.gov.it/feed/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Parma",
-"avvisi": 0,
-"errore": null
-},
-"http://www.uspms.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Massa-Carrara",
 "avvisi": 0,
 "errore": null
 },
@@ -41,20 +34,25 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://uspistruzione.fr.it/wp2/feed/": {
-"grezzi": 5,
-"scartati": [
-"https://www.uspistruzione.fr.it/wp2/avviso-per-selezione-personale-docente-scuola-secondaria-di-secondo-grado-"
-],
-"provincia": "Frosinone",
-"avvisi": 4,
-"errore": null
-},
 "https://bo.istruzioneer.gov.it/": {
-"grezzi": 1,
+"grezzi": 2,
 "scartati": [],
 "provincia": "Bologna",
-"avvisi": 1,
+"avvisi": 2,
+"errore": null
+},
+"http://www.uspms.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Massa-Carrara",
+"avvisi": 0,
+"errore": null
+},
+"https://uspistruzione.fr.it/wp2/feed/": {
+"grezzi": 5,
+"scartati": [],
+"provincia": "Frosinone",
+"avvisi": 5,
 "errore": null
 },
 "https://win.istruzioneverona.it/": {
@@ -63,18 +61,6 @@
 "provincia": "Verona",
 "avvisi": 0,
 "errore": "ConnectionError"
-},
-"https://rg.usr.sicilia.it/": {
-"grezzi": 13,
-"scartati": [
-"https://docs.google.com/viewer?url=https%3A%2F%2Frg.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%",
-"https://rg.usr.sicilia.it/gps-decreto-di-esclusione-2/",
-"https://twitter.com/home?status=Trasmissione Interpello Nazionale Docenti – IISS G. Carducci Comiso (RG) . RGI",
-"https://rg.usr.sicilia.it/category/personale-scuola/interpelli-nazionali-a-t-d-docenti/"
-],
-"provincia": "Ragusa",
-"avvisi": 6,
-"errore": null
 },
 "https://ct.usr.sicilia.it/": {
 "grezzi": 19,
@@ -89,7 +75,7 @@
 "errore": null
 },
 "https://mo.istruzioneer.gov.it/": {
-"grezzi": 40,
+"grezzi": 34,
 "scartati": [
 "https://mo.istruzioneer.gov.it/",
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
@@ -97,7 +83,19 @@
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
 ],
 "provincia": "Modena",
-"avvisi": 31,
+"avvisi": 27,
+"errore": null
+},
+"https://rg.usr.sicilia.it/": {
+"grezzi": 13,
+"scartati": [
+"https://docs.google.com/viewer?url=https%3A%2F%2Frg.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%",
+"https://rg.usr.sicilia.it/gps-decreto-di-esclusione-2/",
+"https://twitter.com/home?status=Trasmissione Interpello Nazionale Docenti – IISS G. Carducci Comiso (RG) . RGI",
+"https://rg.usr.sicilia.it/category/personale-scuola/interpelli-nazionali-a-t-d-docenti/"
+],
+"provincia": "Ragusa",
+"avvisi": 6,
 "errore": null
 },
 "https://venezia.istruzioneveneto.gov.it/": {
@@ -108,13 +106,6 @@
 "https://twitter.com/home?status=Disponibilità per il IX turno di supplenze – personale docente della Scuola Pr"
 ],
 "provincia": "Venezia",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionegenova.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
 "avvisi": 0,
 "errore": null
 },
@@ -130,6 +121,13 @@
 "avvisi": 28,
 "errore": null
 },
+"https://www.istruzionegenova.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Genova",
+"avvisi": 0,
+"errore": null
+},
 "https://lnx.csalaquila.it/wp/category/interpelli/": {
 "grezzi": 13,
 "scartati": [
@@ -137,28 +135,6 @@
 ],
 "provincia": "L'Aquila",
 "avvisi": 12,
-"errore": null
-},
-"https://padova.istruzioneveneto.gov.it/category/interpelli-personale-docente/": {
-"grezzi": 69,
-"scartati": [
-"https://padova.istruzioneveneto.gov.it/2026/11/04/assunzioni-in-ruolo-del-personale-docente-della-scuola-delli",
-"https://padova.istruzioneveneto.gov.it/2026/11/04/assunzioni-in-ruolo-del-personale-docente-della-scuola-delli"
-],
-"provincia": "Padova",
-"avvisi": 67,
-"errore": null
-},
-"https://tp.usr.sicilia.it/personale-scuola/interpelli/": {
-"grezzi": 56,
-"scartati": [
-"https://twitter.com/home?status=Interpello per supplenza su classe di concorso ADEE – Sostegno Scuola Primaria",
-"https://www.facebook.com/sharer/sharer.php?u=https://tp.usr.sicilia.ithttps://tp.usr.sicilia.it/interpello-per",
-"https://www.linkedin.com/sharing/share-offsite/?url=https://tp.usr.sicilia.ithttps://tp.usr.sicilia.it/interpe",
-"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/"
-],
-"provincia": "Trapani",
-"avvisi": 36,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/interpelli-nazionali/": {
@@ -171,6 +147,17 @@
 ],
 "provincia": null,
 "avvisi": 33,
+"errore": null
+},
+"https://padova.istruzioneveneto.gov.it/category/interpelli-personale-docente/": {
+"grezzi": 71,
+"scartati": [
+"https://padova.istruzioneveneto.gov.it/category/interpelli-personale-docente/",
+"https://padova.istruzioneveneto.gov.it/2026/11/04/assunzioni-in-ruolo-del-personale-docente-della-scuola-delli",
+"https://padova.istruzioneveneto.gov.it/2026/11/04/assunzioni-in-ruolo-del-personale-docente-della-scuola-delli"
+],
+"provincia": "Padova",
+"avvisi": 68,
 "errore": null
 },
 "https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
@@ -197,6 +184,18 @@
 "avvisi": 33,
 "errore": null
 },
+"https://tp.usr.sicilia.it/personale-scuola/interpelli/": {
+"grezzi": 58,
+"scartati": [
+"https://twitter.com/home?status=INTERPELLO – Classe di concorso A040 – 18H – Dal 10.11.2026 al 31.08.2027 - ht",
+"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
+"https://twitter.com/home?status=INTERPELLO – Classe di concorso A042 – 9H – Dal 10.11.2026 al 30.06.2027 - htt",
+"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/"
+],
+"provincia": "Trapani",
+"avvisi": 37,
+"errore": null
+},
 "https://www.istruzionematera.it/category/interpelli/": {
 "grezzi": 7,
 "scartati": [
@@ -209,13 +208,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.csa.fi.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Firenze",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
 "https://www.istruzione-ancona.it/": {
 "grezzi": 67,
 "scartati": [
@@ -227,6 +219,13 @@
 "provincia": "Ancona",
 "avvisi": 16,
 "errore": null
+},
+"https://www.csa.fi.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Firenze",
+"avvisi": 0,
+"errore": "ConnectTimeout"
 },
 "https://www.toscana-istruzione.it/": {
 "grezzi": 0,
@@ -254,11 +253,16 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.usp-rieti.it/": {
-"grezzi": 14,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 14,
+"https://www.istruzionepiemonte.it/biella/": {
+"grezzi": 24,
+"scartati": [
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/biella/category/ata/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze-ata/"
+],
+"provincia": "Biella",
+"avvisi": 20,
 "errore": null
 },
 "https://www.usplecce.it/": {
@@ -266,6 +270,13 @@
 "scartati": [],
 "provincia": "Lecce",
 "avvisi": 0,
+"errore": null
+},
+"https://www.usp-rieti.it/": {
+"grezzi": 15,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 15,
 "errore": null
 },
 "https://www.mim.gov.it/web/lecco/": {
@@ -287,30 +298,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
-"grezzi": 25,
-"scartati": [
-"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
-"https://www.istruzionepiemonte.it/torino/category/docenti/",
-"https://www.istruzionepiemonte.it/torino/tag/incarico-interpello/",
-"https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
-],
-"provincia": "Torino",
-"avvisi": 15,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/": {
-"grezzi": 33,
-"scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
-],
-"provincia": "Cuneo",
-"avvisi": 25,
-"errore": null
-},
 "https://www.uspbari.it/": {
 "grezzi": 58,
 "scartati": [
@@ -323,30 +310,28 @@
 "avvisi": 18,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/biella/": {
-"grezzi": 24,
+"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
+"grezzi": 35,
 "scartati": [
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/biella/category/ata/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze-ata/"
+"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
+"https://www.istruzionepiemonte.it/torino/category/docenti/",
+"https://www.istruzionepiemonte.it/torino/tag/incarico-interpello/",
+"https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
 ],
-"provincia": "Biella",
-"avvisi": 20,
+"provincia": "Torino",
+"avvisi": 15,
 "errore": null
 },
-"https://www.usptaranto.it/": {
-"grezzi": 18,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 18,
-"errore": null
-},
-"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pordenone",
-"avvisi": 0,
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/": {
+"grezzi": 38,
+"scartati": [
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
+],
+"provincia": "Cuneo",
+"avvisi": 26,
 "errore": null
 },
 "https://www.ustlecce.it/": {
@@ -358,6 +343,23 @@
 "https://www.ustlecce.it/index.php/interpelli?download=3910:interpello-per-supplenza-su-classe-di-concorso-adee"
 ],
 "provincia": "Lecce",
+"avvisi": 0,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 19,
+"scartati": [
+"https://www.usptaranto.it/2026/11/05/interpello-per-un-incarico-a-t-d-per-sostituzione-docente-scuola-secondar",
+"https://www.usptaranto.it/2026/11/05/interpello-per-un-incarico-a-t-d-per-sostituzione-docente-scuola-secondar"
+],
+"provincia": "Taranto",
+"avvisi": 17,
+"errore": null
+},
+"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pordenone",
 "avvisi": 0,
 "errore": null
 },
@@ -379,7 +381,7 @@
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
-"grezzi": 875,
+"grezzi": 873,
 "scartati": [
 "https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/",
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-c-salutati-a-cavalcanti-per-supplenza-scuol",
@@ -387,7 +389,7 @@
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-b-sestini-per-supplenza-scuola-primaria-pos"
 ],
 "provincia": "Pistoia",
-"avvisi": 30,
+"avvisi": 28,
 "errore": null
 }
 }
