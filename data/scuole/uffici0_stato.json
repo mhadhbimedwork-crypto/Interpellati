@@ -1,17 +1,10 @@
 {
-"https://brescia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"https://lnx.csaoristano.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Brescia",
+"provincia": "Oristano",
 "avvisi": 0,
-"errore": "SSLError"
-},
-"https://como.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Como",
-"avvisi": 0,
-"errore": "SSLError"
+"errore": "ConnectionError"
 },
 "https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
@@ -20,12 +13,19 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://lnx.csaoristano.it/": {
+"https://como.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Oristano",
+"provincia": "Como",
 "avvisi": 0,
-"errore": "ConnectionError"
+"errore": "SSLError"
+},
+"https://brescia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Brescia",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://monza.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -60,6 +60,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://belluno.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Belluno",
+"avvisi": 0,
+"errore": null
+},
 "https://pc.istruzioneer.gov.it/": {
 "grezzi": 17,
 "scartati": [
@@ -72,21 +79,11 @@
 "avvisi": 13,
 "errore": null
 },
-"https://belluno.istruzioneveneto.gov.it/": {
+"http://www.istruzionevicenza.it/wordpress/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Belluno",
+"provincia": "Vicenza",
 "avvisi": 0,
-"errore": null
-},
-"https://me.usr.sicilia.it/": {
-"grezzi": 18,
-"scartati": [
-"https://me.usr.sicilia.it/personale-docente-decreto-di-parziale-rettifica-dei-posti-di-sostegno-in-organico-di",
-"https://me.usr.sicilia.it/ic-giardini-interpello-supplenza-scuola-infanzia-sostegno/"
-],
-"provincia": "Messina",
-"avvisi": 16,
 "errore": null
 },
 "https://www.csanuoro.it/wp2019/": {
@@ -96,16 +93,13 @@
 "avvisi": 0,
 "errore": null
 },
-"https://sr.usr.sicilia.it/": {
-"grezzi": 24,
+"https://fc.istruzioneer.gov.it/": {
+"grezzi": 7,
 "scartati": [
-"https://twitter.com/home?status=Interpello Nazionale AI56 – Strumento musicale nella scuola secondaria di prim",
-"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/gps/",
-"https://sr.usr.sicilia.it/category/news/",
-"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/"
+"https://fc.istruzioneer.gov.it/2026/11/04/interpello-supplenza-al-30-06-20-primaria-sostegno-h-20-i-c-longiano"
 ],
-"provincia": "Siracusa",
-"avvisi": 7,
+"provincia": "Forlì-Cesena",
+"avvisi": 6,
 "errore": null
 },
 "https://ra.istruzioneer.gov.it/": {
@@ -120,10 +114,10 @@
 "avvisi": 19,
 "errore": null
 },
-"http://www.istruzionevicenza.it/wordpress/": {
+"http://www.uspss.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Vicenza",
+"provincia": "Sassari",
 "avvisi": 0,
 "errore": null
 },
@@ -134,20 +128,46 @@
 "avvisi": 0,
 "errore": null
 },
-"https://fc.istruzioneer.gov.it/": {
-"grezzi": 13,
+"https://me.usr.sicilia.it/": {
+"grezzi": 18,
 "scartati": [
-"https://fc.istruzioneer.gov.it/2026/11/04/interpello-supplenza-al-30-06-20-primaria-sostegno-h-20-i-c-longiano",
-"https://fc.istruzioneer.gov.it/2026/11/04/interpello-supplenza-al-30-06-20-primaria-sostegno-h-20-i-c-longiano"
+"https://me.usr.sicilia.it/personale-docente-decreto-di-parziale-rettifica-dei-posti-di-sostegno-in-organico-di",
+"https://me.usr.sicilia.it/ic-giardini-interpello-supplenza-scuola-infanzia-sostegno/"
 ],
-"provincia": "Forlì-Cesena",
-"avvisi": 11,
+"provincia": "Messina",
+"avvisi": 16,
+"errore": null
+},
+"https://sr.usr.sicilia.it/": {
+"grezzi": 24,
+"scartati": [
+"https://twitter.com/home?status=Interpello Nazionale AI56 – Strumento musicale nella scuola secondaria di prim",
+"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/gps/",
+"https://sr.usr.sicilia.it/category/news/",
+"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/"
+],
+"provincia": "Siracusa",
+"avvisi": 7,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/le-nostre-scuole/asti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Asti",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzione.calabria.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Cosenza",
+"avvisi": 0,
+"errore": null
+},
+"https://verona.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Verona",
 "avvisi": 0,
 "errore": null
 },
@@ -165,11 +185,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://verona.istruzioneveneto.gov.it/": {
-"grezzi": 0,
+"https://www.istruzioneatprc.it/": {
+"grezzi": 2,
 "scartati": [],
-"provincia": "Verona",
-"avvisi": 0,
+"provincia": "Reggio Calabria",
+"avvisi": 2,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/palermo-chiama-italia-23-maggio-2019/": {
@@ -179,59 +199,12 @@
 "avvisi": 0,
 "errore": null
 },
-"http://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/le-nostre-scuole/asti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Asti",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzioneatprc.it/": {
-"grezzi": 2,
-"scartati": [],
-"provincia": "Reggio Calabria",
-"avvisi": 2,
-"errore": null
-},
 "https://www.toscana-istruzione.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Pisa",
 "avvisi": 0,
 "errore": "HTTP 403"
-},
-"https://www.istruzionechietipescara.it/": {
-"grezzi": 8,
-"scartati": [
-"https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F04",
-"https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F04",
-"https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F04%2F",
-"https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F0"
-],
-"provincia": "Pescara",
-"avvisi": 4,
-"errore": null
-},
-"https://www.usp-rieti.it/": {
-"grezzi": 16,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 16,
-"errore": null
-},
-"https://www.usplecce.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecce",
-"avvisi": 0,
-"errore": null
 },
 "https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
 "grezzi": 20,
@@ -245,16 +218,30 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/vercelli/": {
-"grezzi": 21,
+"https://www.istruzionechietipescara.it/": {
+"grezzi": 8,
 "scartati": [
-"https://www.istruzionepiemonte.it/vercelli/interpello-nazionale-per-individuazione-assistente-tecnico-ar-22-mo",
-"https://www.istruzionepiemonte.it/vercelli/interpello-nazionale-per-individuazione-assistente-tecnico-ar-22-mo",
-"https://www.istruzionepiemonte.it/vercelli/interpello-adee-lingua-inglese-fino-al-03-12-2026/",
-"https://www.istruzionepiemonte.it/vercelli/category/docenti/"
+"https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F04",
+"https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F04",
+"https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F04%2F",
+"https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F0"
 ],
-"provincia": "Vercelli",
-"avvisi": 15,
+"provincia": "Pescara",
+"avvisi": 4,
+"errore": null
+},
+"https://www.usplecce.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecce",
+"avvisi": 0,
+"errore": null
+},
+"https://www.usp-rieti.it/": {
+"grezzi": 16,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 16,
 "errore": null
 },
 "https://www.mim.gov.it/web/lodi/": {
@@ -276,13 +263,6 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pordenone",
-"avvisi": 0,
-"errore": null
-},
 "https://www.uspbari.it/": {
 "grezzi": 60,
 "scartati": [
@@ -293,6 +273,37 @@
 ],
 "provincia": "Bari",
 "avvisi": 37,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/vercelli/": {
+"grezzi": 21,
+"scartati": [
+"https://www.istruzionepiemonte.it/vercelli/interpello-nazionale-per-individuazione-assistente-tecnico-ar-22-mo",
+"https://www.istruzionepiemonte.it/vercelli/interpello-nazionale-per-individuazione-assistente-tecnico-ar-22-mo",
+"https://www.istruzionepiemonte.it/vercelli/interpello-adee-lingua-inglese-fino-al-03-12-2026/",
+"https://www.istruzionepiemonte.it/vercelli/category/docenti/"
+],
+"provincia": "Vercelli",
+"avvisi": 15,
+"errore": null
+},
+"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pordenone",
+"avvisi": 0,
+"errore": null
+},
+"https://www.ufficioscolasticoprovinciale.pistoia.it/": {
+"grezzi": 875,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-c-salutati-a-cavalcanti-per-supplenza-scuol",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-leonardo-da-vinci-per-supplenza-breve-scuol",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-b-sestini-per-supplenza-scuola-primaria-pos",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-bonaccorso-da-montemagno-per-supplenza-scuo"
+],
+"provincia": "Pistoia",
+"avvisi": 31,
 "errore": null
 },
 "https://www.mim.gov.it/web/cremona/": {
@@ -326,6 +337,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.usptaranto.it/": {
+"grezzi": 15,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 15,
+"errore": null
+},
 "https://www.ustlecce.it/": {
 "grezzi": 6,
 "scartati": [
@@ -336,25 +354,6 @@
 ],
 "provincia": "Lecce",
 "avvisi": 0,
-"errore": null
-},
-"https://www.usptaranto.it/": {
-"grezzi": 15,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 15,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.pistoia.it/": {
-"grezzi": 875,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-c-salutati-a-cavalcanti-per-supplenza-scuol",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-leonardo-da-vinci-per-supplenza-breve-scuol",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-b-sestini-per-supplenza-scuola-primaria-pos",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-bonaccorso-da-montemagno-per-supplenza-scuo"
-],
-"provincia": "Pistoia",
-"avvisi": 31,
 "errore": null
 }
 }
