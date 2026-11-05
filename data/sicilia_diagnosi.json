@@ -929,6 +929,20 @@
    ]
   ]
  },
+ "MEIC876009": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 403",
+  "motivo": "recuperato",
+  "nuovo": "https://ictorregrotta.edu.it/",
+  "sito": "https://ictorregrotta.edu.it/",
+  "tentativi": [
+   [
+    "https://www.ictorregrotta.edu.it/",
+    "OK"
+   ]
+  ]
+ },
  "PAIC817007": {
   "dns_pubblico": "no",
   "dns_runner": false,
@@ -1050,20 +1064,6 @@
   "sito": "https://www.icvittorioemanueleterzo.edu.it/",
   "tentativi": []
  },
- "PAIS00800L": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "HTTP 500",
-  "motivo": "recuperato",
-  "nuovo": "https://iisbasiledaleo.edu.it/",
-  "sito": "https://iisbasiledaleo.edu.it/",
-  "tentativi": [
-   [
-    "https://www.iisbasiledaleo.edu.it/",
-    "OK"
-   ]
-  ]
- },
  "PAIS018007": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -1159,13 +1159,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.principigrimaldi.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.principigrimaldi.edu.it/",
   "tentativi": [
    [
     "https://www.principigrimaldi.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.principigrimaldi.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://principigrimaldi.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://principigrimaldi.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -1223,65 +1234,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iissgagini.edu.it/",
   "sito": "https://www.iissgagini.edu.it/",
   "tentativi": [
    [
     "https://www.iissgagini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.iissgagini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://iissgagini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://iissgagini.edu.it/",
-    "HTTP 509"
-   ]
-  ]
- },
- "SRPS14000A": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "ConnectTimeout",
-  "motivo": "risponde ma con errore: pagina non scolastica",
-  "sito": "https://www.liceocorbinosiracusa.edu.it/",
-  "tentativi": [
-   [
-    "https://www.liceocorbinosiracusa.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.liceocorbinosiracusa.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://liceocorbinosiracusa.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://liceocorbinosiracusa.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://www.liceocorbinosiracusa.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://www.liceocorbinosiracusa.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "https://liceocorbinosiracusa.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://liceocorbinosiracusa.it/",
-    "ConnectTimeout"
+    "OK"
    ]
   ]
  },
@@ -1406,6 +1365,10 @@
    ],
    [
     "http://www.liceoruggierimarsala.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://liceoruggierimarsala.edu.it/",
     "OK"
    ]
   ]
