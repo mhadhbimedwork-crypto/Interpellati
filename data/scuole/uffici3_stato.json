@@ -1,15 +1,8 @@
 {
-"https://lnx.uspistruzione.fr.it/wp2/category/interpello-nazionale": {
+"https://milano.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Frosinone",
-"avvisi": 0,
-"errore": "ConnectionError"
-},
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -20,6 +13,13 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://lnx.uspistruzione.fr.it/wp2/category/interpello-nazionale": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Frosinone",
+"avvisi": 0,
+"errore": "ConnectionError"
+},
 "https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
 "grezzi": 0,
 "scartati": [],
@@ -27,10 +27,10 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://milano.istruzionelombardia.gov.it/": {
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Milano",
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -70,20 +70,8 @@
 "avvisi": 0,
 "errore": null
 },
-"https://uspistruzione.fr.it/wp2/": {
-"grezzi": 21,
-"scartati": [
-"https://www.uspistruzione.fr.it/wp2/category/albo",
-"https://www.uspistruzione.fr.it/wp2/category/comunicazioni",
-"https://www.uspistruzione.fr.it/wp2/category/graduatorie",
-"https://www.uspistruzione.fr.it/wp2/category/graduatorie/interpello-nazionale"
-],
-"provincia": "Frosinone",
-"avvisi": 14,
-"errore": null
-},
 "https://tp.usr.sicilia.it/": {
-"grezzi": 36,
+"grezzi": 31,
 "scartati": [
 "https://twitter.com/home?status=Interpello CdC AI56 Percussioni – I.C. “Luigi Sturzo Asta” Marsala - https://t",
 "https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
@@ -91,7 +79,7 @@
 "https://tp.usr.sicilia.it/category/personale-scuola/"
 ],
 "provincia": "Trapani",
-"avvisi": 22,
+"avvisi": 21,
 "errore": null
 },
 "https://pr.istruzioneer.gov.it/": {
@@ -106,11 +94,23 @@
 "avvisi": 6,
 "errore": null
 },
+"https://uspistruzione.fr.it/wp2/": {
+"grezzi": 23,
+"scartati": [
+"https://www.uspistruzione.fr.it/wp2/category/albo",
+"https://www.uspistruzione.fr.it/wp2/category/comunicazioni",
+"https://www.uspistruzione.fr.it/wp2/category/graduatorie",
+"https://www.uspistruzione.fr.it/wp2/category/graduatorie/interpello-nazionale"
+],
+"provincia": "Frosinone",
+"avvisi": 17,
+"errore": null
+},
 "https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 47,
+"grezzi": 49,
 "scartati": [],
 "provincia": "Padova",
-"avvisi": 47,
+"avvisi": 49,
 "errore": null
 },
 "https://www.istruzionegenova.gov.it/": {
@@ -120,8 +120,20 @@
 "avvisi": 0,
 "errore": null
 },
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
+"grezzi": 58,
+"scartati": [
+"https://twitter.com/home?status=INTERPELLO A042 – SCIENZE E TECNOLOGIE MECCANICHE - https://cl-en.usr.sicilia.",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
+"https://twitter.com/home?status=Interpello per la supplenza classe di concorso – A042 – Scienze e tecnologie m"
+],
+"provincia": "Caltanissetta",
+"avvisi": 38,
+"errore": null
+},
 "https://fe.istruzioneer.gov.it/": {
-"grezzi": 99,
+"grezzi": 92,
 "scartati": [
 "https://fe.istruzioneer.gov.it/tag/a041/",
 "https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
@@ -129,16 +141,7 @@
 "https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
 ],
 "provincia": "Ferrara",
-"avvisi": 65,
-"errore": null
-},
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 22,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 21,
+"avvisi": 58,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/": {
@@ -171,42 +174,20 @@
 "avvisi": 0,
 "errore": null
 },
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 23,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 22,
+"errore": null
+},
 "https://www.istruzionerovigo.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Rovigo",
 "avvisi": 0,
-"errore": null
-},
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 58,
-"scartati": [
-"https://twitter.com/home?status=INTERPELLO A042 – SCIENZE E TECNOLOGIE MECCANICHE - https://cl-en.usr.sicilia.",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
-"https://twitter.com/home?status=Interpello per la supplenza classe di concorso – A042 – Scienze e tecnologie m"
-],
-"provincia": "Caltanissetta",
-"avvisi": 38,
-"errore": null
-},
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 0,
-"errore": null
-},
-"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
-"grezzi": 115,
-"scartati": [
-"https://www.atpromaistruzione.it/atp/tag/interpelli/",
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/tag/adee/",
-"https://www.atpromaistruzione.it/atp/tag/a042/"
-],
-"provincia": "Roma",
-"avvisi": 19,
 "errore": null
 },
 "https://www.csateramo.it/wpusp/archive/category/news": {
@@ -221,12 +202,24 @@
 "avvisi": 19,
 "errore": null
 },
-"http://www.uspmc.sinp.net/": {
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Macerata",
+"provincia": "Catanzaro",
 "avvisi": 0,
-"errore": "ConnectTimeout"
+"errore": null
+},
+"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
+"grezzi": 123,
+"scartati": [
+"https://www.atpromaistruzione.it/atp/tag/interpelli/",
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
+"https://www.atpromaistruzione.it/atp/tag/a042/",
+"https://www.atpromaistruzione.it/atp/tag/aaaa/"
+],
+"provincia": "Roma",
+"avvisi": 19,
+"errore": null
 },
 "https://www.ufficioscolasticogrosseto.it/": {
 "grezzi": 0,
@@ -254,6 +247,13 @@
 "avvisi": 0,
 "errore": null
 },
+"http://www.uspmc.sinp.net/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
 "https://www.uspcampobasso.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -269,35 +269,28 @@
 "errore": "HTTP 404"
 },
 "https://www.ustfoggia.it/feed/": {
-"grezzi": 8,
+"grezzi": 9,
 "scartati": [],
 "provincia": "Foggia",
-"avvisi": 8,
+"avvisi": 9,
 "errore": null
 },
-"https://www.mim.gov.it/web/isernia/": {
+"https://www.mim.gov.it/web/cagliari/": {
 "grezzi": 16,
 "scartati": [
-"https://www.mim.gov.it/web/isernia/-/interpello-1",
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-1",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-1&text=Secondo+int",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-1&text=Secondo"
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-su",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenza-su-",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenza",
+"https://www.mim.gov.it/web/cagliari/"
 ],
-"provincia": "Isernia",
-"avvisi": 0,
+"provincia": "Cagliari",
+"avvisi": 4,
 "errore": null
 },
 "https://www.vivoscuola.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Trento",
-"avvisi": 0,
-"errore": null
-},
-"https://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
 "avvisi": 0,
 "errore": null
 },
@@ -313,20 +306,27 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.mim.gov.it/web/cagliari/": {
-"grezzi": 16,
+"https://www.uspss.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
+"avvisi": 0,
+"errore": null
+},
+"https://www.mim.gov.it/web/isernia/": {
+"grezzi": 21,
 "scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-su",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenza-su-",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenza",
-"https://www.mim.gov.it/web/cagliari/"
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-un-",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-un-incarico-a-",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-un-incaric",
+"https://www.mim.gov.it/web/isernia/"
 ],
-"provincia": "Cagliari",
-"avvisi": 4,
+"provincia": "Isernia",
+"avvisi": 2,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/torino/": {
-"grezzi": 69,
+"grezzi": 73,
 "scartati": [
 "https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
 "https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
@@ -334,11 +334,11 @@
 "https://www.istruzionepiemonte.it/torino/tag/2024-a018/"
 ],
 "provincia": "Torino",
-"avvisi": 32,
+"avvisi": 36,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
-"grezzi": 21,
+"grezzi": 22,
 "scartati": [
 "https://www.uspascolipiceno.it/wordpress/interpelli/",
 "https://www.uspascolipiceno.it/wordpress/interpello-per-il-conferimento-di-n-1-supplenza-classe-di-concorso-bb",
@@ -346,11 +346,11 @@
 "https://www.uspascolipiceno.it/wordpress/ii-interpello-cl-concorso-ai55-percussioni-liceo-scientifico-statale-"
 ],
 "provincia": "Ascoli Piceno",
-"avvisi": 6,
+"avvisi": 9,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
-"grezzi": 21,
+"grezzi": 25,
 "scartati": [
 "https://www.istruzionepiemonte.it/cuneo/category/docenti/",
 "https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
