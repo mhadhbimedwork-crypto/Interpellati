@@ -1,4 +1,11 @@
 {
+"https://lnx.uspistruzione.fr.it/wp2/category/interpello-nazionale": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Frosinone",
+"avvisi": 0,
+"errore": "ConnectionError"
+},
 "https://milano.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -6,19 +13,12 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Lecco",
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
-},
-"https://lnx.uspistruzione.fr.it/wp2/category/interpello-nazionale": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Frosinone",
-"avvisi": 0,
-"errore": "ConnectionError"
 },
 "https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
 "grezzi": 0,
@@ -27,10 +27,10 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bergamo",
+"provincia": "Lecco",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -58,6 +58,18 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 13,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PRIC833007/docenti/86b09212-fe44-494f-a3d7-331f42e4f5bc/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/e017355c-ec41-4ab5-b41a-6624976db164/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC83200B/docenti",
+"https://www.portaleargo.it/albopretorio/online/"
+],
+"provincia": "Parma",
+"avvisi": 4,
+"errore": null
+},
 "https://atpisernia.it/": {
 "grezzi": 23,
 "scartati": [
@@ -68,6 +80,18 @@
 ],
 "provincia": "Isernia",
 "avvisi": 0,
+"errore": null
+},
+"https://uspistruzione.fr.it/wp2/": {
+"grezzi": 22,
+"scartati": [
+"https://www.uspistruzione.fr.it/wp2/category/albo",
+"https://www.uspistruzione.fr.it/wp2/category/comunicazioni",
+"https://www.uspistruzione.fr.it/wp2/category/graduatorie",
+"https://www.uspistruzione.fr.it/wp2/category/graduatorie/interpello-nazionale"
+],
+"provincia": "Frosinone",
+"avvisi": 16,
 "errore": null
 },
 "https://tp.usr.sicilia.it/": {
@@ -82,35 +106,11 @@
 "avvisi": 21,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 22,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PRIC833007/docenti/86b09212-fe44-494f-a3d7-331f42e4f5bc/candidatura",
-"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/e017355c-ec41-4ab5-b41a-6624976db164/candidatura",
-"https://nuvola.madisoft.it/interpelli/PRIC83200B/docenti",
-"https://www.portaleargo.it/albopretorio/online/"
-],
-"provincia": "Parma",
-"avvisi": 6,
-"errore": null
-},
-"https://uspistruzione.fr.it/wp2/": {
-"grezzi": 23,
-"scartati": [
-"https://www.uspistruzione.fr.it/wp2/category/albo",
-"https://www.uspistruzione.fr.it/wp2/category/comunicazioni",
-"https://www.uspistruzione.fr.it/wp2/category/graduatorie",
-"https://www.uspistruzione.fr.it/wp2/category/graduatorie/interpello-nazionale"
-],
-"provincia": "Frosinone",
-"avvisi": 17,
-"errore": null
-},
 "https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 49,
+"grezzi": 46,
 "scartati": [],
 "provincia": "Padova",
-"avvisi": 49,
+"avvisi": 46,
 "errore": null
 },
 "https://www.istruzionegenova.gov.it/": {
@@ -120,28 +120,25 @@
 "avvisi": 0,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 58,
-"scartati": [
-"https://twitter.com/home?status=INTERPELLO A042 – SCIENZE E TECNOLOGIE MECCANICHE - https://cl-en.usr.sicilia.",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
-"https://twitter.com/home?status=Interpello per la supplenza classe di concorso – A042 – Scienze e tecnologie m"
-],
-"provincia": "Caltanissetta",
-"avvisi": 38,
-"errore": null
-},
 "https://fe.istruzioneer.gov.it/": {
-"grezzi": 92,
+"grezzi": 84,
 "scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
 "https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/",
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/"
 ],
 "provincia": "Ferrara",
-"avvisi": 58,
+"avvisi": 56,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 23,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 22,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/": {
@@ -149,6 +146,18 @@
 "scartati": [],
 "provincia": "Vercelli",
 "avvisi": 0,
+"errore": null
+},
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
+"grezzi": 56,
+"scartati": [
+"https://twitter.com/home?status=INTERPELLO A042 – SCIENZE E TECNOLOGIE MECCANICHE - https://cl-en.usr.sicilia.",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
+"https://twitter.com/home?status=Interpello per la supplenza classe di concorso – A042 – Scienze e tecnologie m"
+],
+"provincia": "Caltanissetta",
+"avvisi": 36,
 "errore": null
 },
 "https://www.istruzionematera.it/": {
@@ -165,28 +174,19 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzionerovigo.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Rovigo",
+"avvisi": 0,
+"errore": null
+},
 "https://vicenza.istruzioneveneto.gov.it/": {
 "grezzi": 1,
 "scartati": [
 "https://vicenza.istruzioneveneto.gov.it/2026/11/02/avviso-assunzioni-in-ruolo-del-personale-docente-della-scuo"
 ],
 "provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 23,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 22,
-"errore": null
-},
-"https://www.istruzionerovigo.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Rovigo",
 "avvisi": 0,
 "errore": null
 },
@@ -210,7 +210,7 @@
 "errore": null
 },
 "https://www.atpromaistruzione.it/atp/tag/interpelli/": {
-"grezzi": 123,
+"grezzi": 122,
 "scartati": [
 "https://www.atpromaistruzione.it/atp/tag/interpelli/",
 "https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
@@ -218,7 +218,7 @@
 "https://www.atpromaistruzione.it/atp/tag/aaaa/"
 ],
 "provincia": "Roma",
-"avvisi": 19,
+"avvisi": 17,
 "errore": null
 },
 "https://www.ufficioscolasticogrosseto.it/": {
@@ -227,6 +227,13 @@
 "provincia": "Grosseto",
 "avvisi": 0,
 "errore": null
+},
+"http://www.uspmc.sinp.net/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
 },
 "https://www.regione.vda.it/": {
 "grezzi": 0,
@@ -247,13 +254,6 @@
 "avvisi": 0,
 "errore": null
 },
-"http://www.uspmc.sinp.net/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
-},
 "https://www.uspcampobasso.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -268,13 +268,6 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://www.ustfoggia.it/feed/": {
-"grezzi": 9,
-"scartati": [],
-"provincia": "Foggia",
-"avvisi": 9,
-"errore": null
-},
 "https://www.mim.gov.it/web/cagliari/": {
 "grezzi": 16,
 "scartati": [
@@ -287,11 +280,11 @@
 "avvisi": 4,
 "errore": null
 },
-"https://www.vivoscuola.it/": {
-"grezzi": 0,
+"https://www.ustfoggia.it/feed/": {
+"grezzi": 9,
 "scartati": [],
-"provincia": "Trento",
-"avvisi": 0,
+"provincia": "Foggia",
+"avvisi": 9,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
@@ -306,10 +299,10 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.uspss.it/": {
+"https://www.vivoscuola.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Sassari",
+"provincia": "Trento",
 "avvisi": 0,
 "errore": null
 },
@@ -325,16 +318,11 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/torino/": {
-"grezzi": 73,
-"scartati": [
-"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a018/"
-],
-"provincia": "Torino",
-"avvisi": 36,
+"https://www.uspss.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
+"avvisi": 0,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
@@ -347,6 +335,18 @@
 ],
 "provincia": "Ascoli Piceno",
 "avvisi": 9,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/torino/": {
+"grezzi": 73,
+"scartati": [
+"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a018/"
+],
+"provincia": "Torino",
+"avvisi": 36,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
