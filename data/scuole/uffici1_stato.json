@@ -1,11 +1,4 @@
 {
-"http://www.ustcremona.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": null
-},
 "https://lnx.csaoristano.it/category/reclutamento/": {
 "grezzi": 0,
 "scartati": [],
@@ -13,12 +6,12 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"http://www.ustcremona.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Como",
+"provincia": "Cremona",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": null
 },
 "https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
@@ -26,6 +19,13 @@
 "provincia": "Terni",
 "avvisi": 0,
 "errore": "HTTP 404"
+},
+"https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Como",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
 "grezzi": 0,
@@ -56,6 +56,18 @@
 "provincia": "Salerno",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://atcampobasso.it/argomento/servizi/servizi-al-personale-scolastico/interpelli-nazionali/": {
+"grezzi": 10,
+"scartati": [
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-supplen",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcampobasso%2F-%2Finterpello-per-n-2-sup",
+"https://atcampobasso.it/argomento/servizi/servizi-al-personale-scolastico/interpelli-nazionali/"
+],
+"provincia": "Campobasso",
+"avvisi": 2,
+"errore": null
 },
 "https://sr.usr.sicilia.it/tag/interpelli/": {
 "grezzi": 1,
@@ -92,16 +104,6 @@
 "avvisi": 12,
 "errore": null
 },
-"https://me.usr.sicilia.it/": {
-"grezzi": 25,
-"scartati": [
-"https://me.usr.sicilia.it/personale-docente-decreto-di-parziale-rettifica-dei-posti-di-sostegno-in-organico-di",
-"https://me.usr.sicilia.it/ic-giardini-interpello-supplenza-scuola-infanzia-sostegno/"
-],
-"provincia": "Messina",
-"avvisi": 23,
-"errore": null
-},
 "http://www.provveditoratostudiviterbo.it/": {
 "grezzi": 29,
 "scartati": [
@@ -121,11 +123,14 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Novara",
-"avvisi": 0,
+"https://me.usr.sicilia.it/": {
+"grezzi": 25,
+"scartati": [
+"https://me.usr.sicilia.it/personale-docente-decreto-di-parziale-rettifica-dei-posti-di-sostegno-in-organico-di",
+"https://me.usr.sicilia.it/ic-giardini-interpello-supplenza-scuola-infanzia-sostegno/"
+],
+"provincia": "Messina",
+"avvisi": 23,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/": {
@@ -138,6 +143,13 @@
 ],
 "provincia": "Caltanissetta",
 "avvisi": 35,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Novara",
+"avvisi": 0,
 "errore": null
 },
 "https://verona.istruzioneveneto.gov.it/index.php/interpelli-2026-2027/": {
@@ -159,18 +171,6 @@
 "scartati": [],
 "provincia": "Rimini",
 "avvisi": 0,
-"errore": null
-},
-"https://ustlucca.it/": {
-"grezzi": 34,
-"scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/category/avvisi/",
-"https://ustlucca.it/category/comunicazioni/",
-"https://ustlucca.it/category/docenti/"
-],
-"provincia": "Lucca",
-"avvisi": 16,
 "errore": null
 },
 "https://www.toscana-istruzione.it/atpisa/category/news/": {
@@ -195,7 +195,7 @@
 "errore": null
 },
 "https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
-"grezzi": 25,
+"grezzi": 23,
 "scartati": [
 "https://fc.istruzioneer.gov.it/",
 "https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/",
@@ -217,6 +217,18 @@
 "avvisi": 18,
 "errore": null
 },
+"https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
+"grezzi": 39,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1234",
+"https://www.icbrisighella.edu.it/cgweb-interpello/",
+"https://www.icfaenzasanrocco.edu.it/albo-online"
+],
+"provincia": "Ravenna",
+"avvisi": 20,
+"errore": null
+},
 "https://www.istruzioneatprc.it/category/recl/int/": {
 "grezzi": 20,
 "scartati": [
@@ -227,6 +239,13 @@
 ],
 "provincia": "Reggio Calabria",
 "avvisi": 0,
+"errore": null
+},
+"https://www.ust.fi.it/feed/": {
+"grezzi": 9,
+"scartati": [],
+"provincia": "Firenze",
+"avvisi": 9,
 "errore": null
 },
 "https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
@@ -241,31 +260,17 @@
 "avvisi": 30,
 "errore": null
 },
-"https://www.ust.fi.it/feed/": {
-"grezzi": 10,
-"scartati": [],
-"provincia": "Firenze",
-"avvisi": 10,
-"errore": null
-},
-"https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
-"grezzi": 39,
+"https://ustlucca.it/": {
+"grezzi": 35,
 "scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1234",
-"https://www.icbrisighella.edu.it/cgweb-interpello/",
-"https://www.icfaenzasanrocco.edu.it/albo-online"
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/category/avvisi/"
 ],
-"provincia": "Ravenna",
-"avvisi": 20,
+"provincia": "Lucca",
+"avvisi": 27,
 "errore": null
-},
-"https://atcampobasso.it/argomento/servizi/servizi-al-personale-scolastico/interpelli-nazionali/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Campobasso",
-"avvisi": 0,
-"errore": "ReadTimeout"
 },
 "https://www.usppesarourbino.it/": {
 "grezzi": 8,
@@ -291,16 +296,35 @@
 "avvisi": 19,
 "errore": null
 },
+"https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": null
+},
 "https://www.uspbari.it/": {
-"grezzi": 52,
+"grezzi": 55,
 "scartati": [
-"https://www.uspbari.it/usp/75193.html",
-"https://www.uspbari.it/usp/interpello-per-n-due-supplenze-su-classe-di-concorso-adee-sostegno-eh-scuola-primar",
-"https://www.uspbari.it/usp/75193.html",
-"https://www.uspbari.it/usp/75193.html"
+"https://www.uspbari.it/usp/interpello-per-supplenza-classe-di-concorso-a042-scienze-e-tecnologie-meccaniche-a-",
+"https://www.uspbari.it/usp/author/mi20142",
+"https://www.uspbari.it/usp/category/interpelli-della-provincia-di-bari",
+"https://www.uspbari.it/usp/tag/interpello"
 ],
 "provincia": "Bari",
-"avvisi": 30,
+"avvisi": 27,
+"errore": null
+},
+"https://www.ustlecce.it/index.php/interpelli": {
+"grezzi": 46,
+"scartati": [
+"https://www.ustlecce.it/index.php/interpelli/file/3915-interpello-nazionale-per-supplenza-su-classe-di-concors",
+"https://www.ustlecce.it/index.php/interpelli/file/3914-interpello-nazionale-per-supplenza-su-classe-di-concors",
+"https://www.ustlecce.it/index.php/interpelli/file/3897-interpello-nazionale-per-supplenza-su-classe-di-concors",
+"https://www.ustlecce.it/index.php/interpelli/file/3893-interpello-per-supplenza-su-classe-di-concorso-ap55-con"
+],
+"provincia": "Lecce",
+"avvisi": 14,
 "errore": null
 },
 "https://www.istruzionelaspezia.gov.it/pagine/interpelli-1": {
@@ -315,27 +339,8 @@
 "avvisi": 1,
 "errore": null
 },
-"https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
-"errore": "ReadTimeout"
-},
-"https://www.ustlecce.it/index.php/interpelli": {
-"grezzi": 46,
-"scartati": [
-"https://www.ustlecce.it/index.php/interpelli/file/3915-interpello-nazionale-per-supplenza-su-classe-di-concors",
-"https://www.ustlecce.it/index.php/interpelli/file/3914-interpello-nazionale-per-supplenza-su-classe-di-concors",
-"https://www.ustlecce.it/index.php/interpelli/file/3897-interpello-nazionale-per-supplenza-su-classe-di-concors",
-"https://www.ustlecce.it/index.php/interpelli/file/3893-interpello-per-supplenza-su-classe-di-concorso-ap55-con"
-],
-"provincia": "Lecce",
-"avvisi": 14,
-"errore": null
-},
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
-"grezzi": 873,
+"grezzi": 876,
 "scartati": [
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-don-milani-per-supplenza-breve-scuola-prima",
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-preventivo-ics-galileo-galilei-per-supplenze-br",
@@ -343,7 +348,7 @@
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-leonardo-da-vinci-per-supplenza-breve-scuol"
 ],
 "provincia": "Pistoia",
-"avvisi": 27,
+"avvisi": 30,
 "errore": null
 }
 }
