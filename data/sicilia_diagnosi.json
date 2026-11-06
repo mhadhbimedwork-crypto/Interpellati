@@ -38,6 +38,47 @@
    ]
   ]
  },
+ "AGIC86400V": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 503",
+  "motivo": "risponde ma con errore: HTTP 503",
+  "sito": "https://icrosariolivatinoportoempedocle.it/",
+  "tentativi": [
+   [
+    "https://www.icrosariolivatinoportoempedocle.it/",
+    "HTTP 503"
+   ],
+   [
+    "http://www.icrosariolivatinoportoempedocle.it/",
+    "HTTP 503"
+   ],
+   [
+    "https://icrosariolivatinoportoempedocle.it/",
+    "HTTP 503"
+   ],
+   [
+    "http://icrosariolivatinoportoempedocle.it/",
+    "HTTP 503"
+   ],
+   [
+    "https://www.icrosariolivatinoportoempedocle.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://www.icrosariolivatinoportoempedocle.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://icrosariolivatinoportoempedocle.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://icrosariolivatinoportoempedocle.edu.it/",
+    "HTTP 403"
+   ]
+  ]
+ },
  "AGIS00800P": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -929,20 +970,6 @@
    ]
   ]
  },
- "MEIC876009": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "HTTP 403",
-  "motivo": "recuperato",
-  "nuovo": "https://ictorregrotta.edu.it/",
-  "sito": "https://ictorregrotta.edu.it/",
-  "tentativi": [
-   [
-    "https://www.ictorregrotta.edu.it/",
-    "OK"
-   ]
-  ]
- },
  "PAIC817007": {
   "dns_pubblico": "no",
   "dns_runner": false,
@@ -1184,7 +1211,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icvittorinisolarino.edu.it/",
   "sito": "https://www.icvittorinisolarino.edu.it/",
   "tentativi": [
    [
@@ -1193,15 +1221,7 @@
    ],
    [
     "http://www.icvittorinisolarino.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://icvittorinisolarino.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icvittorinisolarino.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1234,13 +1254,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.iissgagini.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.iissgagini.edu.it/",
   "tentativi": [
    [
     "https://www.iissgagini.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.iissgagini.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://iissgagini.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://iissgagini.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -1355,8 +1386,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceoruggierimarsala.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceoruggierimarsala.edu.it/",
   "tentativi": [
    [
@@ -1369,7 +1399,11 @@
    ],
    [
     "https://liceoruggierimarsala.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://liceoruggierimarsala.edu.it/",
+    "HTTP 509"
    ]
   ]
  }
