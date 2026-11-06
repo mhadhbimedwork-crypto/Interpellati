@@ -1,18 +1,4 @@
 {
- "CAIC80700B": {
-  "dns_pubblico": "no",
-  "dns_runner": false,
-  "err": "ConnectionError",
-  "motivo": "recuperato",
-  "nuovo": "https://icmaracalagonis.edu.it/",
-  "sito": "https://www.icmara.gov.it/",
-  "tentativi": [
-   [
-    "https://www.icmaracalagonis.edu.it/",
-    "OK"
-   ]
-  ]
- },
  "CAIC82000T": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -81,13 +67,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icnivolaiglesias.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icnivolaiglesias.edu.it/",
   "tentativi": [
    [
     "https://www.icnivolaiglesias.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.icnivolaiglesias.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icnivolaiglesias.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icnivolaiglesias.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -192,13 +189,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.iisisili.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.iisisili.edu.it/",
   "tentativi": [
    [
     "https://www.iisisili.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.iisisili.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://iisisili.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://iisisili.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -253,24 +261,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ics1tortoli.edu.it/",
   "sito": "https://www.ics1tortoli.edu.it/",
   "tentativi": [
    [
     "https://www.ics1tortoli.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.ics1tortoli.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://ics1tortoli.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://ics1tortoli.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -353,13 +350,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.ciusa.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.ciusa.edu.it/",
   "tentativi": [
    [
     "https://www.ciusa.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.ciusa.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://ciusa.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://ciusa.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.ciusa.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.ciusa.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://ciusa.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://ciusa.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -367,24 +391,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ititortoli.edu.it/",
   "sito": "https://www.ititortoli.edu.it/",
   "tentativi": [
    [
     "https://www.ititortoli.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.ititortoli.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://ititortoli.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://ititortoli.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -410,6 +423,47 @@
    [
     "http://iisvoltanuoro.edu.it/",
     "ConnectTimeout"
+   ]
+  ]
+ },
+ "NUIS01600V": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 503",
+  "motivo": "risponde ma con errore: HTTP 503",
+  "sito": "https://www.liceolanusei.it/",
+  "tentativi": [
+   [
+    "https://www.liceolanusei.it/",
+    "HTTP 503"
+   ],
+   [
+    "http://www.liceolanusei.it/",
+    "HTTP 503"
+   ],
+   [
+    "https://liceolanusei.it/",
+    "HTTP 503"
+   ],
+   [
+    "http://liceolanusei.it/",
+    "HTTP 503"
+   ],
+   [
+    "https://www.liceolanusei.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.liceolanusei.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://liceolanusei.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://liceolanusei.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -605,34 +659,6 @@
   "tentativi": [
    [
     "https://www.iistcgdongavinopes.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.iistcgdongavinopes.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://iistcgdongavinopes.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://iistcgdongavinopes.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.iistcgdongavinopes.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.iistcgdongavinopes.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://iistcgdongavinopes.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://iistcgdongavinopes.it/",
     "OK"
    ]
   ]
@@ -641,13 +667,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.mediadiazolbia.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.mediadiazolbia.edu.it/",
   "tentativi": [
    [
     "https://www.mediadiazolbia.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.mediadiazolbia.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://mediadiazolbia.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://mediadiazolbia.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -655,24 +692,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceogramsciolbia.edu.it/",
   "sito": "https://www.liceogramsciolbia.edu.it/",
   "tentativi": [
    [
     "https://www.liceogramsciolbia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.liceogramsciolbia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://liceogramsciolbia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://liceogramsciolbia.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
