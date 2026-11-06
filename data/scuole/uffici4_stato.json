@@ -6,17 +6,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://lodi.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lodi",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://milano.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Milano",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://lodi.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lodi",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -40,17 +40,15 @@
 "errore": null
 },
 "https://pr.istruzioneer.gov.it/": {
-"grezzi": 0,
-"scartati": [],
+"grezzi": 13,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PRIC833007/docenti/86b09212-fe44-494f-a3d7-331f42e4f5bc/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/e017355c-ec41-4ab5-b41a-6624976db164/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC83200B/docenti",
+"https://www.portaleargo.it/albopretorio/online/"
+],
 "provincia": "Parma",
-"avvisi": 0,
-"errore": null
-},
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 46,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 46,
+"avvisi": 4,
 "errore": null
 },
 "https://ag.usr.sicilia.it/": {
@@ -65,6 +63,13 @@
 "avvisi": 37,
 "errore": null
 },
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 47,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 47,
+"errore": null
+},
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
 "grezzi": 66,
 "scartati": [
@@ -75,6 +80,20 @@
 ],
 "provincia": "Enna",
 "avvisi": 40,
+"errore": null
+},
+"https://www.atpsassari.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
+"avvisi": 0,
+"errore": null
+},
+"https://www.hotels-ferrara.com/it/b19703/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Ferrara",
+"avvisi": 0,
 "errore": null
 },
 "https://atpisernia.it/category/interpelli": {
@@ -89,15 +108,8 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.hotels-ferrara.com/it/b19703/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Ferrara",
-"avvisi": 0,
-"errore": null
-},
 "https://re.istruzioneer.gov.it/category/docenti/": {
-"grezzi": 67,
+"grezzi": 58,
 "scartati": [
 "https://re.istruzioneer.gov.it/category/docenti/",
 "https://re.istruzioneer.gov.it/category/docenti/interpello/",
@@ -105,26 +117,19 @@
 "https://re.istruzioneer.gov.it/category/docenti/"
 ],
 "provincia": "Reggio Emilia",
-"avvisi": 44,
+"avvisi": 40,
 "errore": null
 },
-"https://www.atpsassari.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
-"errore": null
-},
-"https://tp.usr.sicilia.it/": {
-"grezzi": 31,
+"https://fe.istruzioneer.gov.it/category/assunzioni-e-concorsi/interpelli_docenti/": {
+"grezzi": 113,
 "scartati": [
-"https://twitter.com/home?status=Interpello CdC AI56 Percussioni – I.C. “Luigi Sturzo Asta” Marsala - https://t",
-"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
-"https://tp.usr.sicilia.it/category/news/",
-"https://tp.usr.sicilia.it/category/personale-scuola/"
+"https://fe.istruzioneer.gov.it/tag/a021/",
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/"
 ],
-"provincia": "Trapani",
-"avvisi": 21,
+"provincia": "Ferrara",
+"avvisi": 69,
 "errore": null
 },
 "https://venezia.istruzioneveneto.gov.it/": {
@@ -138,6 +143,25 @@
 "avvisi": 0,
 "errore": null
 },
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/": {
+"grezzi": 26,
+"scartati": [],
+"provincia": "Rovigo",
+"avvisi": 26,
+"errore": null
+},
+"https://tp.usr.sicilia.it/": {
+"grezzi": 23,
+"scartati": [
+"https://twitter.com/home?status=Interpello CdC AI56 Percussioni – I.C. “Luigi Sturzo Asta” Marsala - https://t",
+"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
+"https://tp.usr.sicilia.it/category/news/",
+"https://tp.usr.sicilia.it/category/personale-scuola/"
+],
+"provincia": "Trapani",
+"avvisi": 17,
+"errore": null
+},
 "https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
 "grezzi": 1,
 "scartati": [
@@ -147,36 +171,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/": {
-"grezzi": 26,
-"scartati": [],
-"provincia": "Rovigo",
-"avvisi": 26,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Arezzo",
-"avvisi": 0,
-"errore": null
-},
-"https://fe.istruzioneer.gov.it/category/assunzioni-e-concorsi/interpelli_docenti/": {
-"grezzi": 111,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
-],
-"provincia": "Ferrara",
-"avvisi": 69,
-"errore": null
-},
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
 "avvisi": 0,
 "errore": null
 },
@@ -187,10 +185,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.provincia.bz.it/": {
+"https://www.istruzionematera.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bolzano",
+"provincia": "Matera",
 "avvisi": 0,
 "errore": null
 },
@@ -201,30 +199,11 @@
 "avvisi": 0,
 "errore": "ConnectTimeout"
 },
-"https://www.ufficioscolasticoprovinciale.prato.it/": {
-"grezzi": 3,
-"scartati": [],
-"provincia": "Prato",
-"avvisi": 3,
-"errore": null
-},
-"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
+"https://www.provincia.bz.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Benevento",
+"provincia": "Bolzano",
 "avvisi": 0,
-"errore": "HTTP 403"
-},
-"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/": {
-"grezzi": 33,
-"scartati": [
-"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/",
-"https://www.uspistruzione.fr.it/wp2/avviso-per-selezione-personale-docente-scuola-secondaria-di-secondo-grado-",
-"https://www.uspistruzione.fr.it/wp2/interpello-per-supplenza-1-posto-su-classe-di-concorso-a027-matematica-e-f",
-"https://www.uspistruzione.fr.it/wp2/interpello-finalizzato-ad-individuare-candidati-a-cui-assegnare-supplenze-"
-],
-"provincia": "Frosinone",
-"avvisi": 25,
 "errore": null
 },
 "https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
@@ -239,6 +218,25 @@
 "avvisi": 3,
 "errore": null
 },
+"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Benevento",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
+"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/": {
+"grezzi": 32,
+"scartati": [
+"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/",
+"https://www.uspistruzione.fr.it/wp2/avviso-per-selezione-personale-docente-scuola-secondaria-di-secondo-grado-",
+"https://www.uspistruzione.fr.it/wp2/interpello-per-supplenza-1-posto-su-classe-di-concorso-a027-matematica-e-f",
+"https://www.uspistruzione.fr.it/wp2/interpello-finalizzato-ad-individuare-candidati-a-cui-assegnare-supplenze-"
+],
+"provincia": "Frosinone",
+"avvisi": 24,
+"errore": null
+},
 "https://www.istruzionebrindisi.it/": {
 "grezzi": 47,
 "scartati": [
@@ -251,32 +249,17 @@
 "avvisi": 30,
 "errore": null
 },
-"https://www.uspascolipiceno.it/": {
-"grezzi": 21,
+"https://www.ufficioscolasticoprovinciale.prato.it/": {
+"grezzi": 7,
 "scartati": [
-"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
-"https://www.uspascolipiceno.it/wordpress/category/disponibilita/",
-"https://www.uspascolipiceno.it/wordpress/category/disponibilita/disponibilita-supplenze/",
-"https://www.uspascolipiceno.it/wordpress/tag/disponibilita-supplenze/"
+"https://www.ufficioscolasticoprovinciale.prato.it/Mese/novita/"
 ],
-"provincia": "Fermo",
-"avvisi": 9,
-"errore": null
-},
-"https://www.uspsi.it/": {
-"grezzi": 23,
-"scartati": [
-"https://www.uspsi.it/uspsiena/albo/",
-"https://www.uspsi.it/uspsiena/docenti/",
-"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
-"https://www.uspsi.it/uspsiena/news/"
-],
-"provincia": "Siena",
-"avvisi": 16,
+"provincia": "Prato",
+"avvisi": 6,
 "errore": null
 },
 "https://www.uat-napoli.it/": {
-"grezzi": 41,
+"grezzi": 48,
 "scartati": [
 "https://www.uat-napoli.it/category/docenti/",
 "https://www.uat-napoli.it/tag/avvisi/",
@@ -284,18 +267,31 @@
 "https://www.uat-napoli.it/category/docenti/"
 ],
 "provincia": "Napoli",
-"avvisi": 35,
+"avvisi": 42,
 "errore": null
 },
-"https://www.ustfoggia.it/": {
-"grezzi": 57,
+"https://www.uspascolipiceno.it/": {
+"grezzi": 10,
 "scartati": [
-"https://www.ustfoggia.it/category/albo-pretorio/",
-"https://www.ustfoggia.it/category/news/",
-"https://www.ustfoggia.it/ultime-novita-ust-foggia/"
+"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
+"https://www.uspascolipiceno.it/wordpress/category/disponibilita/",
+"https://www.uspascolipiceno.it/wordpress/category/disponibilita/disponibilita-supplenze/",
+"https://www.uspascolipiceno.it/wordpress/tag/disponibilita-supplenze/"
 ],
-"provincia": "Foggia",
-"avvisi": 54,
+"provincia": "Fermo",
+"avvisi": 6,
+"errore": null
+},
+"https://www.uspsi.it/": {
+"grezzi": 44,
+"scartati": [
+"https://www.uspsi.it/uspsiena/albo/",
+"https://www.uspsi.it/uspsiena/docenti/",
+"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
+"https://www.uspsi.it/uspsiena/news/"
+],
+"provincia": "Siena",
+"avvisi": 37,
 "errore": null
 },
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
@@ -308,6 +304,16 @@
 ],
 "provincia": "Ragusa",
 "avvisi": 38,
+"errore": null
+},
+"https://www.ustfoggia.it/": {
+"grezzi": 53,
+"scartati": [
+"https://www.ustfoggia.it/category/albo-pretorio/",
+"https://www.ustfoggia.it/category/news/"
+],
+"provincia": "Foggia",
+"avvisi": 51,
 "errore": null
 },
 "https://www.ustli.it/usp_livorno/index.php/docenti/interpelli": {
@@ -347,7 +353,7 @@
 "errore": null
 },
 "https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
-"grezzi": 35,
+"grezzi": 31,
 "scartati": [
 "https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
 "https://www.istruzionepiemonte.it/torino/category/docenti/",
@@ -355,7 +361,7 @@
 "https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
 ],
 "provincia": "Torino",
-"avvisi": 15,
+"avvisi": 16,
 "errore": null
 },
 "https://www.istruzionegenova.gov.it/pagine/interpelli---docenti": {
