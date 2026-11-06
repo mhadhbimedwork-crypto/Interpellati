@@ -6,17 +6,24 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://lecco.istruzionelombardia.gov.it/": {
+"http://www.ustlucca.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Lecco",
+"provincia": "Lucca",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": null
 },
 "https://bergamo.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://lecco.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -27,6 +34,13 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://pa.usr.sicilia.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Palermo",
+"avvisi": 0,
+"errore": null
+},
 "https://re.istruzioneer.gov.it/": {
 "grezzi": 27,
 "scartati": [
@@ -35,13 +49,6 @@
 ],
 "provincia": "Reggio Emilia",
 "avvisi": 25,
-"errore": null
-},
-"https://pa.usr.sicilia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Palermo",
-"avvisi": 0,
 "errore": null
 },
 "https://atpisernia.it/": {
@@ -55,6 +62,13 @@
 "provincia": "Isernia",
 "avvisi": 0,
 "errore": null
+},
+"https://varese.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Varese",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://cl-en.usr.sicilia.it/": {
 "grezzi": 45,
@@ -75,13 +89,6 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://varese.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Varese",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://www.csateramo.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -93,62 +100,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Vibo Valentia",
-"avvisi": 0,
-"errore": null
-},
-"https://me.usr.sicilia.it/personale-scuola/interpelli/": {
-"grezzi": 74,
-"scartati": [
-"https://twitter.com/home?status=I.I.S. E. MEDI Barcellona Pozzo di Gotto – AVVISO DI INTERPELLO NAZIONALE per ",
-"https://me.usr.sicilia.it/category/personale-scuola/interpelli/",
-"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-nazionali/",
-"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-provinciali/"
-],
-"provincia": "Messina",
-"avvisi": 34,
-"errore": null
-},
-"http://www.provveditoratostudiviterbo.it/DOCENTI/interpelli/INTERPELLIDOC.htm": {
-"grezzi": 33,
-"scartati": [
-"https://madinterpello.portaleargo.it/index.html",
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/",
-"https://liceosantarosavt.edu.it/index.php/ampliamento-offerta-formativa/avvisi-e-bandi"
-],
-"provincia": "Viterbo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionelaspezia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "La Spezia",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
-"errore": null
-},
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 26,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 25,
-"errore": null
-},
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 1,
-"scartati": [
-"https://vicenza.istruzioneveneto.gov.it/2026/11/02/avviso-assunzioni-in-ruolo-del-personale-docente-della-scuo"
-],
-"provincia": "Vicenza",
 "avvisi": 0,
 "errore": null
 },
@@ -164,6 +115,88 @@
 "avvisi": 14,
 "errore": null
 },
+"https://www.istruzionelaspezia.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "La Spezia",
+"avvisi": 0,
+"errore": null
+},
+"https://me.usr.sicilia.it/personale-scuola/interpelli/": {
+"grezzi": 74,
+"scartati": [
+"https://twitter.com/home?status=I.I.S. E. MEDI Barcellona Pozzo di Gotto – AVVISO DI INTERPELLO NAZIONALE per ",
+"https://me.usr.sicilia.it/category/personale-scuola/interpelli/",
+"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-nazionali/",
+"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-provinciali/"
+],
+"provincia": "Messina",
+"avvisi": 34,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 23,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 22,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/matera-2019-percorsi-culturali-dalle-scuole-per-le-scuole/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Matera",
+"avvisi": 0,
+"errore": null
+},
+"http://www.provveditoratostudiviterbo.it/DOCENTI/interpelli/INTERPELLIDOC.htm": {
+"grezzi": 33,
+"scartati": [
+"https://madinterpello.portaleargo.it/index.html",
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/",
+"https://liceosantarosavt.edu.it/index.php/ampliamento-offerta-formativa/avvisi-e-bandi"
+],
+"provincia": "Viterbo",
+"avvisi": 0,
+"errore": null
+},
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 99,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+],
+"provincia": "Ferrara",
+"avvisi": 60,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Roma",
+"avvisi": 0,
+"errore": null
+},
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 1,
+"scartati": [
+"https://vicenza.istruzioneveneto.gov.it/2026/11/02/avviso-assunzioni-in-ruolo-del-personale-docente-della-scuo"
+],
+"provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionebat.it/": {
 "grezzi": 114,
 "scartati": [
@@ -176,42 +209,29 @@
 "avvisi": 1,
 "errore": null
 },
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 93,
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-annuali-classe-di-concorso-a041-e-a058/": {
+"grezzi": 3,
 "scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+"https://www.istruzionepiemonte.it/cuneo/category/comunicazioni-alle-scuole/",
+"https://www.istruzionepiemonte.it/cuneo/tag/albo/",
+"https://www.istruzionepiemonte.it/cuneo/tag/avvisi/"
 ],
-"provincia": "Ferrara",
-"avvisi": 59,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/matera-2019-percorsi-culturali-dalle-scuole-per-le-scuole/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
+"provincia": "Cuneo",
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
+"https://www.usp-rieti.it/it/302-docenti/interpelli-supplenze-altre-province.html": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Roma",
+"provincia": "Rieti",
 "avvisi": 0,
-"errore": null
+"errore": "HTTP 404"
 },
-"http://www.ustlucca.it/": {
-"grezzi": 35,
-"scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/category/avvisi/"
-],
-"provincia": "Lucca",
-"avvisi": 27,
+"https://www.usppotenza.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Potenza",
+"avvisi": 0,
 "errore": null
 },
 "https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/": {
@@ -226,33 +246,8 @@
 "avvisi": 20,
 "errore": null
 },
-"https://www.usp-rieti.it/it/302-docenti/interpelli-supplenze-altre-province.html": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-annuali-classe-di-concorso-a041-e-a058/": {
-"grezzi": 3,
-"scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/comunicazioni-alle-scuole/",
-"https://www.istruzionepiemonte.it/cuneo/tag/albo/",
-"https://www.istruzionepiemonte.it/cuneo/tag/avvisi/"
-],
-"provincia": "Cuneo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usppotenza.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Potenza",
-"avvisi": 0,
-"errore": null
-},
 "https://pc.istruzioneer.gov.it/interpelli/": {
-"grezzi": 37,
+"grezzi": 35,
 "scartati": [
 "https://www.liceorespighi.edu.it/pagine/interpello",
 "https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
@@ -261,13 +256,6 @@
 ],
 "provincia": "Piacenza",
 "avvisi": 12,
-"errore": null
-},
-"https://www.uat-caserta.it/": {
-"grezzi": 7,
-"scartati": [],
-"provincia": "Caserta",
-"avvisi": 7,
 "errore": null
 },
 "https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
@@ -282,18 +270,6 @@
 "avvisi": 30,
 "errore": null
 },
-"https://www.ustlecce.it/index.php/personale-docente": {
-"grezzi": 42,
-"scartati": [
-"https://www.ustlecce.it/index.php/interpelli/file/3915-interpello-nazionale-per-supplenza-su-classe-di-concors",
-"https://www.ustlecce.it/index.php/interpelli/file/3914-interpello-nazionale-per-supplenza-su-classe-di-concors",
-"https://www.ustlecce.it/index.php/interpelli/file/3911-interpello-nazionale-per-supplenza-su-classe-di-concors",
-"https://www.ustlecce.it/index.php/interpelli/file/3910-interpello-per-supplenza-su-classe-di-concorso-adee-sos"
-],
-"provincia": "Lecce",
-"avvisi": 5,
-"errore": null
-},
 "https://www.usr.sicilia.it/": {
 "grezzi": 32,
 "scartati": [
@@ -306,6 +282,13 @@
 "avvisi": 19,
 "errore": null
 },
+"https://www.uat-caserta.it/": {
+"grezzi": 7,
+"scartati": [],
+"provincia": "Caserta",
+"avvisi": 7,
+"errore": null
+},
 "https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
 "grezzi": 51,
 "scartati": [
@@ -316,6 +299,18 @@
 ],
 "provincia": "Bari",
 "avvisi": 15,
+"errore": null
+},
+"https://www.ustlecce.it/index.php/personale-docente": {
+"grezzi": 42,
+"scartati": [
+"https://www.ustlecce.it/index.php/interpelli/file/3915-interpello-nazionale-per-supplenza-su-classe-di-concors",
+"https://www.ustlecce.it/index.php/interpelli/file/3914-interpello-nazionale-per-supplenza-su-classe-di-concors",
+"https://www.ustlecce.it/index.php/interpelli/file/3911-interpello-nazionale-per-supplenza-su-classe-di-concors",
+"https://www.ustlecce.it/index.php/interpelli/file/3910-interpello-per-supplenza-su-classe-di-concorso-adee-sos"
+],
+"provincia": "Lecce",
+"avvisi": 5,
 "errore": null
 },
 "https://www.ust.fi.it/mese/interpelli/": {
