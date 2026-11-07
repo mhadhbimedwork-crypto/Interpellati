@@ -1,17 +1,17 @@
 {
-"https://mantova.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Mantova",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://lnx.csalatina.it/jclub/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Latina",
 "avvisi": 0,
 "errore": null
+},
+"https://mantova.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Mantova",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://brescia.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -39,18 +39,23 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ra.istruzioneer.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Ravenna",
-"avvisi": 0,
-"errore": null
-},
 "https://belluno.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Belluno",
 "avvisi": 0,
+"errore": null
+},
+"https://ra.istruzioneer.gov.it/": {
+"grezzi": 26,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1234",
+"https://www.icbrisighella.edu.it/cgweb-interpello/",
+"https://www.icfaenzasanrocco.edu.it/albo-online"
+],
+"provincia": "Ravenna",
+"avvisi": 19,
 "errore": null
 },
 "https://rn.istruzioneer.gov.it/": {
@@ -63,6 +68,18 @@
 ],
 "provincia": "Rimini",
 "avvisi": 15,
+"errore": null
+},
+"https://sr.usr.sicilia.it/": {
+"grezzi": 16,
+"scartati": [
+"https://twitter.com/home?status=Interpello Nazionale AI56 – Strumento musicale nella scuola secondaria di prim",
+"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/gps/",
+"https://sr.usr.sicilia.it/category/news/",
+"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/"
+],
+"provincia": "Siracusa",
+"avvisi": 5,
 "errore": null
 },
 "https://www.arezzoistruzione.it/": {
@@ -79,25 +96,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://sr.usr.sicilia.it/": {
-"grezzi": 16,
-"scartati": [
-"https://twitter.com/home?status=Interpello Nazionale AI56 – Strumento musicale nella scuola secondaria di prim",
-"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/gps/",
-"https://sr.usr.sicilia.it/category/news/",
-"https://sr.usr.sicilia.it/category/personale-scuola/personale-docente/"
-],
-"provincia": "Siracusa",
-"avvisi": 5,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cosenza",
-"avvisi": 0,
-"errore": null
-},
 "http://www.usppesarourbino.it/": {
 "grezzi": 8,
 "scartati": [
@@ -107,6 +105,13 @@
 "https://www.usppesarourbino.it/wp-content/uploads/2026/09/timbro_INTERPELLO_AI56-PERCUSSIONI.zip"
 ],
 "provincia": "Pesaro e Urbino",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cosenza",
 "avvisi": 0,
 "errore": null
 },
@@ -133,22 +138,6 @@
 "avvisi": 21,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/le-nostre-scuole/asti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Asti",
-"avvisi": 0,
-"errore": null
-},
-"https://venezia.istruzioneveneto.gov.it/interpelli-supplenze/": {
-"grezzi": 1,
-"scartati": [
-"https://venezia.istruzioneveneto.gov.it/20261104_34582/"
-],
-"provincia": "Venezia",
-"avvisi": 0,
-"errore": null
-},
 "https://cl-en.usr.sicilia.it/interpelli/": {
 "grezzi": 72,
 "scartati": [
@@ -159,13 +148,6 @@
 ],
 "provincia": null,
 "avvisi": 36,
-"errore": null
-},
-"https://treviso.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Treviso",
-"avvisi": 0,
 "errore": null
 },
 "https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
@@ -180,17 +162,26 @@
 "avvisi": 22,
 "errore": null
 },
-"https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
+"https://www.istruzionepiemonte.it/le-nostre-scuole/asti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bolzano",
+"provincia": "Asti",
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/palermo-chiama-italia-23-maggio-2019/": {
+"https://treviso.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Palermo",
+"provincia": "Treviso",
+"avvisi": 0,
+"errore": null
+},
+"https://venezia.istruzioneveneto.gov.it/interpelli-supplenze/": {
+"grezzi": 1,
+"scartati": [
+"https://venezia.istruzioneveneto.gov.it/20261104_34582/"
+],
+"provincia": "Venezia",
 "avvisi": 0,
 "errore": null
 },
@@ -201,6 +192,25 @@
 "avvisi": 0,
 "errore": null
 },
+"https://mo.istruzioneer.gov.it/category/interpelli-personale-docente-2024-25/": {
+"grezzi": 24,
+"scartati": [
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-secondaria-secondo-grado/",
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
+],
+"provincia": "Modena",
+"avvisi": 8,
+"errore": null
+},
+"https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bolzano",
+"avvisi": 0,
+"errore": null
+},
 "https://www.uspcagliari.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -208,10 +218,10 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
-"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-trieste/": {
+"https://www.istruzionepiemonte.it/palermo-chiama-italia-23-maggio-2019/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Trieste",
+"provincia": "Palermo",
 "avvisi": 0,
 "errore": null
 },
@@ -222,16 +232,11 @@
 "avvisi": 3,
 "errore": null
 },
-"https://mo.istruzioneer.gov.it/category/interpelli-personale-docente-2024-25/": {
-"grezzi": 26,
-"scartati": [
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-secondaria-secondo-grado/",
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
-],
-"provincia": "Modena",
-"avvisi": 8,
+"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-trieste/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Trieste",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.prato.it/": {
@@ -255,18 +260,6 @@
 "avvisi": 22,
 "errore": null
 },
-"https://www.ustms.it/": {
-"grezzi": 41,
-"scartati": [
-"https://twitter.com/home?status=LUCCA: INTERPELLO CdC A040 SCIENZE e TECNOLOGIE ELETTRICHE ED ELETTRONICHE – s",
-"https://www.ustms.it/category/docenti/",
-"https://www.ustms.it/category/in-primo-piano/",
-"https://www.ustms.it/category/docenti/interpelli/"
-],
-"provincia": "Massa-Carrara",
-"avvisi": 21,
-"errore": null
-},
 "https://www.uspsi.it/?cat=264": {
 "grezzi": 36,
 "scartati": [
@@ -284,6 +277,18 @@
 "scartati": [],
 "provincia": "Bergamo",
 "avvisi": 0,
+"errore": null
+},
+"https://www.ustms.it/": {
+"grezzi": 41,
+"scartati": [
+"https://twitter.com/home?status=LUCCA: INTERPELLO CdC A040 SCIENZE e TECNOLOGIE ELETTRICHE ED ELETTRONICHE – s",
+"https://www.ustms.it/category/docenti/",
+"https://www.ustms.it/category/in-primo-piano/",
+"https://www.ustms.it/category/docenti/interpelli/"
+],
+"provincia": "Massa-Carrara",
+"avvisi": 21,
 "errore": null
 },
 "https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
