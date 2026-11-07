@@ -13,17 +13,17 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://monza.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Monza e Brianza",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://como.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Como",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://monza.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Monza e Brianza",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -48,6 +48,27 @@
 "avvisi": 0,
 "errore": null
 },
+"https://belluno.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Belluno",
+"avvisi": 0,
+"errore": null
+},
+"https://ra.istruzioneer.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Ravenna",
+"avvisi": 0,
+"errore": null
+},
+"https://www.csanuoro.it/wp2019/interpelli-as-2024-2025": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Nuoro",
+"avvisi": 0,
+"errore": null
+},
 "https://pc.istruzioneer.gov.it/": {
 "grezzi": 12,
 "scartati": [
@@ -56,25 +77,6 @@
 ],
 "provincia": "Piacenza",
 "avvisi": 10,
-"errore": null
-},
-"https://ra.istruzioneer.gov.it/": {
-"grezzi": 26,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1234",
-"https://www.icbrisighella.edu.it/cgweb-interpello/",
-"https://www.icfaenzasanrocco.edu.it/albo-online"
-],
-"provincia": "Ravenna",
-"avvisi": 19,
-"errore": null
-},
-"https://belluno.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Belluno",
-"avvisi": 0,
 "errore": null
 },
 "https://sr.usr.sicilia.it/": {
@@ -89,11 +91,11 @@
 "avvisi": 5,
 "errore": null
 },
-"https://www.csanuoro.it/wp2019/interpelli-as-2024-2025": {
-"grezzi": 0,
+"https://atavellino.it/": {
+"grezzi": 1,
 "scartati": [],
-"provincia": "Nuoro",
-"avvisi": 0,
+"provincia": "Avellino",
+"avvisi": 1,
 "errore": null
 },
 "https://me.usr.sicilia.it/": {
@@ -104,20 +106,6 @@
 ],
 "provincia": "Messina",
 "avvisi": 23,
-"errore": null
-},
-"https://atavellino.it/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": "Avellino",
-"avvisi": 1,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Crotone",
-"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/": {
@@ -146,20 +134,25 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Crotone",
+"avvisi": 0,
+"errore": null
+},
+"https://fc.istruzioneer.gov.it/": {
+"grezzi": 11,
+"scartati": [],
+"provincia": "Forlì-Cesena",
+"avvisi": 11,
+"errore": null
+},
 "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-udine/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Udine",
 "avvisi": 0,
-"errore": null
-},
-"https://fc.istruzioneer.gov.it/": {
-"grezzi": 22,
-"scartati": [
-"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2026-27/"
-],
-"provincia": "Forlì-Cesena",
-"avvisi": 21,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/le-nostre-scuole/verbano-cusio-ossola/": {
@@ -206,19 +199,19 @@
 "avvisi": 1,
 "errore": null
 },
-"https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://www.uspcampobasso.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Campobasso",
 "avvisi": 0,
 "errore": null
+},
+"https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
+"errore": "HTTP 404"
 },
 "https://www.ustfoggia.it/feed/": {
 "grezzi": 7,
@@ -234,6 +227,18 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzioneatprc.it/category/recl/int/": {
+"grezzi": 20,
+"scartati": [
+"https://www.istruzioneatprc.it/category/recl/int/",
+"https://www.istruzioneatprc.it/interpelloicgiannone-oppidolucano-ai56/",
+"https://www.istruzioneatprc.it/interpelloliceofermi-nuoro-a041/",
+"https://www.istruzioneatprc.it/interpelloicgiannone-oppidolucano-eeem/"
+],
+"provincia": "Reggio Calabria",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
 "grezzi": 46,
 "scartati": [
@@ -244,17 +249,6 @@
 ],
 "provincia": "Chieti",
 "avvisi": 30,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/cuneo/": {
-"grezzi": 21,
-"scartati": [
-"https://www.istruzionepiemonte.it/cuneo/interpello-nazionale-per-supplenze-su-classe-di-concorso-a041-scienze-",
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
-],
-"provincia": "Cuneo",
-"avvisi": 18,
 "errore": null
 },
 "https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
@@ -269,16 +263,15 @@
 "avvisi": 4,
 "errore": null
 },
-"https://www.istruzioneatprc.it/category/recl/int/": {
-"grezzi": 20,
+"https://www.istruzionepiemonte.it/cuneo/": {
+"grezzi": 21,
 "scartati": [
-"https://www.istruzioneatprc.it/category/recl/int/",
-"https://www.istruzioneatprc.it/interpelloicgiannone-oppidolucano-ai56/",
-"https://www.istruzioneatprc.it/interpelloliceofermi-nuoro-a041/",
-"https://www.istruzioneatprc.it/interpelloicgiannone-oppidolucano-eeem/"
+"https://www.istruzionepiemonte.it/cuneo/interpello-nazionale-per-supplenze-su-classe-di-concorso-a041-scienze-",
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
 ],
-"provincia": "Reggio Calabria",
-"avvisi": 0,
+"provincia": "Cuneo",
+"avvisi": 18,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
