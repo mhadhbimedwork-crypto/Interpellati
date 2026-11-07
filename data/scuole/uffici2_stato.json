@@ -6,17 +6,17 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecco",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://milano.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -27,10 +27,10 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"https://milano.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bergamo",
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -94,11 +94,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 41,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 41,
+"http://www.ustlucca.it/": {
+"grezzi": 35,
+"scartati": [
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/category/avvisi/"
+],
+"provincia": "Lucca",
+"avvisi": 27,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
@@ -125,6 +130,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 41,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 41,
+"errore": null
+},
 "https://uspistruzione.fr.it/wp2/": {
 "grezzi": 20,
 "scartati": [
@@ -137,16 +149,11 @@
 "avvisi": 14,
 "errore": null
 },
-"http://www.ustlucca.it/": {
-"grezzi": 35,
-"scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/category/avvisi/"
-],
-"provincia": "Lucca",
-"avvisi": 27,
+"https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Arezzo",
+"avvisi": 0,
 "errore": null
 },
 "https://rovigo.istruzioneveneto.gov.it/": {
@@ -156,20 +163,6 @@
 ],
 "provincia": "Rovigo",
 "avvisi": 22,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Arezzo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
 "errore": null
 },
 "https://fe.istruzioneer.gov.it/": {
@@ -182,6 +175,20 @@
 ],
 "provincia": "Ferrara",
 "avvisi": 60,
+"errore": null
+},
+"https://www.istruzionematera.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Matera",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionesavona.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Savona",
+"avvisi": 0,
 "errore": null
 },
 "https://vicenza.istruzioneveneto.gov.it/": {
@@ -200,11 +207,11 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://www.istruzionesavona.gov.it/": {
-"grezzi": 0,
+"https://www.usp-rieti.it/feed/": {
+"grezzi": 6,
 "scartati": [],
-"provincia": "Savona",
-"avvisi": 0,
+"provincia": "Rieti",
+"avvisi": 6,
 "errore": null
 },
 "https://www.atpromaistruzione.it/atp/tag/interpelli/": {
@@ -217,13 +224,6 @@
 ],
 "provincia": "Roma",
 "avvisi": 16,
-"errore": null
-},
-"https://www.usp-rieti.it/feed/": {
-"grezzi": 6,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 6,
 "errore": null
 },
 "https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
