@@ -1,17 +1,17 @@
 {
-"http://www.ustcremona.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": null
-},
 "https://lnx.uspistruzione.fr.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Frosinone",
 "avvisi": 0,
 "errore": "ConnectionError"
+},
+"http://www.ustcremona.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cremona",
+"avvisi": 0,
+"errore": null
 },
 "https://bergamo.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -53,6 +53,13 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://varese.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Varese",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://re.istruzioneer.gov.it/": {
 "grezzi": 27,
 "scartati": [
@@ -62,13 +69,6 @@
 "provincia": "Reggio Emilia",
 "avvisi": 25,
 "errore": null
-},
-"https://varese.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Varese",
-"avvisi": 0,
-"errore": "SSLError"
 },
 "https://pa.usr.sicilia.it/": {
 "grezzi": 0,
@@ -113,22 +113,6 @@
 "avvisi": 14,
 "errore": null
 },
-"https://www.istruzionegenova.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
-"errore": null
-},
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 23,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 22,
-"errore": null
-},
 "https://me.usr.sicilia.it/personale-scuola/interpelli/": {
 "grezzi": 74,
 "scartati": [
@@ -141,6 +125,13 @@
 "avvisi": 34,
 "errore": null
 },
+"https://www.istruzionegenova.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Genova",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -148,11 +139,13 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 23,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 22,
 "errore": null
 },
 "https://vicenza.istruzioneveneto.gov.it/": {
@@ -161,20 +154,6 @@
 "https://vicenza.istruzioneveneto.gov.it/2026/11/02/avviso-assunzioni-in-ruolo-del-personale-docente-della-scuo"
 ],
 "provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Napoli",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
 "avvisi": 0,
 "errore": null
 },
@@ -190,19 +169,38 @@
 "avvisi": 60,
 "errore": null
 },
-"https://www.istruzionerovigo.it/": {
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Rovigo",
+"provincia": "Catanzaro",
 "avvisi": 0,
 "errore": null
 },
-"https://www.toscana-istruzione.it/": {
+"https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Pisa",
+"provincia": "Napoli",
 "avvisi": 0,
-"errore": "HTTP 403"
+"errore": null
+},
+"https://www.istruzionematera.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Matera",
+"avvisi": 0,
+"errore": null
+},
+"https://www.csateramo.it/wpusp/archive/category/news": {
+"grezzi": 43,
+"scartati": [
+"https://www.csateramo.it/wpusp/wp-content/uploads/2026/11/I__POSTA_CERTIFICATA__INTERPELLO_A042_-_SCIENZE_E_TE",
+"https://www.csateramo.it/wpusp/wp-content/uploads/2026/11/I__POSTA_CERTIFICATA__3°_Interpello_Nazionale_per_su",
+"https://www.mim.gov.it/web/cagliari/-/1-interpello-per-supplenza-su-classe-di-con-corso-as12-italiano-progetto",
+"https://www.csateramo.it/wpusp/archive/avviso-interpello-nazionale-cl-c-a044-chis018005-per-n-2-due-supplenze-"
+],
+"provincia": "Teramo",
+"avvisi": 12,
+"errore": null
 },
 "https://www.istruzionebat.it/category/interpello/": {
 "grezzi": 56,
@@ -216,12 +214,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.usplecce.it/": {
+"https://www.toscana-istruzione.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Lecce",
+"provincia": "Pisa",
 "avvisi": 0,
-"errore": null
+"errore": "HTTP 403"
 },
 "https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/": {
 "grezzi": 123,
@@ -235,16 +233,18 @@
 "avvisi": 18,
 "errore": null
 },
-"https://pc.istruzioneer.gov.it/interpelli/": {
-"grezzi": 35,
-"scartati": [
-"https://www.liceorespighi.edu.it/pagine/interpello",
-"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
-"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F10%2F24%2Finterpel",
-"http://twitter.com/share?text=Interpello+posto+di+sostegno+scuola+primaria&url=https%3A%2F%2Ficcastellarquato."
-],
-"provincia": "Piacenza",
-"avvisi": 12,
+"https://www.istruzionerovigo.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Rovigo",
+"avvisi": 0,
+"errore": null
+},
+"https://www.usplecce.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecce",
+"avvisi": 0,
 "errore": null
 },
 "https://www.mim.gov.it/web/cagliari/": {
@@ -257,6 +257,18 @@
 ],
 "provincia": "Cagliari",
 "avvisi": 1,
+"errore": null
+},
+"https://pc.istruzioneer.gov.it/interpelli/": {
+"grezzi": 35,
+"scartati": [
+"https://www.liceorespighi.edu.it/pagine/interpello",
+"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
+"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F10%2F24%2Finterpel",
+"http://twitter.com/share?text=Interpello+posto+di+sostegno+scuola+primaria&url=https%3A%2F%2Ficcastellarquato."
+],
+"provincia": "Piacenza",
+"avvisi": 12,
 "errore": null
 },
 "https://www.usp-rieti.it/": {
@@ -278,28 +290,6 @@
 "avvisi": 26,
 "errore": null
 },
-"https://www.csateramo.it/wpusp/archive/category/news": {
-"grezzi": 43,
-"scartati": [
-"https://www.csateramo.it/wpusp/wp-content/uploads/2026/11/I__POSTA_CERTIFICATA__INTERPELLO_A042_-_SCIENZE_E_TE",
-"https://www.csateramo.it/wpusp/wp-content/uploads/2026/11/I__POSTA_CERTIFICATA__3°_Interpello_Nazionale_per_su",
-"https://www.mim.gov.it/web/cagliari/-/1-interpello-per-supplenza-su-classe-di-con-corso-as12-italiano-progetto",
-"https://www.csateramo.it/wpusp/archive/avviso-interpello-nazionale-cl-c-a044-chis018005-per-n-2-due-supplenze-"
-],
-"provincia": "Teramo",
-"avvisi": 12,
-"errore": null
-},
-"https://www.usptaranto.it/": {
-"grezzi": 16,
-"scartati": [
-"https://www.usptaranto.it/2026/11/05/interpello-per-un-incarico-a-t-d-per-sostituzione-docente-scuola-secondar",
-"https://www.usptaranto.it/2026/11/05/interpello-per-un-incarico-a-t-d-per-sostituzione-docente-scuola-secondar"
-],
-"provincia": "Taranto",
-"avvisi": 14,
-"errore": null
-},
 "https://www.ustlecce.it/": {
 "grezzi": 7,
 "scartati": [
@@ -312,23 +302,21 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/torino/": {
-"grezzi": 65,
-"scartati": [
-"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
-"https://www.istruzionepiemonte.it/torino/tag/2024-a018/"
-],
-"provincia": "Torino",
-"avvisi": 27,
-"errore": null
-},
 "https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Pordenone",
 "avvisi": 0,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 16,
+"scartati": [
+"https://www.usptaranto.it/2026/11/05/interpello-per-un-incarico-a-t-d-per-sostituzione-docente-scuola-secondar",
+"https://www.usptaranto.it/2026/11/05/interpello-per-un-incarico-a-t-d-per-sostituzione-docente-scuola-secondar"
+],
+"provincia": "Taranto",
+"avvisi": 14,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
@@ -341,6 +329,18 @@
 ],
 "provincia": "Cuneo",
 "avvisi": 17,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/torino/": {
+"grezzi": 65,
+"scartati": [
+"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
+"https://www.istruzionepiemonte.it/torino/tag/2024-a018/"
+],
+"provincia": "Torino",
+"avvisi": 27,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
