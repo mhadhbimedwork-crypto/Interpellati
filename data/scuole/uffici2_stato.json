@@ -6,17 +6,10 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
+"provincia": "Lecco",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -27,10 +20,17 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Lecco",
+"provincia": "Cremona",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -101,30 +101,6 @@
 "avvisi": 41,
 "errore": null
 },
-"https://uspistruzione.fr.it/wp2/": {
-"grezzi": 20,
-"scartati": [
-"https://www.uspistruzione.fr.it/wp2/category/albo",
-"https://www.uspistruzione.fr.it/wp2/category/comunicazioni",
-"https://www.uspistruzione.fr.it/wp2/category/graduatorie",
-"https://www.uspistruzione.fr.it/wp2/category/graduatorie/interpello-nazionale"
-],
-"provincia": "Frosinone",
-"avvisi": 14,
-"errore": null
-},
-"http://www.ustlucca.it/": {
-"grezzi": 35,
-"scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/category/avvisi/"
-],
-"provincia": "Lucca",
-"avvisi": 27,
-"errore": null
-},
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
 "grezzi": 66,
 "scartati": [
@@ -149,10 +125,50 @@
 "avvisi": 0,
 "errore": null
 },
+"https://uspistruzione.fr.it/wp2/": {
+"grezzi": 20,
+"scartati": [
+"https://www.uspistruzione.fr.it/wp2/category/albo",
+"https://www.uspistruzione.fr.it/wp2/category/comunicazioni",
+"https://www.uspistruzione.fr.it/wp2/category/graduatorie",
+"https://www.uspistruzione.fr.it/wp2/category/graduatorie/interpello-nazionale"
+],
+"provincia": "Frosinone",
+"avvisi": 14,
+"errore": null
+},
+"http://www.ustlucca.it/": {
+"grezzi": 35,
+"scartati": [
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/category/avvisi/"
+],
+"provincia": "Lucca",
+"avvisi": 27,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 23,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 22,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Arezzo",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionematera.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Matera",
 "avvisi": 0,
 "errore": null
 },
@@ -168,22 +184,6 @@
 "avvisi": 60,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 23,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 22,
-"errore": null
-},
-"https://www.istruzionematera.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
-"errore": null
-},
 "https://vicenza.istruzioneveneto.gov.it/": {
 "grezzi": 1,
 "scartati": [
@@ -193,6 +193,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.toscana-istruzione.it/atpisa/category/news/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
 "https://www.istruzionesavona.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -200,12 +207,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.toscana-istruzione.it/atpisa/category/news/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pisa",
-"avvisi": 0,
-"errore": "HTTP 404"
+"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
+"grezzi": 120,
+"scartati": [
+"https://www.atpromaistruzione.it/atp/tag/interpelli/",
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
+"https://www.atpromaistruzione.it/atp/tag/a040/",
+"https://www.atpromaistruzione.it/atp/tag/a041/"
+],
+"provincia": "Roma",
+"avvisi": 16,
+"errore": null
 },
 "https://www.usp-rieti.it/feed/": {
 "grezzi": 6,
@@ -224,18 +236,6 @@
 ],
 "provincia": "Cosenza",
 "avvisi": 3,
-"errore": null
-},
-"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
-"grezzi": 120,
-"scartati": [
-"https://www.atpromaistruzione.it/atp/tag/interpelli/",
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/tag/a040/",
-"https://www.atpromaistruzione.it/atp/tag/a041/"
-],
-"provincia": "Roma",
-"avvisi": 16,
 "errore": null
 },
 "https://www.mim.gov.it/web/campobasso/interpelli/": {
