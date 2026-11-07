@@ -13,17 +13,17 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Monza e Brianza",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Como",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Monza e Brianza",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -34,6 +34,13 @@
 ],
 "provincia": "Rimini",
 "avvisi": 6,
+"errore": null
+},
+"https://belluno.istruzioneveneto.gov.it/category/news/area-amministrativa/interpelli/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Belluno",
+"avvisi": 0,
 "errore": null
 },
 "https://atcampobasso.it/": {
@@ -48,12 +55,12 @@
 "avvisi": 2,
 "errore": null
 },
-"https://belluno.istruzioneveneto.gov.it/category/news/area-amministrativa/interpelli/": {
+"https://uat-salerno.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Belluno",
+"provincia": "Salerno",
 "avvisi": 0,
-"errore": null
+"errore": "SSLError"
 },
 "https://sr.usr.sicilia.it/tag/interpelli/": {
 "grezzi": 1,
@@ -64,17 +71,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://uat-salerno.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Salerno",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://www.atpromaistruzione.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Roma",
+"avvisi": 0,
+"errore": null
+},
+"http://www.istruzionevicenza.it/wordpress/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
 "avvisi": 0,
 "errore": null
 },
@@ -88,13 +95,6 @@
 "avvisi": 10,
 "errore": null
 },
-"https://www.csateramo.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Teramo",
-"avvisi": 0,
-"errore": null
-},
 "https://me.usr.sicilia.it/": {
 "grezzi": 25,
 "scartati": [
@@ -105,10 +105,10 @@
 "avvisi": 23,
 "errore": null
 },
-"https://www.istruzione.calabria.it/": {
+"https://www.csateramo.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Vibo Valentia",
+"provincia": "Teramo",
 "avvisi": 0,
 "errore": null
 },
@@ -119,17 +119,10 @@
 "avvisi": 0,
 "errore": null
 },
-"http://www.istruzionevicenza.it/wordpress/": {
+"https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
-"http://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
+"provincia": "Torino",
 "avvisi": 0,
 "errore": null
 },
@@ -145,10 +138,31 @@
 "avvisi": 35,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/": {
+"http://www.uspss.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Torino",
+"provincia": "Sassari",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vibo Valentia",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/matera-2019-percorsi-culturali-dalle-scuole-per-le-scuole/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Matera",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Roma",
 "avvisi": 0,
 "errore": null
 },
@@ -170,13 +184,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/matera-2019-percorsi-culturali-dalle-scuole-per-le-scuole/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Matera",
-"avvisi": 0,
-"errore": null
-},
 "https://www.regione.vda.it/istruzione/": {
 "grezzi": 0,
 "scartati": [],
@@ -184,11 +191,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Roma",
-"avvisi": 0,
+"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
+"grezzi": 23,
+"scartati": [
+"https://fc.istruzioneer.gov.it/",
+"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/",
+"https://fc.istruzioneer.gov.it/",
+"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/"
+],
+"provincia": "Forlì-Cesena",
+"avvisi": 9,
 "errore": null
 },
 "https://www.istruzionebat.it/": {
@@ -203,16 +215,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
-"grezzi": 21,
+"https://ustlucca.it/": {
+"grezzi": 35,
 "scartati": [
-"https://fc.istruzioneer.gov.it/",
-"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/",
-"https://fc.istruzioneer.gov.it/",
-"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/"
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/category/avvisi/"
 ],
-"provincia": "Forlì-Cesena",
-"avvisi": 9,
+"provincia": "Lucca",
+"avvisi": 27,
 "errore": null
 },
 "https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
@@ -234,13 +246,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.usp-rieti.it/": {
-"grezzi": 15,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 15,
-"errore": null
-},
 "https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
 "grezzi": 46,
 "scartati": [
@@ -253,28 +258,23 @@
 "avvisi": 30,
 "errore": null
 },
-"https://ustlucca.it/": {
-"grezzi": 35,
-"scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/category/avvisi/"
-],
-"provincia": "Lucca",
-"avvisi": 27,
+"https://www.usp-rieti.it/": {
+"grezzi": 15,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 15,
 "errore": null
 },
-"https://www.uspascolipiceno.it/wordpress/interpelli/": {
-"grezzi": 20,
+"https://www.mim.gov.it/web/brescia/interpelli-ricerca-supplenti/": {
+"grezzi": 8,
 "scartati": [
-"https://www.uspascolipiceno.it/wordpress/interpelli/",
-"https://www.uspascolipiceno.it/wordpress/interpello-per-il-conferimento-di-n-1-supplenza-classe-di-concorso-bb",
-"https://www.uspascolipiceno.it/wordpress/interpello-istituto-comprensivo-interprovinciale-dei-sibillini-classe",
-"https://www.uspascolipiceno.it/wordpress/ii-interpello-cl-concorso-ai55-percussioni-liceo-scientifico-statale-"
+"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-pontevico-scuola-infanzia-posto-sostegno-12",
+"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-pontevico-scuola-infanzia-posto-sostegno-12",
+"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-marcheno-classe-di-concorso-a028",
+"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-gavardo-classe-di-concorso-posto-comune-scu"
 ],
-"provincia": "Fermo",
-"avvisi": 5,
+"provincia": "Brescia",
+"avvisi": 2,
 "errore": null
 },
 "https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni": {
@@ -289,6 +289,18 @@
 "avvisi": 19,
 "errore": null
 },
+"https://www.uspascolipiceno.it/wordpress/interpelli/": {
+"grezzi": 20,
+"scartati": [
+"https://www.uspascolipiceno.it/wordpress/interpelli/",
+"https://www.uspascolipiceno.it/wordpress/interpello-per-il-conferimento-di-n-1-supplenza-classe-di-concorso-bb",
+"https://www.uspascolipiceno.it/wordpress/interpello-istituto-comprensivo-interprovinciale-dei-sibillini-classe",
+"https://www.uspascolipiceno.it/wordpress/ii-interpello-cl-concorso-ai55-percussioni-liceo-scientifico-statale-"
+],
+"provincia": "Fermo",
+"avvisi": 5,
+"errore": null
+},
 "https://www.usptaranto.it/": {
 "grezzi": 16,
 "scartati": [
@@ -299,16 +311,16 @@
 "avvisi": 14,
 "errore": null
 },
-"https://www.mim.gov.it/web/brescia/interpelli-ricerca-supplenti/": {
-"grezzi": 8,
+"https://www.istruzionepotenza.it/": {
+"grezzi": 18,
 "scartati": [
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-pontevico-scuola-infanzia-posto-sostegno-12",
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-pontevico-scuola-infanzia-posto-sostegno-12",
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-marcheno-classe-di-concorso-a028",
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-gavardo-classe-di-concorso-posto-comune-scu"
+"https://www.mim.gov.it/web/cagliari/-/interpello-per-supplenza-classe-di-concorso-a040-scienze-e-tecnologie-el",
+"https://web.spaggiari.eu/sdg2/Interpelli/PNII0006/a113be96-5939-453b-96d8-ff223847c636",
+"https://web.spaggiari.eu/sdg2/Interpelli/PNII0006/0fe08605-6128-4f75-a21f-b59b2023ac9f",
+"https://web.spaggiari.eu/sdg2/Interpelli/PNII0006/357d9eeb-1660-4f35-adc4-912d449a7357"
 ],
-"provincia": "Brescia",
-"avvisi": 2,
+"provincia": "Potenza",
+"avvisi": 3,
 "errore": null
 },
 "https://www.ustlecce.it/": {
@@ -328,18 +340,6 @@
 "scartati": [],
 "provincia": null,
 "avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepotenza.it/": {
-"grezzi": 18,
-"scartati": [
-"https://www.mim.gov.it/web/cagliari/-/interpello-per-supplenza-classe-di-concorso-a040-scienze-e-tecnologie-el",
-"https://web.spaggiari.eu/sdg2/Interpelli/PNII0006/a113be96-5939-453b-96d8-ff223847c636",
-"https://web.spaggiari.eu/sdg2/Interpelli/PNII0006/0fe08605-6128-4f75-a21f-b59b2023ac9f",
-"https://web.spaggiari.eu/sdg2/Interpelli/PNII0006/357d9eeb-1660-4f35-adc4-912d449a7357"
-],
-"provincia": "Potenza",
-"avvisi": 3,
 "errore": null
 }
 }
