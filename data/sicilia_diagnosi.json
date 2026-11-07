@@ -970,6 +970,20 @@
    ]
   ]
  },
+ "MEIC876009": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 403",
+  "motivo": "recuperato",
+  "nuovo": "https://ictorregrotta.edu.it/",
+  "sito": "https://ictorregrotta.edu.it/",
+  "tentativi": [
+   [
+    "https://www.ictorregrotta.edu.it/",
+    "OK"
+   ]
+  ]
+ },
  "PAIC817007": {
   "dns_pubblico": "no",
   "dns_runner": false,
@@ -1186,24 +1200,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.principigrimaldi.edu.it/",
   "sito": "https://www.principigrimaldi.edu.it/",
   "tentativi": [
    [
     "https://www.principigrimaldi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.principigrimaldi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://principigrimaldi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://principigrimaldi.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1211,8 +1214,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icvittorinisolarino.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icvittorinisolarino.edu.it/",
   "tentativi": [
    [
@@ -1221,7 +1223,40 @@
    ],
    [
     "http://www.icvittorinisolarino.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://icvittorinisolarino.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icvittorinisolarino.edu.it/",
+    "HTTP 509"
+   ]
+  ]
+ },
+ "SRIC861001": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "SSLError",
+  "motivo": "risponde ma con errore: HTTP 404",
+  "sito": "https://www.istitutoraiti.edu.it/",
+  "tentativi": [
+   [
+    "https://www.istitutoraiti.edu.it/",
+    "HTTP 404"
+   ],
+   [
+    "http://www.istitutoraiti.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "https://istitutoraiti.edu.it/",
+    "HTTP 404"
+   ],
+   [
+    "http://istitutoraiti.edu.it/",
+    "ConnectTimeout"
    ]
   ]
  },
@@ -1316,6 +1351,31 @@
   "sito": "https://www.scuolasturzo.gov.it/",
   "tentativi": []
  },
+ "TPIC83700X": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 202",
+  "motivo": "il server non risponde (spento o blocca l'estero)",
+  "sito": "https://icdantealighierivalderice.edu.it/",
+  "tentativi": [
+   [
+    "https://www.icdantealighierivalderice.edu.it/",
+    "ConnectionError"
+   ],
+   [
+    "http://www.icdantealighierivalderice.edu.it/",
+    "ConnectionError"
+   ],
+   [
+    "https://icdantealighierivalderice.edu.it/",
+    "ConnectionError"
+   ],
+   [
+    "http://icdantealighierivalderice.edu.it/",
+    "ConnectionError"
+   ]
+  ]
+ },
  "TPIS031005": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -1386,7 +1446,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceoruggierimarsala.edu.it/",
   "sito": "https://www.liceoruggierimarsala.edu.it/",
   "tentativi": [
    [
@@ -1403,7 +1464,7 @@
    ],
    [
     "http://liceoruggierimarsala.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  }
