@@ -1,11 +1,4 @@
 {
-"http://www.ustcremona.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": null
-},
 "https://lnx.uspistruzione.fr.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -13,17 +6,24 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://bergamo.istruzionelombardia.gov.it/": {
+"http://www.ustcremona.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bergamo",
+"provincia": "Cremona",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": null
 },
 "https://lecco.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://bergamo.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -46,13 +46,6 @@
 "avvisi": 2,
 "errore": null
 },
-"https://uat-salerno.it/Documenti/CIRCOLARI/Interpelli-per-reclutamento-personale-docente": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Salerno",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://re.istruzioneer.gov.it/": {
 "grezzi": 27,
 "scartati": [
@@ -63,17 +56,12 @@
 "avvisi": 25,
 "errore": null
 },
-"http://www.provveditoratostudiviterbo.it/": {
-"grezzi": 29,
-"scartati": [
-"https://madinterpello.portaleargo.it/index.html",
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/",
-"https://liceosantarosavt.edu.it/index.php/ampliamento-offerta-formativa/avvisi-e-bandi"
-],
-"provincia": "Viterbo",
+"https://uat-salerno.it/Documenti/CIRCOLARI/Interpelli-per-reclutamento-personale-docente": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Salerno",
 "avvisi": 0,
-"errore": null
+"errore": "SSLError"
 },
 "https://varese.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -81,6 +69,13 @@
 "provincia": "Varese",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://pa.usr.sicilia.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Palermo",
+"avvisi": 0,
+"errore": null
 },
 "https://cl-en.usr.sicilia.it/": {
 "grezzi": 45,
@@ -94,10 +89,15 @@
 "avvisi": 35,
 "errore": null
 },
-"https://pa.usr.sicilia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Palermo",
+"http://www.provveditoratostudiviterbo.it/": {
+"grezzi": 29,
+"scartati": [
+"https://madinterpello.portaleargo.it/index.html",
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/",
+"https://liceosantarosavt.edu.it/index.php/ampliamento-offerta-formativa/avvisi-e-bandi"
+],
+"provincia": "Viterbo",
 "avvisi": 0,
 "errore": null
 },
@@ -113,6 +113,13 @@
 "avvisi": 14,
 "errore": null
 },
+"https://www.istruzionegenova.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Genova",
+"avvisi": 0,
+"errore": null
+},
 "https://me.usr.sicilia.it/personale-scuola/interpelli/": {
 "grezzi": 74,
 "scartati": [
@@ -125,13 +132,6 @@
 "avvisi": 34,
 "errore": null
 },
-"https://www.istruzionegenova.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -139,19 +139,24 @@
 "avvisi": 0,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 23,
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 87,
 "scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
 ],
-"provincia": "Rovigo",
-"avvisi": 22,
+"provincia": "Ferrara",
+"avvisi": 52,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Napoli",
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 1,
+"scartati": [
+"https://vicenza.istruzioneveneto.gov.it/2026/11/02/avviso-assunzioni-in-ruolo-del-personale-docente-della-scuo"
+],
+"provincia": "Vicenza",
 "avvisi": 0,
 "errore": null
 },
@@ -169,12 +174,33 @@
 "avvisi": 0,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 1,
+"https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Napoli",
+"avvisi": 0,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 23,
 "scartati": [
-"https://vicenza.istruzioneveneto.gov.it/2026/11/02/avviso-assunzioni-in-ruolo-del-personale-docente-della-scuo"
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
 ],
-"provincia": "Vicenza",
+"provincia": "Rovigo",
+"avvisi": 22,
+"errore": null
+},
+"https://www.toscana-istruzione.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
+"https://www.istruzionerovigo.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Rovigo",
 "avvisi": 0,
 "errore": null
 },
@@ -190,11 +216,16 @@
 "avvisi": 12,
 "errore": null
 },
-"https://www.istruzionerovigo.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Rovigo",
-"avvisi": 0,
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/": {
+"grezzi": 123,
+"scartati": [
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
+"https://www.atpromaistruzione.it/atp/tag/a040/",
+"https://www.atpromaistruzione.it/atp/tag/a041/",
+"https://www.atpromaistruzione.it/atp/tag/adaa/"
+],
+"provincia": "Roma",
+"avvisi": 18,
 "errore": null
 },
 "https://www.istruzionebat.it/category/interpello/": {
@@ -209,42 +240,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 99,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
-],
-"provincia": "Ferrara",
-"avvisi": 60,
-"errore": null
-},
-"https://www.toscana-istruzione.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pisa",
-"avvisi": 0,
-"errore": "HTTP 403"
-},
 "https://www.usplecce.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecce",
 "avvisi": 0,
-"errore": null
-},
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/": {
-"grezzi": 123,
-"scartati": [
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/tag/a040/",
-"https://www.atpromaistruzione.it/atp/tag/a041/",
-"https://www.atpromaistruzione.it/atp/tag/adaa/"
-],
-"provincia": "Roma",
-"avvisi": 18,
 "errore": null
 },
 "https://www.mim.gov.it/web/cagliari/": {
@@ -312,13 +312,6 @@
 "avvisi": 14,
 "errore": null
 },
-"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pordenone",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
 "grezzi": 25,
 "scartati": [
@@ -341,6 +334,13 @@
 ],
 "provincia": "Torino",
 "avvisi": 27,
+"errore": null
+},
+"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pordenone",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
