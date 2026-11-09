@@ -56,6 +56,7 @@ import {
   memStats,
 } from './src/feed';
 import { conCoordinate, MappaInterpelli } from './src/MapView';
+import { APK_URL, buildDisponibile, buildInstallata, scaricaEInstalla } from './src/aggiorna';
 import {
   inviaRichiesta, inviaVerifica, LINK_APP, leggiStato, modalitaServer, registra, registrato, segnala, statoSalvato, usaCodice, versioneVecchia,
   type StatoServer,
@@ -1249,6 +1250,23 @@ function Aiuto({ s, c, srv, feed, codiceIniziale, onCambio }: {
 }) {
   const [link, setLink] = useState('');
   const [testo, setTesto] = useState('');
+  const [agg, setAgg] = useState<{ msg: string; perc?: number; occupato?: boolean; pronto?: boolean }>({ msg: '' });
+  const cercaAgg = async () => {
+    setAgg({ msg: 'Controllo…', occupato: true });
+    try {
+      const ultima = await buildDisponibile();
+      const mia = buildInstallata();
+      if (ultima && ultima <= mia) setAgg({ msg: `Hai già l'ultima versione (build ${mia}).` });
+      else setAgg({ msg: ultima ? `Disponibile la build ${ultima} (hai la ${mia}).` : 'Versione disponibile.', pronto: true });
+    } catch (e: any) { setAgg({ msg: String(e?.message || e) }); }
+  };
+  const installaAgg = async () => {
+    setAgg({ msg: 'Scarico… 0%', occupato: true, pronto: true });
+    try {
+      await scaricaEInstalla((perc) => setAgg({ msg: `Scarico… ${perc}%`, perc, occupato: true, pronto: true }));
+      setAgg({ msg: "Conferma l'installazione nella schermata di Android: l'app si aggiorna e mantiene i tuoi dati.", pronto: true });
+    } catch (e: any) { setAgg({ msg: String(e?.message || e) + ' Se il permesso è negato, abilita «Installa app sconosciute» per Interpellati e riprova.', pronto: true }); }
+  };
   const [classiNuove, setClassiNuove] = useState('');
   const [codice, setCodice] = useState(codiceIniziale);
   useEffect(() => { if (codiceIniziale) setCodice(codiceIniziale); }, [codiceIniziale]);
@@ -1257,9 +1275,13 @@ function Aiuto({ s, c, srv, feed, codiceIniziale, onCambio }: {
     <ScrollView contentContainerStyle={s.list} keyboardShouldPersistTaps="handled">
       <View style={s.card}>
         <Text style={s.title}>Versione dell'app</Text>
-        <Text style={s.muted}>Installata: {Constants.expoConfig?.version || ''} (build {String((Constants.expoConfig as any)?.android?.versionCode ?? '')}). Per aggiornare scarica l'ultima versione e aprila: si installa sopra questa senza perdere i tuoi dati.</Text>
-        <Pressable style={[s.btn, s.btnPrimary]} onPress={() => Linking.openURL('https://github.com/mhadhbimedwork-crypto/Interpellati/releases/download/apk/Interpellati.apk').catch(() => copia('https://github.com/mhadhbimedwork-crypto/Interpellati/releases/download/apk/Interpellati.apk'))}>
-          <Text style={[s.btnText, { color: c.accentInk }]}>Scarica l'ultima versione</Text>
+        <Text style={s.muted}>Installata: {Constants.expoConfig?.version || ''} (build {String((Constants.expoConfig as any)?.android?.versionCode ?? '')}). L'aggiornamento si scarica e si installa da qui, senza disinstallare: i tuoi dati restano.</Text>
+        {agg.msg ? <Text style={s.muted}>{agg.msg}</Text> : null}
+        <Pressable style={[s.btn, s.btnPrimary]} disabled={agg.occupato} onPress={agg.pronto ? installaAgg : cercaAgg}>
+          <Text style={[s.btnText, { color: c.accentInk }]}>{agg.pronto ? "Aggiorna ora" : "Cerca aggiornamenti"}</Text>
+        </Pressable>
+        <Pressable style={s.btn} onPress={() => Linking.openURL(APK_URL).catch(() => copia(APK_URL))}>
+          <Text style={s.btnText}>Scarica dal browser</Text>
         </Pressable>
       </View>
       <View style={s.card}>

@@ -45,8 +45,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           cp android/app/build/outputs/apk/release/app-release.apk ../Interpellati.apk
+          VC=$(node -p "require('./app.json').expo.android.versionCode")
           cd ..
-          NOTE="Ultima versione compilata automaticamente dal commit ${GITHUB_SHA::7}. Scarica Interpellati.apk dal telefono e installalo."
+          NOTE="Ultima versione compilata automaticamente dal commit ${GITHUB_SHA::7}. build=${VC}. Scarica Interpellati.apk dal telefono e installalo (oppure aggiorna dall'app)."
           # La release e il tag vengono ricreati sul commit corrente: cosi' il tag non punta a vecchi commit.
           gh release delete apk -y --cleanup-tag || true
           sleep 8
