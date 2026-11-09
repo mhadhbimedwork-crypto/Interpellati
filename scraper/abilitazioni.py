@@ -23,7 +23,7 @@ MAX_VOCI = 200
 ANNO_RE = re.compile(r"2026[-_/ ]?(20)?27|26[-_/ ]?27|a\.?a\.? ?2026|2026/2027", re.I)
 VECCHIO_RE = re.compile(r"25[-_/ ]?26|2025[-_/ ]?(20)?26", re.I)
 # Parole che indicano un bando/avviso utile a chi vuole iscriversi
-UTILE = ("offerta formativa", "classi di concorso attivate", "bando", "avviso", "iscrizion", "apertura", "riapertura", "proroga", "domand", "immatricolaz", "ammission", "selezione")
+UTILE = ("preiscrizion", "30 cfu", "36 cfu", "60 cfu", "scadenza", "offerta formativa", "classi di concorso attivate", "bando", "avviso", "iscrizion", "apertura", "riapertura", "proroga", "domand", "immatricolaz", "ammission", "selezione")
 # Rumore: documenti interni, elenchi, tutor, cookie, menu
 SCARTA = ("tutor", "riconoscimenti", "piani di studio", "piano di studio", "corsisti", "elenco", "graduatoria", "graduatorie",
           "autocertificazione", "guida", "cookie", "carta del docente", "contenuto principale", "listen", "tabella a", "modello", "faq",
@@ -35,7 +35,7 @@ def _norm_classe(m: str) -> str:
     return m[0] + m[1:].zfill(3)
 
 
-def trova(html: str, base: str, cfg: dict, dedicata: bool = False) -> list[dict]:
+def trova(html: str, base: str, cfg: dict, dedicata: bool = False, src_notizie: bool = False) -> list[dict]:
     soup = BeautifulSoup(html, "html.parser")
     pagina = " ".join(soup.get_text(" ", strip=True).split()).lower()
     pagina_itp = any(k in pagina for k in cfg["itp"])
@@ -46,9 +46,9 @@ def trova(html: str, base: str, cfg: dict, dedicata: bool = False) -> list[dict]
         ctx = scrape.block_of(a)
         hay = (testo + " " + href + " " + ctx[:300]).lower()
         mio = (testo + " " + href).lower()
-        if (not dedicata and not any(k in mio for k in cfg["parole"])) or href in visti or not href.startswith("http"):
+        if (not dedicata and not src_notizie and not any(k in mio for k in cfg["parole"])) or href in visti or not href.startswith("http"):
             continue
-        if len(testo) < 15 or not any(k in mio for k in UTILE) or any(k in mio for k in SCARTA) or not ANNO_RE.search(mio) or VECCHIO_RE.search(mio):
+        if len(testo) < 15 or not any(k in mio for k in UTILE) or any(k in mio for k in SCARTA) or not (ANNO_RE.search(mio) or (src_notizie and "abilitant" in mio and ("/2026/" in href or ANNO_RE.search(hay)))) or VECCHIO_RE.search(mio):
             continue
         testo_norm = re.sub(r"\W+", " ", testo.lower()).strip()
         if testo_norm in visti:
@@ -79,7 +79,7 @@ def main() -> int:
         if not html:
             scrape.log(f"  [abilitazioni] non letta: {src['nome']}")
             continue
-        for v in trova(html, src["url"], cfg, src.get("dedicata", False)):
+        for v in trova(html, src["url"], cfg, src.get("dedicata", False), src.get("notizie", False)):
             vid = "ab-" + hashlib.sha1(v["link"].encode()).hexdigest()[:10]
             if vid in voci:
                 continue
