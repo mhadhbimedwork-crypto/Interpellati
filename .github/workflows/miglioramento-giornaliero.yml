@@ -38,7 +38,9 @@ jobs:
         run: |
           git config user.name "interpellati-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add memoria/stato memoria/risultati data/priorita_lettura.json data/cms_report.json data/ip_lenti.json data/diagnosi_errori.json data/memoria_scuole.json data/memoria_progetto.json data/scuole_stato.json data/Elenco_scuole_Interpellati.xlsx
+          for f in memoria/stato memoria/risultati data/priorita_lettura.json data/cms_report.json data/ip_lenti.json data/diagnosi_errori.json data/memoria_scuole.json data/memoria_progetto.json data/scuole_stato.json data/Elenco_scuole_Interpellati.xlsx; do
+            [ -e "$f" ] && git add "$f"
+          done
           git diff --cached --quiet && exit 0
           git commit -q -m "dati: memoria giornaliera delle scuole"
           for i in 1 2 3 4 5 6; do

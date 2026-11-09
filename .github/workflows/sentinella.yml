@@ -1,0 +1,36 @@
+name: Sentinella
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+permissions:
+  contents: write
+  actions: write
+  issues: write
+concurrency:
+  group: sentinella
+jobs:
+  sentinella:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Controllo di salute e riparazioni sicure
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scraper/sentinella.py
+      - name: Salva
+        run: |
+          git config user.name "interpellati-bot"; git config user.email "bot@users.noreply.github.com"
+          git add data/salute.json; git diff --cached --quiet && exit 0
+          git commit -q -m "dati: salute del sistema"
+          for i in 1 2 3 4 5; do git pull -q --rebase -X theirs origin main && git push -q && exit 0; sleep $((i*5)); done; exit 1
+      - name: Se GitHub salta le esecuzioni, si richiama da sola
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 2400
+          gh api -X POST repos/${{ github.repository }}/actions/workflows/sentinella.yml/dispatches -f ref=main || true
