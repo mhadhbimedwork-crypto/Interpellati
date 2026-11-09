@@ -915,20 +915,6 @@
    ]
   ]
  },
- "MEIC813006": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "HTTP 429",
-  "motivo": "recuperato",
-  "nuovo": "https://www.istitutocomprensivocapizzicesaro.edu.it/",
-  "sito": "http://istitutocomprensivocapizzi.blogspot.it/",
-  "tentativi": [
-   [
-    "https://www.istitutocomprensivocapizzicesaro.edu.it/",
-    "OK"
-   ]
-  ]
- },
  "MEIC869006": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -1235,31 +1221,6 @@
    ]
   ]
  },
- "SRIC861001": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "SSLError",
-  "motivo": "risponde ma con errore: HTTP 404",
-  "sito": "https://www.istitutoraiti.edu.it/",
-  "tentativi": [
-   [
-    "https://www.istitutoraiti.edu.it/",
-    "HTTP 404"
-   ],
-   [
-    "http://www.istitutoraiti.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "https://istitutoraiti.edu.it/",
-    "HTTP 404"
-   ],
-   [
-    "http://istitutoraiti.edu.it/",
-    "ConnectTimeout"
-   ]
-  ]
- },
  "SRIS003005": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -1322,8 +1283,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.marionuccio.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.marionuccio.edu.it/",
   "tentativi": [
    [
@@ -1340,7 +1300,7 @@
    ],
    [
     "http://marionuccio.edu.it/",
-    "OK"
+    "HTTP 509"
    ]
   ]
  },
