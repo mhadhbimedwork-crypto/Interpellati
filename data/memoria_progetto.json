@@ -219,6 +219,116 @@
 "rosso": 86
 }
 }
+},
+{
+"data": "2026-11-10",
+"scuole": 7780,
+"verdi": 6035,
+"arancioni": 787,
+"rossi": 958,
+"percentuale_verdi": 77.6,
+"per_regione": {
+"Abruzzo": {
+"verde": 165,
+"arancione": 21,
+"rosso": 24
+},
+"Basilicata": {
+"verde": 84,
+"arancione": 2,
+"rosso": 8
+},
+"Calabria": {
+"verde": 243,
+"arancione": 26,
+"rosso": 50
+},
+"Campania": {
+"verde": 778,
+"arancione": 35,
+"rosso": 58
+},
+"Emilia-Romagna": {
+"verde": 295,
+"arancione": 69,
+"rosso": 108
+},
+"Friuli Venezia Giulia": {
+"verde": 108,
+"arancione": 25,
+"rosso": 29
+},
+"Lazio": {
+"verde": 547,
+"arancione": 86,
+"rosso": 81
+},
+"Liguria": {
+"verde": 102,
+"arancione": 44,
+"rosso": 32
+},
+"Lombardia": {
+"verde": 879,
+"arancione": 127,
+"rosso": 124
+},
+"Marche": {
+"verde": 112,
+"arancione": 22,
+"rosso": 41
+},
+"Molise": {
+"verde": 56,
+"arancione": 0,
+"rosso": 4
+},
+"Piemonte": {
+"verde": 399,
+"arancione": 13,
+"rosso": 116
+},
+"Puglia": {
+"verde": 494,
+"arancione": 41,
+"rosso": 50
+},
+"Sardegna": {
+"verde": 199,
+"arancione": 17,
+"rosso": 25
+},
+"Sicilia": {
+"verde": 667,
+"arancione": 51,
+"rosso": 15
+},
+"Toscana": {
+"verde": 377,
+"arancione": 37,
+"rosso": 57
+},
+"Trentino-Alto Adige": {
+"verde": 68,
+"arancione": 4,
+"rosso": 5
+},
+"Umbria": {
+"verde": 93,
+"arancione": 29,
+"rosso": 29
+},
+"Valle d'Aosta": {
+"verde": 9,
+"arancione": 18,
+"rosso": 4
+},
+"Veneto": {
+"verde": 360,
+"arancione": 120,
+"rosso": 98
+}
+}
 }
 ],
 "lezioni": [
@@ -381,6 +491,138 @@
 "nome": "I.C. KING/MILA - TO",
 "ora": "arancione",
 "motivo": "errore recente (HTTP 500): si riprova ogni giorno"
+}
+]
+},
+{
+"data": "2026-11-10",
+"tipo": "causa",
+"causa": "server condiviso che limita le richieste: lettura lenta in corso",
+"scuole": 672
+},
+{
+"data": "2026-11-10",
+"tipo": "causa",
+"causa": "il robots.txt del sito non consente il bot",
+"scuole": 447
+},
+{
+"data": "2026-11-10",
+"tipo": "causa",
+"causa": "dominio inesistente",
+"scuole": 403
+},
+{
+"data": "2026-11-10",
+"tipo": "causa",
+"causa": "errore recente",
+"scuole": 115
+},
+{
+"data": "2026-11-10",
+"tipo": "causa",
+"causa": "nessun sito indicato nell'anagrafica del Ministero",
+"scuole": 108
+},
+{
+"data": "2026-11-10",
+"tipo": "recuperate",
+"scuole": 30,
+"esempi": [
+{
+"codice": "MCIS00400A",
+"nome": "\"ENRICO MATTEI\"",
+"prima": "arancione"
+},
+{
+"codice": "FRIS006008",
+"nome": "I.I.S. \"TULLIANO\" ARPINO",
+"prima": "arancione"
+},
+{
+"codice": "GRIS01100X",
+"nome": "POLO TECNOLOGICO MANETTI-PORCIATTI",
+"prima": "arancione"
+},
+{
+"codice": "PGPC07000G",
+"nome": "LICEO \"PROPERZIO\"",
+"prima": "arancione"
+},
+{
+"codice": "VRIC814009",
+"nome": "IC SONA",
+"prima": "arancione"
+},
+{
+"codice": "PNTF01000A",
+"nome": "ITST KENNEDY",
+"prima": "rosso"
+},
+{
+"codice": "TOIC816001",
+"nome": "I.C. KING/MILA - TO",
+"prima": "arancione"
+},
+{
+"codice": "BGIS02300N",
+"nome": "\"SERAFINO RIVA\"",
+"prima": "arancione"
+}
+]
+},
+{
+"data": "2026-11-10",
+"tipo": "peggiorate",
+"scuole": 19,
+"esempi": [
+{
+"codice": "LTTF05000D",
+"nome": "LICEO-IST.TECNICO I.O.\"G.CESARE\"SABAUDIA",
+"ora": "rosso",
+"motivo": "dominio inesistente (sito dismesso o cambiato)"
+},
+{
+"codice": "FIIS01700A",
+"nome": "IS LEONARDO DA VINCI",
+"ora": "rosso",
+"motivo": "il robots.txt del sito non consente il bot (rispettato)"
+},
+{
+"codice": "FRIC83100R",
+"nome": "I. C. CEPRANO",
+"ora": "rosso",
+"motivo": "il robots.txt del sito non consente il bot (rispettato)"
+},
+{
+"codice": "SIIC826009",
+"nome": "FOLGORE DA S.GIM.NO-N.2 POGGIBO",
+"ora": "arancione",
+"motivo": "server condiviso che limita le richieste: lettura lenta in c"
+},
+{
+"codice": "POMM039004",
+"nome": "CPIA 1 PRATO",
+"ora": "arancione",
+"motivo": "errore recente (SSLError): si riprova ogni giorno"
+},
+{
+"codice": "TRIC811001",
+"nome": "I.C. TERNI A.DE FILIS",
+"ora": "arancione",
+"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+},
+{
+"codice": "VEIC874009",
+"nome": "I.C. VIALE SAN MARCO",
+"ora": "arancione",
+"motivo": "server condiviso che limita le richieste: lettura lenta in c"
+},
+{
+"codice": "VRIC849008",
+"nome": "IC DOLCE' PERI",
+"ora": "arancione",
+"motivo": "server condiviso che limita le richieste: lettura lenta in c"
 }
 ]
 }
