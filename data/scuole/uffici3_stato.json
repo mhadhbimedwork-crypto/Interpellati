@@ -6,6 +6,13 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
 "grezzi": 0,
 "scartati": [],
@@ -24,13 +31,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Milano",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -82,6 +82,13 @@
 "avvisi": 13,
 "errore": null
 },
+"https://www.csateramo.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Teramo",
+"avvisi": 0,
+"errore": null
+},
 "https://pr.istruzioneer.gov.it/": {
 "grezzi": 7,
 "scartati": [
@@ -94,10 +101,10 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.csateramo.it/": {
+"https://www.istruzione.calabria.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Teramo",
+"provincia": "Vibo Valentia",
 "avvisi": 0,
 "errore": null
 },
@@ -111,11 +118,11 @@
 "avvisi": 13,
 "errore": null
 },
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 41,
 "scartati": [],
-"provincia": "Vibo Valentia",
-"avvisi": 0,
+"provincia": "Padova",
+"avvisi": 41,
 "errore": null
 },
 "https://www.istruzionelaspezia.it/": {
@@ -132,13 +139,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
 "https://rovigo.istruzioneveneto.gov.it/": {
 "grezzi": 21,
 "scartati": [
@@ -146,25 +146,6 @@
 ],
 "provincia": "Rovigo",
 "avvisi": 20,
-"errore": null
-},
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 41,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 41,
-"errore": null
-},
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 67,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
-],
-"provincia": "Ferrara",
-"avvisi": 40,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
@@ -179,13 +160,6 @@
 "avvisi": 31,
 "errore": null
 },
-"https://www.toscana-istruzione.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pisa",
-"avvisi": 0,
-"errore": "HTTP 403"
-},
 "https://www.istruzionepiemonte.it/matera-2019-percorsi-culturali-dalle-scuole-per-le-scuole/": {
 "grezzi": 0,
 "scartati": [],
@@ -193,11 +167,37 @@
 "avvisi": 0,
 "errore": null
 },
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
+"https://www.toscana-istruzione.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
 "https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Roma",
 "avvisi": 0,
+"errore": null
+},
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 69,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/"
+],
+"provincia": "Ferrara",
+"avvisi": 40,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-annuali-classe-di-concorso-a041-e-a058/": {
@@ -223,13 +223,6 @@
 "avvisi": 16,
 "errore": null
 },
-"https://www.usplecce.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecce",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionebat.it/": {
 "grezzi": 114,
 "scartati": [
@@ -242,19 +235,19 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.usplecce.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecce",
+"avvisi": 0,
+"errore": null
+},
 "http://www.uspmc.sinp.net/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Macerata",
 "avvisi": 0,
 "errore": "ConnectTimeout"
-},
-"https://www.usp-rieti.it/": {
-"grezzi": 12,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 12,
-"errore": null
 },
 "https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
 "grezzi": 37,
@@ -266,6 +259,13 @@
 ],
 "provincia": "Pescara",
 "avvisi": 21,
+"errore": null
+},
+"https://www.usp-rieti.it/": {
+"grezzi": 12,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 12,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
@@ -292,18 +292,6 @@
 "avvisi": 9,
 "errore": null
 },
-"https://www.ustlecce.it/": {
-"grezzi": 6,
-"scartati": [
-"https://www.ustlecce.it/index.php/interpelli?download=3936:interpello-per-una-nomina-su-posto-di-sostegno-nell",
-"https://www.ustlecce.it/index.php/interpelli?download=3932:interpello-nazionale-per-supplenza-su-classe-di-con",
-"https://www.ustlecce.it/index.php/interpelli?download=3925:interpello-nazionale-per-supplenza-su-classe-di-con",
-"https://www.ustlecce.it/index.php/interpelli?download=3922:interpello-per-supplenza-su-classe-di-concorso-adee"
-],
-"provincia": "Lecce",
-"avvisi": 0,
-"errore": null
-},
 "https://www.mim.gov.it/web/brescia/interpelli-ricerca-supplenti/": {
 "grezzi": 6,
 "scartati": [
@@ -313,6 +301,18 @@
 "https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-gavardo-classe-di-concorso-posto-comune-scu"
 ],
 "provincia": "Brescia",
+"avvisi": 0,
+"errore": null
+},
+"https://www.ustlecce.it/": {
+"grezzi": 6,
+"scartati": [
+"https://www.ustlecce.it/index.php/interpelli?download=3936:interpello-per-una-nomina-su-posto-di-sostegno-nell",
+"https://www.ustlecce.it/index.php/interpelli?download=3932:interpello-nazionale-per-supplenza-su-classe-di-con",
+"https://www.ustlecce.it/index.php/interpelli?download=3925:interpello-nazionale-per-supplenza-su-classe-di-con",
+"https://www.ustlecce.it/index.php/interpelli?download=3922:interpello-per-supplenza-su-classe-di-concorso-adee"
+],
+"provincia": "Lecce",
 "avvisi": 0,
 "errore": null
 },
@@ -333,13 +333,13 @@
 "https://www.istruzionepotenza.it/": {
 "grezzi": 19,
 "scartati": [
-"https://www.istruzionepotenza.it/interpello-a042-scienze-e-tecnologie-meccaniche-ore-4-presa-di-servizio-giove",
 "https://www.mim.gov.it/web/cagliari/-/interpello-per-supplenza-classe-di-concorso-a040-scienze-e-tecnologie-el",
 "https://web.spaggiari.eu/sdg2/Interpelli/PNII0006/a113be96-5939-453b-96d8-ff223847c636",
-"https://web.spaggiari.eu/sdg2/Interpelli/PNII0006/0fe08605-6128-4f75-a21f-b59b2023ac9f"
+"https://web.spaggiari.eu/sdg2/Interpelli/PNII0006/0fe08605-6128-4f75-a21f-b59b2023ac9f",
+"https://web.spaggiari.eu/sdg2/Interpelli/PNII0006/357d9eeb-1660-4f35-adc4-912d449a7357"
 ],
 "provincia": "Potenza",
-"avvisi": 3,
+"avvisi": 4,
 "errore": null
 }
 }
