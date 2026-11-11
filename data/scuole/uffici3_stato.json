@@ -6,10 +6,10 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"https://milano.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Lecco",
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -20,17 +20,17 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Cremona",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://milano.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -42,13 +42,13 @@
 "errore": "HTTP 404"
 },
 "https://re.istruzioneer.gov.it/": {
-"grezzi": 26,
+"grezzi": 25,
 "scartati": [
 "https://re.istruzioneer.gov.it/category/docenti/",
 "https://re.istruzioneer.gov.it/category/docenti/interpello/"
 ],
 "provincia": "Reggio Emilia",
-"avvisi": 24,
+"avvisi": 23,
 "errore": null
 },
 "https://varese.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti-2/": {
@@ -87,11 +87,13 @@
 "avvisi": 13,
 "errore": null
 },
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 40,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 40,
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 18,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 17,
 "errore": null
 },
 "https://pr.istruzioneer.gov.it/": {
@@ -106,17 +108,17 @@
 "avvisi": 2,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionegenova.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Genova",
+"avvisi": 0,
+"errore": null
+},
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
 "avvisi": 0,
 "errore": null
 },
@@ -127,44 +129,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 21,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 20,
-"errore": null
-},
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 52,
-"scartati": [
-"https://twitter.com/home?status=Interpello per la supplenza classe di concorso – A042 – Scienze e tecnologie m",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
-"https://twitter.com/home?status=Interpello classe di concorso AM2A  Lingue e culture straniere nell’istruzione"
-],
-"provincia": "Caltanissetta",
-"avvisi": 31,
-"errore": null
-},
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 62,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
-],
-"provincia": "Ferrara",
-"avvisi": 37,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
-"grezzi": 0,
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 39,
 "scartati": [],
-"provincia": "Napoli",
-"avvisi": 0,
+"provincia": "Padova",
+"avvisi": 39,
 "errore": null
 },
 "https://www.istruzionematera.it/": {
@@ -174,6 +143,37 @@
 "avvisi": 0,
 "errore": null
 },
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
+"grezzi": 45,
+"scartati": [
+"https://twitter.com/home?status=Interpello per la supplenza classe di concorso – A042 – Scienze e tecnologie m",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
+"https://twitter.com/home?status=Interpello classe di concorso AM2A  Lingue e culture straniere nell’istruzione"
+],
+"provincia": "Caltanissetta",
+"avvisi": 30,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Napoli",
+"avvisi": 0,
+"errore": null
+},
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 54,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+],
+"provincia": "Ferrara",
+"avvisi": 28,
+"errore": null
+},
 "https://www.istruzionerovigo.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -181,16 +181,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
-"grezzi": 111,
-"scartati": [
-"https://www.atpromaistruzione.it/atp/tag/interpelli/",
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/tag/adee/",
-"https://www.atpromaistruzione.it/atp/tag/eeee/"
-],
-"provincia": "Roma",
-"avvisi": 17,
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Catanzaro",
+"avvisi": 0,
 "errore": null
 },
 "https://www.orizzontescuola.it/tag/interpelli/": {
@@ -200,11 +195,16 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 0,
+"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
+"grezzi": 112,
+"scartati": [
+"https://www.atpromaistruzione.it/atp/tag/interpelli/",
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
+"https://www.atpromaistruzione.it/atp/tag/adee/",
+"https://www.atpromaistruzione.it/atp/tag/eeee/"
+],
+"provincia": "Roma",
+"avvisi": 18,
 "errore": null
 },
 "https://www.csateramo.it/wpusp/archive/category/news": {
@@ -218,13 +218,6 @@
 "provincia": "Teramo",
 "avvisi": 17,
 "errore": null
-},
-"http://www.uspmc.sinp.net/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
 },
 "https://www.istruzionebat.it/category/interpello/": {
 "grezzi": 56,
@@ -245,15 +238,20 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
-"https://www.mim.gov.it/web/isernia/": {
-"grezzi": 15,
+"http://www.uspmc.sinp.net/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
+"https://www.mim.gov.it/web/cagliari/": {
+"grezzi": 4,
 "scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-un-",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-un-incarico-a-",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-un-incaric",
-"https://www.mim.gov.it/web/isernia/"
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2F5-avviso-di-interpello-per-l",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2F5-avviso-di-interpello-p"
 ],
-"provincia": "Isernia",
+"provincia": "Cagliari",
 "avvisi": 2,
 "errore": null
 },
@@ -271,6 +269,18 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
+"https://www.mim.gov.it/web/isernia/": {
+"grezzi": 15,
+"scartati": [
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-un-",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-un-incarico-a-",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fisernia%2F-%2Finterpello-per-un-incaric",
+"https://www.mim.gov.it/web/isernia/"
+],
+"provincia": "Isernia",
+"avvisi": 2,
+"errore": null
+},
 "https://www.uat-caserta.it/category/segnalazioni-dalle-scuole/": {
 "grezzi": 0,
 "scartati": [],
@@ -278,14 +288,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.mim.gov.it/web/cagliari/": {
-"grezzi": 4,
+"https://www.uspsi.it/": {
+"grezzi": 52,
 "scartati": [
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2F5-avviso-di-interpello-per-l",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2F5-avviso-di-interpello-p"
+"https://www.uspsi.it/uspsiena/albo/",
+"https://www.uspsi.it/uspsiena/docenti/",
+"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
+"https://www.uspsi.it/uspsiena/news/"
 ],
-"provincia": "Cagliari",
-"avvisi": 2,
+"provincia": "Siena",
+"avvisi": 46,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/": {
@@ -300,18 +312,6 @@
 "avvisi": 30,
 "errore": null
 },
-"https://www.uspsi.it/": {
-"grezzi": 57,
-"scartati": [
-"https://www.uspsi.it/uspsiena/albo/",
-"https://www.uspsi.it/uspsiena/docenti/",
-"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
-"https://www.uspsi.it/uspsiena/news/"
-],
-"provincia": "Siena",
-"avvisi": 52,
-"errore": null
-},
 "https://www.uspascolipiceno.it/": {
 "grezzi": 27,
 "scartati": [
@@ -324,8 +324,20 @@
 "avvisi": 10,
 "errore": null
 },
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
+"grezzi": 22,
+"scartati": [
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
+],
+"provincia": "Cuneo",
+"avvisi": 16,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/torino/": {
-"grezzi": 48,
+"grezzi": 60,
 "scartati": [
 "https://www.istruzionepiemonte.it/torino/tag/2024-a009/",
 "https://www.istruzionepiemonte.it/torino/tag/2024-a010/",
@@ -333,14 +345,7 @@
 "https://www.istruzionepiemonte.it/torino/tag/2024-a061/"
 ],
 "provincia": "Torino",
-"avvisi": 12,
-"errore": null
-},
-"https://www.mim.gov.it/web/mantova/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Mantova",
-"avvisi": 0,
+"avvisi": 24,
 "errore": null
 },
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
@@ -355,16 +360,11 @@
 "avvisi": 45,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
-"grezzi": 22,
-"scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/cuneo/category/docenti/",
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/"
-],
-"provincia": "Cuneo",
-"avvisi": 16,
+"https://www.mim.gov.it/web/mantova/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Mantova",
+"avvisi": 0,
 "errore": null
 }
 }
