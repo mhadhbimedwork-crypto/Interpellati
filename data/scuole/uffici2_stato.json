@@ -6,10 +6,10 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://bergamo.istruzionelombardia.gov.it/": {
+"https://cremona.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bergamo",
+"provincia": "Cremona",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -20,10 +20,10 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://cremona.istruzionelombardia.gov.it/": {
+"https://bergamo.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Cremona",
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -35,13 +35,6 @@
 ],
 "provincia": "Reggio Emilia",
 "avvisi": 24,
-"errore": null
-},
-"https://pa.usr.sicilia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Palermo",
-"avvisi": 0,
 "errore": null
 },
 "https://atpisernia.it/": {
@@ -56,12 +49,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://varese.istruzionelombardia.gov.it/": {
+"https://pa.usr.sicilia.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Varese",
+"provincia": "Palermo",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": null
 },
 "https://cl-en.usr.sicilia.it/": {
 "grezzi": 43,
@@ -75,10 +68,10 @@
 "avvisi": 31,
 "errore": null
 },
-"https://uat-salerno.it/Documenti/CIRCOLARI/Interpelli-per-reclutamento-personale-docente": {
+"https://varese.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Salerno",
+"provincia": "Varese",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -96,12 +89,12 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/": {
+"https://uat-salerno.it/Documenti/CIRCOLARI/Interpelli-per-reclutamento-personale-docente": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Crotone",
+"provincia": "Salerno",
 "avvisi": 0,
-"errore": null
+"errore": "SSLError"
 },
 "http://www.ustlucca.it/": {
 "grezzi": 21,
@@ -112,6 +105,25 @@
 ],
 "provincia": "Lucca",
 "avvisi": 18,
+"errore": null
+},
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Crotone",
+"avvisi": 0,
+"errore": null
+},
+"https://me.usr.sicilia.it/personale-scuola/interpelli/": {
+"grezzi": 65,
+"scartati": [
+"https://twitter.com/home?status=I.I.S. E. MEDI Barcellona Pozzo di Gotto – AVVISO DI INTERPELLO NAZIONALE per ",
+"https://me.usr.sicilia.it/category/personale-scuola/interpelli/",
+"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-nazionali/",
+"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-provinciali/"
+],
+"provincia": "Messina",
+"avvisi": 28,
 "errore": null
 },
 "https://rovigo.istruzioneveneto.gov.it/": {
@@ -130,30 +142,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://me.usr.sicilia.it/personale-scuola/interpelli/": {
-"grezzi": 65,
-"scartati": [
-"https://twitter.com/home?status=I.I.S. E. MEDI Barcellona Pozzo di Gotto – AVVISO DI INTERPELLO NAZIONALE per ",
-"https://me.usr.sicilia.it/category/personale-scuola/interpelli/",
-"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-nazionali/",
-"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-provinciali/"
-],
-"provincia": "Messina",
-"avvisi": 28,
-"errore": null
-},
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 64,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/"
-],
-"provincia": "Ferrara",
-"avvisi": 39,
-"errore": null
-},
 "http://www.provveditoratostudiviterbo.it/DOCENTI/interpelli/INTERPELLIDOC.htm": {
 "grezzi": 37,
 "scartati": [
@@ -166,11 +154,16 @@
 "avvisi": 1,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 69,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/"
+],
+"provincia": "Ferrara",
+"avvisi": 40,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/le-nostre-scuole/verbano-cusio-ossola/": {
@@ -180,17 +173,17 @@
 "avvisi": 0,
 "errore": null
 },
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/riminiwellness-per-la-scuola-ingresso-gratuito-e-incontro-con-massimiliano-rosolino/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Rimini",
-"avvisi": 0,
-"errore": null
-},
-"https://www.regione.vda.it/istruzione/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Aosta",
 "avvisi": 0,
 "errore": null
 },
@@ -206,12 +199,31 @@
 "avvisi": 20,
 "errore": null
 },
+"https://www.regione.vda.it/istruzione/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Aosta",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/vercelli/tag/interpelli-supplenze/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Vercelli",
 "avvisi": 0,
 "errore": "HTTP 404"
+},
+"https://pc.istruzioneer.gov.it/interpelli/": {
+"grezzi": 32,
+"scartati": [
+"https://www.liceorespighi.edu.it/pagine/interpello",
+"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F10%2F24%2Finterpel",
+"http://twitter.com/share?text=Interpello+posto+di+sostegno+scuola+primaria&url=https%3A%2F%2Ficcastellarquato.",
+"https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F10%2F24%2Fi"
+],
+"provincia": "Piacenza",
+"avvisi": 12,
+"errore": null
 },
 "https://www.mim.gov.it/web/brescia/": {
 "grezzi": 1,
@@ -232,6 +244,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.usplatina.it/wp/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Latina",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
 "grezzi": 37,
 "scartati": [
@@ -242,13 +261,6 @@
 ],
 "provincia": "Chieti",
 "avvisi": 21,
-"errore": null
-},
-"https://www.usplatina.it/wp/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Latina",
-"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/cuneo/": {
@@ -266,18 +278,6 @@
 "grezzi": 12,
 "scartati": [],
 "provincia": "Rieti",
-"avvisi": 12,
-"errore": null
-},
-"https://pc.istruzioneer.gov.it/interpelli/": {
-"grezzi": 32,
-"scartati": [
-"https://www.liceorespighi.edu.it/pagine/interpello",
-"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F10%2F24%2Finterpel",
-"http://twitter.com/share?text=Interpello+posto+di+sostegno+scuola+primaria&url=https%3A%2F%2Ficcastellarquato.",
-"https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F10%2F24%2Fi"
-],
-"provincia": "Piacenza",
 "avvisi": 12,
 "errore": null
 },
@@ -305,13 +305,6 @@
 "avvisi": 16,
 "errore": null
 },
-"https://www.usptaranto.it/": {
-"grezzi": 13,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 13,
-"errore": null
-},
 "https://www.ustlecce.it/": {
 "grezzi": 6,
 "scartati": [
@@ -322,6 +315,13 @@
 ],
 "provincia": "Lecce",
 "avvisi": 0,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 13,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 13,
 "errore": null
 },
 "https://www.istruzionelaspezia.gov.it/pagine/interpelli-1": {
