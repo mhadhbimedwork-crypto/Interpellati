@@ -1136,7 +1136,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.principigrimaldi.edu.it/",
   "sito": "https://www.principigrimaldi.edu.it/",
   "tentativi": [
    [
@@ -1145,15 +1146,7 @@
    ],
    [
     "http://www.principigrimaldi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://principigrimaldi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://principigrimaldi.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1273,6 +1266,20 @@
   "sito": "https://www.scuolasturzo.gov.it/",
   "tentativi": []
  },
+ "TPIC84200B": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "SSLError",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icpertinitrapani.edu.it/",
+  "sito": "https://www.icpertinitrapani.edu.it/",
+  "tentativi": [
+   [
+    "https://www.icpertinitrapani.edu.it/",
+    "OK"
+   ]
+  ]
+ },
  "TPIS031005": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -1343,13 +1350,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceoruggierimarsala.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceoruggierimarsala.edu.it/",
   "tentativi": [
    [
     "https://www.liceoruggierimarsala.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.liceoruggierimarsala.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://liceoruggierimarsala.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://liceoruggierimarsala.edu.it/",
+    "HTTP 509"
    ]
   ]
  }
