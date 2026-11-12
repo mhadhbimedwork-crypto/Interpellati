@@ -1,10 +1,10 @@
 {
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"https://lnx.csaoristano.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Perugia",
+"provincia": "Oristano",
 "avvisi": 0,
-"errore": "HTTP 404"
+"errore": "ConnectionError"
 },
 "https://brescia.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
@@ -13,19 +13,12 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://lnx.csaoristano.it/": {
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Oristano",
+"provincia": "Perugia",
 "avvisi": 0,
-"errore": "ConnectionError"
-},
-"https://como.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Como",
-"avvisi": 0,
-"errore": "SSLError"
+"errore": "HTTP 404"
 },
 "https://monza.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -40,6 +33,13 @@
 "provincia": "Rimini",
 "avvisi": 0,
 "errore": "HTTP 404"
+},
+"https://como.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Como",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://atcampobasso.it/": {
 "grezzi": 2,
@@ -56,13 +56,6 @@
 "scartati": [],
 "provincia": "Treviso",
 "avvisi": 0,
-"errore": null
-},
-"https://pc.istruzioneer.gov.it/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": "Piacenza",
-"avvisi": 1,
 "errore": null
 },
 "https://ra.istruzioneer.gov.it/": {
@@ -87,6 +80,29 @@
 "avvisi": 18,
 "errore": null
 },
+"http://www.istruzionevicenza.it/wordpress/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 8,
+"scartati": [
+"https://www.liceorespighi.edu.it/pagine/interpello"
+],
+"provincia": "Piacenza",
+"avvisi": 7,
+"errore": null
+},
+"https://www.csanuoro.it/wp2019/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Nuoro",
+"avvisi": 0,
+"errore": null
+},
 "https://sr.usr.sicilia.it/": {
 "grezzi": 13,
 "scartati": [
@@ -99,24 +115,10 @@
 "avvisi": 5,
 "errore": null
 },
-"https://www.csanuoro.it/wp2019/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Nuoro",
-"avvisi": 0,
-"errore": null
-},
 "https://belluno.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Belluno",
-"avvisi": 0,
-"errore": null
-},
-"http://www.istruzionevicenza.it/wordpress/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
 "avvisi": 0,
 "errore": null
 },
@@ -134,17 +136,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-udine/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Udine",
-"avvisi": 0,
-"errore": null
-},
 "https://verona.istruzioneveneto.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Verona",
+"avvisi": 0,
+"errore": null
+},
+"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-udine/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Udine",
 "avvisi": 0,
 "errore": null
 },
@@ -185,19 +187,19 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.toscana-istruzione.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pisa",
-"avvisi": 0,
-"errore": "HTTP 403"
-},
 "https://www.istruzionepiemonte.it/palermo-chiama-italia-23-maggio-2019/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Palermo",
 "avvisi": 0,
 "errore": null
+},
+"https://www.toscana-istruzione.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 403"
 },
 "https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
 "grezzi": 19,
@@ -211,13 +213,6 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.usp-rieti.it/": {
-"grezzi": 13,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 13,
-"errore": null
-},
 "https://www.istruzionechietipescara.it/": {
 "grezzi": 33,
 "scartati": [
@@ -228,6 +223,13 @@
 ],
 "provincia": "Pescara",
 "avvisi": 21,
+"errore": null
+},
+"https://www.usp-rieti.it/": {
+"grezzi": 13,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 13,
 "errore": null
 },
 "https://www.usplecce.it/": {
@@ -250,7 +252,7 @@
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
-"grezzi": 882,
+"grezzi": 881,
 "scartati": [
 "https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/",
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-don-milani-per-supplenza-scuola-primaria-po",
@@ -258,7 +260,7 @@
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-a-caponnetto-w-iozzelli-per-supplenza-breve"
 ],
 "provincia": "Pistoia",
-"avvisi": 29,
+"avvisi": 28,
 "errore": null
 },
 "https://www.mim.gov.it/web/lodi/": {
@@ -280,6 +282,18 @@
 "avvisi": 18,
 "errore": null
 },
+"https://www.mim.gov.it/web/cremona/": {
+"grezzi": 189,
+"scartati": [
+"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-di-sostegno-nella-scuola-pr",
+"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-nella-scuola-dell-infanzia-",
+"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-classe-di-concorso-eeee",
+"https://www.mim.gov.it/web/cremona/-/interpello-posto-di-sostegno-presso-scuola-primaria-1"
+],
+"provincia": "Cremona",
+"avvisi": 14,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/vercelli/": {
 "grezzi": 8,
 "scartati": [
@@ -288,6 +302,13 @@
 ],
 "provincia": "Vercelli",
 "avvisi": 6,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 10,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 10,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/": {
@@ -309,16 +330,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.mim.gov.it/web/cremona/": {
-"grezzi": 189,
-"scartati": [
-"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-di-sostegno-nella-scuola-pr",
-"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-nella-scuola-dell-infanzia-",
-"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-classe-di-concorso-eeee",
-"https://www.mim.gov.it/web/cremona/-/interpello-posto-di-sostegno-presso-scuola-primaria-1"
-],
-"provincia": "Cremona",
-"avvisi": 14,
+"https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ustlecce.it/": {
@@ -331,20 +347,6 @@
 ],
 "provincia": "Lecce",
 "avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usptaranto.it/": {
-"grezzi": 10,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 10,
 "errore": null
 }
 }
