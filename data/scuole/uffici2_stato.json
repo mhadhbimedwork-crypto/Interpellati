@@ -6,17 +6,17 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://cremona.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://bergamo.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://cremona.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cremona",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -44,6 +44,18 @@
 "avvisi": 0,
 "errore": null
 },
+"https://cl-en.usr.sicilia.it/": {
+"grezzi": 31,
+"scartati": [
+"https://twitter.com/home?status=Interpello per il conferimento di una supplenza su posto di sostegno – Scuola ",
+"https://www.facebook.com/sharer/sharer.php?u=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/interpel",
+"https://www.linkedin.com/sharing/share-offsite/?url=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/i",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/"
+],
+"provincia": "Enna",
+"avvisi": 25,
+"errore": null
+},
 "https://atpisernia.it/": {
 "grezzi": 23,
 "scartati": [
@@ -54,18 +66,6 @@
 ],
 "provincia": "Isernia",
 "avvisi": 0,
-"errore": null
-},
-"https://cl-en.usr.sicilia.it/": {
-"grezzi": 35,
-"scartati": [
-"https://twitter.com/home?status=Interpello per il conferimento di una supplenza su posto di sostegno – Scuola ",
-"https://www.facebook.com/sharer/sharer.php?u=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/interpel",
-"https://www.linkedin.com/sharing/share-offsite/?url=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/i",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/"
-],
-"provincia": "Enna",
-"avvisi": 29,
 "errore": null
 },
 "https://varese.istruzionelombardia.gov.it/": {
@@ -107,32 +107,6 @@
 "avvisi": 24,
 "errore": null
 },
-"https://me.usr.sicilia.it/personale-scuola/interpelli/": {
-"grezzi": 76,
-"scartati": [
-"https://twitter.com/home?status=I.C. CAPUANA – Interpello per il conferimento di supplenza breve e saltuaria –",
-"https://me.usr.sicilia.it/category/personale-scuola/interpelli/",
-"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-nazionali/",
-"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-provinciali/"
-],
-"provincia": "Messina",
-"avvisi": 33,
-"errore": null
-},
-"https://www.istruzionelaspezia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "La Spezia",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
-"errore": null
-},
 "https://rovigo.istruzioneveneto.gov.it/": {
 "grezzi": 22,
 "scartati": [
@@ -154,16 +128,16 @@
 "avvisi": 3,
 "errore": null
 },
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 66,
+"https://me.usr.sicilia.it/personale-scuola/interpelli/": {
+"grezzi": 70,
 "scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+"https://twitter.com/home?status=I.C. CAPUANA – Interpello per il conferimento di supplenza breve e saltuaria –",
+"https://me.usr.sicilia.it/category/personale-scuola/interpelli/",
+"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-nazionali/",
+"https://me.usr.sicilia.it/category/personale-scuola/interpelli/interpelli-provinciali/"
 ],
-"provincia": "Ferrara",
-"avvisi": 32,
+"provincia": "Messina",
+"avvisi": 30,
 "errore": null
 },
 "https://t.me/s/usr_sicilia": {
@@ -176,6 +150,43 @@
 ],
 "provincia": null,
 "avvisi": 14,
+"errore": null
+},
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 66,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+],
+"provincia": "Ferrara",
+"avvisi": 32,
+"errore": null
+},
+"https://www.istruzionelaspezia.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "La Spezia",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-annuali-classe-di-concorso-a041-e-a058/": {
+"grezzi": 3,
+"scartati": [
+"https://www.istruzionepiemonte.it/cuneo/category/comunicazioni-alle-scuole/",
+"https://www.istruzionepiemonte.it/cuneo/tag/albo/",
+"https://www.istruzionepiemonte.it/cuneo/tag/avvisi/"
+],
+"provincia": "Cuneo",
+"avvisi": 0,
 "errore": null
 },
 "https://vicenza.istruzioneveneto.gov.it/": {
@@ -192,13 +203,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Roma",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionebat.it/": {
 "grezzi": 114,
 "scartati": [
@@ -211,21 +215,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
+"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bolzano",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-annuali-classe-di-concorso-a041-e-a058/": {
-"grezzi": 3,
-"scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/comunicazioni-alle-scuole/",
-"https://www.istruzionepiemonte.it/cuneo/tag/albo/",
-"https://www.istruzionepiemonte.it/cuneo/tag/avvisi/"
-],
-"provincia": "Cuneo",
+"provincia": "Roma",
 "avvisi": 0,
 "errore": null
 },
@@ -238,7 +231,14 @@
 "https://www.atpromaistruzione.it/atp/tag/adaa/"
 ],
 "provincia": "Roma",
-"avvisi": 21,
+"avvisi": 19,
+"errore": null
+},
+"https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bolzano",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.prato.it/": {
@@ -254,6 +254,18 @@
 "provincia": "Cagliari",
 "avvisi": 0,
 "errore": "HTTP 403"
+},
+"https://pc.istruzioneer.gov.it/interpelli/": {
+"grezzi": 31,
+"scartati": [
+"https://www.liceorespighi.edu.it/pagine/interpello",
+"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F10%2F24%2Finterpel",
+"http://twitter.com/share?text=Interpello+posto+di+sostegno+scuola+primaria&url=https%3A%2F%2Ficcastellarquato.",
+"https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F10%2F24%2Fi"
+],
+"provincia": "Piacenza",
+"avvisi": 13,
+"errore": null
 },
 "https://www.mim.gov.it/web/isernia": {
 "grezzi": 10,
@@ -286,16 +298,16 @@
 "avvisi": 33,
 "errore": null
 },
-"https://pc.istruzioneer.gov.it/interpelli/": {
-"grezzi": 31,
+"https://www.ustms.it/": {
+"grezzi": 15,
 "scartati": [
-"https://www.liceorespighi.edu.it/pagine/interpello",
-"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F10%2F24%2Finterpel",
-"http://twitter.com/share?text=Interpello+posto+di+sostegno+scuola+primaria&url=https%3A%2F%2Ficcastellarquato.",
-"https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F10%2F24%2Fi"
+"https://twitter.com/home?status=IC MORATTI-BONOMI: Interpello c.d.c. EEEE – sede Monzone - https://www.ustms.i",
+"https://www.ustms.it/category/docenti/",
+"https://www.ustms.it/category/in-primo-piano/",
+"https://www.ustms.it/category/docenti/interpelli/"
 ],
-"provincia": "Piacenza",
-"avvisi": 13,
+"provincia": "Massa-Carrara",
+"avvisi": 7,
 "errore": null
 },
 "https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
@@ -321,18 +333,6 @@
 "avvisi": 10,
 "errore": null
 },
-"https://www.ustms.it/": {
-"grezzi": 15,
-"scartati": [
-"https://twitter.com/home?status=IC MORATTI-BONOMI: Interpello c.d.c. EEEE – sede Monzone - https://www.ustms.i",
-"https://www.ustms.it/category/docenti/",
-"https://www.ustms.it/category/in-primo-piano/",
-"https://www.ustms.it/category/docenti/interpelli/"
-],
-"provincia": "Massa-Carrara",
-"avvisi": 7,
-"errore": null
-},
 "https://www.uspsi.it/?cat=264": {
 "grezzi": 53,
 "scartati": [
@@ -346,14 +346,14 @@
 "errore": null
 },
 "https://www.ustfoggia.it/": {
-"grezzi": 59,
+"grezzi": 51,
 "scartati": [
 "https://www.ustfoggia.it/category/albo-pretorio/",
 "https://www.ustfoggia.it/category/news/",
 "https://www.ustfoggia.it/ultime-novita-ust-foggia/"
 ],
 "provincia": "Foggia",
-"avvisi": 56,
+"avvisi": 48,
 "errore": null
 },
 "https://www.mim.gov.it/web/mantova/": {
