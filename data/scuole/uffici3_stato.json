@@ -6,6 +6,13 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
+"https://milano.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
@@ -24,13 +31,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Bergamo",
-"avvisi": 0,
-"errore": "SSLError"
-},
-"https://milano.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -58,13 +58,6 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://uspistruzione.fr.it/wp2/": {
-"grezzi": 3,
-"scartati": [],
-"provincia": "Frosinone",
-"avvisi": 3,
-"errore": null
-},
 "https://pr.istruzioneer.gov.it/": {
 "grezzi": 7,
 "scartati": [
@@ -75,6 +68,13 @@
 ],
 "provincia": "Parma",
 "avvisi": 2,
+"errore": null
+},
+"https://uspistruzione.fr.it/wp2/": {
+"grezzi": 3,
+"scartati": [],
+"provincia": "Frosinone",
+"avvisi": 3,
 "errore": null
 },
 "https://atpisernia.it/": {
@@ -101,6 +101,48 @@
 "avvisi": 14,
 "errore": null
 },
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 37,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 37,
+"errore": null
+},
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 59,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+],
+"provincia": "Ferrara",
+"avvisi": 29,
+"errore": null
+},
+"https://www.istruzionegenova.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Genova",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vercelli",
+"avvisi": 0,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 25,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 24,
+"errore": null
+},
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
 "grezzi": 43,
 "scartati": [
@@ -113,53 +155,20 @@
 "avvisi": 27,
 "errore": null
 },
-"https://www.istruzionegenova.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
-"errore": null
-},
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 35,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 35,
-"errore": null
-},
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 22,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 21,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vercelli",
-"avvisi": 0,
-"errore": null
-},
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 66,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
-],
-"provincia": "Ferrara",
-"avvisi": 32,
-"errore": null
-},
 "https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
+"grezzi": 2,
+"scartati": [
+"https://vicenza.istruzioneveneto.gov.it/2026/11/13/convalida-del-punteggio-gps-assegnato-al-personale-docente-"
+],
 "provincia": "Vicenza",
-"avvisi": 0,
+"avvisi": 1,
+"errore": null
+},
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
+"grezzi": 2,
+"scartati": [],
+"provincia": "Catanzaro",
+"avvisi": 2,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/mc-events/napoli_seminario-regionale_lo-sviluppo-del-servizio-di-scuola-in-ospedale-e-di-istruzione-domiciliare/": {
@@ -176,30 +185,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 2,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 2,
-"errore": null
-},
 "https://www.istruzionerovigo.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Rovigo",
 "avvisi": 0,
-"errore": null
-},
-"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
-"grezzi": 108,
-"scartati": [
-"https://www.atpromaistruzione.it/atp/tag/interpelli/",
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/tag/a040/",
-"https://www.atpromaistruzione.it/atp/tag/aaaa/"
-],
-"provincia": "Roma",
-"avvisi": 15,
 "errore": null
 },
 "https://www.csateramo.it/wpusp/archive/category/news": {
@@ -211,6 +201,18 @@
 "https://www.csateramo.it/wpusp/archive/interpelli-14"
 ],
 "provincia": "Teramo",
+"avvisi": 15,
+"errore": null
+},
+"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
+"grezzi": 108,
+"scartati": [
+"https://www.atpromaistruzione.it/atp/tag/interpelli/",
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
+"https://www.atpromaistruzione.it/atp/tag/a040/",
+"https://www.atpromaistruzione.it/atp/tag/aaaa/"
+],
+"provincia": "Roma",
 "avvisi": 15,
 "errore": null
 },
@@ -252,6 +254,13 @@
 "avvisi": 0,
 "errore": null
 },
+"http://www.uspmc.sinp.net/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
 "https://www.mim.gov.it/web/isernia/": {
 "grezzi": 10,
 "scartati": [
@@ -264,12 +273,12 @@
 "avvisi": 1,
 "errore": null
 },
-"http://www.uspmc.sinp.net/": {
-"grezzi": 0,
+"https://www.ustfoggia.it/feed/": {
+"grezzi": 8,
 "scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
+"provincia": "Foggia",
+"avvisi": 8,
+"errore": null
 },
 "https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
 "grezzi": 0,
@@ -277,13 +286,6 @@
 "provincia": null,
 "avvisi": 0,
 "errore": "HTTP 404"
-},
-"https://www.ustfoggia.it/feed/": {
-"grezzi": 8,
-"scartati": [],
-"provincia": "Foggia",
-"avvisi": 8,
-"errore": null
 },
 "https://www.vivoscuola.it/": {
 "grezzi": 0,
