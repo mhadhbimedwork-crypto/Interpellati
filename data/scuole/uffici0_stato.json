@@ -6,19 +6,19 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Terni",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Como",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Terni",
+"avvisi": 0,
+"errore": "HTTP 404"
 },
 "https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
 "grezzi": 0,
@@ -48,12 +48,14 @@
 "avvisi": 0,
 "errore": null
 },
-"https://uat-salerno.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Salerno",
-"avvisi": 0,
-"errore": "SSLError"
+"https://pc.istruzioneer.gov.it/": {
+"grezzi": 8,
+"scartati": [
+"https://www.liceorespighi.edu.it/pagine/interpello"
+],
+"provincia": "Piacenza",
+"avvisi": 7,
+"errore": null
 },
 "https://sr.usr.sicilia.it/tag/interpelli/": {
 "grezzi": 2,
@@ -64,13 +66,6 @@
 "avvisi": 1,
 "errore": null
 },
-"https://www.atpromaistruzione.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Roma",
-"avvisi": 0,
-"errore": null
-},
 "https://me.usr.sicilia.it/": {
 "grezzi": 15,
 "scartati": [],
@@ -78,19 +73,43 @@
 "avvisi": 15,
 "errore": null
 },
-"https://pc.istruzioneer.gov.it/": {
-"grezzi": 8,
-"scartati": [
-"https://www.liceorespighi.edu.it/pagine/interpello"
-],
-"provincia": "Piacenza",
-"avvisi": 7,
+"https://uat-salerno.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Salerno",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://www.atpromaistruzione.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Roma",
+"avvisi": 0,
 "errore": null
 },
 "https://www.csateramo.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Teramo",
+"avvisi": 0,
+"errore": null
+},
+"https://cl-en.usr.sicilia.it/": {
+"grezzi": 31,
+"scartati": [
+"https://twitter.com/home?status=Interpello per il conferimento di una supplenza su posto di sostegno – Scuola ",
+"https://www.facebook.com/sharer/sharer.php?u=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/interpel",
+"https://www.linkedin.com/sharing/share-offsite/?url=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/i",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/"
+],
+"provincia": "Caltanissetta",
+"avvisi": 25,
+"errore": null
+},
+"https://www.istruzionelaspezia.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "La Spezia",
 "avvisi": 0,
 "errore": null
 },
@@ -108,13 +127,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionelaspezia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "La Spezia",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -122,16 +134,15 @@
 "avvisi": 0,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/": {
-"grezzi": 31,
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-annuali-classe-di-concorso-a041-e-a058/": {
+"grezzi": 3,
 "scartati": [
-"https://twitter.com/home?status=Interpello per il conferimento di una supplenza su posto di sostegno – Scuola ",
-"https://www.facebook.com/sharer/sharer.php?u=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/interpel",
-"https://www.linkedin.com/sharing/share-offsite/?url=https://cl-en.usr.sicilia.ithttps://cl-en.usr.sicilia.it/i",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/"
+"https://www.istruzionepiemonte.it/cuneo/category/comunicazioni-alle-scuole/",
+"https://www.istruzionepiemonte.it/cuneo/tag/albo/",
+"https://www.istruzionepiemonte.it/cuneo/tag/avvisi/"
 ],
-"provincia": "Caltanissetta",
-"avvisi": 25,
+"provincia": "Cuneo",
+"avvisi": 0,
 "errore": null
 },
 "http://www.uspss.it/": {
@@ -145,13 +156,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Matera",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Roma",
 "avvisi": 0,
 "errore": null
 },
@@ -169,26 +173,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-annuali-classe-di-concorso-a041-e-a058/": {
-"grezzi": 3,
-"scartati": [
-"https://www.istruzionepiemonte.it/cuneo/category/comunicazioni-alle-scuole/",
-"https://www.istruzionepiemonte.it/cuneo/tag/albo/",
-"https://www.istruzionepiemonte.it/cuneo/tag/avvisi/"
-],
-"provincia": "Cuneo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionebat.it/": {
-"grezzi": 115,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
-"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
-"https://www.scuolapetronellitrani.edu.it/interpelli/"
-],
-"provincia": "Barletta-Andria-Trani",
+"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Roma",
 "avvisi": 0,
 "errore": null
 },
@@ -211,6 +199,29 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
+"https://ustlucca.it/": {
+"grezzi": 29,
+"scartati": [
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
+"https://ustlucca.it/category/interpelli/"
+],
+"provincia": "Lucca",
+"avvisi": 26,
+"errore": null
+},
+"https://www.istruzionebat.it/": {
+"grezzi": 115,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
+"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
+"https://www.scuolapetronellitrani.edu.it/interpelli/"
+],
+"provincia": "Barletta-Andria-Trani",
+"avvisi": 0,
+"errore": null
+},
 "https://www.ufficioscolasticoprovinciale.prato.it/": {
 "grezzi": 7,
 "scartati": [
@@ -218,18 +229,6 @@
 ],
 "provincia": "Prato",
 "avvisi": 6,
-"errore": null
-},
-"https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
-"grezzi": 37,
-"scartati": [
-"https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F06",
-"https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F06",
-"https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F06%2F",
-"https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F0"
-],
-"provincia": "Pescara",
-"avvisi": 21,
 "errore": null
 },
 "https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
@@ -244,6 +243,18 @@
 "avvisi": 26,
 "errore": null
 },
+"https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
+"grezzi": 37,
+"scartati": [
+"https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F06",
+"https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F06",
+"https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F06%2F",
+"https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F0"
+],
+"provincia": "Pescara",
+"avvisi": 21,
+"errore": null
+},
 "https://www.uat-napoli.it/": {
 "grezzi": 42,
 "scartati": [
@@ -254,29 +265,6 @@
 ],
 "provincia": "Napoli",
 "avvisi": 36,
-"errore": null
-},
-"https://www.uspascolipiceno.it/": {
-"grezzi": 26,
-"scartati": [
-"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
-"https://www.uspascolipiceno.it/wordpress/category/interpelli/",
-"https://www.uspascolipiceno.it/wordpress/tag/interpelli/",
-"https://www.uspascolipiceno.it/wordpress/avviso-di-interpello-per-il-conferimento-di-supplenza-breve-classe-di"
-],
-"provincia": "Fermo",
-"avvisi": 9,
-"errore": null
-},
-"https://ustlucca.it/": {
-"grezzi": 29,
-"scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
-"https://ustlucca.it/category/interpelli/"
-],
-"provincia": "Lucca",
-"avvisi": 26,
 "errore": null
 },
 "https://www.uspsi.it/": {
@@ -291,16 +279,27 @@
 "avvisi": 48,
 "errore": null
 },
-"https://www.mim.gov.it/web/brescia/interpelli-ricerca-supplenti/": {
-"grezzi": 8,
+"https://www.uspascolipiceno.it/": {
+"grezzi": 26,
 "scartati": [
-"https://www.mim.gov.it/web/brescia/-/avviso-di-interpello-per-conferimento-di-una-supplenza-fuori-graduatoria-",
-"https://www.mim.gov.it/web/brescia/-/avviso-di-interpello-per-conferimento-di-una-supplenza-fuori-graduatoria-",
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-marcheno-classe-di-concorso-a028",
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-gavardo-classe-di-concorso-posto-comune-scu"
+"https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/",
+"https://www.uspascolipiceno.it/wordpress/category/interpelli/",
+"https://www.uspascolipiceno.it/wordpress/tag/interpelli/",
+"https://www.uspascolipiceno.it/wordpress/avviso-di-interpello-per-il-conferimento-di-supplenza-breve-classe-di"
 ],
-"provincia": "Brescia",
-"avvisi": 2,
+"provincia": "Fermo",
+"avvisi": 9,
+"errore": null
+},
+"https://www.ustfoggia.it/": {
+"grezzi": 45,
+"scartati": [
+"https://www.ustfoggia.it/category/albo-pretorio/",
+"https://www.ustfoggia.it/category/news/",
+"https://www.ustfoggia.it/ultime-novita-ust-foggia/"
+],
+"provincia": "Foggia",
+"avvisi": 42,
 "errore": null
 },
 "https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
@@ -315,17 +314,6 @@
 "avvisi": 37,
 "errore": null
 },
-"https://www.ustfoggia.it/": {
-"grezzi": 45,
-"scartati": [
-"https://www.ustfoggia.it/category/albo-pretorio/",
-"https://www.ustfoggia.it/category/news/",
-"https://www.ustfoggia.it/ultime-novita-ust-foggia/"
-],
-"provincia": "Foggia",
-"avvisi": 42,
-"errore": null
-},
 "https://www.ustli.it/usp_livorno/index.php/docenti/interpelli": {
 "grezzi": 11,
 "scartati": [
@@ -336,6 +324,18 @@
 ],
 "provincia": "Livorno",
 "avvisi": 0,
+"errore": null
+},
+"https://www.mim.gov.it/web/brescia/interpelli-ricerca-supplenti/": {
+"grezzi": 8,
+"scartati": [
+"https://www.mim.gov.it/web/brescia/-/avviso-di-interpello-per-conferimento-di-una-supplenza-fuori-graduatoria-",
+"https://www.mim.gov.it/web/brescia/-/avviso-di-interpello-per-conferimento-di-una-supplenza-fuori-graduatoria-",
+"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-marcheno-classe-di-concorso-a028",
+"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-gavardo-classe-di-concorso-posto-comune-scu"
+],
+"provincia": "Brescia",
+"avvisi": 2,
 "errore": null
 },
 "https://www.istruzionepotenza.it/": {
