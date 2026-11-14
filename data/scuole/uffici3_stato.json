@@ -28,21 +28,10 @@
 "errore": "HTTP 404"
 },
 "https://bo.istruzioneer.gov.it/": {
-"grezzi": 2,
+"grezzi": 1,
 "scartati": [],
 "provincia": "Bologna",
-"avvisi": 2,
-"errore": null
-},
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 5,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PRIC82900G/docenti",
-"https://nuvola.madisoft.it/interpelli/pric83600p/docenti",
-"https://nuvola.madisoft.it/interpelli/PRIC833007/docenti"
-],
-"provincia": "Parma",
-"avvisi": 2,
+"avvisi": 1,
 "errore": null
 },
 "https://atpisernia.it/": {
@@ -57,6 +46,17 @@
 "avvisi": 0,
 "errore": null
 },
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 5,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PRIC82900G/docenti",
+"https://nuvola.madisoft.it/interpelli/pric83600p/docenti",
+"https://nuvola.madisoft.it/interpelli/PRIC833007/docenti"
+],
+"provincia": "Parma",
+"avvisi": 2,
+"errore": null
+},
 "https://ct.usr.sicilia.it/": {
 "grezzi": 25,
 "scartati": [
@@ -69,11 +69,11 @@
 "avvisi": 6,
 "errore": null
 },
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 30,
+"https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Padova",
-"avvisi": 30,
+"provincia": "Vicenza",
+"avvisi": 0,
 "errore": null
 },
 "https://venezia.istruzioneveneto.gov.it/": {
@@ -88,23 +88,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
-"grezzi": 0,
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 30,
 "scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 43,
-"scartati": [
-"https://twitter.com/home?status=INTERPELLO A042 – SCIENZE E TECNOLOGIE MECCANICHE – ORE 4 –  PRESA DI SERVIZIO",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
-"https://cl-en.usr.sicilia.it/ripresa-attivita-didattiche-giorno-12-novembre-2026/"
-],
-"provincia": "Enna",
-"avvisi": 27,
+"provincia": "Padova",
+"avvisi": 30,
 "errore": null
 },
 "https://tp.usr.sicilia.it/": {
@@ -119,8 +107,20 @@
 "avvisi": 15,
 "errore": null
 },
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
+"grezzi": 43,
+"scartati": [
+"https://twitter.com/home?status=INTERPELLO A042 – SCIENZE E TECNOLOGIE MECCANICHE – ORE 4 –  PRESA DI SERVIZIO",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
+"https://cl-en.usr.sicilia.it/ripresa-attivita-didattiche-giorno-12-novembre-2026/"
+],
+"provincia": "Enna",
+"avvisi": 27,
+"errore": null
+},
 "https://fe.istruzioneer.gov.it/category/assunzioni-e-concorsi/interpelli_docenti/": {
-"grezzi": 87,
+"grezzi": 81,
 "scartati": [
 "https://fe.istruzioneer.gov.it/tag/interpelli-postocomune-infanzia-primaria-sostegnoinfanzia-sostegnoprimaria-",
 "https://fe.istruzioneer.gov.it/tag/a041/",
@@ -128,7 +128,14 @@
 "https://fe.istruzioneer.gov.it/"
 ],
 "provincia": "Ferrara",
-"avvisi": 43,
+"avvisi": 41,
+"errore": null
+},
+"https://www.istruzionegenova.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Genova",
+"avvisi": 0,
 "errore": null
 },
 "https://re.istruzioneer.gov.it/category/docenti/": {
@@ -141,13 +148,6 @@
 ],
 "provincia": "Reggio Emilia",
 "avvisi": 35,
-"errore": null
-},
-"https://www.istruzionegenova.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
 "errore": null
 },
 "https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/": {
@@ -163,18 +163,6 @@
 "provincia": "Macerata",
 "avvisi": 0,
 "errore": "ConnectTimeout"
-},
-"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/": {
-"grezzi": 21,
-"scartati": [
-"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/",
-"https://www.uspistruzione.fr.it/wp2/interpello-per-selezione-personale-docente-cc-a040-ai-sensi-dellart-13-com",
-"https://www.uspistruzione.fr.it/wp2/interpello-nazionale-per-incarico-a-tempo-determinato-per-uno-spezzone-ora",
-"https://www.uspistruzione.fr.it/wp2/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche-per"
-],
-"provincia": "Frosinone",
-"avvisi": 13,
-"errore": null
 },
 "https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
 "grezzi": 24,
@@ -200,6 +188,25 @@
 "avvisi": 13,
 "errore": null
 },
+"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/": {
+"grezzi": 21,
+"scartati": [
+"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/",
+"https://www.uspistruzione.fr.it/wp2/interpello-per-selezione-personale-docente-cc-a040-ai-sensi-dellart-13-com",
+"https://www.uspistruzione.fr.it/wp2/interpello-nazionale-per-incarico-a-tempo-determinato-per-uno-spezzone-ora",
+"https://www.uspistruzione.fr.it/wp2/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche-per"
+],
+"provincia": "Frosinone",
+"avvisi": 13,
+"errore": null
+},
+"https://www.regione.vda.it/istruzione/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Aosta",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionematera.it/category/interpelli/": {
 "grezzi": 7,
 "scartati": [
@@ -209,25 +216,6 @@
 "https://www.istruzionematera.it/i-c-bramante-torraca-di-matera-interpello-per-supplenze-brevi-e-saltuarie-fino"
 ],
 "provincia": "Matera",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzione-ancona.it/": {
-"grezzi": 67,
-"scartati": [
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/"
-],
-"provincia": "Ancona",
-"avvisi": 17,
-"errore": null
-},
-"https://www.regione.vda.it/istruzione/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Aosta",
 "avvisi": 0,
 "errore": null
 },
@@ -243,12 +231,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.csa.fi.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Firenze",
-"avvisi": 0,
-"errore": "ConnectTimeout"
+"https://www.istruzione-ancona.it/": {
+"grezzi": 67,
+"scartati": [
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/"
+],
+"provincia": "Ancona",
+"avvisi": 17,
+"errore": null
 },
 "https://www.usplatina.it/wp/": {
 "grezzi": 0,
@@ -256,6 +249,13 @@
 "provincia": "Latina",
 "avvisi": 0,
 "errore": null
+},
+"https://www.csa.fi.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Firenze",
+"avvisi": 0,
+"errore": "ConnectTimeout"
 },
 "https://www.usp-rieti.it/": {
 "grezzi": 14,
@@ -316,25 +316,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/biella/": {
-"grezzi": 24,
-"scartati": [
-"https://www.istruzionepiemonte.it/biella/interpello-assistente-tecnico-meccanica-area-ar01-6h-dal-06-11-2026-a",
-"https://www.istruzionepiemonte.it/biella/interpello-nazionale-per-una-supplenza-su-profilo-di-assistente-tecni",
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
-],
-"provincia": "Biella",
-"avvisi": 20,
-"errore": null
-},
-"https://www.usptaranto.it/": {
-"grezzi": 14,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 14,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
 "grezzi": 4,
 "scartati": [
@@ -345,6 +326,18 @@
 ],
 "provincia": "Novara",
 "avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/biella/": {
+"grezzi": 24,
+"scartati": [
+"https://www.istruzionepiemonte.it/biella/interpello-assistente-tecnico-meccanica-area-ar01-6h-dal-06-11-2026-a",
+"https://www.istruzionepiemonte.it/biella/interpello-nazionale-per-una-supplenza-su-profilo-di-assistente-tecni",
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
+],
+"provincia": "Biella",
+"avvisi": 20,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/": {
@@ -369,6 +362,13 @@
 ],
 "provincia": "Torino",
 "avvisi": 21,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 14,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 14,
 "errore": null
 }
 }
