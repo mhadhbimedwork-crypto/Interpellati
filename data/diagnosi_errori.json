@@ -2,43 +2,43 @@
 "esiti": [
 [
 "sempre in errore (robots vieta)",
-938
+986
 ],
 [
 "sempre in errore (503)",
-402
+363
 ],
 [
 "sempre in errore (ConnectionError)",
-337
-],
-[
-"sempre in errore (509)",
-183
+320
 ],
 [
 "recuperata al riprovo",
-141
+243
 ],
 [
-"sempre in errore (ConnectTimeout)",
-27
+"sempre in errore (509)",
+202
+],
+[
+"sempre in errore (MissingSchema)",
+40
 ],
 [
 "sempre in errore (403)",
+29
+],
+[
+"sempre in errore (ConnectTimeout)",
 25
 ],
 [
 "sempre in errore (SSLError)",
-11
-],
-[
-"sempre in errore (MissingSchema)",
-11
+15
 ],
 [
 "sempre in errore (202)",
-5
+6
 ],
 [
 "sempre in errore (500)",
@@ -67,28 +67,36 @@
 [
 "sempre in errore (401)",
 1
+],
+[
+"sempre in errore (ReadTimeout)",
+1
 ]
 ],
 "ip_piu_comuni": [
 [
-1169,
+1252,
 "217.27.72.228"
 ],
 [
-423,
+467,
 "13.37.102.167"
 ],
 [
-38,
-"217.27.72.236"
+41,
+"0.0.0.0"
 ],
 [
-12,
-"0.0.0.0"
+40,
+"217.27.72.236"
 ],
 [
 4,
 "66.175.209.179"
+],
+[
+4,
+"52.18.59.124"
 ],
 [
 4,
@@ -99,16 +107,16 @@
 "217.147.144.137"
 ],
 [
-4,
-"104.247.81.99"
-],
-[
 3,
 "62.149.230.128"
 ],
 [
 3,
 "46.231.27.45"
+],
+[
+3,
+"104.247.81.99"
 ],
 [
 2,
@@ -125,10 +133,6 @@
 [
 2,
 "35.152.66.67"
-],
-[
-2,
-"2.57.91.91"
 ]
 ],
 "scuole": {
@@ -170,22 +174,14 @@
 "ts": "2026-11-10"
 },
 "ANIC819006": {
-"url": "https://www.quartierinuovi-ancona.it/",
-"ip": "",
+"url": "https://www.quartierinuovi-ancona.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.quartierinuovi-ancona.it', port=443): Max retries exceeded with url: / (Caused by NameReso"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.quartierinuovi-ancona.it', port=443): Max retries exceeded with url: / (Caused by NameReso"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.quartierinuovi-ancona.it', port=443): Max retries exceeded with url: / (Caused by NameReso"
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "BRIC85000V": {
 "url": "https://www.fermimonticelli.edu.it/",
@@ -247,15 +243,15 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
+"len": 90769,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "AVIC87300X": {
 "url": "https://www.icfontanarosa.edu.it/",
@@ -264,7 +260,8 @@
 {
 "st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VAIC829001": {
 "url": "https://icmonteggialaveno.edu.it/",
@@ -476,30 +473,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1125932,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "RMIC8CM003": {
 "url": "https://www.icviagentile40.gov.it/",
@@ -729,14 +711,15 @@
 "testo": ""
 },
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 82150,
+"len": 0,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "RIIC828005": {
 "url": "https://www.icaldamerini.edu.it/",
@@ -1047,22 +1030,35 @@
 ]
 },
 "LTTF05000D": {
-"url": "https://www.giuliocesare.gov.it/",
-"ip": "",
+"url": "https://www.giuliocesare.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.giuliocesare.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.giuliocesare.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.giuliocesare.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MIIC8C6006": {
 "url": "https://www.icsaldamerini.edu.it/",
@@ -1189,7 +1185,8 @@
 "st": "ConnectionError",
 "testo": "HTTPSConnectionPool(host='www.iclipunti.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionEr"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "REIC84500G": {
 "url": "https://www.icaosta-re.edu.it/",
@@ -1352,9 +1349,31 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 98128,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MIIS038002": {
 "url": "https://www.iislagrange.edu.it/",
@@ -2397,30 +2416,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1281750,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "LTIC80100L": {
 "url": "https://www.icsonnino.gov.it/",
@@ -2810,16 +2814,39 @@
 "st": "ConnectionError",
 "testo": "HTTPSConnectionPool(host='www.istitutomontani.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolu"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "ALMM09700T": {
 "url": "https://www.cpia1alessandria.edu.it/",
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "TRIC81700X": {
 "url": "https://www.icoallerona.edu.it/",
@@ -2891,23 +2918,15 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
+"len": 94258,
 "testo": ""
 }
 ],
-"ts": "2026-11-09"
+"ts": "2026-11-14"
 },
 "PNIS00900P": {
 "url": "https://isiszanussi.edu.it/",
@@ -2998,70 +3017,60 @@
 ]
 },
 "PDIC862001": {
-"url": "https://www.scuole-statali-campodarsego.it/",
-"ip": "",
+"url": "https://www.scuolecampodarsego.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.scuole-statali-campodarsego.it', port=443): Max retries exceeded with url: / (Caused by Na"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.scuole-statali-campodarsego.it', port=443): Max retries exceeded with url: / (Caused by Na"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.scuole-statali-campodarsego.it', port=443): Max retries exceeded with url: / (Caused by Na"
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "BSIC8AC00B": {
-"url": "https://www.icsalo.gov.it/",
-"ip": "",
+"url": "https://www.icsalo.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icsalo.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionError"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icsalo.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionError"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icsalo.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionError"
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 76723,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "APIC825004": {
 "url": "https://icsfalerone.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1135106,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "PVIC83300C": {
 "url": "https://www.icviabottovigevano.edu.it/",
@@ -3125,30 +3134,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1289633,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "NAIC8E6001": {
 "url": "https://www.icgragnano3.edu.it/",
@@ -3362,30 +3356,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "LCIC81900A": {
 "url": "https://www.istitutocomprensivodiolginate.gov.it/",
@@ -3716,30 +3690,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1285212,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "GEEE02200L": {
 "url": "https://www.convittogenova.edu.it/",
@@ -3832,30 +3791,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1386941,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "PGIS00400A": {
 "url": "https://www.liceicalvino.edu.it/",
@@ -4609,14 +4553,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 92257,
-"testo": ""
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "PCPS02000T": {
 "url": "https://www.liceorespighi.edu.it/",
@@ -4661,30 +4601,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1286549,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MCIC804006": {
 "url": "http://www.icsarnano.gov.it/",
@@ -4797,7 +4722,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-09"
+"ts": "2026-11-14"
 },
 "BSIC858001": {
 "url": "https://www.icdarfo1.edu.it/",
@@ -4962,14 +4887,15 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
+"len": 87007,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MIRH010009": {
 "url": "https://www.ipsarvespucci.edu.it/",
@@ -5014,31 +4940,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
+"st": "robots vieta"
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "MIMM0CE00B": {
 "url": "https://www.cpiamanzi.edu.it/?idpag=1/",
@@ -5465,22 +5370,15 @@
 "testo": ""
 },
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
 "st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 95152,
+"len": 94508,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "UDIC855008": {
 "url": "https://istitutocomprensivopozzuolodelfriuli.edu.it/",
@@ -5638,30 +5536,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1307312,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VIIC82400G": {
 "url": "https://www.iccrosaracornedo.edu.it/",
@@ -5849,10 +5732,11 @@
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 120842,
+"len": 120649,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VEIS012006": {
 "url": "https://www.isisluzzatto.edu.it/",
@@ -6068,30 +5952,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1293413,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VRIC85500G": {
 "url": "https://www.icsommariva.edu.it/",
@@ -6549,11 +6418,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1304397,
+"len": 1304492,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "PRIS006003": {
 "url": "https://www.magnaghisolari.edu.it/",
@@ -6619,30 +6488,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1341617,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "REIC835001": {
 "url": "https://www.icmontecchio.gov.it/",
@@ -6829,30 +6683,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "BSIC8AH00E": {
 "url": "https://www.icborgosangiacomo.edu.it/",
@@ -7116,22 +6950,35 @@
 "ts": "2026-10-26"
 },
 "RMIS093003": {
-"url": "https://www.iismargheritahack.gov.it/",
-"ip": "",
+"url": "https://www.iismargheritahack.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.iismargheritahack.gov.it', port=443): Max retries exceeded with url: / (Caused by NameReso"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.iismargheritahack.gov.it', port=443): Max retries exceeded with url: / (Caused by NameReso"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.iismargheritahack.gov.it', port=443): Max retries exceeded with url: / (Caused by NameReso"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "SAIS044009": {
 "url": "https://www.iisbaronissi.gov.it/",
@@ -7233,22 +7080,35 @@
 "ts": "2026-11-11"
 },
 "RMIC8C9006": {
-"url": "https://icardea1.gov.it/",
-"ip": "",
+"url": "https://www.icardea1.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='icardea1.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\""
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='icardea1.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\""
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='icardea1.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\""
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "LCIC802001": {
 "url": "https://www.icspremana.gov.it/",
@@ -7532,11 +7392,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1310602,
+"len": 1311146,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "TVIC84400D": {
 "url": "https://www.icaltivole.edu.it/",
@@ -7847,7 +7707,8 @@
 {
 "st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VCIC81700X": {
 "url": "https://www.icvarallo.edu.it/",
@@ -7946,11 +7807,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1305439,
+"len": 1305884,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "MOIC846002": {
 "url": "https://www.ic7modena.edu.it/",
@@ -7990,7 +7851,8 @@
 {
 "st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "UDIS00900P": {
 "url": "https://www.tarvisioscuole.it/",
@@ -8017,30 +7879,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1288197,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "BRIC847003": {
 "url": "https://www.icgiovannixxiiimoro.edu.it/",
@@ -8649,9 +8496,23 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 96524,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "UDSD01000P": {
 "url": "https://www.arteudine.edu.it/",
@@ -8756,7 +8617,8 @@
 "st": "ConnectionError",
 "testo": "HTTPSConnectionPool(host='www.icgaglianico.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionErr"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MNIC81600D": {
 "url": "https://www.icsangiorgio.edu.it/",
@@ -8782,22 +8644,14 @@
 "ts": "2026-11-14"
 },
 "NUIS01600V": {
-"url": "https://www.liceolanusei.gov.it/",
-"ip": "",
+"url": "https://www.liceolanusei.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.liceolanusei.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.liceolanusei.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.liceolanusei.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "APIC839002": {
 "url": "https://www.iscsem.edu.it/",
@@ -8988,7 +8842,8 @@
 "len": 0,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "LEIS00700D": {
 "url": "https://www.avespucci.edu.it/",
@@ -8997,7 +8852,8 @@
 {
 "st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MIIC86900D": {
 "url": "https://icserasmo.edu.it/",
@@ -9126,44 +8982,41 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 80689,
-"testo": ""
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MCIS00900D": {
-"url": "https://www.bramantepannaggi.edu.it/",
-"ip": "89.46.108.54",
+"url": "https://www.garibaldibramantepannaggi.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 77822,
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "BRIC80200D": {
 "url": "https://www.icmanzonialighieri.edu.it/",
@@ -9240,30 +9093,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1292614,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "PDSL01000P": {
 "url": "https://www.liceomodigliani.edu.it/",
@@ -9408,30 +9246,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1290278,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "BSIC851006": {
 "url": "https://www.icnuvolento.edu.it/",
@@ -9482,7 +9305,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "TAIC880009": {
 "url": "https://www.manzonimottola.edu.it/",
@@ -9508,30 +9331,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1291699,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "KRIC80900B": {
 "url": "https://www.iostrongolikr.edu.it/",
@@ -9718,30 +9526,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "CSRI26000A": {
 "url": "https://www.ioslongobucco.gov.it/",
@@ -9798,40 +9586,46 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
 ],
-"ts": "2026-11-10"
+"ts": "2026-11-14"
 },
 "MCIS00700T": {
 "url": "https://omnicomprensivosanginesio.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1315369,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "RMIC86100B": {
 "url": "https://www.icmontanelli.gov.it/",
@@ -10358,30 +10152,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1107688,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "COIC85000L": {
 "url": "https://www.istitutocomprensivomenaggio.edu.it/",
@@ -10398,30 +10177,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1307465,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MBIC8F4007": {
 "url": "https://iclissoneprimo.edu.it/scuola-primaria-torquato-tasso/",
@@ -10523,30 +10287,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1293413,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "TEIC82300G": {
 "url": "https://www.iccampli.edu.it/",
@@ -10689,9 +10438,31 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "FRIC80800Q": {
 "url": "https://www.icedanti.edu.it/",
@@ -11033,22 +10804,35 @@
 ]
 },
 "RMIS10200L": {
-"url": "https://www.iispertinifalcone.it/",
-"ip": "",
+"url": "https://www.iispertinifalcone.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.iispertinifalcone.it', port=443): Max retries exceeded with url: / (Caused by NameResoluti"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.iispertinifalcone.it', port=443): Max retries exceeded with url: / (Caused by NameResoluti"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.iispertinifalcone.it', port=443): Max retries exceeded with url: / (Caused by NameResoluti"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "PCIC826007": {
 "url": "https://iobobbio.edu.it/",
@@ -11155,7 +10939,8 @@
 "len": 0,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "RAIC82100L": {
 "url": "https://www.icbattaglia.gov.it/",
@@ -11437,30 +11222,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1304815,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MNIC819001": {
 "url": "https://icpoggio.edu.it/",
@@ -11726,30 +11496,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1286469,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VEIS00200G": {
 "url": "https://www.veronese-marconi.edu.it/",
@@ -12011,30 +11766,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1101763,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "NOIC83000Q": {
 "url": "https://www.iccronildemusso.edu.it/",
@@ -12315,7 +12055,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-09"
+"ts": "2026-11-14"
 },
 "BGIS02400D": {
 "url": "https://www.liceofederici.edu.it/",
@@ -12498,7 +12238,8 @@
 "st": "ConnectionError",
 "testo": "HTTPSConnectionPool(host='www.caracciolo.edu.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionE"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "GEIC824006": {
 "url": "https://www.icstaglieno.edu.it/",
@@ -12551,22 +12292,15 @@
 "testo": ""
 },
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
 "st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 84456,
+"len": 84831,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "PCIC814001": {
 "url": "https://www.iccarpaneto.it/",
@@ -12612,30 +12346,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1281167,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "PCIC81500R": {
 "url": "https://www.iccastellarquato.edu.it/",
@@ -12781,14 +12500,23 @@
 "testo": ""
 },
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 70658,
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "KRIC81100B": {
 "url": "https://icalcmeonekr.edu.it/",
@@ -13082,22 +12810,14 @@
 ]
 },
 "APIC840006": {
-"url": "https://www.iscbettifermo.gov.it/",
-"ip": "",
+"url": "https://www.iscbettifermo.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.iscbettifermo.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResoluti"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.iscbettifermo.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResoluti"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.iscbettifermo.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResoluti"
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VIIC864002": {
 "url": "https://www.ic-camisano.vi.it/",
@@ -13156,11 +12876,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1313820,
+"len": 1313299,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "AVIS002002": {
 "url": "https://www.superioredesanctis.it/",
@@ -13450,30 +13170,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1290139,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MIIC8CA003": {
 "url": "https://www.icinzago.edu.it/",
@@ -14203,30 +13908,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1330385,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "BGIC86900V": {
 "url": "https://www.icsangiovannibianco.edu.it/",
@@ -14391,30 +14081,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1291423,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "FGIC83100Q": {
 "url": "https://www.istitutogiovanni23.edu.it/",
@@ -14527,22 +14202,35 @@
 ]
 },
 "FRIC82900R": {
-"url": "https://www.icciceronearpino.it/",
-"ip": "",
+"url": "https://www.icciceronearpino.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icciceronearpino.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icciceronearpino.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icciceronearpino.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "FRIC848006": {
 "url": "https://www.icveroli2.edu.it/",
@@ -14573,22 +14261,35 @@
 ]
 },
 "VRIS003003": {
-"url": "https://www.minghettilegnago.it/",
-"ip": "",
+"url": "https://www.minghetti.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.minghettilegnago.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.minghettilegnago.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.minghettilegnago.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "UDIC84500N": {
 "url": "https://www.ictrasaghis.edu.it/",
@@ -14635,30 +14336,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1293745,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "ARIS021006": {
 "url": "https://www.galileipoppi.edu.it/",
@@ -14770,22 +14456,19 @@
 "ts": "2026-11-14"
 },
 "PRIC821001": {
-"url": "http://icferrari-parma.scuolaer.it/",
-"ip": "",
+"url": "https://www.icferrariparma.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPConnectionPool(host='icferrari-parma.scuolaer.it', port=80): Max retries exceeded with url: / (Caused by NameResolut"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPConnectionPool(host='icferrari-parma.scuolaer.it', port=80): Max retries exceeded with url: / (Caused by NameResolut"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPConnectionPool(host='icferrari-parma.scuolaer.it', port=80): Max retries exceeded with url: / (Caused by NameResolut"
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 91390,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "SOIS002006": {
 "url": "https://www.iisalbertibormio.gov.it/",
@@ -14963,22 +14646,14 @@
 ]
 },
 "FEIS01300Q": {
-"url": "https://www.einaudiferrara.gov.it/",
-"ip": "",
+"url": "https://www.einaudiferrara.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.einaudiferrara.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolut"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.einaudiferrara.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolut"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.einaudiferrara.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolut"
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "RMTD48000N": {
 "url": "https://www.itcloi.edu.it/",
@@ -15218,30 +14893,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1150682,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VRIC84000T": {
 "url": "https://www.icsanmartinoscuole.edu.it/",
@@ -15257,31 +14917,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 91726,
-"testo": ""
+"st": "robots vieta"
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "BOIC88100B": {
 "url": "https://www.ic1sanlazzarodisavena.gov.it/",
@@ -15719,22 +15358,14 @@
 ]
 },
 "FEIC801009": {
-"url": "https://www.icmesola.gov.it/",
-"ip": "",
+"url": "https://www.icmesola.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icmesola.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionErr"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icmesola.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionErr"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icmesola.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionErr"
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "FIIC85700L": {
 "url": "https://www.icpoliziano.edu.it/",
@@ -15786,22 +15417,27 @@
 ]
 },
 "MOIC824005": {
-"url": "https://www.icsergioneri.it/",
-"ip": "",
+"url": "https://www.icsergioneri.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icsergioneri.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionErr"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icsergioneri.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionErr"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icsergioneri.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionErr"
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 83262,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "PRIC820005": {
 "url": "https://www.icsalsomaggiore.edu.it/",
@@ -15923,9 +15559,31 @@
 "ip": "217.27.72.236",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VAPS020004": {
 "url": "https://www.gbgrassi.edu.it/",
@@ -16241,9 +15899,23 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 97609,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MOIC823009": {
 "url": "https://www.comprensivocarpicentro.it/",
@@ -16381,14 +16053,15 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
+"len": 94484,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "CZIC856002": {
 "url": "https://www.icdonmilanicz.edu.it/",
@@ -16553,22 +16226,14 @@
 ]
 },
 "TVIC85200C": {
-"url": "https://www.icsusegana.gov.it/",
-"ip": "",
+"url": "https://www.icsusegana.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icsusegana.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionE"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icsusegana.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionE"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icsusegana.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionE"
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "SAEE18200V": {
 "url": "https://www.convittonazionalesalerno.edu.it/",
@@ -16723,30 +16388,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "PGTA020003": {
 "url": "https://omnicomprensivocerretodispoleto.edu.it/",
@@ -17737,30 +17382,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1119472,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "SOIC815004": {
 "url": "https://icardenno.edu.it/",
@@ -17927,22 +17557,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 78009,
-"testo": ""
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "TEPC030005": {
 "url": "https://www.liceosaffo.edu.it/",
@@ -18258,7 +17876,7 @@
 "st": "robots vieta"
 }
 ],
-"ts": "2026-11-09"
+"ts": "2026-11-14"
 },
 "MCIC809009": {
 "url": "http://www.comprensivobetti.edu.it/",
@@ -18622,14 +18240,15 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
+"len": 113844,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "COIC837006": {
 "url": "https://www.icvertemate.edu.it/",
@@ -19150,7 +18769,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "ALIC809001": {
 "url": "https://www.icbobbiorivaltab.edu.it/",
@@ -19721,30 +19340,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1129917,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "AOIP018000": {
 "url": "https://www.ereinotti.edu.it/",
@@ -19818,22 +19422,35 @@
 "ts": "2026-11-10"
 },
 "PEIC83300G": {
-"url": "https://www.istitutocomprensivope3.gov.it/",
-"ip": "",
+"url": "https://www.icpescara3.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.istitutocomprensivope3.gov.it', port=443): Max retries exceeded with url: / (Caused by Nam"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.istitutocomprensivope3.gov.it', port=443): Max retries exceeded with url: / (Caused by Nam"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.istitutocomprensivope3.gov.it', port=443): Max retries exceeded with url: / (Caused by Nam"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "CZMM00300E": {
 "url": "https://www.convittonazionalepasqualegalluppi.gov.it/",
@@ -20108,14 +19725,15 @@
 "testo": ""
 },
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 104126,
+"len": 0,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MCIC81000D": {
 "url": "https://www.ictacchiventuri.edu.it/",
@@ -20912,7 +20530,8 @@
 "len": 0,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "SIIS00400L": {
 "url": "https://istitutoistruzionesuperiorecaselli.edu.it/",
@@ -21029,22 +20648,14 @@
 "ts": "2026-11-12"
 },
 "TVRH01000N": {
-"url": "https://www.ipssarmaffioli.it/",
-"ip": "104.247.81.99",
+"url": "https://www.ipsseoamaffioli.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectTimeout",
-"testo": "HTTPSConnectionPool(host='www.ipssarmaffioli.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
-},
-{
-"st": "ConnectTimeout",
-"testo": "HTTPSConnectionPool(host='www.ipssarmaffioli.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
-},
-{
-"st": "ConnectTimeout",
-"testo": "HTTPSConnectionPool(host='www.ipssarmaffioli.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "POPC02000C": {
 "url": "https://www.convittocicogniniprato.edu.it/",
@@ -21563,11 +21174,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1293381,
+"len": 1294247,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "UDEE01700G": {
 "url": "https://www.cnpd.it/",
@@ -21627,20 +21238,34 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1313697,
+"len": 1313741,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "SSIS01100G": {
 "url": "https://www.istitutoamsicora.edu.it/",
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 81146,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "NAIC8GQ00T": {
 "url": "https://www.donmilanicapasso.edu.it/",
@@ -21718,30 +21343,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1312034,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VAIC84100G": {
 "url": "https://www.istitutocomprensivocavaria.edu.it/",
@@ -22146,11 +21756,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1289426,
+"len": 1291415,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "NAIC8JC003": {
 "url": "https://www.iscuolapoerioriviera.edu.it/",
@@ -23038,30 +22648,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "CNIC813001": {
 "url": "https://www.icmomigliano.edu.it/",
@@ -23116,30 +22706,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1294688,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "RMRH04000N": {
 "url": "https://www.amerigovespucci.edu.it/",
@@ -23380,22 +22955,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 86514,
-"testo": ""
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "UDIC80900E": {
 "url": "https://iccomeglians.edu.it/",
@@ -23434,7 +22997,8 @@
 {
 "st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "FIPS04000R": {
 "url": "https://www.liceocastelnuovo.edu.it/",
@@ -23541,30 +23105,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1302791,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "LEPS03000X": {
 "url": "https://www.liceovanini.edu.it/",
@@ -23598,30 +23147,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1314989,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "TOVC01000Q": {
 "url": "https://www.cnuto.edu.it/",
@@ -23660,10 +23194,23 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 100474,
+"testo": ""
 }
 ],
-"ts": "2026-11-11"
+"ts": "2026-11-14"
 },
 "ROIC80000E": {
 "url": "https://comprensivocastelmassa.edu.it/",
@@ -23719,30 +23266,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1283565,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VRIC89600T": {
 "url": "https://www.icvigasio.edu.it/",
@@ -23961,30 +23493,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "BOIC874008": {
 "url": "https://www.iccroce.edu.it/",
@@ -24039,9 +23551,31 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 116606,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "GRIC81900A": {
 "url": "https://www.istitutocomprensivoroccastrada.edu.it/",
@@ -24260,22 +23794,35 @@
 ]
 },
 "VRIC872009": {
-"url": "https://www.icbovolone.gov.it/",
-"ip": "",
+"url": "https://icbovolone.edu.it/",
+"ip": "217.27.72.236",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icbovolone.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionE"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icbovolone.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionE"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.icbovolone.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionE"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "AOIP002000": {
 "url": "https://www.sroch.edu.it/",
@@ -24565,22 +24112,35 @@
 "ts": "2026-10-26"
 },
 "VRIC8AB00N": {
-"url": "https://www.ic1sanbonifacio.gov.it/",
-"ip": "",
+"url": "https://www.ic1sanbonifacio.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.ic1sanbonifacio.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolu"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.ic1sanbonifacio.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolu"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.ic1sanbonifacio.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolu"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "CHIS013002": {
 "url": "https://www.iismatteivasto.gov.ithttps//www.matteivasto.info/",
@@ -24980,7 +24540,8 @@
 "st": "ConnectionError",
 "testo": "HTTPSConnectionPool(host='www.bielladue.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionEr"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "TOPS10000T": {
 "url": "https://www.liceodarwin.net/",
@@ -25308,30 +24869,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1286151,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "UDIC86100G": {
 "url": "https://iclestizza-talmassons-mortegliano-castions.edu.it/",
@@ -25593,7 +25139,8 @@
 "len": 0,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "BSIC893008": {
 "url": "https://www.icorzinuovi.edu.it/",
@@ -25997,7 +25544,8 @@
 "len": 0,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MNIS00800P": {
 "url": "https://www.iisgiovannifalcone.edu.it/",
@@ -26135,9 +25683,31 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VAIC84700E": {
 "url": "https://www.icsmiliti.edu.it/",
@@ -26181,22 +25751,35 @@
 ]
 },
 "TSTE03000P": {
-"url": "https://www.davincits.it/",
-"ip": "",
+"url": "https://www.deleddafabiani.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.davincits.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.davincits.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 },
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.davincits.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 84902,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VRIC81300D": {
 "url": "https://www.icbussolengo.it/",
@@ -26341,30 +25924,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1355677,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "MITD400008": {
 "url": "https://www.itsos-mariecurie.edu.it/",
@@ -27109,7 +26677,8 @@
 "len": 0,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "GOIC80400D": {
 "url": "https://www.icrandaccio.edu.it/",
@@ -27899,14 +27468,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 85470,
-"testo": ""
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VRIC887003": {
 "url": "https://www.ic16verona.edu.it/",
@@ -27995,33 +27560,26 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
+"len": 97130,
 "testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "BGIC891004": {
 "url": "https://www.icvillongo.it/",
-"ip": "172.67.173.200",
+"ip": "104.21.55.224",
 "t": [
 {
 "st": 526,
 "server": "cloudflare",
 "ra": "",
 "via": "",
-"len": 7724,
+"len": 7723,
 "testo": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
 },
 {
@@ -28029,7 +27587,7 @@
 "server": "cloudflare",
 "ra": "",
 "via": "",
-"len": 7724,
+"len": 7723,
 "testo": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
 },
 {
@@ -28037,7 +27595,7 @@
 "server": "cloudflare",
 "ra": "",
 "via": "",
-"len": 7724,
+"len": 7723,
 "testo": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
 }
 ],
@@ -28206,9 +27764,23 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 96522,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "ROIC816004": {
 "url": "https://www.icbadiatrecenta.edu.it/",
@@ -28308,7 +27880,7 @@
 "ra": "",
 "via": "",
 "len": 169,
-"testo": "<html><head><link rel=\"icon\" href=\"data:;\"><meta http-equiv=\"refresh\" content=\"0;/.well-known/sgcaptcha/?r=%2F&y=ipc:74.235.134.164:1792652423.958\"></meta></hea"
+"testo": "<html><head><link rel=\"icon\" href=\"data:;\"><meta http-equiv=\"refresh\" content=\"0;/.well-known/sgcaptcha/?r=%2F&y=ipc:172.190.119.35:1794682394.221\"></meta></hea"
 },
 {
 "st": 202,
@@ -28316,7 +27888,7 @@
 "ra": "",
 "via": "",
 "len": 169,
-"testo": "<html><head><link rel=\"icon\" href=\"data:;\"><meta http-equiv=\"refresh\" content=\"0;/.well-known/sgcaptcha/?r=%2F&y=ipc:74.235.134.164:1792652458.326\"></meta></hea"
+"testo": "<html><head><link rel=\"icon\" href=\"data:;\"><meta http-equiv=\"refresh\" content=\"0;/.well-known/sgcaptcha/?r=%2F&y=ipc:172.190.119.35:1794682419.316\"></meta></hea"
 },
 {
 "st": 202,
@@ -28324,39 +27896,25 @@
 "ra": "",
 "via": "",
 "len": 169,
-"testo": "<html><head><link rel=\"icon\" href=\"data:;\"><meta http-equiv=\"refresh\" content=\"0;/.well-known/sgcaptcha/?r=%2F&y=ipc:74.235.134.164:1792652488.414\"></meta></hea"
+"testo": "<html><head><link rel=\"icon\" href=\"data:;\"><meta http-equiv=\"refresh\" content=\"0;/.well-known/sgcaptcha/?r=%2F&y=ipc:172.190.119.35:1794682446.410\"></meta></hea"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "BSIS02200A": {
 "url": "https://www.iisdandolo.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1291642,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "ARIC84000B": {
 "url": "https://www.icsansepolcro.edu.it/",
@@ -28379,22 +27937,14 @@
 "ts": "2026-11-13"
 },
 "BOIC81400L": {
-"url": "https://www.istitutocomprensivoanzola.it/",
-"ip": "",
+"url": "https://www.istitutocomprensivoanzola.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.istitutocomprensivoanzola.it', port=443): Max retries exceeded with url: / (Caused by Name"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.istitutocomprensivoanzola.it', port=443): Max retries exceeded with url: / (Caused by Name"
-},
-{
-"st": "ConnectionError",
-"testo": "HTTPSConnectionPool(host='www.istitutocomprensivoanzola.it', port=443): Max retries exceeded with url: / (Caused by Name"
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "RCIC83400X": {
 "url": "https://www.icscampocalabro.edu.it/",
@@ -28782,30 +28332,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1302811,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "ROIC808005": {
 "url": "https://www.icpolesella.edu.it/",
@@ -28981,7 +28516,8 @@
 {
 "st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "RCIS042003": {
 "url": "https://www.polotplocri.edu.it/",
@@ -29389,22 +28925,14 @@
 ]
 },
 "RNRI010007": {
-"url": "https://www.albertirimini.it/",
-"ip": "46.252.152.37",
+"url": "https://www.albertirimini.edu.it/",
+"ip": "217.27.72.228",
 "t": [
 {
-"st": "ConnectTimeout",
-"testo": "HTTPSConnectionPool(host='www.albertirimini.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
-},
-{
-"st": "ConnectTimeout",
-"testo": "HTTPSConnectionPool(host='www.albertirimini.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
-},
-{
-"st": "ConnectTimeout",
-"testo": "HTTPSConnectionPool(host='www.albertirimini.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+"st": "robots vieta"
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VVPM01000T": {
 "url": "https://www.istitutocapialbi.edu.it/",
@@ -29620,30 +29148,15 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 503,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1270648,
+"testo": ""
 }
-]
+],
+"ts": "2026-11-14"
 },
 "VIIS00400E": {
 "url": "https://www.istitutomasotto.edu.it/",
@@ -29779,23 +29292,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 86451,
-"testo": ""
+"st": "robots vieta"
 }
 ],
-"ts": "2026-11-09"
+"ts": "2026-11-14"
 },
 "BOPS02000D": {
 "url": "https://www.liceofermibo.edu.it/",
@@ -29935,11 +29435,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1309290,
+"len": 1310734,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "ALIS00700D": {
 "url": "https://www.barlettiovada.edu.it/",
@@ -29990,11 +29490,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1295447,
+"len": 1295193,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "LEIS02100Q": {
 "url": "https://www.iisslanocemaglie.edu.it/",
@@ -30028,11 +29528,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1315606,
+"len": 1318308,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "PDIS02400A": {
 "url": "https://www.atestino.edu.it/",
@@ -30092,31 +29592,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
+"st": "robots vieta"
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "SOVC01000P": {
 "url": "https://www.cnpiazzisondrio.edu.it/",
@@ -30248,7 +29727,7 @@
 "testo": "Invalid URL 'https//www.iccampanellasturzo.edu.it/': No scheme supplied. Perhaps you meant https://https//www.iccampanel"
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "TRPM01000Q": {
 "url": "https://www.liceiangeloniterni.edu.it/",
@@ -30289,11 +29768,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1282387,
+"len": 1282534,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "VIPS02000T": {
 "url": "https://www.liceolioy.edu.it/",
@@ -30475,7 +29954,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "RCIC87100V": {
 "url": "https://www.iccassiodorodonbosco.gov.it/",
@@ -30501,23 +29980,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 87483,
-"testo": ""
+"st": "robots vieta"
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "PNIS006007": {
 "url": "https://www.isissacilebrugnera.edu.it/",
@@ -30534,20 +30000,7 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 95143,
-"testo": ""
+"st": "robots vieta"
 }
 ],
 "ts": "2026-11-14"
@@ -30754,11 +30207,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1307760,
+"len": 1307781,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "TNIC83400T": {
 "url": "https://icvalrendena.it/",
@@ -30854,7 +30307,7 @@
 "ts": "2026-10-26"
 },
 "SAIC8AG00R": {
-"url": "https://icsicignano.edu.it/",
+"url": "https://www.icsicignano.edu.it/",
 "ip": "217.27.72.236",
 "t": [
 {
@@ -30870,11 +30323,11 @@
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 114263,
+"len": 115605,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "ANIC80300L": {
 "url": "https://icpolverigi.edu.it/",
@@ -30885,11 +30338,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1317484,
+"len": 1316977,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "BRIS00800L": {
 "url": "https://www.liceolilla.it/",
@@ -30949,7 +30402,7 @@
 "testo": "Invalid URL 'https//sites.google.com/site/direzionedidatticaaragona/': No scheme supplied. Perhaps you meant https://htt"
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "CHMM00800B": {
 "url": "https://www.convittogbvico.edu.it/",
@@ -30978,7 +30431,7 @@
 "testo": "Invalid URL 'https//www.istitutocomprensivomarconilicata.edu.it/': No scheme supplied. Perhaps you meant https://https//"
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "APIS012006": {
 "url": "https://www.iisorsiniliciniap.edu.it/",
@@ -31115,11 +30568,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1283399,
+"len": 1283902,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "REIC82400E": {
 "url": "https://www.icgalilei-re.gov.it/",
@@ -31169,7 +30622,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "VBIS00200Q": {
 "url": "https://www.ferrinifranzosini.edu.it/",
@@ -31239,11 +30692,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1297768,
+"len": 1297903,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "CTIC81900A": {
 "url": "https://www.icgiovanni23acireale.edu.it/",
@@ -31254,11 +30707,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1273246,
+"len": 1274110,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "GOIC814004": {
 "url": "https://www.iclocchiperco.edu.it/",
@@ -31317,7 +30770,7 @@
 "st": "robots vieta"
 }
 ],
-"ts": "2026-11-12"
+"ts": "2026-11-14"
 },
 "ROPS01000P": {
 "url": "https://www.liceopaleocapa.edu.it/",
@@ -31362,23 +30815,15 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
+"len": 95747,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "CHIC82600X": {
 "url": "https://www.icquadri.it/",
@@ -31503,11 +30948,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1313597,
+"len": 1316373,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "PGIS034006": {
 "url": "https://www.iisgubbio.edu.it/",
@@ -31536,7 +30981,7 @@
 "testo": "Invalid URL 'https//www.itisgferraris.edu.it/': No scheme supplied. Perhaps you meant https://https//www.itisgferraris.e"
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "BOIS00100P": {
 "url": "https://www.scuolamontessoridavinci.edu.it/",
@@ -31567,7 +31012,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-09"
+"ts": "2026-11-14"
 },
 "BGIC824009": {
 "url": "https://www.icbagnatica.edu.it/",
@@ -31718,31 +31163,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 314203,
-"testo": ""
+"st": "robots vieta"
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "PDIC825002": {
 "url": "https://www,iclegnaro.edu.it/",
@@ -31856,7 +31280,7 @@
 "testo": "Invalid URL 'https//www.iissarena.edu.it/': No scheme supplied. Perhaps you meant https://https//www.iissarena.edu.it/?"
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "BAIC87700R": {
 "url": "https://www.comprensivotoritto.edu.it/",
@@ -31908,11 +31332,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1289691,
+"len": 1289119,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "COIC81900L": {
 "url": "https://www.icmalgesini.edu.it/",
@@ -32107,7 +31531,7 @@
 "testo": "Invalid URL 'https//www.icscasteldiiudica.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icscasteldi"
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "CRIS00100P": {
 "url": "https://www.poloromani.edu.it/",
@@ -32276,11 +31700,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1296458,
+"len": 1297056,
 "testo": ""
 }
 ],
-"ts": "2026-10-26"
+"ts": "2026-11-14"
 },
 "ANIC84600E": {
 "url": "https://www.icmpolo.gov.it/",
@@ -32701,10 +32125,31 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 106185,
+"testo": ""
 }
 ],
-"ts": "2026-11-09"
+"ts": "2026-11-14"
 },
 "RMTF19000X": {
 "url": "https://www.itistrafelli.edu.it/",
@@ -32731,23 +32176,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 76478,
-"testo": ""
+"st": "robots vieta"
 }
 ],
-"ts": "2026-11-10"
+"ts": "2026-11-14"
 },
 "SIIS00800X": {
 "url": "https://www.iisroncalli.edu.it/",
@@ -33072,7 +32504,7 @@
 "st": "robots vieta"
 }
 ],
-"ts": "2026-11-09"
+"ts": "2026-11-14"
 },
 "ANIC84100B": {
 "url": "https://www.icmazzinicastelfidardo.it/",
@@ -33730,31 +33162,10 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 88923,
-"testo": ""
+"st": "robots vieta"
 }
 ],
-"ts": "2026-11-09"
+"ts": "2026-11-14"
 },
 "MITF070009": {
 "url": "https://www.itisfeltrinelli.edu.it/",
@@ -34305,7 +33716,7 @@
 "st": "robots vieta"
 }
 ],
-"ts": "2026-11-12"
+"ts": "2026-11-14"
 },
 "ANIC83900B": {
 "url": "https://www.iclottojesi.edu.it/",
@@ -34425,7 +33836,7 @@
 "st": "robots vieta"
 }
 ],
-"ts": "2026-11-13"
+"ts": "2026-11-14"
 },
 "RMPS450002": {
 "url": "https://www.levicivita.edu.it/",
@@ -35093,20 +34504,7 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 93813,
-"testo": ""
+"st": "robots vieta"
 }
 ],
 "ts": "2026-11-14"
@@ -36788,7 +36186,7 @@
 },
 "RMIC8AW00A": {
 "url": "https://www.icmontelibretti.edu.it/",
-"ip": "104.21.61.141",
+"ip": "172.67.210.250",
 "t": [
 {
 "st": 403,
@@ -36881,7 +36279,7 @@
 },
 "RMIC8FB007": {
 "url": "https://www.hypatia.edu.it/",
-"ip": "104.21.60.163",
+"ip": "172.67.198.35",
 "t": [
 {
 "st": 403,
@@ -37036,7 +36434,7 @@
 },
 "RMPS12000G": {
 "url": "https://www.liceopeanoroma.edu.it/",
-"ip": "104.21.12.81",
+"ip": "172.67.151.235",
 "t": [
 {
 "st": 403,
@@ -37129,7 +36527,7 @@
 },
 "RMIC8G6005": {
 "url": "https://www.icgigiproietti.edu.it/",
-"ip": "172.67.179.31",
+"ip": "104.21.18.7",
 "t": [
 {
 "st": 403,
@@ -37198,7 +36596,7 @@
 "server": "cloudflare",
 "ra": "",
 "via": "",
-"len": 7694,
+"len": 7693,
 "testo": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
 },
 {
@@ -37206,7 +36604,7 @@
 "server": "cloudflare",
 "ra": "",
 "via": "",
-"len": 7694,
+"len": 7693,
 "testo": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
 },
 {
@@ -37214,7 +36612,7 @@
 "server": "cloudflare",
 "ra": "",
 "via": "",
-"len": 7694,
+"len": 7693,
 "testo": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
 }
 ],
@@ -37253,7 +36651,7 @@
 },
 "BSIC89500X": {
 "url": "https://www.icpontevico.scuoletest.madisoft.it/",
-"ip": "13.226.53.92",
+"ip": "3.167.99.48",
 "t": [
 {
 "st": "SSLError",
@@ -38614,7 +38012,2755 @@
 "testo": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA"
 }
 ],
-"ts": "2026-11-13"
+"ts": "2026-11-14"
+},
+"APIC804003": {
+"url": "https://iccupra-ripatransone.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1381819,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"PGIC83700D": {
+"url": "https://gentilefoligno.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1345212,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"PGEE00200L": {
+"url": "https://secondocircolopg.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1375943,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"PGIC80600T": {
+"url": "https://scuolacascia.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1295476,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"ANIC83800G": {
+"url": "https://www.iccupraserra.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1296644,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"PGIC813001": {
+"url": "https://omnicomprensivocerretodispoleto.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1305024,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"ATIS00800A": {
+"url": "https://www.istitutovalfieri.edu.it/",
+"ip": "52.18.59.124",
+"t": [
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.istitutovalfieri.edu.it', port=443): Max retries exceeded with url: / (Caused by SSLError("
+},
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.istitutovalfieri.edu.it', port=443): Max retries exceeded with url: / (Caused by SSLError("
+},
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.istitutovalfieri.edu.it', port=443): Max retries exceeded with url: / (Caused by SSLError("
+}
+],
+"ts": "2026-11-14"
+},
+"BARH120005": {
+"url": "https://www.modugno.edu.it/",
+"ip": "89.46.106.32",
+"t": [
+{
+"st": 200,
+"server": "aruba-proxy",
+"ra": "",
+"via": "",
+"len": 291343,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"RMPS37000A": {
+"url": "https://www.liceomajorana.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"SVIC80100E": {
+"url": "https://www.icsassello.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"BRIC83100D": {
+"url": "https://www.primocomprensivofrancavilla.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"NAIC80700Q": {
+"url": "https://www.icsangaetano.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"PESL03000E": {
+"url": "https://www.liceomibe.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"MBIS09800E": {
+"url": "https://www.davincicarate.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"FEIS01400G": {
+"url": "https://www.ipsia100.it/",
+"ip": "104.21.22.207",
+"t": [
+{
+"st": 403,
+"server": "cloudflare",
+"ra": "",
+"via": "",
+"len": 4547,
+"testo": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+},
+{
+"st": 403,
+"server": "cloudflare",
+"ra": "",
+"via": "",
+"len": 4547,
+"testo": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+},
+{
+"st": 403,
+"server": "cloudflare",
+"ra": "",
+"via": "",
+"len": 4547,
+"testo": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+}
+],
+"ts": "2026-11-14"
+},
+"TOIC865006": {
+"url": "https://www.icfavria.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1352213,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"ATIS003007": {
+"url": "https://www.istitutovalfieri.edu.it/",
+"ip": "52.18.59.124",
+"t": [
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.istitutovalfieri.edu.it', port=443): Max retries exceeded with url: / (Caused by SSLError("
+},
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.istitutovalfieri.edu.it', port=443): Max retries exceeded with url: / (Caused by SSLError("
+},
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.istitutovalfieri.edu.it', port=443): Max retries exceeded with url: / (Caused by SSLError("
+}
+],
+"ts": "2026-11-14"
+},
+"PIIC832003": {
+"url": "https://www.icvgalilei.edu.it/gov/",
+"ip": "",
+"t": [
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='www.icvgalilei.edu.it', port=443): Max retries exceeded with url: /gov/ (Caused by NameResolut"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='www.icvgalilei.edu.it', port=443): Max retries exceeded with url: /gov/ (Caused by NameResolut"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='www.icvgalilei.edu.it', port=443): Max retries exceeded with url: /gov/ (Caused by NameResolut"
+}
+],
+"ts": "2026-11-14"
+},
+"ARIC833008": {
+"url": "https://www.iclucignano.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1271869,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BOIC81300R": {
+"url": "https://ic3lamebologna.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1300654,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"LEIS00600N": {
+"url": "https://www.iisameucci.edu.it/",
+"ip": "195.231.38.17",
+"t": [
+{
+"st": 403,
+"server": "Apache",
+"ra": "",
+"via": "",
+"len": 24,
+"testo": "Manutenzione in corso..."
+},
+{
+"st": 403,
+"server": "Apache",
+"ra": "",
+"via": "",
+"len": 24,
+"testo": "Manutenzione in corso..."
+},
+{
+"st": 403,
+"server": "Apache",
+"ra": "",
+"via": "",
+"len": 24,
+"testo": "Manutenzione in corso..."
+}
+],
+"ts": "2026-11-14"
+},
+"SRIS02200E": {
+"url": "https://www.iissgagini.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 90207,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"TEIC83600N": {
+"url": "https://www.icpineto.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"GEIS02400A": {
+"url": "https://www.itpchiavari.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"VAIS01200Q": {
+"url": "https://www.steingavirate.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BOIC809005": {
+"url": "https://borgotossignanoic.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1283482,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BOIC85500V": {
+"url": "https://www.ic12bo.it/",
+"ip": "5.144.191.149",
+"t": [
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.ic12bo.it', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerific"
+},
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.ic12bo.it', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerific"
+},
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.ic12bo.it', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerific"
+}
+],
+"ts": "2026-11-14"
+},
+"BOIC870001": {
+"url": "https://ic1decimapersiceto.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1278040,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BOIC86400N": {
+"url": "https://www.iczolabo.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1328059,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"MOIC84100V": {
+"url": "https://www.ic1modena.edu.it/",
+"ip": "172.67.199.19",
+"t": [
+{
+"st": 403,
+"server": "cloudflare",
+"ra": "",
+"via": "",
+"len": 5570,
+"testo": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA"
+},
+{
+"st": 403,
+"server": "cloudflare",
+"ra": "",
+"via": "",
+"len": 5570,
+"testo": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA"
+},
+{
+"st": 403,
+"server": "cloudflare",
+"ra": "",
+"via": "",
+"len": 5570,
+"testo": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA"
+}
+],
+"ts": "2026-11-14"
+},
+"PGIC84400L": {
+"url": "https://www.icspoleto2.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1296447,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"PGIC82300G": {
+"url": "https://www.icspello.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1290143,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BLIS01300N": {
+"url": "https://www.istitutosuperiorefeltre.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1107688,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BOMM365005": {
+"url": "https://cpiamontagna.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1290630,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"ATMM11300G": {
+"url": "https://cpia1asti.edu.it/",
+"ip": "35.214.248.236",
+"t": [
+{
+"st": 202,
+"server": "nginx",
+"ra": "",
+"via": "",
+"len": 169,
+"testo": "<html><head><link rel=\"icon\" href=\"data:;\"><meta http-equiv=\"refresh\" content=\"0;/.well-known/sgcaptcha/?r=%2F&y=ipc:172.190.119.35:1794682380.976\"></meta></hea"
+},
+{
+"st": 202,
+"server": "nginx",
+"ra": "",
+"via": "",
+"len": 169,
+"testo": "<html><head><link rel=\"icon\" href=\"data:;\"><meta http-equiv=\"refresh\" content=\"0;/.well-known/sgcaptcha/?r=%2F&y=ipc:172.190.119.35:1794682416.076\"></meta></hea"
+},
+{
+"st": 202,
+"server": "nginx",
+"ra": "",
+"via": "",
+"len": 169,
+"testo": "<html><head><link rel=\"icon\" href=\"data:;\"><meta http-equiv=\"refresh\" content=\"0;/.well-known/sgcaptcha/?r=%2F&y=ipc:172.190.119.35:1794682448.174\"></meta></hea"
+}
+],
+"ts": "2026-11-14"
+},
+"BGIC80500X": {
+"url": "https://www.ictavernolabergamasca.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1292452,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BGIC855001": {
+"url": "https://www.iclovere.edu.it/",
+"ip": "18.160.10.80",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1306144,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BGIC83500Q": {
+"url": "https://icmastricaravaggini.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1286298,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BAIC87300D": {
+"url": "https://www.icmodugnogalilei.edu.it/",
+"ip": "89.46.108.76",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmodugnogalilei.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmodugnogalilei.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmodugnogalilei.edu.it', port=443): Read timed out. (read timeout=25)"
+}
+],
+"ts": "2026-11-14"
+},
+"CLMM04200B": {
+"url": "https://WWW.CPIA-CL-EN.EDU.IT/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1298761,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"CLIC822005": {
+"url": "https//www.istitutocomprensivovittorioveneto.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutocomprensivovittorioveneto.edu.it/': No scheme supplied. Perhaps you meant https://https/"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutocomprensivovittorioveneto.edu.it/': No scheme supplied. Perhaps you meant https://https/"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutocomprensivovittorioveneto.edu.it/': No scheme supplied. Perhaps you meant https://https/"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC815003": {
+"url": "http//www.fguglielmino.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'http//www.fguglielmino.it/': No scheme supplied. Perhaps you meant https://http//www.fguglielmino.it/?"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'http//www.fguglielmino.it/': No scheme supplied. Perhaps you meant https://http//www.fguglielmino.it/?"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'http//www.fguglielmino.it/': No scheme supplied. Perhaps you meant https://http//www.fguglielmino.it/?"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC8AC00B": {
+"url": "https//www.scuoladeledda.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.scuoladeledda.edu.it/': No scheme supplied. Perhaps you meant https://https//www.scuoladeledda.e"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.scuoladeledda.edu.it/': No scheme supplied. Perhaps you meant https://https//www.scuoladeledda.e"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.scuoladeledda.edu.it/': No scheme supplied. Perhaps you meant https://https//www.scuoladeledda.e"
+}
+],
+"ts": "2026-11-14"
+},
+"ENIC810007": {
+"url": "https://www.icguarnaccia.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1282601,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC89000R": {
+"url": "https://www.aristidegabelli.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1293906,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"ENIC82800C": {
+"url": "https//www.fermileopardicenturipe.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.fermileopardicenturipe.edu.it/': No scheme supplied. Perhaps you meant https://https//www.fermil"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.fermileopardicenturipe.edu.it/': No scheme supplied. Perhaps you meant https://https//www.fermil"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.fermileopardicenturipe.edu.it/': No scheme supplied. Perhaps you meant https://https//www.fermil"
+}
+],
+"ts": "2026-11-14"
+},
+"AGIC84500D": {
+"url": "https://www.icmarianorossi.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1316470,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"ENIC816006": {
+"url": "https//icregalbuto.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//icregalbuto.edu.it/': No scheme supplied. Perhaps you meant https://https//icregalbuto.edu.it/?"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//icregalbuto.edu.it/': No scheme supplied. Perhaps you meant https://https//icregalbuto.edu.it/?"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//icregalbuto.edu.it/': No scheme supplied. Perhaps you meant https://https//icregalbuto.edu.it/?"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC887001": {
+"url": "https://www.derobertoct.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1323125,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC899007": {
+"url": "https//www.icsangiorgioct.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icsangiorgioct.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icsangiorgioct"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icsangiorgioct.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icsangiorgioct"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icsangiorgioct.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icsangiorgioct"
+}
+],
+"ts": "2026-11-14"
+},
+"SRIS011004": {
+"url": "https//www.istitutonervialaimo.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutonervialaimo.edu.it/': No scheme supplied. Perhaps you meant https://https//www.istituton"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutonervialaimo.edu.it/': No scheme supplied. Perhaps you meant https://https//www.istituton"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutonervialaimo.edu.it/': No scheme supplied. Perhaps you meant https://https//www.istituton"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC822006": {
+"url": "https//www.icarcoleo.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icarcoleo.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icarcoleo.edu.it/?"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icarcoleo.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icarcoleo.edu.it/?"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icarcoleo.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icarcoleo.edu.it/?"
+}
+],
+"ts": "2026-11-14"
+},
+"CLIC81100P": {
+"url": "https//www.vergagela.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.vergagela.edu.it/': No scheme supplied. Perhaps you meant https://https//www.vergagela.edu.it/?"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.vergagela.edu.it/': No scheme supplied. Perhaps you meant https://https//www.vergagela.edu.it/?"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.vergagela.edu.it/': No scheme supplied. Perhaps you meant https://https//www.vergagela.edu.it/?"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC8BJ00A": {
+"url": "https//www.dantect.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.dantect.edu.it/': No scheme supplied. Perhaps you meant https://https//www.dantect.edu.it/?"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.dantect.edu.it/': No scheme supplied. Perhaps you meant https://https//www.dantect.edu.it/?"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.dantect.edu.it/': No scheme supplied. Perhaps you meant https://https//www.dantect.edu.it/?"
+}
+],
+"ts": "2026-11-14"
+},
+"PAIS042004": {
+"url": "https//www.iisdacquistobagheria.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.iisdacquistobagheria.edu.it/': No scheme supplied. Perhaps you meant https://https//www.iisdacqu"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.iisdacquistobagheria.edu.it/': No scheme supplied. Perhaps you meant https://https//www.iisdacqu"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.iisdacquistobagheria.edu.it/': No scheme supplied. Perhaps you meant https://https//www.iisdacqu"
+}
+],
+"ts": "2026-11-14"
+},
+"AGIC855004": {
+"url": "https//www.icritalevimontalciniag.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icritalevimontalciniag.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icrita"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icritalevimontalciniag.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icrita"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icritalevimontalciniag.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icrita"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC81300B": {
+"url": "https//www.icgiovannipaolo2.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icgiovannipaolo2.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icgiovannipa"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icgiovannipaolo2.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icgiovannipa"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icgiovannipaolo2.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icgiovannipa"
+}
+],
+"ts": "2026-11-14"
+},
+"AGIC819001": {
+"url": "https//www.istitutogaribaldi.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutogaribaldi.edu.it/': No scheme supplied. Perhaps you meant https://https//www.istitutogar"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutogaribaldi.edu.it/': No scheme supplied. Perhaps you meant https://https//www.istitutogar"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutogaribaldi.edu.it/': No scheme supplied. Perhaps you meant https://https//www.istitutogar"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC8BE00N": {
+"url": "https://www.iclamelaadrano.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1292265,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"CTIS03400L": {
+"url": "https//www.defeliceolivetti.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.defeliceolivetti.it/': No scheme supplied. Perhaps you meant https://https//www.defeliceolivetti"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.defeliceolivetti.it/': No scheme supplied. Perhaps you meant https://https//www.defeliceolivetti"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.defeliceolivetti.it/': No scheme supplied. Perhaps you meant https://https//www.defeliceolivetti"
+}
+],
+"ts": "2026-11-14"
+},
+"ENIC825001": {
+"url": "https//www.chinnicironcalli.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.chinnicironcalli.edu.it/': No scheme supplied. Perhaps you meant https://https//www.chinnicironc"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.chinnicironcalli.edu.it/': No scheme supplied. Perhaps you meant https://https//www.chinnicironc"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.chinnicironcalli.edu.it/': No scheme supplied. Perhaps you meant https://https//www.chinnicironc"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC8BA00A": {
+"url": "https//www.icgiovannipaolo2gravinact.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icgiovannipaolo2gravinact.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icg"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icgiovannipaolo2gravinact.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icg"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icgiovannipaolo2gravinact.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icg"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC8BB006": {
+"url": "https//www.scuolavergacatania.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.scuolavergacatania.edu.it/': No scheme supplied. Perhaps you meant https://https//www.scuolaverg"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.scuolavergacatania.edu.it/': No scheme supplied. Perhaps you meant https://https//www.scuolaverg"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.scuolavergacatania.edu.it/': No scheme supplied. Perhaps you meant https://https//www.scuolaverg"
+}
+],
+"ts": "2026-11-14"
+},
+"ENIS00200C": {
+"url": "https://isissfalconebarrafranca.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1284755,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"AGIC818005": {
+"url": "https//www.ic-philippone.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.ic-philippone.edu.it/': No scheme supplied. Perhaps you meant https://https//www.ic-philippone.e"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.ic-philippone.edu.it/': No scheme supplied. Perhaps you meant https://https//www.ic-philippone.e"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.ic-philippone.edu.it/': No scheme supplied. Perhaps you meant https://https//www.ic-philippone.e"
+}
+],
+"ts": "2026-11-14"
+},
+"CLIC83200Q": {
+"url": "https//istitutocomprensivoromagnoligela.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//istitutocomprensivoromagnoligela.edu.it/': No scheme supplied. Perhaps you meant https://https//isti"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//istitutocomprensivoromagnoligela.edu.it/': No scheme supplied. Perhaps you meant https://https//isti"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//istitutocomprensivoromagnoligela.edu.it/': No scheme supplied. Perhaps you meant https://https//isti"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIS05400T": {
+"url": "https//www.istitutocarreramilitello.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutocarreramilitello.edu.it/': No scheme supplied. Perhaps you meant https://https//www.isti"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutocarreramilitello.edu.it/': No scheme supplied. Perhaps you meant https://https//www.isti"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutocarreramilitello.edu.it/': No scheme supplied. Perhaps you meant https://https//www.isti"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC835008": {
+"url": "https//www.istitutocarreramilitello.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutocarreramilitello.edu.it/': No scheme supplied. Perhaps you meant https://https//www.isti"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutocarreramilitello.edu.it/': No scheme supplied. Perhaps you meant https://https//www.isti"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.istitutocarreramilitello.edu.it/': No scheme supplied. Perhaps you meant https://https//www.isti"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIS03300R": {
+"url": "https//www.iissferraris.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.iissferraris.edu.it/': No scheme supplied. Perhaps you meant https://https//www.iissferraris.edu"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.iissferraris.edu.it/': No scheme supplied. Perhaps you meant https://https//www.iissferraris.edu"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.iissferraris.edu.it/': No scheme supplied. Perhaps you meant https://https//www.iissferraris.edu"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC836004": {
+"url": "http//www.icleonardodavincimisterbianco.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'http//www.icleonardodavincimisterbianco.it/': No scheme supplied. Perhaps you meant https://http//www.icleo"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'http//www.icleonardodavincimisterbianco.it/': No scheme supplied. Perhaps you meant https://http//www.icleo"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'http//www.icleonardodavincimisterbianco.it/': No scheme supplied. Perhaps you meant https://http//www.icleo"
+}
+],
+"ts": "2026-11-14"
+},
+"CLIS008003": {
+"url": "https//www.virgiliomussomeli.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.virgiliomussomeli.edu.it/': No scheme supplied. Perhaps you meant https://https//www.virgiliomus"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.virgiliomussomeli.edu.it/': No scheme supplied. Perhaps you meant https://https//www.virgiliomus"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.virgiliomussomeli.edu.it/': No scheme supplied. Perhaps you meant https://https//www.virgiliomus"
+}
+],
+"ts": "2026-11-14"
+},
+"CTIC8AP00P": {
+"url": "https//www.icsalvobasso.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icsalvobasso.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icsalvobasso.edu"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icsalvobasso.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icsalvobasso.edu"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.icsalvobasso.edu.it/': No scheme supplied. Perhaps you meant https://https//www.icsalvobasso.edu"
+}
+],
+"ts": "2026-11-14"
+},
+"AGPC060002": {
+"url": "https//www.liceolinares.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.liceolinares.edu.it/': No scheme supplied. Perhaps you meant https://https//www.liceolinares.edu"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.liceolinares.edu.it/': No scheme supplied. Perhaps you meant https://https//www.liceolinares.edu"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.liceolinares.edu.it/': No scheme supplied. Perhaps you meant https://https//www.liceolinares.edu"
+}
+],
+"ts": "2026-11-14"
+},
+"CTPS020004": {
+"url": "https//www.liceoboggiolera.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.liceoboggiolera.edu.it/': No scheme supplied. Perhaps you meant https://https//www.liceoboggiole"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.liceoboggiolera.edu.it/': No scheme supplied. Perhaps you meant https://https//www.liceoboggiole"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//www.liceoboggiolera.edu.it/': No scheme supplied. Perhaps you meant https://https//www.liceoboggiole"
+}
+],
+"ts": "2026-11-14"
+},
+"CTPM01000E": {
+"url": "https//liceodesanctispaterno.edu.it/",
+"ip": "0.0.0.0",
+"t": [
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//liceodesanctispaterno.edu.it/': No scheme supplied. Perhaps you meant https://https//liceodesanctisp"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//liceodesanctispaterno.edu.it/': No scheme supplied. Perhaps you meant https://https//liceodesanctisp"
+},
+{
+"st": "MissingSchema",
+"testo": "Invalid URL 'https//liceodesanctispaterno.edu.it/': No scheme supplied. Perhaps you meant https://https//liceodesanctisp"
+}
+],
+"ts": "2026-11-14"
+},
+"RMIC8EW00X": {
+"url": "https://www.simonettasalacone.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"RMIS12200T": {
+"url": "https://www.iis-apicio-colonnagatti.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"MCIS012009": {
+"url": "https://www.iismatteoricci.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 92547,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"RMIC82800Q": {
+"url": "https://www.iccorradiniroma.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"RMIC8G5009": {
+"url": "https://www.icmaffi.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"LIIC817007": {
+"url": "https://www.icanchisepicchi.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"GRIS001009": {
+"url": "https://www.isufol.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"ANIC805008": {
+"url": "https://icgioacchinorossinisanmarcello.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1311297,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"FIIS02800R": {
+"url": "https://www.gobettivolta.edu.it/",
+"ip": "217.27.72.236",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"ANIC82300T": {
+"url": "https://www.icmontemarciano-montesanvito.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1297926,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"FRPM070002": {
+"url": "https://www.liceovarronecassino.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 242771,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"PGIC87200R": {
+"url": "https://www.icvalnestore.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"RMIS03200G": {
+"url": "https://www.iistommasosalvini.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"ANIC842007": {
+"url": "https://www.iccaiogiuliocesare.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 91292,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"PGIS039009": {
+"url": "https://www.scuolenoceraumbra.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1306155,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"FIIC83700B": {
+"url": "https://www.ic-pirandello.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 72386,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"RMSL07000L": {
+"url": "https://www.liceoripetta.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"APIC80600P": {
+"url": "https://www.icspinetoli.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1302021,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"ANIC828001": {
+"url": "https://www.imondiromagnoli.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1290656,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"APIC82900B": {
+"url": "https://www.isclucianiap.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1342734,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"LIPS030007": {
+"url": "https://www.liceocecioni.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"ANPC03000B": {
+"url": "https://www.liceostelluti.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1300647,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"POIC804004": {
+"url": "https://www.malaparteprato.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"APIC82300C": {
+"url": "https://www.iscnardi.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1303395,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"APIC82800G": {
+"url": "https://www.icmonteprandone.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"ANIC84000G": {
+"url": "https://icsanfrancescojesi.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1280342,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"FRIC81100G": {
+"url": "https://www.icripi.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"POMM01000C": {
+"url": "https://www.convittocicogniniprato.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"LTIC854005": {
+"url": "https://www.istitutocomprensivominturno1.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"FRVC01000D": {
+"url": "https://www.icciceronearpino.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"RMIC8BP00C": {
+"url": "https://www.istitutoovidio.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"PIPS02000A": {
+"url": "https://www.liceodini.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"ANIC834008": {
+"url": "https://www.iccorinaldo.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1289267,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"RMIC8FN00P": {
+"url": "https://www.comprensivovega.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"RMPC48000P": {
+"url": "https://www.liceorussellroma.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"PGPC07000G": {
+"url": "https://liceoassisi.it/",
+"ip": "172.67.199.100",
+"t": [
+{
+"st": 403,
+"server": "cloudflare",
+"ra": "",
+"via": "",
+"len": 923,
+"testo": "<html>\r <head><title>403 Forbidden</title><script>(function(){var S=[\"betprimeiro\",\"dolfwin\",\"hunnyplay\",\"instant-casino\",\"kingmaker\",\"lamabet\",\"lucky-twice\",\"l"
+},
+{
+"st": 403,
+"server": "cloudflare",
+"ra": "",
+"via": "",
+"len": 923,
+"testo": "<html>\r <head><title>403 Forbidden</title><script>(function(){var S=[\"betprimeiro\",\"dolfwin\",\"hunnyplay\",\"instant-casino\",\"kingmaker\",\"lamabet\",\"lucky-twice\",\"l"
+},
+{
+"st": 403,
+"server": "cloudflare",
+"ra": "",
+"via": "",
+"len": 923,
+"testo": "<html>\r <head><title>403 Forbidden</title><script>(function(){var S=[\"betprimeiro\",\"dolfwin\",\"hunnyplay\",\"instant-casino\",\"kingmaker\",\"lamabet\",\"lucky-twice\",\"l"
+}
+],
+"ts": "2026-11-14"
+},
+"ARIS01800A": {
+"url": "https://www.fanfanicamaiti.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"PGTE01000A": {
+"url": "https://www.giordanobrunoperugia.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"APPC02000B": {
+"url": "https://www.liceostabilitrebbiani.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1304597,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"RMPS27000D": {
+"url": "https://www.liceoplinio.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"REIC85200P": {
+"url": "https://www.iccorreggio2.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"VIIC842005": {
+"url": "https://www.icsbattistella.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"FEIC82200A": {
+"url": "https://icgiorgiobassani.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1289500,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"PRIC825008": {
+"url": "https://www.ictoscaniniparma.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 80113,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BOIC80600N": {
+"url": "https://www.iccavicchi.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1312157,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"VRRI01000R": {
+"url": "https://www.giorgivr.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"VIIC85800P": {
+"url": "https://www.comprensivocassola.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"VRIC852004": {
+"url": "https://www.istitutolavagno.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 83209,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"FEIC810004": {
+"url": "https://icaldacostaferrara.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1323099,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"VEMM03600G": {
+"url": "https://www.convittofoscarini.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 137883,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"RAIS00700E": {
+"url": "https://www.itipfaenza.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"VRIC86100V": {
+"url": "https://www.icsoave.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"BOIC87100R": {
+"url": "https://www.ic2persiceto.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 76241,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"VEIS02300L": {
+"url": "https://www.istitutobrunofranchetti.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BOIC83600D": {
+"url": "https://icsassomarconi.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1294548,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"UDIS014006": {
+"url": "https://www.isisfermosolari.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"PDIS02700T": {
+"url": "https://www.leodavinci.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 93464,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"TVIC86600A": {
+"url": "https://www.comprensivo3conegliano.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 86215,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BOIC80500T": {
+"url": "https://icsanpietroincasale.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1300828,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"REIS01800B": {
+"url": "https://www.pascal.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"VRIC836006": {
+"url": "https://www.ic2pescantina.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"PRIC839006": {
+"url": "http://www.icfornovo.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 76808,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BOIC825003": {
+"url": "https://icmalalbergo.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1290373,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"VRIC899009": {
+"url": "https://www.ic1pescantina.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BOIC86000A": {
+"url": "https://www.iccrevalcore.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"BRPS030007": {
+"url": "https://www.liceoribezzo.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 123069,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"CHIC840006": {
+"url": "https://comprensivo1lanciano.edu.it/",
+"ip": "",
+"t": [
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='comprensivo1lanciano.edu.it', port=443): Max retries exceeded with url: / (Caused by NameResol"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='comprensivo1lanciano.edu.it', port=443): Max retries exceeded with url: / (Caused by NameResol"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='comprensivo1lanciano.edu.it', port=443): Max retries exceeded with url: / (Caused by NameResol"
+}
+],
+"ts": "2026-11-14"
+},
+"COIS004003": {
+"url": "https://www.gdromagnosi.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": "robots vieta"
+}
+],
+"ts": "2026-11-14"
+},
+"ARIC842003": {
+"url": "https://www.scuolemediecortona.it/",
+"ip": "",
+"t": [
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='www.scuolemediecortona.it', port=443): Max retries exceeded with url: / (Caused by NameResolut"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='www.scuolemediecortona.it', port=443): Max retries exceeded with url: / (Caused by NameResolut"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='www.scuolemediecortona.it', port=443): Max retries exceeded with url: / (Caused by NameResolut"
+}
+],
+"ts": "2026-11-14"
+},
+"CRIS011009": {
+"url": "http://istitutostradivari.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 200,
+"server": "Microsoft-IIS/10.0",
+"ra": "",
+"via": "",
+"len": 18186,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"ALMM09800N": {
+"url": "https://www.cpia2al-noviligure.edu.it/",
+"ip": "52.18.59.124",
+"t": [
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.cpia2al-noviligure.edu.it', port=443): Max retries exceeded with url: / (Caused by SSLErro"
+},
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.cpia2al-noviligure.edu.it', port=443): Max retries exceeded with url: / (Caused by SSLErro"
+},
+{
+"st": "SSLError",
+"testo": "HTTPSConnectionPool(host='www.cpia2al-noviligure.edu.it', port=443): Max retries exceeded with url: / (Caused by SSLErro"
+}
+],
+"ts": "2026-11-14"
+},
+"CNIC86400T": {
+"url": "http://www.icpieroangelabra.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1306664,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"SVIC809005": {
+"url": "https://www.icquiliano.gov.it/",
+"ip": "",
+"t": [
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='www.icquiliano.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionE"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='www.icquiliano.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionE"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='www.icquiliano.gov.it', port=443): Max retries exceeded with url: / (Caused by NameResolutionE"
+}
+],
+"ts": "2026-11-14"
+},
+"CAIC82100N": {
+"url": "https://www.taddeocossu.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1144369,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
+},
+"BOPS17000B": {
+"url": "https://www.imolalicei.edu.it/",
+"ip": "217.27.72.228",
+"t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 86410,
+"testo": ""
+}
+],
+"ts": "2026-11-14"
 }
 }
 }
