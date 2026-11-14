@@ -6,13 +6,6 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://lnx.csalatina.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Latina",
-"avvisi": 0,
-"errore": null
-},
 "https://pavia.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -20,10 +13,10 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"http://www.uspms.it/": {
+"https://lnx.csalatina.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Massa-Carrara",
+"provincia": "Latina",
 "avvisi": 0,
 "errore": null
 },
@@ -33,13 +26,6 @@
 "provincia": "Parma",
 "avvisi": 0,
 "errore": "HTTP 404"
-},
-"https://atptorino.com/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
-"errore": null
 },
 "https://istruzione.umbria.it/": {
 "grezzi": 11,
@@ -51,6 +37,20 @@
 ],
 "provincia": "Perugia",
 "avvisi": 2,
+"errore": null
+},
+"https://atptorino.com/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
+},
+"http://www.uspms.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Massa-Carrara",
+"avvisi": 0,
 "errore": null
 },
 "https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
@@ -96,17 +96,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.umbria.it/feed/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzione.calabria.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Catanzaro",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzione.umbria.it/feed/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
 "avvisi": 0,
 "errore": null
 },
@@ -141,12 +141,12 @@
 "avvisi": 25,
 "errore": null
 },
-"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
+"https://www.istruzioneimperia.gov.it/pagine/interpelli---imperia": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Gorizia",
+"provincia": "Imperia",
 "avvisi": 0,
-"errore": null
+"errore": "HTTP 404"
 },
 "https://www.istruzionepiemonte.it/le-nostre-scuole/alessandria/": {
 "grezzi": 0,
@@ -155,31 +155,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzioneimperia.gov.it/pagine/interpelli---imperia": {
+"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Imperia",
+"provincia": "Gorizia",
 "avvisi": 0,
-"errore": "HTTP 404"
+"errore": null
 },
 "https://www.istruzionepiemonte.it/trieste-e-la-memoria-un-viaggio-nella-citta/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Trieste",
-"avvisi": 0,
-"errore": null
-},
-"https://www.toscana-istruzione.it/atpisa/category/news/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pisa",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
-"https://treviso.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Treviso",
 "avvisi": 0,
 "errore": null
 },
@@ -195,6 +181,20 @@
 "avvisi": 8,
 "errore": null
 },
+"https://www.toscana-istruzione.it/atpisa/category/news/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
+"https://www.usp-rieti.it/feed/": {
+"grezzi": 7,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 7,
+"errore": null
+},
 "https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
 "grezzi": 12,
 "scartati": [
@@ -207,15 +207,8 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.usp-rieti.it/feed/": {
-"grezzi": 7,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 7,
-"errore": null
-},
 "https://bo.istruzioneer.gov.it/tag/interpello/": {
-"grezzi": 21,
+"grezzi": 19,
 "scartati": [
 "https://bo.istruzioneer.gov.it/",
 "https://bo.istruzioneer.gov.it/category/infanzia/",
@@ -224,6 +217,13 @@
 ],
 "provincia": "Bologna",
 "avvisi": 1,
+"errore": null
+},
+"https://treviso.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Treviso",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ust.fi.it/feed/": {
@@ -281,15 +281,15 @@
 "avvisi": 26,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
-"grezzi": 26,
+"https://www.uspbari.it/": {
+"grezzi": 54,
 "scartati": [
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
-"https://www.istruzionepiemonte.it/biella/category/docenti/",
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
+"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-adee-sostegno-scuola-primaria-con-ti",
+"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-adee-sostegno-scuola-primaria-con-ti",
+"https://www.uspbari.it/usp/interpello-per-supplenza-classe-di-concorso-a042-scienze-e-tecnologie-meccaniche-a-",
+"https://www.uspbari.it/usp/author/mi20142"
 ],
-"provincia": "Biella",
+"provincia": "Bari",
 "avvisi": 16,
 "errore": null
 },
@@ -305,16 +305,23 @@
 "avvisi": 17,
 "errore": null
 },
-"https://www.uspbari.it/": {
-"grezzi": 54,
+"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
+"grezzi": 26,
 "scartati": [
-"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-adee-sostegno-scuola-primaria-con-ti",
-"https://www.uspbari.it/usp/interpello-per-supplenza-su-classe-di-concorso-adee-sostegno-scuola-primaria-con-ti",
-"https://www.uspbari.it/usp/interpello-per-supplenza-classe-di-concorso-a042-scienze-e-tecnologie-meccaniche-a-",
-"https://www.uspbari.it/usp/author/mi20142"
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/",
+"https://www.istruzionepiemonte.it/biella/category/docenti/",
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/"
 ],
-"provincia": "Bari",
+"provincia": "Biella",
 "avvisi": 16,
+"errore": null
+},
+"https://www.mim.gov.it/web/bergamo/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/": {
@@ -326,13 +333,6 @@
 "https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/"
 ],
 "provincia": "Novara",
-"avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/bergamo/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
 "avvisi": 0,
 "errore": null
 },
