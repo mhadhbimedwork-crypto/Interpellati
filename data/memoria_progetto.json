@@ -659,6 +659,116 @@
 "rosso": 185
 }
 }
+},
+{
+"data": "2026-11-14",
+"scuole": 7780,
+"verdi": 5838,
+"arancioni": 154,
+"rossi": 1788,
+"percentuale_verdi": 75.0,
+"per_regione": {
+"Abruzzo": {
+"verde": 165,
+"arancione": 2,
+"rosso": 43
+},
+"Basilicata": {
+"verde": 84,
+"arancione": 1,
+"rosso": 9
+},
+"Calabria": {
+"verde": 232,
+"arancione": 4,
+"rosso": 83
+},
+"Campania": {
+"verde": 775,
+"arancione": 5,
+"rosso": 91
+},
+"Emilia-Romagna": {
+"verde": 255,
+"arancione": 17,
+"rosso": 200
+},
+"Friuli Venezia Giulia": {
+"verde": 104,
+"arancione": 2,
+"rosso": 56
+},
+"Lazio": {
+"verde": 549,
+"arancione": 16,
+"rosso": 149
+},
+"Liguria": {
+"verde": 100,
+"arancione": 3,
+"rosso": 75
+},
+"Lombardia": {
+"verde": 837,
+"arancione": 37,
+"rosso": 256
+},
+"Marche": {
+"verde": 100,
+"arancione": 5,
+"rosso": 70
+},
+"Molise": {
+"verde": 57,
+"arancione": 0,
+"rosso": 3
+},
+"Piemonte": {
+"verde": 392,
+"arancione": 5,
+"rosso": 131
+},
+"Puglia": {
+"verde": 478,
+"arancione": 18,
+"rosso": 89
+},
+"Sardegna": {
+"verde": 201,
+"arancione": 0,
+"rosso": 40
+},
+"Sicilia": {
+"verde": 665,
+"arancione": 6,
+"rosso": 62
+},
+"Toscana": {
+"verde": 372,
+"arancione": 8,
+"rosso": 91
+},
+"Trentino-Alto Adige": {
+"verde": 68,
+"arancione": 0,
+"rosso": 9
+},
+"Umbria": {
+"verde": 82,
+"arancione": 8,
+"rosso": 61
+},
+"Valle d'Aosta": {
+"verde": 9,
+"arancione": 0,
+"rosso": 22
+},
+"Veneto": {
+"verde": 313,
+"arancione": 17,
+"rosso": 248
+}
+}
 }
 ],
 "lezioni": [
@@ -1367,6 +1477,150 @@
 "nome": "G. GALILEI",
 "ora": "arancione",
 "motivo": "server condiviso che limita le richieste: lettura lenta in c"
+}
+]
+},
+{
+"data": "2026-11-14",
+"tipo": "causa",
+"causa": "il robots.txt del sito non consente il bot",
+"scuole": 896
+},
+{
+"data": "2026-11-14",
+"tipo": "causa",
+"causa": "dominio inesistente",
+"scuole": 398
+},
+{
+"data": "2026-11-14",
+"tipo": "causa",
+"causa": "irraggiungibile da 7 giorni",
+"scuole": 277
+},
+{
+"data": "2026-11-14",
+"tipo": "causa",
+"causa": "errore recente",
+"scuole": 129
+},
+{
+"data": "2026-11-14",
+"tipo": "causa",
+"causa": "sito non ancora pubblicato",
+"scuole": 109
+},
+{
+"data": "2026-11-14",
+"tipo": "causa",
+"causa": "nessun sito indicato nell'anagrafica del Ministero",
+"scuole": 108
+},
+{
+"data": "2026-11-14",
+"tipo": "causa",
+"causa": "server condiviso che limita le richieste: lettura lenta in corso",
+"scuole": 25
+},
+{
+"data": "2026-11-14",
+"tipo": "recuperate",
+"scuole": 29,
+"esempi": [
+{
+"codice": "PGIC838009",
+"nome": "I.C. SAN GIUSTINO \"L. DA VINCI\"",
+"prima": "rosso"
+},
+{
+"codice": "FRIC821006",
+"nome": "I.C. ATINA",
+"prima": "rosso"
+},
+{
+"codice": "RMIC8FK007",
+"nome": "IC VIA GIULIANO DA SANGALLO",
+"prima": "arancione"
+},
+{
+"codice": "FIIS00700Q",
+"nome": "ISTITUTO AGRARIO STATALE",
+"prima": "rosso"
+},
+{
+"codice": "PGPM010004",
+"nome": "LICEO \"A. PIERALLI\"",
+"prima": "rosso"
+},
+{
+"codice": "PGPC07000G",
+"nome": "LICEO \"PROPERZIO\"",
+"prima": "arancione"
+},
+{
+"codice": "BOIS00100P",
+"nome": "I.I.S. MARIA MONTESSORI - L. DA VINCI",
+"prima": "arancione"
+},
+{
+"codice": "MOPS050007",
+"nome": "WILIGELMO",
+"prima": "arancione"
+}
+]
+},
+{
+"data": "2026-11-14",
+"tipo": "peggiorate",
+"scuole": 219,
+"esempi": [
+{
+"codice": "PGIC83700D",
+"nome": "I.C. FOLIGNO 4",
+"ora": "arancione",
+"motivo": "errore recente (ReadTimeout): si riprova ogni giorno"
+},
+{
+"codice": "PGMM23500L",
+"nome": "CPIA 1 PERUGIA",
+"ora": "arancione",
+"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+},
+{
+"codice": "ANIC80700X",
+"nome": "FILOTTRANO \"BELTRAMI\"",
+"ora": "arancione",
+"motivo": "errore recente (HTTP 503): si riprova ogni giorno"
+},
+{
+"codice": "MCIC80600T",
+"nome": "VINCENZO TORTORETO",
+"ora": "rosso",
+"motivo": "sito non ancora pubblicato (segnaposto «A breve on line»)"
+},
+{
+"codice": "PGIC834002",
+"nome": "I.C. ASSISI 2",
+"ora": "rosso",
+"motivo": "sito non ancora pubblicato (segnaposto «A breve on line»)"
+},
+{
+"codice": "GRIC82000E",
+"nome": "IC \"UMBERTO I\" PITIGLIANO",
+"ora": "rosso",
+"motivo": "sito non ancora pubblicato (segnaposto «A breve on line»)"
+},
+{
+"codice": "PGEE00200L",
+"nome": "D.D. 2^ CIRCOLO \"COMPAROZZI\"",
+"ora": "arancione",
+"motivo": "errore recente (ReadTimeout): si riprova ogni giorno"
+},
+{
+"codice": "APIC804003",
+"nome": "RIPATRANSONE ISC",
+"ora": "arancione",
+"motivo": "errore recente (HTTP 503): si riprova ogni giorno"
 }
 ]
 }
