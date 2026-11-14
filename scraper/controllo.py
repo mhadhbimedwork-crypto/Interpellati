@@ -68,6 +68,31 @@ def riferimento(f, url: str) -> list[dict]:
             continue
         prov = S.find_province(text) or S.find_province(links[0].replace("_", " ").replace("/", " ").replace("-", " "))
         out.append({"classi": cls, "provincia": prov, "link": links[0], "testo": text[:160]})
+    return out or riferimento_testo(main)
+
+
+SIGLE = {v[0]: k for k, v in S.PROVINCE.items()}
+
+
+def riferimento_testo(main) -> list[dict]:
+    """Dal 23/10/2026 il sito di riferimento elenca le voci come righe di testo senza link (titolo di provincia
+    «Interpelli pubblicati da: …», poi una riga per avviso chiusa da «;»). Si confronta per classe e provincia."""
+    out, visti, prov_sez = [], set(), None
+    for riga in main.get_text("\n").split("\n"):
+        riga = " ".join(riga.split())
+        if "pubblicati da" in riga.lower():
+            prov_sez = S.find_province(riga)
+            continue
+        for text in filter(None, (t.strip() for t in riga.split(";"))):
+            cls = S.classes_in(text, True)
+            if not cls or not re.search(r"interpell|supplenz", text, re.I):
+                continue
+            m = re.search(r"\(([A-Z]{2})\)", text)
+            prov = (SIGLE.get(m.group(1)) if m else None) or S.find_province(text) or prov_sez
+            if (tuple(cls), prov, text) in visti:
+                continue
+            visti.add((tuple(cls), prov, text))
+            out.append({"classi": cls, "provincia": prov, "link": "", "testo": text[:160]})
     return out
 
 
@@ -97,7 +122,7 @@ def main() -> int:
     esatti, per_cp, buchi = 0, 0, []
     for r in ref:
         prov = S.PROVINCE[r["provincia"]][0] if r["provincia"] in S.PROVINCE else None
-        if norm(r["link"]) in link_n:
+        if r["link"] and norm(r["link"]) in link_n:
             esatti += 1; per_cp += 1
         elif any((c, prov) in cp for c in r["classi"]):
             per_cp += 1
@@ -106,7 +131,7 @@ def main() -> int:
     oggi = datetime.now(S.TZ).date().isoformat()
     voce = {"data": oggi, "riferimento": tot, "esatti": esatti, "classe_provincia": per_cp, "mancanti": len(buchi),
             "percentuale": round(100 * per_cp / tot, 1) if tot else None,
-            "percentuale_esatta": round(100 * esatti / tot, 1) if tot else None}
+            "percentuale_esatta": round(100 * esatti / con_link, 1) if (con_link := sum(1 for r in ref if r["link"])) else None}
     p = D / "controllo.json"
     try:
         st = json.loads(p.read_text("utf-8"))
