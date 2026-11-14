@@ -6,13 +6,6 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://milano.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
 "grezzi": 0,
 "scartati": [],
@@ -20,10 +13,10 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"https://milano.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Lecco",
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -31,6 +24,13 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -44,6 +44,17 @@
 "avvisi": 24,
 "errore": null
 },
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 5,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PRIC82900G/docenti",
+"https://nuvola.madisoft.it/interpelli/pric83600p/docenti",
+"https://nuvola.madisoft.it/interpelli/PRIC833007/docenti"
+],
+"provincia": "Parma",
+"avvisi": 2,
+"errore": null
+},
 "https://atpisernia.it/": {
 "grezzi": 23,
 "scartati": [
@@ -54,17 +65,6 @@
 ],
 "provincia": "Isernia",
 "avvisi": 0,
-"errore": null
-},
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 5,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PRIC82900G/docenti",
-"https://nuvola.madisoft.it/interpelli/pric83600p/docenti",
-"https://nuvola.madisoft.it/interpelli/PRIC833007/docenti"
-],
-"provincia": "Parma",
-"avvisi": 2,
 "errore": null
 },
 "https://varese.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti-2/": {
@@ -88,13 +88,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 30,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 30,
-"errore": null
-},
 "https://tp.usr.sicilia.it/": {
 "grezzi": 21,
 "scartati": [
@@ -107,13 +100,11 @@
 "avvisi": 15,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 23,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 22,
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 30,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 30,
 "errore": null
 },
 "http://www.ustlucca.it/": {
@@ -125,18 +116,6 @@
 ],
 "provincia": "Lucca",
 "avvisi": 26,
-"errore": null
-},
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 43,
-"scartati": [
-"https://twitter.com/home?status=INTERPELLO A042 – SCIENZE E TECNOLOGIE MECCANICHE – ORE 4 –  PRESA DI SERVIZIO",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
-"https://cl-en.usr.sicilia.it/ripresa-attivita-didattiche-giorno-12-novembre-2026/"
-],
-"provincia": "Caltanissetta",
-"avvisi": 27,
 "errore": null
 },
 "https://fe.istruzioneer.gov.it/": {
@@ -151,16 +130,25 @@
 "avvisi": 28,
 "errore": null
 },
-"http://www.provveditoratostudiviterbo.it/DOCENTI/interpelli/INTERPELLIDOC.htm": {
-"grezzi": 42,
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
+"grezzi": 43,
 "scartati": [
-"https://madinterpello.portaleargo.it/",
-"https://www.portaleargo.it/albopretorio/online/",
-"https://madinterpello.portaleargo.it/index.html",
-"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/"
+"https://twitter.com/home?status=INTERPELLO A042 – SCIENZE E TECNOLOGIE MECCANICHE – ORE 4 –  PRESA DI SERVIZIO",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
+"https://cl-en.usr.sicilia.it/ripresa-attivita-didattiche-giorno-12-novembre-2026/"
 ],
-"provincia": "Viterbo",
-"avvisi": 3,
+"provincia": "Caltanissetta",
+"avvisi": 27,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 23,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 22,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
@@ -177,11 +165,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionesavona.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Savona",
-"avvisi": 0,
+"http://www.provveditoratostudiviterbo.it/DOCENTI/interpelli/INTERPELLIDOC.htm": {
+"grezzi": 42,
+"scartati": [
+"https://madinterpello.portaleargo.it/",
+"https://www.portaleargo.it/albopretorio/online/",
+"https://madinterpello.portaleargo.it/index.html",
+"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/"
+],
+"provincia": "Viterbo",
+"avvisi": 3,
 "errore": null
 },
 "https://vicenza.istruzioneveneto.gov.it/": {
@@ -191,13 +184,6 @@
 ],
 "provincia": "Vicenza",
 "avvisi": 1,
-"errore": null
-},
-"https://www.ufficioscolasticogrosseto.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Grosseto",
-"avvisi": 0,
 "errore": null
 },
 "https://www.mim.gov.it/web/campobasso/": {
@@ -210,6 +196,27 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.ufficioscolasticogrosseto.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Grosseto",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionesavona.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Savona",
+"avvisi": 0,
+"errore": null
+},
+"https://www.regione.vda.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Aosta",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
 "grezzi": 6,
 "scartati": [
@@ -219,13 +226,6 @@
 ],
 "provincia": "Cosenza",
 "avvisi": 3,
-"errore": null
-},
-"https://www.regione.vda.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Aosta",
-"avvisi": 0,
 "errore": null
 },
 "https://www.atpromaistruzione.it/atp/tag/interpelli/": {
@@ -254,20 +254,6 @@
 "avvisi": 7,
 "errore": null
 },
-"https://www.vivoscuola.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Trento",
-"avvisi": 0,
-"errore": null
-},
-"https://www.uspcampobasso.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Campobasso",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionebrindisi.it/": {
 "grezzi": 27,
 "scartati": [
@@ -278,6 +264,20 @@
 ],
 "provincia": "Brindisi",
 "avvisi": 13,
+"errore": null
+},
+"https://www.uspcampobasso.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Campobasso",
+"avvisi": 0,
+"errore": null
+},
+"https://www.vivoscuola.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Trento",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
@@ -323,18 +323,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
-"grezzi": 36,
-"scartati": [
-"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
-"https://www.istruzionepiemonte.it/torino/category/docenti/",
-"https://www.istruzionepiemonte.it/torino/tag/incarico-interpello/",
-"https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
-],
-"provincia": "Torino",
-"avvisi": 21,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
 "grezzi": 22,
 "scartati": [
@@ -345,6 +333,18 @@
 ],
 "provincia": "Cuneo",
 "avvisi": 16,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
+"grezzi": 36,
+"scartati": [
+"https://www.istruzionepiemonte.it/torino/category/comunicazione-alle-scuole/",
+"https://www.istruzionepiemonte.it/torino/category/docenti/",
+"https://www.istruzionepiemonte.it/torino/tag/incarico-interpello/",
+"https://www.istruzionepiemonte.it/torino/tag/interpelli-supplenze/"
+],
+"provincia": "Torino",
+"avvisi": 21,
 "errore": null
 },
 "https://www.istruzionegenova.gov.it/pagine/interpelli---docenti": {
