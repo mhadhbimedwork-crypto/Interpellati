@@ -1,18 +1,4 @@
 {
- "AGIC818005": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "ConnectionError",
-  "motivo": "recuperato",
-  "nuovo": "https://www.ic-philippone.edu.it/",
-  "sito": "https://www.ic-philippone.edu.it/",
-  "tentativi": [
-   [
-    "https://www.ic-philippone.edu.it/",
-    "OK"
-   ]
-  ]
- },
  "AGIC82800Q": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -397,20 +383,6 @@
   "tentativi": [
    [
     "https://www.leonardoniscemi.edu.it/",
-    "OK"
-   ]
-  ]
- },
- "CLIS008003": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "ConnectionError",
-  "motivo": "recuperato",
-  "nuovo": "https://www.virgiliomussomeli.edu.it/",
-  "sito": "https://www.virgiliomussomeli.edu.it/",
-  "tentativi": [
-   [
-    "https://www.virgiliomussomeli.edu.it/",
     "OK"
    ]
   ]
@@ -973,6 +945,31 @@
    ]
   ]
  },
+ "MEIC876009": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 500",
+  "motivo": "risponde ma con errore: HTTP 403",
+  "sito": "https://ictorregrotta.edu.it/",
+  "tentativi": [
+   [
+    "https://www.ictorregrotta.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://www.ictorregrotta.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://ictorregrotta.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://ictorregrotta.edu.it/",
+    "HTTP 403"
+   ]
+  ]
+ },
  "PAIC817007": {
   "dns_pubblico": "no",
   "dns_runner": false,
@@ -1036,27 +1033,11 @@
   "dns_runner": true,
   "err": "senza sito MIM",
   "motivo": "recuperato",
-  "nuovo": "https://www.icmattarellabonagia.it/",
+  "nuovo": "https://www.icmattarellabonagia.edu.it/",
   "sito": "https://www.icmattarellabonagia.edu.it/",
   "tentativi": [
    [
     "https://www.icmattarellabonagia.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.icmattarellabonagia.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://icmattarellabonagia.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://icmattarellabonagia.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://www.icmattarellabonagia.it/",
     "OK"
    ]
   ]
@@ -1164,24 +1145,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.principigrimaldi.edu.it/",
   "sito": "https://www.principigrimaldi.edu.it/",
   "tentativi": [
    [
     "https://www.principigrimaldi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.principigrimaldi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://principigrimaldi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://principigrimaldi.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1189,13 +1159,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icvittorinisolarino.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icvittorinisolarino.edu.it/",
   "tentativi": [
    [
     "https://www.icvittorinisolarino.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.icvittorinisolarino.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icvittorinisolarino.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icvittorinisolarino.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -1378,6 +1359,20 @@
    [
     "http://liceoruggierimarsala.edu.it/",
     "HTTP 509"
+   ]
+  ]
+ },
+ "TPTD03000E": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "ConnectTimeout",
+  "motivo": "recuperato",
+  "nuovo": "https://itetgaribaldi.edu.it/",
+  "sito": "https://www.itetgaribaldi.edu.it/",
+  "tentativi": [
+   [
+    "https://www.itetgaribaldi.edu.it/",
+    "OK"
    ]
   ]
  }
