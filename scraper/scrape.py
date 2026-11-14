@@ -21,6 +21,7 @@ import urllib.robotparser
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlparse
+from zoneinfo import ZoneInfo
 
 import io
 import requests
@@ -35,7 +36,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "interpelli.json"
 SOURCES = Path(__file__).resolve().parent / "sources.json"
 UA = "InterpellatiBot/1.0 (+https://github.com/mhadhbimedwork-crypto/Interpellati)"
-TZ = timezone(timedelta(hours=2))  # Europe/Rome (ora legale); per le date basta
+TZ = ZoneInfo("Europe/Rome")  # ora italiana vera: segue da sola ora legale e ora solare
 KEEP_DAYS = 60
 MAX_DETTAGLI = 250
 LLM_BUDGET = [int(__import__('os').environ.get('MAX_LLM', '15'))]  # chiamate al modello per esecuzione  # avvisi analizzati per esecuzione (rispetta 1 richiesta/s per host)

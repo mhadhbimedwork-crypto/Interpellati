@@ -30,7 +30,7 @@ TITOLO_ISSUE = "Sentinella: allarmi aperti"
 
 # file chiave -> ore massime senza aggiornamenti
 FRESCHEZZA = {"data/interpelli.json": 8, "data/memoria_scuole.json": 30, "data/scuole_stato.json": 30,
-              "data/priorita_lettura.json": 48}
+              "data/priorita_lettura.json": 48, "data/feed.json": 8, "data/abilitazioni.json": 30}
 # workflow -> ore massime dall'ultimo successo (default 48)
 SOGLIA_FERMO = {"Scansione interpelli": 6, "Ricerca B015-B017": 12, "Miglioramento giornaliero e memoria": 30,
                 "Controllo completezza": 12, "Sentinella": 3}
@@ -142,6 +142,15 @@ def main() -> int:
         n = 0
     prec_n = precedente.get("interpelli", 0)
     c("interpelli presenti", not (prec_n >= 20 and n < 0.7 * prec_n), f"{n} (prima {prec_n})")
+    try:
+        ctrl = json.loads((ROOT / "data/controllo.json").read_text("utf-8"))[-5:]
+        ciechi = len(ctrl) == 5 and not any(x.get("riferimento") for x in ctrl)
+        buchi = ctrl[-1].get("mancanti", 0) if ctrl else 0
+        c("controllo completezza", not ciechi and buchi <= 10,
+          "nessun dato di riferimento da 5 giorni: il confronto non sta verificando nulla" if ciechi
+          else f"riferimento {ctrl[-1].get('riferimento', 0) if ctrl else 0} avvisi, mancanti {buchi}", grave=False)
+    except (OSError, ValueError, TypeError, AttributeError):
+        c("controllo completezza", False, "data/controllo.json non leggibile", grave=False)
 
     # 3. copertura
     cop = {}
