@@ -6,12 +6,12 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Monza e Brianza",
+"provincia": "Terni",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": "HTTP 404"
 },
 "https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
@@ -20,12 +20,12 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Terni",
+"provincia": "Monza e Brianza",
 "avvisi": 0,
-"errore": "HTTP 404"
+"errore": "SSLError"
 },
 "https://rn.istruzioneer.gov.it/feed/": {
 "grezzi": 7,
@@ -41,6 +41,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://uat-salerno.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Salerno",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://sr.usr.sicilia.it/tag/interpelli/": {
 "grezzi": 2,
 "scartati": [
@@ -50,25 +57,11 @@
 "avvisi": 1,
 "errore": null
 },
-"https://uat-salerno.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Salerno",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://www.atpromaistruzione.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Roma",
 "avvisi": 0,
-"errore": null
-},
-"https://me.usr.sicilia.it/": {
-"grezzi": 15,
-"scartati": [],
-"provincia": "Messina",
-"avvisi": 15,
 "errore": null
 },
 "https://pc.istruzioneer.gov.it/": {
@@ -78,6 +71,13 @@
 ],
 "provincia": "Piacenza",
 "avvisi": 7,
+"errore": null
+},
+"https://me.usr.sicilia.it/": {
+"grezzi": 15,
+"scartati": [],
+"provincia": "Messina",
+"avvisi": 15,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/": {
@@ -165,22 +165,19 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.istruzionegenova.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
-"errore": null
-},
-"https://www.regione.vda.it/istruzione/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Aosta",
-"avvisi": 0,
+"https://ustlucca.it/": {
+"grezzi": 29,
+"scartati": [
+"https://ustlucca.it/category/interpelli/",
+"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
+"https://ustlucca.it/category/interpelli/"
+],
+"provincia": "Lucca",
+"avvisi": 26,
 "errore": null
 },
 "https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
-"grezzi": 20,
+"grezzi": 16,
 "scartati": [
 "https://fc.istruzioneer.gov.it/",
 "https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/",
@@ -188,7 +185,26 @@
 "https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/"
 ],
 "provincia": "Forlì-Cesena",
-"avvisi": 4,
+"avvisi": 0,
+"errore": null
+},
+"https://www.csateramo.it/wpusp/archive/category/news": {
+"grezzi": 64,
+"scartati": [
+"https://www.csateramo.it/wpusp/wp-content/uploads/2026/11/I__POSTA_CERTIFICATA__INTERPELLO_A042_-_SCIENZE_E_TE",
+"https://www.mim.gov.it/web/cagliari/-/interpello-per-la-supplenza-classe-di-concorso-a042-scienze-e-tecnologie",
+"https://www.mim.gov.it/web/cagliari/-/interpello-per-supplenza-classe-di-concorso-as2b-lingua-e-cultura-strani",
+"https://www.mim.gov.it/web/cagliari/-/interpello-a041-i-i-s-einaudi-muravera-10-ore-al-30-06-2027"
+],
+"provincia": "Teramo",
+"avvisi": 1,
+"errore": null
+},
+"https://www.regione.vda.it/istruzione/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Aosta",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionebat.it/category/interpello/": {
@@ -210,18 +226,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.csateramo.it/wpusp/archive/category/news": {
-"grezzi": 64,
-"scartati": [
-"https://www.csateramo.it/wpusp/wp-content/uploads/2026/11/I__POSTA_CERTIFICATA__INTERPELLO_A042_-_SCIENZE_E_TE",
-"https://www.mim.gov.it/web/cagliari/-/interpello-per-la-supplenza-classe-di-concorso-a042-scienze-e-tecnologie",
-"https://www.mim.gov.it/web/cagliari/-/interpello-per-supplenza-classe-di-concorso-as2b-lingua-e-cultura-strani",
-"https://www.mim.gov.it/web/cagliari/-/interpello-a041-i-i-s-einaudi-muravera-10-ore-al-30-06-2027"
-],
-"provincia": "Teramo",
-"avvisi": 1,
-"errore": null
-},
 "https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
 "grezzi": 53,
 "scartati": [
@@ -234,22 +238,11 @@
 "avvisi": 23,
 "errore": null
 },
-"https://www.usp-rieti.it/": {
-"grezzi": 14,
+"https://www.istruzionegenova.gov.it/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Rieti",
-"avvisi": 14,
-"errore": null
-},
-"https://ustlucca.it/": {
-"grezzi": 29,
-"scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
-"https://ustlucca.it/category/interpelli/"
-],
-"provincia": "Lucca",
-"avvisi": 26,
+"provincia": "Genova",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionematera.it/category/interpelli/": {
@@ -264,25 +257,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni": {
-"grezzi": 22,
-"scartati": [
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
-"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni"
-],
-"provincia": "Grosseto",
+"https://www.usp-rieti.it/": {
+"grezzi": 14,
+"scartati": [],
+"provincia": "Rieti",
 "avvisi": 14,
-"errore": null
-},
-"https://www.istruzionesavona.gov.it/pagine/interpelli-sv---as-2024-2025": {
-"grezzi": 1,
-"scartati": [
-"https://web.spaggiari.eu/ber/app/default/gestione_mad.php?mod=MAD_03&target=sdg&sede_codice=SVII0004"
-],
-"provincia": "Savona",
-"avvisi": 0,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
@@ -297,6 +276,34 @@
 "avvisi": 7,
 "errore": null
 },
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni": {
+"grezzi": 22,
+"scartati": [
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni",
+"https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni"
+],
+"provincia": "Grosseto",
+"avvisi": 14,
+"errore": null
+},
+"https://www.usrfvg.gov.it/feed/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionesavona.gov.it/pagine/interpelli-sv---as-2024-2025": {
+"grezzi": 1,
+"scartati": [
+"https://web.spaggiari.eu/ber/app/default/gestione_mad.php?mod=MAD_03&target=sdg&sede_codice=SVII0004"
+],
+"provincia": "Savona",
+"avvisi": 0,
+"errore": null
+},
 "https://www.ustlecce.it/": {
 "grezzi": 8,
 "scartati": [
@@ -306,13 +313,6 @@
 "https://www.ustlecce.it/index.php/interpelli?download=3932:interpello-nazionale-per-supplenza-su-classe-di-con"
 ],
 "provincia": "Lecce",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usrfvg.gov.it/feed/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
 "avvisi": 0,
 "errore": null
 },
