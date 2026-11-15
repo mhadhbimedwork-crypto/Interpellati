@@ -105,20 +105,21 @@ def main() -> int:
         nome = f"workflow «{wf['name']}»"
         if serie >= 3:
             c(nome, False, f"{serie} fallimenti di fila")
-        elif programmato and (h is None or h > soglia) and serie >= 1:
+        elif programmato and (h is None or h > soglia):
             c(nome, False, f"nessun successo da {'sempre' if h is None else f'{h:.0f} h'} (soglia {soglia} h)")
         elif serie >= 1:
             c(nome, False, f"ultimo run fallito ({serie} di fila)", grave=False)
         else:
             c(nome, True, "ok" if h is None else f"ultimo successo {h:.1f} h fa")
-        if serie >= 1 and os.path.basename(wf["path"]) not in NON_RILANCIARE:
+        stantio = programmato and (h is None or h > soglia)
+        if (serie >= 1 or stantio) and os.path.basename(wf["path"]) not in NON_RILANCIARE:
             ult = parse_t(rilanci.get(wf["path"]))
             if not ult or ore_da(ult) > 6:
                 r = subprocess.run(["true"] if PROVA else ["gh", "api", "-X", "POST", f"repos/{REPO}/actions/workflows/{wf['id']}/dispatches", "-f", "ref=main"],
                                    capture_output=True, text=True, cwd=ROOT)
                 if r.returncode == 0:
                     rilanci[wf["path"]] = ADESSO.isoformat(timespec="seconds")
-                    interventi.append(f"rilanciato «{wf['name']}» dopo {serie} fallimento/i")
+                    interventi.append(f"rilanciato «{wf['name']}» ({serie} fallimenti)" if serie else f"rilanciato «{wf['name']}» (fermo da {0 if h is None else h:.0f} h)")
 
     # 2. dati
     for rel, soglia in FRESCHEZZA.items():
