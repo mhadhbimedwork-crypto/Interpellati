@@ -192,12 +192,62 @@ class RitmoIP:
         return min(60.0, 15.0 + cls._int.get(ip, 4.0))
 
 
+
+class RobotsRFC:
+    """robots.txt secondo RFC 9309: gruppi per user-agent, simboli * e $, vince la regola piu' lunga (a parita' Allow).
+    Il parser standard di Python ignora $ e * e dichiara vietate pagine che il sito consente (es. «Allow: /$»)."""
+
+    def __init__(self, testo: str, ua: str):
+        nome = ua.split("/")[0].lower()
+        gruppi: list[tuple[list[str], list[tuple[bool, str]]]] = []
+        agenti: list[str] = []
+        regole: list[tuple[bool, str]] = []
+        in_regole = False
+        for riga in testo.splitlines():
+            riga = riga.split("#", 1)[0].strip()
+            if ":" not in riga:
+                continue
+            k, v = (x.strip() for x in riga.split(":", 1))
+            k = k.lower()
+            if k == "user-agent":
+                if in_regole:
+                    gruppi.append((agenti, regole))
+                    agenti, regole, in_regole = [], [], False
+                agenti.append(v.lower())
+            elif k in ("allow", "disallow"):
+                in_regole = True
+                if v:
+                    regole.append((k == "allow", v))
+        gruppi.append((agenti, regole))
+        specifico = [r for a, r in gruppi if any(x != "*" and x in nome for x in a)]
+        generico = [r for a, r in gruppi if "*" in a]
+        self.regole = [x for r in (specifico or generico) for x in r]
+
+    @staticmethod
+    def _combacia(pattern: str, path: str) -> bool:
+        fine = pattern.endswith("$")
+        if fine:
+            pattern = pattern[:-1]
+        rx = ".*".join(re.escape(p) for p in pattern.split("*"))
+        return re.match(rx + ("$" if fine else ""), path) is not None
+
+    def can_fetch(self, _ua: str, url: str) -> bool:
+        u = urlparse(url)
+        path = (u.path or "/") + ("?" + u.query if u.query else "")
+        migliore: tuple[int, bool] | None = None
+        for consente, pat in self.regole:
+            if self._combacia(pat, path):
+                lung = len(pat.rstrip("$"))
+                if migliore is None or lung > migliore[0] or (lung == migliore[0] and consente):
+                    migliore = (lung, consente)
+        return True if migliore is None else migliore[1]
+
 class Fetcher:
     def __init__(self):
         self.s = requests.Session()
         self.s.headers["User-Agent"] = UA
         self.s.headers["Accept-Language"] = "it-IT,it;q=0.9"
-        self.robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
+        self.robots: dict[str, RobotsRFC | None] = {}
         self.last: dict[str, float] = {}
         self.pages = 0
         self.errs: dict[str, str] = {}
@@ -263,7 +313,7 @@ class Fetcher:
     def allowed(self, url: str) -> bool:
         host = urlparse(url).scheme + "://" + urlparse(url).netloc
         if host not in self.robots:
-            rp = urllib.robotparser.RobotFileParser()
+            rp = None
             RitmoIP.attendi(RitmoIP.ip(urlparse(host).netloc))
             try:
                 try:
@@ -274,8 +324,7 @@ class Fetcher:
                         raise
                     r = self.s.get(host + "/robots.txt", timeout=15, verify=b)
                 if r.status_code == 200:
-                    rp.parse(r.text.splitlines())
-                    self.robots[host] = rp
+                    self.robots[host] = RobotsRFC(r.text, UA)
                 else:
                     self.robots[host] = None
             except requests.RequestException:
