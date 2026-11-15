@@ -769,6 +769,116 @@
 "rosso": 218
 }
 }
+},
+{
+"data": "2026-11-15",
+"scuole": 7780,
+"verdi": 6173,
+"arancioni": 45,
+"rossi": 1562,
+"percentuale_verdi": 79.3,
+"per_regione": {
+"Abruzzo": {
+"verde": 169,
+"arancione": 1,
+"rosso": 40
+},
+"Basilicata": {
+"verde": 84,
+"arancione": 0,
+"rosso": 10
+},
+"Calabria": {
+"verde": 244,
+"arancione": 0,
+"rosso": 75
+},
+"Campania": {
+"verde": 778,
+"arancione": 6,
+"rosso": 87
+},
+"Emilia-Romagna": {
+"verde": 303,
+"arancione": 4,
+"rosso": 165
+},
+"Friuli Venezia Giulia": {
+"verde": 113,
+"arancione": 2,
+"rosso": 47
+},
+"Lazio": {
+"verde": 558,
+"arancione": 3,
+"rosso": 153
+},
+"Liguria": {
+"verde": 102,
+"arancione": 2,
+"rosso": 74
+},
+"Lombardia": {
+"verde": 899,
+"arancione": 3,
+"rosso": 228
+},
+"Marche": {
+"verde": 118,
+"arancione": 1,
+"rosso": 56
+},
+"Molise": {
+"verde": 57,
+"arancione": 0,
+"rosso": 3
+},
+"Piemonte": {
+"verde": 412,
+"arancione": 7,
+"rosso": 109
+},
+"Puglia": {
+"verde": 504,
+"arancione": 2,
+"rosso": 79
+},
+"Sardegna": {
+"verde": 202,
+"arancione": 1,
+"rosso": 38
+},
+"Sicilia": {
+"verde": 670,
+"arancione": 0,
+"rosso": 63
+},
+"Toscana": {
+"verde": 384,
+"arancione": 1,
+"rosso": 86
+},
+"Trentino-Alto Adige": {
+"verde": 63,
+"arancione": 5,
+"rosso": 9
+},
+"Umbria": {
+"verde": 95,
+"arancione": 4,
+"rosso": 52
+},
+"Valle d'Aosta": {
+"verde": 15,
+"arancione": 0,
+"rosso": 16
+},
+"Veneto": {
+"verde": 403,
+"arancione": 3,
+"rosso": 172
+}
+}
 }
 ],
 "lezioni": [
@@ -1621,6 +1731,156 @@
 "nome": "\"G.PASTORI\"",
 "ora": "arancione",
 "motivo": "errore recente (HTTP 403): si riprova ogni giorno"
+}
+]
+},
+{
+"data": "2026-11-15",
+"tipo": "causa",
+"causa": "il robots.txt del sito non consente il bot",
+"scuole": 573
+},
+{
+"data": "2026-11-15",
+"tipo": "causa",
+"causa": "irraggiungibile da 8 giorni",
+"scuole": 524
+},
+{
+"data": "2026-11-15",
+"tipo": "causa",
+"causa": "dominio inesistente",
+"scuole": 327
+},
+{
+"data": "2026-11-15",
+"tipo": "causa",
+"causa": "nessun sito indicato nell'anagrafica del Ministero",
+"scuole": 108
+},
+{
+"data": "2026-11-15",
+"tipo": "causa",
+"causa": "irraggiungibile da 7 giorni",
+"scuole": 29
+},
+{
+"data": "2026-11-15",
+"tipo": "causa",
+"causa": "errore recente",
+"scuole": 26
+},
+{
+"data": "2026-11-15",
+"tipo": "causa",
+"causa": "server condiviso che limita le richieste: lettura lenta in corso",
+"scuole": 19
+},
+{
+"data": "2026-11-15",
+"tipo": "causa",
+"causa": "sito non ancora pubblicato",
+"scuole": 1
+},
+{
+"data": "2026-11-15",
+"tipo": "recuperate",
+"scuole": 206,
+"esempi": [
+{
+"codice": "TPIC81700P",
+"nome": "I.C. \"M.NUCCIO\"",
+"prima": "rosso"
+},
+{
+"codice": "SRIS02200E",
+"nome": "I.I.S.S. LICEO ARTISTICO \"A GAGINI\"",
+"prima": "arancione"
+},
+{
+"codice": "CLPS03000N",
+"nome": "LICEO SCIENT.-LING. \"E. VITTORINI\"",
+"prima": "rosso"
+},
+{
+"codice": "PGIC83700D",
+"nome": "I.C. FOLIGNO 4",
+"prima": "arancione"
+},
+{
+"codice": "MCIC80600T",
+"nome": "VINCENZO TORTORETO",
+"prima": "rosso"
+},
+{
+"codice": "PGIC834002",
+"nome": "I.C. ASSISI 2",
+"prima": "rosso"
+},
+{
+"codice": "GRIC82000E",
+"nome": "IC \"UMBERTO I\" PITIGLIANO",
+"prima": "arancione"
+},
+{
+"codice": "PGEE00200L",
+"nome": "D.D. 2^ CIRCOLO \"COMPAROZZI\"",
+"prima": "arancione"
+}
+]
+},
+{
+"data": "2026-11-15",
+"tipo": "peggiorate",
+"scuole": 24,
+"esempi": [
+{
+"codice": "PGMM23500L",
+"nome": "CPIA 1 PERUGIA",
+"ora": "arancione",
+"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+},
+{
+"codice": "PGIC86400T",
+"nome": "I.C. PERUGIA 7",
+"ora": "arancione",
+"motivo": "errore recente (HTTP 403): si riprova ogni giorno"
+},
+{
+"codice": "LTIC82300D",
+"nome": "I.C. PRINCIPE AMEDEO",
+"ora": "arancione",
+"motivo": "errore recente (ConnectionError): si riprova ogni giorno"
+},
+{
+"codice": "RMIC80700P",
+"nome": "URUGUAY",
+"ora": "rosso",
+"motivo": "il robots.txt del sito non consente il bot (rispettato)"
+},
+{
+"codice": "APIS01100A",
+"nome": "I.I.S.\"E. FERMI-SACCONI-C.P.I.A.\"",
+"ora": "arancione",
+"motivo": "server condiviso che limita le richieste: lettura lenta in c"
+},
+{
+"codice": "RMIS12800R",
+"nome": "POLO LICEALE \"ALIGHIERI - CARAVILLANI\"",
+"ora": "arancione",
+"motivo": "errore recente (HTTP 403): si riprova ogni giorno"
+},
+{
+"codice": "PGIC85900A",
+"nome": "I.C. PERUGIA 11",
+"ora": "arancione",
+"motivo": "errore recente (HTTP 403): si riprova ogni giorno"
+},
+{
+"codice": "PNIS00400G",
+"nome": "I.S.I.S. \"IL TAGLIAMENTO\"",
+"ora": "arancione",
+"motivo": "server condiviso che limita le richieste: lettura lenta in c"
 }
 ]
 }
