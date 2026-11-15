@@ -27,17 +27,17 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://milano.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://cremona.istruzionelombardia.gov.it/argomento/reclutamento-3/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Cremona",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://milano.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -65,6 +65,17 @@
 "avvisi": 24,
 "errore": null
 },
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 4,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PRIC82900G/docenti",
+"https://nuvola.madisoft.it/interpelli/pric83600p/docenti",
+"https://nuvola.madisoft.it/interpelli/PRIC833007/docenti"
+],
+"provincia": "Parma",
+"avvisi": 1,
+"errore": null
+},
 "https://uspistruzione.fr.it/wp2/": {
 "grezzi": 3,
 "scartati": [],
@@ -84,15 +95,16 @@
 "avvisi": 3,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 4,
+"https://tp.usr.sicilia.it/": {
+"grezzi": 21,
 "scartati": [
-"https://nuvola.madisoft.it/interpelli/PRIC82900G/docenti",
-"https://nuvola.madisoft.it/interpelli/pric83600p/docenti",
-"https://nuvola.madisoft.it/interpelli/PRIC833007/docenti"
+"https://twitter.com/home?status=Interpello per la selezione di personale scuola secondaria di primo grado – AF",
+"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
+"https://tp.usr.sicilia.it/category/news/",
+"https://tp.usr.sicilia.it/decreto-pubblicazione-6-bollettino-nomine-docenti-a-tempo-determinato-a-s-26-27/"
 ],
-"provincia": "Parma",
-"avvisi": 1,
+"provincia": "Trapani",
+"avvisi": 15,
 "errore": null
 },
 "https://padova.istruzioneveneto.gov.it/": {
@@ -100,15 +112,6 @@
 "scartati": [],
 "provincia": "Padova",
 "avvisi": 28,
-"errore": null
-},
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 23,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 22,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/": {
@@ -146,16 +149,13 @@
 "avvisi": 0,
 "errore": null
 },
-"https://tp.usr.sicilia.it/": {
-"grezzi": 21,
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 23,
 "scartati": [
-"https://twitter.com/home?status=Interpello per la selezione di personale scuola secondaria di primo grado – AF",
-"https://tp.usr.sicilia.it/category/personale-scuola/interpelli/",
-"https://tp.usr.sicilia.it/category/news/",
-"https://tp.usr.sicilia.it/decreto-pubblicazione-6-bollettino-nomine-docenti-a-tempo-determinato-a-s-26-27/"
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
 ],
-"provincia": "Trapani",
-"avvisi": 15,
+"provincia": "Rovigo",
+"avvisi": 22,
 "errore": null
 },
 "https://fe.istruzioneer.gov.it/": {
@@ -170,6 +170,13 @@
 "avvisi": 29,
 "errore": null
 },
+"https://www.toscana-istruzione.it/atpisa/category/news/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
 "https://vicenza.istruzioneveneto.gov.it/": {
 "grezzi": 2,
 "scartati": [
@@ -178,13 +185,6 @@
 "provincia": "Vicenza",
 "avvisi": 1,
 "errore": null
-},
-"https://www.toscana-istruzione.it/atpisa/category/news/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pisa",
-"avvisi": 0,
-"errore": "HTTP 404"
 },
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
 "grezzi": 43,
@@ -196,13 +196,6 @@
 ],
 "provincia": "Caltanissetta",
 "avvisi": 27,
-"errore": null
-},
-"https://www.usp-rieti.it/feed/": {
-"grezzi": 7,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 7,
 "errore": null
 },
 "https://www.atpromaistruzione.it/atp/tag/interpelli/": {
@@ -217,6 +210,13 @@
 "avvisi": 11,
 "errore": null
 },
+"https://www.usp-rieti.it/feed/": {
+"grezzi": 7,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 7,
+"errore": null
+},
 "https://www.istruzioneimperia.gov.it/": {
 "grezzi": 3,
 "scartati": [
@@ -226,6 +226,13 @@
 ],
 "provincia": "Imperia",
 "avvisi": 0,
+"errore": null
+},
+"https://www.ust.fi.it/feed/": {
+"grezzi": 9,
+"scartati": [],
+"provincia": "Firenze",
+"avvisi": 9,
 "errore": null
 },
 "https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
@@ -240,6 +247,18 @@
 "avvisi": 9,
 "errore": null
 },
+"https://www.istruzionebrindisi.it/": {
+"grezzi": 27,
+"scartati": [
+"https://www.istruzionebrindisi.it/nono-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-scuola-dellinfanzia-p",
+"https://www.istruzionebrindisi.it/decreto-integrazione-part-time-a-s-2026-27-docenti-infanzia-primaria-ii-grad",
+"https://www.istruzionebrindisi.it/ottavo-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-scuola-dellinfanzia",
+"https://www.istruzionebrindisi.it/ottavo-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-scuola-dellinfanzia"
+],
+"provincia": "Brindisi",
+"avvisi": 11,
+"errore": null
+},
 "https://www.mim.gov.it/web/sondrio/": {
 "grezzi": 1,
 "scartati": [
@@ -249,30 +268,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.ust.fi.it/feed/": {
-"grezzi": 9,
-"scartati": [],
-"provincia": "Firenze",
-"avvisi": 9,
-"errore": null
-},
 "https://www.mim.gov.it/web/lodi/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lodi",
 "avvisi": 0,
-"errore": null
-},
-"https://www.usppesarourbino.it/": {
-"grezzi": 12,
-"scartati": [
-"http://www.specificfeeds.com/widgets/emailSubscribeEncFeed/K090UDFWL3Q0ZVBma0ZnNGFpNS9FbTc2SHRYeDJYdDI2elVWVzV",
-"http://twitter.com/share",
-"https://www.usppesarourbino.it/wp-content/uploads/2026/10/interpello-BI02-conversazione-lingua-Cinese.zip",
-"https://www.usppesarourbino.it/wp-content/uploads/2026/10/Interpello-B007-LAB.-DI-OTTICA-18-ore-AL-31-10-2026."
-],
-"provincia": "Pesaro e Urbino",
-"avvisi": 3,
 "errore": null
 },
 "https://www.usr.sicilia.it/": {
@@ -287,16 +287,16 @@
 "avvisi": 15,
 "errore": null
 },
-"https://www.istruzionebrindisi.it/": {
-"grezzi": 27,
+"https://www.usppesarourbino.it/": {
+"grezzi": 12,
 "scartati": [
-"https://www.istruzionebrindisi.it/nono-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-scuola-dellinfanzia-p",
-"https://www.istruzionebrindisi.it/decreto-integrazione-part-time-a-s-2026-27-docenti-infanzia-primaria-ii-grad",
-"https://www.istruzionebrindisi.it/ottavo-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-scuola-dellinfanzia",
-"https://www.istruzionebrindisi.it/ottavo-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-scuola-dellinfanzia"
+"http://www.specificfeeds.com/widgets/emailSubscribeEncFeed/K090UDFWL3Q0ZVBma0ZnNGFpNS9FbTc2SHRYeDJYdDI2elVWVzV",
+"http://twitter.com/share",
+"https://www.usppesarourbino.it/wp-content/uploads/2026/10/interpello-BI02-conversazione-lingua-Cinese.zip",
+"https://www.usppesarourbino.it/wp-content/uploads/2026/10/Interpello-B007-LAB.-DI-OTTICA-18-ore-AL-31-10-2026."
 ],
-"provincia": "Brindisi",
-"avvisi": 11,
+"provincia": "Pesaro e Urbino",
+"avvisi": 3,
 "errore": null
 },
 "https://www.istruzione-ancona.it/": {
