@@ -1,10 +1,10 @@
 {
-"https://bergamo.istruzionelombardia.gov.it/": {
+"https://lnx.uspistruzione.fr.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bergamo",
+"provincia": "Frosinone",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": "ConnectionError"
 },
 "https://lecco.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -20,19 +20,19 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://bergamo.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://atcampobasso.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Campobasso",
 "avvisi": 0,
 "errore": null
-},
-"https://lnx.uspistruzione.fr.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Frosinone",
-"avvisi": 0,
-"errore": "ConnectionError"
 },
 "https://re.istruzioneer.gov.it/": {
 "grezzi": 26,
@@ -43,6 +43,20 @@
 "provincia": "Reggio Emilia",
 "avvisi": 24,
 "errore": null
+},
+"https://pa.usr.sicilia.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Palermo",
+"avvisi": 0,
+"errore": null
+},
+"https://varese.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Varese",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://uat-salerno.it/Documenti/CIRCOLARI/Interpelli-per-reclutamento-personale-docente": {
 "grezzi": 0,
@@ -62,20 +76,6 @@
 "provincia": "Enna",
 "avvisi": 25,
 "errore": null
-},
-"https://pa.usr.sicilia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Palermo",
-"avvisi": 0,
-"errore": null
-},
-"https://varese.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Varese",
-"avvisi": 0,
-"errore": "SSLError"
 },
 "https://www.hotels-ferrara.com/it/b19703/": {
 "grezzi": 0,
@@ -98,16 +98,13 @@
 "avvisi": 0,
 "errore": null
 },
-"https://t.me/s/usr_sicilia": {
-"grezzi": 46,
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 23,
 "scartati": [
-"https://usr.sicilia.it/?p=36755",
-"https://usr.sicilia.it/?p=36757",
-"https://usr.sicilia.it/?p=36768",
-"https://usr.sicilia.it/?p=36788"
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
 ],
-"provincia": null,
-"avvisi": 14,
+"provincia": "Rovigo",
+"avvisi": 22,
 "errore": null
 },
 "https://www.istruzionepiacenza.it/": {
@@ -145,13 +142,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 23,
+"https://t.me/s/usr_sicilia": {
+"grezzi": 46,
 "scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+"https://usr.sicilia.it/?p=36755",
+"https://usr.sicilia.it/?p=36757",
+"https://usr.sicilia.it/?p=36768",
+"https://usr.sicilia.it/?p=36788"
 ],
-"provincia": "Rovigo",
-"avvisi": 22,
+"provincia": null,
+"avvisi": 14,
 "errore": null
 },
 "https://me.usr.sicilia.it/personale-scuola/interpelli/": {
@@ -166,13 +166,6 @@
 "avvisi": 25,
 "errore": null
 },
-"https://www.toscana-istruzione.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pisa",
-"avvisi": 0,
-"errore": "HTTP 403"
-},
 "https://fe.istruzioneer.gov.it/": {
 "grezzi": 59,
 "scartati": [
@@ -185,14 +178,12 @@
 "avvisi": 29,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 2,
-"scartati": [
-"https://vicenza.istruzioneveneto.gov.it/2026/11/13/convalida-del-punteggio-gps-assegnato-al-personale-docente-"
-],
-"provincia": "Vicenza",
-"avvisi": 1,
-"errore": null
+"https://www.toscana-istruzione.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 403"
 },
 "https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/": {
 "grezzi": 103,
@@ -204,6 +195,15 @@
 ],
 "provincia": "Roma",
 "avvisi": 17,
+"errore": null
+},
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 2,
+"scartati": [
+"https://vicenza.istruzioneveneto.gov.it/2026/11/13/convalida-del-punteggio-gps-assegnato-al-personale-docente-"
+],
+"provincia": "Vicenza",
+"avvisi": 1,
 "errore": null
 },
 "https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
@@ -263,6 +263,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pordenone",
+"avvisi": 0,
+"errore": null
+},
 "https://www.uspbari.it/": {
 "grezzi": 52,
 "scartati": [
@@ -273,13 +280,6 @@
 ],
 "provincia": "Bari",
 "avvisi": 14,
-"errore": null
-},
-"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pordenone",
-"avvisi": 0,
 "errore": null
 },
 "https://www.ustlecce.it/": {
@@ -313,13 +313,6 @@
 "avvisi": 12,
 "errore": null
 },
-"https://www.usptaranto.it/": {
-"grezzi": 14,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 14,
-"errore": null
-},
 "https://www.istruzionegenova.gov.it/pagine/interpelli---docenti": {
 "grezzi": 117,
 "scartati": [
@@ -330,6 +323,13 @@
 ],
 "provincia": "Genova",
 "avvisi": 0,
+"errore": null
+},
+"https://www.usptaranto.it/": {
+"grezzi": 12,
+"scartati": [],
+"provincia": "Taranto",
+"avvisi": 12,
 "errore": null
 }
 }
