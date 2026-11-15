@@ -1,17 +1,17 @@
 {
-"http://www.ustcremona.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": null
-},
 "https://lnx.uspistruzione.fr.it/wp2/category/interpello-nazionale": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Frosinone",
 "avvisi": 0,
 "errore": "ConnectionError"
+},
+"http://www.ustcremona.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cremona",
+"avvisi": 0,
+"errore": null
 },
 "https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
@@ -20,17 +20,17 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://milano.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://milano.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -95,6 +95,13 @@
 "avvisi": 1,
 "errore": null
 },
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 28,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 28,
+"errore": null
+},
 "https://rovigo.istruzioneveneto.gov.it/": {
 "grezzi": 23,
 "scartati": [
@@ -102,13 +109,6 @@
 ],
 "provincia": "Rovigo",
 "avvisi": 22,
-"errore": null
-},
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 28,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 28,
 "errore": null
 },
 "https://www.istruzionepiemonte.it/": {
@@ -146,15 +146,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/": {
-"grezzi": 2,
-"scartati": [
-"https://vicenza.istruzioneveneto.gov.it/2026/11/13/convalida-del-punteggio-gps-assegnato-al-personale-docente-"
-],
-"provincia": "Vicenza",
-"avvisi": 1,
-"errore": null
-},
 "https://tp.usr.sicilia.it/": {
 "grezzi": 21,
 "scartati": [
@@ -167,25 +158,6 @@
 "avvisi": 15,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 43,
-"scartati": [
-"https://twitter.com/home?status=INTERPELLO A042 – SCIENZE E TECNOLOGIE MECCANICHE – ORE 4 –  PRESA DI SERVIZIO",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
-"https://cl-en.usr.sicilia.it/ripresa-attivita-didattiche-giorno-12-novembre-2026/"
-],
-"provincia": "Caltanissetta",
-"avvisi": 27,
-"errore": null
-},
-"https://www.toscana-istruzione.it/atpisa/category/news/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pisa",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://fe.istruzioneer.gov.it/": {
 "grezzi": 59,
 "scartati": [
@@ -196,6 +168,34 @@
 ],
 "provincia": "Ferrara",
 "avvisi": 29,
+"errore": null
+},
+"https://vicenza.istruzioneveneto.gov.it/": {
+"grezzi": 2,
+"scartati": [
+"https://vicenza.istruzioneveneto.gov.it/2026/11/13/convalida-del-punteggio-gps-assegnato-al-personale-docente-"
+],
+"provincia": "Vicenza",
+"avvisi": 1,
+"errore": null
+},
+"https://www.toscana-istruzione.it/atpisa/category/news/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
+"grezzi": 43,
+"scartati": [
+"https://twitter.com/home?status=INTERPELLO A042 – SCIENZE E TECNOLOGIE MECCANICHE – ORE 4 –  PRESA DI SERVIZIO",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
+"https://cl-en.usr.sicilia.it/ripresa-attivita-didattiche-giorno-12-novembre-2026/"
+],
+"provincia": "Caltanissetta",
+"avvisi": 27,
 "errore": null
 },
 "https://www.usp-rieti.it/feed/": {
@@ -228,10 +228,15 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.ust.fi.it/feed/": {
-"grezzi": 9,
-"scartati": [],
-"provincia": "Firenze",
+"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
+"grezzi": 22,
+"scartati": [
+"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/",
+"https://www.istruzione.calabria.it/crotone/category/notizie/",
+"https://www.istruzione.calabria.it/crotone/interpello-am2a-lingue-e-culture-straniere-nellistruzione-secondari",
+"https://www.istruzione.calabria.it/crotone/interpello-classe-concorso-a002-pertini-santoni/"
+],
+"provincia": "Crotone",
 "avvisi": 9,
 "errore": null
 },
@@ -241,6 +246,20 @@
 "https://www.mim.gov.it/web/sondrio/-/interpello-i-c-martino-anzi-di-bormio-adee"
 ],
 "provincia": "Sondrio",
+"avvisi": 0,
+"errore": null
+},
+"https://www.ust.fi.it/feed/": {
+"grezzi": 9,
+"scartati": [],
+"provincia": "Firenze",
+"avvisi": 9,
+"errore": null
+},
+"https://www.mim.gov.it/web/lodi/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lodi",
 "avvisi": 0,
 "errore": null
 },
@@ -254,13 +273,6 @@
 ],
 "provincia": "Pesaro e Urbino",
 "avvisi": 3,
-"errore": null
-},
-"https://www.mim.gov.it/web/lodi/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lodi",
-"avvisi": 0,
 "errore": null
 },
 "https://www.usr.sicilia.it/": {
@@ -287,16 +299,16 @@
 "avvisi": 11,
 "errore": null
 },
-"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
-"grezzi": 22,
+"https://www.istruzione-ancona.it/": {
+"grezzi": 67,
 "scartati": [
-"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/",
-"https://www.istruzione.calabria.it/crotone/category/notizie/",
-"https://www.istruzione.calabria.it/crotone/interpello-am2a-lingue-e-culture-straniere-nellistruzione-secondari",
-"https://www.istruzione.calabria.it/crotone/interpello-classe-concorso-a002-pertini-santoni/"
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
+"https://www.istruzione-ancona.it/interpello-i-c-grazie-tavernelle-di-ancona-adee-sostegno-scuola-primaria-24-o",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/"
 ],
-"provincia": "Crotone",
-"avvisi": 9,
+"provincia": "Ancona",
+"avvisi": 14,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.pistoia.it/": {
@@ -333,18 +345,6 @@
 ],
 "provincia": "Lecce",
 "avvisi": 17,
-"errore": null
-},
-"https://www.istruzione-ancona.it/": {
-"grezzi": 67,
-"scartati": [
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
-"https://www.istruzione-ancona.it/interpello-i-c-grazie-tavernelle-di-ancona-adee-sostegno-scuola-primaria-24-o",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/"
-],
-"provincia": "Ancona",
-"avvisi": 14,
 "errore": null
 }
 }
