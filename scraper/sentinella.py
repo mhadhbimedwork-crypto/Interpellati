@@ -32,7 +32,7 @@ TITOLO_ISSUE = "Sentinella: allarmi aperti"
 FRESCHEZZA = {"data/interpelli.json": 8, "data/memoria_scuole.json": 30, "data/scuole_stato.json": 30,
               "data/priorita_lettura.json": 48}
 # workflow -> ore massime dall'ultimo successo (default 48)
-SOGLIA_FERMO = {"Scansione interpelli": 6, "Ricerca B015-B017": 12, "Miglioramento giornaliero e memoria": 30,
+SOGLIA_FERMO = {"Sonda feed e cache dei siti": 200, "Scansione interpelli": 6, "Ricerca B015-B017": 12, "Miglioramento giornaliero e memoria": 30,
                 "Controllo completezza": 12, "Sentinella": 3}
 NON_RILANCIARE = {"build-apk.yml", "sentinella.yml"}
 
