@@ -9,6 +9,7 @@ import {
   ActivityIndicator,
   FlatList,
   Linking,
+  Modal,
   Platform,
   Pressable,
   RefreshControl,
@@ -56,6 +57,7 @@ import {
   memStats,
 } from './src/feed';
 import { conCoordinate, MappaInterpelli } from './src/MapView';
+import { WebView } from 'react-native-webview';
 import { APK_URL, buildDisponibile, buildInstallata, scaricaEInstalla } from './src/aggiorna';
 import {
   inviaRichiesta, inviaVerifica, LINK_APP, leggiStato, modalitaServer, registra, registrato, segnala, statoSalvato, usaCodice, versioneVecchia,
@@ -116,6 +118,7 @@ const CAMPI_CLASSE: [string, string][] = [
   ['titoloVoto', 'Voto'],
   ['riferimento', 'Riferimento normativo del titolo'],
   ['servizio', 'Servizio prestato in questa classe'],
+  ['senzaAbil', "Non ho l'abilitazione/specializzazione per questa classe (scrivi «sì», altrimenti lascia vuoto)"],
 ];
 // Vecchio testo che il profilo di alcune installazioni conteneva per tutte le classi: va solo alle classi che cita.
 const LEGACY_RIF = /titolo di accesso alle classi B-15 e B-17/i;
@@ -204,6 +207,7 @@ function mailFor(it: Interpello, p: Record<string, string>, mie: string[] = []) 
       : w('riferimento') ? w('riferimento') + '.' : '',
     v('graduatorie') ? 'Graduatorie: ' + v('graduatorie') + '.' : '',
     w('servizio') ? 'Servizio: ' + w('servizio') + '.' : '',
+    /^s[iì]/i.test(w('senzaAbil')) ? "Dichiaro di non essere in possesso dell'abilitazione/specializzazione per questa classe e metto a disposizione la mia disponibilità in caso di esaurimento delle graduatorie e degli aspiranti con il titolo specifico." : '',
     '',
     v('disponibilita') || 'Disponibilità a prendere servizio immediatamente.',
     '',
@@ -1480,6 +1484,30 @@ function durataLabel(it: Interpello): string {
   return '';
 }
 
+function AvvisoViewer({ it, onClose, onRispondi, s, c }: { it: Interpello; onClose: () => void; onRispondi: () => void; s: any; c: Pal }) {
+  const link = it.link || '';
+  const uri = /\.pdf($|\?)/i.test(link) ? 'https://docs.google.com/gview?embedded=1&url=' + encodeURIComponent(link) : link;
+  return (
+    <Modal visible animationType="slide" onRequestClose={onClose}>
+      <View style={{ flex: 1, backgroundColor: c.bg }}>
+        <View style={{ padding: 12, gap: 6 }}>
+          <Text style={s.title} numberOfLines={2}>{(it.classi || []).join(' / ')} · {it.scuola || 'Avviso'}</Text>
+          <View style={s.actions}>
+            {it.email ? (
+              <Pressable onPress={onRispondi} style={[s.btn, s.btnPrimary]}>
+                <Text style={[s.btnText, { color: c.accentInk }]}>Rispondi subito</Text>
+              </Pressable>
+            ) : null}
+            <Pressable onPress={() => Linking.openURL(link).catch(() => toast('Impossibile aprire il link'))} style={s.btn}><Text style={s.btnText}>Apri nel browser</Text></Pressable>
+            <Pressable onPress={onClose} style={s.btn}><Text style={s.btnText}>Chiudi</Text></Pressable>
+          </View>
+        </View>
+        <WebView source={{ uri }} style={{ flex: 1 }} startInLoadingState renderLoading={() => <ActivityIndicator style={{ marginTop: 32 }} color={c.accent} />} />
+      </View>
+    </Modal>
+  );
+}
+
 function Card({
   it, s, c, cand, expanded, onToggle, profilo, saveCand, casa, docs, mie,
 }: {
@@ -1487,6 +1515,17 @@ function Card({
   profilo: Record<string, string>; saveCand: (id: string, p: Partial<Cand>) => void;
   casa: Casa | null; docs: Documento[]; mie: string[];
 }) {
+  const [vedi, setVedi] = useState(false);
+  const rispondi = async () => {
+    if (!it.email) { toast("Nessuna mail sull'avviso: usa il modulo o apri l'avviso"); return; }
+    const mm = mailFor(it, profilo, mie);
+    try {
+      const r = await inviaCandidatura(it.email, mm.subject, mm.body);
+      if (r === 'inviata') { saveCand(it.id, { stato: 'inviata' }); toast('Candidatura inviata'); }
+    } catch {
+      Linking.openURL('mailto:' + it.email + '?subject=' + encodeURIComponent(mm.subject) + '&body=' + encodeURIComponent(mm.body)).catch(() => toast('Nessuna app di posta'));
+    }
+  };
   const dist = km(casa, it);
   const op = isOpen(it);
   const d = parseDate(it.scadenza);
@@ -1554,7 +1593,18 @@ function Card({
           {[it.oreEvidenza, it.durataEvidenza].filter(Boolean).map((x) => '«…' + x + '…»').join(' ')}
         </Text>
       ) : null}
+      {vedi ? <AvvisoViewer it={it} s={s} c={c} onClose={() => setVedi(false)} onRispondi={() => { setVedi(false); rispondi(); }} /> : null}
       <View style={s.actions}>
+        {it.email ? (
+          <Pressable onPress={rispondi} style={[s.btn, s.btnPrimary]}>
+            <Text style={[s.btnText, { color: c.accentInk }]}>Rispondi subito</Text>
+          </Pressable>
+        ) : null}
+        {it.link ? (
+          <Pressable onPress={() => setVedi(true)} style={s.btn}>
+            <Text style={s.btnText}>Vedi avviso qui</Text>
+          </Pressable>
+        ) : null}
         {it.candidatura && /^https?:/.test(it.candidatura) ? (
           <Pressable onPress={() => Linking.openURL(it.candidatura!)} style={s.btn}>
             <Text style={s.btnText}>Modulo di candidatura</Text>
