@@ -883,14 +883,14 @@
 {
 "data": "2026-11-16",
 "scuole": 7780,
-"verdi": 6379,
-"arancioni": 49,
+"verdi": 6391,
+"arancioni": 37,
 "rossi": 1352,
-"percentuale_verdi": 82.0,
+"percentuale_verdi": 82.1,
 "per_regione": {
 "Abruzzo": {
-"verde": 174,
-"arancione": 1,
+"verde": 173,
+"arancione": 2,
 "rosso": 35
 },
 "Basilicata": {
@@ -899,8 +899,8 @@
 "rosso": 9
 },
 "Calabria": {
-"verde": 251,
-"arancione": 0,
+"verde": 248,
+"arancione": 3,
 "rosso": 68
 },
 "Campania": {
@@ -909,8 +909,8 @@
 "rosso": 78
 },
 "Emilia-Romagna": {
-"verde": 336,
-"arancione": 5,
+"verde": 339,
+"arancione": 2,
 "rosso": 131
 },
 "Friuli Venezia Giulia": {
@@ -919,8 +919,8 @@
 "rosso": 39
 },
 "Lazio": {
-"verde": 583,
-"arancione": 0,
+"verde": 582,
+"arancione": 1,
 "rosso": 131
 },
 "Liguria": {
@@ -929,8 +929,8 @@
 "rosso": 57
 },
 "Lombardia": {
-"verde": 931,
-"arancione": 7,
+"verde": 934,
+"arancione": 4,
 "rosso": 192
 },
 "Marche": {
@@ -949,18 +949,18 @@
 "rosso": 94
 },
 "Puglia": {
-"verde": 501,
-"arancione": 15,
+"verde": 510,
+"arancione": 6,
 "rosso": 69
 },
 "Sardegna": {
-"verde": 208,
-"arancione": 1,
+"verde": 206,
+"arancione": 3,
 "rosso": 32
 },
 "Sicilia": {
-"verde": 671,
-"arancione": 1,
+"verde": 672,
+"arancione": 0,
 "rosso": 61
 },
 "Toscana": {
@@ -974,8 +974,8 @@
 "rosso": 9
 },
 "Umbria": {
-"verde": 101,
-"arancione": 4,
+"verde": 104,
+"arancione": 1,
 "rosso": 46
 },
 "Valle d'Aosta": {
@@ -2021,12 +2021,6 @@
 {
 "data": "2026-11-16",
 "tipo": "causa",
-"causa": "errore recente",
-"scuole": 30
-},
-{
-"data": "2026-11-16",
-"tipo": "causa",
 "causa": "irraggiungibile da 8 giorni",
 "scuole": 29
 },
@@ -2039,108 +2033,114 @@
 {
 "data": "2026-11-16",
 "tipo": "causa",
+"causa": "errore recente",
+"scuole": 18
+},
+{
+"data": "2026-11-16",
+"tipo": "causa",
 "causa": "irraggiungibile da 7 giorni",
 "scuole": 2
 },
 {
 "data": "2026-11-16",
 "tipo": "recuperate",
-"scuole": 104,
+"scuole": 22,
 "esempi": [
 {
-"codice": "LTIC82700R",
-"nome": "IC PACIFICI SEZZE -BASSIANO",
+"codice": "MEIC876009",
+"nome": "I.C. DI TORREGROTTA",
 "prima": "arancione"
 },
 {
-"codice": "MCRI05000P",
-"nome": "\"DON E. POCOGNONI\"",
-"prima": "rosso"
+"codice": "PGMM23500L",
+"nome": "CPIA 1 PERUGIA",
+"prima": "arancione"
 },
 {
-"codice": "PGIS03300A",
-"nome": "I.I.S. \"CAVOUR-MARCONI-PASCAL\"",
-"prima": "rosso"
+"codice": "PGIC86400T",
+"nome": "I.C. PERUGIA 7",
+"prima": "arancione"
 },
 {
-"codice": "RMEE309003",
-"nome": "\"TRILUSSA\"",
-"prima": "rosso"
+"codice": "PGIC85900A",
+"nome": "I.C. PERUGIA 11",
+"prima": "arancione"
 },
 {
-"codice": "MSIS001007",
-"nome": "IST. PELLEGRINO ROSSI",
-"prima": "rosso"
+"codice": "BOIC85500V",
+"nome": "I.C. N. 12 BOLOGNA V. BARTOLINI",
+"prima": "arancione"
 },
 {
-"codice": "LTIC833004",
-"nome": "I.C. DONNA LELIA CAETANI",
-"prima": "rosso"
+"codice": "MORC08000G",
+"nome": "CATTANEO DELEDDA- SOCIO COMM ARTIGIAN.",
+"prima": "arancione"
 },
 {
-"codice": "RMIC80700P",
-"nome": "URUGUAY",
-"prima": "rosso"
+"codice": "MOIC81900N",
+"nome": "I.C. SAN FELICE SUL PANARO",
+"prima": "arancione"
 },
 {
-"codice": "RMSD11000B",
-"nome": "LICEO ARTISTICO E LINGUISTICO PICASSO",
-"prima": "rosso"
+"codice": "BSIS007008",
+"nome": "\"F. MENEGHINI\" - EDOLO",
+"prima": "arancione"
 }
 ]
 },
 {
 "data": "2026-11-16",
 "tipo": "peggiorate",
-"scuole": 24,
+"scuole": 10,
 "esempi": [
 {
-"codice": "PGMM23500L",
-"nome": "CPIA 1 PERUGIA",
-"ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
-},
-{
-"codice": "PGIC86400T",
-"nome": "I.C. PERUGIA 7",
-"ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
-},
-{
-"codice": "PGIC85900A",
-"nome": "I.C. PERUGIA 11",
-"ora": "arancione",
-"motivo": "errore recente (HTTP 403): si riprova ogni giorno"
-},
-{
-"codice": "MORC08000G",
-"nome": "CATTANEO DELEDDA- SOCIO COMM ARTIGIAN.",
+"codice": "RMIS113003",
+"nome": "CROCE-ALERAMO",
 "ora": "arancione",
 "motivo": "errore recente (HTTP 522): si riprova ogni giorno"
 },
 {
-"codice": "BLIC81700R",
-"nome": "IC D. ALIGHIERI FORNO DI ZOLDO",
+"codice": "SSIC82900L",
+"nome": "\"MARIA LAI\" DI OLBIA",
 "ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+"motivo": "errore recente (ReadTimeout): si riprova ogni giorno"
 },
 {
-"codice": "MOIC81900N",
-"nome": "I.C. SAN FELICE SUL PANARO",
+"codice": "CAIS01600A",
+"nome": "I.I.S.\"P. LEVI\" QUARTU S.E.",
 "ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+"motivo": "errore recente (HTTP 403): si riprova ogni giorno"
 },
 {
-"codice": "BGIC870003",
-"nome": "\"VALLE D'ARGON\"",
+"codice": "FGIC86100G",
+"nome": "I.C. \"FOSCOLO - GABELLI\"",
 "ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+"motivo": "errore recente (ReadTimeout): si riprova ogni giorno"
 },
 {
-"codice": "BSIS007008",
-"nome": "\"F. MENEGHINI\" - EDOLO",
+"codice": "CSIC8AH00B",
+"nome": "IC CORIGLIANO \"ERODOTO\"",
 "ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+"motivo": "errore recente (ReadTimeout): si riprova ogni giorno"
+},
+{
+"codice": "VVIC83500G",
+"nome": "ISTITUTO COMPRENSIVO VALLELONGA",
+"ora": "arancione",
+"motivo": "errore recente (non raggiungibile): si riprova ogni giorno"
+},
+{
+"codice": "BAIC87300D",
+"nome": "I.C. \"G. MODUGNO - G. GALILEI\"",
+"ora": "arancione",
+"motivo": "errore recente (ReadTimeout): si riprova ogni giorno"
+},
+{
+"codice": "CZIS019007",
+"nome": "P.T.P. \"RAMBALDI- DE FAZIO\"",
+"ora": "arancione",
+"motivo": "errore recente (ReadTimeout): si riprova ogni giorno"
 }
 ]
 }
