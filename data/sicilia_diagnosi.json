@@ -931,20 +931,6 @@
    ]
   ]
  },
- "MEIC876009": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "HTTP 403",
-  "motivo": "recuperato",
-  "nuovo": "https://ictorregrotta.edu.it/",
-  "sito": "https://ictorregrotta.edu.it/",
-  "tentativi": [
-   [
-    "https://www.ictorregrotta.edu.it/",
-    "OK"
-   ]
-  ]
- },
  "PAIC817007": {
   "dns_pubblico": "no",
   "dns_runner": false,
@@ -1159,24 +1145,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iissgagini.edu.it/",
   "sito": "https://www.iissgagini.edu.it/",
   "tentativi": [
    [
     "https://www.iissgagini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.iissgagini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://iissgagini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://iissgagini.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1291,8 +1266,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceoruggierimarsala.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceoruggierimarsala.edu.it/",
   "tentativi": [
    [
@@ -1301,7 +1275,15 @@
    ],
    [
     "http://www.liceoruggierimarsala.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://liceoruggierimarsala.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://liceoruggierimarsala.edu.it/",
+    "HTTP 509"
    ]
   ]
  }
