@@ -2,47 +2,47 @@
 "esiti": [
 [
 "recuperata al riprovo",
-627
+541
 ],
 [
 "sempre in errore (robots vieta)",
-526
+517
 ],
 [
 "sempre in errore (509)",
-516
+517
 ],
 [
 "sempre in errore (ConnectionError)",
-334
+339
 ],
 [
 "sempre in errore (503)",
-236
+234
+],
+[
+"sempre in errore (ConnectTimeout)",
+207
 ],
 [
 "sempre in errore (ReadTimeout)",
-80
-],
-[
-"sempre in errore (500)",
-48
+60
 ],
 [
 "sempre in errore (MissingSchema)",
 40
 ],
 [
-"sempre in errore (502)",
+"sempre in errore (500)",
 33
 ],
 [
 "sempre in errore (403)",
-29
+31
 ],
 [
-"sempre in errore (ConnectTimeout)",
-23
+"sempre in errore (502)",
+24
 ],
 [
 "sempre in errore (SSLError)",
@@ -83,11 +83,11 @@
 ],
 "ip_piu_comuni": [
 [
-1370,
+1368,
 "217.27.72.228"
 ],
 [
-557,
+608,
 "13.37.102.167"
 ],
 [
@@ -575,15 +575,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1125932,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='ic4imola.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ic4imola.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ic4imola.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "RMIC8CM003": {
 "url": "https://www.icviagentile40.gov.it/",
@@ -1312,11 +1316,19 @@
 "testo": ""
 },
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 79220,
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
 "testo": ""
 }
 ],
@@ -1607,19 +1619,11 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
+"len": 80321,
 "testo": ""
 }
 ],
@@ -1999,6 +2003,10 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icarquatavignole.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
@@ -2007,27 +2015,23 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "RMIC8GG001": {
 "url": "https://www.icparcodegliacquedotti.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 502,
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='icparcodegliacquedotti.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.icparcodegliacquedotti.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.icparcodegliacquedotti.edu.it', port=443): Read timed out. (read timeout=25)"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1330770,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -2037,15 +2041,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1306463,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutodonadoni.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutodonadoni.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutodonadoni.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MOPS04000L": {
 "url": "https://www.liceomorandi.edu.it/",
@@ -2441,15 +2449,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1279079,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iciseo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iciseo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iciseo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "VIIC85200Q": {
 "url": "https://www.icarsiero.edu.it/",
@@ -2502,11 +2514,11 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
+"len": 96586,
 "testo": ""
 }
 ],
@@ -2780,15 +2792,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1281750,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='icvadomonzuno.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icvadomonzuno.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icvadomonzuno.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "LTIC80100L": {
 "url": "https://www.icsonnino.gov.it/",
@@ -3093,20 +3109,12 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='istitutocomprensivoanzio2.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='istitutocomprensivoanzio2.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": 500,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1312063,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -3382,11 +3390,27 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 94258,
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
 "testo": ""
 }
 ],
@@ -3469,15 +3493,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1296257,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.comprensivolongarone.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.comprensivolongarone.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.comprensivolongarone.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "PDIC862001": {
 "url": "https://www.scuolecampodarsego.edu.it/",
@@ -3546,20 +3574,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icsfalerone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='icsfalerone.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icsfalerone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='icsfalerone.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icsfalerone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
 }
 ],
 "ts": "2026-11-18"
@@ -3641,15 +3665,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1289633,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.ddcastelsanpietro.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ddcastelsanpietro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ddcastelsanpietro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "NAIC8E6001": {
 "url": "https://www.icgragnano3.edu.it/",
@@ -3776,27 +3804,23 @@
 "ts": "2026-11-14"
 },
 "PDPC03000X": {
-"url": "https://www.liceotitolivio.edu.it/",
-"ip": "217.27.72.228",
+"url": "https://ok365.liceotitolivio.it/",
+"ip": "",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='ok365.liceotitolivio.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
 },
 {
-"st": 200,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 93189,
-"testo": ""
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='ok365.liceotitolivio.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='ok365.liceotitolivio.it', port=443): Max retries exceeded with url: / (Caused by NameResolutio"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "TOIS02700G": {
 "url": "https://www.istitutoeuropaunita.edu.it/",
@@ -4055,15 +4079,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1293758,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icbariano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icbariano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icbariano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "VIIC89000E": {
 "url": "https://www.icsossano.gov.it/",
@@ -4295,15 +4323,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1285212,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvestone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvestone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvestone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-14"
+"ts": "2026-11-18"
 },
 "GEEE02200L": {
 "url": "https://www.convittogenova.edu.it/",
@@ -5139,15 +5171,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1147860,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icgiannone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icgiannone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icgiannone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MOIS024009": {
 "url": "https://www.istitutoguarini.edu.it/",
@@ -5323,27 +5359,11 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
+"len": 88604,
 "testo": ""
 }
 ],
@@ -5426,15 +5446,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1286593,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ic1belluno.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ic1belluno.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ic1belluno.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "MCIC804006": {
 "url": "https://www.icsarnano.edu.it/",
@@ -5529,15 +5553,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1304901,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia1bergamo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia1bergamo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia1bergamo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BGIS01600E": {
 "url": "https://www.istitutovalleseriana.edu.it/",
@@ -5559,15 +5587,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1285569,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdarfo1.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdarfo1.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdarfo1.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "UDIC82300R": {
 "url": "https://icvaltagliamento.edu.it/",
@@ -5604,15 +5636,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1296639,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia1brescia.edu.it', port=443): Max retries exceeded with url: /index.php?idpag=1/ (Cause"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia1brescia.edu.it', port=443): Max retries exceeded with url: /index.php?idpag=1/ (Cause"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia1brescia.edu.it', port=443): Max retries exceeded with url: /index.php?idpag=1/ (Cause"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "RMIC83600P": {
 "url": "https://ictraiano.edu.it/",
@@ -6922,15 +6958,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1293413,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutoglobalesantantioco.edu.it', port=443): Max retries exceeded with url: / (Caused by"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutoglobalesantantioco.edu.it', port=443): Max retries exceeded with url: / (Caused by"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutoglobalesantantioco.edu.it', port=443): Max retries exceeded with url: / (Caused by"
 }
 ],
-"ts": "2026-11-14"
+"ts": "2026-11-18"
 },
 "VRIC85500G": {
 "url": "https://www.icsommariva.edu.it/",
@@ -7074,11 +7114,11 @@
 "server": "",
 "ra": "",
 "via": "",
-"len": 167990,
+"len": 168170,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BGIS00300C": {
 "url": "https://www.bettyambiveri.edu.it/",
@@ -7485,20 +7525,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.iscmontalcini.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iscmontalcini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.iscmontalcini.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iscmontalcini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iscmontalcini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
 "ts": "2026-11-18"
@@ -7590,24 +7626,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.icpagani.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpagani.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 },
 {
-"st": 504,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 160,
-"testo": "<html>\r <head><title>504 Gateway Time-out</title></head>\r <body>\r <center><h1>504 Gateway Time-out</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpagani.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 },
 {
-"st": 502,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpagani.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 }
 ],
 "ts": "2026-11-18"
@@ -7659,28 +7687,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icrugantino91.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icrugantino91.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icrugantino91.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
 "ts": "2026-11-18"
@@ -8102,15 +8118,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1310537,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icginostradacasirate.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icginostradacasirate.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icginostradacasirate.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "VAIC84500V": {
 "url": "https://www.scuoleolgiate.edu.it/",
@@ -8728,28 +8748,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolafilottrano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolafilottrano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 },
 {
-"st": 502,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolafilottrano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 }
 ],
 "ts": "2026-11-18"
@@ -9076,15 +9084,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1286601,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdazegliodenittis.edu.it', port=443): Max retries exceeded with url: / (Caused by Connect"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdazegliodenittis.edu.it', port=443): Max retries exceeded with url: / (Caused by Connect"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdazegliodenittis.edu.it', port=443): Max retries exceeded with url: / (Caused by Connect"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BSIC88300N": {
 "url": "https://www.icnord1brescia.gov.it/",
@@ -9259,7 +9271,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "MOIC846002": {
 "url": "https://www.ic7modena.edu.it/",
@@ -9327,15 +9339,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1288264,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccentro.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccentro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccentro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "BRIC847003": {
 "url": "https://www.icgiovannixxiiimoro.edu.it/",
@@ -9457,15 +9473,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1284632,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='6istitutocomprensivopadova.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='6istitutocomprensivopadova.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='6istitutocomprensivopadova.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "CAIS012003": {
 "url": "https://wwwistitutoglobalecarloforte.gov.it/",
@@ -9533,15 +9553,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1277993,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icovest1brescia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icovest1brescia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icovest1brescia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "NAIC8FW00G": {
 "url": "https://www.davincicomes.edu.it/",
@@ -10272,23 +10296,15 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
 "st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 87045,
+"len": 86903,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "UDIS01200E": {
 "url": "https://www.isismanzini.edu.it/",
@@ -10551,14 +10567,6 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
 "st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
@@ -10763,24 +10771,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 502,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='comprensivosanpiov.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='comprensivosanpiov.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='comprensivosanpiov.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='comprensivosanpiov.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 }
 ],
 "ts": "2026-11-18"
@@ -10869,7 +10869,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "BSIC851006": {
 "url": "https://www.icnuvolento.edu.it/",
@@ -11010,28 +11010,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icfalconeeborsellino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icfalconeeborsellino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icfalconeeborsellino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 }
 ],
 "ts": "2026-11-18"
@@ -11448,46 +11436,38 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsandamiano.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='icsandamiano.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectionError",
+"testo": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+}
+],
+"ts": "2026-11-18"
+},
+"BIIC802005": {
+"url": "https://www.istitutocomprensivodipray.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivodipray.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1307099,
+"len": 1287825,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
-},
-"BIIC802005": {
-"url": "https://www.istitutocomprensivodipray.edu.it/",
-"ip": "217.27.72.228",
-"t": [
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-}
-],
-"ts": "2026-11-10"
+"ts": "2026-11-18"
 },
 "VRIC815005": {
 "url": "https://www.grezzanascuole.edu.it/",
@@ -11995,6 +11975,14 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccostigliole.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='iccostigliole.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
@@ -12003,7 +11991,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MBIC8F4007": {
 "url": "https://www.iclissoneprimo.edu.it/",
@@ -12014,11 +12002,11 @@
 "server": "",
 "ra": "",
 "via": "",
-"len": 324829,
+"len": 324979,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MBIC8DC006": {
 "url": "https://www.comprensivoaldomoro.edu.it/",
@@ -12103,15 +12091,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1293413,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutoglobalesantantioco.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutoglobalesantantioco.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutoglobalesantantioco.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
 }
 ],
-"ts": "2026-11-14"
+"ts": "2026-11-18"
 },
 "TEIC82300G": {
 "url": "https://www.iccampli.edu.it/",
@@ -12461,15 +12453,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1291977,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.donboscomanzoni.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.donboscomanzoni.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.donboscomanzoni.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MCIS01100D": {
 "url": "https://www.bonifazicorridoni.edu.it/",
@@ -13109,15 +13105,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1310026,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdeamicistreviglio.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdeamicistreviglio.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdeamicistreviglio.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "RMIC83100G": {
 "url": "https://istitutoalzavole.edu.it/",
@@ -13251,15 +13251,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1305275,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.agrariofeltre.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.agrariofeltre.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.agrariofeltre.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "MNIC819001": {
 "url": "https://icpoggio.edu.it/",
@@ -13561,15 +13565,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1288481,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icquerovas.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icquerovas.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icquerovas.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "VEIS00200G": {
 "url": "https://www.veronese-marconi.edu.it/",
@@ -13626,15 +13634,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1280333,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolamediamonterisi.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolamediamonterisi.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolamediamonterisi.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "TVIC832007": {
 "url": "https://www.icsanbiagio.edu.it/",
@@ -13870,15 +13882,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1101763,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpiaimola.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpiaimola.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpiaimola.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "NOIC83000Q": {
 "url": "https://www.iccronildemusso.edu.it/",
@@ -13931,19 +13947,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='icvilminorediscalve.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvilminorediscalve.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
 },
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1281581,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvilminorediscalve.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvilminorediscalve.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "PRIC834003": {
 "url": "https://www.icmontebelloparma.it/",
@@ -14204,15 +14220,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1304058,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.liceofederici.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.liceofederici.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.liceofederici.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "SIIC82000A": {
 "url": "https://icvirgiliomontepulciano.edu.it/",
@@ -14564,15 +14584,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1281167,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ic2sanlazzaro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ic2sanlazzaro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ic2sanlazzaro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "PCIC81500R": {
 "url": "https://www.iccastellarquato.edu.it/",
@@ -15008,10 +15032,31 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
 ],
-"ts": "2026-11-12"
+"ts": "2026-11-18"
 },
 "RCIC85100N": {
 "url": "https://www.icrizziconi.edu.it/",
@@ -15209,30 +15254,38 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1335750,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.falconeiis.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.falconeiis.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.falconeiis.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BLIC816001": {
 "url": "http://www.ictrichiana.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1313299,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPConnectionPool(host='www.ictrichiana.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPConnectionPool(host='www.ictrichiana.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPConnectionPool(host='www.ictrichiana.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "AVIS002002": {
 "url": "https://www.superioredesanctis.it/",
@@ -15305,15 +15358,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1278891,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icverolanuova.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icverolanuova.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icverolanuova.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "PZIC886003": {
 "url": "https://www.ictorracalavista.edu.it/",
@@ -15557,15 +15614,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1290139,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccast.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccast.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccast.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "MIIC8CA003": {
 "url": "https://www.icinzago.edu.it/",
@@ -16147,15 +16208,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1300381,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsersale.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsersale.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsersale.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "NAIC8JF00E": {
 "url": "https://www.iscuolapoerioriviera.edu.it/",
@@ -16431,15 +16496,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1303747,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsangiovannibianco.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsangiovannibianco.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsangiovannibianco.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "FIIC84900N": {
 "url": "https://www.comprensivomasaccio.edu.it/",
@@ -16650,15 +16719,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1289524,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutogiovanni23.edu.it', port=443): Max retries exceeded with url: / (Caused by Connect"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutogiovanni23.edu.it', port=443): Max retries exceeded with url: / (Caused by Connect"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutogiovanni23.edu.it', port=443): Max retries exceeded with url: / (Caused by Connect"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BOIC810009": {
 "url": "https://www.iccastellodiserravalle.it/",
@@ -17175,10 +17248,31 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
 ],
-"ts": "2026-11-14"
+"ts": "2026-11-18"
 },
 "VIRI03000N": {
 "url": "https://www.garbin.edu.it/",
@@ -17306,15 +17400,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1309969,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icosiosotto-papagiovanni.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icosiosotto-papagiovanni.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icosiosotto-papagiovanni.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "FEIS01300Q": {
 "url": "https://www.einaudiferrara.edu.it/",
@@ -17728,15 +17826,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1306452,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivoquartucciu.edu.it', port=443): Max retries exceeded with url: / (Caused by "
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivoquartucciu.edu.it', port=443): Max retries exceeded with url: / (Caused by "
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivoquartucciu.edu.it', port=443): Max retries exceeded with url: / (Caused by "
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "RCRH100001": {
 "url": "https://www.ipalbturvillasangiovanni.edu.it/",
@@ -17774,10 +17876,15 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 87467,
+"testo": ""
 }
 ],
-"ts": "2026-11-12"
+"ts": "2026-11-18"
 },
 "MNIC81000E": {
 "url": "https://icvirgilio.gov.it/",
@@ -17985,6 +18092,14 @@
 "url": "https://www.icslapira.edu.it/",
 "ip": "217.27.72.228",
 "t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
 {
 "st": 200,
 "server": "nginx/1.26.1",
@@ -19304,7 +19419,8 @@
 "st": "SSLError",
 "testo": "HTTPSConnectionPool(host='icdavinci.goiss.it', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVe"
 }
-]
+],
+"ts": "2026-11-18"
 },
 "REIC833009": {
 "url": "https://www.iccasalgrande.edu.it/",
@@ -19918,15 +20034,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1311879,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='liceogambara.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='liceogambara.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='liceogambara.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MBIS00600B": {
 "url": "https://www.mkgandhi.edu.it/",
@@ -19943,30 +20063,19 @@
 "ip": "89.46.106.56",
 "t": [
 {
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iisdavigonicoloso.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 },
 {
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iisdavigonicoloso.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 },
 {
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iisdavigonicoloso.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
-]
+],
+"ts": "2026-11-18"
 },
 "PCPC010004": {
 "url": "https://www.liceogioia.edu.it/",
@@ -20993,15 +21102,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1137050,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.liceoalberti.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.liceoalberti.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.liceoalberti.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "RIPS08000Q": {
 "url": "https://www.istitutopertini.altervista.org/",
@@ -21135,15 +21248,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1345893,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdonadonisarnico.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdonadonisarnico.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdonadonisarnico.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "SOIC80300T": {
 "url": "https://www.comprensivolivigno.edu.it/",
@@ -21696,27 +21813,11 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
+"len": 113846,
 "testo": ""
 }
 ],
@@ -22347,15 +22448,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1280996,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='comprensivocastegnato.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='comprensivocastegnato.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='comprensivocastegnato.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "RMPS50000T": {
 "url": "https://www.liceoaristotele.edu.it/",
@@ -22372,11 +22477,27 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 95022,
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
 "testo": ""
 }
 ],
@@ -22552,11 +22673,11 @@
 "testo": ""
 },
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 79877,
+"len": 0,
 "testo": ""
 }
 ],
@@ -22657,15 +22778,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1278039,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icgandino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icgandino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icgandino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "AOIP012000": {
 "url": "https://www.montemilius3.it/",
@@ -22961,15 +23086,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1129836,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.ic7imola.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ic7imola.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ic7imola.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "AOIP018000": {
 "url": "https://www.ereinotti.edu.it/",
@@ -23244,7 +23373,7 @@
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 81858,
+"len": 82152,
 "testo": ""
 }
 ],
@@ -23568,11 +23697,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1282705,
+"len": 1283037,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MIIC8A6001": {
 "url": "https://www.icgessate.edu.it/",
@@ -24071,15 +24200,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1285340,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.comprensivoangius.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.comprensivoangius.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.comprensivoangius.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "CEIC86200A": {
 "url": "https://www.icparente.it/",
@@ -24686,15 +24819,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1108368,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivotiriolo.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivotiriolo.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivotiriolo.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "RCIC868003": {
 "url": "https://www.iccatona.edu.it/",
@@ -24940,15 +25077,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1285090,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivoauronzo.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivoauronzo.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivoauronzo.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "TOIC8BX00B": {
 "url": "http://www.francamazzarello.it/",
@@ -25080,15 +25221,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1313741,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icclusone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icclusone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icclusone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "SSIS01100G": {
 "url": "https://www.istitutoamsicora.edu.it/",
@@ -25165,19 +25310,11 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
+"len": 83409,
 "testo": ""
 }
 ],
@@ -25496,6 +25633,10 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.ic7bologna.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
@@ -25504,7 +25645,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "MIPS070007": {
 "url": "https://www.liceovittorioveneto.edu.it/",
@@ -25633,14 +25774,6 @@
 "testo": ""
 },
 {
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
 "st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
@@ -25666,15 +25799,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1151743,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdepisisferrara.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdepisisferrara.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdepisisferrara.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "BAIS084004": {
 "url": "https://www.lcoriani-corato.it/",
@@ -25805,7 +25942,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "PGIC84300R": {
 "url": "https://www.icbastia1.edu.it/",
@@ -25958,11 +26095,27 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 80969,
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
 "testo": ""
 }
 ],
@@ -26185,15 +26338,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1287859,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia1foggia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia1foggia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia1foggia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "SVIS00600T": {
 "url": "https://www.iisboselli-alberti-mazzini-davinci.edu.it/",
@@ -26575,15 +26732,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 1275525,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icscopellitigirifalco.edu.it', port=443): Max retries exceeded with url: / (Caused by Conn"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icscopellitigirifalco.edu.it', port=443): Max retries exceeded with url: / (Caused by Conn"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icscopellitigirifalco.edu.it', port=443): Max retries exceeded with url: / (Caused by Conn"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "VVIC829008": {
 "url": "https://www.comprensivofiladelfia.gov.it/",
@@ -26771,6 +26932,10 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmomigliano.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
@@ -26779,7 +26944,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "APIC811006": {
 "url": "https://www.icdeltrontoevalfluvione.edu.it/",
@@ -26817,15 +26982,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1294688,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivotortora.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivotortora.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivotortora.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
 }
 ],
-"ts": "2026-11-14"
+"ts": "2026-11-18"
 },
 "RMRH04000N": {
 "url": "https://www.amerigovespucci.edu.it/",
@@ -27052,15 +27221,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1295979,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivocarpi3.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivocarpi3.edu.it', port=443): Max retries exceeded with url: / (Caused by Conn"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivocarpi3.edu.it', port=443): Max retries exceeded with url: / (Caused by Conn"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "VRIC87500R": {
 "url": "https://www.comprensivovr02.edu.it/",
@@ -27252,24 +27425,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolepelago.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolepelago.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.scuolepelago.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolepelago.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 }
 ],
 "ts": "2026-11-18"
@@ -27389,27 +27554,11 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
+"len": 100474,
 "testo": ""
 }
 ],
@@ -27469,15 +27618,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1283565,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icporretta.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icporretta.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='www.icporretta.edu.it', port=443): Max retries exceeded with url: / (Caused by NewConnectionEr"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "VRIC89600T": {
 "url": "https://www.icvigasio.edu.it/",
@@ -27494,15 +27647,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1284678,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolerovetta.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolerovetta.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolerovetta.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "TREE00100C": {
 "url": "https://www.ddmazziniterni.edu.it/",
@@ -27742,15 +27899,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1291054,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccroce.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccroce.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccroce.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "BRIC84900P": {
 "url": "https://www.comprensivocentrobr.gov.it/",
@@ -27849,11 +28010,27 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 100487,
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
 "testo": ""
 }
 ],
@@ -27902,7 +28079,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "VIIC820008": {
 "url": "https://www.icbolzanoquinto.edu.it/",
@@ -28125,15 +28302,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1292572,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.giordani.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.giordani.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.giordani.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "ROIC82000Q": {
 "url": "https://www.icrovigo1.edu.it/",
@@ -28354,14 +28535,6 @@
 "url": "https://www.iiskennedy.edu.it/",
 "ip": "217.27.72.228",
 "t": [
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
 {
 "st": 509,
 "server": "nginx/1.26.1",
@@ -28986,7 +29159,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "TRIC810005": {
 "url": "https://istitutocomprensivoattigliano.edu.it/",
@@ -29023,15 +29196,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1369301,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.ic2bo.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ic2bo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError("
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ic2bo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError("
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "RAIC823008": {
 "url": "https://www.icfaenzasanrocco.edu.it/",
@@ -29439,6 +29616,14 @@
 "url": "https://www.omnicomprensivomagione.edu.it/",
 "ip": "217.27.72.228",
 "t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
 {
 "st": 509,
 "server": "nginx/1.26.1",
@@ -29925,33 +30110,22 @@
 },
 "PCTD07000P": {
 "url": "https://www.icbobbio.edu.it/",
-"ip": "13.226.238.62",
+"ip": "52.84.199.44",
 "t": [
 {
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iobobbio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
 },
 {
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iobobbio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
 },
 {
-"st": 503,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 672,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iobobbio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
 }
-]
+],
+"ts": "2026-11-18"
 },
 "MOIS02200N": {
 "url": "https://www.isarteventuri.edu.it/",
@@ -30052,6 +30226,10 @@
 "testo": "HTTPSConnectionPool(host='www.iccarru.edu.it', port=443): Read timed out. (read timeout=25)"
 },
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='iccarru.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
@@ -30060,7 +30238,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "ARIC81600E": {
 "url": "https://www.icterranuova.edu.it/",
@@ -30160,15 +30338,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1266806,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPConnectionPool(host='www.icsantadi.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPConnectionPool(host='www.icsantadi.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPConnectionPool(host='www.icsantadi.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "PDSD03000D": {
 "url": "https://liceoartisticoselvatico.edu.it/",
@@ -30198,15 +30380,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1300413,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivo20bologna.edu.it', port=443): Max retries exceeded with url: / (Caused by C"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivo20bologna.edu.it', port=443): Max retries exceeded with url: / (Caused by C"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivo20bologna.edu.it', port=443): Max retries exceeded with url: / (Caused by C"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "MIIC8E7007": {
 "url": "https://www.icterzani.edu.it/",
@@ -30512,11 +30698,11 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
+"len": 92306,
 "testo": ""
 }
 ],
@@ -30535,7 +30721,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "MITD400008": {
 "url": "https://www.itsos-mariecurie.edu.it/",
@@ -31030,7 +31216,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "ANIC81800A": {
 "url": "https://icposatorapianoarchi.edu.it/manlio-marinelli/",
@@ -31212,30 +31398,38 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1315343,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icest1.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icest1.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icest1.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HT"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BGIC84300P": {
 "url": "https://www.iccostavolpino.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1288725,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccostavolpino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccostavolpino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccostavolpino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "PCIC82500B": {
 "url": "https://iobobbio.edu.it/",
@@ -31425,15 +31619,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1313050,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdarosciate.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdarosciate.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdarosciate.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "LOIC80900D": {
 "url": "https://www.iccasalpusterlengo.edu.it/",
@@ -31580,15 +31778,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1317515,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cassandroferminervi.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cassandroferminervi.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cassandroferminervi.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "TOIC85300X": {
 "url": "https://www.icbrandizzo.edu.it/",
@@ -31777,15 +31979,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1292056,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icbotticino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icbotticino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icbotticino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "VAIC857005": {
 "url": "https://www.istitutobertacchi.edu.it/",
@@ -31884,15 +32090,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1280388,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivoborgosatollo.edu.it', port=443): Max retries exceeded with url: / (Caused b"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivoborgosatollo.edu.it', port=443): Max retries exceeded with url: / (Caused b"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivoborgosatollo.edu.it', port=443): Max retries exceeded with url: / (Caused b"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "PIPM050007": {
 "url": "https://liceomontale.edu.it/",
@@ -33112,7 +33322,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "RMIC8ET00C": {
 "url": "https://www.icvialeveneziagiulia.it/",
@@ -33180,10 +33390,15 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 99602,
+"testo": ""
 }
 ],
-"ts": "2026-11-13"
+"ts": "2026-11-18"
 },
 "CNIC82100X": {
 "url": "https://www.icmonta.edu.it/",
@@ -33274,15 +33489,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1302811,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccspt.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccspt.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccspt.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "ROIC808005": {
 "url": "https://www.icpolesella.edu.it/",
@@ -34201,15 +34420,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1270648,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ameca.edu.it', port=443): Max retries exceeded with url: /la-scuola/ (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ameca.edu.it', port=443): Max retries exceeded with url: /la-scuola/ (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ameca.edu.it', port=443): Max retries exceeded with url: /la-scuola/ (Caused by ConnectTimeout"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "VIIS00400E": {
 "url": "https://www.istitutomasotto.edu.it/",
@@ -34334,6 +34557,14 @@
 "url": "https://www.isisenriques.edu.it/",
 "ip": "217.27.72.228",
 "t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
 {
 "st": 509,
 "server": "nginx/1.26.1",
@@ -34634,15 +34865,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1309878,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icloianomonghidoro.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='icloianomonghidoro.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='icloianomonghidoro.edu.it', port=443): Read timed out. (read timeout=25)"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "ALIS00700D": {
 "url": "https://www.barlettiovada.edu.it/",
@@ -34798,16 +35033,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='salvatorellimoneta.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='salvatorellimoneta.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='salvatorellimoneta.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='salvatorellimoneta.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='salvatorellimoneta.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='salvatorellimoneta.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 }
 ],
 "ts": "2026-11-18"
@@ -35181,6 +35416,10 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icgranarolo.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
@@ -35189,7 +35428,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "VIPS02000T": {
 "url": "https://www.liceolioy.edu.it/",
@@ -35438,11 +35677,19 @@
 "testo": ""
 },
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 87483,
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
 "testo": ""
 }
 ],
@@ -35971,15 +36218,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1300173,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='comprensivofenegro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='comprensivofenegro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='comprensivofenegro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "APIC824008": {
 "url": "https://www.iscmontegranaro.it/",
@@ -36264,11 +36515,11 @@
 "testo": ""
 },
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 113510,
+"len": 0,
 "testo": ""
 }
 ],
@@ -36338,11 +36589,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1340956,
+"len": 1341063,
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "BIIC81900E": {
 "url": "https://www.icvaldilana.edu.it/",
@@ -36589,16 +36840,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.icgiovanni23acireale.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icgiovanni23acireale.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.icgiovanni23acireale.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icgiovanni23acireale.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.icgiovanni23acireale.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icgiovanni23acireale.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
 }
 ],
 "ts": "2026-11-18"
@@ -36886,10 +37137,23 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 86151,
+"testo": ""
 }
 ],
-"ts": "2026-11-13"
+"ts": "2026-11-18"
 },
 "CRIC82100Q": {
 "url": "https://www.iccremonauno.edu.it/",
@@ -36908,7 +37172,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "CLIS002004": {
 "url": "https://www.leonardoniscemi.edu.it/",
@@ -37028,15 +37292,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvillanovasti.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1316373,
+"len": 1318519,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "PGIS034006": {
 "url": "https://www.iisgubbio.edu.it/",
@@ -37586,15 +37854,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1292368,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmalgesini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmalgesini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmalgesini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "ALIS003006": {
 "url": "https://www.iislevimontalcini.edu.it/",
@@ -37994,15 +38266,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1297056,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdozza.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdozza.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdozza.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "ANIC84600E": {
 "url": "https://www.icmpolo.gov.it/",
@@ -38028,15 +38304,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1305794,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icolgiatecomasco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icolgiatecomasco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icolgiatecomasco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "COIC832003": {
 "url": "https://www.icsfaloppio.edu.it/",
@@ -38810,11 +39090,11 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
+"len": 114421,
 "testo": ""
 }
 ],
@@ -39035,19 +39315,11 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
+"len": 91124,
 "testo": ""
 }
 ],
@@ -39256,12 +39528,20 @@
 "ip": "46.231.27.45",
 "t": [
 {
-"st": 200,
+"st": 403,
 "server": "nginx",
 "ra": "",
 "via": "",
-"len": 127015,
-"testo": ""
+"len": 318,
+"testo": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\"> <html><head> <title>403 Forbidden</title> </head><body> <h1>Forbidden</h1> <p>You don't have permission to ac"
+},
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='cpiaperugia.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='cpiaperugia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
 }
 ],
 "ts": "2026-11-18"
@@ -39271,12 +39551,16 @@
 "ip": "46.231.27.45",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 111586,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutocomprensivoperugia7.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutocomprensivoperugia7.edu.it', port=443): Max retries exceeded with url: / (Caused b"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutocomprensivoperugia7.edu.it', port=443): Max retries exceeded with url: / (Caused b"
 }
 ],
 "ts": "2026-11-18"
@@ -39408,12 +39692,16 @@
 "ip": "46.231.27.45",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 82057,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutocomprensivoperugia11.edu.it', port=443): Max retries exceeded with url: / (Caused "
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutocomprensivoperugia11.edu.it', port=443): Max retries exceeded with url: / (Caused "
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutocomprensivoperugia11.edu.it', port=443): Max retries exceeded with url: / (Caused "
 }
 ],
 "ts": "2026-11-18"
@@ -40190,10 +40478,31 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 91420,
+"testo": ""
 }
 ],
-"ts": "2026-11-10"
+"ts": "2026-11-18"
 },
 "ARIC83200C": {
 "url": "https://www.montescuole.edu.it/",
@@ -40586,10 +40895,23 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 149273,
+"testo": ""
 }
 ],
-"ts": "2026-11-12"
+"ts": "2026-11-18"
 },
 "RMIC812006": {
 "url": "https://www.comprensivofidenae.edu.it/",
@@ -40637,10 +40959,31 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
 }
 ],
-"ts": "2026-11-09"
+"ts": "2026-11-18"
 },
 "PGIS03300A": {
 "url": "https://www.iisperugia.edu.it/",
@@ -40655,11 +40998,19 @@
 "testo": ""
 },
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 93141,
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
 "testo": ""
 }
 ],
@@ -40696,15 +41047,15 @@
 "testo": ""
 },
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 81039,
+"len": 0,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "ANIS01900A": {
 "url": "https://www.panzini-senigallia.edu.it/",
@@ -40735,7 +41086,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "PGEE027001": {
 "url": "https://www.circolodidatticocorciano.edu.it/",
@@ -40758,11 +41109,11 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
+"len": 80345,
 "testo": ""
 }
 ],
@@ -40822,19 +41173,11 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
-"testo": ""
-},
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
+"len": 74475,
 "testo": ""
 }
 ],
@@ -41077,14 +41420,6 @@
 "url": "https://www.ic-atina.edu.it/",
 "ip": "217.27.72.228",
 "t": [
-{
-"st": 509,
-"server": "nginx/1.26.1",
-"ra": "",
-"via": "",
-"len": 0,
-"testo": ""
-},
 {
 "st": 200,
 "server": "nginx/1.26.1",
@@ -42618,11 +42953,11 @@
 "testo": ""
 },
 {
-"st": 509,
+"st": 200,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 0,
+"len": 106816,
 "testo": ""
 }
 ],
@@ -45986,10 +46321,15 @@
 "ip": "217.27.72.228",
 "t": [
 {
-"st": "robots vieta"
+"st": 200,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 136165,
+"testo": ""
 }
 ],
-"ts": "2026-11-11"
+"ts": "2026-11-18"
 },
 "VRIC87600L": {
 "url": "https://www.ic4vr.edu.it/",
@@ -46078,28 +46418,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iccupra-ripatransone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iccupra-ripatransone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 },
 {
-"st": 502,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iccupra-ripatransone.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 }
 ],
 "ts": "2026-11-18"
@@ -46170,24 +46498,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.iccupraserra.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccupraserra.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccupraserra.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccupraserra.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 }
 ],
 "ts": "2026-11-18"
@@ -46263,6 +46583,14 @@
 "url": "https://www.icsassello.edu.it/",
 "ip": "217.27.72.228",
 "t": [
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
+"testo": ""
+},
 {
 "st": 509,
 "server": "nginx/1.26.1",
@@ -46442,7 +46770,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "LEIS00600N": {
 "url": "https://www.iisameucci.edu.it/",
@@ -46546,7 +46874,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "BOIC85500V": {
 "url": "https://www.ic12bo.it/",
@@ -46576,26 +46904,30 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "BOIC86400N": {
 "url": "https://www.iczolabo.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1328059,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.iczolabo.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iczolabo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iczolabo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "MOIC84100V": {
 "url": "https://www.ic1modena.edu.it/",
-"ip": "172.67.199.19",
+"ip": "104.21.36.198",
 "t": [
 {
 "st": 403,
@@ -46675,30 +47007,38 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1107688,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutosuperiorefeltre.edu.it', port=443): Max retries exceeded with url: / (Caused by Co"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutosuperiorefeltre.edu.it', port=443): Max retries exceeded with url: / (Caused by Co"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutosuperiorefeltre.edu.it', port=443): Max retries exceeded with url: / (Caused by Co"
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "BOMM365005": {
 "url": "https://cpiamontagna.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1290630,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='cpiamontagna.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='cpiamontagna.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='cpiamontagna.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "ATMM11300G": {
 "url": "https://cpia1asti.edu.it/",
@@ -46736,15 +47076,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1292452,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictavernolabergamasca.edu.it', port=443): Max retries exceeded with url: / (Caused by Conn"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictavernolabergamasca.edu.it', port=443): Max retries exceeded with url: / (Caused by Conn"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictavernolabergamasca.edu.it', port=443): Max retries exceeded with url: / (Caused by Conn"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BGIC855001": {
 "url": "https://www.iclovere.edu.it/",
@@ -46766,15 +47110,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1286298,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icmastricaravaggini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icmastricaravaggini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icmastricaravaggini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BAIC87300D": {
 "url": "https://www.icmodugnogalilei.edu.it/",
@@ -46800,20 +47148,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.cpia-cl-en.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia-cl-en.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.cpia-cl-en.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia-cl-en.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpia-cl-en.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
 }
 ],
 "ts": "2026-11-18"
@@ -46880,24 +47224,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icguarnaccia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icguarnaccia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.icguarnaccia.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icguarnaccia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 }
 ],
 "ts": "2026-11-18"
@@ -46907,16 +47243,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.aristidegabelli.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.aristidegabelli.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.aristidegabelli.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.aristidegabelli.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.aristidegabelli.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.aristidegabelli.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
 "ts": "2026-11-18"
@@ -46945,24 +47281,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmarianorossi.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmarianorossi.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.icmarianorossi.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmarianorossi.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 }
 ],
 "ts": "2026-11-18"
@@ -46991,24 +47319,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.derobertoct.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.derobertoct.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.derobertoct.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.derobertoct.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
 }
 ],
 "ts": "2026-11-18"
@@ -47189,24 +47509,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.iclamelaadrano.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iclamelaadrano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iclamelaadrano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 },
 {
-"st": 502,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iclamelaadrano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
 }
 ],
 "ts": "2026-11-18"
@@ -47292,24 +47604,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 502,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='isissfalconebarrafranca.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='isissfalconebarrafranca.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='isissfalconebarrafranca.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
 },
 {
-"st": 502,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='isissfalconebarrafranca.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
 }
 ],
 "ts": "2026-11-18"
@@ -47706,11 +48010,19 @@
 "testo": ""
 },
 {
-"st": 200,
+"st": 509,
 "server": "nginx/1.26.1",
 "ra": "",
 "via": "",
-"len": 89221,
+"len": 0,
+"testo": ""
+},
+{
+"st": 509,
+"server": "nginx/1.26.1",
+"ra": "",
+"via": "",
+"len": 0,
 "testo": ""
 }
 ],
@@ -47721,16 +48033,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='icgioacchinorossinisanmarcello.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icgioacchinorossinisanmarcello.edu.it', port=443): Max retries exceeded with url: / (Caused by"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='icgioacchinorossinisanmarcello.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icgioacchinorossinisanmarcello.edu.it', port=443): Max retries exceeded with url: / (Caused by"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='icgioacchinorossinisanmarcello.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icgioacchinorossinisanmarcello.edu.it', port=443): Max retries exceeded with url: / (Caused by"
 }
 ],
 "ts": "2026-11-18"
@@ -47771,20 +48083,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.icmontemarciano-montesanvito.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmontemarciano-montesanvito.edu.it', port=443): Max retries exceeded with url: / (Caused "
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmontemarciano-montesanvito.edu.it', port=443): Max retries exceeded with url: / (Caused "
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.icmontemarciano-montesanvito.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmontemarciano-montesanvito.edu.it', port=443): Max retries exceeded with url: / (Caused "
 }
 ],
 "ts": "2026-11-18"
@@ -48485,12 +48793,28 @@
 "ip": "172.67.199.100",
 "t": [
 {
-"st": 200,
+"st": 403,
 "server": "cloudflare",
 "ra": "",
 "via": "",
-"len": 213942,
-"testo": ""
+"len": 923,
+"testo": "<html>\r <head><title>403 Forbidden</title><script>(function(){var S=[\"betprimeiro\",\"dolfwin\",\"hunnyplay\",\"instant-casino\",\"kingmaker\",\"lamabet\",\"lucky-twice\",\"l"
+},
+{
+"st": 403,
+"server": "cloudflare",
+"ra": "",
+"via": "",
+"len": 923,
+"testo": "<html>\r <head><title>403 Forbidden</title><script>(function(){var S=[\"betprimeiro\",\"dolfwin\",\"hunnyplay\",\"instant-casino\",\"kingmaker\",\"lamabet\",\"lucky-twice\",\"l"
+},
+{
+"st": 403,
+"server": "cloudflare",
+"ra": "",
+"via": "",
+"len": 923,
+"testo": "<html>\r <head><title>403 Forbidden</title><script>(function(){var S=[\"betprimeiro\",\"dolfwin\",\"hunnyplay\",\"instant-casino\",\"kingmaker\",\"lamabet\",\"lucky-twice\",\"l"
 }
 ],
 "ts": "2026-11-18"
@@ -48670,15 +48994,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1289500,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='icgiorgiobassani.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icgiorgiobassani.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icgiorgiobassani.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "PRIC825008": {
 "url": "https://www.ictoscaniniparma.edu.it/",
@@ -48716,15 +49044,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1312157,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccavicchi.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccavicchi.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccavicchi.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "VRRI01000R": {
 "url": "https://www.giorgivr.edu.it/",
@@ -48832,7 +49164,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "VEMM03600G": {
 "url": "https://www.convittofoscarini.edu.it/",
@@ -48986,7 +49318,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "UDIS014006": {
 "url": "https://www.isisfermosolari.edu.it/",
@@ -49086,15 +49418,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1300828,
-"testo": ""
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='icsanpietroincasale.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icsanpietroincasale.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icsanpietroincasale.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
-"ts": "2026-11-16"
+"ts": "2026-11-18"
 },
 "REIS01800B": {
 "url": "https://www.pascal.edu.it/",
@@ -49190,11 +49526,11 @@
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1290373,
+"len": 1290445,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "VRIC899009": {
 "url": "https://www.ic1pescantina.edu.it/",
@@ -49385,7 +49721,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "SVIC809005": {
 "url": "https://www.icquiliano.gov.it/",
@@ -49411,15 +49747,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1144369,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.taddeocossu.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.taddeocossu.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.taddeocossu.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
 }
 ],
-"ts": "2026-11-14"
+"ts": "2026-11-18"
 },
 "BOPS17000B": {
 "url": "https://www.imolalicei.edu.it/",
@@ -49595,15 +49935,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1320540,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ictrescorebalneario.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ictrescorebalneario.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ictrescorebalneario.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "VATD22000N": {
 "url": "https://www.isismontaletradate.com/",
@@ -49641,15 +49985,23 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvescovato.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='icvescovato.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1318126,
+"len": 1317882,
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "LCIS01300G": {
 "url": "http://www.iismedardorosso.gov.it/",
@@ -49675,15 +50027,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1293712,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmazzano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmazzano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmazzano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BGVC010005": {
 "url": "https://www.convittolovere.bg.it/",
@@ -49713,15 +50069,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 1281178,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccremonatre.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccremonatre.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccremonatre.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "AVMM007002": {
 "url": "https://www.convittocolletta.edu.it/",
@@ -49874,30 +50234,38 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1311848,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icmarconicasalmaggiore.edu.it', port=443): Max retries exceeded with url: / (Caused by Connect"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icmarconicasalmaggiore.edu.it', port=443): Max retries exceeded with url: / (Caused by Connect"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icmarconicasalmaggiore.edu.it', port=443): Max retries exceeded with url: / (Caused by Connect"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "CRIC81400L": {
 "url": "https://www.icpiadena.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1309029,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpiadena.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpiadena.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpiadena.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "LCIC827009": {
 "url": "https://www.icslecco1.gov.it/",
@@ -49923,15 +50291,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1293316,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmozzate.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmozzate.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmozzate.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "ANIC830001": {
 "url": "https://www.icsfederico2.it/",
@@ -50102,15 +50474,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1278913,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icospitaletto.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icospitaletto.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icospitaletto.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "MNIS00200Q": {
 "url": "https://www.galileiostiglia.edu.it/",
@@ -50202,15 +50578,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1288427,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cremauno.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cremauno.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cremauno.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "VAIC87400V": {
 "url": "https://www.danteweb.edu.it/",
@@ -50286,19 +50666,23 @@
 "ts": "2026-11-15"
 },
 "COIC85600G": {
-"url": "https://www.icspuechererba.edu.it/",
+"url": "https://icspuechererba.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1343397,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icspuechererba.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icspuechererba.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icspuechererba.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "PCIC80800N": {
 "url": "https://www.icborgonovo.it/",
@@ -50411,15 +50795,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1350431,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccastelverde.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccastelverde.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccastelverde.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "GEMM02000X": {
 "url": "https://www.convittocolombo.gov.it/",
@@ -50522,7 +50910,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "LEPS01000P": {
 "url": "https://liceodegiorgi.edu.it/",
@@ -50729,19 +51117,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='istitutocomprensivochiavari.edu.it', port=443): Read timed out. (read timeout=25)"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutocomprensivochiavari.edu.it', port=443): Max retries exceeded with url: / (Caused b"
 },
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1288180,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutocomprensivochiavari.edu.it', port=443): Max retries exceeded with url: / (Caused b"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutocomprensivochiavari.edu.it', port=443): Max retries exceeded with url: / (Caused b"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "REIC81600G": {
 "url": "https://www.icbusana.gov.it/",
@@ -50790,15 +51178,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1111448,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivobitetto.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivobitetto.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivobitetto.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "MNIC80300B": {
 "url": "https://www.iccastelgoffredo.edu.it/",
@@ -50916,15 +51308,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1286687,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cassanoscuole.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cassanoscuole.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cassanoscuole.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MIIC8F100V": {
 "url": "https://www.icscabrini.edu.it/",
@@ -50962,6 +51358,14 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.iismajoranagirifalco.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='iismajoranagirifalco.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
@@ -50970,7 +51374,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "PRIC83000Q": {
 "url": "https://www.icsansecondoparmense.it/",
@@ -51362,15 +51766,23 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmoncalvo.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='icmoncalvo.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1288966,
+"len": 1289487,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MIIC8EN00G": {
 "url": "https://www.ic25aprilecormano.it/",
@@ -51396,15 +51808,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1291419,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccremona2.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccremona2.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccremona2.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "ALIC81800Q": {
 "url": "https://www.icpascoli-felizzano.edu.it/",
@@ -51523,6 +51939,10 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='comprensivosommarivaperno.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
@@ -51531,7 +51951,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BSIC894004": {
 "url": "https://www.icpralboino.it/",
@@ -51611,15 +52031,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1303253,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmozzanica.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmozzanica.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmozzanica.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MOIS017006": {
 "url": "https://www.ferrari.edu.it/",
@@ -51649,15 +52073,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1292098,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.antoniettiseo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.antoniettiseo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.antoniettiseo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "BSIC87400V": {
 "url": "https://www.icgavardo.edu.it/",
@@ -51695,15 +52123,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1302404,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.caranomazzini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.caranomazzini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.caranomazzini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "GEIC86800X": {
 "url": "https://www.icarenzano-cogoleto.edu.it/",
@@ -51874,15 +52306,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1298590,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsospiro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsospiro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsospiro.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "MIIC887003": {
 "url": "https://www.istitutocomprensivogalilei.it/",
@@ -51908,45 +52344,57 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='comprensivocherasco.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
 "via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1291918,
+"len": 1291981,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "CRIC808009": {
 "url": "https://www.icpizzighettonesanbassano.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1301501,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpizzighettonesanbassano.edu.it', port=443): Max retries exceeded with url: / (Caused by "
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpizzighettonesanbassano.edu.it', port=443): Max retries exceeded with url: / (Caused by "
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpizzighettonesanbassano.edu.it', port=443): Max retries exceeded with url: / (Caused by "
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "CNMM162004": {
 "url": "https://cpia2albabramondovi.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1300226,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='cpia2albabramondovi.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='cpia2albabramondovi.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='cpia2albabramondovi.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "SAIC8AP00R": {
 "url": "http://www.iccentola.gov.it/",
@@ -52003,15 +52451,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1307703,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsergnanoprimolevi.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsergnanoprimolevi.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsergnanoprimolevi.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "VAPC020001": {
 "url": "https://www.liceoclassicovarese.edu.it/",
@@ -52068,15 +52520,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1364536,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutopertini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutopertini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.istitutopertini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "NAIC80300C": {
 "url": "https://www.icdonofrio.edu.it/",
@@ -52152,15 +52608,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1337380,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmonterenzio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmonterenzio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmonterenzio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "CBIC82300X": {
 "url": "https://www.istitutocomprensivojovinecb.it/",
@@ -52186,15 +52646,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1312914,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icuggiatetrevano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icuggiatetrevano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icuggiatetrevano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "TREE00400X": {
 "url": "https://www.ddsangiovanni.it/",
@@ -52270,15 +52734,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1336052,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icfalbor.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icfalbor.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icfalbor.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "RCIS034004": {
 "url": "https://www.iisrighi.edu.it/",
@@ -52354,15 +52822,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1136716,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.liceoanguissola.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.liceoanguissola.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.liceoanguissola.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "REIC83100N": {
 "url": "https://www.icnovellara.gov.it/",
@@ -52495,6 +52967,10 @@
 "ip": "13.37.102.167",
 "t": [
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccervasca.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
@@ -52503,7 +52979,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "PGIS018008": {
 "url": "https://www.iisbattaglia.it/",
@@ -52602,15 +53078,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1289189,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpiachiari.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpiachiari.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpiachiari.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "AVIS008001": {
 "url": "https://www.istitutosuperioremaffucci.it/",
@@ -52636,15 +53116,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 1285649,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolamarconicerignola.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolamarconicerignola.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.scuolamarconicerignola.edu.it', port=443): Max retries exceeded with url: / (Caused by Con"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "CHIC832007": {
 "url": "https://www.icsalvodacquisto.gov.it/",
@@ -52689,15 +53173,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1302539,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icvillaputzusanvito.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icvillaputzusanvito.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icvillaputzusanvito.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MIIC8FX00T": {
 "url": "https://www.icsmoiseloria.edu.it/",
@@ -52735,15 +53223,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1330258,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvilla.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvilla.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvilla.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "NAIC8HR008": {
 "url": "http://www.icungarettifucini.edu.it/",
@@ -52796,15 +53288,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1293549,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccomoborgovico.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccomoborgovico.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccomoborgovico.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BIIS00100D": {
 "url": "https://www.liceosella.it/",
@@ -52880,15 +53376,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1124830,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsoncino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsoncino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsoncino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "VIPC02000P": {
 "url": "https://www.liceocorradini.edu.it/",
@@ -52964,30 +53464,38 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 1296656,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icappianogentile.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icappianogentile.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icappianogentile.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "BSIC81200G": {
 "url": "https://www.icpassirano.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1300766,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpassirano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpassirano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpassirano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "REIC83600R": {
 "url": "https://www.icrubiera.gov.it/primariadeamicis/",
@@ -53207,19 +53715,23 @@
 "ts": "2026-11-15"
 },
 "CRPS01000V": {
-"url": "https://www.liceoaselli.edu.it/",
+"url": "https://liceoaselli.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1294023,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='liceoaselli.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='liceoaselli.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='liceoaselli.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErro"
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "BSIC8AB00G": {
 "url": "https://www.icdesenzano2.gov.it/",
@@ -53264,15 +53776,19 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1295053,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsfinomornasco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsfinomornasco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsfinomornasco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "APIC83100B": {
 "url": "https://www.icsolecanta.gov.it/",
@@ -53374,6 +53890,10 @@
 "testo": "HTTPSConnectionPool(host='www.ics-bagnolopiemonte.edu.it', port=443): Read timed out. (read timeout=25)"
 },
 {
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='ics-bagnolopiemonte.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
 "st": 200,
 "server": "nginx",
 "ra": "",
@@ -53382,7 +53902,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "LEPS25000V": {
 "url": "https://www.liceogalileinardo.edu.it/",
@@ -53657,11 +54177,11 @@
 "server": "",
 "ra": "",
 "via": "",
-"len": 152568,
+"len": 153743,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MIIC844005": {
 "url": "https://www.icscanegrate.edu.it/",
@@ -53672,11 +54192,11 @@
 "server": "",
 "ra": "",
 "via": "",
-"len": 153382,
+"len": 153390,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MIIC845001": {
 "url": "https://www.icscarducci.edu.it/",
@@ -53687,11 +54207,11 @@
 "server": "",
 "ra": "",
 "via": "",
-"len": 327194,
+"len": 326727,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "LEPS220003": {
 "url": "https://www.liceostampacchia.it/",
@@ -53717,11 +54237,11 @@
 "server": "",
 "ra": "",
 "via": "",
-"len": 36030,
+"len": 36380,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MIIC851008": {
 "url": "https://www.alighierirescaldina.edu.it/",
@@ -53732,11 +54252,11 @@
 "server": "",
 "ra": "",
 "via": "",
-"len": 144172,
+"len": 144372,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MIIC8CK007": {
 "url": "https://www.icbasiano.edu.it/",
@@ -53751,7 +54271,7 @@
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "CZIS01800B": {
 "url": "https://www.guarascicalabretta.edu.it/",
@@ -53777,11 +54297,11 @@
 "server": "",
 "ra": "",
 "via": "",
-"len": 38111,
+"len": 38321,
 "testo": ""
 }
 ],
-"ts": "2026-11-15"
+"ts": "2026-11-18"
 },
 "MORC08000G": {
 "url": "https://www.cattaneodeledda.edu.it/",
@@ -54538,39 +55058,31 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 200,
-"server": "nginx",
-"ra": "",
-"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
-"len": 1290571,
-"testo": ""
+"st": "ConnectTimeout",
+"testo": "HTTPConnectionPool(host='www.icstradi.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPConnectionPool(host='www.icstradi.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPConnectionPool(host='www.icstradi.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
 }
 ],
-"ts": "2026-11-17"
+"ts": "2026-11-18"
 },
 "MIIC8FR00D": {
 "url": "https://icsviapapagiovannipaolo2.edu.it/",
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='icsviapapagiovannipaolo2.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": 502,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1297804,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -54618,20 +55130,12 @@
 "testo": "HTTPSConnectionPool(host='www.icsdonticozzi.edu.it', port=443): Read timed out. (read timeout=25)"
 },
 {
-"st": 500,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 502,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1339866,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -54645,16 +55149,12 @@
 "testo": "HTTPSConnectionPool(host='thouargonzaga.edu.it', port=443): Read timed out. (read timeout=25)"
 },
 {
-"st": 500,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='thouargonzaga.edu.it', port=443): Read timed out. (read timeout=25)"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1350177,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -54664,20 +55164,12 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='icmatteidivittorio.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='icmatteidivittorio.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": 500,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1309252,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -54691,20 +55183,12 @@
 "testo": "HTTPSConnectionPool(host='www.icsmolteno.edu.it', port=443): Read timed out. (read timeout=25)"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='icsmolteno.edu.it', port=443): Read timed out. (read timeout=25)"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectionError",
+"testo": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
 }
 ],
 "ts": "2026-11-18"
@@ -54718,12 +55202,12 @@
 "testo": "HTTPSConnectionPool(host='isc-paganelli.sitiscuole.it', port=443): Read timed out. (read timeout=25)"
 },
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='isc-paganelli.sitiscuole.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='isc-paganelli.sitiscuole.it', port=443): Read timed out. (read timeout=25)"
+"st": 200,
+"server": "AmazonS3",
+"ra": "",
+"via": "",
+"len": 644,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -54733,24 +55217,12 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='comprensivodante.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": 500,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1121773,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -54760,24 +55232,12 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='iccassina.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1292076,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -54787,28 +55247,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='icsavio.edu.it', port=443): Read timed out. (read timeout=25)"
 },
 {
-"st": 504,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icsavio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<H"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icsavio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<H"
 }
 ],
 "ts": "2026-11-18"
@@ -54818,24 +55266,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
 "st": "ReadTimeout",
 "testo": "HTTPSConnectionPool(host='www.icbagattivalsecchi.edu.it', port=443): Read timed out. (read timeout=25)"
 },
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icbagattivalsecchi.edu.it', port=443): Max retries exceeded with url: / (Caused by Connect"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icbagattivalsecchi.edu.it', port=443): Max retries exceeded with url: / (Caused by Connect"
 }
 ],
 "ts": "2026-11-18"
@@ -54845,28 +55285,12 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1301213,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -54876,24 +55300,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
 "st": "ReadTimeout",
 "testo": "HTTPSConnectionPool(host='comprensivocarugate.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1294756,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -54903,20 +55319,12 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='comprensivocasatenovo.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": 502,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='comprensivocasatenovo.edu.it', port=443): Read timed out. (read timeout=25)"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1314559,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -54926,24 +55334,16 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
 "st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.icalbiatetriuggio.edu.it', port=443): Read timed out. (read timeout=25)"
+"testo": "HTTPSConnectionPool(host='icalbiatetriuggio.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectionError",
+"testo": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icalbiatetriuggio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
 }
 ],
 "ts": "2026-11-18"
@@ -54968,24 +55368,12 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='istitutocialdini.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": 502,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
-},
-{
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1292261,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -54995,20 +55383,12 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='liceomanzonilecco.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": 502,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='liceomanzonilecco.edu.it', port=443): Read timed out. (read timeout=25)"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1306910,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -55079,20 +55459,12 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='icgcagliero.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": 502,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='icgcagliero.edu.it', port=443): Read timed out. (read timeout=25)"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1295960,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -55102,28 +55474,12 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 502,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
-},
-{
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
-},
-{
-"st": 502,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1333003,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -55156,24 +55512,12 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": 502,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
-},
-{
-"st": 502,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='ic-manzoni.edu.it', port=443): Read timed out. (read timeout=25)"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1298018,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -55183,51 +55527,27 @@
 "ip": "13.37.102.167",
 "t": [
 {
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='ictorrita.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='ictorrita.edu.it', port=443): Read timed out. (read timeout=25)"
-},
-{
-"st": 502,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 150,
-"testo": "<html>\r <head><title>502 Bad Gateway</title></head>\r <body>\r <center><h1>502 Bad Gateway</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1282767,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
 },
 "RMIC8FA00B": {
 "url": "https://iccasaledelfinocchio.edu.it/",
-"ip": "3.161.242.7",
+"ip": "3.161.242.80",
 "t": [
 {
-"st": 500,
+"st": 200,
 "server": "nginx",
 "ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 682,
-"testo": "<!DOCTYPE html> <html lang=\"it\"> \t<head> \t\t<title>A breve on line</title> \t\t<link rel=\"stylesheet\" href=\"https://s3.eu-west-1.amazonaws.com/inpubblicazione.siti"
-},
-{
-"st": 500,
-"server": "nginx",
-"ra": "",
-"via": "",
-"len": 170,
-"testo": "<html>\r <head><title>500 Internal Server Error</title></head>\r <body>\r <center><h1>500 Internal Server Error</h1></center>\r <hr><center>nginx</center>\r </body>\r"
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1304756,
+"testo": ""
 }
 ],
 "ts": "2026-11-18"
@@ -55237,16 +55557,989 @@
 "ip": "89.46.106.22",
 "t": [
 {
+"st": 200,
+"server": "aruba-proxy",
+"ra": "",
+"via": "",
+"len": 64649,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"REIC83200D": {
+"url": "https://icluzzara.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1302348,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"PDIC84900E": {
+"url": "https://www.icvigonza.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
 "st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.liceovolterra.edu.it', port=443): Read timed out. (read timeout=25)"
+"testo": "HTTPSConnectionPool(host='www.icvigonza.edu.it', port=443): Read timed out. (read timeout=25)"
 },
 {
 "st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.liceovolterra.edu.it', port=443): Read timed out. (read timeout=25)"
+"testo": "HTTPSConnectionPool(host='icvigonza.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1342856,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"PDIC859005": {
+"url": "https://www.icsangiorgioinbosco.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsangiorgioinbosco.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1297735,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"PDIC846003": {
+"url": "https://www.iccadoneghe.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccadoneghe.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1299645,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"REIC821003": {
+"url": "https://www.icsanpolodenza.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsanpolodenza.edu.it', port=443): Read timed out. (read timeout=25)"
 },
 {
 "st": "ReadTimeout",
-"testo": "HTTPSConnectionPool(host='www.liceovolterra.edu.it', port=443): Read timed out. (read timeout=25)"
+"testo": "HTTPSConnectionPool(host='icsanpolodenza.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1300567,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"PDMM25500L": {
+"url": "https://www.cpiapadova.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1303351,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"ROMM052008": {
+"url": "https://www.cpiarovigo.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpiarovigo.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1297151,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"PDIC838004": {
+"url": "https://www.icsanmartinodilupari.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsanmartinodilupari.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1330051,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"PCIC805006": {
+"url": "https://www.iccortemaggiore.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccortemaggiore.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1304635,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"PCIC821004": {
+"url": "https://iobobbio.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='iobobbio.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1130037,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"REIC84400Q": {
+"url": "http://www.ic4cv.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.ic4cv.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPConnectionPool(host='www.ic4cv.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<H"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPConnectionPool(host='www.ic4cv.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<H"
+}
+],
+"ts": "2026-11-18"
+},
+"PRIC82300L": {
+"url": "https://www.icfelino.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icfelino.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icfelino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icfelino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+}
+],
+"ts": "2026-11-18"
+},
+"REIC819003": {
+"url": "https://www.ictoschi.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictoschi.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictoschi.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictoschi.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+}
+],
+"ts": "2026-11-18"
+},
+"PCIC81700C": {
+"url": "https://comprensivo-csg.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": 200,
+"server": "nginx",
+"ra": "",
+"via": "1.1 ip-172-31-35-253 (Varnish/7.6)",
+"len": 1306435,
+"testo": ""
+}
+],
+"ts": "2026-11-18"
+},
+"MOIC808007": {
+"url": "https://www.icsoliera.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsoliera.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsoliera.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsoliera.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutEr"
+}
+],
+"ts": "2026-11-18"
+},
+"REIC847007": {
+"url": "https://www.icdavincireggioemilia.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdavincireggioemilia.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdavincireggioemilia.edu.it', port=443): Max retries exceeded with url: / (Caused by Conn"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icdavincireggioemilia.edu.it', port=443): Max retries exceeded with url: / (Caused by Conn"
+}
+],
+"ts": "2026-11-18"
+},
+"MOIC811003": {
+"url": "https://www.icmontefiorino.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmontefiorino.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmontefiorino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmontefiorino.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
+}
+],
+"ts": "2026-11-18"
+},
+"MOIC84800N": {
+"url": "https://ic10modena.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='ic10modena.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='ic10modena.edu.it', port=443): Max retries exceeded with url: / (Caused by NewConnectionError("
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='ic10modena.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+}
+],
+"ts": "2026-11-18"
+},
+"REIS014004": {
+"url": "https://www.iiscastelnovonemonti.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ReadTimeout",
+"testo": "HTTPSConnectionPool(host='www.iiscastelnovonemonti.edu.it', port=443): Read timed out. (read timeout=25)"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iiscastelnovonemonti.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iiscastelnovonemonti.edu.it', port=443): Max retries exceeded with url: / (Caused by Conne"
+}
+],
+"ts": "2026-11-18"
+},
+"MOMM10600D": {
+"url": "https://smpavullo.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='smpavullo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError("
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='smpavullo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError("
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='smpavullo.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError("
+}
+],
+"ts": "2026-11-18"
+},
+"RNMM01900X": {
+"url": "https://www.smstfranchini.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.smstfranchini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.smstfranchini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.smstfranchini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+}
+],
+"ts": "2026-11-18"
+},
+"CRMM04400D": {
+"url": "https://www.cpiacr.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpiacr.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpiacr.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpiacr.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+}
+],
+"ts": "2026-11-18"
+},
+"PDIC87800E": {
+"url": "https://www.icmontagnana.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmontagnana.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmontagnana.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icmontagnana.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+}
+],
+"ts": "2026-11-18"
+},
+"PCIC80700T": {
+"url": "https://icdellavalnure.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icdellavalnure.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icdellavalnure.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectionError",
+"testo": "HTTPSConnectionPool(host='icdellavalnure.edu.it', port=443): Max retries exceeded with url: / (Caused by NewConnectionEr"
+}
+],
+"ts": "2026-11-18"
+},
+"UDIC82900Q": {
+"url": "https://www.ictavagnacco.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictavagnacco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictavagnacco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictavagnacco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+}
+],
+"ts": "2026-11-18"
+},
+"TVIC85100L": {
+"url": "https://iccornuda.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iccornuda.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError("
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iccornuda.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError("
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iccornuda.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError("
+}
+],
+"ts": "2026-11-18"
+},
+"GOIC81500X": {
+"url": "https://www.icpolodante.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpolodante.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpolodante.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icpolodante.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+}
+],
+"ts": "2026-11-18"
+},
+"PCIC82300Q": {
+"url": "https://iobobbio.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iobobbio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iobobbio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iobobbio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
+}
+],
+"ts": "2026-11-18"
+},
+"PNIS01200E": {
+"url": "https://isismattiussipertini.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='isismattiussipertini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='isismattiussipertini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='isismattiussipertini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTi"
+}
+],
+"ts": "2026-11-18"
+},
+"PDIC86400L": {
+"url": "https://icvillafrancapadovana.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icvillafrancapadovana.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icvillafrancapadovana.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icvillafrancapadovana.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+}
+],
+"ts": "2026-11-18"
+},
+"UDIC835003": {
+"url": "https://iclatisana.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iclatisana.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iclatisana.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iclatisana.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError"
+}
+],
+"ts": "2026-11-18"
+},
+"TVIC82200L": {
+"url": "https://www.iccasalesulsile.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccasalesulsile.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccasalesulsile.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iccasalesulsile.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTim"
+}
+],
+"ts": "2026-11-18"
+},
+"TVIC841002": {
+"url": "https://www.icsernaglia.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsernaglia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsernaglia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsernaglia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeout"
+}
+],
+"ts": "2026-11-18"
+},
+"TVIC83500P": {
+"url": "https://www.iczerobranco.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iczerobranco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iczerobranco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iczerobranco.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+}
+],
+"ts": "2026-11-18"
+},
+"UDIC81600N": {
+"url": "https://iclignano.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iclignano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError("
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iclignano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError("
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='iclignano.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError("
+}
+],
+"ts": "2026-11-18"
+},
+"TSIC81100C": {
+"url": "https://www.icvalmaura.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvalmaura.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvalmaura.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvalmaura.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+}
+],
+"ts": "2026-11-18"
+},
+"PDIC860009": {
+"url": "https://www.ictombologalliera.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictombologalliera.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictombologalliera.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.ictombologalliera.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectT"
+}
+],
+"ts": "2026-11-18"
+},
+"ROIS003006": {
+"url": "https://www.iisbrunomunari.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iisbrunomunari.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iisbrunomunari.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.iisbrunomunari.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTime"
+}
+],
+"ts": "2026-11-18"
+},
+"PDIC89800Q": {
+"url": "https://www.icselvazzano2.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icselvazzano2.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icselvazzano2.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icselvazzano2.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+}
+],
+"ts": "2026-11-18"
+},
+"TNPM01000X": {
+"url": "https://liceorosmini.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='liceorosmini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='liceorosmini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='liceorosmini.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutErr"
+}
+],
+"ts": "2026-11-18"
+},
+"GEIC867004": {
+"url": "https://istitutocomprensivochiavari.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivochiavari.edu.it', port=443): Max retries exceeded with url: / (Caused by Co"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivochiavari.edu.it', port=443): Max retries exceeded with url: / (Caused by Co"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutocomprensivochiavari.edu.it', port=443): Max retries exceeded with url: / (Caused by Co"
+}
+],
+"ts": "2026-11-18"
+},
+"GEIC81400G": {
+"url": "https://www.icvs.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvs.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvs.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvs.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<"
+}
+],
+"ts": "2026-11-18"
+},
+"GEMM18400Q": {
+"url": "https://www.cpialevantetigullio.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpialevantetigullio.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpialevantetigullio.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.cpialevantetigullio.edu.it', port=443): Max retries exceeded with url: / (Caused by Connec"
+}
+],
+"ts": "2026-11-18"
+},
+"MIIC8FA00V": {
+"url": "https://www.icvialiberta.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvialiberta.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvialiberta.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icvialiberta.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+}
+],
+"ts": "2026-11-18"
+},
+"MIIC8A300D": {
+"url": "https://icdellamargherita.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icdellamargherita.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icdellamargherita.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icdellamargherita.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+}
+],
+"ts": "2026-11-18"
+},
+"COIC85400X": {
+"url": "https://icvillaguardia.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icvillaguardia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icvillaguardia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='icvillaguardia.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutE"
+}
+],
+"ts": "2026-11-18"
+},
+"LCIS002005": {
+"url": "https://istitutobachelet.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutobachelet.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutobachelet.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='istitutobachelet.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeou"
+}
+],
+"ts": "2026-11-18"
+},
+"GEIC81200X": {
+"url": "https://www.icsfdapaolage.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsfdapaolage.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsfdapaolage.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsfdapaolage.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+}
+],
+"ts": "2026-11-18"
+},
+"GEIC80600L": {
+"url": "https://www.icsantamargheritaligure.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsantamargheritaligure.edu.it', port=443): Max retries exceeded with url: / (Caused by Co"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsantamargheritaligure.edu.it', port=443): Max retries exceeded with url: / (Caused by Co"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='www.icsantamargheritaligure.edu.it', port=443): Max retries exceeded with url: / (Caused by Co"
+}
+],
+"ts": "2026-11-18"
+},
+"LOIC80300E": {
+"url": "https://scuolalodivecchio.edu.it/",
+"ip": "13.37.102.167",
+"t": [
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='scuolalodivecchio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='scuolalodivecchio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+},
+{
+"st": "ConnectTimeout",
+"testo": "HTTPSConnectionPool(host='scuolalodivecchio.edu.it', port=443): Max retries exceeded with url: / (Caused by ConnectTimeo"
+}
+],
+"ts": "2026-11-18"
+},
+"NAIS08700R": {
+"url": "https://www.ispagano.edu.it/",
+"ip": "89.46.109.49",
+"t": [
+{
+"st": 403,
+"server": "aruba-proxy",
+"ra": "",
+"via": "",
+"len": 14571,
+"testo": "<html lang=\"en\"><head>     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">     <meta name=\"robots\" content=\"noindex,nofollow\">     <meta nam"
+},
+{
+"st": 403,
+"server": "aruba-proxy",
+"ra": "",
+"via": "",
+"len": 14571,
+"testo": "<html lang=\"en\"><head>     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">     <meta name=\"robots\" content=\"noindex,nofollow\">     <meta nam"
+},
+{
+"st": 403,
+"server": "aruba-proxy",
+"ra": "",
+"via": "",
+"len": 14571,
+"testo": "<html lang=\"en\"><head>     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">     <meta name=\"robots\" content=\"noindex,nofollow\">     <meta nam"
 }
 ],
 "ts": "2026-11-18"
