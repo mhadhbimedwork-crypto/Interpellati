@@ -51,7 +51,7 @@
    ],
    [
     "http://www.icrosariolivatinoportoempedocle.it/",
-    "HTTP 520"
+    "HTTP 403"
    ],
    [
     "https://icrosariolivatinoportoempedocle.it/",
@@ -59,7 +59,7 @@
    ],
    [
     "http://icrosariolivatinoportoempedocle.it/",
-    "HTTP 520"
+    "HTTP 403"
    ],
    [
     "https://www.icrosariolivatinoportoempedocle.edu.it/",
@@ -127,19 +127,19 @@
   "tentativi": [
    [
     "https://www.icsscr.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "http://www.icsscr.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "https://icsscr.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "http://icsscr.edu.it/",
-    "pagina non scolastica"
+    "HTTP 502"
    ]
   ]
  },
@@ -177,19 +177,19 @@
   "tentativi": [
    [
     "https://www.icriesi.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "http://www.icriesi.edu.it/",
-    "pagina non scolastica"
+    "HTTP 500"
    ],
    [
     "https://icriesi.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "http://icriesi.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ]
   ]
  },
@@ -551,35 +551,35 @@
   "tentativi": [
    [
     "https://www.iosvizzini.edu.it/",
-    "pagina non scolastica"
+    "HTTP 502"
    ],
    [
     "http://www.iosvizzini.edu.it/",
-    "pagina non scolastica"
+    "HTTP 502"
    ],
    [
     "https://iosvizzini.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "http://iosvizzini.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "https://www.icvizzini.edu.it/",
-    "pagina non scolastica"
+    "HTTP 500"
    ],
    [
     "http://www.icvizzini.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "https://icvizzini.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "http://icvizzini.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ]
   ]
  },
@@ -617,19 +617,19 @@
   "tentativi": [
    [
     "https://www.icdusmetdoria.edu.it/",
-    "pagina non scolastica"
+    "HTTP 500"
    ],
    [
     "http://www.icdusmetdoria.edu.it/",
-    "pagina non scolastica"
+    "HTTP 500"
    ],
    [
     "https://icdusmetdoria.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "http://icdusmetdoria.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ]
   ]
  },
@@ -816,13 +816,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "senza sito MIM",
-  "motivo": "recuperato",
-  "nuovo": "https://convittonazionalemariocutelli.edu.it/",
+  "motivo": "risponde ma con errore: pagina non scolastica",
   "sito": "https://convittonazionalemariocutelli.edu.it/",
   "tentativi": [
    [
     "https://www.convittonazionalemariocutelli.edu.it/",
-    "OK"
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.convittonazionalemariocutelli.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://convittonazionalemariocutelli.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://convittonazionalemariocutelli.edu.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -931,6 +942,45 @@
    ]
   ]
  },
+ "MEIC876009": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 403",
+  "motivo": "recuperato",
+  "nuovo": "https://ictorregrotta.edu.it/",
+  "sito": "https://ictorregrotta.edu.it/",
+  "tentativi": [
+   [
+    "https://www.ictorregrotta.edu.it/",
+    "OK"
+   ]
+  ]
+ },
+ "MEIS00200X": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 500",
+  "motivo": "risponde ma con errore: ReadTimeout",
+  "sito": "https://www.iisimpallomeni.edu.it/",
+  "tentativi": [
+   [
+    "https://www.iisimpallomeni.edu.it/",
+    "ReadTimeout"
+   ],
+   [
+    "http://www.iisimpallomeni.edu.it/",
+    "ReadTimeout"
+   ],
+   [
+    "https://iisimpallomeni.edu.it/",
+    "HTTP 502"
+   ],
+   [
+    "http://iisimpallomeni.edu.it/",
+    "HTTP 502"
+   ]
+  ]
+ },
  "PAIC817007": {
   "dns_pubblico": "no",
   "dns_runner": false,
@@ -940,19 +990,19 @@
   "tentativi": [
    [
     "https://www.icvillafratimezzojuso.edu.it/",
-    "pagina non scolastica"
+    "HTTP 500"
    ],
    [
     "http://www.icvillafratimezzojuso.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "https://icvillafratimezzojuso.edu.it/",
-    "pagina non scolastica"
+    "ReadTimeout"
    ],
    [
     "http://icvillafratimezzojuso.edu.it/",
-    "pagina non scolastica"
+    "HTTP 502"
    ]
   ]
  },
@@ -1011,6 +1061,47 @@
   "sito": "https://www.icvittorioemanueleterzo.edu.it/",
   "tentativi": []
  },
+ "PAIC8AV00G": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "ReadTimeout",
+  "motivo": "risponde ma con errore: ReadTimeout",
+  "sito": "https://www.icsmaredolce.edu.it/",
+  "tentativi": [
+   [
+    "https://www.icsmaredolce.edu.it/",
+    "ReadTimeout"
+   ],
+   [
+    "http://www.icsmaredolce.edu.it/",
+    "HTTP 500"
+   ],
+   [
+    "https://icsmaredolce.edu.it/",
+    "HTTP 500"
+   ],
+   [
+    "http://icsmaredolce.edu.it/",
+    "HTTP 500"
+   ],
+   [
+    "https://www.icsmaredolce.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://www.icsmaredolce.it/",
+    "ConnectionError"
+   ],
+   [
+    "https://icsmaredolce.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://icsmaredolce.it/",
+    "ConnectionError"
+   ]
+  ]
+ },
  "PAIS018007": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -1033,6 +1124,47 @@
    [
     "http://pietrodomina.edu.it/",
     "ConnectionError"
+   ]
+  ]
+ },
+ "PAPS26000R": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 500",
+  "motivo": "risponde ma con errore: HTTP 500",
+  "sito": "https://www.icsustica.it/",
+  "tentativi": [
+   [
+    "https://www.icsustica.it/",
+    "HTTP 500"
+   ],
+   [
+    "http://www.icsustica.it/",
+    "HTTP 502"
+   ],
+   [
+    "https://icsustica.it/",
+    "HTTP 502"
+   ],
+   [
+    "http://icsustica.it/",
+    "HTTP 502"
+   ],
+   [
+    "https://www.icsustica.edu.it/",
+    "ReadTimeout"
+   ],
+   [
+    "http://www.icsustica.edu.it/",
+    "HTTP 502"
+   ],
+   [
+    "https://icsustica.edu.it/",
+    "ReadTimeout"
+   ],
+   [
+    "http://icsustica.edu.it/",
+    "ReadTimeout"
    ]
   ]
  },
@@ -1151,6 +1283,10 @@
   "tentativi": [
    [
     "https://www.iissgagini.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.iissgagini.edu.it/",
     "OK"
    ]
   ]
