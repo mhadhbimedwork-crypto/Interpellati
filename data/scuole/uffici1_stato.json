@@ -1,11 +1,4 @@
 {
-"http://www.ustcremona.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cremona",
-"avvisi": 0,
-"errore": null
-},
 "https://lnx.csaoristano.it/category/reclutamento/": {
 "grezzi": 0,
 "scartati": [],
@@ -13,12 +6,12 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"http://www.ustcremona.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Terni",
+"provincia": "Cremona",
 "avvisi": 0,
-"errore": "HTTP 404"
+"errore": null
 },
 "https://como.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
@@ -26,6 +19,13 @@
 "provincia": "Como",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Terni",
+"avvisi": 0,
+"errore": "HTTP 404"
 },
 "https://monza.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti": {
 "grezzi": 0,
@@ -43,6 +43,27 @@
 "avvisi": 8,
 "errore": null
 },
+"https://atcampobasso.it/argomento/servizi/servizi-al-personale-scolastico/interpelli-nazionali/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Campobasso",
+"avvisi": 0,
+"errore": null
+},
+"https://uat-salerno.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Salerno",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://ustlucca.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lucca",
+"avvisi": 0,
+"errore": null
+},
 "https://belluno.istruzioneveneto.gov.it/category/news/area-amministrativa/interpelli/": {
 "grezzi": 1,
 "scartati": [],
@@ -50,10 +71,10 @@
 "avvisi": 1,
 "errore": null
 },
-"https://atcampobasso.it/argomento/servizi/servizi-al-personale-scolastico/interpelli-nazionali/": {
+"https://www.csanuoro.it/wp2019/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Campobasso",
+"provincia": "Nuoro",
 "avvisi": 0,
 "errore": null
 },
@@ -66,10 +87,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.atpnuoro.it/": {
+"https://www.istruzione.calabria.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Nuoro",
+"provincia": "Cosenza",
 "avvisi": 0,
 "errore": null
 },
@@ -83,11 +104,16 @@
 "avvisi": 9,
 "errore": null
 },
-"https://www.csanuoro.it/wp2019/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Nuoro",
-"avvisi": 0,
+"http://www.provveditoratostudiviterbo.it/": {
+"grezzi": 32,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://madinterpello.portaleargo.it/index.html",
+"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/",
+"https://liceosantarosavt.edu.it/index.php/ampliamento-offerta-formativa/avvisi-e-bandi"
+],
+"provincia": "Viterbo",
+"avvisi": 3,
 "errore": null
 },
 "https://me.usr.sicilia.it/": {
@@ -99,36 +125,10 @@
 "avvisi": 16,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/": {
-"grezzi": 22,
-"scartati": [
-"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso AC56 – I.",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
-"https://cl-en.usr.sicilia.it/category/news/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
-],
-"provincia": "Caltanissetta",
-"avvisi": 18,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cosenza",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Cuneo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Biella",
 "avvisi": 0,
 "errore": null
 },
@@ -153,23 +153,23 @@
 "avvisi": 0,
 "errore": null
 },
-"https://uat-salerno.it/": {
+"https://www.istruzionepiemonte.it/biella/tag/interpelli-supplenze/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Salerno",
+"provincia": "Biella",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": null
 },
-"http://www.provveditoratostudiviterbo.it/": {
-"grezzi": 32,
+"https://cl-en.usr.sicilia.it/": {
+"grezzi": 22,
 "scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://madinterpello.portaleargo.it/index.html",
-"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/",
-"https://liceosantarosavt.edu.it/index.php/ampliamento-offerta-formativa/avvisi-e-bandi"
+"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso AC56 – I.",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
+"https://cl-en.usr.sicilia.it/category/news/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
 ],
-"provincia": "Viterbo",
-"avvisi": 3,
+"provincia": "Caltanissetta",
+"avvisi": 18,
 "errore": null
 },
 "https://verona.istruzioneveneto.gov.it/index.php/interpelli-2026-2027/": {
@@ -195,18 +195,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
-"grezzi": 22,
-"scartati": [
-"https://fc.istruzioneer.gov.it/",
-"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/",
-"https://fc.istruzioneer.gov.it/",
-"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/"
-],
-"provincia": "Forlì-Cesena",
-"avvisi": 6,
-"errore": null
-},
 "https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
 "grezzi": 52,
 "scartati": [
@@ -219,22 +207,23 @@
 "avvisi": 22,
 "errore": null
 },
-"https://www.ufficioscolasticoprovinciale.prato.it/": {
-"grezzi": 5,
+"https://www.atpnuoro.it/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Prato",
-"avvisi": 5,
-"errore": null
+"provincia": "Nuoro",
+"avvisi": 0,
+"errore": "HTTP 429"
 },
-"https://ustlucca.it/": {
-"grezzi": 27,
+"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
+"grezzi": 20,
 "scartati": [
-"https://ustlucca.it/category/interpelli/",
-"https://ustlucca.it/interpello-n-1-incarico-scuola-dellinfanzia-posto-di-sostegno/",
-"https://ustlucca.it/category/interpelli/"
+"https://fc.istruzioneer.gov.it/",
+"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/",
+"https://fc.istruzioneer.gov.it/",
+"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/"
 ],
-"provincia": "Lucca",
-"avvisi": 24,
+"provincia": "Forlì-Cesena",
+"avvisi": 6,
 "errore": null
 },
 "https://www.uspcagliari.it/": {
@@ -244,11 +233,18 @@
 "avvisi": 0,
 "errore": "HTTP 403"
 },
+"https://www.ufficioscolasticoprovinciale.prato.it/": {
+"grezzi": 5,
+"scartati": [],
+"provincia": "Prato",
+"avvisi": 5,
+"errore": null
+},
 "https://www.usr.sicilia.it/feed/": {
-"grezzi": 3,
+"grezzi": 1,
 "scartati": [],
 "provincia": null,
-"avvisi": 3,
+"avvisi": 1,
 "errore": null
 },
 "https://www.istruzionechietipescara.it/": {
@@ -263,6 +259,18 @@
 "avvisi": 10,
 "errore": null
 },
+"https://www.mim.gov.it/web/oristano/": {
+"grezzi": 5,
+"scartati": [
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Favviso-interpello",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Favviso-interpello-istituto-t",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Favviso-interpello-istitu",
+"https://www.mim.gov.it/web/oristano/"
+],
+"provincia": "Oristano",
+"avvisi": 1,
+"errore": null
+},
 "https://www.istruzionelaspezia.gov.it/": {
 "grezzi": 21,
 "scartati": [
@@ -275,16 +283,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.mim.gov.it/web/oristano/": {
-"grezzi": 5,
+"https://www.uspsi.it/?cat=264": {
+"grezzi": 54,
 "scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Favviso-interpello",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Favviso-interpello-istituto-t",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Foristano%2F-%2Favviso-interpello-istitu",
-"https://www.mim.gov.it/web/oristano/"
+"https://www.uspsi.it/uspsiena/albo/",
+"https://www.uspsi.it/uspsiena/docenti/",
+"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
+"https://www.uspsi.it/uspsiena/news/"
 ],
-"provincia": "Oristano",
-"avvisi": 1,
+"provincia": "Siena",
+"avvisi": 47,
 "errore": null
 },
 "https://www.ustms.it/": {
@@ -299,20 +307,8 @@
 "avvisi": 6,
 "errore": null
 },
-"https://www.mim.gov.it/web/cremona/": {
-"grezzi": 188,
-"scartati": [
-"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-di-sostegno-nella-scuola-pr",
-"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-nella-scuola-dell-infanzia-",
-"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-classe-di-concorso-eeee",
-"https://www.mim.gov.it/web/cremona/-/interpello-posto-di-sostegno-presso-scuola-primaria-1"
-],
-"provincia": "Cremona",
-"avvisi": 9,
-"errore": null
-},
 "https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
-"grezzi": 37,
+"grezzi": 36,
 "scartati": [
 "https://www.uat-napoli.it/category/docenti/",
 "https://www.uat-napoli.it/tag/interpelli-personale-docente/",
@@ -320,19 +316,7 @@
 "https://www.uat-napoli.it/interpello-per-la-copertura-di-1-posto-scuola-primaria-sostegno-adee-scuola-primaria"
 ],
 "provincia": "Napoli",
-"avvisi": 28,
-"errore": null
-},
-"https://www.uspsi.it/?cat=264": {
-"grezzi": 54,
-"scartati": [
-"https://www.uspsi.it/uspsiena/albo/",
-"https://www.uspsi.it/uspsiena/docenti/",
-"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
-"https://www.uspsi.it/uspsiena/news/"
-],
-"provincia": "Siena",
-"avvisi": 47,
+"avvisi": 32,
 "errore": null
 },
 "https://www.mim.gov.it/web/lodi/": {
@@ -353,7 +337,7 @@
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/": {
-"grezzi": 25,
+"grezzi": 16,
 "scartati": [
 "https://www.uspascolipiceno.it/wordpress/category/albo-pretorio/",
 "https://www.uspascolipiceno.it/wordpress/category/interpelli/",
@@ -361,7 +345,19 @@
 "https://www.uspascolipiceno.it/wordpress/g-p-s-graduatorie-provinciali-per-le-supplenza/"
 ],
 "provincia": "Ascoli Piceno",
-"avvisi": 14,
+"avvisi": 12,
+"errore": null
+},
+"https://www.mim.gov.it/web/cremona/": {
+"grezzi": 188,
+"scartati": [
+"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-di-sostegno-nella-scuola-pr",
+"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-nella-scuola-dell-infanzia-",
+"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-classe-di-concorso-eeee",
+"https://www.mim.gov.it/web/cremona/-/interpello-posto-di-sostegno-presso-scuola-primaria-1"
+],
+"provincia": "Cremona",
+"avvisi": 12,
 "errore": null
 },
 "https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti/": {
