@@ -27,6 +27,13 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
+"https://atcampobasso.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Campobasso",
+"avvisi": 0,
+"errore": null
+},
 "https://rn.istruzioneer.gov.it/feed/": {
 "grezzi": 8,
 "scartati": [
@@ -43,12 +50,12 @@
 "avvisi": 1,
 "errore": null
 },
-"https://atcampobasso.it/": {
+"https://uat-salerno.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Campobasso",
+"provincia": "Salerno",
 "avvisi": 0,
-"errore": null
+"errore": "SSLError"
 },
 "https://sr.usr.sicilia.it/tag/interpelli/": {
 "grezzi": 2,
@@ -58,13 +65,6 @@
 "provincia": "Siracusa",
 "avvisi": 1,
 "errore": null
-},
-"https://uat-salerno.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Salerno",
-"avvisi": 0,
-"errore": "SSLError"
 },
 "https://pc.istruzioneer.gov.it/": {
 "grezzi": 11,
@@ -77,13 +77,6 @@
 "errore": null
 },
 "https://www.csanuoro.it/wp2019/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Nuoro",
-"avvisi": 0,
-"errore": null
-},
-"https://www.atpnuoro.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Nuoro",
@@ -109,6 +102,13 @@
 ],
 "provincia": "Caltanissetta",
 "avvisi": 18,
+"errore": null
+},
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cosenza",
+"avvisi": 0,
 "errore": null
 },
 "http://www.istruzionevicenza.it/wordpress/": {
@@ -153,6 +153,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.atpnuoro.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Nuoro",
+"avvisi": 0,
+"errore": null
+},
 "https://verona.istruzioneveneto.gov.it/index.php/interpelli-2026-2027/": {
 "grezzi": 0,
 "scartati": [],
@@ -167,48 +174,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cosenza",
-"avvisi": 0,
-"errore": null
-},
 "https://www.regione.vda.it/istruzione/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Aosta",
 "avvisi": 0,
-"errore": null
-},
-"https://www.istruzioneatprc.it/": {
-"grezzi": 2,
-"scartati": [
-"https://www.icdelianuova.edu.it/servizi?id=316&&source=servizi-personale"
-],
-"provincia": "Reggio Calabria",
-"avvisi": 1,
-"errore": null
-},
-"https://www.mim.gov.it/web/brescia/": {
-"grezzi": 2,
-"scartati": [
-"https://www.mim.gov.it/web/brescia/-/avviso-di-interpello-per-conferimento-di-una-supplenza-fuori-graduatoria-"
-],
-"provincia": "Brescia",
-"avvisi": 1,
-"errore": null
-},
-"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
-"grezzi": 18,
-"scartati": [
-"https://fc.istruzioneer.gov.it/",
-"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/",
-"https://fc.istruzioneer.gov.it/",
-"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/"
-],
-"provincia": "Forlì-Cesena",
-"avvisi": 4,
 "errore": null
 },
 "https://ustlucca.it/": {
@@ -220,6 +190,24 @@
 ],
 "provincia": "Lucca",
 "avvisi": 25,
+"errore": null
+},
+"https://www.mim.gov.it/web/brescia/": {
+"grezzi": 2,
+"scartati": [
+"https://www.mim.gov.it/web/brescia/-/avviso-di-interpello-per-conferimento-di-una-supplenza-fuori-graduatoria-"
+],
+"provincia": "Brescia",
+"avvisi": 1,
+"errore": null
+},
+"https://www.istruzioneatprc.it/": {
+"grezzi": 2,
+"scartati": [
+"https://www.icdelianuova.edu.it/servizi?id=316&&source=servizi-personale"
+],
+"provincia": "Reggio Calabria",
+"avvisi": 1,
 "errore": null
 },
 "https://ra.istruzioneer.gov.it/conferimento-supplenze-per-esaurimento-graduatorie-di-istituto/": {
@@ -234,6 +222,18 @@
 "avvisi": 22,
 "errore": null
 },
+"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/": {
+"grezzi": 20,
+"scartati": [
+"https://fc.istruzioneer.gov.it/",
+"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/",
+"https://fc.istruzioneer.gov.it/",
+"https://fc.istruzioneer.gov.it/category/interpelli-a-s-2024-25/"
+],
+"provincia": "Forlì-Cesena",
+"avvisi": 4,
+"errore": null
+},
 "https://www.usplatina.it/wp/": {
 "grezzi": 0,
 "scartati": [],
@@ -242,14 +242,14 @@
 "errore": null
 },
 "https://www.usp-rieti.it/": {
-"grezzi": 13,
+"grezzi": 15,
 "scartati": [],
 "provincia": "Rieti",
-"avvisi": 13,
+"avvisi": 15,
 "errore": null
 },
 "https://www.istruzionechietipescara.it/": {
-"grezzi": 22,
+"grezzi": 17,
 "scartati": [
 "https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F19",
 "https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F19",
@@ -257,14 +257,19 @@
 "https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F1"
 ],
 "provincia": "Pescara",
-"avvisi": 14,
+"avvisi": 9,
 "errore": null
 },
-"https://www.usptaranto.it/": {
-"grezzi": 18,
-"scartati": [],
-"provincia": "Taranto",
-"avvisi": 18,
+"https://www.istruzionelaspezia.gov.it/": {
+"grezzi": 21,
+"scartati": [
+"https://www.istruzionelaspezia.gov.it/pagine/interpello-assistente-tecnico-meccanica---area-ar01---6h---fino-a",
+"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
+"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-",
+"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-"
+],
+"provincia": "La Spezia",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni": {
@@ -276,7 +281,7 @@
 "https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni"
 ],
 "provincia": "Grosseto",
-"avvisi": 15,
+"avvisi": 14,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
@@ -291,15 +296,10 @@
 "avvisi": 11,
 "errore": null
 },
-"https://www.istruzionelaspezia.gov.it/": {
-"grezzi": 21,
-"scartati": [
-"https://www.istruzionelaspezia.gov.it/pagine/interpello-assistente-tecnico-meccanica---area-ar01---6h---fino-a",
-"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
-"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-",
-"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-"
-],
-"provincia": "La Spezia",
+"https://www.usrfvg.gov.it/feed/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
 "avvisi": 0,
 "errore": null
 },
@@ -315,11 +315,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.usrfvg.gov.it/feed/": {
-"grezzi": 0,
+"https://www.usptaranto.it/": {
+"grezzi": 18,
 "scartati": [],
-"provincia": null,
-"avvisi": 0,
+"provincia": "Taranto",
+"avvisi": 18,
 "errore": null
 }
 }
