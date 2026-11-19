@@ -1,11 +1,4 @@
 {
-"https://atpsassari.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
-"errore": null
-},
 "https://mantova.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -13,12 +6,12 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://pavia.istruzionelombardia.gov.it/": {
+"https://atpsassari.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Pavia",
+"provincia": "Sassari",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": null
 },
 "https://pr.istruzioneer.gov.it/interpelli-2/": {
 "grezzi": 0,
@@ -26,6 +19,13 @@
 "provincia": "Parma",
 "avvisi": 0,
 "errore": "HTTP 404"
+},
+"https://pavia.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pavia",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "http://www.uspms.it/": {
 "grezzi": 0,
@@ -60,6 +60,18 @@
 "avvisi": 3,
 "errore": null
 },
+"https://rn.istruzioneer.gov.it/": {
+"grezzi": 23,
+"scartati": [
+"https://rn.istruzioneer.gov.it/2026/11/16/turno-xi-nomine-a-tempo-determinato-da-gae-gps-a-s-2026-27-personale",
+"https://rn.istruzioneer.gov.it/category/personale-docente/interpelli-docenti-2026-2027/",
+"https://rn.istruzioneer.gov.it/category/personale-docente/",
+"https://rn.istruzioneer.gov.it/category/personale-docente/primaria/"
+],
+"provincia": "Rimini",
+"avvisi": 17,
+"errore": null
+},
 "https://win.istruzioneverona.it/uspvr/index.php/interpelli-docenti/": {
 "grezzi": 0,
 "scartati": [],
@@ -77,28 +89,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://rn.istruzioneer.gov.it/": {
-"grezzi": 23,
-"scartati": [
-"https://rn.istruzioneer.gov.it/2026/11/16/turno-xi-nomine-a-tempo-determinato-da-gae-gps-a-s-2026-27-personale",
-"https://rn.istruzioneer.gov.it/category/personale-docente/interpelli-docenti-2026-2027/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/primaria/"
-],
-"provincia": "Rimini",
-"avvisi": 17,
-"errore": null
-},
 "https://mo.istruzioneer.gov.it/": {
-"grezzi": 24,
+"grezzi": 27,
 "scartati": [
 "https://mo.istruzioneer.gov.it/",
 "https://mo.istruzioneer.gov.it/category/docenti-secondaria-secondo-grado/",
 "https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
+"https://mo.istruzioneer.gov.it/category/docenti-secondaria-primo-grado/"
 ],
 "provincia": "Modena",
-"avvisi": 19,
+"avvisi": 20,
 "errore": null
 },
 "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
@@ -120,6 +120,13 @@
 "avvisi": 22,
 "errore": null
 },
+"https://treviso.istruzioneveneto.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Treviso",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionegenova.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -131,13 +138,6 @@
 "grezzi": 0,
 "scartati": [],
 "provincia": "Biella",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/latina-didaxis-xxxvi-2023-composizione-nominale-e-giochi-di-parole-nella-cultura-latina/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Latina",
 "avvisi": 0,
 "errore": null
 },
@@ -155,24 +155,17 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzionepiemonte.it/latina-didaxis-xxxvi-2023-composizione-nominale-e-giochi-di-parole-nella-cultura-latina/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Latina",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionesavona.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Savona",
-"avvisi": 0,
-"errore": null
-},
-"https://www.provincia.bz.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bolzano",
-"avvisi": 0,
-"errore": null
-},
-"https://treviso.istruzioneveneto.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Treviso",
 "avvisi": 0,
 "errore": null
 },
@@ -188,16 +181,11 @@
 "avvisi": 6,
 "errore": null
 },
-"https://bo.istruzioneer.gov.it/tag/interpello/": {
-"grezzi": 23,
-"scartati": [
-"https://bo.istruzioneer.gov.it/",
-"https://bo.istruzioneer.gov.it/category/infanzia/",
-"https://bo.istruzioneer.gov.it/",
-"https://bo.istruzioneer.gov.it/category/contratti-a-tempo-determinato/"
-],
-"provincia": "Bologna",
-"avvisi": 3,
+"https://www.provincia.bz.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Bolzano",
+"avvisi": 0,
 "errore": null
 },
 "https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
@@ -228,6 +216,18 @@
 "avvisi": 7,
 "errore": null
 },
+"https://bo.istruzioneer.gov.it/tag/interpello/": {
+"grezzi": 23,
+"scartati": [
+"https://bo.istruzioneer.gov.it/",
+"https://bo.istruzioneer.gov.it/category/infanzia/",
+"https://bo.istruzioneer.gov.it/",
+"https://bo.istruzioneer.gov.it/category/contratti-a-tempo-determinato/"
+],
+"provincia": "Bologna",
+"avvisi": 3,
+"errore": null
+},
 "https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
 "grezzi": 20,
 "scartati": [
@@ -252,8 +252,32 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzione-ancona.it/": {
+"grezzi": 73,
+"scartati": [
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/"
+],
+"provincia": "Ancona",
+"avvisi": 19,
+"errore": null
+},
+"https://www.uat-napoli.it/": {
+"grezzi": 40,
+"scartati": [
+"https://www.uat-napoli.it/category/docenti/",
+"https://www.uat-napoli.it/tag/interpelli-personale-docente/",
+"https://www.uat-napoli.it/tag/avvisi/",
+"https://www.uat-napoli.it/category/docenti/"
+],
+"provincia": "Napoli",
+"avvisi": 33,
+"errore": null
+},
 "https://www.istruzionebrindisi.it/": {
-"grezzi": 47,
+"grezzi": 36,
 "scartati": [
 "https://www.istruzionebrindisi.it/decreto-integrazione-part-time-a-s-2026-27-docenti-infanzia-primaria-ii-grad",
 "https://www.istruzionebrindisi.it/ottavo-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-scuola-dellinfanzia",
@@ -261,7 +285,7 @@
 "https://www.istruzionebrindisi.it/settimo-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-scuola-dellinfanzi"
 ],
 "provincia": "Brindisi",
-"avvisi": 25,
+"avvisi": 19,
 "errore": null
 },
 "https://www.csa.fi.it/": {
@@ -283,6 +307,18 @@
 "avvisi": 56,
 "errore": null
 },
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
+"grezzi": 66,
+"scartati": [
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/news/",
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat"
+],
+"provincia": "Ragusa",
+"avvisi": 36,
+"errore": null
+},
 "https://www.uspascolipiceno.it/": {
 "grezzi": 16,
 "scartati": [
@@ -296,26 +332,13 @@
 "errore": null
 },
 "https://www.ustfoggia.it/": {
-"grezzi": 42,
+"grezzi": 39,
 "scartati": [
 "https://www.ustfoggia.it/category/albo-pretorio/",
-"https://www.ustfoggia.it/category/news/",
-"https://www.ustfoggia.it/ultime-novita-ust-foggia/"
+"https://www.ustfoggia.it/category/news/"
 ],
 "provincia": "Foggia",
-"avvisi": 39,
-"errore": null
-},
-"https://www.uat-napoli.it/": {
-"grezzi": 40,
-"scartati": [
-"https://www.uat-napoli.it/category/docenti/",
-"https://www.uat-napoli.it/tag/interpelli-personale-docente/",
-"https://www.uat-napoli.it/tag/avvisi/",
-"https://www.uat-napoli.it/category/docenti/"
-],
-"provincia": "Napoli",
-"avvisi": 33,
+"avvisi": 37,
 "errore": null
 },
 "https://www.ustli.it/usp_livorno/index.php/docenti/interpelli": {
@@ -328,30 +351,6 @@
 ],
 "provincia": "Livorno",
 "avvisi": 0,
-"errore": null
-},
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
-"grezzi": 66,
-"scartati": [
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/news/",
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat"
-],
-"provincia": "Ragusa",
-"avvisi": 36,
-"errore": null
-},
-"https://www.istruzione-ancona.it/": {
-"grezzi": 74,
-"scartati": [
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/"
-],
-"provincia": "Ancona",
-"avvisi": 20,
 "errore": null
 }
 }
