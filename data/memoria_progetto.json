@@ -1323,10 +1323,10 @@
 {
 "data": "2026-11-20",
 "scuole": 7780,
-"verdi": 6860,
-"arancioni": 19,
+"verdi": 6868,
+"arancioni": 11,
 "rossi": 901,
-"percentuale_verdi": 88.2,
+"percentuale_verdi": 88.3,
 "per_regione": {
 "Abruzzo": {
 "verde": 188,
@@ -1344,8 +1344,8 @@
 "rosso": 52
 },
 "Campania": {
-"verde": 804,
-"arancione": 3,
+"verde": 805,
+"arancione": 2,
 "rosso": 64
 },
 "Emilia-Romagna": {
@@ -1359,8 +1359,8 @@
 "rosso": 24
 },
 "Lazio": {
-"verde": 630,
-"arancione": 2,
+"verde": 631,
+"arancione": 1,
 "rosso": 82
 },
 "Liguria": {
@@ -1384,13 +1384,13 @@
 "rosso": 3
 },
 "Piemonte": {
-"verde": 465,
-"arancione": 2,
+"verde": 467,
+"arancione": 0,
 "rosso": 61
 },
 "Puglia": {
-"verde": 531,
-"arancione": 3,
+"verde": 532,
+"arancione": 2,
 "rosso": 51
 },
 "Sardegna": {
@@ -1399,13 +1399,13 @@
 "rosso": 21
 },
 "Sicilia": {
-"verde": 677,
-"arancione": 3,
+"verde": 679,
+"arancione": 1,
 "rosso": 53
 },
 "Toscana": {
-"verde": 429,
-"arancione": 1,
+"verde": 430,
+"arancione": 0,
 "rosso": 41
 },
 "Trentino-Alto Adige": {
@@ -3068,7 +3068,7 @@
 "data": "2026-11-20",
 "tipo": "causa",
 "causa": "errore recente",
-"scuole": 18
+"scuole": 10
 },
 {
 "data": "2026-11-20",
@@ -3085,102 +3085,60 @@
 {
 "data": "2026-11-20",
 "tipo": "recuperate",
-"scuole": 50,
+"scuole": 9,
 "esempi": [
 {
-"codice": "VTIC82800T",
-"nome": "I.C. MONTEFIASCONE",
+"codice": "CTRH010007",
+"nome": "IPSSAR GIOVANNI FALCONE",
 "prima": "arancione"
 },
 {
-"codice": "RMIC847005",
-"nome": "IC P.ZZA BORGONCINI DUCA 5",
+"codice": "AGIS018009",
+"nome": "IIS - GIUDICI SAETTA E LIVATINO",
 "prima": "arancione"
 },
 {
-"codice": "ANIC83800G",
-"nome": "\"DON COSTANTINI - L.BARTOLINI\"",
+"codice": "MEPS03000D",
+"nome": "\"SEGUENZA\" MESSINA",
 "prima": "arancione"
 },
 {
-"codice": "ANIC82300T",
-"nome": "MONTEMARCIANO-MONTE SAN VITO",
+"codice": "SIIS00400L",
+"nome": "IS \"CASELLI\"",
 "prima": "arancione"
 },
 {
-"codice": "APIC838006",
-"nome": "ISC MONTE URANO",
+"codice": "RMIS12800R",
+"nome": "POLO LICEALE \"ALIGHIERI - CARAVILLANI\"",
 "prima": "arancione"
 },
 {
-"codice": "ANIC83100R",
-"nome": "CASTELFIDARDO \"PAOLO SOPRANI\"",
+"codice": "ALIS01300R",
+"nome": "LEARDI",
 "prima": "arancione"
 },
 {
-"codice": "ANIC82400N",
-"nome": "\"R SANZIO-FALCONARA CENTRO\"",
+"codice": "ALVC02000D",
+"nome": "S.MARTINO DI ROSIGNANO",
 "prima": "arancione"
 },
 {
-"codice": "RMIC8FH006",
-"nome": "DAVID SASSOLI",
-"prima": "rosso"
+"codice": "BAIC83700A",
+"nome": "I.C. \"GALLO - POSITANO\"",
+"prima": "arancione"
 }
 ]
 },
 {
 "data": "2026-11-20",
 "tipo": "peggiorate",
-"scuole": 13,
+"scuole": 1,
 "esempi": [
 {
-"codice": "AGIS018009",
-"nome": "IIS - GIUDICI SAETTA E LIVATINO",
-"ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
-},
-{
-"codice": "MEPS03000D",
-"nome": "\"SEGUENZA\" MESSINA",
-"ora": "arancione",
-"motivo": "errore recente (HTTP 503): si riprova ogni giorno"
-},
-{
-"codice": "SIIS00400L",
-"nome": "IS \"CASELLI\"",
-"ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
-},
-{
-"codice": "RMIC8E4008",
-"nome": "IC NICOLA CALIPARI",
-"ora": "arancione",
-"motivo": "errore recente (HTTP 401): si riprova ogni giorno"
-},
-{
-"codice": "RMIS12800R",
-"nome": "POLO LICEALE \"ALIGHIERI - CARAVILLANI\"",
+"codice": "MEIC876009",
+"nome": "I.C. DI TORREGROTTA",
 "ora": "arancione",
 "motivo": "errore recente (HTTP 403): si riprova ogni giorno"
-},
-{
-"codice": "PGPC07000G",
-"nome": "LICEO \"PROPERZIO\"",
-"ora": "arancione",
-"motivo": "errore recente (HTTP 403): si riprova ogni giorno"
-},
-{
-"codice": "TNSD02000X",
-"nome": "LICEO ARTI \"VITTORIA BONPORTI DEPERO\"",
-"ora": "rosso",
-"motivo": "dominio inesistente (sito dismesso o cambiato)"
-},
-{
-"codice": "ALIS01300R",
-"nome": "LEARDI",
-"ora": "arancione",
-"motivo": "errore recente (ConnectionError): si riprova ogni giorno"
 }
 ]
 }
