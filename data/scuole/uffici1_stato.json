@@ -20,17 +20,17 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://lecco.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://bergamo.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Bergamo",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://lecco.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -53,13 +53,6 @@
 "avvisi": 2,
 "errore": null
 },
-"https://varese.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Varese",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://uat-salerno.it/Documenti/CIRCOLARI/Interpelli-per-reclutamento-personale-docente": {
 "grezzi": 0,
 "scartati": [],
@@ -67,21 +60,28 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://www.atpromaistruzione.it/": {
+"https://varese.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Roma",
+"provincia": "Varese",
 "avvisi": 0,
-"errore": null
+"errore": "SSLError"
 },
 "https://re.istruzioneer.gov.it/": {
-"grezzi": 27,
+"grezzi": 24,
 "scartati": [
 "https://re.istruzioneer.gov.it/category/docenti/",
 "https://re.istruzioneer.gov.it/category/docenti/interpello/"
 ],
 "provincia": "Reggio Emilia",
-"avvisi": 25,
+"avvisi": 22,
+"errore": null
+},
+"https://www.atpromaistruzione.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Roma",
+"avvisi": 0,
 "errore": null
 },
 "https://www.csanuoro.it/wp2019/interpelli-as-2024-2025": {
@@ -91,8 +91,27 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Crotone",
+"avvisi": 0,
+"errore": null
+},
+"http://www.provveditoratostudiviterbo.it/": {
+"grezzi": 33,
+"scartati": [
+"https://www.icvignanello.edu.it/interpelli/",
+"https://www.ic25aprile.edu.it/www/interpello-per-supplenza-fino-al-30-06-2027-classe-di-concorso-eeee-scuola-p",
+"https://www.portaleargo.it/albopretorio/online/",
+"https://madinterpello.portaleargo.it/index.html"
+],
+"provincia": "Viterbo",
+"avvisi": 2,
+"errore": null
+},
 "https://cl-en.usr.sicilia.it/": {
-"grezzi": 20,
+"grezzi": 14,
 "scartati": [
 "https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso AC56 – I.",
 "https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
@@ -100,26 +119,7 @@
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
 ],
 "provincia": "Enna",
-"avvisi": 16,
-"errore": null
-},
-"http://www.provveditoratostudiviterbo.it/": {
-"grezzi": 33,
-"scartati": [
-"https://www.icvignanello.edu.it/interpelli/",
-"https://www.portaleargo.it/albopretorio/online/",
-"https://madinterpello.portaleargo.it/index.html",
-"https://www.icpaoloterzo.edu.it/interpelli-personale-docente/"
-],
-"provincia": "Viterbo",
-"avvisi": 3,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Crotone",
-"avvisi": 0,
+"avvisi": 10,
 "errore": null
 },
 "https://pa.usr.sicilia.it/": {
@@ -129,10 +129,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/": {
+"https://www.istruzionepiemonte.it/cuneo/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Novara",
+"provincia": "Cuneo",
 "avvisi": 0,
 "errore": null
 },
@@ -157,23 +157,42 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/cuneo/": {
+"https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Cuneo",
+"provincia": "Novara",
 "avvisi": 0,
 "errore": null
 },
-"https://pc.istruzioneer.gov.it/interpelli/": {
-"grezzi": 27,
+"https://www.mim.gov.it/web/campobasso/": {
+"grezzi": 2,
 "scartati": [
-"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/3a9b715a-24c7-43af-b745-6e9d8b4abd10/candidatura",
-"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
-"http://twitter.com/share?text=INTERPELLO+PER+SUPPLENZA+BREVE+SC.+SECONDARIA+DI+1%C2%B0+GRADO+%26%238211%3B+CLA",
-"https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F11%2F16%2Fi"
+"https://www.mim.gov.it/web/campobasso/-/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche",
+"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i"
 ],
-"provincia": "Piacenza",
-"avvisi": 8,
+"provincia": "Campobasso",
+"avvisi": 0,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 22,
+"scartati": [
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+],
+"provincia": "Rovigo",
+"avvisi": 21,
+"errore": null
+},
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 76,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+],
+"provincia": "Ferrara",
+"avvisi": 47,
 "errore": null
 },
 "https://me.usr.sicilia.it/personale-scuola/interpelli/": {
@@ -186,25 +205,6 @@
 ],
 "provincia": "Messina",
 "avvisi": 21,
-"errore": null
-},
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 22,
-"scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
-],
-"provincia": "Rovigo",
-"avvisi": 21,
-"errore": null
-},
-"https://www.mim.gov.it/web/campobasso/": {
-"grezzi": 2,
-"scartati": [
-"https://www.mim.gov.it/web/campobasso/-/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche",
-"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i"
-],
-"provincia": "Campobasso",
-"avvisi": 0,
 "errore": null
 },
 "https://www.ufficioscolasticogrosseto.it/": {
@@ -221,6 +221,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.mim.gov.it/web/lecco/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": null
+},
 "https://vicenza.istruzioneveneto.gov.it/": {
 "grezzi": 4,
 "scartati": [
@@ -230,31 +237,12 @@
 "avvisi": 3,
 "errore": null
 },
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 84,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
-],
-"provincia": "Ferrara",
-"avvisi": 49,
-"errore": null
-},
 "https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": null,
 "avvisi": 0,
 "errore": "HTTP 404"
-},
-"https://www.mim.gov.it/web/lecco/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecco",
-"avvisi": 0,
-"errore": null
 },
 "https://www.ustfoggia.it/feed/": {
 "grezzi": 5,
@@ -263,15 +251,20 @@
 "avvisi": 5,
 "errore": null
 },
-"https://www.uspcampobasso.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Campobasso",
-"avvisi": 0,
+"https://pc.istruzioneer.gov.it/interpelli/": {
+"grezzi": 25,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/3a9b715a-24c7-43af-b745-6e9d8b4abd10/candidatura",
+"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
+"http://twitter.com/share?text=INTERPELLO+PER+SUPPLENZA+BREVE+SC.+SECONDARIA+DI+1%C2%B0+GRADO+%26%238211%3B+CLA",
+"https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F11%2F16%2Fi"
+],
+"provincia": "Piacenza",
+"avvisi": 6,
 "errore": null
 },
 "https://www.istruzioneatprc.it/category/recl/int/": {
-"grezzi": 18,
+"grezzi": 20,
 "scartati": [
 "https://www.istruzioneatprc.it/category/recl/int/",
 "https://www.istruzioneatprc.it/interpelloicgiannone-oppidolucano-ai56/",
@@ -280,20 +273,6 @@
 ],
 "provincia": "Reggio Calabria",
 "avvisi": 0,
-"errore": null
-},
-"https://www.vivoscuola.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Trento",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
-"grezzi": 12,
-"scartati": [],
-"provincia": "Chieti",
-"avvisi": 12,
 "errore": null
 },
 "https://www.mim.gov.it/web/nuoro/": {
@@ -308,6 +287,34 @@
 "avvisi": 7,
 "errore": null
 },
+"https://www.vivoscuola.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Trento",
+"avvisi": 0,
+"errore": null
+},
+"https://www.uspcampobasso.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Campobasso",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionechietipescara.it/category/dalle-istituzioni-scolatiche/": {
+"grezzi": 12,
+"scartati": [],
+"provincia": "Chieti",
+"avvisi": 12,
+"errore": null
+},
+"https://www.uspss.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
+"avvisi": 0,
+"errore": null
+},
 "https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
 "grezzi": 14,
 "scartati": [
@@ -318,13 +325,6 @@
 ],
 "provincia": "Prato",
 "avvisi": 4,
-"errore": null
-},
-"https://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
 "errore": null
 },
 "https://www.uspascolipiceno.it/wordpress/interpelli/": {
