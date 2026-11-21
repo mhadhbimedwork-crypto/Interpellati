@@ -1433,10 +1433,10 @@
 {
 "data": "2026-11-21",
 "scuole": 7780,
-"verdi": 6752,
-"arancioni": 72,
-"rossi": 956,
-"percentuale_verdi": 86.8,
+"verdi": 6867,
+"arancioni": 11,
+"rossi": 902,
+"percentuale_verdi": 88.3,
 "per_regione": {
 "Abruzzo": {
 "verde": 188,
@@ -1459,14 +1459,14 @@
 "rosso": 64
 },
 "Emilia-Romagna": {
-"verde": 302,
-"arancione": 47,
-"rosso": 123
+"verde": 384,
+"arancione": 1,
+"rosso": 87
 },
 "Friuli Venezia Giulia": {
-"verde": 132,
-"arancione": 4,
-"rosso": 26
+"verde": 138,
+"arancione": 0,
+"rosso": 24
 },
 "Lazio": {
 "verde": 631,
@@ -1479,8 +1479,8 @@
 "rosso": 30
 },
 "Lombardia": {
-"verde": 997,
-"arancione": 0,
+"verde": 996,
+"arancione": 1,
 "rosso": 133
 },
 "Marche": {
@@ -1504,18 +1504,18 @@
 "rosso": 51
 },
 "Sardegna": {
-"verde": 217,
-"arancione": 3,
+"verde": 220,
+"arancione": 0,
 "rosso": 21
 },
 "Sicilia": {
-"verde": 680,
-"arancione": 0,
+"verde": 679,
+"arancione": 1,
 "rosso": 53
 },
 "Toscana": {
-"verde": 430,
-"arancione": 0,
+"verde": 429,
+"arancione": 1,
 "rosso": 41
 },
 "Trentino-Alto Adige": {
@@ -1524,8 +1524,8 @@
 "rosso": 4
 },
 "Umbria": {
-"verde": 121,
-"arancione": 0,
+"verde": 120,
+"arancione": 1,
 "rosso": 30
 },
 "Valle d'Aosta": {
@@ -1534,9 +1534,9 @@
 "rosso": 9
 },
 "Veneto": {
-"verde": 462,
-"arancione": 13,
-"rosso": 103
+"verde": 490,
+"arancione": 1,
+"rosso": 87
 }
 }
 }
@@ -3279,20 +3279,14 @@
 {
 "data": "2026-11-21",
 "tipo": "causa",
-"causa": "errore recente",
-"scuole": 72
-},
-{
-"data": "2026-11-21",
-"tipo": "causa",
-"causa": "sito non ancora pubblicato",
-"scuole": 54
-},
-{
-"data": "2026-11-21",
-"tipo": "causa",
 "causa": "irraggiungibile da 13 giorni",
 "scuole": 24
+},
+{
+"data": "2026-11-21",
+"tipo": "causa",
+"causa": "errore recente",
+"scuole": 11
 },
 {
 "data": "2026-11-21",
@@ -3302,27 +3296,53 @@
 },
 {
 "data": "2026-11-21",
+"tipo": "causa",
+"causa": "irraggiungibile da 10 giorni",
+"scuole": 2
+},
+{
+"data": "2026-11-21",
 "tipo": "recuperate",
-"scuole": 4,
+"scuole": 119,
 "esempi": [
 {
-"codice": "MEIC876009",
-"nome": "I.C. DI TORREGROTTA",
+"codice": "PDIC883002",
+"nome": "VI IC DI PADOVA \"BRUNO CIARI\"",
 "prima": "arancione"
 },
 {
-"codice": "PGPC07000G",
-"nome": "LICEO \"PROPERZIO\"",
+"codice": "MOIC83900V",
+"nome": "CARPI 3",
 "prima": "arancione"
 },
 {
-"codice": "LEPS220003",
-"nome": "LICEO \"G. STAMPACCHIA\"",
+"codice": "MOIC83400Q",
+"nome": "IC MARANELLO",
 "prima": "arancione"
 },
 {
-"codice": "SAIC8A0002",
-"nome": "IST. COMPR. CASTELLABATE",
+"codice": "BOIC86500D",
+"nome": "I.C. DI CASTEL SAN PIETRO TERME",
+"prima": "arancione"
+},
+{
+"codice": "PNMM164001",
+"nome": "CPIA 1 PORDENONE",
+"prima": "arancione"
+},
+{
+"codice": "FEIC81200Q",
+"nome": "I.C. 'G. PERLASCA' - FERRARA",
+"prima": "arancione"
+},
+{
+"codice": "PDMM25500L",
+"nome": "CPIA DI PADOVA",
+"prima": "arancione"
+},
+{
+"codice": "PRIC813002",
+"nome": "I.C. FRANCO MARIA RICCI",
 "prima": "arancione"
 }
 ]
@@ -3330,55 +3350,31 @@
 {
 "data": "2026-11-21",
 "tipo": "peggiorate",
-"scuole": 120,
+"scuole": 4,
 "esempi": [
 {
-"codice": "PDIC883002",
-"nome": "VI IC DI PADOVA \"BRUNO CIARI\"",
+"codice": "TPIC83700X",
+"nome": "I. C. \"D.ALIGHIERI\" VALDERICE",
+"ora": "arancione",
+"motivo": "errore recente (HTTP 202): si riprova ogni giorno"
+},
+{
+"codice": "SIIS00400L",
+"nome": "IS \"CASELLI\"",
 "ora": "arancione",
 "motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
 },
 {
-"codice": "MOIC83900V",
-"nome": "CARPI 3",
+"codice": "PGPC07000G",
+"nome": "LICEO \"PROPERZIO\"",
 "ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+"motivo": "errore recente (HTTP 403): si riprova ogni giorno"
 },
 {
-"codice": "MOIC83400Q",
-"nome": "IC MARANELLO",
+"codice": "MIIC8GF00L",
+"nome": "IC DON PINO PUGLISI",
 "ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
-},
-{
-"codice": "BOIC86500D",
-"nome": "I.C. DI CASTEL SAN PIETRO TERME",
-"ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
-},
-{
-"codice": "PNMM164001",
-"nome": "CPIA 1 PORDENONE",
-"ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
-},
-{
-"codice": "FEIC81200Q",
-"nome": "I.C. 'G. PERLASCA' - FERRARA",
-"ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
-},
-{
-"codice": "PDMM25500L",
-"nome": "CPIA DI PADOVA",
-"ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
-},
-{
-"codice": "PRIC813002",
-"nome": "I.C. FRANCO MARIA RICCI",
-"ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+"motivo": "errore recente (SSLError): si riprova ogni giorno"
 }
 ]
 }
