@@ -6,17 +6,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://milano.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://lodi.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lodi",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://milano.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -28,21 +28,10 @@
 "errore": "HTTP 404"
 },
 "https://bo.istruzioneer.gov.it/": {
-"grezzi": 3,
+"grezzi": 0,
 "scartati": [],
 "provincia": "Bologna",
-"avvisi": 3,
-"errore": null
-},
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 5,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PRIC82300L/docenti",
-"https://nuvola.madisoft.it/interpelli/PRIC82900G/docenti",
-"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti"
-],
-"provincia": "Parma",
-"avvisi": 2,
+"avvisi": 0,
 "errore": null
 },
 "https://ct.usr.sicilia.it/": {
@@ -57,10 +46,69 @@
 "avvisi": 3,
 "errore": null
 },
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Parma",
+"avvisi": 0,
+"errore": null
+},
 "https://padova.istruzioneveneto.gov.it/": {
 "grezzi": 37,
 "scartati": [],
 "provincia": "Padova",
+"avvisi": 37,
+"errore": null
+},
+"https://tp.usr.sicilia.it/": {
+"grezzi": 7,
+"scartati": [
+"https://tp.usr.sicilia.it/decreto-pubblicazione-6-bollettino-nomine-docenti-a-tempo-determinato-a-s-26-27/"
+],
+"provincia": "Trapani",
+"avvisi": 6,
+"errore": null
+},
+"https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
+"avvisi": 0,
+"errore": null
+},
+"https://fe.istruzioneer.gov.it/category/assunzioni-e-concorsi/interpelli_docenti/": {
+"grezzi": 90,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/interpelli-postocomune-infanzia-primaria-sostegnoinfanzia-sostegnoprimaria-",
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/"
+],
+"provincia": "Ferrara",
+"avvisi": 46,
+"errore": null
+},
+"https://venezia.istruzioneveneto.gov.it/": {
+"grezzi": 5,
+"scartati": [
+"https://venezia.istruzioneveneto.gov.it/20261117_34638/",
+"https://venezia.istruzioneveneto.gov.it/20261110_34619/",
+"https://venezia.istruzioneveneto.gov.it/20261117_34638/",
+"https://twitter.com/home?status=Disponibilità per l’XI  turno di supplenze – personale docente della scuola de"
+],
+"provincia": "Venezia",
+"avvisi": 0,
+"errore": null
+},
+"https://re.istruzioneer.gov.it/category/docenti/": {
+"grezzi": 59,
+"scartati": [
+"https://re.istruzioneer.gov.it/category/docenti/",
+"https://re.istruzioneer.gov.it/category/docenti/interpello/",
+"https://re.istruzioneer.gov.it/",
+"https://re.istruzioneer.gov.it/category/docenti/"
+],
+"provincia": "Reggio Emilia",
 "avvisi": 37,
 "errore": null
 },
@@ -76,58 +124,6 @@
 "avvisi": 10,
 "errore": null
 },
-"https://tp.usr.sicilia.it/": {
-"grezzi": 7,
-"scartati": [
-"https://tp.usr.sicilia.it/decreto-pubblicazione-6-bollettino-nomine-docenti-a-tempo-determinato-a-s-26-27/"
-],
-"provincia": "Trapani",
-"avvisi": 6,
-"errore": null
-},
-"https://venezia.istruzioneveneto.gov.it/": {
-"grezzi": 5,
-"scartati": [
-"https://venezia.istruzioneveneto.gov.it/20261117_34638/",
-"https://venezia.istruzioneveneto.gov.it/20261110_34619/",
-"https://venezia.istruzioneveneto.gov.it/20261117_34638/",
-"https://twitter.com/home?status=Disponibilità per l’XI  turno di supplenze – personale docente della scuola de"
-],
-"provincia": "Venezia",
-"avvisi": 0,
-"errore": null
-},
-"https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
-"https://fe.istruzioneer.gov.it/category/assunzioni-e-concorsi/interpelli_docenti/": {
-"grezzi": 80,
-"scartati": [
-"https://fe.istruzioneer.gov.it/tag/interpelli-postocomune-infanzia-primaria-sostegnoinfanzia-sostegnoprimaria-",
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
-"https://fe.istruzioneer.gov.it/"
-],
-"provincia": "Ferrara",
-"avvisi": 44,
-"errore": null
-},
-"https://re.istruzioneer.gov.it/category/docenti/": {
-"grezzi": 59,
-"scartati": [
-"https://re.istruzioneer.gov.it/category/docenti/",
-"https://re.istruzioneer.gov.it/category/docenti/interpello/",
-"https://re.istruzioneer.gov.it/",
-"https://re.istruzioneer.gov.it/category/docenti/"
-],
-"provincia": "Reggio Emilia",
-"avvisi": 37,
-"errore": null
-},
 "https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/": {
 "grezzi": 27,
 "scartati": [],
@@ -135,17 +131,17 @@
 "avvisi": 27,
 "errore": null
 },
-"https://www.istruzionegenova.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
-"errore": null
-},
 "https://www.istruzionepiemonte.it/biella/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Biella",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cuneo",
 "avvisi": 0,
 "errore": null
 },
@@ -163,10 +159,10 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/": {
+"https://www.istruzionegenova.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Cuneo",
+"provincia": "Genova",
 "avvisi": 0,
 "errore": null
 },
@@ -177,17 +173,12 @@
 "avvisi": 0,
 "errore": "ConnectTimeout"
 },
-"https://www.mim.gov.it/web/campobasso/interpelli/": {
-"grezzi": 4,
-"scartati": [
-"https://www.mim.gov.it/web/campobasso/-/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche",
-"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i",
-"https://www.mim.gov.it/web/campobasso/-/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche",
-"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i"
-],
-"provincia": "Campobasso",
+"https://atpisernia.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Isernia",
 "avvisi": 0,
-"errore": null
+"errore": "ReadTimeout"
 },
 "https://uspistruzione.fr.it/wp2/category/interpello-nazionale/": {
 "grezzi": 23,
@@ -208,6 +199,30 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.mim.gov.it/web/campobasso/interpelli/": {
+"grezzi": 4,
+"scartati": [
+"https://www.mim.gov.it/web/campobasso/-/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche",
+"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i",
+"https://www.mim.gov.it/web/campobasso/-/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche",
+"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i"
+],
+"provincia": "Campobasso",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
+"grezzi": 17,
+"scartati": [
+"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/",
+"https://www.istruzione.calabria.it/crotone/category/notizie/",
+"https://www.istruzione.calabria.it/crotone/interpello-a042/",
+"https://www.istruzione.calabria.it/crotone/interpello-classe-concorso-a002-pertini-santoni/"
+],
+"provincia": "Crotone",
+"avvisi": 4,
+"errore": null
+},
 "https://www.istruzionebrindisi.it/": {
 "grezzi": 29,
 "scartati": [
@@ -218,6 +233,29 @@
 ],
 "provincia": "Brindisi",
 "avvisi": 12,
+"errore": null
+},
+"https://www.uspcagliari.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cagliari",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
+"https://www.ufficioscolasticoprovinciale.prato.it/": {
+"grezzi": 6,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.prato.it/Mese/novita/"
+],
+"provincia": "Prato",
+"avvisi": 5,
+"errore": null
+},
+"https://www.usr.sicilia.it/feed/": {
+"grezzi": 1,
+"scartati": [],
+"provincia": null,
+"avvisi": 1,
 "errore": null
 },
 "https://www.istruzionematera.it/category/interpelli/": {
@@ -241,41 +279,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.uspcagliari.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cagliari",
-"avvisi": 0,
-"errore": "HTTP 403"
-},
-"https://www.istruzione-ancona.it/": {
-"grezzi": 70,
-"scartati": [
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/"
-],
-"provincia": "Ancona",
-"avvisi": 16,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.prato.it/": {
-"grezzi": 6,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.prato.it/Mese/novita/"
-],
-"provincia": "Prato",
-"avvisi": 5,
-"errore": null
-},
-"https://www.usr.sicilia.it/feed/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": null,
-"avvisi": 1,
-"errore": null
-},
 "https://www.csa.fi.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -283,53 +286,11 @@
 "avvisi": 0,
 "errore": "ConnectTimeout"
 },
-"https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
+"https://www.mim.gov.it/web/mantova/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Crotone",
+"provincia": "Mantova",
 "avvisi": 0,
-"errore": "ConnectTimeout"
-},
-"https://www.ustms.it/": {
-"grezzi": 3,
-"scartati": [],
-"provincia": "Massa-Carrara",
-"avvisi": 3,
-"errore": null
-},
-"https://atpisernia.it/": {
-"grezzi": 23,
-"scartati": [
-"https://atpisernia.it/interpello-per-supplenza-breve-su-classe-di-concorso-a027-matematica-e-fisica",
-"https://atpisernia.it/category/albo",
-"https://atpisernia.it/category/procedure/interpelli",
-"https://atpisernia.it/category/personale-docente"
-],
-"provincia": "Isernia",
-"avvisi": 0,
-"errore": null
-},
-"https://www.uspsi.it/?cat=264": {
-"grezzi": 39,
-"scartati": [
-"https://www.uspsi.it/uspsiena/albo/",
-"https://www.uspsi.it/uspsiena/docenti/",
-"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
-"https://www.uspsi.it/uspsiena/news/"
-],
-"provincia": "Siena",
-"avvisi": 33,
-"errore": null
-},
-"https://www.ustfoggia.it/": {
-"grezzi": 29,
-"scartati": [
-"https://www.ustfoggia.it/category/albo-pretorio/",
-"https://www.ustfoggia.it/category/news/",
-"https://www.ustfoggia.it/ultime-novita-ust-foggia/"
-],
-"provincia": "Foggia",
-"avvisi": 26,
 "errore": null
 },
 "https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
@@ -344,6 +305,25 @@
 "avvisi": 21,
 "errore": null
 },
+"https://www.ustms.it/": {
+"grezzi": 3,
+"scartati": [],
+"provincia": "Massa-Carrara",
+"avvisi": 3,
+"errore": null
+},
+"https://www.uspsi.it/?cat=264": {
+"grezzi": 39,
+"scartati": [
+"https://www.uspsi.it/uspsiena/albo/",
+"https://www.uspsi.it/uspsiena/docenti/",
+"https://www.uspsi.it/uspsiena/graduatorie-provinciali/",
+"https://www.uspsi.it/uspsiena/news/"
+],
+"provincia": "Siena",
+"avvisi": 33,
+"errore": null
+},
 "https://www.uspascolipiceno.it/wordpress/": {
 "grezzi": 15,
 "scartati": [
@@ -356,18 +336,34 @@
 "avvisi": 8,
 "errore": null
 },
-"https://www.mim.gov.it/web/mantova/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Mantova",
-"avvisi": 0,
-"errore": null
-},
 "https://www.mim.gov.it/web/pavia/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Pavia",
 "avvisi": 0,
+"errore": null
+},
+"https://www.ustfoggia.it/": {
+"grezzi": 29,
+"scartati": [
+"https://www.ustfoggia.it/category/albo-pretorio/",
+"https://www.ustfoggia.it/category/news/",
+"https://www.ustfoggia.it/ultime-novita-ust-foggia/"
+],
+"provincia": "Foggia",
+"avvisi": 26,
+"errore": null
+},
+"https://www.istruzione-ancona.it/": {
+"grezzi": 70,
+"scartati": [
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/"
+],
+"provincia": "Ancona",
+"avvisi": 16,
 "errore": null
 }
 }
