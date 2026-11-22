@@ -177,11 +177,11 @@
   "tentativi": [
    [
     "https://www.icriesi.edu.it/",
-    "ReadTimeout"
+    "pagina non scolastica"
    ],
    [
     "http://www.icriesi.edu.it/",
-    "ReadTimeout"
+    "pagina non scolastica"
    ],
    [
     "https://icriesi.edu.it/",
@@ -1079,13 +1079,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.iissgagini.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.iissgagini.edu.it/",
   "tentativi": [
    [
     "https://www.iissgagini.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.iissgagini.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://iissgagini.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://iissgagini.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -1200,24 +1211,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceoruggierimarsala.edu.it/",
   "sito": "https://www.liceoruggierimarsala.edu.it/",
   "tentativi": [
    [
     "https://www.liceoruggierimarsala.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.liceoruggierimarsala.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://liceoruggierimarsala.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://liceoruggierimarsala.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  }
