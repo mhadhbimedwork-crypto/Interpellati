@@ -1543,8 +1543,8 @@
 {
 "data": "2026-11-22",
 "scuole": 7780,
-"verdi": 6844,
-"arancioni": 32,
+"verdi": 6846,
+"arancioni": 30,
 "rossi": 904,
 "percentuale_verdi": 88.0,
 "per_regione": {
@@ -1564,8 +1564,8 @@
 "rosso": 52
 },
 "Campania": {
-"verde": 804,
-"arancione": 3,
+"verde": 806,
+"arancione": 1,
 "rosso": 64
 },
 "Emilia-Romagna": {
@@ -1589,8 +1589,8 @@
 "rosso": 30
 },
 "Lombardia": {
-"verde": 976,
-"arancione": 21,
+"verde": 978,
+"arancione": 19,
 "rosso": 133
 },
 "Marche": {
@@ -1609,8 +1609,8 @@
 "rosso": 62
 },
 "Puglia": {
-"verde": 532,
-"arancione": 2,
+"verde": 531,
+"arancione": 3,
 "rosso": 51
 },
 "Sardegna": {
@@ -1624,8 +1624,8 @@
 "rosso": 53
 },
 "Toscana": {
-"verde": 430,
-"arancione": 0,
+"verde": 429,
+"arancione": 1,
 "rosso": 41
 },
 "Trentino-Alto Adige": {
@@ -3516,7 +3516,7 @@
 "data": "2026-11-22",
 "tipo": "causa",
 "causa": "errore recente",
-"scuole": 30
+"scuole": 29
 },
 {
 "data": "2026-11-22",
@@ -3533,37 +3533,52 @@
 {
 "data": "2026-11-22",
 "tipo": "causa",
-"causa": "server condiviso che limita le richieste: lettura lenta in corso",
+"causa": "irraggiungibile da 11 giorni",
 "scuole": 2
 },
 {
 "data": "2026-11-22",
 "tipo": "recuperate",
-"scuole": 5,
+"scuole": 24,
 "esempi": [
 {
-"codice": "TPIC83700X",
-"nome": "I. C. \"D.ALIGHIERI\" VALDERICE",
+"codice": "PGTF19000V",
+"nome": "ISTITUTO TECNICO \"FRANCHETTI-SALVIANI\"",
 "prima": "arancione"
 },
 {
-"codice": "SIIS00400L",
-"nome": "IS \"CASELLI\"",
+"codice": "COIC80100B",
+"nome": "I.C. MAGISTRI INTELVESI",
 "prima": "arancione"
 },
 {
-"codice": "MOIC81900N",
-"nome": "I.C. SAN FELICE SUL PANARO",
+"codice": "VAIC84000Q",
+"nome": "I.C.SOLBIATE ARNO GALVALIGI",
 "prima": "arancione"
 },
 {
-"codice": "IMPS010009",
-"nome": "\"G.P.VIEUSSEUX\"",
+"codice": "COIC838002",
+"nome": "I.C. CANTU' 2",
 "prima": "arancione"
 },
 {
-"codice": "BAIC83700A",
-"nome": "I.C. \"GALLO - POSITANO\"",
+"codice": "COIC81300N",
+"nome": "I.C. COMO PRESTINO/BRECCIA",
+"prima": "arancione"
+},
+{
+"codice": "VAIC873003",
+"nome": "IC VARESE 2 PELLICO",
+"prima": "arancione"
+},
+{
+"codice": "COIC83000B",
+"nome": "I.C. CADORAGO",
+"prima": "arancione"
+},
+{
+"codice": "COIC809002",
+"nome": "I.C. COMO LAGO",
 "prima": "arancione"
 }
 ]
@@ -3571,53 +3586,53 @@
 {
 "data": "2026-11-22",
 "tipo": "peggiorate",
-"scuole": 28,
+"scuole": 22,
 "esempi": [
 {
-"codice": "RMIS12800R",
-"nome": "POLO LICEALE \"ALIGHIERI - CARAVILLANI\"",
+"codice": "PGMM23500L",
+"nome": "CPIA 1 PERUGIA",
 "ora": "arancione",
 "motivo": "errore recente (HTTP 403): si riprova ogni giorno"
 },
 {
-"codice": "PGTF19000V",
-"nome": "ISTITUTO TECNICO \"FRANCHETTI-SALVIANI\"",
-"ora": "arancione",
-"motivo": "server condiviso che limita le richieste: lettura lenta in c"
-},
-{
-"codice": "COIC80100B",
-"nome": "I.C. MAGISTRI INTELVESI",
+"codice": "SIIS00400L",
+"nome": "IS \"CASELLI\"",
 "ora": "arancione",
 "motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
 },
 {
-"codice": "VAIC84000Q",
-"nome": "I.C.SOLBIATE ARNO GALVALIGI",
+"codice": "BSIC81900A",
+"nome": "IC F.TONOLINI BRENO",
 "ora": "arancione",
 "motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
 },
 {
-"codice": "COIC838002",
-"nome": "I.C. CANTU' 2",
+"codice": "BSIC87100B",
+"nome": "L.EINAUDI - SALE MARASINO",
 "ora": "arancione",
 "motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
 },
 {
-"codice": "COIC81300N",
-"nome": "I.C. COMO PRESTINO/BRECCIA",
+"codice": "BSIC807004",
+"nome": "I.C. CIVIDATE CAMUNO",
 "ora": "arancione",
 "motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
 },
 {
-"codice": "VAIC873003",
-"nome": "IC VARESE 2 PELLICO",
+"codice": "BSIC87000G",
+"nome": "EDOLO CAP.",
 "ora": "arancione",
 "motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
 },
 {
-"codice": "COIC83000B",
-"nome": "I.C. CADORAGO",
+"codice": "BSIC81800E",
+"nome": "IC\"P.DA CEMMO\"-CAPO DI PONTE",
+"ora": "arancione",
+"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+},
+{
+"codice": "BSIS007008",
+"nome": "\"F. MENEGHINI\" - EDOLO",
 "ora": "arancione",
 "motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
 }
