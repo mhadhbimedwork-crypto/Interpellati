@@ -931,6 +931,20 @@
    ]
   ]
  },
+ "MEIC876009": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 403",
+  "motivo": "recuperato",
+  "nuovo": "https://ictorregrotta.edu.it/",
+  "sito": "https://ictorregrotta.edu.it/",
+  "tentativi": [
+   [
+    "https://www.ictorregrotta.edu.it/",
+    "OK"
+   ]
+  ]
+ },
  "PAIC817007": {
   "dns_pubblico": "no",
   "dns_runner": false,
@@ -1112,24 +1126,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.marionuccio.edu.it/",
   "sito": "https://www.marionuccio.edu.it/",
   "tentativi": [
    [
     "https://www.marionuccio.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.marionuccio.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://marionuccio.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://marionuccio.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1140,6 +1143,31 @@
   "motivo": "dominio inesistente (sito dismesso o cambiato)",
   "sito": "https://www.scuolasturzo.gov.it/",
   "tentativi": []
+ },
+ "TPIC83700X": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 202",
+  "motivo": "il server non risponde (spento o blocca l'estero)",
+  "sito": "https://icdantealighierivalderice.edu.it/",
+  "tentativi": [
+   [
+    "https://www.icdantealighierivalderice.edu.it/",
+    "ConnectionError"
+   ],
+   [
+    "http://www.icdantealighierivalderice.edu.it/",
+    "ConnectionError"
+   ],
+   [
+    "https://icdantealighierivalderice.edu.it/",
+    "ConnectionError"
+   ],
+   [
+    "http://icdantealighierivalderice.edu.it/",
+    "ConnectionError"
+   ]
+  ]
  },
  "TPIS031005": {
   "dns_pubblico": "si",
@@ -1211,13 +1239,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceoruggierimarsala.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceoruggierimarsala.edu.it/",
   "tentativi": [
    [
     "https://www.liceoruggierimarsala.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.liceoruggierimarsala.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://liceoruggierimarsala.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://liceoruggierimarsala.edu.it/",
+    "HTTP 509"
    ]
   ]
  }
