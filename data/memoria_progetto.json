@@ -1649,6 +1649,116 @@
 "rosso": 88
 }
 }
+},
+{
+"data": "2026-11-23",
+"scuole": 7780,
+"verdi": 6802,
+"arancioni": 55,
+"rossi": 923,
+"percentuale_verdi": 87.4,
+"per_regione": {
+"Abruzzo": {
+"verde": 188,
+"arancione": 0,
+"rosso": 22
+},
+"Basilicata": {
+"verde": 85,
+"arancione": 1,
+"rosso": 8
+},
+"Calabria": {
+"verde": 267,
+"arancione": 0,
+"rosso": 52
+},
+"Campania": {
+"verde": 806,
+"arancione": 1,
+"rosso": 64
+},
+"Emilia-Romagna": {
+"verde": 357,
+"arancione": 17,
+"rosso": 98
+},
+"Friuli Venezia Giulia": {
+"verde": 134,
+"arancione": 3,
+"rosso": 25
+},
+"Lazio": {
+"verde": 631,
+"arancione": 1,
+"rosso": 82
+},
+"Liguria": {
+"verde": 148,
+"arancione": 0,
+"rosso": 30
+},
+"Lombardia": {
+"verde": 985,
+"arancione": 12,
+"rosso": 133
+},
+"Marche": {
+"verde": 135,
+"arancione": 0,
+"rosso": 40
+},
+"Molise": {
+"verde": 57,
+"arancione": 0,
+"rosso": 3
+},
+"Piemonte": {
+"verde": 467,
+"arancione": 0,
+"rosso": 61
+},
+"Puglia": {
+"verde": 534,
+"arancione": 0,
+"rosso": 51
+},
+"Sardegna": {
+"verde": 219,
+"arancione": 1,
+"rosso": 21
+},
+"Sicilia": {
+"verde": 678,
+"arancione": 2,
+"rosso": 53
+},
+"Toscana": {
+"verde": 428,
+"arancione": 2,
+"rosso": 41
+},
+"Trentino-Alto Adige": {
+"verde": 73,
+"arancione": 0,
+"rosso": 4
+},
+"Umbria": {
+"verde": 118,
+"arancione": 3,
+"rosso": 30
+},
+"Valle d'Aosta": {
+"verde": 21,
+"arancione": 1,
+"rosso": 9
+},
+"Veneto": {
+"verde": 471,
+"arancione": 11,
+"rosso": 96
+}
+}
 }
 ],
 "lezioni": [
@@ -3633,6 +3743,156 @@
 {
 "codice": "BSIS007008",
 "nome": "\"F. MENEGHINI\" - EDOLO",
+"ora": "arancione",
+"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+}
+]
+},
+{
+"data": "2026-11-23",
+"tipo": "causa",
+"causa": "dominio inesistente",
+"scuole": 319
+},
+{
+"data": "2026-11-23",
+"tipo": "causa",
+"causa": "irraggiungibile da 16 giorni",
+"scuole": 237
+},
+{
+"data": "2026-11-23",
+"tipo": "causa",
+"causa": "il robots.txt del sito non consente il bot",
+"scuole": 206
+},
+{
+"data": "2026-11-23",
+"tipo": "causa",
+"causa": "nessun sito indicato nell'anagrafica del Ministero",
+"scuole": 108
+},
+{
+"data": "2026-11-23",
+"tipo": "causa",
+"causa": "errore recente",
+"scuole": 54
+},
+{
+"data": "2026-11-23",
+"tipo": "causa",
+"causa": "irraggiungibile da 15 giorni",
+"scuole": 24
+},
+{
+"data": "2026-11-23",
+"tipo": "causa",
+"causa": "sito non ancora pubblicato",
+"scuole": 20
+},
+{
+"data": "2026-11-23",
+"tipo": "causa",
+"causa": "irraggiungibile da 10 giorni",
+"scuole": 3
+},
+{
+"data": "2026-11-23",
+"tipo": "recuperate",
+"scuole": 24,
+"esempi": [
+{
+"codice": "RMIS12800R",
+"nome": "POLO LICEALE \"ALIGHIERI - CARAVILLANI\"",
+"prima": "arancione"
+},
+{
+"codice": "PGPC07000G",
+"nome": "LICEO \"PROPERZIO\"",
+"prima": "arancione"
+},
+{
+"codice": "BSIC81900A",
+"nome": "IC F.TONOLINI BRENO",
+"prima": "arancione"
+},
+{
+"codice": "BSIC87100B",
+"nome": "L.EINAUDI - SALE MARASINO",
+"prima": "arancione"
+},
+{
+"codice": "BSIC807004",
+"nome": "I.C. CIVIDATE CAMUNO",
+"prima": "arancione"
+},
+{
+"codice": "BSIC87000G",
+"nome": "EDOLO CAP.",
+"prima": "arancione"
+},
+{
+"codice": "BSIC81800E",
+"nome": "IC\"P.DA CEMMO\"-CAPO DI PONTE",
+"prima": "arancione"
+},
+{
+"codice": "BSIS007008",
+"nome": "\"F. MENEGHINI\" - EDOLO",
+"prima": "arancione"
+}
+]
+},
+{
+"data": "2026-11-23",
+"tipo": "peggiorate",
+"scuole": 68,
+"esempi": [
+{
+"codice": "TPIC83700X",
+"nome": "I. C. \"D.ALIGHIERI\" VALDERICE",
+"ora": "arancione",
+"motivo": "errore recente (HTTP 202): si riprova ogni giorno"
+},
+{
+"codice": "MEIC876009",
+"nome": "I.C. DI TORREGROTTA",
+"ora": "arancione",
+"motivo": "errore recente (HTTP 403): si riprova ogni giorno"
+},
+{
+"codice": "PGIC86400T",
+"nome": "I.C. PERUGIA 7",
+"ora": "arancione",
+"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+},
+{
+"codice": "PGIC85900A",
+"nome": "I.C. PERUGIA 11",
+"ora": "arancione",
+"motivo": "errore recente (HTTP 403): si riprova ogni giorno"
+},
+{
+"codice": "PIPS01000Q",
+"nome": "LICEO SCIENTIFICO G.MARCONI",
+"ora": "arancione",
+"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+},
+{
+"codice": "PDIC883002",
+"nome": "VI IC DI PADOVA \"BRUNO CIARI\"",
+"ora": "arancione",
+"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+},
+{
+"codice": "MOIC83900V",
+"nome": "CARPI 3",
+"ora": "arancione",
+"motivo": "errore recente (ReadTimeout): si riprova ogni giorno"
+},
+{
+"codice": "MOIC83400Q",
+"nome": "IC MARANELLO",
 "ora": "arancione",
 "motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
 }
