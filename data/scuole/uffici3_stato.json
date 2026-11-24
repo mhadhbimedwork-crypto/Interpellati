@@ -6,17 +6,17 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
-"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Bergamo",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://lecco.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://milano.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -27,10 +27,10 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://milano.istruzionelombardia.gov.it/": {
+"https://bergamo.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Milano",
+"provincia": "Bergamo",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -59,15 +59,10 @@
 "errore": "SSLError"
 },
 "https://pr.istruzioneer.gov.it/": {
-"grezzi": 8,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PRIC80700P/docenti",
-"https://nuvola.madisoft.it/interpelli/PRIC80600V/docenti",
-"https://nuvola.madisoft.it/interpelli/PRIC82300L/docenti",
-"https://nuvola.madisoft.it/interpelli/PRIC82900G/docenti"
-],
+"grezzi": 0,
+"scartati": [],
 "provincia": "Parma",
-"avvisi": 3,
+"avvisi": 0,
 "errore": null
 },
 "https://atpisernia.it/": {
@@ -89,6 +84,16 @@
 "avvisi": 0,
 "errore": null
 },
+"https://tp.usr.sicilia.it/": {
+"grezzi": 8,
+"scartati": [
+"https://tp.usr.sicilia.it/decreto-pubblicazione-6-bollettino-nomine-docenti-a-tempo-determinato-a-s-26-27/",
+"https://tp.usr.sicilia.it/avviso-nazionale-per-supplenze-fino-al-termine-delle-attivita-didattiche-per-la-clas"
+],
+"provincia": "Trapani",
+"avvisi": 6,
+"errore": null
+},
 "https://uspistruzione.fr.it/wp2/": {
 "grezzi": 19,
 "scartati": [
@@ -108,30 +113,6 @@
 "avvisi": 42,
 "errore": null
 },
-"https://tp.usr.sicilia.it/": {
-"grezzi": 8,
-"scartati": [
-"https://tp.usr.sicilia.it/decreto-pubblicazione-6-bollettino-nomine-docenti-a-tempo-determinato-a-s-26-27/",
-"https://tp.usr.sicilia.it/avviso-nazionale-per-supplenze-fino-al-termine-delle-attivita-didattiche-per-la-clas"
-],
-"provincia": "Trapani",
-"avvisi": 6,
-"errore": null
-},
-"https://www.istruzionelaspezia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "La Spezia",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vibo Valentia",
-"avvisi": 0,
-"errore": null
-},
 "https://rovigo.istruzioneveneto.gov.it/": {
 "grezzi": 18,
 "scartati": [
@@ -141,17 +122,10 @@
 "avvisi": 17,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/": {
+"https://www.istruzionelaspezia.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Roma",
+"provincia": "La Spezia",
 "avvisi": 0,
 "errore": null
 },
@@ -169,6 +143,27 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzionepiemonte.it/roma-16-febbraio-2016-seminario-implementing-clil-in-upper-secondary-schools-scadenza-iscrizioni-130216/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Roma",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vibo Valentia",
+"avvisi": 0,
+"errore": null
+},
 "https://www.provincia.bz.it/formazione-lingue/scuola-italiana/": {
 "grezzi": 0,
 "scartati": [],
@@ -176,16 +171,16 @@
 "avvisi": 0,
 "errore": null
 },
-"https://fe.istruzioneer.gov.it/": {
-"grezzi": 70,
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
+"grezzi": 30,
 "scartati": [
-"https://fe.istruzioneer.gov.it/",
-"https://fe.istruzioneer.gov.it/category/interpelli_docenti/",
-"https://fe.istruzioneer.gov.it/tag/a041/",
-"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/"
+"https://twitter.com/home?status=INTERPELLO PER SUPPLENZA SU CDC AM2B – LINGUE E CULTURE STRANIERE NELL’ISTRU-Z",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
+"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso AC56 – I."
 ],
-"provincia": "Ferrara",
-"avvisi": 40,
+"provincia": "Caltanissetta",
+"avvisi": 17,
 "errore": null
 },
 "https://vicenza.istruzioneveneto.gov.it/": {
@@ -195,16 +190,16 @@
 "avvisi": 2,
 "errore": null
 },
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
-"grezzi": 27,
+"https://www.mim.gov.it/web/cagliari/": {
+"grezzi": 21,
 "scartati": [
-"https://twitter.com/home?status=INTERPELLO PER SUPPLENZA SU CDC AM2B – LINGUE E CULTURE STRANIERE NELL’ISTRU-Z",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-nazionali/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/",
-"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso AC56 – I."
+"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-su",
+"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenza-bre",
+"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenza",
+"https://www.mim.gov.it/web/cagliari/"
 ],
-"provincia": "Caltanissetta",
-"avvisi": 14,
+"provincia": "Cagliari",
+"avvisi": 4,
 "errore": null
 },
 "https://www.uspcagliari.it/": {
@@ -213,6 +208,25 @@
 "provincia": "Cagliari",
 "avvisi": 0,
 "errore": "HTTP 403"
+},
+"https://fe.istruzioneer.gov.it/": {
+"grezzi": 84,
+"scartati": [
+"https://fe.istruzioneer.gov.it/tag/a041/",
+"https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
+"https://fe.istruzioneer.gov.it/",
+"https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
+],
+"provincia": "Ferrara",
+"avvisi": 48,
+"errore": null
+},
+"https://www.usr.sicilia.it/feed/": {
+"grezzi": 3,
+"scartati": [],
+"provincia": null,
+"avvisi": 3,
+"errore": null
 },
 "https://www.istruzionebat.it/": {
 "grezzi": 118,
@@ -224,13 +238,6 @@
 ],
 "provincia": "Barletta-Andria-Trani",
 "avvisi": 1,
-"errore": null
-},
-"https://www.usr.sicilia.it/feed/": {
-"grezzi": 3,
-"scartati": [],
-"provincia": null,
-"avvisi": 3,
 "errore": null
 },
 "https://www.ufficioscolasticoprovinciale.prato.it/": {
@@ -252,18 +259,6 @@
 ],
 "provincia": "Roma",
 "avvisi": 18,
-"errore": null
-},
-"https://www.mim.gov.it/web/cagliari/": {
-"grezzi": 21,
-"scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-su",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenza-bre",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fcagliari%2F-%2Finterpello-per-supplenza",
-"https://www.mim.gov.it/web/cagliari/"
-],
-"provincia": "Cagliari",
-"avvisi": 4,
 "errore": null
 },
 "http://www.uspmc.sinp.net/": {
@@ -290,6 +285,18 @@
 ],
 "provincia": "Massa-Carrara",
 "avvisi": 4,
+"errore": null
+},
+"https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
+"grezzi": 39,
+"scartati": [
+"https://www.uat-napoli.it/category/docenti/",
+"https://www.uat-napoli.it/tag/avvisi/",
+"https://www.uat-napoli.it/tag/interpelli-personale-docente/",
+"https://www.uat-napoli.it/interpello-scuola-primaria-sostegno-cattedra-adee-ic-don-milani-leopardi-torre-del-g"
+],
+"provincia": "Napoli",
+"avvisi": 35,
 "errore": null
 },
 "https://www.uspsi.it/?cat=264": {
@@ -322,18 +329,6 @@
 ],
 "provincia": "Ascoli Piceno",
 "avvisi": 9,
-"errore": null
-},
-"https://www.uat-napoli.it/tag/interpelli-personale-docente/": {
-"grezzi": 39,
-"scartati": [
-"https://www.uat-napoli.it/category/docenti/",
-"https://www.uat-napoli.it/tag/avvisi/",
-"https://www.uat-napoli.it/tag/interpelli-personale-docente/",
-"https://www.uat-napoli.it/interpello-scuola-primaria-sostegno-cattedra-adee-ic-don-milani-leopardi-torre-del-g"
-],
-"provincia": "Napoli",
-"avvisi": 35,
 "errore": null
 },
 "https://www.istruzionepotenza.it/": {
