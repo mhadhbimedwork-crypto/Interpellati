@@ -1759,6 +1759,116 @@
 "rosso": 96
 }
 }
+},
+{
+"data": "2026-11-24",
+"scuole": 7780,
+"verdi": 6810,
+"arancioni": 43,
+"rossi": 927,
+"percentuale_verdi": 87.5,
+"per_regione": {
+"Abruzzo": {
+"verde": 188,
+"arancione": 0,
+"rosso": 22
+},
+"Basilicata": {
+"verde": 86,
+"arancione": 0,
+"rosso": 8
+},
+"Calabria": {
+"verde": 266,
+"arancione": 1,
+"rosso": 52
+},
+"Campania": {
+"verde": 806,
+"arancione": 0,
+"rosso": 65
+},
+"Emilia-Romagna": {
+"verde": 353,
+"arancione": 17,
+"rosso": 102
+},
+"Friuli Venezia Giulia": {
+"verde": 132,
+"arancione": 5,
+"rosso": 25
+},
+"Lazio": {
+"verde": 631,
+"arancione": 1,
+"rosso": 82
+},
+"Liguria": {
+"verde": 148,
+"arancione": 0,
+"rosso": 30
+},
+"Lombardia": {
+"verde": 997,
+"arancione": 0,
+"rosso": 133
+},
+"Marche": {
+"verde": 135,
+"arancione": 0,
+"rosso": 40
+},
+"Molise": {
+"verde": 57,
+"arancione": 0,
+"rosso": 3
+},
+"Piemonte": {
+"verde": 468,
+"arancione": 0,
+"rosso": 60
+},
+"Puglia": {
+"verde": 534,
+"arancione": 0,
+"rosso": 51
+},
+"Sardegna": {
+"verde": 218,
+"arancione": 2,
+"rosso": 21
+},
+"Sicilia": {
+"verde": 678,
+"arancione": 2,
+"rosso": 53
+},
+"Toscana": {
+"verde": 429,
+"arancione": 1,
+"rosso": 41
+},
+"Trentino-Alto Adige": {
+"verde": 73,
+"arancione": 0,
+"rosso": 4
+},
+"Umbria": {
+"verde": 120,
+"arancione": 1,
+"rosso": 30
+},
+"Valle d'Aosta": {
+"verde": 21,
+"arancione": 1,
+"rosso": 9
+},
+"Veneto": {
+"verde": 470,
+"arancione": 12,
+"rosso": 96
+}
+}
 }
 ],
 "lezioni": [
@@ -3895,6 +4005,156 @@
 "nome": "IC MARANELLO",
 "ora": "arancione",
 "motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+}
+]
+},
+{
+"data": "2026-11-24",
+"tipo": "causa",
+"causa": "dominio inesistente",
+"scuole": 318
+},
+{
+"data": "2026-11-24",
+"tipo": "causa",
+"causa": "irraggiungibile da 17 giorni",
+"scuole": 237
+},
+{
+"data": "2026-11-24",
+"tipo": "causa",
+"causa": "il robots.txt del sito non consente il bot",
+"scuole": 206
+},
+{
+"data": "2026-11-24",
+"tipo": "causa",
+"causa": "nessun sito indicato nell'anagrafica del Ministero",
+"scuole": 108
+},
+{
+"data": "2026-11-24",
+"tipo": "causa",
+"causa": "errore recente",
+"scuole": 42
+},
+{
+"data": "2026-11-24",
+"tipo": "causa",
+"causa": "irraggiungibile da 16 giorni",
+"scuole": 24
+},
+{
+"data": "2026-11-24",
+"tipo": "causa",
+"causa": "sito non ancora pubblicato",
+"scuole": 24
+},
+{
+"data": "2026-11-24",
+"tipo": "causa",
+"causa": "irraggiungibile da 11 giorni",
+"scuole": 3
+},
+{
+"data": "2026-11-24",
+"tipo": "recuperate",
+"scuole": 20,
+"esempi": [
+{
+"codice": "MEIC876009",
+"nome": "I.C. DI TORREGROTTA",
+"prima": "arancione"
+},
+{
+"codice": "PGMM23500L",
+"nome": "CPIA 1 PERUGIA",
+"prima": "arancione"
+},
+{
+"codice": "PGIC86400T",
+"nome": "I.C. PERUGIA 7",
+"prima": "arancione"
+},
+{
+"codice": "PGIC85900A",
+"nome": "I.C. PERUGIA 11",
+"prima": "arancione"
+},
+{
+"codice": "PIPS01000Q",
+"nome": "LICEO SCIENTIFICO G.MARCONI",
+"prima": "arancione"
+},
+{
+"codice": "REIS00900L",
+"nome": "\"A. ZANELLI\"",
+"prima": "arancione"
+},
+{
+"codice": "MIIC85500G",
+"nome": "IC VIA DEI SALICI",
+"prima": "arancione"
+},
+{
+"codice": "MBIC8F4007",
+"nome": "VIA MARIANI",
+"prima": "arancione"
+}
+]
+},
+{
+"data": "2026-11-24",
+"tipo": "peggiorate",
+"scuole": 12,
+"esempi": [
+{
+"codice": "ENIC80500Q",
+"nome": "I.C. \"E. PANTANO\"",
+"ora": "arancione",
+"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+},
+{
+"codice": "PGPC07000G",
+"nome": "LICEO \"PROPERZIO\"",
+"ora": "arancione",
+"motivo": "errore recente (HTTP 403): si riprova ogni giorno"
+},
+{
+"codice": "MOIC803004",
+"nome": "I.C. G. DOSSETTI - LAMA MOCOGNO",
+"ora": "rosso",
+"motivo": "sito non ancora pubblicato (segnaposto «A breve on line»)"
+},
+{
+"codice": "MOIC809003",
+"nome": "I.C. GUINIZELLI - CASTELFRANCO",
+"ora": "rosso",
+"motivo": "sito non ancora pubblicato (segnaposto «A breve on line»)"
+},
+{
+"codice": "GOIC81500X",
+"nome": "IC DANTE ALIGHIERI - MARCO POLO",
+"ora": "arancione",
+"motivo": "errore recente (ReadTimeout): si riprova ogni giorno"
+},
+{
+"codice": "VEIS026004",
+"nome": "BENEDETTI-TOMMASEO",
+"ora": "arancione",
+"motivo": "errore recente (ReadTimeout): si riprova ogni giorno"
+},
+{
+"codice": "MOEE045008",
+"nome": "D.D. PAVULLO NEL FRIGNANO",
+"ora": "rosso",
+"motivo": "sito non ancora pubblicato (segnaposto «A breve on line»)"
+},
+{
+"codice": "GOIC805009",
+"nome": "IST. COMPR. LEONARDO DA VINCI",
+"ora": "arancione",
+"motivo": "errore recente (SSLError): si riprova ogni giorno"
 }
 ]
 }
