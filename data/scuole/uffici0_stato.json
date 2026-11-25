@@ -1,18 +1,4 @@
 {
-"https://lnx.csaoristano.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Oristano",
-"avvisi": 0,
-"errore": "ConnectionError"
-},
-"https://istruzione.umbria.it/interpello-personale-scolastico/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Perugia",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://como.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -26,6 +12,20 @@
 "provincia": "Brescia",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://istruzione.umbria.it/interpello-personale-scolastico/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Perugia",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
+"https://lnx.csaoristano.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Oristano",
+"avvisi": 0,
+"errore": "ConnectionError"
 },
 "https://monza.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -55,16 +55,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ra.istruzioneer.gov.it/": {
-"grezzi": 14,
-"scartati": [
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1244",
-"https://www.icfaenzasanrocco.edu.it/albo-online",
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1239"
-],
-"provincia": "Ravenna",
-"avvisi": 10,
+"https://belluno.istruzioneveneto.gov.it/": {
+"grezzi": 1,
+"scartati": [],
+"provincia": "Belluno",
+"avvisi": 1,
 "errore": null
 },
 "https://pc.istruzioneer.gov.it/": {
@@ -84,6 +79,18 @@
 "avvisi": 0,
 "errore": null
 },
+"https://ra.istruzioneer.gov.it/": {
+"grezzi": 14,
+"scartati": [
+"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1244",
+"https://www.icfaenzasanrocco.edu.it/albo-online",
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.icrandi.edu.it/albo_pretorio_dettaglio.asp?id=1239"
+],
+"provincia": "Ravenna",
+"avvisi": 10,
+"errore": null
+},
 "https://sr.usr.sicilia.it/": {
 "grezzi": 17,
 "scartati": [
@@ -96,27 +103,6 @@
 "avvisi": 5,
 "errore": null
 },
-"https://belluno.istruzioneveneto.gov.it/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": "Belluno",
-"avvisi": 1,
-"errore": null
-},
-"https://www.istruzione.umbria.it/feed/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
-"errore": null
-},
-"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-udine/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Udine",
-"avvisi": 0,
-"errore": null
-},
 "https://me.usr.sicilia.it/": {
 "grezzi": 16,
 "scartati": [
@@ -124,6 +110,13 @@
 ],
 "provincia": "Messina",
 "avvisi": 15,
+"errore": null
+},
+"https://www.istruzione.umbria.it/feed/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
 "errore": null
 },
 "https://fc.istruzioneer.gov.it/": {
@@ -142,6 +135,13 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.istruzionepiemonte.it/le-nostre-scuole/alessandria/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Alessandria",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/novara/tag/interpelli-supplenze/": {
 "grezzi": 0,
 "scartati": [],
@@ -156,20 +156,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Biella",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/le-nostre-scuole/alessandria/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Alessandria",
-"avvisi": 0,
-"errore": null
-},
 "http://www.istruzionevicenza.it/wordpress/": {
 "grezzi": 0,
 "scartati": [],
@@ -177,10 +163,24 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/": {
+"https://www.istruzionepiemonte.it/biella/interpelli-supplenze/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Catanzaro",
+"provincia": "Biella",
+"avvisi": 0,
+"errore": null
+},
+"https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-udine/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Udine",
+"avvisi": 0,
+"errore": null
+},
+"http://www.uspss.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Sassari",
 "avvisi": 0,
 "errore": null
 },
@@ -191,26 +191,12 @@
 "avvisi": 0,
 "errore": "HTTP 404"
 },
-"http://www.uspss.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sassari",
-"avvisi": 0,
-"errore": null
-},
 "https://www.usp-rieti.it/it/302-docenti/interpelli-supplenze-altre-province.html": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Rieti",
 "avvisi": 0,
 "errore": "HTTP 404"
-},
-"https://www.usppotenza.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Potenza",
-"avvisi": 0,
-"errore": null
 },
 "https://verona.istruzioneveneto.gov.it/": {
 "grezzi": 2,
@@ -222,35 +208,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
-"grezzi": 18,
-"scartati": [
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2158-avviso-di-interpello-aric81100b-c-d-c-eeee",
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2156-avviso-di-interpello-aric81300e-c-d-c-adee",
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2155-avviso-di-interpello-aric842003-c-d-c-eeee",
-"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2154-avviso-di-interpello-aric81100b-cdc-eeee-a"
-],
-"provincia": "Arezzo",
-"avvisi": 3,
-"errore": null
-},
-"https://www.istruzionechietipescara.it/": {
-"grezzi": 20,
-"scartati": [
-"https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F24",
-"https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F24",
-"https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F24%2F",
-"https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F2"
-],
-"provincia": "Chieti",
-"avvisi": 12,
-"errore": null
-},
-"https://www.uat-caserta.it/": {
-"grezzi": 8,
+"https://www.usppotenza.it/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Caserta",
-"avvisi": 8,
+"provincia": "Potenza",
+"avvisi": 0,
 "errore": null
 },
 "https://www.usr.sicilia.it/": {
@@ -265,6 +227,13 @@
 "avvisi": 23,
 "errore": null
 },
+"https://www.uat-caserta.it/": {
+"grezzi": 8,
+"scartati": [],
+"provincia": "Caserta",
+"avvisi": 8,
+"errore": null
+},
 "https://www.uspbari.it/usp/pubblicazione-decreti-e-sentenze": {
 "grezzi": 52,
 "scartati": [
@@ -275,6 +244,18 @@
 ],
 "provincia": "Bari",
 "avvisi": 20,
+"errore": null
+},
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli": {
+"grezzi": 18,
+"scartati": [
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2158-avviso-di-interpello-aric81100b-c-d-c-eeee",
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2156-avviso-di-interpello-aric81300e-c-d-c-adee",
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2155-avviso-di-interpello-aric842003-c-d-c-eeee",
+"https://www.arezzoistruzione.it/usparezzo/index.php/interpelli/2154-avviso-di-interpello-aric81100b-cdc-eeee-a"
+],
+"provincia": "Arezzo",
+"avvisi": 3,
 "errore": null
 },
 "https://www.ustlecce.it/index.php/personale-docente": {
@@ -289,8 +270,20 @@
 "avvisi": 13,
 "errore": null
 },
+"https://www.istruzionechietipescara.it/": {
+"grezzi": 20,
+"scartati": [
+"https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F24",
+"https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F24",
+"https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F24%2F",
+"https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Fwww.istruzionechietipescara.it%2F2026%2F11%2F2"
+],
+"provincia": "Chieti",
+"avvisi": 12,
+"errore": null
+},
 "https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/": {
-"grezzi": 887,
+"grezzi": 886,
 "scartati": [
 "https://www.ufficioscolasticoprovinciale.pistoia.it/category/docenti/interpelli-docenti/",
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-c-salutati-a-cavalcanti-per-supplenza-scuol",
@@ -298,19 +291,26 @@
 "https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-galileo-chini-per-supplenza-scuola-primaria"
 ],
 "provincia": "Pistoia",
-"avvisi": 20,
+"avvisi": 19,
 "errore": null
 },
+"https://www.istruzione.calabria.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Catanzaro",
+"avvisi": 0,
+"errore": "ReadTimeout"
+},
 "https://www.ust.fi.it/mese/interpelli/": {
-"grezzi": 57,
+"grezzi": 56,
 "scartati": [
 "https://www.ust.fi.it/mese/interpelli/",
+"https://www.ust.fi.it/mese/interpelli/interpelli-primaria/",
 "https://www.ust.fi.it/mese/interpelli/interpelli-infanzia/",
-"https://www.ust.fi.it/mese/uncategorized/",
-"https://www.ust.fi.it/mese/interpelli/interpelli-primaria/"
+"https://www.ust.fi.it/mese/uncategorized/"
 ],
 "provincia": "Firenze",
-"avvisi": 35,
+"avvisi": 34,
 "errore": null
 },
 "https://www.mim.gov.it/web/bergamo/": {
