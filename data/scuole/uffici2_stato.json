@@ -6,6 +6,13 @@
 "avvisi": 0,
 "errore": "ConnectionError"
 },
+"https://lecco.istruzionelombardia.gov.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": "SSLError"
+},
 "https://cremona.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -20,12 +27,12 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://lecco.istruzionelombardia.gov.it/": {
+"https://pa.usr.sicilia.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Lecco",
+"provincia": "Palermo",
 "avvisi": 0,
-"errore": "SSLError"
+"errore": null
 },
 "https://re.istruzioneer.gov.it/": {
 "grezzi": 22,
@@ -37,19 +44,24 @@
 "avvisi": 20,
 "errore": null
 },
-"https://pa.usr.sicilia.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Palermo",
-"avvisi": 0,
-"errore": null
-},
 "https://uat-salerno.it/Documenti/CIRCOLARI/Interpelli-per-reclutamento-personale-docente": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Salerno",
 "avvisi": 0,
 "errore": "SSLError"
+},
+"https://cl-en.usr.sicilia.it/": {
+"grezzi": 18,
+"scartati": [
+"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso AC56 – I.",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
+"https://cl-en.usr.sicilia.it/category/news/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
+],
+"provincia": "Enna",
+"avvisi": 14,
+"errore": null
 },
 "https://varese.istruzionelombardia.gov.it/": {
 "grezzi": 0,
@@ -58,16 +70,11 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://cl-en.usr.sicilia.it/": {
-"grezzi": 19,
-"scartati": [
-"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso AC56 – I.",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
-"https://cl-en.usr.sicilia.it/category/news/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
-],
-"provincia": "Enna",
-"avvisi": 15,
+"https://www.atpromaistruzione.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Roma",
+"avvisi": 0,
 "errore": null
 },
 "https://atpisernia.it/": {
@@ -89,30 +96,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.atpromaistruzione.it/": {
-"grezzi": 0,
+"https://rovigo.istruzioneveneto.gov.it/": {
+"grezzi": 13,
 "scartati": [],
-"provincia": "Roma",
-"avvisi": 0,
-"errore": null
-},
-"https://t.me/s/usr_sicilia": {
-"grezzi": 33,
-"scartati": [
-"https://usr.sicilia.it/?p=36978",
-"https://usr.sicilia.it/?p=36992",
-"https://usr.sicilia.it/?p=37003",
-"https://usr.sicilia.it/?p=37004"
-],
-"provincia": null,
-"avvisi": 9,
-"errore": null
-},
-"https://www.istruzione.calabria.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Crotone",
-"avvisi": 0,
+"provincia": "Rovigo",
+"avvisi": 13,
 "errore": null
 },
 "http://www.ustlucca.it/": {
@@ -127,19 +115,29 @@
 "avvisi": 30,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/": {
-"grezzi": 18,
+"http://www.provveditoratostudiviterbo.it/DOCENTI/interpelli/INTERPELLIDOC.htm": {
+"grezzi": 46,
 "scartati": [
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/"
+"https://www.portaleargo.it/albopretorio/online/",
+"https://www.icvignanello.edu.it/interpelli/",
+"https://www.icpiazzamarconi.edu.it/richiesta-candidature-per-interpello-scuola-primaria-posto-di-sostegno/",
+"https://madinterpello.portaleargo.it/"
 ],
-"provincia": "Rovigo",
-"avvisi": 17,
+"provincia": "Viterbo",
+"avvisi": 1,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/cuneo/": {
+"https://www.istruzione.calabria.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Cuneo",
+"provincia": "Crotone",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Novara",
 "avvisi": 0,
 "errore": null
 },
@@ -164,11 +162,23 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/": {
+"https://www.istruzionepiemonte.it/cuneo/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Novara",
+"provincia": "Cuneo",
 "avvisi": 0,
+"errore": null
+},
+"https://me.usr.sicilia.it/personale-scuola/interpelli/": {
+"grezzi": 38,
+"scartati": [
+"https://me.usr.sicilia.it/personale-docente-gae-gps-decreto-di-conferimento-incarichi-a-tempo-determinato-del-",
+"https://twitter.com/home?status=IC Marconi Cesareo di Sant’Agata di Militello – Interpello Provinciale per sel",
+"https://www.facebook.com/sharer/sharer.php?u=https://me.usr.sicilia.ithttps://me.usr.sicilia.it/ic-marconi-ces",
+"https://www.linkedin.com/sharing/share-offsite/?url=https://me.usr.sicilia.ithttps://me.usr.sicilia.it/ic-marc"
+],
+"provincia": "Messina",
+"avvisi": 17,
 "errore": null
 },
 "https://www.provincia.bz.it/": {
@@ -178,32 +188,8 @@
 "avvisi": 0,
 "errore": null
 },
-"http://www.provveditoratostudiviterbo.it/DOCENTI/interpelli/INTERPELLIDOC.htm": {
-"grezzi": 46,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://www.icvignanello.edu.it/interpelli/",
-"https://www.icpiazzamarconi.edu.it/richiesta-candidature-per-interpello-scuola-primaria-posto-di-sostegno/",
-"https://madinterpello.portaleargo.it/"
-],
-"provincia": "Viterbo",
-"avvisi": 1,
-"errore": null
-},
-"https://me.usr.sicilia.it/personale-scuola/interpelli/": {
-"grezzi": 37,
-"scartati": [
-"https://me.usr.sicilia.it/personale-docente-gae-gps-decreto-di-conferimento-incarichi-a-tempo-determinato-del-",
-"https://twitter.com/home?status=IC Marconi Cesareo di Sant’Agata di Militello – Interpello Provinciale per sel",
-"https://www.facebook.com/sharer/sharer.php?u=https://me.usr.sicilia.ithttps://me.usr.sicilia.it/ic-marconi-ces",
-"https://www.linkedin.com/sharing/share-offsite/?url=https://me.usr.sicilia.ithttps://me.usr.sicilia.it/ic-marc"
-],
-"provincia": "Messina",
-"avvisi": 16,
-"errore": null
-},
 "https://fe.istruzioneer.gov.it/": {
-"grezzi": 76,
+"grezzi": 80,
 "scartati": [
 "https://fe.istruzioneer.gov.it/tag/a041/",
 "https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
@@ -211,26 +197,19 @@
 "https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
 ],
 "provincia": "Ferrara",
-"avvisi": 40,
+"avvisi": 46,
 "errore": null
 },
-"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Benevento",
-"avvisi": 0,
-"errore": "HTTP 403"
-},
-"https://pc.istruzioneer.gov.it/interpelli/": {
-"grezzi": 23,
+"https://t.me/s/usr_sicilia": {
+"grezzi": 55,
 "scartati": [
-"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/3a9b715a-24c7-43af-b745-6e9d8b4abd10/candidatura",
-"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti",
-"http://twitter.com/share?text=INTERPELLO+PER+SUPPLENZA+BREVE+SC.+SECONDARIA+DI+1%C2%B0+GRADO+%26%238211%3B+CLA",
-"https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ficcastellarquato.edu.it%2F2026%2F11%2F16%2Fi"
+"https://usr.sicilia.it/?p=36978",
+"https://usr.sicilia.it/?p=36992",
+"https://usr.sicilia.it/?p=37003",
+"https://usr.sicilia.it/?p=37004"
 ],
-"provincia": "Piacenza",
-"avvisi": 4,
+"provincia": null,
+"avvisi": 17,
 "errore": null
 },
 "https://vicenza.istruzioneveneto.gov.it/": {
@@ -240,13 +219,20 @@
 "avvisi": 2,
 "errore": null
 },
+"https://www.uspbenevento.it/uat/category/interpelli-e-varie/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Benevento",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
 "https://www.ufficioscolasticoprovinciale.prato.it/": {
-"grezzi": 9,
+"grezzi": 11,
 "scartati": [
 "https://www.ufficioscolasticoprovinciale.prato.it/Mese/novita/"
 ],
 "provincia": "Prato",
-"avvisi": 8,
+"avvisi": 10,
 "errore": null
 },
 "https://www.istruzioneatprc.it/category/recl/int/": {
@@ -268,50 +254,22 @@
 "avvisi": 12,
 "errore": null
 },
-"https://www.uat-napoli.it/": {
-"grezzi": 49,
+"https://www.mim.gov.it/web/brescia/": {
+"grezzi": 1,
 "scartati": [
-"https://www.uat-napoli.it/category/docenti/",
-"https://www.uat-napoli.it/tag/avvisi/",
-"https://www.uat-napoli.it/tag/interpelli-personale-docente/",
-"https://www.uat-napoli.it/interpello-scuola-primaria-sostegno-cattedra-adee-ic-don-milani-leopardi-torre-del-g"
-],
-"provincia": "Napoli",
-"avvisi": 41,
-"errore": null
-},
-"https://www.uspsi.it/": {
-"grezzi": 51,
-"scartati": [
-"https://www.uspsi.it/wp-content/uploads/2026/11/Modello-allegato-ad-interpello-A026-Spezzone-di-9-ore-fino-al-",
-"https://www.uspsi.it/2026/11/"
-],
-"provincia": "Siena",
-"avvisi": 49,
-"errore": null
-},
-"https://www.mim.gov.it/web/brescia/interpelli-ricerca-supplenti/": {
-"grezzi": 8,
-"scartati": [
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-villa-carcina-scuola-infanzia-posto-sostegn",
-"https://www.mim.gov.it/web/brescia/-/avviso-di-interpello-per-conferimento-di-una-supplenza-fuori-graduatoria-",
-"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-villa-carcina-scuola-infanzia-posto-sostegn",
-"https://www.mim.gov.it/web/brescia/-/avviso-di-interpello-per-conferimento-di-una-supplenza-fuori-graduatoria-"
+"https://www.mim.gov.it/web/brescia/-/annullamento-interpello-ic-di-villa-carcina-scuola-infanzia-posto-sostegn"
 ],
 "provincia": "Brescia",
 "avvisi": 0,
 "errore": null
 },
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
-"grezzi": 75,
+"https://www.uspsi.it/": {
+"grezzi": 56,
 "scartati": [
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
-"https://www.usr.sicilia.it/category/news/",
-"https://docs.google.com/viewer?url=https%3A%2F%2Fwww.usr.sicilia.it%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin"
+"https://www.uspsi.it/2026/11/"
 ],
-"provincia": "Ragusa",
-"avvisi": 40,
+"provincia": "Siena",
+"avvisi": 55,
 "errore": null
 },
 "https://www.uspascolipiceno.it/": {
@@ -326,15 +284,51 @@
 "avvisi": 9,
 "errore": null
 },
+"https://www.uat-napoli.it/": {
+"grezzi": 52,
+"scartati": [
+"https://www.uat-napoli.it/category/docenti/",
+"https://www.uat-napoli.it/tag/avvisi/",
+"https://www.uat-napoli.it/tag/interpelli-personale-docente/",
+"https://www.uat-napoli.it/category/docenti/"
+],
+"provincia": "Napoli",
+"avvisi": 46,
+"errore": null
+},
 "https://www.ustfoggia.it/": {
-"grezzi": 35,
+"grezzi": 38,
 "scartati": [
 "https://www.ustfoggia.it/category/albo-pretorio/",
 "https://www.ustfoggia.it/category/news/",
 "https://www.ustfoggia.it/ultime-novita-ust-foggia/"
 ],
 "provincia": "Foggia",
-"avvisi": 32,
+"avvisi": 35,
+"errore": null
+},
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinato-docenti/": {
+"grezzi": 76,
+"scartati": [
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/personale-scuola/docenti/interpelli-nazionali-contratti-a-tempo-determinat",
+"https://www.usr.sicilia.it/category/news/",
+"https://www.usr.sicilia.it/decreto-di-costituzione-degli-elenchi-dei-rappresentanti-usr-nelle-commissioni-desa"
+],
+"provincia": "Ragusa",
+"avvisi": 41,
+"errore": null
+},
+"https://www.istruzionelaspezia.gov.it/pagine/interpelli-1": {
+"grezzi": 22,
+"scartati": [
+"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
+"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-",
+"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
+"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-"
+],
+"provincia": "La Spezia",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ustli.it/usp_livorno/index.php/docenti/interpelli": {
@@ -349,16 +343,26 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionelaspezia.gov.it/pagine/interpelli-1": {
-"grezzi": 22,
+"https://www.mim.gov.it/web/cremona/interpelli-ricerca-supplenti/": {
+"grezzi": 595,
 "scartati": [
-"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
-"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-",
-"https://www.istruzionelaspezia.gov.it/pagine/rettifica-nomina-per-supplenza-da-gps---cdc-aj56-",
-"https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno-"
+"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-di-sostegno-nella-scuola-de",
+"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-nella-scuola-primaria-fino-",
+"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-di-sostegno-nella-scuola-pr",
+"https://www.mim.gov.it/web/cremona/-/interpello-per-selezione-di-personale-docente-di-sostegno-nella-scuola-de"
 ],
-"provincia": "La Spezia",
-"avvisi": 0,
+"provincia": "Cremona",
+"avvisi": 18,
+"errore": null
+},
+"https://pc.istruzioneer.gov.it/interpelli/": {
+"grezzi": 6,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PCIC81600L/docenti/3a9b715a-24c7-43af-b745-6e9d8b4abd10/candidatura",
+"https://nuvola.madisoft.it/interpelli/PCIC80800N/docenti"
+],
+"provincia": "Piacenza",
+"avvisi": 4,
 "errore": null
 }
 }
