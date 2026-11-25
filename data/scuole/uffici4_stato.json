@@ -6,17 +6,17 @@
 "avvisi": 0,
 "errore": null
 },
-"https://milano.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Milano",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://lodi.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lodi",
+"avvisi": 0,
+"errore": "SSLError"
+},
+"https://milano.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
 "avvisi": 0,
 "errore": "SSLError"
 },
@@ -39,18 +39,6 @@
 "avvisi": 3,
 "errore": null
 },
-"https://pr.istruzioneer.gov.it/": {
-"grezzi": 9,
-"scartati": [
-"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/9cecae5a-06af-466e-a985-ad329e254bf7/candidatura",
-"https://nuvola.madisoft.it/interpelli/PRIC80700P/docenti",
-"https://nuvola.madisoft.it/interpelli/PRIC80600V/docenti",
-"https://nuvola.madisoft.it/interpelli/PRIC82300L/docenti"
-],
-"provincia": "Parma",
-"avvisi": 3,
-"errore": null
-},
 "https://ag.usr.sicilia.it/": {
 "grezzi": 31,
 "scartati": [
@@ -61,6 +49,18 @@
 ],
 "provincia": "Agrigento",
 "avvisi": 24,
+"errore": null
+},
+"https://pr.istruzioneer.gov.it/": {
+"grezzi": 9,
+"scartati": [
+"https://nuvola.madisoft.it/interpelli/PRIC82400C/docenti/9cecae5a-06af-466e-a985-ad329e254bf7/candidatura",
+"https://nuvola.madisoft.it/interpelli/PRIC80700P/docenti",
+"https://nuvola.madisoft.it/interpelli/PRIC80600V/docenti",
+"https://nuvola.madisoft.it/interpelli/PRIC82300L/docenti"
+],
+"provincia": "Parma",
+"avvisi": 3,
 "errore": null
 },
 "https://padova.istruzioneveneto.gov.it/": {
@@ -92,18 +92,6 @@
 ],
 "provincia": "Ferrara",
 "avvisi": 38,
-"errore": null
-},
-"https://re.istruzioneer.gov.it/category/docenti/": {
-"grezzi": 55,
-"scartati": [
-"https://re.istruzioneer.gov.it/category/docenti/",
-"https://re.istruzioneer.gov.it/category/docenti/interpello/",
-"https://re.istruzioneer.gov.it/",
-"https://re.istruzioneer.gov.it/category/docenti/"
-],
-"provincia": "Reggio Emilia",
-"avvisi": 36,
 "errore": null
 },
 "https://atpisernia.it/category/interpelli": {
@@ -147,6 +135,18 @@
 "avvisi": 7,
 "errore": null
 },
+"https://re.istruzioneer.gov.it/category/docenti/": {
+"grezzi": 57,
+"scartati": [
+"https://re.istruzioneer.gov.it/category/docenti/",
+"https://re.istruzioneer.gov.it/category/docenti/interpello/",
+"https://re.istruzioneer.gov.it/",
+"https://re.istruzioneer.gov.it/category/docenti/"
+],
+"provincia": "Reggio Emilia",
+"avvisi": 36,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -175,13 +175,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/": {
-"grezzi": 22,
-"scartati": [],
-"provincia": "Rovigo",
-"avvisi": 22,
-"errore": null
-},
 "https://www.istruzionerovigo.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -189,25 +182,18 @@
 "avvisi": 0,
 "errore": null
 },
-"http://www.uspmc.sinp.net/documenti-uspmc-cms/?cat-documenti-uspmc=reclutamento-pd": {
-"grezzi": 0,
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/": {
+"grezzi": 22,
 "scartati": [],
-"provincia": "Macerata",
-"avvisi": 0,
-"errore": "ConnectTimeout"
+"provincia": "Rovigo",
+"avvisi": 22,
+"errore": null
 },
 "https://www.istruzionematera.it/": {
 "grezzi": 3,
 "scartati": [],
 "provincia": "Matera",
 "avvisi": 3,
-"errore": null
-},
-"https://www.ufficioscolasticogrosseto.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Grosseto",
-"avvisi": 0,
 "errore": null
 },
 "https://www.csateramo.it/wpusp/archive/category/news": {
@@ -222,6 +208,13 @@
 "avvisi": 9,
 "errore": null
 },
+"http://www.uspmc.sinp.net/documenti-uspmc-cms/?cat-documenti-uspmc=reclutamento-pd": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Macerata",
+"avvisi": 0,
+"errore": "ConnectTimeout"
+},
 "https://www.regione.vda.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -229,55 +222,17 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.ufficioscolasticogrosseto.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Grosseto",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzionegenova.gov.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Genova",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 2,
-"scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 2,
-"errore": null
-},
-"https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
-"avvisi": 0,
-"errore": "HTTP 404"
-},
-"https://www.ustfoggia.it/feed/": {
-"grezzi": 9,
-"scartati": [],
-"provincia": "Foggia",
-"avvisi": 9,
-"errore": null
-},
-"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/": {
-"grezzi": 22,
-"scartati": [
-"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/",
-"https://www.uspistruzione.fr.it/wp2/interpello-per-selezione-personale-docente-scuola-secondaria-di-secondo-gr",
-"https://www.uspistruzione.fr.it/wp2/interpello-a040-iis-pontecorvo.html",
-"https://www.uspistruzione.fr.it/wp2/interpello-a038-frtf06000c-itis-d-g-morosini-di-ferentino.html"
-],
-"provincia": "Frosinone",
-"avvisi": 16,
-"errore": null
-},
-"https://www.istruzionebat.it/category/interpello/": {
-"grezzi": 54,
-"scartati": [
-"https://www.portaleargo.it/albopretorio/online/",
-"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
-"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
-"https://www.scuolapetronellitrani.edu.it/interpelli/"
-],
-"provincia": "Barletta-Andria-Trani",
 "avvisi": 0,
 "errore": null
 },
@@ -293,11 +248,42 @@
 "avvisi": 8,
 "errore": null
 },
-"https://www.vivoscuola.it/": {
+"https://www.usr.sicilia.it/index.php/category/interpelli-nazionali/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Trento",
+"provincia": null,
 "avvisi": 0,
+"errore": "HTTP 404"
+},
+"https://www.istruzionebat.it/category/interpello/": {
+"grezzi": 54,
+"scartati": [
+"https://www.portaleargo.it/albopretorio/online/",
+"https://nuvola.madisoft.it/bacheca-digitale/3698/documento/BAIC86000B/1",
+"https://web.spaggiari.eu/sdg2/Documenti/BAIT0014/197868163",
+"https://www.scuolapetronellitrani.edu.it/interpelli/"
+],
+"provincia": "Barletta-Andria-Trani",
+"avvisi": 0,
+"errore": null
+},
+"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/": {
+"grezzi": 22,
+"scartati": [
+"https://uspistruzione.fr.it/wp2/category/interpello-nazionale/",
+"https://www.uspistruzione.fr.it/wp2/interpello-per-selezione-personale-docente-scuola-secondaria-di-secondo-gr",
+"https://www.uspistruzione.fr.it/wp2/interpello-a040-iis-pontecorvo.html",
+"https://www.uspistruzione.fr.it/wp2/interpello-a038-frtf06000c-itis-d-g-morosini-di-ferentino.html"
+],
+"provincia": "Frosinone",
+"avvisi": 16,
+"errore": null
+},
+"https://www.ustfoggia.it/feed/": {
+"grezzi": 9,
+"scartati": [],
+"provincia": "Foggia",
+"avvisi": 9,
 "errore": null
 },
 "https://www.uspcampobasso.it/": {
@@ -307,16 +293,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
-"grezzi": 18,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-eeee-posto-co",
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-adee-sostegno",
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-aaaa-posto-comune-infanzia-supplenza-breve-fino-a",
-"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-conferimento-supplenza-in-qualita-di-docente-"
-],
-"provincia": "Prato",
-"avvisi": 8,
+"https://www.vivoscuola.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Trento",
+"avvisi": 0,
 "errore": null
 },
 "https://www.mim.gov.it/web/cagliari/": {
@@ -329,6 +310,18 @@
 ],
 "provincia": "Cagliari",
 "avvisi": 4,
+"errore": null
+},
+"https://www.ufficioscolasticoprovinciale.prato.it/Mese/nomine-a-tempo-determinato/": {
+"grezzi": 18,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-eeee-posto-co",
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-supplenza-su-classi-di-concorso-adee-sostegno",
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-aaaa-posto-comune-infanzia-supplenza-breve-fino-a",
+"https://www.ufficioscolasticoprovinciale.prato.it/interpello-per-conferimento-supplenza-in-qualita-di-docente-"
+],
+"provincia": "Prato",
+"avvisi": 8,
 "errore": null
 },
 "https://www.uspss.it/": {
@@ -349,6 +342,13 @@
 "provincia": "Ascoli Piceno",
 "avvisi": 7,
 "errore": null
+},
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Catanzaro",
+"avvisi": 0,
+"errore": "ReadTimeout"
 },
 "https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
 "grezzi": 0,
