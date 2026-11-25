@@ -826,31 +826,6 @@
    ]
   ]
  },
- "ENIC80500Q": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "ConnectTimeout",
-  "motivo": "il server non risponde (spento o blocca l'estero)",
-  "sito": "https://www.comprensivoassoro.edu.it/",
-  "tentativi": [
-   [
-    "https://www.comprensivoassoro.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://www.comprensivoassoro.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "https://comprensivoassoro.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://comprensivoassoro.edu.it/",
-    "ConnectTimeout"
-   ]
-  ]
- },
  "ENIC82100N": {
   "dns_pubblico": "no",
   "dns_runner": false,
@@ -898,20 +873,6 @@
    [
     "http://boscobarrafranca.edu.it/",
     "HTTP 403"
-   ]
-  ]
- },
- "MEIC83000X": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "HTTP 503",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icgiovannipaolosecondo.edu.it/",
-  "sito": "https://www.icgiovannipaolosecondo.edu.it/",
-  "tentativi": [
-   [
-    "https://www.icgiovannipaolosecondo.edu.it/",
-    "OK"
    ]
   ]
  },
@@ -1103,14 +1064,25 @@
  "SRIC81700V": {
   "dns_pubblico": "si",
   "dns_runner": true,
-  "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icvittorinisolarino.edu.it/",
+  "err": "ConnectTimeout",
+  "motivo": "risponde ma con errore: HTTP 401",
   "sito": "https://www.icvittorinisolarino.edu.it/",
   "tentativi": [
    [
     "https://www.icvittorinisolarino.edu.it/",
-    "OK"
+    "HTTP 401"
+   ],
+   [
+    "http://www.icvittorinisolarino.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "https://icvittorinisolarino.edu.it/",
+    "HTTP 401"
+   ],
+   [
+    "http://icvittorinisolarino.edu.it/",
+    "HTTP 401"
    ]
   ]
  },
@@ -1124,10 +1096,6 @@
   "tentativi": [
    [
     "https://www.iissgagini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.iissgagini.edu.it/",
     "OK"
    ]
   ]
@@ -1144,7 +1112,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.marionuccio.edu.it/",
   "sito": "https://www.marionuccio.edu.it/",
   "tentativi": [
    [
@@ -1157,11 +1126,7 @@
    ],
    [
     "https://marionuccio.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://marionuccio.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
