@@ -13,13 +13,6 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://pr.istruzioneer.gov.it/interpelli-2/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Parma",
-"avvisi": 0,
-"errore": "HTTP 404"
-},
 "https://atptorino.com/": {
 "grezzi": 0,
 "scartati": [],
@@ -27,16 +20,23 @@
 "avvisi": 0,
 "errore": null
 },
+"https://pr.istruzioneer.gov.it/interpelli-2/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Parma",
+"avvisi": 0,
+"errore": "HTTP 404"
+},
 "https://istruzione.umbria.it/": {
-"grezzi": 16,
+"grezzi": 11,
 "scartati": [
-"https://nuvola.madisoft.it/interpelli/TRIC81400C/docenti/bc42fc1f-f61f-40a9-a346-5925ddcc24cf/candidatura",
-"https://web.spaggiari.eu/sdg2/Interpelli/PGIT0012",
 "https://nuvola.madisoft.it/interpelli/PGIC85600V/docenti",
-"https://nuvola.madisoft.it/interpelli/PGIC842001/docenti"
+"https://nuvola.madisoft.it/interpelli/PGIC842001/docenti",
+"https://www.icorvietobaschi.edu.it/pagine/interpelli",
+"https://nuvola.madisoft.it/interpelli/PGIC83100E/docenti/ed5df66a-586a-4eb2-b95d-cbf513247830/candidatura"
 ],
 "provincia": "Perugia",
-"avvisi": 3,
+"avvisi": 0,
 "errore": null
 },
 "https://sondrio.istruzionelombardia.gov.it/argomento/interpelli-ricerca-supplenti/": {
@@ -53,6 +53,25 @@
 "avvisi": 0,
 "errore": null
 },
+"https://mo.istruzioneer.gov.it/": {
+"grezzi": 21,
+"scartati": [
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
+"https://mo.istruzioneer.gov.it/",
+"https://mo.istruzioneer.gov.it/category/docenti-secondaria-primo-grado/"
+],
+"provincia": "Modena",
+"avvisi": 16,
+"errore": null
+},
+"https://win.istruzioneverona.it/uspvr/index.php/interpelli-docenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Verona",
+"avvisi": 0,
+"errore": "ConnectionError"
+},
 "https://venezia.istruzioneveneto.gov.it/argomenti/personale/docenti/interpelli/": {
 "grezzi": 1,
 "scartati": [
@@ -60,6 +79,18 @@
 ],
 "provincia": "Venezia",
 "avvisi": 0,
+"errore": null
+},
+"https://rn.istruzioneer.gov.it/": {
+"grezzi": 23,
+"scartati": [
+"https://rn.istruzioneer.gov.it/2026/11/23/turno-xii-nomine-a-tempo-determinato-da-gae-gps-a-s-2026-27-personal",
+"https://rn.istruzioneer.gov.it/2026/11/16/turno-xi-nomine-a-tempo-determinato-da-gae-gps-a-s-2026-27-personale",
+"https://rn.istruzioneer.gov.it/category/personale-docente/interpelli-docenti-2026-2027/",
+"https://rn.istruzioneer.gov.it/category/personale-docente/"
+],
+"provincia": "Rimini",
+"avvisi": 16,
 "errore": null
 },
 "http://www.usppesarourbino.it/": {
@@ -72,37 +103,6 @@
 ],
 "provincia": "Pesaro e Urbino",
 "avvisi": 4,
-"errore": null
-},
-"https://win.istruzioneverona.it/uspvr/index.php/interpelli-docenti/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Verona",
-"avvisi": 0,
-"errore": "ConnectionError"
-},
-"https://mo.istruzioneer.gov.it/": {
-"grezzi": 29,
-"scartati": [
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
-"https://mo.istruzioneer.gov.it/",
-"https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
-],
-"provincia": "Modena",
-"avvisi": 22,
-"errore": null
-},
-"https://rn.istruzioneer.gov.it/": {
-"grezzi": 22,
-"scartati": [
-"https://rn.istruzioneer.gov.it/2026/11/23/turno-xii-nomine-a-tempo-determinato-da-gae-gps-a-s-2026-27-personal",
-"https://rn.istruzioneer.gov.it/2026/11/16/turno-xi-nomine-a-tempo-determinato-da-gae-gps-a-s-2026-27-personale",
-"https://rn.istruzioneer.gov.it/category/personale-docente/interpelli-docenti-2026-2027/",
-"https://rn.istruzioneer.gov.it/category/personale-docente/"
-],
-"provincia": "Rimini",
-"avvisi": 15,
 "errore": null
 },
 "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/index.html": {
@@ -128,34 +128,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionepiemonte.it/biella/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Biella",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cuneo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Novara",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Torino",
-"avvisi": 0,
-"errore": null
-},
 "https://ag.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
 "grezzi": 52,
 "scartati": [
@@ -166,18 +138,6 @@
 ],
 "provincia": "Agrigento",
 "avvisi": 22,
-"errore": null
-},
-"https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
-"grezzi": 30,
-"scartati": [
-"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso AC56 – I.",
-"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
-"https://cl-en.usr.sicilia.it/category/news/",
-"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
-],
-"provincia": null,
-"avvisi": 4,
 "errore": null
 },
 "https://ct.usr.sicilia.it/category/personale-scuola/personale-docente/interpelli/": {
@@ -192,15 +152,36 @@
 "avvisi": 1,
 "errore": null
 },
-"https://www.toscana-istruzione.it/": {
+"https://www.istruzionepiemonte.it/cuneo/tag/interpelli-supplenze/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Pisa",
+"provincia": "Cuneo",
 "avvisi": 0,
-"errore": "HTTP 403"
+"errore": null
+},
+"https://www.istruzionepiemonte.it/torino/interpelli-supplenze/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Torino",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/biella/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Biella",
+"avvisi": 0,
+"errore": null
+},
+"https://www.istruzionepiemonte.it/novara/interpelli-supplenze/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Novara",
+"avvisi": 0,
+"errore": null
 },
 "https://bo.istruzioneer.gov.it/tag/interpello/": {
-"grezzi": 23,
+"grezzi": 19,
 "scartati": [
 "https://bo.istruzioneer.gov.it/",
 "https://bo.istruzioneer.gov.it/category/infanzia/",
@@ -211,20 +192,34 @@
 "avvisi": 3,
 "errore": null
 },
-"https://www.mim.gov.it/web/nuoro/": {
-"grezzi": 18,
+"https://cl-en.usr.sicilia.it/interpelli-provinciali/": {
+"grezzi": 30,
 "scartati": [
-"https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-per-incar",
-"https://twitter.com/share?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-per-incarico-td-fino",
-"https://telegram.me/share/url?url=https%3A%2F%2Fwww.mim.gov.it%2Fweb%2Fnuoro%2F-%2Finterpello-per-incarico-td-",
-"https://www.mim.gov.it/web/nuoro/"
+"https://twitter.com/home?status=Interpello per il conferimento di una supplenza – Classe di concorso AC56 – I.",
+"https://cl-en.usr.sicilia.it/category/interpelli/interpelli-provinciali/",
+"https://cl-en.usr.sicilia.it/category/news/",
+"https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/"
 ],
-"provincia": "Nuoro",
-"avvisi": 8,
+"provincia": null,
+"avvisi": 4,
 "errore": null
 },
+"https://www.mim.gov.it/web/lecco/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecco",
+"avvisi": 0,
+"errore": null
+},
+"https://www.toscana-istruzione.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pisa",
+"avvisi": 0,
+"errore": "HTTP 403"
+},
 "https://www.istruzionebrindisi.it/": {
-"grezzi": 42,
+"grezzi": 53,
 "scartati": [
 "https://www.istruzionebrindisi.it/nono-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-scuola-dellinfanzia-p",
 "https://www.istruzionebrindisi.it/nono-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-scuola-dellinfanzia-p",
@@ -232,26 +227,19 @@
 "https://www.istruzionebrindisi.it/ottavo-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-scuola-dellinfanzia"
 ],
 "provincia": "Brindisi",
-"avvisi": 23,
+"avvisi": 32,
 "errore": null
 },
-"https://www.usplecce.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecce",
-"avvisi": 0,
-"errore": null
-},
-"https://www.mim.gov.it/web/campobasso/interpelli/": {
-"grezzi": 4,
+"https://www.istruzione-ancona.it/": {
+"grezzi": 69,
 "scartati": [
-"https://www.mim.gov.it/web/campobasso/-/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche",
-"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i",
-"https://www.mim.gov.it/web/campobasso/-/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche",
-"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i"
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
+"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/"
 ],
-"provincia": "Campobasso",
-"avvisi": 0,
+"provincia": "Ancona",
+"avvisi": 18,
 "errore": null
 },
 "https://www.istruzionematera.it/category/interpelli/": {
@@ -266,43 +254,10 @@
 "avvisi": 2,
 "errore": null
 },
-"https://www.usp-rieti.it/": {
-"grezzi": 12,
+"https://www.usplecce.it/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Rieti",
-"avvisi": 12,
-"errore": null
-},
-"https://www.ufficioscolasticoprovinciale.pistoia.it/": {
-"grezzi": 882,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-leonardo-da-vinci-conferimento-un-posto-a-2",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-c-salutati-a-cavalcanti-per-supplenza-scuol",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-f-berni-f-ferrucci-per-supplenza-scuola-pri"
-],
-"provincia": "Pistoia",
-"avvisi": 14,
-"errore": null
-},
-"https://www.istruzione-ancona.it/": {
-"grezzi": 67,
-"scartati": [
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-infanzia/",
-"https://www.istruzione-ancona.it/category/docenti/interpelli/interpelli-primaria/"
-],
-"provincia": "Ancona",
-"avvisi": 16,
-"errore": null
-},
-"https://www.istruzionesavona.gov.it/pagine/interpelli-sv---as-2024-2025": {
-"grezzi": 1,
-"scartati": [
-"https://web.spaggiari.eu/ber/app/default/gestione_mad.php?mod=MAD_03&target=sdg&sede_codice=SVII0004"
-],
-"provincia": "Savona",
+"provincia": "Lecce",
 "avvisi": 0,
 "errore": null
 },
@@ -313,6 +268,15 @@
 "avvisi": 0,
 "errore": "ConnectTimeout"
 },
+"https://www.istruzionesavona.gov.it/pagine/interpelli-sv---as-2024-2025": {
+"grezzi": 1,
+"scartati": [
+"https://web.spaggiari.eu/ber/app/default/gestione_mad.php?mod=MAD_03&target=sdg&sede_codice=SVII0004"
+],
+"provincia": "Savona",
+"avvisi": 0,
+"errore": null
+},
 "https://www.istruzione.calabria.it/crotone/category/notizie/interpelli-per-supplenza/": {
 "grezzi": 0,
 "scartati": [],
@@ -320,11 +284,23 @@
 "avvisi": 0,
 "errore": "ReadTimeout"
 },
-"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
-"grezzi": 0,
+"https://www.usp-rieti.it/": {
+"grezzi": 12,
 "scartati": [],
-"provincia": "Pordenone",
-"avvisi": 0,
+"provincia": "Rieti",
+"avvisi": 12,
+"errore": null
+},
+"https://www.ufficioscolasticoprovinciale.pistoia.it/": {
+"grezzi": 886,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-leonardo-da-vinci-conferimento-un-posto-a-2",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-c-salutati-a-cavalcanti-per-supplenza-scuol",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-f-berni-f-ferrucci-per-supplenza-scuola-pri"
+],
+"provincia": "Pistoia",
+"avvisi": 18,
 "errore": null
 },
 "https://www.uspbari.it/": {
@@ -339,6 +315,18 @@
 "avvisi": 14,
 "errore": null
 },
+"https://www.mim.gov.it/web/campobasso/interpelli/": {
+"grezzi": 4,
+"scartati": [
+"https://www.mim.gov.it/web/campobasso/-/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche",
+"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i",
+"https://www.mim.gov.it/web/campobasso/-/interpello-per-n-2-supplenze-fino-al-termine-delle-attivita-didattiche",
+"https://www.mim.gov.it/web/campobasso/-/interpello-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-i"
+],
+"provincia": "Campobasso",
+"avvisi": 0,
+"errore": null
+},
 "https://www.ustlecce.it/": {
 "grezzi": 6,
 "scartati": [
@@ -351,11 +339,35 @@
 "avvisi": 0,
 "errore": null
 },
+"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pordenone",
+"avvisi": 0,
+"errore": null
+},
 "https://www.usptaranto.it/": {
 "grezzi": 18,
 "scartati": [],
 "provincia": "Taranto",
 "avvisi": 18,
+"errore": null
+},
+"https://www.mim.gov.it/web/milano/interpelli-ricerca-supplenti/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Milano",
+"avvisi": 0,
+"errore": null
+},
+"https://www.mim.gov.it/web/sondrio/interpelli-ricerca-supplenti/": {
+"grezzi": 2,
+"scartati": [
+"https://www.mim.gov.it/web/sondrio/-/interpello-i-c-martino-anzi-di-bormio-adee",
+"https://www.mim.gov.it/web/sondrio/-/interpello-i-c-martino-anzi-di-bormio-adee"
+],
+"provincia": "Sondrio",
+"avvisi": 0,
 "errore": null
 }
 }
