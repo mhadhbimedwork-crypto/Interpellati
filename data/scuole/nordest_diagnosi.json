@@ -1,6 +1,6 @@
 {
  "BLIC81700R": {
-  "dns_pubblico": "vuoto",
+  "dns_pubblico": "si",
   "dns_runner": true,
   "err": "ConnectTimeout",
   "motivo": "risponde ma con errore: pagina non scolastica",
@@ -77,7 +77,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsantostefanodicadore.it/",
   "sito": "https://www.icsantostefanodicadore.it/",
   "tentativi": [
    [
@@ -90,11 +91,7 @@
    ],
    [
     "https://icsantostefanodicadore.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icsantostefanodicadore.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -149,18 +146,6 @@
   "tentativi": [
    [
     "https://www.alberghierodolomieu.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.alberghierodolomieu.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://alberghierodolomieu.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://alberghierodolomieu.edu.it/",
     "OK"
    ]
   ]
@@ -228,7 +213,7 @@
    ],
    [
     "http://www.ic1bo.it/",
-    "HTTP 520"
+    "HTTP 403"
    ],
    [
     "https://ic1bo.it/",
@@ -236,7 +221,7 @@
    ],
    [
     "http://ic1bo.it/",
-    "HTTP 520"
+    "HTTP 403"
    ],
    [
     "https://www.ic1bo.edu.it/",
@@ -349,24 +334,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ic6bologna.edu.it/",
   "sito": "https://www.ic6bologna.edu.it/",
   "tentativi": [
    [
     "https://www.ic6bologna.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.ic6bologna.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://ic6bologna.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://ic6bologna.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -440,8 +414,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icozzano.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icozzanoemilia.it/",
   "tentativi": [
    [
@@ -458,7 +431,23 @@
    ],
    [
     "http://icozzano.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://www.icozzanoemilia.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.icozzanoemilia.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icozzanoemilia.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icozzanoemilia.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -607,24 +596,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsantagatabolognese.edu.it/",
   "sito": "https://www.icsantagatabolognese.edu.it/",
   "tentativi": [
    [
     "https://www.icsantagatabolognese.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.icsantagatabolognese.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://icsantagatabolognese.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icsantagatabolognese.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -815,40 +793,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ic18bo.edu.it/",
   "sito": "https://www.ic18bo.edu.it/",
   "tentativi": [
    [
     "https://www.ic18bo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.ic18bo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://ic18bo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://ic18bo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.ic18bo.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://www.ic18bo.it/",
-    "HTTP 403"
-   ],
-   [
-    "https://ic18bo.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://ic18bo.it/",
-    "HTTP 403"
+    "OK"
    ]
   ]
  },
@@ -887,18 +838,6 @@
   "tentativi": [
    [
     "https://www.istitutocomprensivo21bologna.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.istitutocomprensivo21bologna.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://istitutocomprensivo21bologna.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://istitutocomprensivo21bologna.edu.it/",
     "OK"
    ]
   ]
@@ -946,13 +885,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.iisgiordanobruno.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.iisgiordanobruno.edu.it/",
   "tentativi": [
    [
     "https://www.iisgiordanobruno.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.iisgiordanobruno.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://iisgiordanobruno.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://iisgiordanobruno.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.iisgiordanobruno.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://www.iisgiordanobruno.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "https://iisgiordanobruno.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://iisgiordanobruno.it/",
+    "ConnectTimeout"
    ]
   ]
  },
@@ -960,8 +926,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.istitutoserpieri.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.istitutoserpieri.edu.it/",
   "tentativi": [
    [
@@ -974,7 +939,11 @@
    ],
    [
     "https://istitutoserpieri.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://istitutoserpieri.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -1044,19 +1013,19 @@
    ],
    [
     "https://www.alberghetti.it/",
-    "pagina non scolastica"
+    "ConnectTimeout"
    ],
    [
     "http://www.alberghetti.it/",
-    "pagina non scolastica"
+    "ConnectTimeout"
    ],
    [
     "https://alberghetti.it/",
-    "pagina non scolastica"
+    "ConnectTimeout"
    ],
    [
     "http://alberghetti.it/",
-    "pagina non scolastica"
+    "ConnectTimeout"
    ]
   ]
  },
@@ -1155,8 +1124,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.malpighi-crevalcore.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.malpighi-crevalcore.it/",
   "tentativi": [
    [
@@ -1173,7 +1141,7 @@
    ],
    [
     "http://malpighi-crevalcore.it/",
-    "OK"
+    "HTTP 509"
    ]
   ]
  },
@@ -1181,40 +1149,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.majoranasanlazzaro.edu.it/",
   "sito": "https://www.majoranasanlazzaro.edu.it/",
   "tentativi": [
    [
     "https://www.majoranasanlazzaro.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.majoranasanlazzaro.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://majoranasanlazzaro.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://majoranasanlazzaro.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.majoranasanlazzaro.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://www.majoranasanlazzaro.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "https://majoranasanlazzaro.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://majoranasanlazzaro.it/",
-    "ConnectTimeout"
+    "OK"
    ]
   ]
  },
@@ -1222,7 +1163,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.crescenzipacinottisirani.edu.it/",
   "sito": "https://www.crescenzipacinottisirani.edu.it/",
   "tentativi": [
    [
@@ -1231,31 +1173,7 @@
    ],
    [
     "http://www.crescenzipacinottisirani.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://crescenzipacinottisirani.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://crescenzipacinottisirani.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.crescenzipacinottisirani.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.crescenzipacinottisirani.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://crescenzipacinottisirani.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://crescenzipacinottisirani.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1288,7 +1206,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.scarabelli-ghini.edu.it/",
   "sito": "https://www.scarabelli-ghini.edu.it/",
   "tentativi": [
    [
@@ -1305,23 +1224,7 @@
    ],
    [
     "http://scarabelli-ghini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.scarabelli-ghini.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.scarabelli-ghini.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://scarabelli-ghini.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://scarabelli-ghini.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1339,6 +1242,14 @@
    ],
    [
     "http://www.imolalicei.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://imolalicei.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://imolalicei.edu.it/",
     "OK"
    ]
   ]
@@ -1347,7 +1258,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceogalvani.edu.it/",
   "sito": "https://www.liceogalvani.edu.it/",
   "tentativi": [
    [
@@ -1376,11 +1288,7 @@
    ],
    [
     "https://liceogalvani.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://liceogalvani.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1434,19 +1342,19 @@
    ],
    [
     "https://www.liceorighibologna.it/",
-    "HTTP 404"
+    "pagina non scolastica"
    ],
    [
     "http://www.liceorighibologna.it/",
-    "HTTP 404"
+    "pagina non scolastica"
    ],
    [
     "https://liceorighibologna.it/",
-    "HTTP 404"
+    "pagina non scolastica"
    ],
    [
     "http://liceorighibologna.it/",
-    "HTTP 404"
+    "pagina non scolastica"
    ]
   ]
  },
@@ -1460,14 +1368,6 @@
   "tentativi": [
    [
     "https://www.liceofermibo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.liceofermibo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://liceofermibo.edu.it/",
     "OK"
    ]
   ]
@@ -1509,7 +1409,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://liceosabin.edu.it/",
   "sito": "https://www.liceosabin.edu.it/",
   "tentativi": [
    [
@@ -1534,15 +1435,7 @@
    ],
    [
     "http://www.liceosabin.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://liceosabin.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://liceosabin.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -1583,8 +1476,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceoarcangeli.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceoarcangeli.edu.it/",
   "tentativi": [
    [
@@ -1597,7 +1489,11 @@
    ],
    [
     "https://liceoarcangeli.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://liceoarcangeli.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -1630,13 +1526,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icbonatibondeno.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icbonatibondeno.edu.it/",
   "tentativi": [
    [
     "https://www.icbonatibondeno.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.icbonatibondeno.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icbonatibondeno.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icbonatibondeno.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -1694,13 +1601,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icmanzi-fe.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icmanzi-fe.edu.it/",
   "tentativi": [
    [
     "https://www.icmanzi-fe.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.icmanzi-fe.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icmanzi-fe.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icmanzi-fe.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.icmanzi-fe.it/",
+    "ConnectionError"
+   ],
+   [
+    "http://www.icmanzi-fe.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://icmanzi-fe.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://icmanzi-fe.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -1708,8 +1642,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.alighierife.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.alighierife.edu.it/",
   "tentativi": [
    [
@@ -1726,7 +1659,23 @@
    ],
    [
     "http://alighierife.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://www.alighierife.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.alighierife.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://alighierife.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://alighierife.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -1806,6 +1755,10 @@
    ],
    [
     "https://gpascolicento.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://gpascolicento.edu.it/",
     "OK"
    ]
   ]
@@ -2062,8 +2015,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceoroiti.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceoroiti.edu.it/",
   "tentativi": [
    [
@@ -2076,7 +2028,27 @@
    ],
    [
     "https://liceoroiti.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://liceoroiti.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.liceoroiti.it/",
+    "HTTP 526"
+   ],
+   [
+    "http://www.liceoroiti.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://liceoroiti.it/",
+    "HTTP 526"
+   ],
+   [
+    "http://liceoroiti.it/",
+    "HTTP 403"
    ]
   ]
  },
@@ -2159,13 +2131,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icascoli.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icascoli.edu.it/",
   "tentativi": [
    [
     "https://www.icascoli.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.icascoli.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icascoli.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icascoli.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -2173,7 +2156,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iclocchiperco.edu.it/",
   "sito": "https://www.iclocchiperco.edu.it/",
   "tentativi": [
    [
@@ -2186,11 +2170,7 @@
    ],
    [
     "https://iclocchiperco.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://iclocchiperco.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -2198,24 +2178,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.pololicealegorizia.edu.it/",
   "sito": "https://www.pololicealegorizia.edu.it/",
   "tentativi": [
    [
     "https://www.pololicealegorizia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.pololicealegorizia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://pololicealegorizia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://pololicealegorizia.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -2459,26 +2428,6 @@
   "tentativi": [
    [
     "https://www.icnonantola.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.icnonantola.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://icnonantola.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icnonantola.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.icnonantola.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.icnonantola.it/",
     "OK"
    ]
   ]
@@ -2628,8 +2577,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.ic2modena.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.ic2modena.edu.it/",
   "tentativi": [
    [
@@ -2638,7 +2586,15 @@
    ],
    [
     "http://www.ic2modena.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://ic2modena.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://ic2modena.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -2721,13 +2677,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.istitutocorni.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.istitutocorni.edu.it/",
   "tentativi": [
    [
     "https://www.istitutocorni.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.istitutocorni.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://istitutocorni.edu.it/",
+    "HTTP 503"
+   ],
+   [
+    "http://istitutocorni.edu.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://www.istitutocorni.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.istitutocorni.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://istitutocorni.it/",
+    "HTTP 503"
+   ],
+   [
+    "http://istitutocorni.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -2735,40 +2718,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.itisvoltasassuolo.it/",
   "sito": "https://itisvoltasassuolo.it/",
   "tentativi": [
    [
     "https://www.itisvoltasassuolo.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.itisvoltasassuolo.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://itisvoltasassuolo.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://itisvoltasassuolo.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.itisvoltasassuolo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.itisvoltasassuolo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://itisvoltasassuolo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://itisvoltasassuolo.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -2776,24 +2732,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.istitutoselmi.edu.it/",
   "sito": "https://www.istitutoselmi.edu.it/pvw/app/MOIT0002/pvw_sito.php/",
   "tentativi": [
    [
     "https://www.istitutoselmi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.istitutoselmi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://istitutoselmi.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://istitutoselmi.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -2842,13 +2787,32 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.istitutoguarini.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.istitutoguarini.edu.it/",
   "tentativi": [
    [
     "https://www.istitutoguarini.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.istitutoguarini.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://istitutoguarini.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://istitutoguarini.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://istitutoguarini.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://istitutoguarini.it/",
+    "ConnectTimeout"
    ]
   ]
  },
@@ -2955,13 +2919,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.muratorisancarlo.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.muratorisancarlo.edu.it/",
   "tentativi": [
    [
     "https://www.muratorisancarlo.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.muratorisancarlo.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://muratorisancarlo.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://muratorisancarlo.edu.it/",
+    "HTTP 403"
    ]
   ]
  },
@@ -3051,7 +3026,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceowiligelmo.edu.it/",
   "sito": "https://www.liceowiligelmo.edu.it/",
   "tentativi": [
    [
@@ -3068,7 +3044,7 @@
    ],
    [
     "http://liceowiligelmo.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -3076,8 +3052,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://liceoformiggini.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://liceoformiggini.edu.it/",
   "tentativi": [
    [
@@ -3090,7 +3065,11 @@
    ],
    [
     "https://liceoformiggini.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://liceoformiggini.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -3215,13 +3194,16 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.itivinci.mo.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.itivinci.mo.it/",
   "tentativi": [
    [
     "https://www.itivinci.mo.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.itivinci.mo.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -3354,13 +3336,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.campusagroalimentarepiacenza.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://campusagroalimentarepiacenza.it/",
   "tentativi": [
    [
     "https://www.campusagroalimentarepiacenza.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.campusagroalimentarepiacenza.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://campusagroalimentarepiacenza.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://campusagroalimentarepiacenza.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -3386,7 +3379,7 @@
   "dns_runner": true,
   "err": "non raggiungibile",
   "motivo": "recuperato",
-  "nuovo": "https://www.isii.it/",
+  "nuovo": "https://www.isii.edu.it/",
   "sito": "https://www.isii.edu.it/",
   "tentativi": [
    [
@@ -3395,30 +3388,6 @@
    ],
    [
     "http://www.isii.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://isii.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://isii.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.isii.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.isii.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://isii.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://isii.it/",
     "OK"
    ]
   ]
@@ -3441,7 +3410,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceogioia.edu.it/",
   "sito": "https://www.liceogioia.edu.it/",
   "tentativi": [
    [
@@ -3470,11 +3440,7 @@
    ],
    [
     "https://liceogioia.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://liceogioia.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -3482,7 +3448,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceorespighi.edu.it/",
   "sito": "https://www.liceorespighi.edu.it/",
   "tentativi": [
    [
@@ -3511,11 +3478,7 @@
    ],
    [
     "https://liceorespighi.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://liceorespighi.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -3781,8 +3744,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.quintoicpadova.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.quintoicpadova.edu.it/",
   "tentativi": [
    [
@@ -3791,7 +3753,15 @@
    ],
    [
     "http://www.quintoicpadova.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://quintoicpadova.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://quintoicpadova.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -3799,13 +3769,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.7istitutopadova.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.7istitutopadova.edu.it/",
   "tentativi": [
    [
     "https://www.7istitutopadova.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.7istitutopadova.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://7istitutopadova.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://7istitutopadova.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.7istitutopadova.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.7istitutopadova.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://7istitutopadova.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://7istitutopadova.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -3838,8 +3835,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.ic1piovedisacco.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.ic1piovedisacco.edu.it/",
   "tentativi": [
    [
@@ -3848,7 +3844,15 @@
    ],
    [
     "http://www.ic1piovedisacco.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://ic1piovedisacco.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://ic1piovedisacco.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -3873,7 +3877,7 @@
    ],
    [
     "http://www.iismarchesi.it/",
-    "HTTP 520"
+    "HTTP 403"
    ],
    [
     "https://iismarchesi.it/",
@@ -3881,7 +3885,7 @@
    ],
    [
     "http://iismarchesi.it/",
-    "HTTP 520"
+    "HTTP 403"
    ]
   ]
  },
@@ -3939,13 +3943,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.iiskennedy.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.iiskennedy.edu.it/",
   "tentativi": [
    [
     "https://www.iiskennedy.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.iiskennedy.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://iiskennedy.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://iiskennedy.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.iiskennedy.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://www.iiskennedy.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "https://iiskennedy.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://iiskennedy.it/",
+    "ConnectTimeout"
    ]
   ]
  },
@@ -3994,13 +4025,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceolucreziocaro.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceolucreziocaro.edu.it/",
   "tentativi": [
    [
     "https://www.liceolucreziocaro.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.liceolucreziocaro.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://liceolucreziocaro.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://liceolucreziocaro.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.liceolucreziocaro.it/",
+    "HTTP 526"
+   ],
+   [
+    "http://www.liceolucreziocaro.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://liceolucreziocaro.it/",
+    "HTTP 526"
+   ],
+   [
+    "http://liceolucreziocaro.it/",
+    "HTTP 403"
    ]
   ]
  },
@@ -4058,13 +4116,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.denicolapiovedisacco.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.denicolapiovedisacco.edu.it/",
   "tentativi": [
    [
     "https://www.denicolapiovedisacco.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.denicolapiovedisacco.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://denicolapiovedisacco.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://denicolapiovedisacco.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -4097,8 +4166,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.iisgbferrari.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.iisgbferrari.edu.it/",
   "tentativi": [
    [
@@ -4115,7 +4183,23 @@
    ],
    [
     "http://iisgbferrari.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://www.iisgbferrari.it/",
+    "HTTP 503"
+   ],
+   [
+    "http://www.iisgbferrari.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://iisgbferrari.it/",
+    "HTTP 503"
+   ],
+   [
+    "http://iisgbferrari.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -4123,7 +4207,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.atestino.edu.it/",
   "sito": "https://www.atestino.edu.it/",
   "tentativi": [
    [
@@ -4140,7 +4225,7 @@
    ],
    [
     "http://atestino.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -4148,8 +4233,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.iisvalle.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://iisvalle.edu.it/",
   "tentativi": [
    [
@@ -4174,7 +4258,15 @@
    ],
    [
     "http://www.iisvalle.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://iisvalle.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://iisvalle.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -4223,13 +4315,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceoducadaosta.eu/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceoducadaosta.eu/",
   "tentativi": [
    [
     "https://www.liceoducadaosta.eu/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.liceoducadaosta.eu/",
+    "HTTP 509"
+   ],
+   [
+    "https://liceoducadaosta.eu/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://liceoducadaosta.eu/",
+    "HTTP 509"
    ]
   ]
  },
@@ -4237,13 +4340,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceofermipadova.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceofermipadova.edu.it/",
   "tentativi": [
    [
     "https://www.liceofermipadova.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.liceofermipadova.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://liceofermipadova.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://liceofermipadova.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.liceofermipadova.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://www.liceofermipadova.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://liceofermipadova.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://liceofermipadova.it/",
+    "HTTP 403"
    ]
   ]
  },
@@ -4317,8 +4447,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceogalileogalilei.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceogalileogalilei.edu.it/",
   "tentativi": [
    [
@@ -4347,7 +4476,11 @@
    ],
    [
     "https://liceogalileogalilei.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://liceogalileogalilei.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -4422,7 +4555,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceomodigliani.edu.it/",
   "sito": "https://www.liceomodigliani.edu.it/",
   "tentativi": [
    [
@@ -4439,7 +4573,7 @@
    ],
    [
     "http://liceomodigliani.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -4582,7 +4716,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.educandatosanbenedetto.edu.it/",
   "sito": "https://www.educandatosanbenedetto.edu.it/",
   "tentativi": [
    [
@@ -4591,31 +4726,7 @@
    ],
    [
     "http://www.educandatosanbenedetto.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://educandatosanbenedetto.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://educandatosanbenedetto.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.educandatosanbenedetto.it/",
-    "ConnectionError"
-   ],
-   [
-    "http://www.educandatosanbenedetto.it/",
-    "ConnectionError"
-   ],
-   [
-    "https://educandatosanbenedetto.it/",
-    "ConnectionError"
-   ],
-   [
-    "http://educandatosanbenedetto.it/",
-    "ConnectionError"
+    "OK"
    ]
   ]
  },
@@ -4739,24 +4850,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ic-manzi.edu.it/",
   "sito": "https://www.ic-manzi.edu.it/",
   "tentativi": [
    [
     "https://www.ic-manzi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.ic-manzi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://ic-manzi.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://ic-manzi.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -4764,8 +4864,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icmtc.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icmtc.edu.it/",
   "tentativi": [
    [
@@ -4778,7 +4877,11 @@
    ],
    [
     "https://icmtc.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://icmtc.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -4786,13 +4889,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.leomajor.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.leomajor.edu.it/",
   "tentativi": [
    [
     "https://www.leomajor.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.leomajor.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://leomajor.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://leomajor.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -4825,7 +4939,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.torricellimaniago.edu.it/",
   "sito": "https://www.torricellimaniago.edu.it/",
   "tentativi": [
    [
@@ -4834,15 +4949,7 @@
    ],
    [
     "http://www.torricellimaniago.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://torricellimaniago.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://torricellimaniago.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -4932,7 +5039,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.istitutoflora.edu.it/",
   "sito": "https://www.istitutoflora.edu.it/",
   "tentativi": [
    [
@@ -4945,11 +5053,7 @@
    ],
    [
     "https://istitutoflora.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://istitutoflora.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -4963,6 +5067,22 @@
   "tentativi": [
    [
     "https://www.isiszanussi.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.isiszanussi.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://isiszanussi.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://isiszanussi.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.isiszanussi.it/",
     "OK"
    ]
   ]
@@ -5210,18 +5330,6 @@
   "tentativi": [
    [
     "https://www.icbedonia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.icbedonia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://icbedonia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icbedonia.edu.it/",
     "OK"
    ]
   ]
@@ -5230,7 +5338,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icsalsomaggiore.edu.it/",
   "sito": "https://www.icsalsomaggiore.edu.it/",
   "tentativi": [
    [
@@ -5247,7 +5356,7 @@
    ],
    [
     "http://icsalsomaggiore.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -5356,7 +5465,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icmontebelloparma.it/",
   "sito": "https://www.icmontebelloparma.it/",
   "tentativi": [
    [
@@ -5369,11 +5479,7 @@
    ],
    [
     "https://icmontebelloparma.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icmontebelloparma.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -5659,40 +5765,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.marialuigia.edu.it/",
   "sito": "https://www.marialuigia.edu.it/",
   "tentativi": [
    [
     "https://www.marialuigia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.marialuigia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://marialuigia.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://marialuigia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.marialuigia.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.marialuigia.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://marialuigia.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://marialuigia.it/",
-    "pagina non scolastica"
+    "OK"
    ]
   ]
  },
@@ -5750,16 +5829,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icbassi.edu.it/",
   "sito": "https://www.icbassi.edu.it/pagine/scuola-primaria-a-ginnasi/",
   "tentativi": [
    [
     "https://www.icbassi.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.icbassi.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -6030,24 +6106,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iccastelnovosotto.edu.it/",
   "sito": "https://www.iccastelnovosotto.edu.it/",
   "tentativi": [
    [
     "https://www.iccastelnovosotto.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.iccastelnovosotto.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://iccastelnovosotto.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://iccastelnovosotto.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -6105,13 +6170,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icpovigliobrescello.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icpovigliobrescello.edu.it/",
   "tentativi": [
    [
     "https://www.icpovigliobrescello.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.icpovigliobrescello.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icpovigliobrescello.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icpovigliobrescello.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.icpovigliobrescello.it/",
+    "ConnectionError"
+   ],
+   [
+    "http://www.icpovigliobrescello.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://icpovigliobrescello.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://icpovigliobrescello.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -6369,24 +6461,13 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://icpertini1.edu.it/",
   "sito": "https://www.icpertini1.gov.it/",
   "tentativi": [
    [
     "https://www.icpertini1.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.icpertini1.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://icpertini1.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://icpertini1.edu.it/",
-    "pagina non scolastica"
+    "OK"
    ]
   ]
  },
@@ -6433,13 +6514,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.pascal.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.pascal.edu.it/",
   "tentativi": [
    [
     "https://www.pascal.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.pascal.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://pascal.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://pascal.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.pascal.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.pascal.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://pascal.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://pascal.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -6494,14 +6602,6 @@
   "tentativi": [
    [
     "https://www.icmarvelli.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.icmarvelli.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://icmarvelli.edu.it/",
     "OK"
    ]
   ]
@@ -6692,13 +6792,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.comprensivoadriadue.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.comprensivoadriadue.edu.it/",
   "tentativi": [
    [
     "https://www.comprensivoadriadue.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.comprensivoadriadue.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://comprensivoadriadue.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://comprensivoadriadue.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -6706,13 +6817,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.adriauno.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.adriauno.edu.it/",
   "tentativi": [
    [
     "https://www.adriauno.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.adriauno.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://adriauno.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://adriauno.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -6795,8 +6917,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.celioroccati.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.celioroccati.edu.it/",
   "tentativi": [
    [
@@ -6809,7 +6930,11 @@
    ],
    [
     "https://celioroccati.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://celioroccati.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -6858,40 +6983,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceopaleocapa.edu.it/",
   "sito": "https://www.liceopaleocapa.edu.it/",
   "tentativi": [
    [
     "https://www.liceopaleocapa.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.liceopaleocapa.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://liceopaleocapa.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://liceopaleocapa.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.liceopaleocapa.it/",
-    "HTTP 503"
-   ],
-   [
-    "http://www.liceopaleocapa.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://liceopaleocapa.it/",
-    "HTTP 503"
-   ],
-   [
-    "http://liceopaleocapa.it/",
-    "pagina non scolastica"
+    "OK"
    ]
   ]
  },
@@ -6924,8 +7022,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "ConnectTimeout",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icpergine2.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icpergine2.it/",
   "tentativi": [
    [
@@ -6942,7 +7039,7 @@
    ],
    [
     "http://icpergine2.it/",
-    "OK"
+    "HTTP 509"
    ]
   ]
  },
@@ -7192,24 +7289,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ic-divisionejulia.edu.it/",
   "sito": "https://www.ic-divisionejulia.edu.it/",
   "tentativi": [
    [
     "https://www.ic-divisionejulia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.ic-divisionejulia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://ic-divisionejulia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://ic-divisionejulia.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -7308,7 +7394,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.galileitrieste.it/",
   "sito": "https://www.galileitrieste.it/",
   "tentativi": [
    [
@@ -7317,7 +7404,7 @@
    ],
    [
     "http://www.galileitrieste.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -7325,13 +7412,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceo-oberdan.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceo-oberdan.edu.it/",
   "tentativi": [
    [
     "https://www.liceo-oberdan.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.liceo-oberdan.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://liceo-oberdan.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://liceo-oberdan.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -7339,13 +7437,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.ic2castelfranco.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.ic2castelfranco.edu.it/",
   "tentativi": [
    [
     "https://www.ic2castelfranco.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.ic2castelfranco.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://ic2castelfranco.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://ic2castelfranco.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.ic2castelfranco.it/",
+    "ConnectionError"
+   ],
+   [
+    "http://www.ic2castelfranco.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://ic2castelfranco.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://ic2castelfranco.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -7403,40 +7528,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icaltivole.edu.it/",
   "sito": "https://www.icaltivole.edu.it/",
   "tentativi": [
    [
     "https://www.icaltivole.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.icaltivole.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://icaltivole.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icaltivole.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.icaltivole.it/",
-    "SSLError"
-   ],
-   [
-    "http://www.icaltivole.it/",
-    "SSLError"
-   ],
-   [
-    "https://icaltivole.it/",
-    "SSLError"
-   ],
-   [
-    "http://icaltivole.it/",
-    "SSLError"
+    "OK"
    ]
   ]
  },
@@ -7640,8 +7738,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.iisprimolevi.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.iisprimolevi.edu.it/",
   "tentativi": [
    [
@@ -7654,7 +7751,11 @@
    ],
    [
     "https://iisprimolevi.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://iisprimolevi.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -7662,24 +7763,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iissfanno.edu.it/",
   "sito": "https://www.iissfanno.edu.it/",
   "tentativi": [
    [
     "https://www.iissfanno.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.iissfanno.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://iissfanno.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://iissfanno.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -7745,7 +7835,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://istitutorosselli.net/",
   "sito": "https://www.istitutorosselli.net/",
   "tentativi": [
    [
@@ -7758,11 +7849,7 @@
    ],
    [
     "https://istitutorosselli.net/",
-    "HTTP 509"
-   ],
-   [
-    "http://istitutorosselli.net/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -7796,7 +7883,7 @@
   "dns_runner": true,
   "err": "HTTP 509",
   "motivo": "recuperato",
-  "nuovo": "https://www.istitutoalberini.edu.it/",
+  "nuovo": "https://istitutoalberini.edu.it/",
   "sito": "https://www.istitutoalberini.edu.it/",
   "tentativi": [
    [
@@ -7813,10 +7900,6 @@
    ],
    [
     "http://istitutoalberini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.istitutoalberini.it/",
     "OK"
    ]
   ]
@@ -7875,13 +7958,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.cnpd.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.cnpd.it/",
   "tentativi": [
    [
     "https://www.cnpd.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.cnpd.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://cnpd.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://cnpd.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -7889,13 +7983,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icpm.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icpm.edu.it/",
   "tentativi": [
    [
     "https://www.icpm.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.icpm.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icpm.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://icpm.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.icpm.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.icpm.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://icpm.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://icpm.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -7959,6 +8080,34 @@
   "tentativi": [
    [
     "https://www.tarvisioscuole.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.tarvisioscuole.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://tarvisioscuole.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://tarvisioscuole.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.tarvisioscuole.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.tarvisioscuole.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://tarvisioscuole.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://tarvisioscuole.edu.it/",
     "OK"
    ]
   ]
@@ -8147,8 +8296,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.tarvisioscuole.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://tarvisioscuole.it/",
   "tentativi": [
    [
@@ -8181,7 +8329,7 @@
    ],
    [
     "http://tarvisioscuole.edu.it/",
-    "OK"
+    "HTTP 509"
    ]
   ]
  },
@@ -8222,40 +8370,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.isismanzini.edu.it/",
   "sito": "https://www.isismanzini.edu.it/",
   "tentativi": [
    [
     "https://www.isismanzini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.isismanzini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://isismanzini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://isismanzini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.isismanzini.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.isismanzini.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://isismanzini.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://isismanzini.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -8330,24 +8451,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceopercoto.edu.it/",
   "sito": "https://www.liceopercoto.edu.it/",
   "tentativi": [
    [
     "https://www.liceopercoto.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.liceopercoto.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://liceopercoto.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://liceopercoto.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -8361,10 +8471,6 @@
   "tentativi": [
    [
     "https://www.gceconi.eu/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.gceconi.eu/",
     "OK"
    ]
   ]
@@ -8373,40 +8479,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.arteudine.edu.it/",
   "sito": "https://www.arteudine.edu.it/",
   "tentativi": [
    [
     "https://www.arteudine.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.arteudine.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://arteudine.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://arteudine.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.arteudine.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.arteudine.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://arteudine.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://arteudine.it/",
-    "pagina non scolastica"
+    "OK"
    ]
   ]
  },
@@ -8439,24 +8518,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "senza sito MIM",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.cnpd.it/",
   "sito": "https://www.cnpd.it/",
   "tentativi": [
    [
     "https://www.cnpd.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.cnpd.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://cnpd.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://cnpd.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -8530,8 +8598,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icsalzano.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icsalzano.edu.it/",
   "tentativi": [
    [
@@ -8540,7 +8607,31 @@
    ],
    [
     "http://www.icsalzano.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://icsalzano.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icsalzano.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.icsalzano.it/",
+    "ConnectionError"
+   ],
+   [
+    "http://www.icsalzano.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://icsalzano.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://icsalzano.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -8598,13 +8689,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icgramscicamponogara.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icgramscicamponogara.edu.it/",
   "tentativi": [
    [
     "https://www.icgramscicamponogara.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.icgramscicamponogara.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icgramscicamponogara.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icgramscicamponogara.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.icgramscicamponogara.it/",
+    "HTTP 526"
+   ],
+   [
+    "http://www.icgramscicamponogara.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://icgramscicamponogara.it/",
+    "HTTP 526"
+   ],
+   [
+    "http://icgramscicamponogara.it/",
+    "HTTP 403"
    ]
   ]
  },
@@ -8681,6 +8799,10 @@
    ],
    [
     "https://iconor.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://iconor.it/",
     "OK"
    ]
   ]
@@ -8714,8 +8836,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icparolari.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icparolari.edu.it/",
   "tentativi": [
    [
@@ -8724,7 +8845,15 @@
    ],
    [
     "http://www.icparolari.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://icparolari.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icparolari.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -8773,24 +8902,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.istitutocomprensivotrentin.edu.it/",
   "sito": "https://www.istitutocomprensivotrentin.edu.it/",
   "tentativi": [
    [
     "https://www.istitutocomprensivotrentin.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.istitutocomprensivotrentin.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://istitutocomprensivotrentin.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://istitutocomprensivotrentin.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -8823,7 +8941,7 @@
    ],
    [
     "http://www.comprensivocavarzere.it/",
-    "HTTP 520"
+    "HTTP 403"
    ],
    [
     "https://comprensivocavarzere.it/",
@@ -8831,7 +8949,7 @@
    ],
    [
     "http://comprensivocavarzere.it/",
-    "HTTP 520"
+    "HTTP 403"
    ]
   ]
  },
@@ -8839,7 +8957,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icmiranodue.edu.it/",
   "sito": "https://www.icmiranodue.edu.it/",
   "tentativi": [
    [
@@ -8856,23 +8975,7 @@
    ],
    [
     "http://icmiranodue.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.icmiranodue.it/",
-    "ConnectionError"
-   ],
-   [
-    "http://www.icmiranodue.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://icmiranodue.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://icmiranodue.it/",
-    "pagina non scolastica"
+    "OK"
    ]
   ]
  },
@@ -8880,24 +8983,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icpascoliportogruaro.edu.it/",
   "sito": "https://www.icpascoliportogruaro.edu.it/",
   "tentativi": [
    [
     "https://www.icpascoliportogruaro.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.icpascoliportogruaro.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://icpascoliportogruaro.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://icpascoliportogruaro.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -8962,20 +9054,6 @@
    [
     "http://iccorner.edu.it/",
     "pagina non scolastica"
-   ]
-  ]
- },
- "VEIC87300D": {
-  "dns_pubblico": "si",
-  "dns_runner": true,
-  "err": "ReadTimeout",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icleonardodavincivenezia.edu.it/",
-  "sito": "https://www.icleonardodavincivenezia.edu.it/",
-  "tentativi": [
-   [
-    "https://www.icleonardodavincivenezia.edu.it/",
-    "OK"
    ]
   ]
  },
@@ -9115,7 +9193,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.isisluzzatto.edu.it/",
   "sito": "https://www.isisluzzatto.edu.it/",
   "tentativi": [
    [
@@ -9124,15 +9203,7 @@
    ],
    [
     "http://www.isisluzzatto.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://isisluzzatto.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://isisluzzatto.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -9161,26 +9232,11 @@
    ]
   ]
  },
- "VEIS01600D": {
-  "dns_pubblico": "no",
-  "dns_runner": false,
-  "err": "ConnectionError",
-  "motivo": "recuperato",
-  "nuovo": "https://www.istitutoalgarotti.edu.it/",
-  "sito": "https://www.istitutoalgarotti.gov.it/",
-  "tentativi": [
-   [
-    "https://www.istitutoalgarotti.edu.it/",
-    "OK"
-   ]
-  ]
- },
  "VEIS018005": {
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.istitutogritti.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.istitutogritti.edu.it/",
   "tentativi": [
    [
@@ -9193,7 +9249,27 @@
    ],
    [
     "https://istitutogritti.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://istitutogritti.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.istitutogritti.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.istitutogritti.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://istitutogritti.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://istitutogritti.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -9226,13 +9302,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.iismarcopololiceoartisticovenezia.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.iismarcopololiceoartisticovenezia.edu.it/",
   "tentativi": [
    [
     "https://www.iismarcopololiceoartisticovenezia.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.iismarcopololiceoartisticovenezia.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://iismarcopololiceoartisticovenezia.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://iismarcopololiceoartisticovenezia.edu.it/",
+    "HTTP 403"
    ]
   ]
  },
@@ -9265,7 +9352,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.convittofoscarini.edu.it/",
   "sito": "https://www.convittofoscarini.edu.it/",
   "tentativi": [
    [
@@ -9274,31 +9362,7 @@
    ],
    [
     "http://www.convittofoscarini.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://convittofoscarini.edu.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://convittofoscarini.edu.it/",
-    "HTTP 403"
-   ],
-   [
-    "https://www.convittofoscarini.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.convittofoscarini.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://convittofoscarini.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://convittofoscarini.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -9332,8 +9396,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceostefanini.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceostefanini.edu.it/",
   "tentativi": [
    [
@@ -9342,7 +9405,15 @@
    ],
    [
     "http://www.liceostefanini.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://liceostefanini.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://liceostefanini.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -9350,8 +9421,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceoggalilei.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceoggalilei.edu.it/",
   "tentativi": [
    [
@@ -9364,7 +9434,27 @@
    ],
    [
     "https://liceoggalilei.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://liceoggalilei.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.liceoggalilei.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.liceoggalilei.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://liceoggalilei.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://liceoggalilei.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -9413,13 +9503,32 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceogalileidolo.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceogalileidolo.edu.it/",
   "tentativi": [
    [
     "https://www.liceogalileidolo.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.liceogalileidolo.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://liceogalileidolo.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://liceogalileidolo.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.liceogalileidolo.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://www.liceogalileidolo.it/",
+    "ConnectTimeout"
    ]
   ]
  },
@@ -9526,8 +9635,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icmussolente.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icmussolente.it/",
   "tentativi": [
    [
@@ -9540,7 +9648,11 @@
    ],
    [
     "https://icmussolente.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://icmussolente.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -9654,6 +9766,10 @@
   "tentativi": [
    [
     "https://www.iclongare.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.iclongare.edu.it/",
     "OK"
    ]
   ]
@@ -9695,7 +9811,7 @@
    ],
    [
     "http://icmontepasubio.it/",
-    "ConnectTimeout"
+    "pagina non scolastica"
    ]
   ]
  },
@@ -9792,7 +9908,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.scuolerosa.edu.it/",
   "sito": "https://www.scuolerosa.edu.it/",
   "tentativi": [
    [
@@ -9817,15 +9934,7 @@
    ],
    [
     "http://www.scuolerosa.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://scuolerosa.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://scuolerosa.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -9933,7 +10042,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icchiampo.edu.it/",
   "sito": "https://www.icchiampo.edu.it/",
   "tentativi": [
    [
@@ -9942,31 +10052,7 @@
    ],
    [
     "http://www.icchiampo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://icchiampo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icchiampo.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.icchiampo.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.icchiampo.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://icchiampo.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://icchiampo.it/",
-    "pagina non scolastica"
+    "OK"
    ]
   ]
  },
@@ -9999,13 +10085,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.ics1arzignano.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.ics1arzignano.edu.it/",
   "tentativi": [
    [
     "https://www.ics1arzignano.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.ics1arzignano.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://ics1arzignano.edu.it/",
+    "ConnectTimeout"
+   ],
+   [
+    "http://ics1arzignano.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -10023,14 +10120,6 @@
    ],
    [
     "http://www.icasiago.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://icasiago.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icasiago.edu.it/",
     "OK"
    ]
   ]
@@ -10039,7 +10128,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ic1vittorelli.edu.it/",
   "sito": "https://www.ic1vittorelli.edu.it/",
   "tentativi": [
    [
@@ -10052,27 +10142,7 @@
    ],
    [
     "https://ic1vittorelli.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://ic1vittorelli.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.ic1vittorelli.it/",
-    "ConnectionError"
-   ],
-   [
-    "http://www.ic1vittorelli.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://ic1vittorelli.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://ic1vittorelli.it/",
-    "pagina non scolastica"
+    "OK"
    ]
   ]
  },
@@ -10164,18 +10234,6 @@
    ],
    [
     "http://istitutosuperioreasiago.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.iisasiago.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.iisasiago.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://iisasiago.edu.it/",
     "OK"
    ]
   ]
@@ -10225,7 +10283,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.iiscanova.edu.it/",
   "sito": "https://www.iiscanova.edu.it/",
   "tentativi": [
    [
@@ -10234,31 +10293,7 @@
    ],
    [
     "http://www.iiscanova.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://iiscanova.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://iiscanova.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.iiscanova.it/",
-    "HTTP 503"
-   ],
-   [
-    "http://www.iiscanova.it/",
-    "HTTP 503"
-   ],
-   [
-    "https://iiscanova.it/",
-    "HTTP 503"
-   ],
-   [
-    "http://iiscanova.it/",
-    "HTTP 503"
+    "OK"
    ]
   ]
  },
@@ -10312,19 +10347,19 @@
    ],
    [
     "https://www.almerico.it/",
-    "ConnectionError"
+    "HTTP 202"
    ],
    [
     "http://www.almerico.it/",
-    "ConnectionError"
+    "HTTP 202"
    ],
    [
     "https://almerico.it/",
-    "ConnectionError"
+    "HTTP 202"
    ],
    [
     "http://almerico.it/",
-    "ConnectionError"
+    "HTTP 202"
    ]
   ]
  },
@@ -10332,7 +10367,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.remondini.net/",
   "sito": "https://www.remondini.net/",
   "tentativi": [
    [
@@ -10341,15 +10377,7 @@
    ],
    [
     "http://www.remondini.net/",
-    "HTTP 509"
-   ],
-   [
-    "https://remondini.net/",
-    "HTTP 509"
-   ],
-   [
-    "http://remondini.net/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -10423,13 +10451,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceischio.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceischio.edu.it/",
   "tentativi": [
    [
     "https://www.liceischio.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.liceischio.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://liceischio.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://liceischio.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.liceischio.it/",
+    "ConnectionError"
+   ],
+   [
+    "http://www.liceischio.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://liceischio.it/",
+    "ConnectionError"
+   ],
+   [
+    "http://liceischio.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -10462,13 +10517,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.fogazzaro.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.fogazzaro.edu.it/",
   "tentativi": [
    [
     "https://www.fogazzaro.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.fogazzaro.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://fogazzaro.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://fogazzaro.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.fogazzaro.it/",
+    "HTTP 503"
+   ],
+   [
+    "http://www.fogazzaro.it/",
+    "HTTP 404"
+   ],
+   [
+    "https://fogazzaro.it/",
+    "HTTP 503"
+   ],
+   [
+    "http://fogazzaro.it/",
+    "HTTP 404"
    ]
   ]
  },
@@ -10476,8 +10558,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceolioy.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceolioy.edu.it/",
   "tentativi": [
    [
@@ -10490,7 +10571,27 @@
    ],
    [
     "https://liceolioy.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://liceolioy.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.liceolioy.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://www.liceolioy.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "https://liceolioy.it/",
+    "pagina non scolastica"
+   ],
+   [
+    "http://liceolioy.it/",
+    "pagina non scolastica"
    ]
   ]
  },
@@ -10498,7 +10599,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.montagna.edu.it/",
   "sito": "https://www.montagna.edu.it/",
   "tentativi": [
    [
@@ -10511,27 +10613,7 @@
    ],
    [
     "https://montagna.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://montagna.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.montagna.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.montagna.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://montagna.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://montagna.it/",
-    "pagina non scolastica"
+    "OK"
    ]
   ]
  },
@@ -10794,14 +10876,6 @@
    ],
    [
     "http://www.depretto.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://depretto.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://depretto.edu.it/",
     "OK"
    ]
   ]
@@ -10835,13 +10909,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.chilesotti.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.chilesotti.edu.it/",
   "tentativi": [
    [
     "https://www.chilesotti.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.chilesotti.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://chilesotti.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://chilesotti.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.chilesotti.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.chilesotti.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://chilesotti.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://chilesotti.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -10880,6 +10981,10 @@
   "tentativi": [
    [
     "https://www.educandatoangeli.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.educandatoangeli.edu.it/",
     "OK"
    ]
   ]
@@ -10888,13 +10993,40 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icbussolengo.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icbussolengo.it/",
   "tentativi": [
    [
     "https://www.icbussolengo.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.icbussolengo.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icbussolengo.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icbussolengo.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.icbussolengo.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.icbussolengo.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icbussolengo.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icbussolengo.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -11084,7 +11216,7 @@
   "err": "SSLError",
   "motivo": "recuperato",
   "nuovo": "https://istitutobosco.edu.it/",
-  "sito": "https://www.istitutobosco.edu.it/",
+  "sito": "https://istitutobosco.edu.it/",
   "tentativi": [
    [
     "https://www.istitutobosco.edu.it/",
@@ -11096,13 +11228,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icperi.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icperi.edu.it/",
   "tentativi": [
    [
     "https://www.icperi.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.icperi.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://icperi.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icperi.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -11160,24 +11303,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.comprensivocesari.edu.it/",
   "sito": "https://www.comprensivocesari.edu.it/",
   "tentativi": [
    [
     "https://www.comprensivocesari.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.comprensivocesari.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://comprensivocesari.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://comprensivocesari.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -11210,8 +11342,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.icnegrar.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.icnegrar.edu.it/",
   "tentativi": [
    [
@@ -11220,7 +11351,15 @@
    ],
    [
     "http://www.icnegrar.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://icnegrar.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://icnegrar.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -11278,7 +11417,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ic4vr.edu.it/",
   "sito": "https://www.ic4vr.edu.it/",
   "tentativi": [
    [
@@ -11291,11 +11431,7 @@
    ],
    [
     "https://ic4vr.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://ic4vr.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -11303,8 +11439,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.ic5verona.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.ic5verona.edu.it/",
   "tentativi": [
    [
@@ -11317,7 +11452,11 @@
    ],
    [
     "https://ic5verona.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://ic5verona.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -11335,14 +11474,6 @@
    ],
    [
     "http://www.ic9verona.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://ic9verona.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://ic9verona.edu.it/",
     "OK"
    ]
   ]
@@ -11351,8 +11482,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.ic1617vr.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.ic1617vr.edu.it/",
   "tentativi": [
    [
@@ -11361,7 +11491,15 @@
    ],
    [
     "http://www.ic1617vr.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://ic1617vr.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://ic1617vr.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -11383,7 +11521,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.veronellazimella.edu.it/",
   "sito": "https://www.veronellazimella.edu.it/",
   "tentativi": [
    [
@@ -11392,31 +11531,7 @@
    ],
    [
     "http://www.veronellazimella.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://veronellazimella.edu.it/",
-    "ConnectionError"
-   ],
-   [
-    "http://veronellazimella.edu.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://www.veronellazimella.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://www.veronellazimella.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "https://veronellazimella.it/",
-    "pagina non scolastica"
-   ],
-   [
-    "http://veronellazimella.it/",
-    "pagina non scolastica"
+    "OK"
    ]
   ]
  },
@@ -11424,7 +11539,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icvigasio.edu.it/",
   "sito": "https://www.icvigasio.edu.it/",
   "tentativi": [
    [
@@ -11433,15 +11549,7 @@
    ],
    [
     "http://www.icvigasio.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://icvigasio.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://icvigasio.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -11449,24 +11557,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.legnago1.edu.it/",
   "sito": "https://www.legnago1.edu.it/",
   "tentativi": [
    [
     "https://www.legnago1.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.legnago1.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://legnago1.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://legnago1.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -11474,7 +11571,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.ic2sanbonifacio.edu.it/",
   "sito": "https://www.ic2sanbonifacio.edu.it/",
   "tentativi": [
    [
@@ -11487,11 +11585,7 @@
    ],
    [
     "https://ic2sanbonifacio.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://ic2sanbonifacio.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -11581,8 +11675,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.guarinoveronese.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.guarinoveronese.edu.it/",
   "tentativi": [
    [
@@ -11611,7 +11704,11 @@
    ],
    [
     "https://guarinoveronese.it/",
-    "OK"
+    "SSLError"
+   ],
+   [
+    "http://guarinoveronese.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -11619,8 +11716,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.sanmicheli.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.sanmicheli.edu.it/",
   "tentativi": [
    [
@@ -11633,7 +11729,11 @@
    ],
    [
     "https://sanmicheli.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://sanmicheli.edu.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -11641,7 +11741,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.istitutobolisani.edu.it/",
   "sito": "https://www.istitutobolisani.edu.it/",
   "tentativi": [
    [
@@ -11650,31 +11751,7 @@
    ],
    [
     "http://www.istitutobolisani.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://istitutobolisani.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://istitutobolisani.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.istitutobolisani.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.istitutobolisani.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://istitutobolisani.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://istitutobolisani.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -11799,6 +11876,22 @@
    ],
    [
     "http://www.iismariecurievr.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://iismariecurievr.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://iismariecurievr.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.iismariecurievr.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.iismariecurievr.it/",
     "OK"
    ]
   ]
@@ -11848,8 +11941,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.educandatoangeli.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.educandatoangeli.edu.it/",
   "tentativi": [
    [
@@ -11858,7 +11950,31 @@
    ],
    [
     "http://www.educandatoangeli.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "https://educandatoangeli.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://educandatoangeli.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://www.educandatoangeli.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.educandatoangeli.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://educandatoangeli.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://educandatoangeli.it/",
+    "HTTP 509"
    ]
   ]
  },
@@ -11907,7 +12023,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceomaffeivr.edu.it/",
   "sito": "https://www.liceomaffeivr.edu.it/",
   "tentativi": [
    [
@@ -11916,31 +12033,7 @@
    ],
    [
     "http://www.liceomaffeivr.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://liceomaffeivr.edu.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://liceomaffeivr.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.liceomaffeivr.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://www.liceomaffeivr.it/",
-    "HTTP 403"
-   ],
-   [
-    "https://liceomaffeivr.it/",
-    "ConnectTimeout"
-   ],
-   [
-    "http://liceomaffeivr.it/",
-    "HTTP 403"
+    "OK"
    ]
   ]
  },
@@ -11970,6 +12063,18 @@
    ],
    [
     "https://www.educandatoangeli.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://www.educandatoangeli.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://educandatoangeli.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://educandatoangeli.it/",
     "OK"
    ]
   ]
@@ -12019,7 +12124,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.messedaglia.edu.it/",
   "sito": "https://www.messedaglia.edu.it/",
   "tentativi": [
    [
@@ -12032,27 +12138,7 @@
    ],
    [
     "https://messedaglia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://messedaglia.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://www.messedaglia.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://www.messedaglia.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://messedaglia.it/",
-    "HTTP 403"
-   ],
-   [
-    "http://messedaglia.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  },
@@ -12208,8 +12294,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "recuperato",
-  "nuovo": "https://www.itcspindemonte.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.itcspindemonte.edu.it/",
   "tentativi": [
    [
@@ -12226,7 +12311,7 @@
    ],
    [
     "http://itcspindemonte.edu.it/",
-    "OK"
+    "HTTP 509"
    ]
   ]
  },
@@ -12259,7 +12344,8 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "HTTP 509",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.itscangrande.edu.it/",
   "sito": "https://www.itscangrande.edu.it/",
   "tentativi": [
    [
@@ -12268,15 +12354,7 @@
    ],
    [
     "http://www.itscangrande.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://itscangrande.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://itscangrande.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  }
