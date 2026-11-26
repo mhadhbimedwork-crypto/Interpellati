@@ -1983,10 +1983,10 @@
 {
 "data": "2026-11-26",
 "scuole": 7780,
-"verdi": 6820,
-"arancioni": 75,
-"rossi": 885,
-"percentuale_verdi": 87.7,
+"verdi": 6973,
+"arancioni": 31,
+"rossi": 776,
+"percentuale_verdi": 89.6,
 "per_regione": {
 "Abruzzo": {
 "verde": 190,
@@ -2009,18 +2009,18 @@
 "rosso": 58
 },
 "Emilia-Romagna": {
-"verde": 349,
-"arancione": 24,
-"rosso": 99
+"verde": 405,
+"arancione": 0,
+"rosso": 67
 },
 "Friuli Venezia Giulia": {
-"verde": 105,
-"arancione": 9,
-"rosso": 48
+"verde": 139,
+"arancione": 0,
+"rosso": 23
 },
 "Lazio": {
-"verde": 641,
-"arancione": 0,
+"verde": 631,
+"arancione": 10,
 "rosso": 73
 },
 "Liguria": {
@@ -2029,8 +2029,8 @@
 "rosso": 17
 },
 "Lombardia": {
-"verde": 1025,
-"arancione": 2,
+"verde": 1013,
+"arancione": 14,
 "rosso": 103
 },
 "Marche": {
@@ -2049,8 +2049,8 @@
 "rosso": 51
 },
 "Puglia": {
-"verde": 538,
-"arancione": 2,
+"verde": 539,
+"arancione": 1,
 "rosso": 45
 },
 "Sardegna": {
@@ -2059,18 +2059,18 @@
 "rosso": 17
 },
 "Sicilia": {
-"verde": 681,
-"arancione": 0,
+"verde": 680,
+"arancione": 1,
 "rosso": 52
 },
 "Toscana": {
-"verde": 434,
-"arancione": 0,
+"verde": 432,
+"arancione": 2,
 "rosso": 37
 },
 "Trentino-Alto Adige": {
-"verde": 72,
-"arancione": 1,
+"verde": 73,
+"arancione": 0,
 "rosso": 4
 },
 "Umbria": {
@@ -2084,9 +2084,9 @@
 "rosso": 9
 },
 "Veneto": {
-"verde": 411,
-"arancione": 35,
-"rosso": 132
+"verde": 497,
+"arancione": 1,
+"rosso": 80
 }
 }
 }
@@ -4537,12 +4537,6 @@
 {
 "data": "2026-11-26",
 "tipo": "causa",
-"causa": "sito non ancora pubblicato",
-"scuole": 109
-},
-{
-"data": "2026-11-26",
-"tipo": "causa",
 "causa": "nessun sito indicato nell'anagrafica del Ministero",
 "scuole": 108
 },
@@ -4550,7 +4544,7 @@
 "data": "2026-11-26",
 "tipo": "causa",
 "causa": "errore recente",
-"scuole": 75
+"scuole": 31
 },
 {
 "data": "2026-11-26",
@@ -4566,47 +4560,53 @@
 },
 {
 "data": "2026-11-26",
+"tipo": "causa",
+"causa": "irraggiungibile da 13 giorni",
+"scuole": 2
+},
+{
+"data": "2026-11-26",
 "tipo": "recuperate",
-"scuole": 85,
+"scuole": 179,
 "esempi": [
 {
-"codice": "PGMM23500L",
-"nome": "CPIA 1 PERUGIA",
+"codice": "PDIC883002",
+"nome": "VI IC DI PADOVA \"BRUNO CIARI\"",
 "prima": "arancione"
 },
 {
-"codice": "PGPC01000X",
-"nome": "LICEO \"A. MARIOTTI\"",
-"prima": "rosso"
-},
-{
-"codice": "PGIC86400T",
-"nome": "I.C. PERUGIA 7",
+"codice": "MOIC83900V",
+"nome": "CARPI 3",
 "prima": "arancione"
 },
 {
-"codice": "PGIC841005",
-"nome": "I.C. \"B. BONFIGLI\" CORCIANO",
+"codice": "MOIC83400Q",
+"nome": "IC MARANELLO",
+"prima": "arancione"
+},
+{
+"codice": "UDIC849001",
+"nome": "CODROIPO",
+"prima": "arancione"
+},
+{
+"codice": "UDIC84500N",
+"nome": "TRASAGHIS",
 "prima": "rosso"
 },
 {
-"codice": "RMIC8C800A",
-"nome": "IC ARDEA III",
+"codice": "REIC850003",
+"nome": "SANDRO PERTINI",
 "prima": "rosso"
 },
 {
-"codice": "RMIC89300V",
-"nome": "IC TIVOLI II - TIVOLI CENTRO",
+"codice": "UDIC85700X",
+"nome": "III - UDINE",
 "prima": "rosso"
 },
 {
-"codice": "RMIC868006",
-"nome": "CAPENA",
-"prima": "rosso"
-},
-{
-"codice": "RMIC8C500V",
-"nome": "I.C. ANZIO I",
+"codice": "UDIC80900E",
+"nome": "M. GORTANI - COMEGLIANS",
 "prima": "rosso"
 }
 ]
@@ -4614,53 +4614,53 @@
 {
 "data": "2026-11-26",
 "tipo": "peggiorate",
-"scuole": 180,
+"scuole": 26,
 "esempi": [
 {
-"codice": "PDIC883002",
-"nome": "VI IC DI PADOVA \"BRUNO CIARI\"",
+"codice": "ENIC80500Q",
+"nome": "I.C. \"E. PANTANO\"",
+"ora": "arancione",
+"motivo": "errore recente (HTTP 403): si riprova ogni giorno"
+},
+{
+"codice": "RMIC8D8001",
+"nome": "IC VIA P.A. MICHELI",
+"ora": "arancione",
+"motivo": "errore recente (non raggiungibile): si riprova ogni giorno"
+},
+{
+"codice": "POPS02000G",
+"nome": "L. SCIENTIFICO- LINGUISTICO N. COPERNICO",
+"ora": "arancione",
+"motivo": "errore recente (non raggiungibile): si riprova ogni giorno"
+},
+{
+"codice": "FIIC85100N",
+"nome": "DON MILANI",
 "ora": "arancione",
 "motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
 },
 {
-"codice": "MOIC83900V",
-"nome": "CARPI 3",
+"codice": "LTIC81900T",
+"nome": "I.C GIOVANNI XXIII",
 "ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+"motivo": "errore recente (non raggiungibile): si riprova ogni giorno"
 },
 {
-"codice": "MOIC83400Q",
-"nome": "IC MARANELLO",
+"codice": "RMIC8CB00B",
+"nome": "MENTANA \"VIA PARIBENI 10\"",
 "ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+"motivo": "errore recente (non raggiungibile): si riprova ogni giorno"
 },
 {
-"codice": "UDIC849001",
-"nome": "CODROIPO",
+"codice": "RMIC8FM00V",
+"nome": "IC \"ANTONIO VIVALDI\"",
 "ora": "arancione",
-"motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
+"motivo": "errore recente (non raggiungibile): si riprova ogni giorno"
 },
 {
-"codice": "UDIC84500N",
-"nome": "TRASAGHIS",
-"ora": "rosso",
-"motivo": "sito non ancora pubblicato (segnaposto «A breve on line»)"
-},
-{
-"codice": "UDIC85700X",
-"nome": "III - UDINE",
-"ora": "rosso",
-"motivo": "sito non ancora pubblicato (segnaposto «A breve on line»)"
-},
-{
-"codice": "UDIC80900E",
-"nome": "M. GORTANI - COMEGLIANS",
-"ora": "rosso",
-"motivo": "sito non ancora pubblicato (segnaposto «A breve on line»)"
-},
-{
-"codice": "PNMM164001",
-"nome": "CPIA 1 PORDENONE",
+"codice": "RMIC8AT005",
+"nome": "DON LORENZO MILANI",
 "ora": "arancione",
 "motivo": "errore recente (ConnectTimeout): si riprova ogni giorno"
 }
