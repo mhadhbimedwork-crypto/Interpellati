@@ -555,7 +555,7 @@
    ],
    [
     "http://www.iosvizzini.edu.it/",
-    "pagina non scolastica"
+    "ConnectionError"
    ],
    [
     "https://iosvizzini.edu.it/",
@@ -1064,7 +1064,7 @@
  "SRIC81700V": {
   "dns_pubblico": "si",
   "dns_runner": true,
-  "err": "ConnectTimeout",
+  "err": "SSLError",
   "motivo": "risponde ma con errore: HTTP 401",
   "sito": "https://www.icvittorinisolarino.edu.it/",
   "tentativi": [
@@ -1082,7 +1082,7 @@
    ],
    [
     "http://icvittorinisolarino.edu.it/",
-    "HTTP 401"
+    "ConnectTimeout"
    ]
   ]
  },
@@ -1126,6 +1126,10 @@
    ],
    [
     "https://marionuccio.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://marionuccio.edu.it/",
     "OK"
    ]
   ]
@@ -1208,24 +1212,13 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "risponde ma con errore: HTTP 509",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceoruggierimarsala.edu.it/",
   "sito": "https://www.liceoruggierimarsala.edu.it/",
   "tentativi": [
    [
     "https://www.liceoruggierimarsala.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://www.liceoruggierimarsala.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "https://liceoruggierimarsala.edu.it/",
-    "HTTP 509"
-   ],
-   [
-    "http://liceoruggierimarsala.edu.it/",
-    "HTTP 509"
+    "OK"
    ]
   ]
  }
