@@ -27,13 +27,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://sondrio.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Sondrio",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "http://www.uspms.it/": {
 "grezzi": 0,
 "scartati": [],
@@ -41,18 +34,25 @@
 "avvisi": 0,
 "errore": null
 },
-"https://uspistruzione.fr.it/wp2/feed/": {
-"grezzi": 4,
+"https://sondrio.istruzionelombardia.gov.it/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Frosinone",
-"avvisi": 4,
-"errore": null
+"provincia": "Sondrio",
+"avvisi": 0,
+"errore": "SSLError"
 },
 "https://bo.istruzioneer.gov.it/": {
 "grezzi": 2,
 "scartati": [],
 "provincia": "Bologna",
 "avvisi": 2,
+"errore": null
+},
+"https://uspistruzione.fr.it/wp2/feed/": {
+"grezzi": 4,
+"scartati": [],
+"provincia": "Frosinone",
+"avvisi": 4,
 "errore": null
 },
 "https://win.istruzioneverona.it/": {
@@ -77,7 +77,7 @@
 "errore": null
 },
 "https://mo.istruzioneer.gov.it/": {
-"grezzi": 28,
+"grezzi": 24,
 "scartati": [
 "https://mo.istruzioneer.gov.it/",
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/",
@@ -85,7 +85,7 @@
 "https://mo.istruzioneer.gov.it/category/docenti-infanzia-e-primaria/"
 ],
 "provincia": "Modena",
-"avvisi": 19,
+"avvisi": 17,
 "errore": null
 },
 "https://rg.usr.sicilia.it/": {
@@ -100,18 +100,6 @@
 "avvisi": 8,
 "errore": null
 },
-"https://ag.usr.sicilia.it/": {
-"grezzi": 25,
-"scartati": [
-"https://ag.usr.sicilia.it/avviso-di-interpello-per-il-conferimento-di-supplenza-classe-di-concorso-a042-scienz",
-"https://twitter.com/home?status=Avviso di interpello per il conferimento di supplenza classe di concorso A042 ",
-"https://ag.usr.sicilia.it/interpello-nazionale-ai-sensi-dellart-14-c-22-o-m-27-2026-per-la-copertura-di-n-1-po",
-"https://ag.usr.sicilia.it/email-massive-di-segnalazioni-di-allarme-comunicato/"
-],
-"provincia": "Agrigento",
-"avvisi": 19,
-"errore": null
-},
 "https://venezia.istruzioneveneto.gov.it/": {
 "grezzi": 5,
 "scartati": [
@@ -124,17 +112,34 @@
 "avvisi": 0,
 "errore": null
 },
+"https://ag.usr.sicilia.it/": {
+"grezzi": 25,
+"scartati": [
+"https://ag.usr.sicilia.it/avviso-di-interpello-per-il-conferimento-di-supplenza-classe-di-concorso-a042-scienz",
+"https://twitter.com/home?status=Avviso di interpello per il conferimento di supplenza classe di concorso A042 ",
+"https://ag.usr.sicilia.it/interpello-nazionale-ai-sensi-dellart-14-c-22-o-m-27-2026-per-la-copertura-di-n-1-po",
+"https://ag.usr.sicilia.it/email-massive-di-segnalazioni-di-allarme-comunicato/"
+],
+"provincia": "Agrigento",
+"avvisi": 19,
+"errore": null
+},
+"https://ct.usr.sicilia.it/": {
+"grezzi": 12,
+"scartati": [
+"https://twitter.com/home?status=AVVISO – Disponibilità per contratti a T.D. per l’anno scolastico 2026/2027 su",
+"https://www.facebook.com/sharer/sharer.php?u=https://ct.usr.sicilia.ithttps://ct.usr.sicilia.it/avviso-disponi",
+"https://www.linkedin.com/sharing/share-offsite/?url=https://ct.usr.sicilia.ithttps://ct.usr.sicilia.it/avviso-",
+"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-posto-ADAA-presso-VESPUCCI-–-CAPUANA-–-PIRANDELLO.zip"
+],
+"provincia": "Catania",
+"avvisi": 3,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/arezzo-pannelli-fonoassorbenti-per-una-classe-inclusiva/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Arezzo",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cuneo",
 "avvisi": 0,
 "errore": null
 },
@@ -152,23 +157,18 @@
 "avvisi": 0,
 "errore": null
 },
-"https://ct.usr.sicilia.it/": {
-"grezzi": 12,
-"scartati": [
-"https://twitter.com/home?status=AVVISO – Disponibilità per contratti a T.D. per l’anno scolastico 2026/2027 su",
-"https://www.facebook.com/sharer/sharer.php?u=https://ct.usr.sicilia.ithttps://ct.usr.sicilia.it/avviso-disponi",
-"https://www.linkedin.com/sharing/share-offsite/?url=https://ct.usr.sicilia.ithttps://ct.usr.sicilia.it/avviso-",
-"https://ct.usr.sicilia.it/wp-content/uploads/Interpello-posto-ADAA-presso-VESPUCCI-–-CAPUANA-–-PIRANDELLO.zip"
-],
-"provincia": "Catania",
-"avvisi": 3,
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Cuneo",
+"avvisi": 0,
 "errore": null
 },
 "https://lnx.csalaquila.it/wp/category/interpelli/": {
-"grezzi": 8,
+"grezzi": 9,
 "scartati": [],
 "provincia": "L'Aquila",
-"avvisi": 8,
+"avvisi": 9,
 "errore": null
 },
 "https://www.toscana-istruzione.it/": {
@@ -208,13 +208,6 @@
 "avvisi": 60,
 "errore": null
 },
-"https://www.usplecce.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lecce",
-"avvisi": 0,
-"errore": null
-},
 "https://tp.usr.sicilia.it/personale-scuola/interpelli/": {
 "grezzi": 42,
 "scartati": [
@@ -225,6 +218,13 @@
 ],
 "provincia": "Trapani",
 "avvisi": 21,
+"errore": null
+},
+"https://www.usplecce.it/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Lecce",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzione.calabria.it/cosenza/category/interdoc/": {
@@ -239,13 +239,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.usp-rieti.it/": {
-"grezzi": 14,
-"scartati": [],
-"provincia": "Rieti",
-"avvisi": 14,
-"errore": null
-},
 "https://www.istruzionebrindisi.it/": {
 "grezzi": 53,
 "scartati": [
@@ -258,17 +251,29 @@
 "avvisi": 30,
 "errore": null
 },
+"https://www.usp-rieti.it/": {
+"grezzi": 14,
+"scartati": [],
+"provincia": "Rieti",
+"avvisi": 14,
+"errore": null
+},
+"https://www.ufficioscolasticoprovinciale.pistoia.it/": {
+"grezzi": 894,
+"scartati": [
+"https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-leonardo-da-vinci-conferimento-un-posto-a-2",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-c-salutati-a-cavalcanti-per-supplenza-scuol",
+"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-f-berni-f-ferrucci-per-supplenza-scuola-pri"
+],
+"provincia": "Pistoia",
+"avvisi": 26,
+"errore": null
+},
 "https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Lecco",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Pordenone",
 "avvisi": 0,
 "errore": null
 },
@@ -284,16 +289,11 @@
 "avvisi": 13,
 "errore": null
 },
-"https://www.ufficioscolasticoprovinciale.pistoia.it/": {
-"grezzi": 894,
-"scartati": [
-"https://www.ufficioscolasticoprovinciale.pistoia.it/comunicazioni/comunicazioni-docenti/interpelli-docenti/",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-leonardo-da-vinci-conferimento-un-posto-a-2",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-c-salutati-a-cavalcanti-per-supplenza-scuol",
-"https://www.ufficioscolasticoprovinciale.pistoia.it/interpello-ics-f-berni-f-ferrucci-per-supplenza-scuola-pri"
-],
-"provincia": "Pistoia",
-"avvisi": 26,
+"https://www.usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Pordenone",
+"avvisi": 0,
 "errore": null
 },
 "https://www.ustlecce.it/": {
