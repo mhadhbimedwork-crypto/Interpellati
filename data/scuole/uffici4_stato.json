@@ -6,13 +6,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://lodi.istruzionelombardia.gov.it/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Lodi",
-"avvisi": 0,
-"errore": "SSLError"
-},
 "https://milano.istruzionelombardia.gov.it/argomento/altre-comunicazioni/interpelli-ricerca-supplenti/": {
 "grezzi": 0,
 "scartati": [],
@@ -20,11 +13,18 @@
 "avvisi": 0,
 "errore": "SSLError"
 },
-"https://bo.istruzioneer.gov.it/": {
+"https://lodi.istruzionelombardia.gov.it/": {
 "grezzi": 0,
 "scartati": [],
-"provincia": "Bologna",
+"provincia": "Lodi",
 "avvisi": 0,
+"errore": "SSLError"
+},
+"https://bo.istruzioneer.gov.it/": {
+"grezzi": 2,
+"scartati": [],
+"provincia": "Bologna",
+"avvisi": 2,
 "errore": null
 },
 "https://pr.istruzioneer.gov.it/": {
@@ -51,13 +51,6 @@
 "avvisi": 19,
 "errore": null
 },
-"https://padova.istruzioneveneto.gov.it/": {
-"grezzi": 44,
-"scartati": [],
-"provincia": "Padova",
-"avvisi": 44,
-"errore": null
-},
 "https://ct.usr.sicilia.it/": {
 "grezzi": 12,
 "scartati": [
@@ -68,6 +61,13 @@
 ],
 "provincia": "Catania",
 "avvisi": 3,
+"errore": null
+},
+"https://padova.istruzioneveneto.gov.it/": {
+"grezzi": 44,
+"scartati": [],
+"provincia": "Padova",
+"avvisi": 44,
 "errore": null
 },
 "https://cl-en.usr.sicilia.it/category/personale-scuola/personale-docente/reclutamento-docenti/": {
@@ -82,8 +82,15 @@
 "avvisi": 17,
 "errore": null
 },
+"https://tp.usr.sicilia.it/": {
+"grezzi": 12,
+"scartati": [],
+"provincia": "Trapani",
+"avvisi": 12,
+"errore": null
+},
 "https://fe.istruzioneer.gov.it/category/assunzioni-e-concorsi/interpelli_docenti/": {
-"grezzi": 65,
+"grezzi": 64,
 "scartati": [
 "https://fe.istruzioneer.gov.it/tag/a041/",
 "https://fe.istruzioneer.gov.it/tag/personale-docente-scuola-infanzia-e-primaria/",
@@ -91,19 +98,14 @@
 "https://fe.istruzioneer.gov.it/category/interpelli_docenti/"
 ],
 "provincia": "Ferrara",
-"avvisi": 31,
+"avvisi": 30,
 "errore": null
 },
-"https://re.istruzioneer.gov.it/category/docenti/": {
-"grezzi": 59,
-"scartati": [
-"https://re.istruzioneer.gov.it/category/docenti/",
-"https://re.istruzioneer.gov.it/category/docenti/interpello/",
-"https://re.istruzioneer.gov.it/",
-"https://re.istruzioneer.gov.it/category/docenti/"
-],
-"provincia": "Reggio Emilia",
-"avvisi": 38,
+"https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": "Vicenza",
+"avvisi": 0,
 "errore": null
 },
 "https://atpisernia.it/category/interpelli": {
@@ -118,20 +120,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Vicenza",
-"avvisi": 0,
-"errore": null
-},
-"https://tp.usr.sicilia.it/": {
-"grezzi": 12,
-"scartati": [],
-"provincia": "Trapani",
-"avvisi": 12,
-"errore": null
-},
 "https://venezia.istruzioneveneto.gov.it/": {
 "grezzi": 5,
 "scartati": [
@@ -144,17 +132,29 @@
 "avvisi": 0,
 "errore": null
 },
+"https://re.istruzioneer.gov.it/category/docenti/": {
+"grezzi": 59,
+"scartati": [
+"https://re.istruzioneer.gov.it/category/docenti/",
+"https://re.istruzioneer.gov.it/category/docenti/interpello/",
+"https://re.istruzioneer.gov.it/",
+"https://re.istruzioneer.gov.it/category/docenti/"
+],
+"provincia": "Reggio Emilia",
+"avvisi": 38,
+"errore": null
+},
+"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/": {
+"grezzi": 22,
+"scartati": [],
+"provincia": "Rovigo",
+"avvisi": 22,
+"errore": null
+},
 "https://www.istruzionepiemonte.it/": {
 "grezzi": 0,
 "scartati": [],
 "provincia": "Vercelli",
-"avvisi": 0,
-"errore": null
-},
-"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": "Cuneo",
 "avvisi": 0,
 "errore": null
 },
@@ -172,11 +172,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://rovigo.istruzioneveneto.gov.it/category/5-interpelli/docenti-rovigo/": {
-"grezzi": 22,
+"https://www.istruzionepiemonte.it/cuneo/interpelli-supplenze-personale-docente/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Rovigo",
-"avvisi": 22,
+"provincia": "Cuneo",
+"avvisi": 0,
 "errore": null
 },
 "https://www.istruzionerovigo.it/": {
@@ -200,6 +200,18 @@
 "avvisi": 0,
 "errore": "ConnectTimeout"
 },
+"https://www.csateramo.it/wpusp/archive/category/news": {
+"grezzi": 62,
+"scartati": [
+"https://web.spaggiari.eu/sdg2/Interpelli/TEII0001/a7777bfc-1394-483d-8cd6-%2035a04e3b9fa7INTERPELLO A027",
+"https://www.csateramo.it/wpusp/archive/tag/assistenti-amministrativi",
+"https://www.csateramo.it/wpusp/archive/tag/assistenti-tecnici",
+"https://www.csateramo.it/wpusp/archive/tag/collaboratori-scolastici"
+],
+"provincia": "Teramo",
+"avvisi": 9,
+"errore": null
+},
 "https://www.regione.vda.it/istruzione/": {
 "grezzi": 0,
 "scartati": [],
@@ -207,11 +219,11 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzionegenova.gov.it/": {
-"grezzi": 0,
+"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
+"grezzi": 2,
 "scartati": [],
-"provincia": "Genova",
-"avvisi": 0,
+"provincia": "Catanzaro",
+"avvisi": 2,
 "errore": null
 },
 "https://www.mim.gov.it/web/campobasso/interpelli/": {
@@ -226,11 +238,30 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.istruzione.calabria.it/catanzaro/category/nca/": {
-"grezzi": 2,
+"https://www.istruzionegenova.gov.it/": {
+"grezzi": 0,
 "scartati": [],
-"provincia": "Catanzaro",
-"avvisi": 2,
+"provincia": "Genova",
+"avvisi": 0,
+"errore": null
+},
+"https://www.usplatina.it/wp/": {
+"grezzi": 1,
+"scartati": [],
+"provincia": "Latina",
+"avvisi": 1,
+"errore": null
+},
+"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
+"grezzi": 95,
+"scartati": [
+"https://www.atpromaistruzione.it/atp/tag/interpelli/",
+"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
+"https://www.atpromaistruzione.it/atp/tag/aaaa/",
+"https://www.atpromaistruzione.it/atp/tag/adee/"
+],
+"provincia": "Roma",
+"avvisi": 6,
 "errore": null
 },
 "https://www.istruzionebat.it/category/interpello/": {
@@ -245,25 +276,6 @@
 "avvisi": 0,
 "errore": null
 },
-"https://www.usplatina.it/wp/": {
-"grezzi": 1,
-"scartati": [],
-"provincia": "Latina",
-"avvisi": 1,
-"errore": null
-},
-"https://www.csateramo.it/wpusp/archive/category/news": {
-"grezzi": 69,
-"scartati": [
-"https://web.spaggiari.eu/sdg2/Interpelli/TEII0001/a7777bfc-1394-483d-8cd6-%2035a04e3b9fa7INTERPELLO A027",
-"https://www.csateramo.it/wpusp/archive/tag/assistenti-amministrativi",
-"https://www.csateramo.it/wpusp/archive/tag/assistenti-tecnici",
-"https://www.csateramo.it/wpusp/archive/tag/collaboratori-scolastici"
-],
-"provincia": "Teramo",
-"avvisi": 14,
-"errore": null
-},
 "https://uspistruzione.fr.it/wp2/category/interpello-nazionale/": {
 "grezzi": 22,
 "scartati": [
@@ -274,18 +286,6 @@
 ],
 "provincia": "Frosinone",
 "avvisi": 14,
-"errore": null
-},
-"https://www.atpromaistruzione.it/atp/tag/interpelli/": {
-"grezzi": 96,
-"scartati": [
-"https://www.atpromaistruzione.it/atp/tag/interpelli/",
-"https://www.atpromaistruzione.it/atp/category/reclutamento/interpelli-personale-docente/",
-"https://www.atpromaistruzione.it/atp/tag/aaaa/",
-"https://www.atpromaistruzione.it/atp/tag/adee/"
-],
-"provincia": "Roma",
-"avvisi": 7,
 "errore": null
 },
 "https://www.usp-rieti.it/": {
@@ -319,6 +319,13 @@
 "avvisi": 4,
 "errore": null
 },
+"https://www.usrfvg.gov.it/feed/": {
+"grezzi": 0,
+"scartati": [],
+"provincia": null,
+"avvisi": 0,
+"errore": null
+},
 "https://www.ustlecce.it/": {
 "grezzi": 6,
 "scartati": [
@@ -328,13 +335,6 @@
 "https://www.ustlecce.it/index.php/interpelli?download=3938:interpello-per-supplenza-su-sostegno-scuola-primari"
 ],
 "provincia": "Lecce",
-"avvisi": 0,
-"errore": null
-},
-"https://www.usrfvg.gov.it/feed/": {
-"grezzi": 0,
-"scartati": [],
-"provincia": null,
 "avvisi": 0,
 "errore": null
 },
