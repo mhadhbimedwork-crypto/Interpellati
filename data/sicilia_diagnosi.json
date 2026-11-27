@@ -79,6 +79,20 @@
    ]
   ]
  },
+ "AGIS00100X": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 502",
+  "motivo": "recuperato",
+  "nuovo": "https://www.liceocanicatti.edu.it/",
+  "sito": "https://www.liceocanicatti.edu.it/",
+  "tentativi": [
+   [
+    "https://www.liceocanicatti.edu.it/",
+    "OK"
+   ]
+  ]
+ },
  "AGIS00800P": {
   "dns_pubblico": "si",
   "dns_runner": true,
@@ -89,6 +103,20 @@
   "tentativi": [
    [
     "https://www.iissfazello.edu.it/",
+    "OK"
+   ]
+  ]
+ },
+ "AGIS01100E": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 502",
+  "motivo": "recuperato",
+  "nuovo": "https://www.fermilicata.edu.it/",
+  "sito": "https://www.fermilicata.edu.it/",
+  "tentativi": [
+   [
+    "https://www.fermilicata.edu.it/",
     "OK"
    ]
   ]
@@ -555,7 +583,7 @@
    ],
    [
     "http://www.iosvizzini.edu.it/",
-    "ConnectionError"
+    "pagina non scolastica"
    ],
    [
     "https://iosvizzini.edu.it/",
@@ -826,6 +854,31 @@
    ]
   ]
  },
+ "ENIC80500Q": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 403",
+  "motivo": "risponde ma con errore: HTTP 403",
+  "sito": "https://www.comprensivoassoro.edu.it/",
+  "tentativi": [
+   [
+    "https://www.comprensivoassoro.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://www.comprensivoassoro.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "https://comprensivoassoro.edu.it/",
+    "HTTP 403"
+   ],
+   [
+    "http://comprensivoassoro.edu.it/",
+    "HTTP 403"
+   ]
+  ]
+ },
  "ENIC82100N": {
   "dns_pubblico": "no",
   "dns_runner": false,
@@ -1007,9 +1060,15 @@
   "dns_pubblico": "no",
   "dns_runner": false,
   "err": "ConnectionError",
-  "motivo": "dominio inesistente (sito dismesso o cambiato)",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icmargheritahackpa.edu.it/",
   "sito": "https://www.icvittorioemanueleterzo.edu.it/",
-  "tentativi": []
+  "tentativi": [
+   [
+    "https://www.icmargheritahackpa.edu.it/",
+    "OK"
+   ]
+  ]
  },
  "PAIS018007": {
   "dns_pubblico": "si",
@@ -1065,24 +1124,55 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "SSLError",
-  "motivo": "risponde ma con errore: HTTP 401",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icvittorinisolarino.edu.it/",
   "sito": "https://www.icvittorinisolarino.edu.it/",
   "tentativi": [
    [
     "https://www.icvittorinisolarino.edu.it/",
-    "HTTP 401"
-   ],
+    "OK"
+   ]
+  ]
+ },
+ "SRIC84000X": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 502",
+  "motivo": "recuperato",
+  "nuovo": "https://www.comprensivomelilli.edu.it/",
+  "sito": "https://www.comprensivomelilli.edu.it/",
+  "tentativi": [
    [
-    "http://www.icvittorinisolarino.edu.it/",
-    "ConnectTimeout"
-   ],
+    "https://www.comprensivomelilli.edu.it/",
+    "OK"
+   ]
+  ]
+ },
+ "SRIC84100Q": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 502",
+  "motivo": "recuperato",
+  "nuovo": "https://www.icvergapachino.edu.it/",
+  "sito": "https://www.icvergapachino.edu.it/",
+  "tentativi": [
    [
-    "https://icvittorinisolarino.edu.it/",
-    "HTTP 401"
-   ],
+    "https://www.icvergapachino.edu.it/",
+    "OK"
+   ]
+  ]
+ },
+ "SRIC85600D": {
+  "dns_pubblico": "si",
+  "dns_runner": true,
+  "err": "HTTP 502",
+  "motivo": "recuperato",
+  "nuovo": "https://www.melodianoto.edu.it/",
+  "sito": "https://www.melodianoto.edu.it/",
+  "tentativi": [
    [
-    "http://icvittorinisolarino.edu.it/",
-    "ConnectTimeout"
+    "https://www.melodianoto.edu.it/",
+    "OK"
    ]
   ]
  },
@@ -1112,8 +1202,7 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.marionuccio.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.marionuccio.edu.it/",
   "tentativi": [
    [
@@ -1130,7 +1219,7 @@
    ],
    [
     "http://marionuccio.edu.it/",
-    "OK"
+    "HTTP 509"
    ]
   ]
  },
@@ -1212,13 +1301,24 @@
   "dns_pubblico": "si",
   "dns_runner": true,
   "err": "non raggiungibile",
-  "motivo": "recuperato",
-  "nuovo": "https://www.liceoruggierimarsala.edu.it/",
+  "motivo": "risponde ma con errore: HTTP 509",
   "sito": "https://www.liceoruggierimarsala.edu.it/",
   "tentativi": [
    [
     "https://www.liceoruggierimarsala.edu.it/",
-    "OK"
+    "HTTP 509"
+   ],
+   [
+    "http://www.liceoruggierimarsala.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "https://liceoruggierimarsala.edu.it/",
+    "HTTP 509"
+   ],
+   [
+    "http://liceoruggierimarsala.edu.it/",
+    "HTTP 509"
    ]
   ]
  }
